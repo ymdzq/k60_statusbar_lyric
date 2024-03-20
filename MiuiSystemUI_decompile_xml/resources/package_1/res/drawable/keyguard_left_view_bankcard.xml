@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<vector android:height="@dimen/keyguard_left_view_icon_size"
+        android:width="@dimen/keyguard_left_view_icon_size"
+        android:viewportWidth="45.0"
+        android:viewportHeight="45.0" xmlns:android="http://schemas.android.com/apk/res/android">
+  <path android:fillColor="#ffffff"
+        android:pathData="M8,12C8,10.8954 8.8954,10 10,10H35C36.1046,10 37,10.8954 37,12V15H8V12Z" />
+  <path android:fillColor="#ffffff"
+        android:pathData="M8,33C8,34.1046 8.8954,35 10,35H35C36.1046,35 37,34.1046 37,33V19H8V33Z" />
+</vector>

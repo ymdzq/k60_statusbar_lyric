@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center_vertical"
+              android:orientation="horizontal"
+              android:background="@drawable/keyboard_layout_dialog_list_item_background"
+              android:layout_width="fill_parent"
+              android:layout_height="?android:attr/listPreferredItemHeight"
+              android:minHeight="?android:attr/listPreferredItemHeight" xmlns:android="http://schemas.android.com/apk/res/android">
+  <RadioButton android:gravity="center_vertical"
+               android:id="@id/android_radio"
+               android:focusable="false"
+               android:clickable="false"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="15.0dp" />
+  <LinearLayout android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:duplicateParentState="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:layout_marginStart="15.0dp">
+    <miuix.androidbasewidget.widget.CheckedTextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.AlertDialogListItem.SingleChoice"
+                          android:ellipsize="marquee"
+                          android:gravity="center|start"
+                          android:id="@android:id/text1"
+                          android:duplicateParentState="true"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:singleLine="true" />
+    <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.Widget.List.Secondary"
+              android:ellipsize="marquee"
+              android:gravity="center|start"
+              android:id="@android:id/text2"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:singleLine="true" />
+  </LinearLayout>
+</LinearLayout>

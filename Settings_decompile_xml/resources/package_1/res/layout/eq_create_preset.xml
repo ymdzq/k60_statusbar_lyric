@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:paddingTop="20.0dp"
+              android:paddingBottom="20.0dp"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <EditText android:gravity="fill_horizontal"
+            android:id="@id/input_name"
+            android:padding="6.0dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dp"
+            android:layout_marginRight="10.0dp"
+            android:scrollHorizontally="true"
+            android:capitalize="none"
+            android:autoText="false"
+            style="@style/Miuix.AppCompat.TextAppearance.Widget.EditText" />
+</LinearLayout>

@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:layout_width="fill_parent"
+              android:layout_height="@dimen/provision_preference_height"
+              android:layout_marginLeft="@dimen/highlight_side_left_margin"
+              android:layout_marginRight="@dimen/highlight_side_right_margin"
+              android:layout_marginBottom="@dimen/provision_preference_margin_bottom" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <androidx.cardview.widget.CardView android:id="@id/cardview"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        settings:cardBackgroundColor="@android:color/transparent"
+                        settings:cardCornerRadius="@dimen/provision_preference_high_light_radius"
+                        settings:cardElevation="0.0dp">
+    <RelativeLayout android:id="@id/l_highlight"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/provision_highlight_side_left_margin"
+                    android:paddingEnd="@dimen/provision_highlight_side_right_margin">
+      <LinearLayout android:gravity="center_vertical"
+                    android:id="@id/l_signal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true">
+        <ImageView android:layout_gravity="center_vertical"
+                   android:id="@android:id/icon"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/wifi_signal" />
+      </LinearLayout>
+      <RelativeLayout android:gravity="center_vertical"
+                      android:id="@id/l_apinfo"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginLeft="15.2dp"
+                      android:layout_marginRight="5.0dp"
+                      android:layout_centerVertical="true"
+                      android:layout_toStartOf="@android:id/widget_frame"
+                      android:layout_toEndOf="@id/l_signal">
+        <FrameLayout android:gravity="center"
+                     android:id="@id/l_title"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content">
+          <CheckedTextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.PreferenceList"
+                           android:textSize="@dimen/provision_accesspoint_title_size"
+                           android:ellipsize="middle"
+                           android:id="@android:id/title"
+                           android:fadingEdge="horizontal"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:singleLine="true"
+                           android:fontFamily="mipro-medium" />
+          <ImageView android:gravity="center"
+                     android:layout_gravity="center|end"
+                     android:id="@id/wifi_band"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:src="@drawable/band_wifi_5g"
+                     android:contentDescription="@null"
+                     android:importantForAccessibility="no" />
+        </FrameLayout>
+        <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.List.Secondary.Preference"
+                  android:textSize="@dimen/provision_accesspoint_summary_size"
+                  android:ellipsize="marquee"
+                  android:id="@android:id/summary"
+                  android:focusable="true"
+                  android:focusableInTouchMode="true"
+                  android:scrollbars="none"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="0.0dp"
+                  android:scrollHorizontally="true"
+                  android:singleLine="true"
+                  android:layout_below="@id/l_title"
+                  android:layout_alignLeft="@id/title"
+                  android:marqueeRepeatLimit="marquee_forever"
+                  android:fontFamily="mipro" />
+      </RelativeLayout>
+      <LinearLayout android:gravity="center"
+                    android:orientation="vertical"
+                    android:id="@android:id/widget_frame"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:minWidth="@dimen/miuix_preference_widget_width"
+                    android:layout_marginEnd="0.0dp"
+                    android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <ImageButton android:layout_gravity="center"
+                 android:id="@id/icon_button"
+                 android:background="?android:attr/selectableItemBackground"
+                 android:visibility="gone"
+                 android:layout_width="wrap_content"
+                 android:layout_height="fill_parent"
+                 android:minWidth="64.0dp"
+                 android:minHeight="@dimen/min_tap_target_size" />
+  </androidx.cardview.widget.CardView>
+</LinearLayout>

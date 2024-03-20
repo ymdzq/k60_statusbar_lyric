@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/silent_settings"
+                  android:key="silent_mode_settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <com.android.settingslib.miuisettings.preference.RadioButtonPreferenceCategory android:title="@string/silent_mode"
+                        android:key="key_silent_mode_settings">
+    <com.android.settingslib.miuisettings.preference.RadioButtonPreference android:persistent="false"
+                          android:layout="@layout/miuix_preference_radiobutton_two_state_background"
+                          android:title="@string/normal"
+                          android:key="key_normal"
+                          android:summary="@string/normal_info" />
+    <com.android.settingslib.miuisettings.preference.RadioButtonPreference android:persistent="false"
+                          android:layout="@layout/miuix_preference_radiobutton_two_state_background"
+                          android:title="@string/standard"
+                          android:key="key_standard"
+                          android:summary="@string/standard_info" />
+    <com.android.settingslib.miuisettings.preference.RadioButtonPreference android:persistent="false"
+                          android:layout="@layout/miuix_preference_radiobutton_two_state_background"
+                          android:title="@string/total"
+                          android:key="key_total"
+                          android:summary="@string/total_info" />
+  </com.android.settingslib.miuisettings.preference.RadioButtonPreferenceCategory>
+  <PreferenceCategory android:key="key_advanced_settings">
+    <com.android.settingslib.miuisettings.preference.miuix.DropDownPreference android:title="@string/vip_list"
+                          android:key="key_vip_list"
+                          settings:entries="@array/vip_mode_text"
+                          settings:entryValues="@array/vip_mode_value" />
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:persistent="false"
+                          android:title="@string/repeat_call"
+                          android:key="key_repeat"
+                          android:summary="@string/repeat_call_info" />
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:persistent="false"
+                          android:title="@string/mute_music_stream"
+                          android:key="key_mute_music" />
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:persistent="false"
+                          android:title="@string/mute_voiceassist_stream"
+                          android:key="key_mute_voiceassist" />
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:persistent="false"
+                          android:title="@string/popup_window"
+                          android:key="key_popup_window" />
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:persistent="false"
+                          android:title="@string/network_alarm"
+                          android:key="key_network_alarm" />
+  </PreferenceCategory>
+  <PreferenceCategory android:key="key_advanced_settings2">
+    <com.android.settings.dndmode.LabelPreference android:persistent="false"
+                          android:title="@string/auto_silent"
+                          android:key="key_timing_mute"
+                          settings:clickable="true" />
+  </PreferenceCategory>
+  <com.android.settings.notification.SilentModeNetWorkAlarmSummaryPreference android:key="key_network_alarm_summary" />
+</PreferenceScreen>

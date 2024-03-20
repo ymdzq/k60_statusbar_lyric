@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:background="@android:color/transparent"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:importantForAccessibility="no" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:orientation="vertical"
+                android:id="@id/line_layout"
+                android:background="@drawable/shape_corner"
+                android:paddingBottom="@dimen/recommend_region_padding_bottom"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/recommend_region_margin"
+                android:layout_marginBottom="@dimen/recommend_region_margin">
+    <TextView android:textSize="@dimen/miuix_appcompat_normal_text_size"
+              android:textColor="@color/recommend_title_color"
+              android:id="@id/recommend_tip"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/recommend_title_margin_top"
+              android:layout_marginBottom="@dimen/recommend_title_margin_bottom"
+              android:text="@string/recommend_tip"
+              android:layout_marginStart="@dimen/recommend_title_margin_start"
+              android:layout_marginEnd="@dimen/recommend_title_margin_start" />
+  </LinearLayout>
+</LinearLayout>

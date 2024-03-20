@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="horizontal"
+              android:id="@id/container"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <ImageView android:id="@id/image"
+             android:layout_width="240.0dp"
+             android:layout_height="160.0dp"
+             android:layout_marginTop="8.0dp"
+             android:layout_marginBottom="8.0dp"
+             android:scaleType="fitCenter"
+             android:layout_marginStart="49.0dp" />
+  <LinearLayout android:layout_gravity="center_vertical"
+                android:orientation="vertical"
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0">
+    <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.PreferenceList"
+              android:ellipsize="marquee"
+              android:gravity="center|start"
+              android:id="@id/title"
+              android:fadingEdge="horizontal"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text=""
+              android:singleLine="true" />
+    <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.List.Secondary.Preference"
+              android:textColor="?android:attr/textColorSecondary"
+              android:gravity="center|start"
+              android:id="@id/summary"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text="" />
+  </LinearLayout>
+  <CheckBox android:textColor="?android:attr/textColorAlertDialogListItem"
+            android:layout_gravity="center_vertical"
+            android:id="@id/checkbox"
+            android:background="@null"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:clickable="false"
+            android:saveEnabled="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="76.0dp"
+            android:layout_marginEnd="89.0dp" />
+</LinearLayout>

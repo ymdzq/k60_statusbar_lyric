@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/display_settings_new"
+                  android:key="display_settings_screen"
+                  settings:keywords="@string/keywords_display" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto" xmlns:miui="http://schemas.android.com/apk/res/com.android.settings">
+  <PreferenceCategory android:key="dark_mode_timing">
+    <PreferenceCategory android:title="@string/exterior" />
+    <com.android.settings.widget.CustomCheckBoxPreference android:layout="@layout/widget_light_dark_mode_top"
+                          android:key="dark_mode_normal_display_enable" />
+    <com.android.settings.widget.CustomCheckBoxPreference android:title="@string/dark_color_mode"
+                          android:key="dark_mode_display_enable"
+                          android:summary="@string/dark_mode_display_enable_summary" />
+    <com.android.settingslib.RestrictedPreference android:title="@string/dark_mode_settings"
+                          android:key="dark_mode_time_settings">
+      <intent android:targetPackage="com.android.settings"
+              android:action="miui.settings.intent.action.DARK_MODE_TIME"
+              android:targetClass="com.android.settings.display.DarkModeActivity" />
+    </com.android.settingslib.RestrictedPreference>
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/brightness"
+                      android:key="brightness_mode_group">
+    <com.android.settings.display.BrightnessSeekBarPreference android:persistent="true"
+                          android:title="@string/screen_brightness"
+                          android:key="brightness"
+                          settings:useAdminDisabledSummary="true"
+                          settings:userRestriction="no_config_brightness" />
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/automatic_brightness"
+                          android:key="brightness_auto_mode_enable"
+                          android:defaultValue="false" />
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/sunlight_mode"
+                          android:key="brightness_sunlight_mode_enable"
+                          android:defaultValue="false" />
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/smooth_adjust_ligth"
+                          android:key="brightness_smooth_mode_enable"
+                          android:summary="@string/smooth_adjust_ligth_summary"
+                          android:defaultValue="false" />
+  </PreferenceCategory>
+  <com.android.settingslib.miuisettings.preference.Preference android:key="high_brightness_hint_summary"
+                        android:summary="@string/high_brightness_hint_summary" />
+  <PreferenceCategory android:title="@string/screen" />
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/background_blur_enable"
+                        android:key="background_blur_enable"
+                        android:summary="@string/background_blur_enable_summary" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/screen_effect"
+                        android:key="screen_effect"
+                        android:fragment="com.android.settings.display.ScreenEffectFragment" />
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/screen_paper_mode_title"
+                        android:key="screen_paper_mode"
+                        android:summary="@string/screen_paper_mode_summary"
+                        android:fragment="com.android.settings.display.OldPaperModeFragment" />
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/dc_light_title"
+                        android:key="dc_light">
+    <intent android:action="miui.intent.action.ANTI_FLICKER" />
+  </com.android.settingslib.miuisettings.preference.ValuePreference>
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/advanced_screen_paper_mode_title"
+                        android:key="advanced_screen_paper_mode"
+                        android:summary="@string/screen_paper_mode_description"
+                        android:fragment="com.android.settings.display.PaperModeFragment" />
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:persistent="false"
+                        android:title="@string/screen_monochrome_mode_title"
+                        android:key="screen_monochrome_mode"
+                        android:summary="@string/screen_monochrome_mode_summary"
+                        android:fragment="com.android.settings.display.MonochromeModeFragment" />
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:persistent="false"
+                        android:title="@string/screen_fps_title"
+                        android:key="screen_fps">
+    <intent android:action="miui.intent.action.SCREEN_REFRESH" />
+  </com.android.settingslib.miuisettings.preference.ValuePreference>
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/screen_resolution_title"
+                        android:key="screen_resolution"
+                        android:fragment="com.android.settings.display.ScreenResolutionManager" />
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:persistent="false"
+                        android:title="@string/screen_enhance_engine_title"
+                        android:key="screen_enhance_engine">
+    <intent android:action="miui.settings.intent.action.SCREEN_ENHANCE_ENGINE" />
+  </com.android.settingslib.miuisettings.preference.ValuePreference>
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:persistent="false"
+                        android:title="@string/screen_enhance_engine_memc_title"
+                        android:key="screen_enhance_engine_memc">
+    <intent android:action="miui.settings.intent.action.SCREEN_ENHANCE_ENGINE_MEMC" />
+  </com.android.settingslib.miuisettings.preference.ValuePreference>
+  <PreferenceCategory android:title="@string/touch_title"
+                      android:key="touch_category">
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:persistent="false"
+                          android:title="@string/touch_sensitive_title"
+                          android:key="touch_sensitive"
+                          android:summary="@string/touch_sensitive_summary" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/title_font_current2"
+                      android:key="font_settings_cat">
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/title_font_current2"
+                          android:key="font_settings" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/title_font_settings"
+                          android:key="page_layout_settings">
+      <intent android:targetPackage="com.android.settings"
+              android:action="android.intent.action.MAIN"
+              android:targetClass="com.android.settings.Settings$PageLayoutActivity" />
+    </com.android.settingslib.miuisettings.preference.ValuePreference>
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/display_animate_category"
+                      android:key="animate_settings_cat">
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/display_animate_title"
+                          android:key="animate_settings_key"
+                          android:summary="@string/display_animate_content" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/system"
+                      android:key="system_settings_cat">
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/screen_max_aspect_ratio_title"
+                          android:key="screen_max_aspect_ratio"
+                          android:summary="@string/screen_max_aspect_ratio_desc"
+                          android:fragment="com.android.settings.MaxAspectRatioSettings"
+                          settings:controller="com.android.settings.controller.ScreenMaxAspectRatioController" />
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/external_auto_rotate_title"
+                          android:key="external_auto_rotate" />
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/internal_auto_rotate_title"
+                          android:key="internal_auto_rotate" />
+  </PreferenceCategory>
+</PreferenceScreen>

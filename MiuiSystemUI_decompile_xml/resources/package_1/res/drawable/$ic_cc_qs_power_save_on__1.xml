@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<set android:ordering="together" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+  <objectAnimator android:interpolator="@drawable/drawable_0x7f08028f"
+                  android:duration="67"
+                  android:startOffset="0"
+                  android:valueFrom="M163.62 -35 C163.62,-35 57.48,-35 57.48,-35 C57.48,-35 57.48,35.33 57.48,35.33 C57.48,35.33 163.62,35.33 163.62,35.33 C163.62,35.33 163.62,-35 163.62,-35c "
+                  android:valueTo="M163.62 -35 C163.62,-35 57.48,-35 57.48,-35 C57.48,-35 57.48,35.33 57.48,35.33 C57.48,35.33 163.62,35.33 163.62,35.33 C163.62,35.33 163.62,-35 163.62,-35c "
+                  android:valueType="pathType"
+                  android:propertyName="pathData" />
+  <objectAnimator android:interpolator="@drawable/drawable_0x7f080290"
+                  android:duration="167"
+                  android:startOffset="67"
+                  android:valueFrom="M163.62 -35 C163.62,-35 57.48,-35 57.48,-35 C57.48,-35 57.48,35.33 57.48,35.33 C57.48,35.33 163.62,35.33 163.62,35.33 C163.62,35.33 163.62,-35 163.62,-35c "
+                  android:valueTo="M86.27 -33.9 C86.27,-33.9 -19.87,-33.9 -19.87,-33.9 C-19.87,-33.9 -19.87,36.43 -19.87,36.43 C-19.87,36.43 86.27,36.43 86.27,36.43 C86.27,36.43 86.27,-33.9 86.27,-33.9c "
+                  android:valueType="pathType"
+                  android:propertyName="pathData" />
+  <objectAnimator android:interpolator="@drawable/drawable_0x7f080291"
+                  android:duration="450"
+                  android:startOffset="233"
+                  android:valueFrom="M86.27 -33.9 C86.27,-33.9 -19.87,-33.9 -19.87,-33.9 C-19.87,-33.9 -19.87,36.43 -19.87,36.43 C-19.87,36.43 86.27,36.43 86.27,36.43 C86.27,36.43 86.27,-33.9 86.27,-33.9c "
+                  android:valueTo="M163.62 -35 C163.62,-35 57.48,-35 57.48,-35 C57.48,-35 57.48,35.33 57.48,35.33 C57.48,35.33 163.62,35.33 163.62,35.33 C163.62,35.33 163.62,-35 163.62,-35c "
+                  android:valueType="pathType"
+                  android:propertyName="pathData" />
+</set>

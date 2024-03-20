@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center_vertical"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:minHeight="@dimen/miuix_appcompat_list_preferred_item_height_large" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:id="@id/title_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/title_layout_top_margin"
+                android:layout_marginBottom="@dimen/title_layout_bottom_margin">
+    <ImageView android:layout_gravity="center"
+               android:id="@android:id/icon"
+               android:layout_width="25.1dp"
+               android:layout_height="21.8dp" />
+    <TextView android:textSize="@dimen/volume_seekbar_title_text_size"
+              android:ellipsize="marquee"
+              android:id="@android:id/title"
+              android:fadingEdge="horizontal"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:fontFamily="mipro-medium"
+              android:layout_marginStart="@dimen/seekbar_title_left_margin" />
+  </LinearLayout>
+  <miuix.androidbasewidget.widget.SeekBar android:id="@id/seekbar"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/brightness_seekbar_margin_bottom"
+                        android:hapticFeedbackEnabled="false" />
+</LinearLayout>

@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<com.android.internal.widget.LinearLayoutWithDefaultTouchRecepient android:orientation="vertical"
+                      android:id="@id/topLayout"
+                      android:background="@color/main_page_background"
+                      android:layout_width="fill_parent"
+                      android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res/settings">
+  <RelativeLayout android:id="@id/split_screen_layout"
+                  android:background="#cc000000"
+                  android:visibility="gone"
+                  android:clickable="true"
+                  android:layout_width="fill_parent"
+                  android:layout_height="fill_parent">
+    <TextView android:textColor="@android:color/white"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/privacy_header_text_less_than_half"
+              android:layout_centerInParent="true" />
+  </RelativeLayout>
+  <LinearLayout android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dp"
+                android:layout_weight="1.0">
+    <RelativeLayout android:id="@id/choose_relative_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+      <RelativeLayout android:id="@id/top_actionBar"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="@dimen/back_button_alight_top"
+                      android:minHeight="@dimen/miui_face_enroll_back_linear_height"
+                      android:paddingStart="@dimen/count_time_bar_margin_left"
+                      android:paddingEnd="@dimen/count_time_bar_margin_right">
+        <TextView android:id="@id/privacy_password_choose_access_control_back"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerVertical="true"
+                  android:onClick="backClick"
+                  android:drawableStart="@drawable/privacypassword_back_icon"
+                  android:paddingStart="@dimen/back_button_margin_start" />
+        <TextView android:textColor="@color/unlock_text_title"
+                  android:ellipsize="marquee"
+                  android:id="@id/privacy_password_choose_access_control_back_text"
+                  android:focusable="true"
+                  android:focusableInTouchMode="true"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/privacy_password"
+                  android:scrollHorizontally="true"
+                  android:singleLine="true"
+                  android:marqueeRepeatLimit="marquee_forever"
+                  style="@style/ActionBarTitleTextPadding" />
+      </RelativeLayout>
+      <LinearLayout android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:id="@id/privacy_password_icon_container"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="99.3dp"
+                    android:layout_below="@id/top_actionBar">
+        <LinearLayout android:gravity="center"
+                      android:id="@id/icon_layout"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content">
+          <ImageView android:id="@id/privacy_choose_icon"
+                     android:layout_width="73.8dp"
+                     android:layout_height="73.8dp"
+                     android:src="@drawable/icon_app_lock" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content">
+          <TextView android:textSize="16.7sp"
+                    android:textColor="@color/unlock_text_title"
+                    android:gravity="center"
+                    android:id="@id/privacy_password_setting"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22.5dp"
+                    android:text="@string/setting_privacy_password" />
+          <TextView android:textSize="13.8sp"
+                    android:textColor="@color/unlock_text_summary"
+                    android:gravity="center"
+                    android:id="@id/privacy_passwordheaderText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4.7dp"
+                    android:layout_below="@id/privacy_password_setting" />
+        </LinearLayout>
+      </LinearLayout>
+    </RelativeLayout>
+    <FrameLayout android:layout_gravity="center"
+                 android:id="@id/pattern_layout"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1.0">
+      <com.android.settings.LockPatternView android:layout_gravity="center"
+                            android:id="@id/choose__lockPattern"
+                            style="@style/SecurityLockPatternView" />
+    </FrameLayout>
+  </LinearLayout>
+  <include android:id="@id/button_layout"
+           layout="@layout/privacy_password_choose_lock_pattern_button" />
+</com.android.internal.widget.LinearLayoutWithDefaultTouchRecepient>

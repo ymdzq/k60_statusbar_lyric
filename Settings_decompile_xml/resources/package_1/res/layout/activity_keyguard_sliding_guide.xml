@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:layout_gravity="right"
+              android:orientation="vertical"
+              android:id="@id/followGuide"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <LinearLayout android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/exit_linearlayout_height"
+                android:layout_marginTop="@dimen/exit_linearlayout_top">
+    <LinearLayout android:layout_gravity="end"
+                  android:id="@id/exit_layout"
+                  android:layout_width="@dimen/exit_layout_width_height"
+                  android:layout_height="@dimen/exit_layout_width_height">
+      <ImageView android:id="@id/exit"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="@dimen/exit_top_bottom_start_end"
+                 android:layout_marginBottom="@dimen/exit_top_bottom_start_end"
+                 android:src="@drawable/guide_exit"
+                 android:layout_marginStart="@dimen/exit_top_bottom_start_end"
+                 android:layout_marginEnd="@dimen/exit_top_bottom_start_end" />
+    </LinearLayout>
+  </LinearLayout>
+  <LinearLayout android:layout_gravity="center"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+    <com.android.settings.KeyguardPasswordSlidingGuideRecyclerView android:layout_gravity="center"
+                          android:id="@id/lottie_recycler"
+                          android:layout_width="fill_parent"
+                          android:layout_height="wrap_content" />
+    <LinearLayout android:layout_gravity="center"
+                  android:orientation="horizontal"
+                  android:id="@id/dot_view"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="@dimen/dot_view_top">
+      <View android:id="@id/dot_one"
+            android:background="@drawable/guide_dot_normal"
+            android:layout_width="@dimen/dot_width_height"
+            android:layout_height="@dimen/dot_width_height"
+            android:layout_marginEnd="@dimen/dot_end" />
+      <View android:id="@id/dot_two"
+            android:background="@drawable/guide_dot_focused"
+            android:layout_width="@dimen/dot_width_height"
+            android:layout_height="@dimen/dot_width_height"
+            android:layout_marginEnd="@dimen/dot_end" />
+      <View android:id="@id/dot_three"
+            android:background="@drawable/guide_dot_focused"
+            android:layout_width="@dimen/dot_width_height"
+            android:layout_height="@dimen/dot_width_height" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical"
+                  android:layout_width="fill_parent"
+                  android:layout_height="0.0dp"
+                  android:layout_weight="1.0" />
+    <androidx.constraintlayout.widget.ConstraintLayout android:gravity="bottom"
+                          android:layout_width="fill_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginBottom="@dimen/guide_button_bottom">
+      <Button android:textSize="@dimen/guide_button_text_size"
+              android:gravity="center"
+              android:layout_gravity="center"
+              android:id="@id/guide_button"
+              android:visibility="gone"
+              android:layout_width="0.0dp"
+              android:layout_height="wrap_content"
+              android:minHeight="@dimen/guide_button_height"
+              android:text="@string/guide_button_text"
+              settings:layout_constraintEnd_toEndOf="parent"
+              settings:layout_constraintStart_toStartOf="parent"
+              settings:layout_constraintWidth_max="@dimen/guide_button_width"
+              style="@style/Widget.Button" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </LinearLayout>
+</LinearLayout>

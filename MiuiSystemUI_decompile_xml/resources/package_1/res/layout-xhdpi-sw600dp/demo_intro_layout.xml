@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<RelativeLayout android:id="@id/intro_container"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+  <RelativeLayout android:gravity="center"
+                  android:layout_width="fill_parent"
+                  android:layout_height="fill_parent"
+                  android:layout_above="@id/btn_back">
+    <TextView android:textSize="@dimen/fsgesture_demoinro_titletextsize"
+              android:textStyle="bold"
+              android:textColor="@color/fsgesture_demointro_font_color"
+              android:id="@id/intro_title"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="@dimen/fsgesture_demoinro_titlemarginbottom"
+              android:text="@string/how_to_use_fsg" />
+    <LinearLayout android:gravity="center_vertical"
+                  android:id="@id/to_home_intro"
+                  android:layout_width="wrap_content"
+                  android:layout_height="@dimen/fsgesture_demoinro_lineheight"
+                  android:layout_below="@id/intro_title">
+      <ImageView android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:src="@drawable/icon_home" />
+      <TextView android:textSize="@dimen/fsgesture_demoinro_normal_textsize"
+                android:textColor="@color/fsgesture_demointro_font_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/fsgesture_demoinro_linemargin"
+                android:text="@string/how_to_back_home" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical"
+                  android:id="@id/to_task_intro"
+                  android:layout_width="wrap_content"
+                  android:layout_height="@dimen/fsgesture_demoinro_lineheight"
+                  android:layout_below="@id/to_home_intro">
+      <ImageView android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:src="@drawable/icon_task" />
+      <TextView android:textSize="@dimen/fsgesture_demoinro_normal_textsize"
+                android:textColor="@color/fsgesture_demointro_font_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/fsgesture_demoinro_linemargin"
+                android:text="@string/how_to_switch_recents" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical"
+                  android:id="@id/to_back_intro"
+                  android:layout_width="wrap_content"
+                  android:layout_height="@dimen/fsgesture_demoinro_lineheight"
+                  android:layout_below="@id/to_task_intro">
+      <ImageView android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:src="@drawable/icon_back" />
+      <TextView android:textSize="@dimen/fsgesture_demoinro_normal_textsize"
+                android:textColor="@color/fsgesture_demointro_font_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/fsgesture_demoinro_linemargin"
+                android:text="@string/fs_gesture_back_ready_title" />
+    </LinearLayout>
+  </RelativeLayout>
+  <TextView android:textColor="@drawable/btn_text_color_normal"
+            android:id="@id/btn_back"
+            android:padding="@dimen/fsg_demo_clickregionpadding"
+            android:layout_marginLeft="@dimen/fsg_demo_btn_paddinglr"
+            android:text="@string/fsg_demo_back"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            style="@style/FsgDemoStepTextStyle" />
+  <TextView android:textColor="@drawable/btn_text_color_next"
+            android:id="@id/btn_next"
+            android:padding="@dimen/fsg_demo_clickregionpadding"
+            android:layout_marginRight="@dimen/fsg_demo_btn_paddinglr"
+            android:text="@string/fsg_demo_go_on"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            style="@style/FsgDemoStepTextStyle" />
+</RelativeLayout>

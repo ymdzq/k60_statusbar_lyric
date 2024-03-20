@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/key_settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/ai_button_title_global"
+                        android:key="ai_settings">
+    <intent android:action="com.miui.voiceassist.ACTION_AI_BUTTON_SETTINGS_GLOBAL" />
+  </com.android.settingslib.miuisettings.preference.Preference>
+  <PreferenceCategory android:title="@string/key_gesture_function_shortcut"
+                      android:key="function_shortcut">
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/launch_camera"
+                          android:key="launch_camera"
+                          android:fragment="com.android.settings.KeySettingsSelectFragment" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/screen_shot"
+                          android:key="screen_shot"
+                          android:fragment="com.android.settings.KeySettingsSelectFragment" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/regional_screen_shot"
+                          android:key="partial_screen_shot"
+                          android:fragment="com.android.settings.KeySettingsSelectFragment" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/launch_voice_assistant"
+                          android:key="launch_voice_assistant"
+                          android:fragment="com.android.settings.KeySettingsSelectFragment" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/launch_google_search"
+                          android:key="launch_google_search"
+                          android:fragment="com.android.settings.KeySettingsSelectFragment" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/launch_smarthome"
+                          android:key="launch_smarthome"
+                          android:fragment="com.android.settings.KeySettingsSelectFragment" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/go_to_sleep"
+                          android:key="go_to_sleep"
+                          android:fragment="com.android.settings.KeySettingsSelectFragment" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/turn_on_torch"
+                          android:key="turn_on_torch"
+                          android:fragment="com.android.settings.KeySettingsSelectFragment" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/close_app"
+                          android:key="close_app"
+                          android:fragment="com.android.settings.KeySettingsSelectFragment" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/split_screen"
+                          android:key="split_screen"
+                          android:fragment="com.android.settings.KeySettingsSelectFragment" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/mi_pay"
+                          android:key="mi_pay"
+                          android:summary="@string/mi_pay_summary"
+                          android:fragment="com.android.settings.KeySettingsSelectFragment" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/dump_log"
+                          android:key="dump_log"
+                          android:fragment="com.android.settings.KeySettingsSelectFragment" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/show_menu"
+                          android:key="show_menu"
+                          android:fragment="com.android.settings.KeySettingsSelectFragment" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/launch_recents"
+                          android:key="launch_recents"
+                          android:fragment="com.android.settings.KeySettingsSelectFragment" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/au_pay"
+                          android:key="au_pay"
+                          android:fragment="com.android.settings.KeySettingsSelectFragment" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/google_pay"
+                          android:key="google_pay"
+                          android:fragment="com.android.settings.KeySettingsSelectFragment" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/custom_gesture_title"
+                      android:key="custom_gesture">
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/back_tap"
+                          android:key="back_tap"
+                          android:fragment="com.android.settings.BackTapSettingsFragment" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/screen_key_press"
+                      android:key="screen_key_press">
+    <com.android.settingslib.miuisettings.preference.miuix.DropDownPreference android:title="@string/menu_key"
+                          android:key="menu_press"
+                          settings:entries="@array/screen_key_press_action"
+                          settings:entryValues="@array/screen_key_press_action_value" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/key_position_cat"
+                      android:key="key_position_cat">
+    <com.android.settingslib.miuisettings.preference.miuix.DropDownPreference android:title="@string/screen_key_position"
+                          android:key="screen_key_position"
+                          settings:entries="@array/screen_key_position_action"
+                          settings:entryValues="@array/screen_key_position_action_value" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/convenience_key_category_title"
+                      android:key="convenience_key">
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/fp_nav_center_back_to_home_title"
+                          android:key="pref_fingerprint_nav_center_to_home"
+                          android:dependency="pref_single_key_use" />
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/single_key_use"
+                          android:key="pref_single_key_use"
+                          android:summary="@string/single_key_use_summary"
+                          android:disableDependentsState="true" />
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/auto_disable_screenbuttons_title"
+                          android:key="audo_disable_screen_buttons_settings"
+                          android:summary="@string/auto_disable_screenbuttons_summary"
+                          android:fragment="com.android.settings.AutoDisableScreenButtonsAppListSettings" />
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/long_press_power_key_half_of_second"
+                          android:key="the_way_of_wakeup_voice_assistant"
+                          android:summary="@string/the_way_of_wakeup_voice_assistant_summary" />
+  </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<vector android:height="@dimen/keyguard_left_view_icon_size"
+        android:width="@dimen/keyguard_left_view_icon_size"
+        android:viewportWidth="45.0"
+        android:viewportHeight="45.0" xmlns:android="http://schemas.android.com/apk/res/android">
+  <path android:fillColor="#ffffff"
+        android:pathData="M8,7H14L22.5,11L31,7H37V14.8249L31,17.3528V13L22.5,17L14,13V24.5C14,24.5051 14,24.5103 14,24.5154L8.2072,26.9561C8.0709,26.1578 8,25.3372 8,24.5V7ZM9.3395,30.5953C11.642,35.5582 16.6691,39 22.5,39C30.5081,39 37,32.5081 37,24.5V18.9412L31,21.4692V24.5C31,29.1944 27.1944,33 22.5,33C19.1566,33 16.264,31.0696 14.876,28.2627L9.3395,30.5953Z"
+        android:fillType="evenOdd" />
+</vector>

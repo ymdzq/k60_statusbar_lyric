@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+  <miuix.preference.RadioSetPreferenceCategory>
+    <miuix.preference.RadioButtonPreference android:persistent="false"
+                          android:title="@string/structure_face_unlock_model_other_msg_3d"
+                          android:key="face_unlock_type_stlight_camera"
+                          android:summary="@string/structure_face_unlock_model_other_suggestion_3d" />
+  </miuix.preference.RadioSetPreferenceCategory>
+  <miuix.preference.RadioSetPreferenceCategory>
+    <miuix.preference.RadioButtonPreference android:persistent="false"
+                          android:title="@string/structure_face_unlock_model_other_msg_2d"
+                          android:key="face_unlock_type_normal_camera"
+                          android:summary="@string/structure_face_unlock_model_other_suggestion_2d" />
+  </miuix.preference.RadioSetPreferenceCategory>
+</PreferenceScreen>

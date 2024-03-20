@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/device_name"
+                        android:key="device_name"
+                        settings:controller="com.android.settings.MiuiSearchController" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/storage_settings"
+                        android:key="storage_settings"
+                        settings:controller="com.android.settings.MiuiSearchController" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/device_mall_card_title"
+                        android:key="device_mall_card"
+                        settings:controller="com.android.settings.MiuiSearchController" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/my_device_guarantee"
+                        android:key="micare_expiry_time"
+                        settings:controller="com.android.settings.MiuiSearchController" />
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/device_miui_version_parameters"
+                        android:key="device_miui_version" />
+  <com.android.settings.widget.LTRValuePreference android:title="@string/firmware_version"
+                        android:key="firmware_version" />
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/security_patch"
+                        android:key="security_patch" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/complete_parameters_new"
+                        android:key="device_more_parameter"
+                        android:fragment="com.android.settings.device.MiuiMyDeviceDetailSettings" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/mi_transfer"
+                        android:key="one_key_migrate">
+    <intent android:targetPackage="com.miui.huanji"
+            android:action="com.intent.action.Huanji" />
+  </com.android.settingslib.miuisettings.preference.Preference>
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/huanji_history_title"
+                        android:key="huanji_history"
+                        android:fragment="com.android.settings.OneKeyMigrateHistory" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/privacy_settings_new"
+                        android:key="privacy_settings"
+                        android:fragment="com.android.settings.backup.PrivacySettings" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/after_sale_service"
+                        android:key="after_sale_service"
+                        settings:showRightArrow="true" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/trade_in"
+                        android:key="trade_in"
+                        settings:showRightArrow="true" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/maintenance_title"
+                        android:key="maintenancemode_key"
+                        settings:showRightArrow="true" />
+  <com.android.settingslib.RestrictedPreference android:title="@string/master_clear_title_new"
+                        android:key="factory_reset_key"
+                        android:fragment="com.android.settings.MiuiMasterClear"
+                        settings:useAdminDisabledSummary="true"
+                        settings:userRestriction="no_factory_reset" />
+  <PreferenceCategory android:key="user"
+                      settings:controller="com.android.settings.MiuiBaseCategoryController">
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/approve_title"
+                          android:key="credentials"
+                          android:fragment="com.android.settings.credentials.MiuiCredentialsFragment" />
+  </PreferenceCategory>
+</PreferenceScreen>

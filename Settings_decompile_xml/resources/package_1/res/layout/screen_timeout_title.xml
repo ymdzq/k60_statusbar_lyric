@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <TextView android:textSize="@dimen/restricted_screen_timeout_title_textsize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/screen_timeout_title"
+            android:maxLines="1"
+            android:fontFamily="mipro-medium" />
+  <TextView android:textSize="@dimen/restricted_screen_timeout_subtitle_textsize"
+            android:textColor="@color/restricted_screen_timeout_subtitle_textcolor"
+            android:ellipsize="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/screen_timeout_subtitle"
+            android:maxLines="3"
+            android:fontFamily="mipro-regular" />
+</LinearLayout>

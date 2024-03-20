@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<com.android.systemui.qs.MiuiQSHeaderView android:orientation="vertical"
+                      android:id="@id/header_content"
+                      android:paddingTop="@dimen/qs_header_top_padding"
+                      android:paddingBottom="@dimen/expanded_notification_header_bottom"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:paddingStart="@dimen/notification_side_paddings"
+                      android:paddingEnd="@dimen/notification_side_paddings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto">
+  <LinearLayout android:gravity="bottom"
+                android:orientation="horizontal"
+                android:id="@id/qs_header_vertical_info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/status_bar_height">
+    <LinearLayout android:orientation="vertical"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content">
+      <com.android.systemui.statusbar.views.MiuiClock android:textAppearance="@style/TextAppearance.StatusBar.Expanded.Clock.QuickSettingTime"
+                            android:id="@id/big_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            systemui:r0x7f040001="0"
+                            systemui:r0x7f040002="false" />
+      <com.android.systemui.statusbar.views.MiuiClock android:textAppearance="@style/TextAppearance.StatusBar.Expanded.Clock.QuickSettingDate"
+                            android:gravity="center_vertical"
+                            android:id="@id/date_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            systemui:r0x7f040001="1"
+                            systemui:r0x7f040002="false" />
+    </LinearLayout>
+    <LinearLayout android:gravity="bottom|center|end"
+                  android:orientation="horizontal"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content">
+      <LinearLayout android:orientation="horizontal"
+                    android:id="@id/privacy_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/notch_privacy_margin"
+                    android:layout_marginStart="2.0dp"
+                    android:layout_marginEnd="@dimen/qs_header_privacy_margin_end" />
+      <ImageView android:id="@id/notification_shade_shortcut"
+                 android:layout_width="@dimen/quick_setting_header_shortcut_width"
+                 android:layout_height="@dimen/quick_setting_header_shortcut_height"
+                 android:layout_marginBottom="@dimen/notch_settings_button_margin"
+                 android:src="@drawable/notch_settings"
+                 android:contentDescription="@string/accessibility_settings" />
+    </LinearLayout>
+  </LinearLayout>
+  <LinearLayout android:layout_width="fill_parent"
+                android:layout_height="@dimen/status_bar_icon_height">
+    <com.android.keyguard.CarrierText android:textAppearance="@style/TextAppearance.StatusBar.Clock"
+                          android:ellipsize="marquee"
+                          android:gravity="center_vertical"
+                          android:id="@id/notification_shade_carrier"
+                          android:visibility="gone"
+                          android:layout_width="wrap_content"
+                          android:layout_height="fill_parent"
+                          android:maxEms="9"
+                          android:singleLine="true"
+                          android:marqueeRepeatLimit="1" />
+    <com.android.systemui.statusbar.views.MiuiClock android:textAppearance="@style/TextAppearance.StatusBar.Expanded.Clock.QuickSettingDate"
+                          android:gravity="center_vertical"
+                          android:id="@id/horizontal_date_time"
+                          android:layout_width="wrap_content"
+                          android:layout_height="fill_parent"
+                          systemui:r0x7f040001="1"
+                          systemui:r0x7f040002="false" />
+    <FrameLayout android:layout_width="fill_parent"
+                 android:layout_height="fill_parent">
+      <include android:layout_gravity="end"
+               android:id="@id/system_icon_area"
+               android:layout_width="wrap_content"
+               android:layout_height="fill_parent"
+               layout="@layout/system_icons" />
+    </FrameLayout>
+  </LinearLayout>
+</com.android.systemui.qs.MiuiQSHeaderView>

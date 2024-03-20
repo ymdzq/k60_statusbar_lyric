@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/gesture_settings_title" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+  <PreferenceCategory android:key="function_shortcut">
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/voice_assist"
+                          android:key="launch_voice_assistant"
+                          android:fragment="com.android.settings.GestureShortcutSettingsSelectFragment" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/launch_smarthome"
+                          android:key="launch_smarthome"
+                          android:fragment="com.android.settings.GestureShortcutSettingsSelectFragment" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/launch_google_search"
+                          android:key="launch_google_search"
+                          android:fragment="com.android.settings.GestureShortcutSettingsSelectFragment" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/screen_shot"
+                          android:key="screen_shot"
+                          android:fragment="com.android.settings.GestureShortcutSettingsSelectFragment" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/regional_screen_shot"
+                          android:key="partial_screen_shot"
+                          android:fragment="com.android.settings.GestureShortcutSettingsSelectFragment" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/mi_pay_summary"
+                          android:key="mi_pay"
+                          android:fragment="com.android.settings.GestureShortcutSettingsSelectFragment" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/launch_camera"
+                          android:key="launch_camera"
+                          android:fragment="com.android.settings.GestureShortcutSettingsSelectFragment" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/turn_on_torch"
+                          android:key="turn_on_torch"
+                          android:fragment="com.android.settings.GestureShortcutSettingsSelectFragment" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/change_brightness"
+                          android:key="change_brightness"
+                          android:fragment="com.android.settings.GestureShortcutSettingsSelectFragment" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/au_pay"
+                          android:key="au_pay"
+                          android:fragment="com.android.settings.GestureShortcutSettingsSelectFragment" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/google_pay"
+                          android:key="google_pay"
+                          android:fragment="com.android.settings.GestureShortcutSettingsSelectFragment" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/advanced_gesture"
+                      android:key="advanced_gesture">
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:key="knock_gesture_v"
+                          android:fragment="com.android.settings.knock.KnockGestureVSelectFragment" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/back_tap"
+                          android:key="back_tap"
+                          android:fragment="com.android.settings.BackTapSettingsFragment" />
+    <com.android.settingslib.miuisettings.preference.miuix.DropDownPreference android:title="@string/fingerprint_double_tap"
+                          android:key="fingerprint_double_tap" />
+  </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+  <bool name="check_is_default_strong_toast">false</bool>
+  <bool name="config_miui_divider_vertical_enable">true</bool>
+  <bool name="config_quickSettingsMediaLandscapeCollapsed">false</bool>
+  <bool name="is_tablet">true</bool>
+  <bool name="qs_show_user_switcher_for_single_user">true</bool>
+  <bool name="sudUseTabletLayout">true</bool>
+  <bool name="support_strong_toast">true</bool>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<miuix.appcompat.app.ButtonForegroundDrawable systemui:r0x7f04010a="@dimen/miuix_appcompat_capsule_button_bg_corner_radius"
+                      systemui:r0x7f040115="@dimen/miuix_appcompat_button_bg_corner_radius"
+                      systemui:r0x7f0403a5="0.08"
+                      systemui:r0x7f040579="0.0"
+                      systemui:r0x7f040610="0.08"
+                      systemui:tintColor="@color/miuix_appcompat_tint_color_light" xmlns:systemui="http://schemas.android.com/apk/res-auto" />

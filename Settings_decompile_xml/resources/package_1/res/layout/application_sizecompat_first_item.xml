@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              style="@style/Widget.ListView.Item.DoubleLine" xmlns:android="http://schemas.android.com/apk/res/android">
+  <ImageView android:background="@color/application_mode_aplit"
+             android:layout_width="fill_parent"
+             android:layout_height="0.74dp"
+             android:layout_marginTop="23.63dp"
+             android:layout_marginBottom="23.63dp" />
+  <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.BlankPage"
+            android:textSize="13.0sp"
+            android:layout_width="wrap_content"
+            android:layout_height="33.0dp"
+            android:text="@string/unadapt_embedded" />
+</LinearLayout>

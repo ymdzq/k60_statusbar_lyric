@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/assist_gesture_title" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <com.android.settings.widget.VideoPreference android:key="gesture_assist_video"
+                        settings:animation="@raw/gesture_assist"
+                        settings:controller="com.android.settings.widget.VideoPreferenceController"
+                        settings:preview="@drawable/gesture_assist" />
+  <com.android.settingslib.miuisettings.preference.SwitchPreference android:title="@string/assist_gesture_title"
+                        android:key="gesture_assist"
+                        settings:allowDividerAbove="true"
+                        settings:controller="com.android.settings.gestures.AssistGestureSettingsPreferenceController"
+                        settings:keywords="@string/keywords_assist_gesture_launch" />
+</PreferenceScreen>

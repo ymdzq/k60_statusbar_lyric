@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:layout_marginTop="@dimen/close_lid_display_video_marginTop" xmlns:android="http://schemas.android.com/apk/res/android">
+  <ViewFlipper android:id="@id/view_flipper"
+               android:layout_width="@dimen/close_lid_display_setting_video_width"
+               android:layout_height="@dimen/close_lid_display_setting_video_height" />
+</LinearLayout>

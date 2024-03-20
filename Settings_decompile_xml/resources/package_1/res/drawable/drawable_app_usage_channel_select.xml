@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<shape android:shape="rectangle" xmlns:android="http://schemas.android.com/apk/res/android">
+  <size android:height="@dimen/usage_state_channel_height"
+        android:width="@dimen/usage_state_channel_width" />
+  <corners android:radius="@dimen/usage_state_channel_radius" />
+  <solid android:color="@color/usage_stats_app_usage_text_select_bg" />
+</shape>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<vector android:height="25.0dp"
+        android:width="24.0dp"
+        android:viewportWidth="24.0"
+        android:viewportHeight="25.0" xmlns:android="http://schemas.android.com/apk/res/android">
+  <path android:pathData="M3.475,9.595C3.475,8.18 3.475,7.473 3.75,6.932C3.992,6.457 4.379,6.07 4.854,5.828C5.394,5.553 6.102,5.553 7.517,5.553H16.485C17.9,5.553 18.607,5.553 19.148,5.828C19.623,6.07 20.01,6.457 20.252,6.932C20.527,7.473 20.527,8.18 20.527,9.595V15.987C20.527,16.562 20.527,16.849 20.481,17.088C20.284,18.098 19.494,18.889 18.483,19.085C18.244,19.132 17.957,19.132 17.383,19.132V19.132C14.685,19.132 14.369,17.346 12.001,17.346C9.632,17.346 9.001,19.132 6.619,19.132V19.132C6.045,19.132 5.757,19.132 5.518,19.085C4.508,18.889 3.718,18.098 3.521,17.088C3.475,16.849 3.475,16.562 3.475,15.987V9.595Z"
+        android:strokeColor="@color/qs_detail_item_icon_color"
+        android:strokeWidth="1.89474" />
+  <path android:fillColor="@color/qs_detail_item_icon_color"
+        android:pathData="M8.37,9.025L8.37,9.025A0.789,0.789 0,0 1,9.159 9.815L9.159,13.604A0.789,0.789 0,0 1,8.37 14.394L8.37,14.394A0.789,0.789 0,0 1,7.58 13.604L7.58,9.815A0.789,0.789 0,0 1,8.37 9.025z" />
+  <path android:fillColor="@color/qs_detail_item_icon_color"
+        android:pathData="M11.055,11.709L11.055,11.709A0.789,0.789 0,0 1,10.265 12.499L6.476,12.499A0.789,0.789 45,0 1,5.686 11.709L5.686,11.709A0.789,0.789 135,0 1,6.476 10.92L10.265,10.92A0.789,0.789 0,0 1,11.055 11.709z" />
+  <path android:fillColor="@color/qs_detail_item_icon_color"
+        android:pathData="M12.633,11.553a0.947,0.947 0,1 0,1.895 0a0.947,0.947 0,1 0,-1.895 0z" />
+  <path android:fillColor="@color/qs_detail_item_icon_color"
+        android:pathData="M14.527,13.447a0.947,0.947 0,1 0,1.895 0a0.947,0.947 0,1 0,-1.895 0z" />
+  <path android:fillColor="@color/qs_detail_item_icon_color"
+        android:pathData="M14.527,9.658a0.947,0.947 0,1 0,1.895 0a0.947,0.947 0,1 0,-1.895 0z" />
+  <path android:fillColor="@color/qs_detail_item_icon_color"
+        android:pathData="M16.422,11.553a0.947,0.947 0,1 0,1.895 0a0.947,0.947 0,1 0,-1.895 0z" />
+</vector>

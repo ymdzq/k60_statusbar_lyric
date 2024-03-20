@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<vector android:height="@dimen/battery_meter_charging_height"
+        android:width="@dimen/battery_meter_charging_width"
+        android:viewportWidth="@dimen/battery_meter_charging_viewport_width"
+        android:viewportHeight="@dimen/battery_meter_charging_viewport_height" xmlns:android="http://schemas.android.com/apk/res/android">
+  <path android:fillColor="@color/light_mode_icon_color_single_tone"
+        android:pathData="@string/battery_meter_charging_path" />
+</vector>

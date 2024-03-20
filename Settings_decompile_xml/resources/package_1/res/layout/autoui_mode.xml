@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <include android:id="@id/search_view"
+           layout="@layout/miuix_appcompat_search_stub" />
+  <LinearLayout android:orientation="vertical"
+                android:id="@id/linear_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="12.0dp"
+                android:layout_marginBottom="16.0dp"
+                android:layout_below="@id/search_view">
+    <include android:id="@id/autoui_guide_layout"
+             layout="@layout/application_autoui_guide" />
+    <RelativeLayout android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+      <miuix.springback.view.SpringBackLayout android:id="@id/springback_layout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            settings:scrollableView="@id/application_list">
+        <miuix.recyclerview.widget.RecyclerView android:id="@id/application_list"
+                              android:layout_width="fill_parent"
+                              android:layout_height="fill_parent"
+                              style="@style/Widget.ListView" />
+      </miuix.springback.view.SpringBackLayout>
+      <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.BlankPage"
+                android:textSize="15.0sp"
+                android:gravity="center"
+                android:id="@android:id/empty"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/autoui_mode_no_support_apps"
+                android:drawableTop="@drawable/autoui_guide_empty"
+                android:drawablePadding="8.0dp"
+                android:layout_centerInParent="true" />
+    </RelativeLayout>
+  </LinearLayout>
+</LinearLayout>

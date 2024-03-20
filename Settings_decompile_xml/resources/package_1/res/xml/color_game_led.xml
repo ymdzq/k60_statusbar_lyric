@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/color_game_led_title" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:miui="http://schemas.android.com/apk/res/com.android.settings" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory>
+    <com.android.settingslib.miuisettings.preference.SwitchPreference android:title="@string/color_game_led_title"
+                          android:key="color_led_switch"
+                          android:summary="@string/color_game_led_summary" />
+    <com.android.settings.widget.CustomCheckBoxPreference android:title="@string/color_game_led_time_title"
+                          android:key="color_led_time_switch"
+                          android:dependency="color_led_switch" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/color_game_led_start_time"
+                          android:key="color_led_start_time"
+                          android:dependency="color_led_time_switch" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/color_game_led_end_time"
+                          android:key="color_led_end_time"
+                          android:dependency="color_led_time_switch" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/color_game_led_remind_title"
+                      android:key="color_led_notification_category"
+                      settings:controller="com.android.settings.MiuiBaseCategoryController">
+    <com.android.settingslib.miuisettings.preference.SwitchPreference android:title="@string/color_game_led_battery_title"
+                          android:key="color_led_battery"
+                          android:summary="@string/color_game_led_charging_summary"
+                          android:dependency="color_led_switch" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/color_game_led_incall_pulse_title"
+                          android:key="color_led_incall_pulse"
+                          android:dependency="color_led_switch"
+                          android:fragment="com.android.settings.ColorGameLedCustomSettings"
+                          settings:showRightArrow="true" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/color_game_led_notification_pulse_title"
+                          android:key="color_led_notification_pulse"
+                          android:dependency="color_led_switch"
+                          android:fragment="com.android.settings.ColorGameLedCustomSettings"
+                          settings:showRightArrow="true" />
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/color_game_led_applications_title"
+                          android:key="color_led_applications"
+                          android:summary="@string/color_game_led_applications_title_summary"
+                          android:dependency="color_led_notification_pulse"
+                          android:fragment="com.android.settings.NotificationAppListSettings" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/color_game_led_special_scene_title"
+                      android:key="color_led_pulse_category"
+                      settings:controller="com.android.settings.MiuiBaseCategoryController">
+    <com.android.settingslib.miuisettings.preference.SwitchPreference android:title="@string/color_game_led_game_mode_title"
+                          android:key="color_led_game_mode"
+                          android:summary="@string/color_game_led_game_mode_summary"
+                          android:dependency="color_led_switch" />
+  </PreferenceCategory>
+</PreferenceScreen>

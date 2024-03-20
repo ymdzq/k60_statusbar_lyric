@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<com.android.settings.SetupFooterLayout android:layout_gravity="bottom"
+                      android:orientation="horizontal"
+                      android:id="@id/setup_footer_layout"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginBottom="@dimen/setup_footer_bottom_margin"
+                      android:layout_marginStart="@dimen/setup_footer_start_margin"
+                      android:layout_marginEnd="@dimen/setup_footer_start_margin" xmlns:android="http://schemas.android.com/apk/res/android">
+  <FrameLayout android:layout_gravity="center_vertical"
+               android:id="@id/lyt_btn_back"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content">
+    <TextView android:textColor="@drawable/keyguard_setup_btn_text_color_normal"
+              android:gravity="start"
+              android:id="@id/btn_back"
+              android:clickable="true"
+              android:layout_width="wrap_content"
+              android:text="@string/setup_password_back"
+              android:fontFamily="sans-serif-medium"
+              style="@style/ProvisionStepTextStyle" />
+    <ImageButton android:id="@id/btn_back_global"
+                 android:background="@drawable/btn_bg"
+                 android:visibility="gone"
+                 android:src="@drawable/icon_global_back"
+                 android:contentDescription="@string/setup_password_back"
+                 style="@style/ProvisionStepTextStyle" />
+  </FrameLayout>
+  <TextView android:textSize="@dimen/provision_step_text_size"
+            android:textColor="@drawable/keyguard_setup_btn_text_color_normal"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:id="@id/btn_skip"
+            android:paddingTop="@dimen/provision_text_padding"
+            android:paddingBottom="@dimen/provision_text_padding"
+            android:visibility="invisible"
+            android:clickable="true"
+            android:layout_width="0.0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/lockpattern_retry_button_text"
+            android:layout_weight="1.0"
+            android:fontFamily="sans-serif-medium" />
+  <FrameLayout android:layout_gravity="center_vertical"
+               android:id="@id/lyt_btn_next"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content">
+    <TextView android:textColor="@drawable/keyguard_setup_btn_text_color_high_light"
+              android:gravity="end"
+              android:id="@id/btn_next"
+              android:clickable="true"
+              android:layout_width="wrap_content"
+              android:text="@string/setup_password_confirm"
+              android:fontFamily="sans-serif-medium"
+              style="@style/ProvisionStepTextStyle" />
+    <ImageButton android:id="@id/next_global"
+                 android:background="@drawable/btn_bg"
+                 android:visibility="gone"
+                 android:src="@drawable/icon_global_next"
+                 android:contentDescription="@string/setup_password_confirm"
+                 style="@style/ProvisionStepTextStyle" />
+  </FrameLayout>
+</com.android.settings.SetupFooterLayout>

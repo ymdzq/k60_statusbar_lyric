@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<miuix.provision.CustomDispatchFrameLayout android:layout_gravity="center_horizontal"
+                      android:id="@id/provision_container"
+                      android:layout_width="fill_parent"
+                      android:layout_height="0.0dp"
+                      android:layout_marginTop="@dimen/provision_content_margin_top"
+                      android:layout_weight="1.0"
+                      android:layout_marginStart="@dimen/provision_anim_margin_start_land"
+                      android:layout_marginEnd="@dimen/provision_anim_margin_end_land" xmlns:android="http://schemas.android.com/apk/res/android" />

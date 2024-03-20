@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:nextFocusDown="@id/checkgroup"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:importantForAccessibility="no"
+              android:layout_marginStart="@dimen/raise_bottom_height_of_keyboard_view_margin"
+              android:layout_marginEnd="@dimen/raise_bottom_height_of_keyboard_view_margin" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <miuix.visual.check.VisualCheckGroup android:id="@id/checkgroup"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/raise_bottom_height_of_keyboard_image_view_margin_top"
+                        settings:itemSpacing="0.0dp"
+                        settings:lineGravity="center"
+                        settings:lineSpacing="2.0dp">
+    <miuix.visual.check.VisualCheckBox android:orientation="vertical"
+                          android:id="@id/high_keyboard"
+                          android:focusableInTouchMode="true"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content">
+      <miuix.visual.check.BorderLayout android:padding="@dimen/raise_bottom_height_of_keyboard_bg_padding"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+        <ImageView android:id="@id/high_imgview"
+                   android:layout_width="@dimen/raise_bottom_height_of_keyboard_image_view_width"
+                   android:layout_height="wrap_content" />
+      </miuix.visual.check.BorderLayout>
+      <miuix.visual.check.VisualCheckedTextView android:textSize="@dimen/raise_bottom_height_of_keyboard_des_text_size"
+                            android:textStyle="bold"
+                            android:textColor="@color/visual_check_text_color"
+                            android:id="@id/high_textview"
+                            android:layout_width="@dimen/raise_bottom_height_of_keyboard_text_layout_width"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/raise_bottom_height_of_keyboard_bg_padding"
+                            android:textAlignment="center" />
+    </miuix.visual.check.VisualCheckBox>
+    <miuix.visual.check.VisualCheckBox android:orientation="vertical"
+                          android:id="@id/default_keyboard"
+                          android:focusableInTouchMode="true"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content">
+      <miuix.visual.check.BorderLayout android:padding="@dimen/raise_bottom_height_of_keyboard_bg_padding"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+        <ImageView android:id="@id/default_imgview"
+                   android:layout_width="@dimen/raise_bottom_height_of_keyboard_image_view_width"
+                   android:layout_height="wrap_content" />
+      </miuix.visual.check.BorderLayout>
+      <miuix.visual.check.VisualCheckedTextView android:textSize="@dimen/raise_bottom_height_of_keyboard_des_text_size"
+                            android:textStyle="bold"
+                            android:textColor="@color/visual_check_text_color"
+                            android:id="@id/default_textview"
+                            android:layout_width="@dimen/raise_bottom_height_of_keyboard_text_layout_width"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/raise_bottom_height_of_keyboard_bg_padding"
+                            android:textAlignment="center" />
+    </miuix.visual.check.VisualCheckBox>
+  </miuix.visual.check.VisualCheckGroup>
+</LinearLayout>

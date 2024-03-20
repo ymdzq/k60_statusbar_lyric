@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center_vertical"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <Button android:textSize="15.0sp"
+          android:textColor="#0d84ff"
+          android:layout_gravity="center_horizontal"
+          android:id="@id/btn_delete"
+          android:background="@drawable/wifi_button_selector"
+          android:paddingTop="8.0dp"
+          android:paddingBottom="8.0dp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/saved_wifi_delete"
+          android:paddingStart="20.0dp"
+          android:paddingEnd="20.0dp" />
+  <CheckBox android:id="@id/checkbox"
+            android:focusable="false"
+            android:clickable="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+</LinearLayout>

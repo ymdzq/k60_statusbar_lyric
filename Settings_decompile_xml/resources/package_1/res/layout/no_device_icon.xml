@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<RelativeLayout android:id="@id/id_0x7f0a0a19"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+  <RelativeLayout android:id="@id/blank_screen"
+                  android:layout_width="wrap_content"
+                  android:layout_height="@dimen/blank_screen_height"
+                  android:layout_alignParentBottom="true"
+                  android:layout_centerHorizontal="true"
+                  android:layout_centerVertical="true">
+    <ImageView android:id="@id/blank_screen_icon"
+               android:layout_width="@dimen/blank_screen_icon_width"
+               android:layout_height="@dimen/blank_screen_icon_height"
+               android:src="@drawable/blank_screen_icon"
+               android:layout_alignParentTop="true"
+               android:layout_centerHorizontal="true" />
+    <TextView android:textAppearance="@style/blank_screen_no_device"
+              android:gravity="center"
+              android:id="@id/blank_screen_no_device"
+              android:layout_width="wrap_content"
+              android:layout_height="@dimen/frame_207_height"
+              android:layout_marginTop="@dimen/frame_207_margin_top"
+              android:text="@string/blank_screen_no_device"
+              android:layout_alignParentLeft="true"
+              android:layout_alignParentTop="true"
+              android:layout_alignParentRight="true"
+              android:layout_alignParentBottom="true"
+              android:alpha="0.4" />
+  </RelativeLayout>
+  <LinearLayout android:orientation="vertical"
+                android:id="@id/layoutOut"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+    <FrameLayout android:id="@id/prefs_container"
+                 android:clipChildren="false"
+                 android:clipToPadding="false"
+                 android:layout_width="fill_parent"
+                 android:layout_height="0.0dp"
+                 android:layout_weight="1.0"
+                 android:smoothScrollbar="false" />
+  </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<FrameLayout android:background="@drawable/stylus_battery_bg"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+  <RelativeLayout android:layout_width="fill_parent"
+                  android:layout_height="fill_parent">
+    <RelativeLayout android:id="@id/stylus_info_press_connect"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+      <ImageView android:layout_width="@dimen/stylus_battery_level_view_width"
+                 android:layout_height="@dimen/stylus_battery_level_view_height"
+                 android:layout_marginTop="@dimen/stylus_battery_level_margin_top"
+                 android:src="@drawable/stylus_ic_pencil_black"
+                 android:layout_centerHorizontal="true" />
+      <TextView android:textSize="14.22dp"
+                android:textColor="#0d84ff"
+                android:gravity="center"
+                android:id="@id/bt_stylus_connect"
+                android:layout_width="120.89dp"
+                android:layout_height="17.78dp"
+                android:layout_marginTop="32.88dp"
+                android:text="@string/stylus_connect"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="mipro-medium" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center"
+                  android:orientation="horizontal"
+                  android:id="@id/stylus_info_connecting"
+                  android:layout_width="fill_parent"
+                  android:layout_height="fill_parent">
+      <ProgressBar android:id="@id/pb_progress"
+                   android:layout_width="16.0dp"
+                   android:layout_height="16.0dp"
+                   android:indeterminateDrawable="@anim/stylus_connecting_progress_anim"
+                   android:indeterminateDuration="750" />
+      <TextView android:textSize="14.22dp"
+                android:textColor="#000000"
+                android:id="@id/connecting"
+                android:layout_width="94.22dp"
+                android:layout_height="17.78dp"
+                android:text="@string/stylus_connecting"
+                android:fontFamily="mipro-medium"
+                android:layout_marginStart="5.33dp" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/stylus_info_battery"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+      <com.android.settings.stylus.MiuiStylusLevelsView android:id="@id/stylus_pager_image"
+                            android:layout_width="@dimen/stylus_battery_level_view_width"
+                            android:layout_height="@dimen/stylus_battery_level_view_height"
+                            android:layout_marginTop="@dimen/stylus_battery_level_margin_top"
+                            android:layout_centerHorizontal="true" />
+      <LinearLayout android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/stylus_battery_text_margin_top"
+                    android:layout_centerHorizontal="true">
+        <ImageView android:gravity="center"
+                   android:layout_gravity="center_vertical"
+                   android:id="@id/stylus_in_charging"
+                   android:visibility="gone"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="0.05dp"
+                   android:src="@drawable/ic_stylus_in_charging"
+                   android:scaleType="fitCenter"
+                   android:layout_marginEnd="5.78dp" />
+        <TextView android:textSize="14.22dp"
+                  android:textColor="#000000"
+                  android:id="@id/stylus_battery"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/stylus_default_percent"
+                  android:fontFamily="mipro-medium" />
+        <TextView android:textSize="14.22dp"
+                  android:textColor="#000000"
+                  android:id="@id/stylus_battery_percent"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="%"
+                  android:fontFamily="mipro-medium" />
+      </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:gravity="center"
+                  android:orientation="horizontal"
+                  android:id="@id/stylus_info_connect_fail"
+                  android:layout_width="fill_parent"
+                  android:layout_height="fill_parent">
+      <TextView android:textSize="14.22dp"
+                android:textColor="#f22424"
+                android:gravity="center"
+                android:id="@id/connect_fail"
+                android:layout_width="138.66dp"
+                android:layout_height="17.78dp"
+                android:text="@string/stylus_connect_fail"
+                android:fontFamily="mipro-medium" />
+    </LinearLayout>
+  </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/date_and_time"
+                  android:key="date_time_settings_screen"
+                  settings:keywords="@string/keywords_date_and_time" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:title="@string/date_time_settings" />
+  <com.android.settingslib.RestrictedSwitchPreference android:title="@string/date_time_auto"
+                        android:key="auto_time"
+                        settings:useAdditionalSummary="true"
+                        settings:userRestriction="no_config_date_time" />
+  <com.android.settingslib.RestrictedPreference android:title="@string/date_time_set_date_title"
+                        android:key="date"
+                        android:summary="@string/summary_placeholder"
+                        settings:showRightArrow="true"
+                        settings:userRestriction="no_config_date_time" />
+  <com.android.settingslib.RestrictedPreference android:title="@string/date_time_set_time_title"
+                        android:key="time"
+                        android:summary="@string/summary_placeholder"
+                        settings:showRightArrow="true"
+                        settings:userRestriction="no_config_date_time" />
+  <PreferenceCategory android:title="@string/timezone_settings"
+                      android:key="timezone_preference_category" />
+  <com.android.settingslib.RestrictedSwitchPreference android:title="@string/zone_auto_title"
+                        android:key="auto_zone"
+                        settings:userRestriction="no_config_date_time" />
+  <com.android.settingslib.widget.BannerMessagePreference android:title="@string/location_time_zone_detection_status_title"
+                        android:key="location_time_zone_detection_status"
+                        settings:controller="com.android.settings.datetime.LocationProviderStatusPreferenceController" />
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/date_time_set_timezone"
+                        android:key="timezone"
+                        android:fragment="com.android.settings.datetime.timezone.TimeZoneSettings" />
+  <com.android.settingslib.miuisettings.preference.SwitchPreference android:title="@string/location_time_zone_detection_toggle_title"
+                        android:key="location_time_zone_detection"
+                        settings:controller="com.android.settings.datetime.LocationTimeZoneDetectionPreferenceController" />
+  <PreferenceCategory android:title="@string/select_time_format_category_title">
+    <com.android.settingslib.miuisettings.preference.miuix.DropDownPreference android:title="@string/select_time_format_title"
+                          android:key="select_time_format"
+                          settings:entries="@array/time_format_entries"
+                          settings:entryValues="@array/time_format_values" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/dual_clock"
+                      android:key="dual_clock">
+    <com.android.settingslib.miuisettings.preference.SwitchPreference android:title="@string/auto_dual_clock_title"
+                          android:key="auto_dual_clock"
+                          android:summary="@string/auto_dual_clock_summary" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/resident_timezone_summary"
+                          android:key="resident_timezone"
+                          settings:showRightArrow="true" />
+    <com.android.settings.widget.TipPreference android:persistent="false"
+                          android:enabled="false"
+                          android:layout="@layout/preference_textview_secondary"
+                          android:title="@string/dual_clock_hint"
+                          android:key="dual_clock_hint" />
+  </PreferenceCategory>
+</PreferenceScreen>

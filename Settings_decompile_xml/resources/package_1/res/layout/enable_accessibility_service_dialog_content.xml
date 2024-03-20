@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<ScrollView android:scrollbarStyle="outsideOverlay"
+            android:gravity="top"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:textDirection="locale" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center_horizontal"
+                  android:orientation="vertical"
+                  android:paddingLeft="24.0dp"
+                  android:paddingRight="24.0dp"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content">
+      <ImageView android:id="@id/permissionDialog_icon"
+                 style="@style/AccessibilityDialogServiceIcon" />
+      <TextView android:id="@id/permissionDialog_title"
+                style="@style/AccessibilityDialogTitle" />
+      <TextView android:id="@id/permissionDialog_description"
+                android:text="@string/accessibility_service_warning_description"
+                style="@style/AccessibilityDialogDescription" />
+      <LinearLayout android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24.0dp">
+        <ImageView android:id="@id/controlScreen_icon"
+                   android:src="@drawable/ic_visibility_18dp"
+                   style="@style/AccessibilityDialogIcon" />
+        <LinearLayout android:orientation="vertical"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content">
+          <TextView android:id="@id/controlScreen_title"
+                    android:text="@string/accessibility_service_screen_control_title"
+                    style="@style/AccessibilityDialogPermissionTitle" />
+          <TextView android:id="@id/controlScreen_description"
+                    android:text="@string/accessibility_service_screen_control_description"
+                    style="@style/AccessibilityDialogPermissionDescription" />
+        </LinearLayout>
+      </LinearLayout>
+      <LinearLayout android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24.0dp">
+        <ImageView android:id="@id/performAction_icon"
+                   android:src="@drawable/ic_pan_tool_18dp"
+                   style="@style/AccessibilityDialogIcon" />
+        <LinearLayout android:orientation="vertical"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content">
+          <TextView android:id="@id/performAction_title"
+                    android:text="@string/accessibility_service_action_perform_title"
+                    style="@style/AccessibilityDialogPermissionTitle" />
+          <TextView android:id="@id/performAction_description"
+                    android:text="@string/accessibility_service_action_perform_description"
+                    style="@style/AccessibilityDialogPermissionDescription" />
+        </LinearLayout>
+      </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="24.0dp"
+                  android:layout_marginBottom="24.0dp">
+      <LinearLayout android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/miuix_preference_item_padding_start"
+                    android:paddingEnd="@dimen/miuix_preference_item_padding_end">
+        <Button android:gravity="center"
+                android:id="@id/permission_enable_deny_button"
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/accessibility_dialog_button_deny"
+                android:maxLines="2"
+                android:layout_weight="1.0"
+                android:layout_marginEnd="8.0dp"
+                style="?android:attr/buttonBarButtonStyle" />
+        <Button android:textColor="@color/new_version_text_color"
+                android:gravity="center"
+                android:id="@id/permission_enable_allow_button"
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/accessibility_dialog_button_allow"
+                android:maxLines="2"
+                android:layout_weight="1.0"
+                android:layout_marginStart="8.0dp"
+                style="?android:attr/buttonBarButtonStyle" />
+        <Button android:gravity="center"
+                android:id="@id/permission_enable_uninstall_button"
+                android:visibility="gone"
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/uninstall_text"
+                android:maxLines="2"
+                android:layout_weight="1.0"
+                android:layout_marginStart="8.0dp"
+                style="?android:attr/buttonBarButtonStyle" />
+      </LinearLayout>
+    </LinearLayout>
+  </LinearLayout>
+</ScrollView>

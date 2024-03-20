@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<com.android.settings.display.CheckableLayout android:gravity="center_vertical"
+                      android:layout_gravity="center_vertical"
+                      android:orientation="vertical"
+                      android:background="@drawable/miuix_appcompat_list_item_bg_dialog_light"
+                      android:layout_width="fill_parent"
+                      style="@style/Widget.ListView.Item.SingleLine" xmlns:android="http://schemas.android.com/apk/res/android">
+  <miuix.androidbasewidget.widget.CheckedTextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.AlertDialogListItem.SingleChoice"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:id="@id/txt_choice"
+                        android:fadingEdge="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:checkMark="?android:attr/listChoiceIndicatorSingle"
+                        android:maxLines="2"
+                        android:paddingEnd="24.0dp"
+                        android:layout_marginEnd="12.0dp" />
+</com.android.settings.display.CheckableLayout>

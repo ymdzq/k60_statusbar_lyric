@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/input_method_clipboard_settings"
+                  android:key="clipboard_settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/input_method_quick_paste_title"
+                        android:key="quick_paste"
+                        android:summary="@string/input_method_quick_paste_summary" />
+  <PreferenceCategory android:title="@string/input_method_quick_access"
+                      android:key="quick_access">
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/input_method_quick_taobao_title"
+                          android:key="quick_paste_taobao"
+                          android:summary="@string/input_method_quick_taobao_summary" />
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/input_method_quick_url_title"
+                          android:key="quick_paste_url"
+                          android:summary="@string/input_method_quick_url_summary" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/input_method_cloud_data_title"
+                      android:key="cloud_data_paste">
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/input_method_quick_cloud_title"
+                          android:key="quick_paste_cloud"
+                          android:summary="@string/input_method_quick_cloud_summary" />
+    <com.android.settings.MiuiValuePreference android:title="@string/input_method_quick_cloud_mode_title"
+                          android:key="cloud_paste_mode"
+                          android:fragment="com.android.settings.inputmethod.InputMethodCloudPasteModeManager" />
+  </PreferenceCategory>
+</PreferenceScreen>

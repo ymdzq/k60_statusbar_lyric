@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<ScrollView android:layout_width="fill_parent"
+            android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <LinearLayout android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:forceDarkAllowed="false">
+    <miuix.androidbasewidget.widget.StateEditText android:id="@id/state_dialog_input_area"
+                          android:layout_width="fill_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginTop="7.27dp"
+                          android:hint="@string/bluetooth_auracast_password_input_hint"
+                          android:inputType="textPassword"
+                          android:layout_marginStart="@dimen/miuix_appcompat_dialog_button_panel_horizontal_margin"
+                          android:layout_marginEnd="@dimen/miuix_appcompat_dialog_button_panel_horizontal_margin"
+                          settings:miuixAppcompatWidgetManager="miuix.androidbasewidget.widget.PasswordWidgetManager" />
+  </LinearLayout>
+</ScrollView>

@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<miuix.springback.view.SpringBackLayout android:layout_width="fill_parent"
+                      android:layout_height="fill_parent"
+                      settings:scrollableView="@id/app_launch_scrollview" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <miuix.core.widget.NestedScrollView android:id="@id/app_launch_scrollview"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:fillViewport="true">
+    <LinearLayout android:orientation="vertical"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content">
+      <RelativeLayout android:id="@id/clear_list_layout"
+                      android:background="@drawable/card_view_corner"
+                      android:paddingTop="@dimen/board_layout_padding_top_bottom"
+                      android:paddingBottom="10.0dp"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="@dimen/my_device_card_margin_edge"
+                      android:paddingStart="@dimen/my_device_card_padding_start"
+                      android:layout_marginStart="@dimen/card_margin_edge"
+                      android:layout_marginEnd="@dimen/card_margin_edge">
+        <TextView android:textSize="18.0sp"
+                  android:id="@id/clear_list_category"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/clear_phone_data_category"
+                  android:includeFontPadding="false"
+                  android:fontFamily="mipro-medium" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/clear_list"
+                              android:layout_width="fill_parent"
+                              android:layout_height="wrap_content"
+                              android:layout_marginTop="@dimen/pre_install_app_list_margin_top"
+                              android:layout_below="@id/clear_list_category"
+                              android:overScrollMode="never"
+                              android:paddingEnd="@dimen/card_margin_edge" />
+      </RelativeLayout>
+      <FrameLayout android:id="@id/prefs_container"
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_centerHorizontal="true" />
+      <LinearLayout android:orientation="vertical"
+                    android:paddingBottom="48.0dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.0dp"
+                    android:layout_marginLeft="@dimen/device_name_edit_usage_padding"
+                    android:layout_marginRight="@dimen/device_name_edit_usage_padding"
+                    android:layout_weight="1.0">
+        <TextView android:textSize="13.1sp"
+                  android:textColor="@color/reset_hint_content"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="32.0dp"
+                  android:text="@string/reset_remove_data_hint"
+                  android:fontFamily="mipro" />
+        <TextView android:textSize="13.1sp"
+                  android:textColor="@color/reset_hint_content"
+                  android:id="@id/reset_confirm_directory_text"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="14.5dp"
+                  android:text="@string/reset_confirm_directory"
+                  android:fontFamily="mipro" />
+      </LinearLayout>
+      <TextView android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:id="@id/clear_all_data_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/device_name_edit_usage_padding"
+                android:layout_marginRight="@dimen/device_name_edit_usage_padding"
+                android:layout_marginBottom="44.0dp"
+                android:maxWidth="336.0dp"
+                android:text="@string/clear_all_data"
+                style="@style/Widget.Button.Danger" />
+    </LinearLayout>
+  </miuix.core.widget.NestedScrollView>
+</miuix.springback.view.SpringBackLayout>

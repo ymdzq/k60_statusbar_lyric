@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/shoulder_key_sound_settings" xmlns:android="http://schemas.android.com/apk/res/android">
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:persistent="false"
+                        android:paddingTop="60.0dp"
+                        android:title="@string/shoulder_key_sound_switch_title"
+                        android:key="shoulder_key_sound_switch" />
+  <com.android.settings.shoulderkey.ShoulderKeySoundPreference android:key="shoulder_key_sound_effect" />
+</PreferenceScreen>

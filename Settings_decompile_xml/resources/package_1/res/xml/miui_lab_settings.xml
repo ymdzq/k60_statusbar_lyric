@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/miui_lab_settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:title="@string/miui_lab_features"
+                      android:key="miui_lab_features">
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:icon="@drawable/ic_drive_mode"
+                          android:title="@string/miui_lab_drive_mode_title"
+                          android:key="miui_lab_drive_mode"
+                          android:summary="@string/miui_lab_drive_mode_desc_new"
+                          settings:showRightArrow="true" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:icon="@drawable/ic_aiasst_call_screen"
+                          android:title="@string/miui_lab_aiasst_call_screen_title"
+                          android:key="miui_aiasst_call_screen"
+                          android:summary="@string/miui_lab_aiasst_call_screen_desc"
+                          settings:showRightArrow="true" />
+    <com.android.settings.widget.MiuiIconCheckBoxPreference android:icon="@drawable/ic_ai_preloading"
+                          android:title="@string/miui_lab_ai_preload_title"
+                          android:key="miui_lab_ai_preload"
+                          android:summary="@string/miui_lab_ai_preload_desc" />
+    <com.android.settings.widget.MiuiIconCheckBoxPreference android:icon="@drawable/ic_lab_gesture"
+                          android:title="@string/miui_lab_gesture_title"
+                          android:key="miui_lab_gesture"
+                          android:summary="@string/miui_lab_gesture_desc" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:icon="@drawable/ic_voip_assistant_screen"
+                          android:title="@string/voip_assistant_settings"
+                          android:key="miui_voip_assistant_screen"
+                          android:summary="@string/voip_assistant_settings_summary"
+                          settings:showRightArrow="true" />
+  </PreferenceCategory>
+</PreferenceScreen>

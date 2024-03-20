@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <com.android.settings.haptic.HapticDemoVideoPreference android:key="key_haptic_main_video" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/natural_haptic"
+                        android:summary="@string/natural_haptic_summary" />
+  <PreferenceCategory android:key="haptic_feedback_category_new" />
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:persistent="false"
+                        android:title="@string/system_haptic_feedback"
+                        android:key="system_haptic_feedback_new" />
+  <com.android.settings.sound.HapticSeekBarPreference android:persistent="true"
+                        android:title="@string/haptic_feedback_progress"
+                        android:key="haptic_feedback_progress_new"
+                        android:dependency="system_haptic_feedback_new" />
+  <com.android.settings.sound.HapticMiddleEnabledSeekBarPreference android:persistent="true"
+                        android:title="@string/haptic_feedback_progress"
+                        android:key="haptic_feedback_progress_infinity"
+                        android:dependency="system_haptic_feedback_new" />
+  <PreferenceCategory android:title="@string/special_preview"
+                      android:key="preference_category_function_key">
+    <com.android.settings.haptic.HapticDemoPreference android:title="@string/special_preview"
+                          android:key="demo" />
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/critical_feedback"
+                          android:key="haptic_limit"
+                          settings:controller="com.android.settings.MiuiSearchController" />
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/interesting_title"
+                          android:key="haptic_interesting"
+                          settings:controller="com.android.settings.MiuiSearchController" />
+  </PreferenceCategory>
+  <PreferenceCategory android:key="haptic_motor_category"
+                      settings:controller="com.android.settings.MiuiBaseCategoryController">
+    <com.android.settings.soundsettings.SoundSpeakerDescPreference android:persistent="false"
+                          android:key="haptic_motor_preference" />
+  </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<vector android:height="@dimen/qs_wifi_lock_icon_size"
+        android:width="@dimen/qs_wifi_lock_icon_size"
+        android:viewportWidth="24.0"
+        android:viewportHeight="24.0" xmlns:android="http://schemas.android.com/apk/res/android">
+  <group>
+    <clip-path android:pathData="M0,0h24v24h-24z" />
+    <path android:fillColor="@color/qs_detail_item_icon_color_2"
+          android:pathData="M8.625,10.875V9.326C8.625,7.489 10.136,6 12,6C13.864,6 15.375,7.489 15.375,9.326V10.875H15.754C16.274,10.875 16.463,10.927 16.653,11.025C16.843,11.123 16.993,11.267 17.094,11.45C17.196,11.634 17.25,11.816 17.25,12.317V16.558C17.25,17.059 17.196,17.241 17.094,17.424C16.993,17.608 16.843,17.752 16.653,17.85C16.463,17.948 16.274,18 15.754,18H8.246C7.726,18 7.537,17.948 7.347,17.85C7.157,17.752 7.008,17.608 6.906,17.424C6.804,17.241 6.75,17.059 6.75,16.558V12.317C6.75,11.816 6.804,11.634 6.906,11.45C7.008,11.267 7.157,11.123 7.347,11.025C7.537,10.927 7.726,10.875 8.246,10.875H8.625ZM10.125,10.875H13.875V9.3C13.875,8.306 13.035,7.5 12,7.5C10.965,7.5 10.125,8.306 10.125,9.3V10.875Z"
+          android:fillType="evenOdd" />
+  </group>
+</vector>

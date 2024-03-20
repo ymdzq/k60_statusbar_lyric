@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<vector android:height="204.0dp"
+        android:width="204.0dp"
+        android:viewportWidth="204.0"
+        android:viewportHeight="204.0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+  <group android:name="_R_G">
+    <group android:name="_R_G_L_0_G"
+           android:translateX="103.126"
+           android:translateY="100.874">
+      <path android:name="_R_G_L_0_G_D_0_P_0"
+            android:fillColor="#ffffff"
+            android:pathData=" M21.28 10.71 C24.43,10.71 27.44,10.15 30.23,9.11 C30.23,9.11 30.24,9.11 30.24,9.11 C30.25,9.11 30.26,9.1 30.27,9.1 C33,8.08 34.37,7.58 35.06,7.82 C35.69,8.03 36.12,8.47 36.34,9.1 C36.57,9.79 36.16,10.87 35.35,13.03 C35.24,13.32 35.13,13.61 35.01,13.9 C35.01,13.91 35,13.93 34.99,13.94 C29.49,27.5 16.18,37.06 0.65,37.06 C-19.81,37.06 -36.4,20.47 -36.4,0 C-36.4,-19.6 -21.17,-35.65 -1.9,-36.97 C-1.85,-36.97 -1.79,-36.97 -1.74,-36.98 C-0.95,-37.03 -0.15,-37.06 0.65,-37.06 C1.66,-37.06 2.16,-37.05 2.44,-36.97 C3.7,-36.6 4.28,-35.29 3.71,-34.11 C3.58,-33.84 3.11,-33.34 2.19,-32.32 C1.8,-31.88 1.42,-31.43 1.06,-30.97 C1.03,-30.95 1.02,-30.92 1,-30.9 C-2.43,-26.53 -4.47,-21.02 -4.47,-15.03 C-4.47,-0.81 7.06,10.71 21.28,10.71c "
+            android:fillAlpha="1.0"
+            android:fillType="nonZero" />
+    </group>
+  </group>
+  <group android:name="time_group" />
+</vector>

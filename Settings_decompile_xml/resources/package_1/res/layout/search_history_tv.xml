@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<TextView android:textSize="@dimen/search_history_text_size"
+          android:textColor="@color/no_devices"
+          android:ellipsize="end"
+          android:gravity="center"
+          android:background="@drawable/search_history_item_bg"
+          android:paddingTop="@dimen/search_tv_padding_top_and_bottom"
+          android:paddingBottom="@dimen/search_tv_padding_top_and_bottom"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/search_tv_margin_top_and_bottom"
+          android:layout_marginBottom="@dimen/search_tv_margin_top_and_bottom"
+          android:maxWidth="@dimen/search_history_tv_max_width"
+          android:maxLines="1"
+          android:fontFamily="sans-serif-medium"
+          android:paddingStart="@dimen/search_tv_padding_start_and_end"
+          android:paddingEnd="@dimen/search_tv_padding_start_and_end"
+          android:layout_marginEnd="@dimen/search_history_tv_margin_end" xmlns:android="http://schemas.android.com/apk/res/android" />

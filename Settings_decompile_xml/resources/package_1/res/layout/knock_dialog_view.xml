@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<RelativeLayout android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <TextView android:textSize="15.0sp"
+            android:textColor="@color/dialog_message"
+            android:id="@id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="9.0dp"
+            android:layout_marginStart="27.0dp"
+            android:layout_marginEnd="27.0dp" />
+  <TextView android:textSize="15.0sp"
+            android:textColor="@color/launch_dialog_redownload"
+            android:id="@id/re_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/content"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="45.0dp" />
+</RelativeLayout>

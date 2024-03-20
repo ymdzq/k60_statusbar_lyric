@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/notification_control_center"
+                  android:key="notification_control_center_settings" xmlns:android="http://schemas.android.com/apk/res/android">
+  <PreferenceCategory android:title="@string/notification_settings"
+                      android:key="notification_settings"
+                      android:shouldDisableView="true">
+    <com.android.settings.notification.NotificationCardPreference android:key="notification_card_settings"
+                          android:shouldDisableView="true" />
+    <PreferenceScreen android:title="@string/status_bar_settings_manage_notification"
+                      android:key="notification_managing"
+                      android:shouldDisableView="true">
+      <intent android:targetPackage="com.miui.notification"
+              android:action="android.settings.ALL_APPS_NOTIFICATION_SETTINGS">
+        <extra android:name="launch_source"
+               android:value="1" />
+        <extra android:name="display_type"
+               android:value="241" />
+      </intent>
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/notification_display_settings"
+                      android:key="notification_display_settings"
+                      android:shouldDisableView="true">
+      <intent android:targetPackage="com.miui.notification"
+              android:action="miui.settings.NOTIFICATION_DISPLAY_SETTINGS">
+        <extra android:name="launch_source"
+               android:value="1" />
+        <extra android:name="display_type"
+               android:value="241" />
+      </intent>
+    </PreferenceScreen>
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/aod_notification_style"
+                          android:key="notification_light_effect">
+      <intent android:targetPackage="com.miui.aod"
+              android:action="android.intent.action.MAIN"
+              android:targetClass="com.miui.aod.settings.NotificationAnimationSelectActivity" />
+    </com.android.settingslib.miuisettings.preference.ValuePreference>
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/control_center"
+                      android:key="control_center">
+    <com.android.settings.controlcenter.ControlCenterPreference android:title="@string/control_center_style"
+                          android:key="control_center_style"
+                          android:summary="@string/control_center_style_summary"
+                          android:fragment="com.android.settings.controlcenter.ControlCenterSettings" />
+    <PreferenceScreen android:title="@string/expand_card_action"
+                      android:key="expand_card_action"
+                      android:fragment="com.android.settings.ExpandCardActionsSettings" />
+    <PreferenceScreen android:title="@string/lock_screen_action"
+                      android:key="lock_screen_action"
+                      android:fragment="com.android.settings.LockScreenActionsSettings" />
+    <PreferenceScreen android:title="@string/status_bar_settings_status_bar"
+                      android:key="status_bar"
+                      android:fragment="com.android.settings.NotchStatusBarSettings" />
+    <Preference android:layout="@layout/control_center_style_delete_guide"
+                android:key="style_delete_guide" />
+  </PreferenceCategory>
+</PreferenceScreen>

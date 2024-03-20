@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<TextView android:id="@android:id/message"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:paddingStart="@dimen/miuix_appcompat_dialog_panel_horizontal_padding"
+          android:paddingEnd="@dimen/miuix_appcompat_dialog_panel_horizontal_padding"
+          style="@style/TextAppearance.Medium.Dialog.Light" xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center_vertical"
+              android:orientation="horizontal"
+              android:background="?attr/preferenceItemBackground"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingStart="@dimen/preference_item_padding"
+              android:paddingEnd="@dimen/preference_item_padding" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:gravity="center"
+                android:orientation="horizontal"
+                android:id="@id/icon_frame"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/preference_icon_minWidth">
+    <TextView android:gravity="center"
+              android:layout_gravity="center"
+              android:id="@id/icon_text"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/preference_item_padding_inner"
+              android:layout_marginBottom="@dimen/preference_item_padding_inner"
+              android:scaleType="fitCenter"
+              android:adjustViewBounds="true"
+              android:paddingEnd="@dimen/preference_icon_padding_end" />
+  </LinearLayout>
+  <RelativeLayout android:gravity="center_vertical"
+                  android:layout_gravity="center_vertical"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1.0"
+                  style="@style/Widget.PreferenceItem">
+    <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.PreferenceList"
+              android:ellipsize="end"
+              android:id="@android:id/title"
+              android:fadingEdge="horizontal"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:maxLines="2" />
+    <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.List.Secondary.Preference"
+              android:id="@android:id/summary"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:maxLines="10"
+              android:layout_below="@android:id/title"
+              android:layout_alignStart="@android:id/title" />
+  </RelativeLayout>
+  <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.List.Secondary"
+            android:ellipsize="marquee"
+            android:gravity="end"
+            android:id="@id/current_time"
+            android:paddingTop="@dimen/preference_value_padding_top"
+            android:paddingBottom="@dimen/preference_value_padding_bottom"
+            android:fadingEdge="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="@dimen/preference_value_max_width"
+            android:maxLines="10"
+            android:textDirection="locale" />
+</LinearLayout>

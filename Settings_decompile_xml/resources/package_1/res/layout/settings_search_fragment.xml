@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<FrameLayout android:layout_width="fill_parent"
+             android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <miuix.nestedheader.widget.NestedHeaderLayout android:id="@id/nestedheaderlayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        settings:headerView="@id/header_view"
+                        settings:rangeOffset="0.0px"
+                        settings:scrollableView="@id/springbacklayout">
+    <include android:id="@id/header_view"
+             layout="@layout/miuix_appcompat_search_stub" />
+    <miuix.springback.view.SpringBackLayout android:id="@id/springbacklayout"
+                          android:layout_width="fill_parent"
+                          android:layout_height="fill_parent"
+                          settings:scrollOrientation="vertical"
+                          settings:scrollableView="@id/scroll_headers">
+      <miuix.recyclerview.widget.RecyclerView android:id="@id/scroll_headers"
+                            android:paddingTop="@dimen/miuix_preference_rv_top_padding"
+                            android:paddingBottom="@dimen/miuix_preference_rv_bottom_padding"
+                            android:fadingEdgeLength="16.0dp"
+                            android:clipToPadding="false"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" />
+    </miuix.springback.view.SpringBackLayout>
+  </miuix.nestedheader.widget.NestedHeaderLayout>
+  <LinearLayout android:id="@id/search_result_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+    <include android:id="@id/search_history"
+             android:visibility="gone"
+             layout="@layout/search_history_layout" />
+    <miuix.springback.view.SpringBackLayout android:layout_width="fill_parent"
+                          android:layout_height="fill_parent"
+                          settings:scrollOrientation="vertical"
+                          settings:scrollableView="@id/search_result">
+      <miuix.recyclerview.widget.RecyclerView android:id="@id/search_result"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginTop="12.0dp" />
+    </miuix.springback.view.SpringBackLayout>
+  </LinearLayout>
+  <View android:id="@id/search_loading"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+</FrameLayout>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<FrameLayout android:gravity="center"
+             android:layout_gravity="center"
+             android:clipChildren="false"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+  <com.miui.systemui.BlurFrameLayout android:layout_gravity="center"
+                        android:id="@id/miui_keyboard_shortcuts_container"
+                        android:background="@drawable/keyboard_bg_blur"
+                        android:paddingTop="@dimen/miui_keyboard_shortcuts_dialog_padding_vertical"
+                        android:paddingBottom="17.78dp"
+                        android:clipChildren="false"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:alpha="0.0"
+                        android:paddingStart="@dimen/miui_keyboard_shortcuts_dialog_padding_start">
+    <androidx.viewpager.widget.ViewPager android:id="@id/miui_keyboard_shortcuts_viewpager"
+                          android:clipChildren="false"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content" />
+    <LinearLayout android:layout_gravity="bottom|center"
+                  android:orientation="horizontal"
+                  android:id="@id/indicator_group"
+                  android:layout_width="wrap_content"
+                  android:layout_height="@dimen/miui_keyboard_shortcuts_indicator_size" />
+  </com.miui.systemui.BlurFrameLayout>
+</FrameLayout>

@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<ScrollView android:id="@id/key_settings_preview_scrollview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/key_operation_diagram" xmlns:android="http://schemas.android.com/apk/res/android">
+  <RelativeLayout android:layout_gravity="center"
+                  android:id="@id/key_settings_preview_action"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layoutDirection="ltr">
+    <ImageView android:id="@id/key_settings_preview_background"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerInParent="true" />
+    <ImageView android:id="@id/key_power_click"
+               android:layout_width="@dimen/key_settings_power_double_click_width"
+               android:layout_height="@dimen/key_settings_power_double_click_width"
+               android:layout_marginLeft="@dimen/key_settings_power_click_marginLeft"
+               android:layout_marginTop="@dimen/key_settings_power_click_marginTop" />
+    <ImageView android:id="@id/key_power_double_click"
+               android:layout_width="@dimen/key_settings_power_double_click_width"
+               android:layout_height="@dimen/key_settings_power_double_click_height"
+               android:layout_marginLeft="@dimen/key_settings_power_click_marginLeft"
+               android:layout_marginTop="@dimen/key_settings_power_click_marginTop" />
+    <ImageView android:id="@id/key_click_bottom"
+               android:layout_width="@dimen/key_settings_click_bottom_width"
+               android:layout_height="@dimen/key_settings_click_bottom_height"
+               android:layout_marginTop="@dimen/key_settings_click_bottom_marginTop" />
+    <ImageView android:id="@id/key_long_press_bottom"
+               android:layout_width="@dimen/key_settings_click_bottom_width"
+               android:layout_height="@dimen/key_settings_click_bottom_height"
+               android:layout_marginTop="@dimen/key_settings_click_bottom_marginTop" />
+    <ImageView android:id="@id/key_three_gesture"
+               android:layout_width="@dimen/key_settings_three_gesture_width"
+               android:layout_height="@dimen/key_settings_three_gesture_height"
+               android:layout_marginLeft="@dimen/key_settings_three_gesture_marginLeft"
+               android:layout_marginTop="@dimen/key_settings_three_gesture_marginTop" />
+    <ImageView android:id="@id/key_three_long_press"
+               android:layout_width="@dimen/key_settings_three_gesture_width"
+               android:layout_height="@dimen/key_settings_three_gesture_height"
+               android:layout_marginLeft="@dimen/key_settings_three_gesture_marginLeft"
+               android:layout_marginTop="@dimen/key_settings_three_gesture_marginTop" />
+  </RelativeLayout>
+</ScrollView>

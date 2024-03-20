@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+  <dimen name="large_clock_text_size">170.0dp</dimen>
+  <dimen name="volume_row_slider_height">177.0dp</dimen>
+</resources>

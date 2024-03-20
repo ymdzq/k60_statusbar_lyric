@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center_vertical"
+              android:id="@id/item"
+              android:background="?attr/preferenceItemBackground"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <ImageView android:layout_gravity="center"
+             android:id="@android:id/icon"
+             android:layout_width="@dimen/large_screen_air_gesture_icon_width_pad"
+             android:layout_height="@dimen/large_screen_air_gesture_icon_height_pad"
+             android:layout_marginTop="@dimen/tof_gesture_guide_item_margin"
+             android:layout_marginBottom="@dimen/tof_gesture_guide_item_margin"
+             android:scaleType="fitCenter"
+             android:layout_marginEnd="@dimen/miuix_preference_item_padding_inner" />
+  <RelativeLayout android:gravity="center_vertical"
+                  android:layout_gravity="center_vertical"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="16.0dp"
+                  android:layout_weight="1.0">
+    <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.PreferenceList"
+              android:ellipsize="marquee"
+              android:id="@android:id/title"
+              android:fadingEdge="horizontal"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content" />
+    <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.List.Secondary.Preference"
+              android:id="@android:id/summary"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_below="@android:id/title"
+              android:layout_alignStart="@android:id/title" />
+  </RelativeLayout>
+  <ImageView android:gravity="center"
+             android:layout_gravity="center|right"
+             android:id="@id/arrow_right"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:src="@drawable/miuix_appcompat_arrow_right" />
+</LinearLayout>

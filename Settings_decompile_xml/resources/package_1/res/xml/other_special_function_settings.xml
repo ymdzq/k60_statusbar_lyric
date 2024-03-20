@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/game_booster_title"
+                        android:key="game_booster"
+                        settings:controller="com.android.settings.special.GameBoosterController"
+                        settings:showRightArrow="true" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/video_tool_box_title"
+                        android:key="video_tool_box"
+                        settings:controller="com.android.settings.special.VideoToolBoxController">
+    <intent android:targetPackage="com.miui.securitycenter"
+            android:action="com.miui.gamebooster.action.VIDEOBOX_SETTINGS" />
+  </com.android.settingslib.miuisettings.preference.Preference>
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/beauty_fc_assistant"
+                        android:key="beauty_fc_assistant"
+                        settings:controller="com.android.settings.special.BeautyFrontCameraController">
+    <intent android:targetPackage="com.miui.securitycenter"
+            android:action="com.miui.gamebooster.action.ACCESS_BEAUTY" />
+  </com.android.settingslib.miuisettings.preference.Preference>
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/taplus_title"
+                        android:key="taplus_settings"
+                        settings:controller="com.android.settings.special.TaplusController">
+    <intent android:targetPackage="com.miui.contentextension"
+            android:action="com.miui.contentextension.action.TAPLUS_SETTINGS" />
+  </com.android.settingslib.miuisettings.preference.Preference>
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/quick_reply_title"
+                        android:key="quick_reply"
+                        settings:controller="com.android.settings.special.QuickReplyController">
+    <intent android:targetPackage="com.miui.securitycenter"
+            android:action="miui.intent.action.QUICK_REPLY_SETTINGS" />
+  </com.android.settingslib.miuisettings.preference.Preference>
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/freeform_guide_settings"
+                        android:key="freeform_guide_settings"
+                        android:fragment="com.android.settings.freeform.FreeformGuideSettings"
+                        settings:controller="com.android.settings.special.FreeformGuideController" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/subscreen_title"
+                        android:key="subscreen_settings"
+                        settings:controller="com.android.settings.special.SubScreenController">
+    <intent android:targetPackage="com.xiaomi.misubscreenui"
+            android:targetClass="com.xiaomi.misubscreenui.SubscreenSettingsActivity" />
+  </com.android.settingslib.miuisettings.preference.Preference>
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/do_not_disturb_mode"
+                        android:key="do_not_disturb_mode"
+                        settings:controller="com.android.settings.special.ZenModeController">
+    <intent android:action="android.settings.ZEN_MODE_SETTINGS" />
+  </com.android.settingslib.miuisettings.preference.Preference>
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/color_lamp_title"
+                        android:key="color_lamp_settings"
+                        android:fragment="com.android.settings.colorlamp.ColorLampSettings"
+                        settings:controller="com.android.settings.special.ColorLampEntryController" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/slider_title"
+                        android:key="slider_display"
+                        android:fragment="com.android.settings.slider.SliderDisplaySettings"
+                        settings:controller="com.android.settings.special.SliderDisplayController" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/color_led_title"
+                        android:key="color_led_settings"
+                        android:fragment="com.android.settings.colorled.ColorLedSettings"
+                        settings:controller="com.android.settings.special.ColorLedEntryController" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/second_space"
+                        android:key="second_space"
+                        settings:controller="com.android.settings.special.SecondSpaceController">
+    <intent android:targetPackage="com.miui.securitycore"
+            android:targetClass="com.miui.securityspace.ui.activity.PrivateSpaceMainActivity" />
+  </com.android.settingslib.miuisettings.preference.Preference>
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/kid_space_settings"
+                        android:key="kid_space_settings"
+                        settings:controller="com.android.settings.special.KidModeDisplayController">
+    <intent android:targetPackage="com.miui.securityadd"
+            android:targetClass="com.miui.child.home.kidspace.activity.KidModeActivity" />
+  </com.android.settingslib.miuisettings.preference.Preference>
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/miui_lab_settings"
+                        android:key="miui_lab_settings"
+                        android:fragment="com.android.settings.MiuiLabSettings"
+                        settings:controller="com.android.settings.special.MiuiLabController" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/oldman_mode_settings"
+                        android:key="easy_mode_pref"
+                        settings:controller="com.android.settings.special.EasyModeController">
+    <intent android:action="com.xiaomi.action.ENTER_ELDERLY_MODE" />
+  </com.android.settingslib.miuisettings.preference.Preference>
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/color_game_led_title"
+                        android:key="color_game_led_settings"
+                        android:fragment="com.android.settings.colorgameled.ColorGameLedSettings"
+                        settings:controller="com.android.settings.special.ColorGameLedEntryController" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/title_special_features_health_global"
+                        android:key="health_global"
+                        settings:controller="com.android.settings.special.HealthGlobalController">
+    <intent android:targetPackage="com.mi.healthglobal"
+            android:targetClass="com.mi.healthglobal.HeartrateHomeActivity" />
+  </com.android.settingslib.miuisettings.preference.Preference>
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/shoulder_key_settings"
+                        android:key="shoulder_key_settings"
+                        android:fragment="com.android.settings.shoulderkey.ShoulderKeySettings"
+                        settings:controller="com.android.settings.special.ShoulderKeyEntryController" />
+</PreferenceScreen>

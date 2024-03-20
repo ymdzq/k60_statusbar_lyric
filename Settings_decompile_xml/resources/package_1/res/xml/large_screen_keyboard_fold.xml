@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/device_ime_keyboard_fold"
+                  android:key="device_ime_keyboard_fold" xmlns:android="http://schemas.android.com/apk/res/android">
+  <PreferenceCategory android:key="device_ime_keyboard_fold">
+    <com.android.settings.inputmethod.LargeScreenKeyboardPreference android:icon="@drawable/separate_keyboard_fold"
+                          android:layout="@layout/large_screen_keyboard_guide_item_fold"
+                          android:title="@string/separate_keyboard"
+                          android:key="separate_keyboard_fold"
+                          android:summary="@string/separate_keyboard_summary_fold"
+                          showIcon="true" />
+    <com.android.settings.inputmethod.LargeScreenKeyboardPreference android:icon="@drawable/double_g_v"
+                          android:layout="@layout/large_screen_keyboard_guide_item_fold"
+                          android:title="@string/double_g_v"
+                          android:key="double_g_v"
+                          android:summary="@string/double_g_v_sumary"
+                          showIcon="true" />
+    <com.android.settings.inputmethod.LargeScreenKeyboardPreference android:icon="@drawable/left_right_hand_switch"
+                          android:layout="@layout/large_screen_keyboard_guide_item_fold"
+                          android:title="@string/left_right_hand_switch"
+                          android:key="left_right_hand_switch"
+                          android:summary="@string/left_right_hand_switch_summary"
+                          showIcon="true" />
+    <com.android.settings.inputmethod.LargeScreenKeyboardPreference android:icon="@drawable/keyboard_select"
+                          android:layout="@layout/large_screen_keyboard_guide_item_fold"
+                          android:title="@string/keyboard_select"
+                          android:key="keyboard_select"
+                          android:summary="@string/keyboard_select_summary"
+                          showIcon="true" />
+  </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<com.android.settings.CheckableLinearLayout android:gravity="center_vertical"
+                      android:layout_gravity="center_vertical"
+                      android:id="@id/restricted_lock_root"
+                      android:background="?attr/dialogListItemBackground"
+                      android:layout_width="fill_parent"
+                      style="@style/Widget.ListView.Item.SingleLine" xmlns:android="http://schemas.android.com/apk/res/android">
+  <miuix.androidbasewidget.widget.CheckedTextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.AlertDialogListItem.SingleChoice"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:id="@id/text1"
+                        android:fadingEdge="horizontal"
+                        android:layout_width="0.0dp"
+                        android:layout_height="fill_parent"
+                        android:checkMark="?android:attr/listChoiceIndicatorSingle"
+                        android:maxLines="1"
+                        android:layout_weight="1.0"
+                        android:layout_marginStart="@dimen/list_item_padding_horizontal"
+                        android:layout_marginEnd="@dimen/list_item_padding_horizontal" />
+  <ImageView android:id="@id/restricted_lock_icon"
+             android:visibility="gone"
+             android:layout_width="@dimen/restricted_icon_size"
+             android:layout_height="@dimen/restricted_icon_size"
+             android:src="@drawable/ic_info"
+             android:scaleType="centerInside"
+             android:baselineAlignBottom="true"
+             android:layout_marginStart="@dimen/restricted_icon_padding" />
+</com.android.settings.CheckableLinearLayout>

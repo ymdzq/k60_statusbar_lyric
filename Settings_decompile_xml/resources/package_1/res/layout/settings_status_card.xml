@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+  <ImageView android:id="@id/card_icon"
+             android:layout_width="@dimen/secure_card_img_width"
+             android:layout_height="@dimen/secure_card_img_width" />
+  <com.android.settings.widget.CustomMarqueeTextView android:textSize="@dimen/security_card_key_words_text_size"
+                        android:textColor="@color/ringtone_item_title_color"
+                        android:ellipsize="marquee"
+                        android:id="@id/card_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/secure_card_margin_title"
+                        android:singleLine="true"
+                        android:layout_centerVertical="true"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:fontFamily="mipro-medium" />
+  <com.android.settings.widget.CustomMarqueeTextView android:textSize="@dimen/security_card_instructions_text_size"
+                        android:textColor="@color/ringtone_item_value_color"
+                        android:ellipsize="marquee"
+                        android:id="@id/card_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0.0dp"
+                        android:singleLine="true"
+                        android:layout_centerVertical="true"
+                        android:marqueeRepeatLimit="marquee_forever" />
+</merge>

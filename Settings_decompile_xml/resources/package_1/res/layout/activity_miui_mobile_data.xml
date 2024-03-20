@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:id="@id/provision_bar"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:layout_marginTop="@dimen/provision_description_margin_top"
+              android:paddingStart="@dimen/provision_content_padding_horizontal"
+              android:paddingEnd="@dimen/provision_content_padding_horizontal" xmlns:android="http://schemas.android.com/apk/res/android">
+  <TextView android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/activity_check_title"
+            style="@style/ProvisionPageTitleTextStyle" />
+  <TextView android:textSize="@dimen/provision_description_text_size"
+            android:textColor="@color/transparent_70_balck"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/provision_description_margin_top"
+            android:text="@string/activity_check_context"
+            android:layout_marginStart="@dimen/page_content_horizontal"
+            android:layout_marginEnd="@dimen/page_content_horizontal_end"
+            android:letterSpacing="0.026" />
+  <miuix.androidbasewidget.widget.ProgressBar android:layout_gravity="center_horizontal"
+                        android:id="@id/wps_progress_bar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20.0dp"
+                        style="?attr/progressBarStyle" />
+  <TextView android:layout_width="fill_parent"
+            android:layout_height="0.0dp"
+            android:layout_weight="1.0" />
+  <TextView android:textSize="@dimen/provision_description_text_size"
+            android:textColor="@color/usage_stats_app_usage_text_select"
+            android:gravity="center"
+            android:id="@id/btn_skip"
+            android:padding="@dimen/provision_list_item_bg_radius_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/provision_description_margin_top"
+            android:layout_marginTop="@dimen/page_content_horizontal"
+            android:layout_marginRight="@dimen/provision_description_margin_top"
+            android:layout_marginBottom="@dimen/provision_margin_end"
+            android:text="@string/skip_step" />
+</LinearLayout>

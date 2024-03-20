@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<vector android:height="@dimen/input_method_select_function_icon_size"
+        android:width="@dimen/input_method_select_function_icon_size"
+        android:viewportWidth="84.0"
+        android:viewportHeight="84.0" xmlns:android="http://schemas.android.com/apk/res/android">
+  <path android:fillColor="@color/input_method_function_icon_color_selected"
+        android:pathData="M42,17C37.0294,17 33,21.0294 33,26V40C33,44.9706 37.0294,49 42,49C46.9706,49 51,44.9706 51,40V26C51,21.0294 46.9706,17 42,17ZM28,26C28,18.268 34.268,12 42,12C49.732,12 56,18.268 56,26V40C56,47.732 49.732,54 42,54C34.268,54 28,47.732 28,40V26ZM19,34.5C20.3807,34.5 21.5,35.6193 21.5,37V40.8519C21.5,51.6151 30.5884,60.5 42,60.5C53.4116,60.5 62.5,51.6151 62.5,40.8519V37C62.5,35.6193 63.6193,34.5 65,34.5C66.3807,34.5 67.5,35.6193 67.5,37V40.8519C67.5,53.7283 57.3367,64.1725 44.4973,65.3829C44.4991,65.4217 44.5,65.4607 44.5,65.5V73.5C44.5,74.8807 43.3807,76 42,76C40.6193,76 39.5,74.8807 39.5,73.5V65.5C39.5,65.4607 39.5009,65.4217 39.5027,65.3829C26.6633,64.1725 16.5,53.7283 16.5,40.8519V37C16.5,35.6193 17.6193,34.5 19,34.5Z"
+        android:fillType="evenOdd" />
+</vector>

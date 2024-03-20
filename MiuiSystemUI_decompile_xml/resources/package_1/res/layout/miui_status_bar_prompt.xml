@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto">
+  <ImageView android:layout_gravity="center|start"
+             android:id="@id/privacy_dot_image"
+             android:visibility="gone"
+             android:layout_width="@dimen/ongoing_appops_dot_diameter"
+             android:layout_height="@dimen/ongoing_appops_dot_diameter"
+             android:src="@drawable/system_animation_ongoing_dot"
+             android:scaleType="centerInside" />
+  <com.android.systemui.statusbar.views.LimitedSizeFrameLayout android:layout_gravity="center_vertical"
+                        android:id="@id/mini_state_container"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/status_bar_icon_height"
+                        systemui:r0x7f040003="@dimen/status_bar_prompt_max_width" />
+</merge>

@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/usage_state_usage_time_remind" xmlns:android="http://schemas.android.com/apk/res/android">
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:persistent="false"
+                        android:title="@string/usage_state_usage_time_remind"
+                        android:key="remind_time_enable" />
+</PreferenceScreen>

@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<miuix.springback.view.SpringBackLayout android:layout_width="fill_parent"
+                      android:layout_height="fill_parent"
+                      settings:scrollableView="@id/id_0x7f0a093b" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <miuix.core.widget.NestedScrollView android:id="@id/id_0x7f0a093b"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical"
+                  android:descendantFocusability="blocksDescendants"
+                  android:layout_width="fill_parent"
+                  android:layout_height="fill_parent">
+      <RelativeLayout android:id="@id/device_params"
+                      android:background="@drawable/device_card_back_ground"
+                      android:paddingTop="@dimen/card_padding_top"
+                      android:paddingBottom="3.64dp"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="@dimen/all_specs_card_margin_top"
+                      android:layout_marginStart="@dimen/card_margin_edge"
+                      android:layout_marginEnd="@dimen/card_margin_edge">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/description_grid"
+                              android:layout_width="fill_parent"
+                              android:layout_height="wrap_content"
+                              android:overScrollMode="never"
+                              android:paddingStart="@dimen/my_device_card_padding_start"
+                              android:paddingEnd="@dimen/card_margin_edge" />
+      </RelativeLayout>
+      <RelativeLayout android:id="@id/verison"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="@dimen/card_margin_top"
+                      android:layout_below="@id/device_params"
+                      android:layout_marginStart="@dimen/card_margin_edge"
+                      android:layout_marginEnd="@dimen/card_margin_edge">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/verison_info"
+                              android:layout_width="fill_parent"
+                              android:layout_height="wrap_content"
+                              android:overScrollMode="never" />
+      </RelativeLayout>
+      <RelativeLayout android:id="@id/hardware_info"
+                      android:background="@drawable/device_card_back_ground"
+                      android:paddingTop="@dimen/board_layout_padding_top_bottom"
+                      android:paddingBottom="@dimen/board_layout_padding_top_bottom"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="@dimen/card_margin_edge"
+                      android:layout_marginEnd="@dimen/card_margin_edge">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/hardware_info_list"
+                              android:layout_width="fill_parent"
+                              android:layout_height="wrap_content"
+                              android:overScrollMode="never"
+                              android:layout_marginStart="@dimen/card_stroke_width"
+                              android:layout_marginEnd="@dimen/card_stroke_width" />
+      </RelativeLayout>
+      <com.android.settings.device.BorderedBaseDeviceCardItem android:id="@id/memory"
+                            android:background="@drawable/device_card_back_ground"
+                            android:paddingTop="@dimen/board_layout_padding_top_bottom"
+                            android:paddingBottom="@dimen/board_layout_padding_top_bottom"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/card_margin_top"
+                            android:layout_marginBottom="8.0dp"
+                            android:layout_marginStart="@dimen/card_margin_edge"
+                            android:layout_marginEnd="@dimen/card_margin_edge" />
+      <FrameLayout android:id="@id/prefs_container"
+                   android:clipChildren="false"
+                   android:clipToPadding="false"
+                   android:layout_width="fill_parent"
+                   android:layout_height="0.0dp"
+                   android:layout_weight="1.0"
+                   android:smoothScrollbar="false" />
+    </LinearLayout>
+  </miuix.core.widget.NestedScrollView>
+</miuix.springback.view.SpringBackLayout>

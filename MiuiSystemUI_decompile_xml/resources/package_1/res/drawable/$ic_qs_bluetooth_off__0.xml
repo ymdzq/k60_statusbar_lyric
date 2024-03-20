@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<vector android:name="vector"
+        android:height="@dimen/qs_tile_icon_size"
+        android:width="@dimen/qs_tile_icon_size"
+        android:viewportWidth="108.0"
+        android:viewportHeight="108.0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+  <path android:name="path_1"
+        android:pathData="M 26.156 68.85 L 81.844 35.944 L 53.156 16.875 L 53.156 91.125 L 81.844 72.225 L 26.156 39.319"
+        android:strokeColor="@color/qs_tile_icon_enabled_color"
+        android:strokeWidth="6.75"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+</vector>

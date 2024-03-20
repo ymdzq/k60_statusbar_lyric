@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<vector android:height="@dimen/ellipse_height"
+        android:width="@dimen/ellipse_width"
+        android:viewportWidth="40.0"
+        android:viewportHeight="16.0" xmlns:android="http://schemas.android.com/apk/res/android">
+  <path android:fillColor="@color/ellipse"
+        android:pathData="M12,8a8,8 0,1 1,16 0a8,8 0,1 1,-16 0" />
+</vector>

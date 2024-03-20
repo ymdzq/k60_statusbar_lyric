@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/bluetooth_other_settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:title="@string/bluetooth_connect_settings"
+                      android:key="bluetooth_connect_settings"
+                      android:order="1">
+    <com.android.settingslib.miuisettings.preference.SwitchPreference android:title="@string/bluetooth_mi_fast_connect"
+                          android:key="bluetooth_mi_fast_connect"
+                          android:summary="@string/bluetooth_mi_fast_connect_summary" />
+    <com.android.settingslib.miuisettings.preference.SwitchPreference android:title="@string/bluetooth_inband_ringing"
+                          android:key="bluetooth_disable_inband_ringing"
+                          android:summary="@string/bluetooth_inband_ringing_summary" />
+    <com.android.settingslib.miuisettings.preference.Preference android:persistent="false"
+                          android:title="@string/app_bluetooth_device_blacklist"
+                          android:fragment="com.android.settings.bluetooth.BluetoothBlacklistFragment"
+                          settings:showRightArrow="true" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/bluetooth_display_settings"
+                      android:key="bluetooth_show"
+                      android:order="2">
+    <com.android.settingslib.miuisettings.preference.SwitchPreference android:title="@string/bluetooth_show_devices_without_names"
+                          android:key="bluetooth_show_devices_without_names" />
+    <com.android.settingslib.miuisettings.preference.SwitchPreference android:title="@string/bt_show_notification_title"
+                          android:key="bluetooth_show_notification"
+                          android:summary="@string/bt_show_notification_summary" />
+    <SwitchPreference android:title="@string/bt_always_show_icon"
+                      android:key="bluetooth_always_show_icon" />
+    <SwitchPreference android:title="@string/bt_half_close_switch_title"
+                      android:key="bluetooth_half_close_switch"
+                      android:summary="@string/bt_half_close_switch_summary" />
+  </PreferenceCategory>
+  <PreferenceCategory android:key="load_textWhiteList_flag"
+                      android:order="4">
+    <com.android.settingslib.miuisettings.preference.Preference android:persistent="false"
+                          android:title="@string/add_text_app_name"
+                          android:fragment="com.android.settings.bluetooth.BluetoothTextWhiteListFragment"
+                          settings:showRightArrow="true" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/bluetooth_fastConnect_resource_load"
+                      android:key="bluetooth_fastConnect_resource_load"
+                      android:order="4">
+    <com.android.settingslib.miuisettings.preference.EditTextPreference android:title="@string/bluetooth_fastConnect_key_device_id"
+                          android:key="key_device_id"
+                          android:dialogTitle="@string/bluetooth_fastConnect_key_device_id"
+                          android:inputType="number" />
+  </PreferenceCategory>
+</PreferenceScreen>

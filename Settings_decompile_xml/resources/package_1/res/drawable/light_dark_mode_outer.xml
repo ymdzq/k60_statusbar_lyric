@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<miuix.smooth.SmoothContainerDrawable2 android:radius="18.0dp" xmlns:android="http://schemas.android.com/apk/res/android">
+  <child>
+    <shape android:shape="rectangle">
+      <stroke android:width="4.0dp"
+              android:color="@color/dark_color_mode_outer" />
+      <corners android:radius="18.0dp" />
+    </shape>
+  </child>
+</miuix.smooth.SmoothContainerDrawable2>

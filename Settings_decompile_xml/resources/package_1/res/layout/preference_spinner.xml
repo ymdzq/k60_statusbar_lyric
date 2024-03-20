@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center_vertical"
+              android:layout_gravity="center_vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingStart="@dimen/wifi_nearby_padding_start" xmlns:android="http://schemas.android.com/apk/res/android">
+  <TextView android:textSize="@dimen/wifi_add_network_title_size"
+            android:textColor="@color/wifi_add_network_title_color"
+            android:ellipsize="middle"
+            android:id="@id/reset_importance_button"
+            android:fadingEdge="horizontal"
+            android:layout_width="0.0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/wifi_custom_preference_title_margin"
+            android:layout_marginBottom="@dimen/wifi_custom_preference_title_margin"
+            android:text="@string/asst_importance_reset_title"
+            android:singleLine="true"
+            android:layout_weight="1.0"
+            android:fontFamily="mipro-medium"
+            android:textAlignment="viewStart" />
+</LinearLayout>

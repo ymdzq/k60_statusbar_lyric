@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<vector android:height="@dimen/card_icon_size"
+        android:width="@dimen/card_icon_size"
+        android:viewportWidth="100.0"
+        android:viewportHeight="100.0" xmlns:android="http://schemas.android.com/apk/res/android">
+  <path android:fillColor="#00000000"
+        android:pathData="M49.5,49.5m-42.5,0a42.5,42.5 0,1 1,85 0a42.5,42.5 0,1 1,-85 0"
+        android:strokeColor="#ffffff"
+        android:strokeWidth="7.0" />
+  <path android:fillColor="#00000000"
+        android:pathData="M23.65,39.285C22.399,42.447 21.712,45.894 21.712,49.501C21.712,64.848 34.153,77.29 49.5,77.29C53.108,77.29 56.554,76.602 59.717,75.351M30.294,29.419C35.284,24.645 42.049,21.713 49.5,21.713C55.43,21.713 60.926,23.57 65.438,26.734M69.184,69.117C74.192,64.09 77.289,57.157 77.289,49.501C77.289,44.27 75.843,39.376 73.33,35.198"
+        android:strokeColor="#ffffff"
+        android:strokeWidth="7.0"
+        android:strokeLineCap="round" />
+  <path android:fillColor="#00000000"
+        android:pathData="M45.005,37.215C39.997,39.048 36.423,43.856 36.423,49.499C36.423,53.437 38.164,56.969 40.918,59.366M57,38.785C60.372,41.15 62.577,45.067 62.577,49.499C62.577,55.688 58.276,60.874 52.5,62.23"
+        android:strokeColor="#ffffff"
+        android:strokeWidth="7.0"
+        android:strokeLineCap="round" />
+</vector>

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center_horizontal"
+              android:orientation="horizontal"
+              android:id="@id/title_container"
+              android:focusable="false"
+              android:clickable="false"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:importantForAccessibility="no" xmlns:android="http://schemas.android.com/apk/res/android">
+  <ImageView android:id="@id/backup_image_view"
+             android:background="@drawable/backup_image"
+             android:layout_width="@dimen/backup_image_width"
+             android:layout_height="@dimen/backup_image_height"
+             android:layout_marginTop="@dimen/backup_image_top"
+             android:layout_marginBottom="@dimen/backup_image_bottom" />
+</LinearLayout>

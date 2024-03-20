@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:nextFocusDown="@id/checkgroup"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:importantForAccessibility="no" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <miuix.visual.check.VisualCheckGroup android:id="@id/checkgroup"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/shoulderkey_sound_selection_margin_top"
+                        settings:itemSpacing="0.0dp"
+                        settings:lineGravity="center"
+                        settings:lineSpacing="2.0dp">
+    <miuix.visual.check.VisualCheckBox android:orientation="vertical"
+                          android:id="@id/sound_bullet"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content">
+      <miuix.visual.check.BorderLayout android:paddingLeft="@dimen/shoulderkey_sound_selection_image_view_padding_left"
+                            android:paddingTop="@dimen/shoulderkey_sound_selection_image_view_padding_top"
+                            android:paddingRight="@dimen/shoulderkey_sound_selection_image_view_padding_right"
+                            android:paddingBottom="@dimen/shoulderkey_sound_selection_image_view_padding_bottom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+        <FrameLayout android:layout_width="@dimen/shoulderkey_sound_selection_image_view_width"
+                     android:layout_height="@dimen/shoulderkey_sound_selection_image_view_height">
+          <ImageView android:id="@id/image_bullet"
+                     android:layout_width="fill_parent"
+                     android:layout_height="fill_parent"
+                     android:src="@drawable/shoulderkey_sound_bullet_image" />
+          <TextView android:textSize="18.0sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:layout_gravity="bottom"
+                    android:id="@id/sound_bullet_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/shoulderkey_sound_selection_text_view_margin_left"
+                    android:layout_marginBottom="@dimen/shoulderkey_sound_selection_text_view_margin_bottom"
+                    android:text="@string/shoulder_key_sound_text_bullet" />
+        </FrameLayout>
+      </miuix.visual.check.BorderLayout>
+    </miuix.visual.check.VisualCheckBox>
+    <miuix.visual.check.VisualCheckBox android:orientation="vertical"
+                          android:id="@id/sound_classic"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content">
+      <miuix.visual.check.BorderLayout android:paddingLeft="@dimen/shoulderkey_sound_selection_image_view_padding_left"
+                            android:paddingTop="@dimen/shoulderkey_sound_selection_image_view_padding_top"
+                            android:paddingRight="@dimen/shoulderkey_sound_selection_image_view_padding_right"
+                            android:paddingBottom="@dimen/shoulderkey_sound_selection_image_view_padding_bottom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+        <FrameLayout android:layout_width="@dimen/shoulderkey_sound_selection_image_view_width"
+                     android:layout_height="@dimen/shoulderkey_sound_selection_image_view_height">
+          <ImageView android:id="@id/image_classic"
+                     android:layout_width="fill_parent"
+                     android:layout_height="fill_parent"
+                     android:src="@drawable/shoulderkey_sound_sword_image" />
+          <TextView android:textSize="18.0sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:layout_gravity="bottom"
+                    android:id="@id/sound_classic_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/shoulderkey_sound_selection_text_view_margin_left"
+                    android:layout_marginBottom="@dimen/shoulderkey_sound_selection_text_view_margin_bottom"
+                    android:text="@string/shoulder_key_sound_text_sword" />
+        </FrameLayout>
+      </miuix.visual.check.BorderLayout>
+    </miuix.visual.check.VisualCheckBox>
+    <miuix.visual.check.VisualCheckBox android:orientation="vertical"
+                          android:id="@id/sound_current"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content">
+      <miuix.visual.check.BorderLayout android:paddingLeft="@dimen/shoulderkey_sound_selection_image_view_padding_left"
+                            android:paddingTop="@dimen/shoulderkey_sound_selection_image_view_padding_top"
+                            android:paddingRight="@dimen/shoulderkey_sound_selection_image_view_padding_right"
+                            android:paddingBottom="@dimen/shoulderkey_sound_selection_image_view_padding_bottom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+        <FrameLayout android:layout_width="@dimen/shoulderkey_sound_selection_image_view_width"
+                     android:layout_height="@dimen/shoulderkey_sound_selection_image_view_height">
+          <ImageView android:id="@id/image_current"
+                     android:layout_width="fill_parent"
+                     android:layout_height="fill_parent"
+                     android:src="@drawable/shoulderkey_sound_feature_image" />
+          <TextView android:textSize="18.0sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:layout_gravity="bottom"
+                    android:id="@id/sound_current_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/shoulderkey_sound_selection_text_view_margin_left"
+                    android:layout_marginBottom="@dimen/shoulderkey_sound_selection_text_view_margin_bottom"
+                    android:text="@string/shoulder_key_sound_text_current" />
+        </FrameLayout>
+      </miuix.visual.check.BorderLayout>
+    </miuix.visual.check.VisualCheckBox>
+    <miuix.visual.check.VisualCheckBox android:orientation="vertical"
+                          android:id="@id/sound_wind"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content">
+      <miuix.visual.check.BorderLayout android:paddingLeft="@dimen/shoulderkey_sound_selection_image_view_padding_left"
+                            android:paddingTop="@dimen/shoulderkey_sound_selection_image_view_padding_top"
+                            android:paddingRight="@dimen/shoulderkey_sound_selection_image_view_padding_right"
+                            android:paddingBottom="@dimen/shoulderkey_sound_selection_image_view_padding_bottom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+        <FrameLayout android:layout_width="@dimen/shoulderkey_sound_selection_image_view_width"
+                     android:layout_height="@dimen/shoulderkey_sound_selection_image_view_height">
+          <ImageView android:id="@id/image_wind"
+                     android:layout_width="fill_parent"
+                     android:layout_height="fill_parent"
+                     android:src="@drawable/shoulderkey_sound_engine_image" />
+          <TextView android:textSize="18.0sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:layout_gravity="bottom"
+                    android:id="@id/sound_wind_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/shoulderkey_sound_selection_text_view_margin_left"
+                    android:layout_marginBottom="@dimen/shoulderkey_sound_selection_text_view_margin_bottom"
+                    android:text="@string/shoulder_key_sound_text_wind" />
+        </FrameLayout>
+      </miuix.visual.check.BorderLayout>
+    </miuix.visual.check.VisualCheckBox>
+  </miuix.visual.check.VisualCheckGroup>
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center_vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:minHeight="@dimen/miuix_appcompat_list_preferred_item_height_large"
+              android:paddingEnd="?android:attr/scrollbarSize" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9.1dp"
+                android:layout_marginBottom="14.9dp">
+    <TextView android:textSize="@dimen/instruction_text_size"
+              android:textColor="@color/miui_seekbar_title_color"
+              android:ellipsize="marquee"
+              android:id="@android:id/title"
+              android:fadingEdge="horizontal"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="24.7dp"
+              android:singleLine="true"
+              android:paddingStart="?android:attr/listPreferredItemPaddingLeft" />
+    <com.android.settings.display.RestrictedSizeAdjustView android:id="@id/seekbar"
+                          android:layout_width="fill_parent"
+                          android:layout_height="wrap_content" />
+  </LinearLayout>
+</LinearLayout>

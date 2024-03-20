@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center_vertical"
+              android:orientation="horizontal"
+              android:focusable="true"
+              android:clickable="true"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:minHeight="@dimen/qs_detail_selectable_item_min_height"
+              android:paddingHorizontal="@dimen/qs_detail_toggle_item_padding_horizontal"
+              android:paddingVertical="@dimen/qs_detail_toggle_item_padding_vertical" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:orientation="vertical"
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0">
+    <TextView android:textAppearance="@style/TextAppearance.QSControl.DetailItemPrimary"
+              android:ellipsize="end"
+              android:id="@android:id/title"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:maxLines="2"
+              android:textDirection="locale" />
+    <TextView android:textAppearance="@style/TextAppearance.QSControl.DetailItemSecondary"
+              android:id="@android:id/summary"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/qs_detail_item_secondary_text_margin_top"
+              android:textDirection="locale" />
+  </LinearLayout>
+  <miuix.slidingwidget.widget.SlidingButton android:id="@android:id/toggle"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:clickable="false"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/accessibility_detail_switch"
+                        android:importantForAccessibility="yes"
+                        android:layout_marginStart="@dimen/qs_detail_toggle_item_slider_margin_start"
+                        style="@style/Widget.SlidingButton.Dark" />
+</LinearLayout>

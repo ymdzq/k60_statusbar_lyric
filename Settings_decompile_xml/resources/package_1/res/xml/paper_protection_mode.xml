@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:title="@string/effect_preview" />
+  <com.android.settings.display.TopImagePreference android:layout="@layout/preview_preference"
+                        android:key="top_image" />
+  <com.android.settings.display.TemperatureSeekBarPreference android:persistent="true"
+                        android:title="@string/texture_adjust_temperature_title"
+                        android:key="adjust_paper_mode" />
+  <com.android.settings.widget.PaperModeTipPreference android:persistent="false"
+                        android:enabled="false"
+                        android:key="hint_unadjustable" />
+  <com.android.settings.widget.MiuiSeekBarPreference android:persistent="true"
+                        android:title="@string/screen_paper_texture"
+                        android:key="adjust_paper_texture" />
+  <com.android.settingslib.miuisettings.preference.miuix.DropDownPreference android:persistent="false"
+                        android:title="@string/paper_color_title"
+                        android:key="paper_color"
+                        settings:entries="@array/paper_color_values"
+                        settings:entryValues="@array/paper_color_index" />
+  <com.android.settingslib.miuisettings.preference.Preference android:layout="@layout/paper_mode_reset_lyt"
+                        android:title="@string/paper_mode_reset"
+                        android:key="paper_reset" />
+</PreferenceScreen>

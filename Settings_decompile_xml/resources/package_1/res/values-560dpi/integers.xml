@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+  <integer name="headset_set_dimens">207</integer>
+  <integer name="headset_unset_dimens">166</integer>
+</resources>

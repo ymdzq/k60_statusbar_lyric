@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<com.android.keyguard.widget.KeyguardLoadingRoundView android:id="@id/keyguard_edit_loading_container"
+                      android:background="#4d000000"
+                      android:layout_width="fill_parent"
+                      android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:gravity="center"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:id="@id/keyguard_edit_loading_view"
+                android:background="@drawable/keyguard_edit_loading_bg"
+                android:layout_width="@dimen/keyguard_edit_loading_width"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/keyguard_edit_loading_padding_horizontal"
+                android:paddingVertical="@dimen/keyguard_edit_loading_padding_vertical">
+    <miuix.androidbasewidget.widget.ProgressBar android:id="@id/keyguard_edit_loading_progress"
+                          android:layout_width="wrap_content"
+                          android:layout_height="@dimen/keyguard_edit_loading_progress_height"
+                          android:layout_marginBottom="@dimen/keyguard_edit_loading_progress_margin_bottom"
+                          style="@style/Widget.ProgressBar.Dark" />
+    <TextView android:textSize="@dimen/keyguard_edit_loading_text_size"
+              android:textColor="#ccffffff"
+              android:gravity="center"
+              android:id="@id/keyguard_edit_loading_msg"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/keyguard_loading_to_editor_tips" />
+  </LinearLayout>
+</com.android.keyguard.widget.KeyguardLoadingRoundView>

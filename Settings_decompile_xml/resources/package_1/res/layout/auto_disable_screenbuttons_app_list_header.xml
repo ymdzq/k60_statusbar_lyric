@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.List.Secondary.Preference"
+          android:gravity="bottom|center|start"
+          android:id="@id/header_title"
+          android:background="?attr/preferenceItemBackground"
+          android:paddingBottom="7.0dp"
+          android:clickable="false"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/miuix_preference_item_padding_start"
+          android:layout_marginEnd="@dimen/miuix_preference_item_padding_end" xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<miuix.springback.view.SpringBackLayout android:layout_width="fill_parent"
+                      android:layout_height="fill_parent"
+                      settings:scrollableView="@id/scroll" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <androidx.core.widget.NestedScrollView android:id="@id/scroll"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical"
+                  android:layout_width="fill_parent"
+                  android:layout_height="fill_parent">
+      <LinearLayout android:layout_gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:id="@id/notch_style_show_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/notch_style_margin_top">
+        <ImageView android:layout_gravity="center_horizontal"
+                   android:id="@id/notch_style_show_image"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginBottom="@dimen/notch_style_image_margin_bottom"
+                   android:src="@drawable/notch_style_show" />
+        <RadioButton android:layout_gravity="start"
+                     android:id="@id/notch_style_show"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="@string/notch_style_show"
+                     style="@style/Theme.Radio" />
+      </LinearLayout>
+      <LinearLayout android:layout_gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:id="@id/notch_style_status_bar_inside_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/notch_style_margin_top"
+                    android:layout_marginBottom="@dimen/notch_style_margin_bottom">
+        <ImageView android:layout_gravity="center_horizontal"
+                   android:id="@id/notch_style_status_bar_inside_image"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginBottom="@dimen/notch_style_image_margin_bottom"
+                   android:src="@drawable/notch_style_status_bar_inside" />
+        <RadioButton android:layout_gravity="start"
+                     android:id="@id/notch_style_status_bar_inside"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="@string/notch_style_status_bar_inside"
+                     style="@style/Theme.Radio" />
+      </LinearLayout>
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+</miuix.springback.view.SpringBackLayout>

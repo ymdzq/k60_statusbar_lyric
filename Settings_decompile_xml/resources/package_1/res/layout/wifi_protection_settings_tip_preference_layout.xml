@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:background="?attr/preferenceItemBackground"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <TextView android:textColor="@color/basic_info_item_summary_color"
+            android:paddingTop="16.0dp"
+            android:paddingBottom="16.0dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="13.0dp"
+            android:text="@string/wifi_protection_tip" />
+</LinearLayout>

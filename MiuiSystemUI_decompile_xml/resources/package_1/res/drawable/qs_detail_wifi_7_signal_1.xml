@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<vector android:height="60.0dp"
+        android:width="61.0dp"
+        android:viewportWidth="61.0"
+        android:viewportHeight="60.0" xmlns:android="http://schemas.android.com/apk/res/android">
+  <path android:fillColor="@color/light_mode_icon_color_single_tone"
+        android:pathData="M35.769,42.753C36.122,42.399 36.126,41.822 35.736,41.508C34.336,40.38 32.555,39.704 30.618,39.704C28.687,39.704 26.911,40.375 25.513,41.497C25.122,41.81 25.125,42.389 25.479,42.743L29.987,47.251C30.342,47.605 30.916,47.605 31.271,47.251L35.769,42.753Z"
+        android:fillType="evenOdd" />
+  <path android:fillColor="@color/light_mode_icon_transparent_color_single_tone"
+        android:pathData="M42.186,36.336C42.54,35.982 42.542,35.406 42.17,35.071C39.113,32.31 35.063,30.629 30.62,30.629C26.183,30.629 22.137,32.306 19.081,35.06C18.709,35.395 18.711,35.971 19.065,36.326L20.99,38.251C21.344,38.605 21.917,38.602 22.296,38.273C24.525,36.338 27.436,35.166 30.62,35.166C33.808,35.166 36.723,36.342 38.954,38.283C39.333,38.612 39.906,38.616 40.261,38.261L42.186,36.336Z"
+        android:fillType="evenOdd" />
+  <path android:fillColor="@color/light_mode_icon_transparent_color_single_tone"
+        android:pathData="M48.601,29.922C48.955,29.568 48.956,28.992 48.59,28.65C43.887,24.25 37.567,21.557 30.618,21.557C23.675,21.557 17.36,24.246 12.658,28.639C12.292,28.981 12.293,29.557 12.647,29.911L14.572,31.836C14.927,32.19 15.5,32.189 15.869,31.849C19.748,28.276 24.929,26.094 30.618,26.094C36.313,26.094 41.498,28.28 45.379,31.859C45.747,32.199 46.321,32.201 46.676,31.847L48.601,29.922Z"
+        android:fillType="evenOdd" />
+  <path android:fillColor="@color/light_mode_icon_transparent_color_single_tone"
+        android:pathData="M55.018,23.505C55.372,23.151 55.373,22.576 55.01,22.231C48.662,16.19 40.073,12.482 30.619,12.482C21.17,12.482 12.586,16.185 6.239,22.219C5.876,22.565 5.877,23.14 6.231,23.494L8.156,25.419C8.511,25.774 9.085,25.773 9.449,25.429C14.974,20.215 22.423,17.02 30.619,17.02C38.82,17.02 46.274,20.22 51.8,25.439C52.164,25.783 52.738,25.785 53.093,25.43L55.018,23.505Z"
+        android:fillType="evenOdd" />
+  <path android:fillColor="@color/light_mode_icon_color_single_tone"
+        android:pathData="M52.042,49.224L57.344,37.096V35.364H48.279V37.936H54.107L49.067,49.224H52.042Z" />
+</vector>

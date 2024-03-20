@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="horizontal"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/haptic_preview_margin_top"
+              android:layout_marginBottom="@dimen/haptic_preview_margin_bottom" xmlns:android="http://schemas.android.com/apk/res/android">
+  <RelativeLayout android:id="@id/img_limit"
+                  android:layout_width="wrap_content"
+                  android:layout_height="fill_parent"
+                  android:layout_weight="1.0"
+                  android:layout_marginStart="@dimen/img_limit_margin_start"
+                  android:layout_marginEnd="@dimen/img_limit_margin_end">
+    <ImageView android:layout_width="wrap_content"
+               android:layout_height="fill_parent"
+               android:src="@drawable/ic_haptic_limit"
+               android:scaleType="fitXY"
+               android:adjustViewBounds="true"
+               android:contentDescription="@string/critical_feedback" />
+    <TextView android:textSize="@dimen/haptic_preview_text_size"
+              android:textColor="#ffffff"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="20.3dp"
+              android:text="@string/critical_feedback"
+              android:layout_alignParentBottom="true"
+              android:layout_centerHorizontal="true"
+              android:importantForAccessibility="no"
+              android:fontFamily="mipro-medium" />
+  </RelativeLayout>
+  <RelativeLayout android:id="@id/img_interesting"
+                  android:layout_width="wrap_content"
+                  android:layout_height="fill_parent"
+                  android:layout_weight="1.0"
+                  android:layout_marginStart="@dimen/img_interesting_margin_start"
+                  android:layout_marginEnd="@dimen/img_interesting_margin_end">
+    <ImageView android:layout_width="wrap_content"
+               android:layout_height="fill_parent"
+               android:src="@drawable/ic_haptic_interesting"
+               android:scaleType="fitXY"
+               android:adjustViewBounds="true"
+               android:contentDescription="@string/interesting_title" />
+    <TextView android:textSize="@dimen/haptic_preview_text_size"
+              android:textColor="#ffffff"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="@dimen/haptic_preview_text_margin_bottom"
+              android:text="@string/interesting_title"
+              android:layout_alignParentBottom="true"
+              android:layout_centerHorizontal="true"
+              android:importantForAccessibility="no"
+              android:fontFamily="mipro-medium" />
+  </RelativeLayout>
+</LinearLayout>

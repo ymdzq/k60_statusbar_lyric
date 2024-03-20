@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:paddingTop="@dimen/privacy_list_header_padding_top"
+              android:paddingBottom="@dimen/privacy_list_header_padding_top"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingStart="@dimen/privacy_list_header_footer_padding_start_end"
+              android:paddingEnd="@dimen/privacy_list_header_footer_padding_start_end" xmlns:android="http://schemas.android.com/apk/res/android">
+  <TextView android:textSize="@dimen/privacy_list_header_textsize"
+            android:textColor="@color/privacy_list_header_summary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/privacy_list_header_summary_margin_top"
+            android:text="@string/privacy_authorize_cloud_msg" />
+</LinearLayout>

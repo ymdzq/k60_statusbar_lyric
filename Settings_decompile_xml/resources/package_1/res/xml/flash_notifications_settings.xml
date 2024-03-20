@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/flash_notifications_title" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:title="@string/accessibility_screen_option"
+                      android:key="flash_notifications_option">
+    <com.android.settingslib.miuisettings.preference.SwitchPreference android:persistent="false"
+                          android:title="@string/camera_flash_notification_title"
+                          android:key="camera_flash_notification_preference"
+                          settings:controller="com.android.settings.accessibility.CameraFlashNotificationPreferenceController" />
+    <miuix.preference.DropDownPreference android:title="@string/screen_flash_notification_title"
+                          android:key="screen_flash_notification_preference"
+                          settings:controller="com.android.settings.accessibility.ScreenFlashNotificationPreferenceController"
+                          settings:entries="@array/screen_flash_color_entries"
+                          settings:entryIcons="@array/screen_flash_color_icons"
+                          settings:entryValues="@array/screen_flash_color_values" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/flash_notifications_description"
+                      android:key="flash_notifications_footer">
+    <com.android.settingslib.miuisettings.preference.Preference android:key="flash_notifications_note"
+                          android:summary="@string/flash_notifications_note"
+                          settings:searchable="false" />
+  </PreferenceCategory>
+</PreferenceScreen>

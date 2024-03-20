@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:focusable="false"
+              android:clickable="false"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <com.android.settings.hovermode.HoverModeGuideVideo android:layout_gravity="center"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+    <ViewFlipper android:layout_gravity="center"
+                 android:id="@id/hover_mode_view_flipper"
+                 android:layout_width="@dimen/hover_mode_video_size"
+                 android:layout_height="@dimen/hover_mode_video_size" />
+  </com.android.settings.hovermode.HoverModeGuideVideo>
+  <FrameLayout android:gravity="center"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="28.0dp"
+               android:layout_marginTop="20.0dp"
+               android:layout_marginRight="28.0dp"
+               android:layout_marginBottom="20.0dp">
+    <TextView android:textSize="14.0sp"
+              android:textColor="@color/transparent_60_balck"
+              android:id="@id/hover_mode_guide_text_description"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text="@string/hover_mode_guide_text" />
+  </FrameLayout>
+</LinearLayout>

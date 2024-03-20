@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<set android:ordering="together" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+  <objectAnimator android:interpolator="@drawable/drawable_0x7f0802eb"
+                  android:duration="100"
+                  android:startOffset="0"
+                  android:valueFrom="0"
+                  android:valueTo="3"
+                  android:valueType="floatType"
+                  android:propertyName="rotation" />
+  <objectAnimator android:interpolator="@drawable/drawable_0x7f0802ec"
+                  android:duration="100"
+                  android:startOffset="100"
+                  android:valueFrom="3"
+                  android:valueTo="-3"
+                  android:valueType="floatType"
+                  android:propertyName="rotation" />
+  <objectAnimator android:interpolator="@drawable/drawable_0x7f0802ed"
+                  android:duration="100"
+                  android:startOffset="200"
+                  android:valueFrom="-3"
+                  android:valueTo="2"
+                  android:valueType="floatType"
+                  android:propertyName="rotation" />
+  <objectAnimator android:interpolator="@drawable/drawable_0x7f0802ee"
+                  android:duration="100"
+                  android:startOffset="300"
+                  android:valueFrom="2"
+                  android:valueTo="-1"
+                  android:valueType="floatType"
+                  android:propertyName="rotation" />
+  <objectAnimator android:interpolator="@drawable/drawable_0x7f0802ef"
+                  android:duration="83"
+                  android:startOffset="400"
+                  android:valueFrom="-1"
+                  android:valueTo="0"
+                  android:valueType="floatType"
+                  android:propertyName="rotation" />
+</set>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:paddingStart="20.0dp"
+              android:paddingEnd="20.0dp" xmlns:android="http://schemas.android.com/apk/res/android">
+  <EditText android:id="@id/renameEdit"
+            android:background="@drawable/headsetrename"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="fill_parent"
+            android:layout_height="60.0dp"
+            android:maxLength="50"
+            android:fontFamily="mipro"
+            style="@style/input_item_content" />
+</LinearLayout>

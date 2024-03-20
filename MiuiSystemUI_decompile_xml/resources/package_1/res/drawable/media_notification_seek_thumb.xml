@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:gravity="center"
+        android:id="@android:id/background">
+    <shape android:shape="oval">
+      <solid android:color="#00000000" />
+      <size android:height="@dimen/media_notification_seekbar_thumb_pressed_size"
+            android:width="@dimen/media_notification_seekbar_thumb_pressed_size" />
+    </shape>
+  </item>
+  <item android:gravity="center"
+        android:id="@android:id/progress">
+    <com.android.systemui.statusbar.notification.mediacontrol.SeekBarGradientDrawable android:shape="oval">
+      <solid android:color="@color/notification_media_seekbar_progress_color" />
+      <size android:height="@dimen/media_notification_seekbar_thumb_normal_size"
+            android:width="@dimen/media_notification_seekbar_thumb_normal_size" />
+    </com.android.systemui.statusbar.notification.mediacontrol.SeekBarGradientDrawable>
+  </item>
+</layer-list>

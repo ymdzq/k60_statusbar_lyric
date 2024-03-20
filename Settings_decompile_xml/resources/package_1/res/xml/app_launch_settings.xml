@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <com.android.settingslib.miuisettings.preference.miuix.DropDownPreference android:title="@string/app_launch_open_domain_urls_title"
+                        android:key="app_link_state" />
+  <PreferenceCategory android:title="@string/app_launch_supported_domain_urls_title"
+                      android:key="app_launch_supported_domain_urls" />
+  <PreferenceCategory android:title="@string/app_launch_other_defaults_title"
+                      android:key="app_launch_other_defaults">
+    <com.android.settings.applications.MiuiClearDefaultsPreference android:title="@string/clear_activities"
+                          android:key="app_launch_clear_defaults" />
+  </PreferenceCategory>
+</PreferenceScreen>

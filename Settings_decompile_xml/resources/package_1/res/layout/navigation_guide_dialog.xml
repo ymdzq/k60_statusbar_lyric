@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <TextView android:textSize="@dimen/navigation_guide_dialog_summary_size"
+            android:textColor="@color/navigation_dialog_summary_color"
+            android:gravity="center"
+            android:id="@id/summary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/navigation_guide_dialog_summary_top"
+            android:text="@string/guide_text_left"
+            android:layout_marginStart="@dimen/navigation_guide_dialog_summary_start"
+            android:layout_marginEnd="@dimen/navigation_guide_dialog_summary_end"
+            android:textFontWeight="400" />
+  <com.airbnb.lottie.LottieAnimationView android:layout_gravity="center"
+                        android:id="@id/lottie_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/navigation_guide_dialog_lottie_height"
+                        android:layout_marginTop="@dimen/navigation_guide_dialog_lottie_top"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="@dimen/navigation_guide_dialog_lottie_start"
+                        android:layout_marginEnd="@dimen/navigation_guide_dialog_lottie_end"
+                        settings:lottie_fileName="dark-left.json"
+                        settings:lottie_loop="true" />
+</LinearLayout>

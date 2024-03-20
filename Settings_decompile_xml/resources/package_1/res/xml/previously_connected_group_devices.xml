@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/group_previously_connected_screen_title" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:key="group_saved_device_list"
+                      settings:controller="com.android.settings.connecteddevice.GroupSavedDeviceController" />
+  <com.android.settings.widget.GroupPreferenceCategory android:layout="@layout/preference_category_no_label"
+                        android:key="pcg_one"
+                        settings:allowDividerAbove="true"
+                        settings:allowDividerBelow="true" />
+  <com.android.settings.widget.GroupPreferenceCategory android:layout="@layout/preference_category_no_label"
+                        android:key="pcg_two"
+                        settings:allowDividerAbove="true"
+                        settings:allowDividerBelow="true" />
+  <com.android.settings.widget.GroupPreferenceCategory android:layout="@layout/preference_category_no_label"
+                        android:key="pcg_three"
+                        settings:allowDividerAbove="true"
+                        settings:allowDividerBelow="true" />
+  <com.android.settings.widget.GroupPreferenceCategory android:layout="@layout/preference_category_no_label"
+                        android:key="pcg_four"
+                        settings:allowDividerAbove="true"
+                        settings:allowDividerBelow="true" />
+  <com.android.settings.widget.GroupPreferenceCategory android:layout="@layout/preference_category_no_label"
+                        android:key="pcg_five"
+                        settings:allowDividerAbove="true"
+                        settings:allowDividerBelow="true" />
+  <com.android.settings.widget.GroupPreferenceCategory android:layout="@layout/preference_category_no_label"
+                        android:key="pcg_six"
+                        settings:allowDividerAbove="true"
+                        settings:allowDividerBelow="true" />
+  <com.android.settings.widget.GroupPreferenceCategory android:layout="@layout/preference_category_no_label"
+                        android:key="pcg_seven"
+                        settings:allowDividerAbove="true"
+                        settings:allowDividerBelow="true" />
+  <com.android.settings.widget.GroupPreferenceCategory android:layout="@layout/preference_category_no_label"
+                        android:key="pcg_eight"
+                        settings:allowDividerAbove="true"
+                        settings:allowDividerBelow="true" />
+  <com.android.settings.widget.GroupPreferenceCategory android:layout="@layout/preference_category_no_label"
+                        android:key="pcg_nine"
+                        settings:allowDividerAbove="true"
+                        settings:allowDividerBelow="true" />
+  <com.android.settings.widget.GroupPreferenceCategory android:layout="@layout/preference_category_no_label"
+                        android:key="pcg_remaining"
+                        settings:allowDividerAbove="true"
+                        settings:allowDividerBelow="true" />
+</PreferenceScreen>

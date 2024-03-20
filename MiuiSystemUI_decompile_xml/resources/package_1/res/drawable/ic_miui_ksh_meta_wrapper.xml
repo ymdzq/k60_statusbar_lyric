@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:id="@id/miui_volume_timer_progress_dragging"
+        android:drawable="@drawable/ic_miui_ksh_meta_left"
+        android:left="3.11dp"
+        android:top="3.11dp"
+        android:right="3.11dp"
+        android:bottom="3.11dp" />
+</layer-list>

@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<androidx.core.widget.NestedScrollView android:gravity="center"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatTextView android:textSize="17.0sp"
+                          android:id="@id/message"
+                          android:layout_width="fill_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginBottom="@dimen/miuix_appcompat_dialog_content_margin_bottom"
+                          android:textDirection="locale"
+                          android:layout_marginStart="@dimen/miuix_appcompat_dialog_panel_horizontal_padding"
+                          android:layout_marginEnd="@dimen/miuix_appcompat_dialog_panel_horizontal_padding" />
+    <LinearLayout android:gravity="center"
+                  android:id="@id/highlight_layout"
+                  android:background="@drawable/warning_dialog_highlight_bg"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginHorizontal="28.0dp">
+      <TextView android:textSize="14.0sp"
+                android:textColor="@color/miui_face_input_warning_dialog_highlight_color"
+                android:id="@id/highlight_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16.0dp"
+                android:text="@string/face_data_suggesstion_first_cn_highlight" />
+    </LinearLayout>
+    <TextView android:textSize="17.0sp"
+              android:id="@id/privacy_policy"
+              android:visibility="gone"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text="@string/view_face_privacy_policy"
+              android:layout_marginHorizontal="@dimen/miuix_appcompat_dialog_panel_horizontal_padding"
+              android:layout_marginVertical="@dimen/miuix_appcompat_dialog_content_margin_bottom" />
+  </LinearLayout>
+</androidx.core.widget.NestedScrollView>

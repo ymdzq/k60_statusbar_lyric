@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<miuix.smooth.SmoothContainerDrawable android:radius="21.33dp" xmlns:android="http://schemas.android.com/apk/res/android">
+  <child>
+    <shape android:shape="rectangle">
+      <solid android:color="@color/miui_keyboard_shortcuts_divider_color" />
+    </shape>
+  </child>
+</miuix.smooth.SmoothContainerDrawable>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+  <integer name="normal_camera_face_enroll_bottom">492</integer>
+  <integer name="normal_camera_face_enroll_left">40</integer>
+  <integer name="normal_camera_face_enroll_right">360</integer>
+  <integer name="normal_camera_face_enroll_top">174</integer>
+  <integer name="normal_camera_mul_face_detect_bottom">506</integer>
+  <integer name="normal_camera_mul_face_detect_left">0</integer>
+  <integer name="normal_camera_mul_face_detect_right">404</integer>
+  <integer name="normal_camera_mul_face_detect_top">100</integer>
+  <integer name="normal_camera_mul_face_enroll_bottom">435</integer>
+  <integer name="normal_camera_mul_face_enroll_left">10</integer>
+  <integer name="normal_camera_mul_face_enroll_right">325</integer>
+  <integer name="normal_camera_mul_face_enroll_top">120</integer>
+</resources>

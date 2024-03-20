@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<com.android.systemui.statusbar.privacy.PrivacyDotWindowView android:layout_width="wrap_content"
+                      android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+  <com.android.systemui.statusbar.views.LimitedSizeFrameLayout android:layout_gravity="center|end"
+                        android:id="@id/mini_state_container"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/status_bar_home_privacy_icon_height"
+                        android:layout_marginEnd="@dimen/status_bar_padding_end" />
+  <ImageView android:layout_gravity="center|end"
+             android:id="@id/fullscreen_dot"
+             android:layout_width="@dimen/ongoing_appops_dot_diameter"
+             android:layout_height="@dimen/ongoing_appops_dot_diameter"
+             android:src="@drawable/system_animation_ongoing_dot"
+             android:scaleType="centerInside"
+             android:layout_marginEnd="@dimen/status_bar_padding_end" />
+</com.android.systemui.statusbar.privacy.PrivacyDotWindowView>

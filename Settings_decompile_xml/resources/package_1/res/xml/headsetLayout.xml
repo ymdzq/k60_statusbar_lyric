@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto" xmlns:app="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:key="profile_container"
+                      android:order="0"
+                      app:allowDividerAbove="true" />
+  <PreferenceCategory android:title="@string/headset_spatial_audio"
+                      android:key="spatial_audio_root_key"
+                      android:order="1">
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/surround_sound_title"
+                          android:key="surround_sound_3d_key"
+                          android:summary="@string/surround_sound_all_desc" />
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:visibility="invisible"
+                          android:title="@string/immersive_audio_sources"
+                          android:key="headset_immersion_audio_key"
+                          android:summary="@string/miheadset_spatial_audio_summary" />
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/headset_head_tracking_title"
+                          android:key="headset_head_tracking_key"
+                          android:summary="@string/headset_head_tracking_desc" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/string_0x7f13001d"
+                      android:key="Sound_Settings"
+                      android:order="2">
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/virtual_surround_sound_switch_title"
+                          android:key="virtualSurroundSound"
+                          android:summary="@string/virtual_surround_sound_switch_summary"
+                          android:defaultValue="false" />
+  </PreferenceCategory>
+  <PreferenceCategory android:key="switchConfig"
+                      android:order="3">
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/miheadset_key_config_gesture_control"
+                          android:key="key_config"
+                          app:showRightArrow="true" />
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/miheadset_in_ear_check"
+                          android:key="Ineartest"
+                          android:summary="@string/miheadset_in_ear_check_summary"
+                          android:defaultValue="false" />
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/miheadset_dual_connect_mode"
+                          android:key="MultiConnectMode"
+                          android:summary="@string/miheadset_dual_connect_mode_summary"
+                          android:defaultValue="true" />
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/miheadset_auto_ack_mode_summary"
+                          android:key="AutoAckMode"
+                          android:summary="@string/miheadset_auto_ack_mode"
+                          android:defaultValue="false" />
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/headset_notification_switch_title"
+                          android:key="notificationdisplay"
+                          android:summary="@string/headset_notification_switch_summary"
+                          android:defaultValue="false" />
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/headset_silent_upgrade_switch_title"
+                          android:key="silentUpgrade"
+                          android:summary="@string/headset_silent_upgrade_switch_summary"
+                          android:defaultValue="false" />
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/miheadset_fitness_check"
+                          android:key="fitness_check"
+                          app:showRightArrow="true" />
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/switch_headset_anti_lost_title"
+                          android:key="mi_headset_loss_dialog"
+                          app:showRightArrow="true" />
+    <com.android.settingslib.miuisettings.preference.miuix.DropDownPreference android:title="@string/bluetooth_select_a2dp_codec_type"
+                          android:key="codecType" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/bt_ldac_property"
+                      android:key="ldac_container"
+                      android:order="4">
+    <com.android.settingslib.miuisettings.preference.Preference android:persistent="false"
+                          android:enabled="false"
+                          android:layout="@layout/preference_textview_secondary"
+                          android:title="@string/bt_ldac_declaration"
+                          android:key="codec_claimer"
+                          android:order="1" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/bt_audio_share_property"
+                      android:key="audio_share_container"
+                      android:order="5" />
+  <PreferenceCategory android:title="@string/bluetooth_share_broadcast"
+                      android:key="bleShareAudioCategory"
+                      android:order="6">
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/bluetooth_share_broadcast_jion"
+                          android:key="bleAudioBroadcastAdd"
+                          android:order="2"
+                          app:showRightArrow="true" />
+  </PreferenceCategory>
+  <PreferenceCategory android:key="moreSettingsInAi"
+                      android:order="7">
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/miheadset_moreSettingsInAi"
+                          android:key="voicetraining"
+                          app:showRightArrow="true" />
+  </PreferenceCategory>
+</PreferenceScreen>

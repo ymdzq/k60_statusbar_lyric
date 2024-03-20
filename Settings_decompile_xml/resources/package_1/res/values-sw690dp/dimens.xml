@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+  <dimen name="provision_anim_floating_window_height_edge">236.0dp</dimen>
+  <dimen name="provision_anim_floating_window_width_edge">180.0dp</dimen>
+  <dimen name="provision_anim_margin_end">108.0dp</dimen>
+  <dimen name="provision_anim_margin_start">108.0dp</dimen>
+  <dimen name="provision_container_margin_top">0.0dp</dimen>
+  <dimen name="provision_padding_top">19.05dp</dimen>
+  <dimen name="provision_preview_height">236.0dp</dimen>
+  <dimen name="provision_preview_width">393.0dp</dimen>
+  <dimen name="provision_text_padding_bottom">12.82dp</dimen>
+  <dimen name="provision_text_padding_end">33.3dp</dimen>
+  <dimen name="provision_text_padding_start">33.3dp</dimen>
+  <dimen name="provision_text_padding_top">12.82dp</dimen>
+</resources>

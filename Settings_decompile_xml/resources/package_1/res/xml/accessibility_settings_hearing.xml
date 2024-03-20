@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:persistent="true"
+                  android:title="@string/accessibility_settings"
+                  android:key="accessibility_settings_screen" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:title="@string/hearing_aids_category"
+                      android:key="hearing_aids_tools_category"
+                      settings:controller="com.android.settings.MiuiBaseCategoryController">
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/miui_accessibility_asr_title"
+                          android:key="miui_accessibility_asr_preference"
+                          android:summary="@string/miui_accessibility_asr_summary"
+                          settings:controller="com.android.settings.accessibility.MiuiAccessibilityAsrController"
+                          settings:showRightArrow="true" />
+    <com.android.settings.MiuiValuePreference android:persistent="false"
+                          android:title="@string/environmental_speech_recognition"
+                          android:key="environment_sound_recognition"
+                          settings:controller="com.android.settings.accessibility.EnvironmentSoundRecognitionController"
+                          settings:showRightArrow="true">
+      <intent android:action="com.miui.intent.action.ENVIRONMENT_SOUND_RECOGNITION" />
+    </com.android.settings.MiuiValuePreference>
+  </PreferenceCategory>
+  <PreferenceCategory android:persistent="false"
+                      android:key="audio_and_captions_category">
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/live_caption_title"
+                          android:key="live_caption"
+                          android:summary="@string/live_caption_summary"
+                          settings:controller="com.android.settings.accessibility.LiveCaptionPreferenceController"
+                          settings:showRightArrow="true" />
+    <com.android.settingslib.miuisettings.preference.SwitchPreference android:persistent="false"
+                          android:title="@string/accessibility_toggle_primary_mono_title"
+                          android:key="toggle_primary_mono"
+                          android:summary="@string/accessibility_toggle_primary_mono_summary"
+                          settings:controller="com.android.settings.accessibility.PrimaryMonoPreferenceController" />
+    <com.android.settings.accessibility.MiuiBalanceSeekBarPreference android:persistent="false"
+                          android:title="@string/accessibility_toggle_primary_balance_title"
+                          android:key="seekbar_primary_balance" />
+    <com.android.settingslib.miuisettings.preference.Preference android:persistent="false"
+                          android:title="@string/accessibility_hearingaid_title"
+                          android:key="hearing_aid_preference"
+                          android:summary="@string/accessibility_hearingaid_not_connected_summary"
+                          settings:controller="com.android.settings.accessibility.AccessibilityHearingAidPreferenceController"
+                          settings:showRightArrow="true" />
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/rtt_settings_title"
+                          android:key="rtt_setting"
+                          android:summary="@string/summary_placeholder"
+                          settings:controller="com.android.settings.accessibility.RTTSettingPreferenceController" />
+  </PreferenceCategory>
+  <PreferenceCategory android:key="captioning_preference_screen_category">
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/headphone_assisted_title"
+                          android:key="headphone_assisted"
+                          android:summary="@string/headphone_assisted_summary"
+                          settings:controller="com.android.settings.accessibility.HeadphoneAssistedController"
+                          settings:showRightArrow="true">
+      <intent android:targetPackage="com.miui.misound"
+              android:targetClass="com.miui.misound.mihearingassist.MiHearingAssistActivity" />
+    </com.android.settingslib.miuisettings.preference.Preference>
+    <com.android.settings.MiuiValuePreference android:persistent="false"
+                          android:title="@string/accessibility_captioning_title"
+                          android:key="captioning_preference_screen"
+                          android:fragment="com.android.settings.accessibility.CaptionPropertiesFragment"
+                          settings:controller="com.android.settings.accessibility.CaptioningPreferenceController" />
+  </PreferenceCategory>
+</PreferenceScreen>

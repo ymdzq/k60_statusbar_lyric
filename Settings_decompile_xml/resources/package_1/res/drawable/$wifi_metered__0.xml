@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<vector android:height="@dimen/wifi_icon_size"
+        android:width="@dimen/wifi_icon_size"
+        android:viewportWidth="64.0"
+        android:viewportHeight="64.0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+  <group android:name="_R_G">
+    <group android:name="_R_G_L_1_G"
+           android:scaleX="1.0"
+           android:scaleY="1.0"
+           android:translateX="24.2"
+           android:translateY="32.0">
+      <group android:name="_R_G_L_1_C_0_G">
+        <clip-path android:name="_R_G_L_1_C_0"
+                   android:pathData=" M-3.45 -21 C-3.45,-21 -21.57,-8.5 -21.57,-8.5 C-21.57,-8.5 -18.82,18.63 -18.82,18.63 C-18.82,18.63 8.68,22.63 8.68,22.63 C8.68,22.63 23.43,2.75 23.43,2.75 C23.43,2.75 22.72,-5.75 18.18,-6.37 C14.55,-6.87 11.68,-6.5 8.68,-1.87 C6.5,1.48 -5.36,-5.53 -3.89,-9.81 C-2.64,-13.44 -0.58,-15.25 3.05,-18.25 C6.02,-20.7 -3.45,-21 -3.45,-21c " />
+        <group android:name="_R_G_L_1_C_0_G_G">
+          <path android:name="_R_G_L_1_G_G_0_D_0_P_0"
+                android:pathData=" M0 -14.35 C7.92,-14.35 14.35,-7.92 14.35,0 C14.35,7.92 7.92,14.35 0,14.35 C-7.92,14.35 -14.35,7.92 -14.35,0 C-14.35,-7.92 -7.92,-14.35 0,-14.35c "
+                android:strokeColor="@color/wifi_signal_icon_color"
+                android:strokeWidth="5.2"
+                android:strokeLineCap="round"
+                android:strokeLineJoin="round"
+                android:strokeAlpha="1.0" />
+        </group>
+      </group>
+    </group>
+    <group android:name="_R_G_L_0_G"
+           android:scaleX="1.0"
+           android:scaleY="1.0"
+           android:translateX="39.8"
+           android:translateY="32.0">
+      <group android:name="_R_G_L_0_C_0_G">
+        <clip-path android:name="_R_G_L_0_C_0"
+                   android:pathData=" M-23.1 -26.75 C-23.1,-26.75 -20.3,6 -20.3,6 C-20.3,6 -16.94,6.29 -15.67,6.44 C-14.17,6.63 -11.67,5.56 -10.8,4.28 C-9.06,1.72 5.83,4.98 5.83,4.98 C5.83,4.98 5.1,6.28 3.76,10.25 C2.45,14.13 -4.05,19.31 -6.35,20.92 C-10.04,23.48 18.02,17.59 18.02,17.59 C18.02,17.59 23.86,-22.4 23.86,-22.4 C23.86,-22.4 -23.1,-26.75 -23.1,-26.75c " />
+        <group android:name="_R_G_L_0_C_0_G_G">
+          <path android:name="_R_G_L_0_G_G_0_D_0_P_0"
+                android:pathData=" M0 -14.35 C7.92,-14.35 14.35,-7.92 14.35,0 C14.35,7.92 7.92,14.35 0,14.35 C-7.92,14.35 -14.35,7.92 -14.35,0 C-14.35,-7.92 -7.92,-14.35 0,-14.35c "
+                android:strokeColor="@color/wifi_signal_icon_color"
+                android:strokeWidth="5.2"
+                android:strokeLineCap="round"
+                android:strokeLineJoin="round"
+                android:strokeAlpha="1.0" />
+        </group>
+      </group>
+    </group>
+  </group>
+  <group android:name="time_group" />
+</vector>

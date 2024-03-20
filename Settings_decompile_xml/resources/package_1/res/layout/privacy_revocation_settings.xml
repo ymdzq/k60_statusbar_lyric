@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <miuix.springback.view.SpringBackLayout android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        settings:scrollOrientation="vertical"
+                        settings:scrollableView="@id/list_view">
+    <com.android.settings.privacy.XRecyclerView android:id="@id/list_view"
+                          android:layout_width="fill_parent"
+                          android:layout_height="fill_parent"
+                          android:layout_marginTop="@dimen/sos_recycleview_margin_top" />
+  </miuix.springback.view.SpringBackLayout>
+</LinearLayout>

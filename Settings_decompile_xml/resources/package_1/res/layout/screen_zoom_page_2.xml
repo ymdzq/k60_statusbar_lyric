@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:paddingLeft="10.0dp"
+              android:paddingRight="10.0dp"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <TextView android:id="@id/words_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5.0dp"
+            android:text="@string/words_title"
+            android:paddingStart="16.37dp" />
+  <LinearLayout android:orientation="vertical"
+                android:background="@drawable/font_view_call_background"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="25.58dp">
+    <include android:id="@id/item_page_2_1"
+             layout="@layout/font_view_call_item" />
+    <include android:id="@id/item_page_2_2"
+             layout="@layout/font_view_call_item" />
+    <include android:id="@id/item_page_2_3"
+             layout="@layout/font_view_call_item" />
+  </LinearLayout>
+</LinearLayout>

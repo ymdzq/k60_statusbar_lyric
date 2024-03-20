@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<shape android:shape="rectangle" xmlns:android="http://schemas.android.com/apk/res/android">
+  <solid android:color="@color/time_zen_mode_bg" />
+  <padding android:left="@dimen/auto_rule_padding_left"
+           android:right="@dimen/auto_rule_padding_right" />
+</shape>

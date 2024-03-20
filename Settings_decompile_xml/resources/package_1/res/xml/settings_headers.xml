@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+  <header android:icon="@drawable/ic_account_avatar"
+          android:id="@id/mi_account_settings"
+          android:title="@string/unlogin_account_title">
+    <intent android:targetPackage="com.xiaomi.account"
+            android:action="android.settings.XIAOMI_ACCOUNT_SYNC_SETTINGS" />
+    <extra android:name="account_type"
+           android:value="com.xiaomi" />
+  </header>
+  <header android:icon="@drawable/ic_my_device"
+          android:id="@id/my_device"
+          android:title="@string/my_device"
+          android:fragment="com.android.settings.device.MiuiMyDeviceSettings" />
+  <header android:icon="@drawable/ic_system_apps_updater"
+          android:id="@id/system_apps_updater"
+          android:title="@string/system_apps_updater">
+    <intent android:targetPackage="com.xiaomi.discover"
+            android:targetClass="com.xiaomi.market.ui.UpdateAppsActivity" />
+  </header>
+  <header android:icon="@drawable/ic_tablet_screen_settings"
+          android:id="@id/fold_screen_settings"
+          android:title="@string/fold_screen_settings_title"
+          android:fragment="com.android.settings.foldSettings.MiuiFoldScreenSettings" />
+  <header android:icon="@drawable/ic_tablet_screen_settings"
+          android:id="@id/tablet_screen_settings"
+          android:title="@string/tablet_screen_settings_title"
+          android:fragment="com.android.settings.foldSettings.MiuiTabletScreenSettings" />
+  <header android:icon="@drawable/ic_security_status"
+          android:id="@id/security_status"
+          android:title="@string/security_status"
+          android:fragment="com.android.settings.MiuiSecurityStatusSettings" />
+  <header />
+  <header android:icon="@drawable/ic_wifi_settings"
+          android:id="@id/wifi_settings"
+          android:title="@string/wifi_settings_title">
+    <intent android:targetPackage="com.android.settings"
+            android:action="android.settings.WIFI_SETTINGS" />
+  </header>
+  <header android:icon="@drawable/ic_bluetooth_settings"
+          android:id="@id/bluetooth_settings"
+          android:title="@string/bluetooth_settings_title"
+          android:fragment="com.android.settings.bluetooth.MiuiBluetoothSettings" />
+  <header android:icon="@drawable/ic_settings_dualsim"
+          android:id="@id/msim_settings"
+          android:title="@string/sim_management_title">
+    <intent android:targetPackage="com.android.phone"
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.android.phone.settings.MobileNetworkSettings" />
+  </header>
+  <header android:id="@id/operator_settings"
+          android:fragment="com.android.settings.WirelessSettings">
+    <intent android:action="com.android.settings.OPERATOR_APPLICATION_SETTING" />
+  </header>
+  <header android:icon="@drawable/ic_interconnection"
+          android:id="@id/interconnection_settings"
+          android:title="@string/interconnection">
+    <intent android:targetPackage="com.milink.service"
+            android:action="miui.intent.action.MIRROR_SETTING" />
+  </header>
+  <header android:icon="@drawable/ic_portable_wlan_hotspot_settings"
+          android:id="@id/wifi_tether_settings"
+          android:title="@string/wifi_tether_settings_title">
+    <intent android:targetPackage="com.android.settings"
+            android:targetClass="com.android.settings.Settings$TetherSettingsActivity" />
+  </header>
+  <header android:icon="@drawable/ic_vpn"
+          android:id="@id/vpn_settings_multiple"
+          android:title="@string/vpn_settings_title"
+          android:fragment="com.android.settings.vpn2.MiuiVpnSettings" />
+  <header android:icon="@drawable/ic_device_connection"
+          android:id="@id/wireless_settings"
+          android:title="@string/more_connection"
+          android:fragment="com.android.settings.MiuiWirelessSettings"
+          android:breadCrumbTitle="@string/wireless_networks_settings_title" />
+  <header />
+  <header android:icon="@drawable/ic_multiple_users"
+          android:id="@id/user_settings"
+          android:title="@string/user_settings_title"
+          android:fragment="com.android.settings.users.UserSettings" />
+  <header android:icon="@drawable/com_android_thememanager"
+          android:id="@id/personalize_title"
+          android:title="@string/personalize_title">
+    <intent android:targetPackage="com.android.thememanager"
+            android:targetClass="com.android.thememanager.activity.ThemeSettingsActivity" />
+  </header>
+  <header android:icon="@drawable/ic_unlock_set_settings"
+          android:id="@id/screen_settings"
+          android:title="@string/lock_screen_settings_title"
+          android:fragment="com.android.settings.AodAndLockScreenSettings" />
+  <header android:icon="@drawable/ic_notification_center"
+          android:id="@id/notification_status_bar"
+          android:title="@string/notification_status_bar"
+          android:fragment="com.android.settings.NotificationStatusBarSettings" />
+  <header android:icon="@drawable/ic_miui_home_settings"
+          android:id="@id/launcher_settings"
+          android:title="@string/home_title">
+    <intent android:targetPackage="com.miui.home"
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.miui.home.settings.MiuiHomeSettingActivity" />
+  </header>
+  <header android:icon="@drawable/ic_display_settings"
+          android:id="@id/display_settings"
+          android:title="@string/display_settings_new"
+          android:fragment="com.android.settings.MiuiDisplaySettings" />
+  <header android:icon="@drawable/ic_sound_settings"
+          android:id="@id/sound_settings"
+          android:title="@string/sound_vibrate_settings">
+    <intent android:targetPackage="com.android.settings"
+            android:targetClass="com.android.settings.MiuiSoundSettingsActivity" />
+  </header>
+  <header android:icon="@drawable/ic_stylus_and_keyboard_settings"
+          android:id="@id/stylus_and_keyboard_settings"
+          android:title="@string/stylus_keyboard_settings_title">
+    <intent android:targetPackage="com.miui.securitycore"
+            android:action="com.miui.miinput.action.KEYBOARD_AND_STYLUS_SETTINGS" />
+  </header>
+  <header android:icon="@drawable/ic_wallpaper_settings"
+          android:id="@id/wallpaper_settings"
+          android:title="@string/wallpaper_settings_title">
+    <intent android:targetPackage="com.android.thememanager"
+            android:targetClass="com.android.thememanager.settings.superwallpaper.activity.WallpaperSettingSupportSuperWallpaperActivity" />
+  </header>
+  <header android:icon="@drawable/com_android_thememanager"
+          android:id="@id/theme_settings"
+          android:title="@string/theme_settings_title">
+    <intent android:targetPackage="com.android.thememanager"
+            android:targetClass="com.android.thememanager.activity.ThemeSettingsActivity" />
+  </header>
+  <header />
+  <header android:icon="@drawable/ic_security_settings_settings"
+          android:id="@id/security_settings"
+          android:title="@string/password_and_security"
+          android:fragment="com.android.settings.security.MiuiSecurityAndPrivacySettings" />
+  <header android:icon="@drawable/ic_settings_safety_emergency"
+          android:id="@id/safety_emergency_settings"
+          android:title="@string/emergency_settings_preference_title"
+          android:fragment="com.android.settings.emergency.EmergencyDashboardFragment" />
+  <header android:icon="@drawable/ic_security_status"
+          android:id="@id/privacy_settings2">
+    <intent android:action="android.settings.PRIVACY_SETTINGS" />
+  </header>
+  <header android:icon="@drawable/ic_privacy_protection"
+          android:id="@id/privacy_protection_settings"
+          android:title="@string/privacy_protection">
+    <intent android:action="miui.intent.action.PRIVACY_SETTINGS" />
+  </header>
+  <header android:icon="@drawable/ic_system_app_settings"
+          android:id="@id/application_settings"
+          android:title="@string/applications_settings_title"
+          android:fragment="com.android.settings.applications.MiuiApplicationsSettings" />
+  <header android:icon="@drawable/ic_battery_settings"
+          android:id="@id/battery_settings_new"
+          android:title="@string/power_usage_summary_title_new">
+    <intent android:action="miui.intent.action.POWER_MANAGER" />
+  </header>
+  <header />
+  <header android:icon="@drawable/dynamic_item_icon"
+          android:id="@id/dynamic_item">
+    <intent />
+  </header>
+  <header android:icon="@drawable/ic_app_timer"
+          android:id="@id/app_timer"
+          android:title="@string/usage_state_app_timer"
+          android:fragment="com.android.settings.usagestats.UsageStatsMainFragment" />
+  <header android:icon="@drawable/xiaoai"
+          android:id="@id/voice_assist"
+          android:title="@string/voice_assist">
+    <intent android:action="miui.intent.action.APP_SETTINGS" />
+  </header>
+  <header android:icon="@drawable/xiaomi_account"
+          android:id="@id/micloud_settings"
+          android:title="@string/xiaomi_account">
+    <intent android:targetPackage="com.xiaomi.account"
+            android:action="android.settings.XIAOMI_ACCOUNT_SYNC_SETTINGS" />
+    <extra android:name="account_type"
+           android:value="com.xiaomi" />
+  </header>
+  <header android:id="@id/manufacturer_settings">
+    <intent android:action="com.android.settings.MANUFACTURER_APPLICATION_SETTING" />
+  </header>
+  <header android:icon="@drawable/ic_other_advanced_settings"
+          android:id="@id/other_advanced_settings"
+          android:title="@string/other_advanced_settings"
+          android:fragment="com.android.settings.personal.OtherPersonalSettings" />
+  <header android:id="@id/global_feedback_category" />
+  <header android:icon="@drawable/ic_privacy_settings"
+          android:id="@id/privacy_settings"
+          android:title="@string/privacy_dashboard_title">
+    <intent android:action="android.settings.PRIVACY_SETTINGS" />
+  </header>
+  <header android:icon="@drawable/ic_location_info_settings"
+          android:id="@id/location_settings"
+          android:title="@string/location_settings_title"
+          android:fragment="com.android.settings.location.LocationSettings" />
+  <header android:icon="@drawable/ic_bugreport_settings"
+          android:id="@id/feedback_services_settings"
+          android:title="@string/bug_report_settings">
+    <intent android:action="miui.intent.action.miservice" />
+  </header>
+</preference-headers>

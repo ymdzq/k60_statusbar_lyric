@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center_vertical"
+              android:id="@id/item"
+              android:background="?attr/preferenceItemBackground"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <ImageView android:layout_gravity="center"
+             android:id="@android:id/icon"
+             android:layout_width="48.0dp"
+             android:layout_height="48.0dp"
+             android:scaleType="fitCenter"
+             android:layout_marginEnd="@dimen/miuix_preference_item_padding_inner" />
+  <RelativeLayout android:gravity="center_vertical"
+                  android:layout_gravity="center_vertical"
+                  android:layout_width="wrap_content"
+                  android:layout_height="@dimen/miuix_appcompat_list_preferred_item_height"
+                  android:layout_weight="1.0">
+    <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.PreferenceList"
+              android:ellipsize="marquee"
+              android:id="@android:id/title"
+              android:fadingEdge="horizontal"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:singleLine="true" />
+  </RelativeLayout>
+  <miuix.slidingwidget.widget.SlidingButton android:id="@id/switch_widget"
+                        android:focusable="false"
+                        android:clickable="false"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+</LinearLayout>

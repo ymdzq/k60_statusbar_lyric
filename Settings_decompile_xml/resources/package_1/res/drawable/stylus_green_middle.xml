@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<vector android:height="15.0dp"
+        android:width="161.0dp"
+        android:viewportWidth="322.0"
+        android:viewportHeight="30.0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+  <group>
+    <path android:fillColor="@drawable/$stylus_green_middle__0"
+          android:pathData="M0,2H322V28H0V0Z" />
+  </group>
+</vector>

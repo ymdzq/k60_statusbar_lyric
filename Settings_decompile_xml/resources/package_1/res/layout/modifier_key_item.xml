@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<RelativeLayout android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8.0dp"
+                android:layout_marginBottom="8.0dp"
+                android:minHeight="?android:attr/listPreferredItemHeight"
+                android:layout_weight="1.0"
+                android:paddingEnd="?android:attr/scrollbarSize" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:androidprv="http://schemas.android.com/apk/prv/res/android">
+  <ImageView android:ellipsize="marquee"
+             android:id="@id/modifier_key_check_icon"
+             android:fadingEdge="horizontal"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:src="@drawable/ic_check_24dp"
+             android:tint="?android:^attr-private/materialColorPrimaryContainer"
+             android:layout_centerVertical="true"
+             android:layout_marginStart="24.0dp"
+             android:layout_alignParentStart="true" />
+  <TextView android:textAppearance="?android:attr/textAppearanceMedium"
+            android:ellipsize="marquee"
+            android:id="@id/modifier_key_text"
+            android:padding="16.0dp"
+            android:fadingEdge="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textDirection="locale"
+            android:layout_toEndOf="@id/modifier_key_check_icon" />
+</RelativeLayout>

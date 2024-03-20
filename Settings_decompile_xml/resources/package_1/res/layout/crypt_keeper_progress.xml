@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center_horizontal"
+              android:orientation="vertical"
+              android:paddingTop="@0x11070017"
+              android:paddingBottom="@0x11070013"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dp"
+                android:layout_weight="1.0">
+    <ImageView android:id="@id/encroid"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@0x110800d5"
+               android:contentDescription="@null" />
+    <Button android:id="@id/factory_reset"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/master_clear_button_text" />
+  </LinearLayout>
+  <TextView android:textSize="@dimen/crypt_keeper_title_text_size"
+            android:id="@id/title"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+  <TextView android:textSize="@0x11070016"
+            android:textColor="@0x1106001f"
+            android:ellipsize="end"
+            android:id="@id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15.0dp"
+            android:text="@string/encryption_progress_summary" />
+  <miuix.androidbasewidget.widget.ProgressBar android:id="@id/progress_bar"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@0x11070014"
+                        android:layout_marginRight="@0x11070015"
+                        android:progressDrawable="@0x110800e3"
+                        android:minHeight="0.0dp" />
+</LinearLayout>

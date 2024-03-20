@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:id="@id/top_screen"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <miuix.springback.view.SpringBackLayout android:layout_width="fill_parent"
+                        android:layout_height="0.0dp"
+                        android:layout_weight="1.0"
+                        settings:scrollableView="@id/page_layout_scrollview">
+    <androidx.core.widget.NestedScrollView android:id="@id/page_layout_scrollview"
+                          android:layout_width="fill_parent"
+                          android:layout_height="fill_parent">
+      <LinearLayout android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+        <include layout="@layout/page_layout_page_content" />
+      </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+  </miuix.springback.view.SpringBackLayout>
+  <TextView android:textSize="@dimen/font_size_huge_font_tips"
+            android:id="@id/tv_godzilla_tips"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/padding_huge_font_tips"
+            android:paddingEnd="@dimen/padding_huge_font_tips" />
+  <LinearLayout android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/font_size_view_hit_margin_top"
+                android:layout_marginBottom="@dimen/font_weight_view_margin_top">
+    <TextView android:textColor="@color/font_size_view_big_color"
+              android:layout_gravity="center_horizontal"
+              android:id="@id/font_hint_view"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="@dimen/font_size_view_hit_margin_bottom" />
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_height="@dimen/font_size_view_height">
+      <ImageView android:gravity="center"
+                 android:layout_gravity="center_vertical"
+                 android:layout_width="0.0dp"
+                 android:layout_height="26.9dp"
+                 android:src="@drawable/ic_a_small"
+                 android:layout_weight="2.0" />
+      <com.android.settings.display.FontSizeAdjustView android:id="@id/font_view"
+                            android:background="@drawable/shape_corner_matrix"
+                            android:layout_width="0.0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="9.0" />
+      <ImageView android:gravity="center"
+                 android:layout_gravity="center_vertical"
+                 android:layout_width="0.0dp"
+                 android:layout_height="26.9dp"
+                 android:src="@drawable/ic_a_big"
+                 android:layout_weight="2.0" />
+    </LinearLayout>
+  </LinearLayout>
+  <LinearLayout android:orientation="vertical"
+                android:id="@id/ll_font_weight"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/font_view_margin_bottom">
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_height="@dimen/font_size_view_height">
+      <ImageView android:gravity="center"
+                 android:layout_gravity="center_vertical"
+                 android:id="@id/iv_font_weight_light"
+                 android:layout_width="0.0dp"
+                 android:layout_height="26.9dp"
+                 android:src="@drawable/textIcon_thin"
+                 android:layout_weight="2.0" />
+      <com.android.settings.display.FontWeightAdjustView android:id="@id/fontweight_view"
+                            android:background="@drawable/shape_corner_matrix"
+                            android:layout_width="0.0dp"
+                            android:layout_height="fill_parent"
+                            android:progressDrawable="@null"
+                            android:thumb="@null"
+                            android:layout_weight="9.0" />
+      <ImageView android:gravity="center"
+                 android:layout_gravity="center_vertical"
+                 android:id="@id/iv_font_weight_heavy"
+                 android:layout_width="0.0dp"
+                 android:layout_height="26.9dp"
+                 android:src="@drawable/textIcon_thick"
+                 android:layout_weight="2.0" />
+    </LinearLayout>
+  </LinearLayout>
+</LinearLayout>

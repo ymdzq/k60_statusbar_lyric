@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingStart="@dimen/device_name_edit_usage_padding"
+              android:paddingEnd="@dimen/device_name_edit_usage_padding" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:id="@id/frame"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/settingslib_min_switch_bar_height">
+    <RelativeLayout android:gravity="center_vertical"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:layout_marginEnd="@dimen/settingslib_switch_title_margin">
+      <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.PreferenceList"
+                android:ellipsize="end"
+                android:id="@id/switch_text"
+                android:fadingEdge="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textAlignment="viewStart" />
+      <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.List.Secondary.Preference"
+                android:id="@id/summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:layout_below="@id/switch_text"
+                android:layout_alignStart="@id/switch_text" />
+    </RelativeLayout>
+    <miuix.slidingwidget.widget.SlidingSwitch android:layout_gravity="center_vertical"
+                          android:id="@android:id/switch_widget"
+                          android:focusable="false"
+                          android:clickable="false"
+                          android:layout_width="wrap_content"
+                          android:layout_height="48.0dp" />
+  </LinearLayout>
+</LinearLayout>

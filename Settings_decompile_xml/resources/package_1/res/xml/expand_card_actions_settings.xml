@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/expand_card_action"
+                  android:key="expand_card_action" xmlns:android="http://schemas.android.com/apk/res/android">
+  <CheckBoxPreference android:persistent="false"
+                      android:title="@string/mi_smart_play_entry_title"
+                      android:key="expand_card_mi_smart_play"
+                      android:summary="@string/music_playback_control_cross_device_flow" />
+  <CheckBoxPreference android:persistent="false"
+                      android:title="@string/mi_smart_hub_entry_title"
+                      android:key="expand_card_mi_smart_hub"
+                      android:summary="@string/music_video_flow_across_device" />
+  <miuix.preference.DropDownPreference android:title="@string/smart_home_title"
+                        android:key="smart_home"
+                        android:summary="@string/smart_home_select_smart_device" />
+  <CheckBoxPreference android:persistent="false"
+                      android:title="@string/smart_home_title"
+                      android:key="miui_device_control"
+                      android:summary="@string/miui_device_control_description" />
+</PreferenceScreen>

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/lock_screen_action"
+                  android:key="lock_screen_actions_settings" xmlns:android="http://schemas.android.com/apk/res/android">
+  <CheckBoxPreference android:persistent="false"
+                      android:title="@string/status_bar_settings_notification_bar"
+                      android:key="lock_screen_notification" />
+  <CheckBoxPreference android:persistent="false"
+                      android:title="@string/control_center"
+                      android:key="lock_screen_control_center"
+                      android:summary="@string/requires_modern_control_center" />
+  <CheckBoxPreference android:persistent="false"
+                      android:title="@string/title_smart_device_control"
+                      android:key="lock_screen_smart_device_control" />
+  <CheckBoxPreference android:persistent="false"
+                      android:title="@string/lockscreen_trivial_controls_setting_toggle"
+                      android:key="lock_screen_allow_trivial_controls"
+                      android:summary="@string/lockscreen_trivial_controls_summary" />
+</PreferenceScreen>

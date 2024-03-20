@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center_vertical"
+              android:id="@id/video_check_box"
+              android:background="#00000000"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/media_checkbox_margin_vertical"
+              android:layout_marginBottom="@dimen/media_checkbox_margin_vertical" xmlns:android="http://schemas.android.com/apk/res/android">
+  <ViewStub android:id="@id/lottie_viewstub_checkbox"
+            android:layout="@layout/lottie_viewstub_checkbox"
+            android:inflatedId="@id/lottie_video"
+            android:layout_width="@dimen/video_checkbox_width"
+            android:layout_height="@dimen/video_checkbox_height" />
+  <ViewStub android:id="@id/image_viewstub_checkbox"
+            android:layout="@layout/image_viewstub_checkbox"
+            android:inflatedId="@id/gesture_image"
+            android:layout_width="@dimen/media_checkbox_image_width"
+            android:layout_height="@dimen/media_checkbox_image_height"
+            android:layout_marginStart="@dimen/media_checkbox_image_margin_start" />
+  <RelativeLayout android:gravity="center_vertical"
+                  android:layout_gravity="center_vertical"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1.0">
+    <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.PreferenceList"
+              android:ellipsize="marquee"
+              android:id="@android:id/title"
+              android:fadingEdge="horizontal"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:paddingStart="@dimen/media_checkbox_text_margin_start" />
+    <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.List.Secondary.Preference"
+              android:id="@android:id/summary"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_below="@android:id/title"
+              android:paddingStart="@dimen/media_checkbox_text_margin_start"
+              android:layout_alignStart="@android:id/title" />
+  </RelativeLayout>
+  <View android:id="@id/delimiter"
+        android:background="#e6e6e6"
+        android:layout_width="@dimen/media_checkbox_delimiter_width"
+        android:layout_height="@dimen/media_checkbox_delimiter_height"
+        android:layout_marginStart="@dimen/media_checkbox_delimiter_margin"
+        android:layout_marginEnd="@dimen/media_checkbox_delimiter_margin" />
+  <miuix.slidingwidget.widget.SlidingButton android:id="@android:id/checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/miuix_preference_item_padding_start" />
+</LinearLayout>

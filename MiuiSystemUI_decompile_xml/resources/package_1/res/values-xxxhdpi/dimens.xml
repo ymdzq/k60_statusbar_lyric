@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+  <dimen name="qs_control_header_button_size">24.7273dp</dimen>
+  <dimen name="qs_control_title_margin_end">62.5454dp</dimen>
+</resources>

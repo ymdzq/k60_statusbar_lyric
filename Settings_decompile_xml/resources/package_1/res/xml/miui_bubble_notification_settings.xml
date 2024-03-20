@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:key="root" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:key="block_category"
+                      android:order="1">
+    <CheckBoxPreference android:persistent="false"
+                        android:title="@string/block_title"
+                        android:key="block" />
+  </PreferenceCategory>
+  <PreferenceCategory android:key="main_category"
+                      android:order="10">
+    <CheckBoxPreference android:persistent="false"
+                        android:title="@string/badge_title"
+                        android:key="badge" />
+    <miuix.preference.DropDownPreference android:persistent="false"
+                          android:title="@string/importance_title"
+                          android:key="importance"
+                          settings:entries="@array/notifi_importance_entries"
+                          settings:entrySummaries="@array/notifi_importance_summaries"
+                          settings:entryValues="@array/notifi_importance_values" />
+    <CheckBoxPreference android:persistent="false"
+                        android:title="@string/allow_float_title"
+                        android:key="allow_float"
+                        android:summary="@string/allow_float_summary" />
+    <CheckBoxPreference android:persistent="false"
+                        android:title="@string/allow_keyguard_title"
+                        android:key="allow_keyguard"
+                        android:summary="@string/allow_keyguard_summary" />
+    <com.android.settings.notification.MiuiNotificationSoundPreference android:persistent="false"
+                          android:title="@string/sound_title"
+                          android:key="ringtone"
+                          android:ringtoneType="notification"
+                          style="@style/RingTonePreferenceStyle" />
+    <CheckBoxPreference android:persistent="false"
+                        android:title="@string/vibrate_title"
+                        android:key="vibrate" />
+    <CheckBoxPreference android:persistent="false"
+                        android:title="@string/lights_title"
+                        android:key="lights" />
+    <miuix.preference.DropDownPreference android:persistent="false"
+                          android:title="@string/visibility_override_title"
+                          android:key="visibility_override" />
+  </PreferenceCategory>
+</PreferenceScreen>

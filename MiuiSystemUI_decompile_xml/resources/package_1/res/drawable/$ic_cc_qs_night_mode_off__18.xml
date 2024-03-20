@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<set android:ordering="together" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+  <objectAnimator android:interpolator="@drawable/drawable_0x7f080258"
+                  android:duration="150"
+                  android:startOffset="0"
+                  android:valueFrom="M0 -35.26 C19.48,-35.26 35.27,-19.48 35.27,0 C35.27,19.48 19.48,35.27 0,35.27 C-19.48,35.27 -35.26,19.48 -35.26,0 C-35.26,-19.48 -19.48,-35.26 0,-35.26c "
+                  android:valueTo="M0 -0.95 C19.48,-0.95 35.31,-0.69 35.27,0 C35.31,0.69 19.54,1.01 0.06,1.01 C-19.41,1.01 -35.31,0.63 -35.26,0 C-35.25,-0.62 -19.48,-0.95 0,-0.95c "
+                  android:valueType="pathType"
+                  android:propertyName="pathData" />
+  <objectAnimator android:interpolator="@drawable/drawable_0x7f080259"
+                  android:duration="283"
+                  android:startOffset="150"
+                  android:valueFrom="M0 -0.95 C19.48,-0.95 35.31,-0.69 35.27,0 C35.31,0.69 19.54,1.01 0.06,1.01 C-19.41,1.01 -35.31,0.63 -35.26,0 C-35.25,-0.62 -19.48,-0.95 0,-0.95c "
+                  android:valueTo="M0 -35.26 C19.48,-35.26 35.27,-19.48 35.27,0 C35.27,19.48 19.48,35.27 0,35.27 C-19.48,35.27 -35.26,19.48 -35.26,0 C-35.26,-19.48 -19.48,-35.26 0,-35.26c "
+                  android:valueType="pathType"
+                  android:propertyName="pathData" />
+</set>

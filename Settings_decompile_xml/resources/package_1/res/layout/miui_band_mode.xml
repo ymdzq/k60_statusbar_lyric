@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center_horizontal"
+              android:orientation="vertical"
+              android:padding="4.0dp"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <Switch android:textSize="25.0sp"
+          android:textStyle="bold"
+          android:id="@id/btn_select"
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:text="selection" />
+  <ListView android:textSize="7.0sp"
+            android:id="@id/miui_band"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+</LinearLayout>

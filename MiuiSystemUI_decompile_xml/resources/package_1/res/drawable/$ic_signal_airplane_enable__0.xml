@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<vector android:name="vector"
+        android:height="@dimen/qs_tile_icon_bg_size"
+        android:width="@dimen/qs_tile_icon_bg_size"
+        android:viewportWidth="130.0"
+        android:viewportHeight="130.0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+  <clip-path android:name="path_2"
+             android:pathData="M 65 0 C 47.768 0 31.223 6.853 19.038 19.038 C 6.853 31.223 0 47.768 0 65 C 0 82.232 6.853 98.777 19.038 110.962 C 31.223 123.147 47.768 130 65 130 C 82.232 130 98.777 123.147 110.962 110.962 C 123.147 98.777 130 82.232 130 65 C 130 47.768 123.147 31.223 110.962 19.038 C 98.777 6.853 82.232 0 65 0 Z" />
+  <group android:name="group"
+         android:pivotX="65.0"
+         android:pivotY="65.0">
+    <path android:name="plane"
+          android:fillColor="@color/qs_tile_icon_disabled_color"
+          android:pathData="M 86.3 72.7 L 69 65.3 L 69 82.9 L 74.5 87.6 C 74.9 87.9 75.1 88.5 74.8 89 C 74.5 89.6 73.8 90.1 73 90.1 L 57 90.1 C 56.2 90.1 55.5 89.7 55.2 89 C 55 88.5 55.1 88 55.5 87.6 L 61 82.9 L 61 65.3 L 43.7 72.7 C 42.7 73.1 41.4 72.7 41.1 71.6 C 41 71.4 41 70 41 70 C 41 69.2 41.8 68.9 43 68 L 61 56 L 61 44.2 C 61 42.1 62.5 40.2 64.6 40 C 67 39.8 69 41.7 69 44 L 69 56 L 87 68 C 88.2 68.9 89 69.2 89 70 C 89 70 89 71.4 88.9 71.6 C 88.5 72.7 87.3 73.1 86.3 72.7 Z"
+          android:strokeWidth="1.0" />
+  </group>
+</vector>

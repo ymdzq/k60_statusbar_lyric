@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+  <integer name="page_layout_home_padding1">20</integer>
+  <integer name="page_layout_home_padding1_huge">29</integer>
+  <integer name="page_layout_home_padding2">19</integer>
+  <integer name="page_layout_home_padding2_huge">28</integer>
+  <integer name="page_layout_home_padding3">20</integer>
+  <integer name="page_layout_home_padding3_huge">29</integer>
+  <integer name="page_layout_level_text_left_margin">183</integer>
+  <integer name="page_layout_screen_viem_seekbar_bottom">44</integer>
+  <integer name="page_layout_text_size_godzilla">43</integer>
+  <integer name="page_layout_text_size_huge">40</integer>
+  <integer name="page_layout_text_size_large">37</integer>
+  <integer name="page_layout_text_size_medium">34</integer>
+  <integer name="page_layout_text_size_normal">31</integer>
+  <integer name="page_layout_text_size_small">28</integer>
+</resources>

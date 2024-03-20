@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<shape android:shape="rectangle" xmlns:android="http://schemas.android.com/apk/res/android">
+  <corners android:topLeftRadius="28.0dp"
+           android:topRightRadius="0.0dp"
+           android:bottomLeftRadius="28.0dp"
+           android:bottomRightRadius="0.0dp" />
+  <solid android:color="@color/media_dialog_item_background" />
+</shape>

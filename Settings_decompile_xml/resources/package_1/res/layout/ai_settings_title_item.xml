@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<RelativeLayout android:background="@android:color/white"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <VideoView android:id="@id/img_long_press"
+             android:layout_width="@dimen/ai_settings_title_width"
+             android:layout_height="@dimen/ai_settings_main_title_height"
+             android:layout_marginTop="@dimen/ai_settings_main_margin_top"
+             android:layout_marginBottom="@dimen/ai_settings_main_margin_bottom"
+             android:layout_centerHorizontal="true" />
+  <View android:id="@id/img_long_press_place_holder"
+        android:background="@android:color/white"
+        android:layout_width="@dimen/ai_settings_long_press_width"
+        android:layout_height="@dimen/ai_settings_long_press_height"
+        android:layout_marginTop="@dimen/ai_settings_long_press_margin_top"
+        android:layout_marginBottom="@dimen/ai_settings_long_press_margin_bottom"
+        android:layout_centerHorizontal="true" />
+  <TextView android:textSize="@dimen/ai_settings_main_text_size"
+            android:textColor="#000000"
+            android:paddingLeft="@dimen/ai_settings_description_padding_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/ai_settings_main_text_margin_bottom"
+            android:text="@string/ai_settings_single_press_des"
+            android:layout_below="@id/img_long_press"
+            android:layout_centerHorizontal="true" />
+</RelativeLayout>

@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center_vertical"
+              android:layout_gravity="center_vertical"
+              android:background="@drawable/preference_connect_background"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/preference_icon_minWidth">
+    <ImageView android:gravity="center"
+               android:layout_gravity="center"
+               android:id="@android:id/icon"
+               android:layout_width="wrap_content"
+               android:layout_height="@dimen/bt_preference_icon_size"
+               android:layout_marginTop="@dimen/preference_item_padding_inner"
+               android:layout_marginBottom="@dimen/preference_item_padding_inner"
+               android:scaleType="fitCenter"
+               android:adjustViewBounds="true"
+               android:contentDescription="@null"
+               android:paddingEnd="@dimen/preference_icon_padding_end" />
+  </LinearLayout>
+  <RelativeLayout android:gravity="center_vertical"
+                  android:layout_gravity="center_vertical"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1.0"
+                  style="@style/Widget.PreferenceItem">
+    <TextView android:textSize="@dimen/bt_preference_title_size"
+              android:ellipsize="middle"
+              android:id="@android:id/title"
+              android:fadingEdge="horizontal"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:singleLine="true"
+              android:fontFamily="mipro-medium"
+              android:textAlignment="viewStart" />
+  </RelativeLayout>
+  <LinearLayout android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:id="@android:id/widget_frame"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent" />
+  <ImageView android:gravity="center"
+             android:layout_gravity="center|end"
+             android:id="@id/arrow_right"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:src="@drawable/miuix_appcompat_arrow_right" />
+</LinearLayout>

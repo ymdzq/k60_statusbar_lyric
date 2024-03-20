@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:id="@id/wifi_animation_1"
+        android:drawable="@drawable/wifi_animation_1" />
+  <item android:id="@id/wifi_animation_2"
+        android:drawable="@drawable/wifi_animation_2" />
+  <item android:id="@id/wifi_animation_3"
+        android:drawable="@drawable/wifi_animation_3" />
+  <item android:id="@id/wifi_animation_4"
+        android:drawable="@drawable/wifi_animation_4" />
+</layer-list>

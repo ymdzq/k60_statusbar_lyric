@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<animated-vector android:drawable="@drawable/$ic_qs_flashlight_enabled__0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+  <target android:name="left1"
+          android:animation="@drawable/$ic_qs_flashlight_enabled__1" />
+  <target android:name="right1"
+          android:animation="@drawable/$ic_qs_flashlight_enabled__2" />
+  <target android:name="center1"
+          android:animation="@drawable/$ic_qs_flashlight_enabled__3" />
+  <target android:name="left_2"
+          android:animation="@drawable/$ic_qs_flashlight_enabled__4" />
+  <target android:name="center_2"
+          android:animation="@drawable/$ic_qs_flashlight_enabled__5" />
+  <target android:name="right_2"
+          android:animation="@drawable/$ic_qs_flashlight_enabled__6" />
+  <target android:name="body"
+          android:animation="@drawable/$ic_qs_flashlight_enabled__7" />
+</animated-vector>

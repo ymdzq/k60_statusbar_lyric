@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<ScrollView android:layout_width="fill_parent"
+            android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical"
+                  android:id="@id/current_backup_pw_layout"
+                  android:padding="@dimen/miuix_preference_item_padding_start"
+                  android:layout_width="fill_parent"
+                  android:layout_height="fill_parent">
+      <EditText android:ellipsize="end"
+                android:id="@id/current_backup_pw"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:password="true"
+                android:singleLine="true"
+                android:textAlignment="viewStart" />
+      <EditText android:ellipsize="end"
+                android:id="@id/new_backup_pw"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7.3dp"
+                android:password="true"
+                android:singleLine="true"
+                android:textAlignment="viewStart" />
+      <EditText android:ellipsize="end"
+                android:id="@id/confirm_backup_pw"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7.3dp"
+                android:password="true"
+                android:singleLine="true"
+                android:textAlignment="viewStart" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical"
+                  android:id="@id/reset_backup_pw_layout"
+                  android:layout_width="fill_parent"
+                  android:layout_height="fill_parent"
+                  android:paddingStart="?android:attr/listPreferredItemPaddingLeft"
+                  android:paddingEnd="?android:attr/listPreferredItemPaddingLeft">
+      <TextView android:textSize="18.18sp"
+                android:textColor="#0d84ff"
+                android:id="@id/modify_backup_pw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="44.4dp"
+                android:text="@string/backup_set_modify_title"
+                android:fontFamily="mipro-medium" />
+      <TextView android:textSize="18.18sp"
+                android:textColor="#f22424"
+                android:id="@id/cancel_backup_pw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="44.4dp"
+                android:text="@string/backup_set_clear_title"
+                android:fontFamily="mipro-medium" />
+    </LinearLayout>
+  </LinearLayout>
+</ScrollView>

@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/complete_parameters_new" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/model_number"
+                        android:key="model_number"
+                        settings:controller="com.android.settings.MiuiSearchController" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/device_miui_version_parameters"
+                        android:key="device_miui_version"
+                        settings:controller="com.android.settings.MiuiSearchController" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/firmware_version"
+                        android:key="firmware_version"
+                        settings:controller="com.android.settings.MiuiSearchController" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/security_patch"
+                        android:key="security_patch"
+                        settings:controller="com.android.settings.MiuiSearchController" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/device_opcust_version"
+                        android:key="device_opcust_version"
+                        settings:controller="com.android.settings.MiuiSearchController" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/device_memory"
+                        android:key="device_memory"
+                        settings:controller="com.android.settings.MiuiSearchController" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/model_name"
+                        android:key="model_name"
+                        settings:controller="com.android.settings.MiuiSearchController" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/device_cpu"
+                        android:key="device_cpu"
+                        settings:controller="com.android.settings.MiuiSearchController" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/baseband_version"
+                        android:key="baseband_version"
+                        settings:controller="com.android.settings.MiuiSearchController" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/kernel_version"
+                        android:key="kernel_version"
+                        settings:controller="com.android.settings.MiuiSearchController" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/hardware_version"
+                        android:key="hardware_version"
+                        settings:controller="com.android.settings.MiuiSearchController" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/device_internal_memory"
+                        android:key="device_internal_memory"
+                        settings:controller="com.android.settings.MiuiSearchController" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/params_interpretation"
+                        android:key="device_params_interpretation"
+                        settings:controller="com.android.settings.device.controller.ParamsInterpretationController"
+                        settings:showRightArrow="true" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/device_activation_info"
+                        android:key="device_activation_info"
+                        settings:controller="com.android.settings.device.controller.MiuiActivationInfoController"
+                        settings:showRightArrow="true">
+    <intent android:action="com.xiaomi.VIEW_ACTIVATION_INFO" />
+  </com.android.settingslib.miuisettings.preference.Preference>
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/pre_installed_application"
+                        android:key="pre_installed_application"
+                        android:fragment="com.android.settings.device.PreInstallApplication"
+                        settings:showRightArrow="true" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/settings_safetylegal_title"
+                        android:key="safetylegal">
+    <intent android:action="android.settings.SAFETY" />
+  </com.android.settingslib.miuisettings.preference.Preference>
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/instruction_title"
+                        android:key="instruction"
+                        settings:showRightArrow="true" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/legal_information"
+                        android:key="container"
+                        android:fragment="com.android.settings.Legal" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/device_status"
+                        android:key="status_info"
+                        android:summary="@string/device_status_summary"
+                        android:fragment="com.android.settings.deviceinfo.aboutphone.MyDeviceInfoFragment" />
+</PreferenceScreen>

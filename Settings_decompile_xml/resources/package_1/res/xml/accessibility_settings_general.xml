@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:persistent="true"
+                  android:title="@string/accessibility_settings"
+                  android:key="accessibility_settings_screen" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <com.android.settingslib.miuisettings.preference.Preference android:persistent="false"
+                        android:title="@string/accessibility_button_title"
+                        android:key="accessibility_button_preference"
+                        android:summary="@string/accessibility_button_summary"
+                        android:fragment="com.android.settings.accessibility.AccessibilityButtonFragment" />
+  <com.android.settingslib.miuisettings.preference.SwitchPreference android:persistent="false"
+                        android:title="@string/accessibility_shortcut_service_on_lock_screen_title"
+                        android:key="accessibility_shortcut_preference"
+                        android:summary="@string/accessibility_shortcut_description"
+                        settings:controller="com.android.settings.accessibility.AccessibilityShortcutPreferenceController" />
+  <PreferenceCategory android:persistent="false"
+                      android:key="interaction_control_category" />
+  <PreferenceCategory android:key="screen_reader_category"
+                      settings:controller="com.android.settings.MiuiSearchController" />
+  <PreferenceCategory android:persistent="false"
+                      android:key="user_installed_services_category">
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/user_installed_services_category_title"
+                          android:key="more_installed_services_preference"
+                          android:fragment="com.android.settings.accessibility.InstalledAccessibilityService" />
+  </PreferenceCategory>
+</PreferenceScreen>

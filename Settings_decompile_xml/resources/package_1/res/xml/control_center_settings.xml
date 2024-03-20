@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <com.android.settings.controlcenter.ControlCenterStylePreference android:key="control_center_style_preference"
+                        settings:negativeContent="@layout/layout_control_center_legacy_content"
+                        settings:negativeDescription="@string/legacy_control_center_desc"
+                        settings:negativeTitle="@string/legacy_control_center_title"
+                        settings:positiveContent="@layout/layout_control_center_modern_content"
+                        settings:positiveDescription="@string/modern_control_center_desc"
+                        settings:positiveTitle="@string/modern_control_center_title" />
+</PreferenceScreen>

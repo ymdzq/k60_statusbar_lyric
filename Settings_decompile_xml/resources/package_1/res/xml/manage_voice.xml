@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:key="manage_voice" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/system_shortcut_wake"
+                        android:key="system_shortcut_wake"
+                        settings:showRightArrow="true" />
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/bluetooth_wake"
+                        android:key="bluetooth_wake"
+                        settings:showRightArrow="true" />
+</PreferenceScreen>

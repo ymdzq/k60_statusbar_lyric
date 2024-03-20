@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+  <TextView android:textSize="@dimen/devices_params_grid_item_title_size"
+            android:textColor="@color/my_device_params_item_title_color"
+            android:gravity="start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/my_device_camera_params"
+            android:textAlignment="viewStart"
+            style="@style/Miuix.AppCompat.TextAppearance.PreferenceList" />
+  <TextView android:id="@id/card_title"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="0.0dp" />
+  <LinearLayout android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:id="@id/card_value_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dp">
+    <TextView android:textSize="@dimen/devices_params_grid_item_title_size"
+              android:textColor="@color/my_device_params_item_title_color"
+              android:gravity="start"
+              android:id="@id/card_value"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textAlignment="viewStart"
+              style="@style/Miuix.AppCompat.TextAppearance.PreferenceList" />
+    <View android:id="@id/divider"
+          android:background="@color/my_device_camera_params_divider_line_color"
+          android:visibility="gone"
+          android:layout_width="1.0dp"
+          android:layout_height="11.0dp"
+          android:layout_marginStart="10.0dp"
+          android:layout_marginEnd="10.0dp" />
+    <TextView android:textSize="@dimen/devices_params_grid_item_title_size"
+              android:textColor="@color/my_device_params_item_title_color"
+              android:gravity="start"
+              android:id="@id/second_card_value"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textAlignment="viewStart"
+              style="@style/Miuix.AppCompat.TextAppearance.PreferenceList" />
+  </LinearLayout>
+  <TextView android:textSize="11.0dp"
+            android:textColor="@color/my_device_params_item_summary_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/device_camera"
+            style="@style/Miuix.AppCompat.TextAppearance.List.Secondary.Preference" />
+</LinearLayout>

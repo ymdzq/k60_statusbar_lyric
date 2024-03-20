@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:background="@color/main_page_background"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:layout_gravity="start"
+                android:id="@id/back_image"
+                android:layout_width="@dimen/back_image_width_height"
+                android:layout_height="@dimen/back_image_width_height"
+                android:layout_marginTop="@dimen/back_image_layout_top">
+    <ImageView android:id="@id/back_image_exit"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="@dimen/back_image_exit_top"
+               android:src="@drawable/back_image_exit"
+               android:layout_marginStart="@dimen/back_image_exit_start" />
+  </LinearLayout>
+  <TextureView android:layout_gravity="center_horizontal"
+               android:id="@id/miui_face_input_prompt_video"
+               android:layout_width="@dimen/miui_face_prompt_video_width"
+               android:layout_height="@dimen/miui_face_prompt_video_height"
+               android:layout_marginTop="@dimen/miui_face_enroll_prompt_video_top" />
+  <TextView android:textSize="@dimen/miui_face_enroll_introduction_title_text_size"
+            android:textColor="@color/miui_face_data_prompt_text_color"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:id="@id/miui_face_input_prompt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/miui_face_enroll_introduction_title_top"
+            android:text="@string/face_unlock_prompt"
+            android:fontFamily="mipro-regular" />
+</LinearLayout>

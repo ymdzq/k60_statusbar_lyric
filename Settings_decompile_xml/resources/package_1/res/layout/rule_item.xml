@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<FrameLayout android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerInParent="true" xmlns:android="http://schemas.android.com/apk/res/android">
+  <miuix.slidingwidget.widget.SlidingButton android:layout_gravity="center"
+                        android:id="@id/enabled_sb"
+                        android:focusable="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/miuix_preference_item_padding_inner"
+                        android:layout_marginBottom="@dimen/miuix_preference_item_padding_inner" />
+  <CheckBox android:layout_gravity="center"
+            android:id="@id/select_cb"
+            android:focusable="true"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/miuix_preference_item_padding_inner"
+            android:layout_marginBottom="@dimen/miuix_preference_item_padding_inner" />
+</FrameLayout>

@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:id="@id/dialog_layout"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="56.0dp"
+                android:layout_marginTop="25.0dp"
+                android:paddingStart="5.67dp"
+                android:paddingEnd="5.67dp">
+    <TextView android:id="@id/cancel_finger_authenticate"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:drawableStart="@drawable/miuix_appcompat_action_bar_back_dark" />
+  </LinearLayout>
+  <TextView android:textSize="@dimen/fod_authentication_dialog_title"
+            android:textStyle="bold"
+            android:textColor="@color/fod_authentication_dialog_title"
+            android:layout_gravity="center_horizontal"
+            android:id="@id/confirm_fingerprint_view_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="71.3dp"
+            android:text="@string/fingerprint_identify_msg" />
+  <TextView android:textSize="@dimen/fod_authentication_dialog_subtitle"
+            android:textColor="@color/fod_authentication_dialog_title"
+            android:layout_gravity="center_horizontal"
+            android:id="@id/confirm_fingerprint_view_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9.5dp"
+            android:text="@string/confirm_fingerprint_msg" />
+  <Space android:layout_width="fill_parent"
+         android:layout_height="fill_parent"
+         android:layout_weight="1.0" />
+</LinearLayout>

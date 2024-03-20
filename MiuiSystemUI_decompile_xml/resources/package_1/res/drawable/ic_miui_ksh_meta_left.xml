@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<vector android:height="35.0dp"
+        android:width="35.0dp"
+        android:viewportWidth="35.0"
+        android:viewportHeight="35.0" xmlns:android="http://schemas.android.com/apk/res/android">
+  <path android:fillColor="#00000000"
+        android:pathData="M2.5973,8.5C2.5973,5.24 5.24,2.5973 8.5,2.5973C11.76,2.5973 14.4027,5.24 14.4027,8.5V14.4027H8.5C5.24,14.4027 2.5973,11.76 2.5973,8.5Z"
+        android:strokeColor="@color/miui_keyboard_shortcuts_icon_color"
+        android:strokeWidth="3.19462" />
+  <path android:fillColor="#00000000"
+        android:pathData="M2.5973,26.5C2.5973,23.24 5.24,20.5973 8.5,20.5973H14.4027V26.5C14.4027,29.76 11.76,32.4027 8.5,32.4027C5.24,32.4027 2.5973,29.76 2.5973,26.5Z"
+        android:strokeColor="@color/miui_keyboard_shortcuts_icon_color"
+        android:strokeWidth="3.19462" />
+  <path android:fillColor="#00000000"
+        android:pathData="M20.5973,26.5V20.5973H26.5C29.76,20.5973 32.4027,23.24 32.4027,26.5C32.4027,29.76 29.76,32.4027 26.5,32.4027C23.24,32.4027 20.5973,29.76 20.5973,26.5Z"
+        android:strokeColor="@color/miui_keyboard_shortcuts_icon_color"
+        android:strokeWidth="3.19462" />
+  <path android:fillColor="#00000000"
+        android:pathData="M20.5973,8.5C20.5973,5.24 23.24,2.5973 26.5,2.5973C29.76,2.5973 32.4027,5.24 32.4027,8.5C32.4027,11.76 29.76,14.4027 26.5,14.4027H20.5973V8.5Z"
+        android:strokeColor="@color/miui_keyboard_shortcuts_icon_color"
+        android:strokeWidth="3.19462" />
+</vector>

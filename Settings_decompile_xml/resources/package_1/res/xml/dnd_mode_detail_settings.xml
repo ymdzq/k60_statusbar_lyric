@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/zen_mode_title"
+                  android:key="zen_mode_pref_screen" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:key="zen_mode_toggle_category">
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:persistent="false"
+                          android:title="@string/zen_mode_title"
+                          android:key="zen_mode_toggle"
+                          android:summary="@string/zen_mode_summary2" />
+    <com.android.settings.widget.CustomCheckBoxPreference android:persistent="false"
+                          android:title="@string/zen_mode_screen_locked_only"
+                          android:key="screen_locked_only" />
+    <com.android.settingslib.miuisettings.preference.miuix.DropDownPreference android:title="@string/vip_list"
+                          android:key="vip_list_setting"
+                          settings:entries="@array/vip_mode_text"
+                          settings:entryValues="@array/vip_mode_value" />
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:persistent="false"
+                          android:title="@string/repeat_call"
+                          android:key="repeated_incall_notification"
+                          android:summary="@string/repeat_call_info" />
+  </PreferenceCategory>
+  <PreferenceCategory android:key="key_advanced_settings2">
+    <com.android.settings.dndmode.LabelPreference android:persistent="false"
+                          android:title="@string/auto_silent"
+                          android:key="key_timing_mute"
+                          android:summary="@string/auto_silent_info"
+                          settings:clickable="true" />
+  </PreferenceCategory>
+</PreferenceScreen>

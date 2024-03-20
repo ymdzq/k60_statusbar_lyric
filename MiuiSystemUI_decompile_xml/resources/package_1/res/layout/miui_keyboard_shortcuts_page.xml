@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<FrameLayout android:clipChildren="false"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <androidx.recyclerview.widget.RecyclerView android:id="@id/miui_keyboard_shortcuts_grid"
+                        android:clipChildren="false"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxHeight="@dimen/miui_keyboard_shortcuts_max_height" />
+</FrameLayout>

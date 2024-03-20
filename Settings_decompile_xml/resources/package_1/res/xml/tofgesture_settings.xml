@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/tofgesture_settings" xmlns:android="http://schemas.android.com/apk/res/android">
+  <PreferenceCategory>
+    <com.android.settingslib.miuisettings.preference.Preference android:enabled="false"
+                          android:layout="@layout/tofgesture_diagram"
+                          android:key="key_tofgesture_description" />
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/tofgesture_enable_title"
+                          android:key="key_tof_gesture_enable" />
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/tof_gesture_cue_tone_title"
+                          android:key="key_tof_gesture_cue_tone_enable"
+                          android:summary="@string/tof_gesture_cue_tone_summary"
+                          android:shouldDisableView="true" />
+    <PreferenceCategory android:title="@string/supported_app_title"
+                        android:key="key_tof_gesture_apps_list"
+                        android:shouldDisableView="true" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/gesture_supported_title"
+                      android:key="gesture_supported_category">
+    <com.android.settingslib.miuisettings.preference.Preference android:icon="@drawable/leftright_waving"
+                          android:layout="@layout/tofgesture_supported_item"
+                          android:title="@string/leftright_waving_title"
+                          android:key="key_leftright_waving"
+                          android:summary="@string/leftright_waving_summary"
+                          showIcon="true" />
+    <com.android.settingslib.miuisettings.preference.Preference android:icon="@drawable/updown_waving"
+                          android:layout="@layout/tofgesture_supported_item"
+                          android:title="@string/updown_waving_title"
+                          android:key="key_updown_waving"
+                          android:summary="@string/updown_waving_summary"
+                          showIcon="true" />
+    <com.android.settingslib.miuisettings.preference.Preference android:icon="@drawable/doublepress"
+                          android:layout="@layout/tofgesture_supported_item"
+                          android:title="@string/doublepress_title"
+                          android:key="key_doublepress"
+                          android:summary="@string/doublepress_summary"
+                          showIcon="true" />
+    <com.android.settingslib.miuisettings.preference.Preference android:icon="@drawable/palm_circle"
+                          android:layout="@layout/tofgesture_supported_item"
+                          android:title="@string/palm_circle_title"
+                          android:key="key_palm_circle"
+                          android:summary="@string/palm_circle_summary"
+                          showIcon="true" />
+  </PreferenceCategory>
+</PreferenceScreen>

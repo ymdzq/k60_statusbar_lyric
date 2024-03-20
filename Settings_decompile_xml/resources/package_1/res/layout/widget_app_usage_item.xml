@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<FrameLayout android:layout_width="fill_parent"
+             android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/usage_state_item_height">
+    <ImageView android:id="@id/iv_app_icon"
+               android:layout_width="@dimen/usage_state_item_image_wh"
+               android:layout_height="@dimen/usage_state_item_image_wh"
+               android:scaleType="fitXY" />
+    <LinearLayout android:orientation="vertical"
+                  android:layout_width="0.0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1.0"
+                  android:layout_marginStart="@dimen/usage_state_item_image_margin_right">
+      <TextView android:textSize="@dimen/usage_state_item_app_name_text_size"
+                android:textColor="@color/usage_state_black"
+                android:id="@id/tv_app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+      <com.android.settings.usagestats.widget.LevelBarView android:layout_gravity="start"
+                            android:id="@id/seekbar_app_usage_time"
+                            android:layout_width="170.0dp"
+                            android:layout_height="@dimen/usage_state_item_seek_bar_height"
+                            android:layout_marginTop="4.0dp" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/usage_state_item_time_text_size"
+              android:textColor="@color/usage_stats_black60"
+              android:gravity="end"
+              android:id="@id/tv_app_usage_time"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentTop="true" />
+    <ImageView android:layout_width="@dimen/usage_state_item_arrow_width"
+               android:layout_height="@dimen/usage_state_item_arrow_height"
+               android:src="@drawable/app_usage_arrow_selector"
+               android:layout_marginStart="@dimen/usage_state_item_arrow_margin_left" />
+  </LinearLayout>
+</FrameLayout>

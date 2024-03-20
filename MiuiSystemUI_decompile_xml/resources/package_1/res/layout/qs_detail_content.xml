@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<com.android.systemui.qs.QSDetailContent android:layout_width="fill_parent"
+                      android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+  <miuix.recyclerview.widget.RecyclerView android:scrollbarThumbVertical="@drawable/qs_detail_scrollbar"
+                        android:id="@android:id/list"
+                        android:scrollbars="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:fadeScrollbars="false" />
+  <LinearLayout android:gravity="center"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:id="@android:id/empty"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+    <ImageView android:id="@android:id/icon"
+               android:layout_width="@dimen/qs_detail_empty_state_icon_size"
+               android:layout_height="@dimen/qs_detail_empty_state_icon_size" />
+    <TextView android:textAppearance="@style/TextAppearance.QS.DetailEmpty"
+              android:id="@android:id/title"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/qs_detail_empty_state_text_margin_top" />
+  </LinearLayout>
+</com.android.systemui.qs.QSDetailContent>

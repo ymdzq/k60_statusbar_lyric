@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<vector android:height="56.0dp"
+        android:width="56.0dp"
+        android:viewportWidth="56.0"
+        android:viewportHeight="56.0" xmlns:android="http://schemas.android.com/apk/res/android">
+  <path android:fillColor="#00000000"
+        android:pathData="M9.332,41.067V34.294C9.332,32.694 9.332,31.893 9.458,31.234C9.593,30.524 9.699,30.196 10.007,29.541C10.292,28.934 10.942,28.038 12.241,26.246C13.005,25.193 13.679,24.105 13.999,23.209C14.39,22.114 14.798,20.573 15.143,19.124C15.428,17.924 15.571,17.324 15.95,16.775C16.241,16.354 16.802,15.862 17.258,15.629C17.852,15.326 18.302,15.28 19.201,15.189C21.703,14.934 24.753,14.934 27.999,14.934"
+        android:strokeColor="@color/light_mode_icon_color_single_tone"
+        android:strokeWidth="4.0"
+        android:strokeLineCap="round" />
+  <path android:fillColor="#00000000"
+        android:pathData="M46.666,41.067V34.294C46.666,32.694 46.666,31.893 46.54,31.234C46.405,30.524 46.299,30.196 45.991,29.541C45.706,28.934 45.056,28.038 43.757,26.246C42.993,25.193 42.319,24.105 41.999,23.209C41.608,22.114 41.2,20.573 40.855,19.124C40.57,17.924 40.427,17.324 40.048,16.775C39.757,16.354 39.196,15.862 38.74,15.629C38.146,15.326 37.696,15.28 36.798,15.189C34.295,14.934 31.245,14.934 27.999,14.934"
+        android:strokeColor="@color/light_mode_icon_color_single_tone"
+        android:strokeWidth="4.0"
+        android:strokeLineCap="round" />
+  <path android:fillColor="#00000000"
+        android:pathData="M8.934,22.4C14.988,23.626 21.226,24.267 27.6,24.267C33.974,24.267 40.213,23.626 46.267,22.4"
+        android:strokeColor="@color/light_mode_icon_color_single_tone"
+        android:strokeWidth="4.0"
+        android:strokeLineCap="round" />
+  <path android:fillColor="#00000000"
+        android:pathData="M36.932,31.732C35.897,31.857 34.86,31.961 33.821,32.044C31.752,32.209 29.678,32.292 27.599,32.292C25.52,32.292 23.446,32.209 21.377,32.044C20.338,31.961 19.301,31.857 18.266,31.732"
+        android:strokeColor="@color/light_mode_icon_color_single_tone"
+        android:strokeWidth="4.0"
+        android:strokeLineCap="round" />
+  <path android:fillColor="#00000000"
+        android:pathData="M20.533,41.066H35.466"
+        android:strokeColor="@color/light_mode_icon_color_single_tone"
+        android:strokeWidth="4.0"
+        android:strokeLineCap="round" />
+</vector>

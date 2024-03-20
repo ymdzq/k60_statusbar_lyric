@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<FrameLayout android:layout_width="fill_parent"
+             android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:background="@color/usage_stats_white"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/usage_state_remind_item_height"
+                android:paddingStart="@dimen/usage_state_app_usage_padding_left"
+                android:paddingEnd="@dimen/usage_state_app_usage_padding_right">
+    <TextView android:textSize="@dimen/usage_state_remind_title_text_size"
+              android:textColor="@color/usage_state_black"
+              android:ellipsize="end"
+              android:id="@id/tv_title"
+              android:layout_width="0.0dp"
+              android:layout_height="wrap_content"
+              android:text="@string/usage_state_usage_time_remind"
+              android:maxLines="2"
+              android:layout_weight="1.0"
+              android:textAlignment="viewStart" />
+    <LinearLayout android:gravity="center"
+                  android:orientation="vertical"
+                  android:layout_width="wrap_content"
+                  android:layout_height="fill_parent">
+      <TextView android:textSize="@dimen/usage_state_remind_value_text_size"
+                android:textColor="@color/usage_stats_black60"
+                android:layout_gravity="end"
+                android:id="@id/tv_work_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+      <TextView android:textSize="@dimen/usage_state_remind_value_text_size"
+                android:textColor="@color/usage_stats_black60"
+                android:layout_gravity="end"
+                android:id="@id/tv_week_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2.55dp" />
+    </LinearLayout>
+    <ImageView android:id="@id/iv_arrow"
+               android:layout_width="@dimen/usage_state_remind_item_arrow_width"
+               android:layout_height="@dimen/usage_state_remind_item_arrow_height"
+               android:src="@drawable/app_usage_arrow_selector"
+               android:layout_marginStart="@dimen/usage_state_remind_item_arrow_margin_left" />
+  </LinearLayout>
+</FrameLayout>

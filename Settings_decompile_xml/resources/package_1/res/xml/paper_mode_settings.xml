@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:persistent="false"
+                        android:title="@string/screen_paper_mode_title"
+                        android:key="paper_mode_enable" />
+  <PreferenceCategory android:title="@string/papger_effect_category"
+                      android:key="paper_effect"
+                      android:dependency="paper_mode_enable">
+    <miuix.preference.RadioButtonPreferenceCategory>
+      <com.android.settings.display.PaperRadioButtonPreference android:persistent="false"
+                            android:layout="@layout/miuix_preference_radiobutton_two_state_background"
+                            android:title="@string/classic_mode_title"
+                            android:key="classic_mode"
+                            android:summary="@string/classic_mode_summary" />
+      <com.android.settings.display.PaperRadioButtonPreference android:persistent="false"
+                            android:layout="@layout/miuix_preference_radiobutton_two_state_background"
+                            android:title="@string/paper_mode_title"
+                            android:key="paper_mode"
+                            android:summary="@string/paper_mode_summary" />
+    </miuix.preference.RadioButtonPreferenceCategory>
+  </PreferenceCategory>
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/auto_adjust_effect_title"
+                        android:key="auto_adjust_effect"
+                        android:summary="@string/auto_adjst_effect_summary" />
+  <PreferenceCategory android:key="paper_mode_time_group">
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:persistent="false"
+                          android:title="@string/screen_paper_mode_time_title"
+                          android:key="paper_mode_time_enable"
+                          android:summary="@string/screen_paper_mode_time_summary" />
+    <miuix.preference.RadioButtonPreferenceCategory android:key="paper_mode_time_radio_group"
+                          android:dependency="paper_mode_time_enable">
+      <miuix.preference.RadioSetPreferenceCategory>
+        <com.android.settings.display.PaperModePreference android:persistent="false"
+                              android:title="@string/paper_mode_auto_twilight_title"
+                              android:key="paper_mode_auto_twilight"
+                              android:summary="@string/paper_mode_auto_twilight_summary" />
+      </miuix.preference.RadioSetPreferenceCategory>
+      <miuix.preference.RadioSetPreferenceCategory android:key="paper_mode_customize_time_group">
+        <com.android.settings.display.PaperModePreference android:persistent="false"
+                              android:title="@string/paper_mode_customize_time_title"
+                              android:key="paper_mode_customize_time"
+                              android:summary="@string/paper_mode_customize_time_summary" />
+        <com.android.settings.dndmode.LabelPreference android:persistent="false"
+                              android:title="@string/paper_mode_start_time_title"
+                              android:key="paper_mode_start_time"
+                              android:dependency="paper_mode_customize_time"
+                              settings:applyExtraPadding="false"
+                              settings:clickable="true" />
+        <com.android.settings.dndmode.LabelPreference android:persistent="false"
+                              android:title="@string/paper_mode_end_time_title"
+                              android:key="paper_mode_end_time"
+                              android:dependency="paper_mode_customize_time"
+                              settings:applyExtraPadding="false"
+                              settings:clickable="true" />
+      </miuix.preference.RadioSetPreferenceCategory>
+    </miuix.preference.RadioButtonPreferenceCategory>
+  </PreferenceCategory>
+</PreferenceScreen>

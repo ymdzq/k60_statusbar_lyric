@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<vector android:name="vector"
+        android:height="@dimen/qs_tile_icon_bg_size"
+        android:width="@dimen/qs_tile_icon_bg_size"
+        android:viewportWidth="130.0"
+        android:viewportHeight="130.0" xmlns:android="http://schemas.android.com/apk/res/android">
+  <path android:name="path"
+        android:fillColor="@color/qs_tile_icon_bg_enabled_color"
+        android:pathData="M 65 0 C 47.768 0 31.223 6.853 19.038 19.038 C 6.853 31.223 0 47.768 0 65 C 0 82.232 6.853 98.777 19.038 110.962 C 31.223 123.147 47.768 130 65 130 C 82.232 130 98.777 123.147 110.962 110.962 C 123.147 98.777 130 82.232 130 65 C 130 47.768 123.147 31.223 110.962 19.038 C 98.777 6.853 82.232 0 65 0 Z"
+        android:strokeWidth="1.0"
+        android:fillType="evenOdd" />
+</vector>

@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:persistent="false"
+                        android:title="@string/wifi_tether_checkbox_text"
+                        android:key="enable_wifi_ap" />
+  <com.android.settingslib.miuisettings.preference.Preference android:persistent="false"
+                        android:title="@string/wifi_tether_configure_ap_text"
+                        android:key="wifi_ap_ssid_and_security"
+                        settings:showRightArrow="true" />
+  <com.android.settingslib.miuisettings.preference.Preference android:persistent="false"
+                        android:title="@string/tether_share_qrcode_title"
+                        android:key="tether_share_qrcode"
+                        settings:showRightArrow="true" />
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:persistent="false"
+                        android:title="@string/tether_data_usage_limit"
+                        android:key="tether_data_usage_limit"
+                        android:summary="@string/tether_data_usage_limit_summary">
+    <intent android:targetPackage="com.miui.securitycenter"
+            android:targetClass="com.miui.networkassistant.ui.activity.TetheringStatsSettingActivity" />
+  </com.android.settingslib.miuisettings.preference.ValuePreference>
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:persistent="false"
+                        android:title="@string/tether_auto_disable_title"
+                        android:key="tether_auto_disable"
+                        android:summary="@string/tether_auto_disable_summary" />
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:persistent="false"
+                        android:title="@string/tether_use_wifi6_title"
+                        android:key="tether_use_wifi6"
+                        android:summary="@string/tether_use_wifi6_summary" />
+  <com.android.settingslib.miuisettings.preference.SwitchPreference android:persistent="false"
+                        android:title="@string/usb_tethering_button_text"
+                        android:key="usb_tether_settings" />
+  <com.android.settingslib.miuisettings.preference.SwitchPreference android:persistent="false"
+                        android:title="@string/bluetooth_tether_checkbox_text"
+                        android:key="enable_bluetooth_tethering" />
+  <com.android.settingslib.miuisettings.preference.SwitchPreference android:persistent="false"
+                        android:title="@string/ethernet_tether_checkbox_text"
+                        android:key="enable_ethernet_tethering"
+                        android:summary="@string/ethernet_tethering_subtext" />
+  <PreferenceCategory android:title="@string/tether_devices_management_title"
+                      android:key="tether_device_management">
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:persistent="false"
+                          android:title="@string/show_connected_devices_title"
+                          android:key="show_connected_devices"
+                          android:summary="@string/show_connected_devices_summary"
+                          android:fragment="com.android.settings.wifi.MiuiTetherDeviceSettings" />
+  </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingStart="28.0dp"
+              android:paddingEnd="28.0dp" xmlns:android="http://schemas.android.com/apk/res/android">
+  <TextView android:textSize="18.0sp"
+            android:textStyle="bold"
+            android:textColor="@color/clickable_toast_text_color"
+            android:gravity="center"
+            android:id="@id/fgs_dialog_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dp"
+            android:layout_marginBottom="34.0dp"
+            android:singleLine="true"
+            android:fontFamily="MiSans"
+            android:textDirection="locale" />
+  <androidx.recyclerview.widget.RecyclerView android:id="@id/fgs_dialog_recycler"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+  <TextView android:textSize="18.0sp"
+            android:textStyle="bold"
+            android:textColor="@color/clickable_toast_text_color"
+            android:gravity="center"
+            android:id="@id/fgs_dialog_know"
+            android:background="@drawable/fgs_dialog_know_background"
+            android:layout_width="fill_parent"
+            android:layout_height="48.0dp"
+            android:layout_marginTop="10.0dp"
+            android:layout_marginBottom="28.0dp"
+            android:singleLine="true"
+            android:fontFamily="MI Lan Pro"
+            android:textDirection="locale" />
+</LinearLayout>

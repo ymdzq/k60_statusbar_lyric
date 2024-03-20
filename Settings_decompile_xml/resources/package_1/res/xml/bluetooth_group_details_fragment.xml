@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/group_options" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <com.android.settings.widget.GroupOptionsPreference android:key="group_options" />
+  <PreferenceCategory android:title="@string/group_active_devices"
+                      android:key="group_options_active_devices" />
+  <PreferenceCategory android:title="@string/group_connected_devices"
+                      android:key="group_options_connected_devices" />
+  <PreferenceCategory android:title="@string/group_bonded_devices"
+                      android:key="group_options_bonded_devices" />
+</PreferenceScreen>

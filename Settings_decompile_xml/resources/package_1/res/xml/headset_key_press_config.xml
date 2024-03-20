@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto" xmlns:app="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:key="press_key_list">
+    <miuix.preference.RadioButtonPreferenceCategory android:key="press_key_group">
+      <miuix.preference.RadioButtonPreference android:persistent="false"
+                            android:layout="@layout/miuix_preference_radiobutton_two_state_background"
+                            android:title="@string/miheadset_key_config_call_ai"
+                            android:key="config_call_mi_ai" />
+      <miuix.preference.RadioButtonPreference android:persistent="false"
+                            android:layout="@layout/miuix_preference_radiobutton_two_state_background"
+                            android:title="@string/miheadset_key_config_noise_control"
+                            android:key="config_noise_control"
+                            android:summary="@string/miheadset_key_config_noise_control_summary" />
+    </miuix.preference.RadioButtonPreferenceCategory>
+  </PreferenceCategory>
+</PreferenceScreen>

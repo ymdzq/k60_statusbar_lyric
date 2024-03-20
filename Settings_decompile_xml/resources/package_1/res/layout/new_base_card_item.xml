@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+  <TextView android:textSize="24.0dp"
+            android:textColor="@color/my_device_params_item_big_title_color"
+            android:gravity="start"
+            android:id="@id/card_big_title"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewStart"
+            style="@style/Miuix.AppCompat.TextAppearance.PreferenceList" />
+  <LinearLayout android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:id="@id/card_value_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+    <TextView android:textSize="@dimen/devices_params_grid_item_title_size"
+              android:textColor="@color/my_device_params_item_title_color"
+              android:gravity="start"
+              android:id="@id/card_value"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textAlignment="viewStart"
+              style="@style/Miuix.AppCompat.TextAppearance.PreferenceList" />
+    <View android:id="@id/divider"
+          android:background="@color/my_device_camera_params_divider_line_color"
+          android:visibility="gone"
+          android:layout_width="1.0dp"
+          android:layout_height="11.0dp"
+          android:layout_marginStart="10.0dp"
+          android:layout_marginEnd="10.0dp" />
+    <TextView android:textSize="@dimen/devices_params_grid_item_title_size"
+              android:textColor="@color/my_device_params_item_title_color"
+              android:gravity="start"
+              android:id="@id/second_card_value"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textAlignment="viewStart"
+              style="@style/Miuix.AppCompat.TextAppearance.PreferenceList" />
+  </LinearLayout>
+  <TextView android:textSize="11.0dp"
+            android:textColor="@color/my_device_params_item_summary_color"
+            android:id="@id/card_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Miuix.AppCompat.TextAppearance.List.Secondary.Preference" />
+</LinearLayout>

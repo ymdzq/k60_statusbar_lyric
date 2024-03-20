@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+  <dimen name="fsgesture_demoinro_normal_textsize">16.67sp</dimen>
+  <dimen name="fsgesture_demoinro_titletextsize">29.34sp</dimen>
+  <dimen name="fsgesture_final_icon_margin_top">205.34dp</dimen>
+  <dimen name="fsgesture_final_summary_size">13.34dp</dimen>
+  <dimen name="fsgesture_final_title_margin_top">26.67dp</dimen>
+  <dimen name="fsgesture_final_title_size">26.67dp</dimen>
+  <dimen name="fsgesture_step_text_size">16.67sp</dimen>
+  <dimen name="qs_brightness_dialog_height">40.0dp</dimen>
+  <dimen name="qs_brightness_icon_margin">10.0dp</dimen>
+  <dimen name="qs_brightness_top_margin">9.33dp</dimen>
+  <dimen name="qs_control_header_button_size">22.6667dp</dimen>
+  <dimen name="qs_control_title_margin_end">57.3333dp</dimen>
+  <dimen name="qs_detail_header_image_height">56.0dp</dimen>
+  <dimen name="qs_detail_header_image_padding">16.0dp</dimen>
+  <dimen name="qs_detail_header_image_width">56.0dp</dimen>
+  <dimen name="qs_page_indicator_dot_size">5.33dp</dimen>
+  <dimen name="qs_page_indicator_dot_space">8.0dp</dimen>
+  <dimen name="qs_panel_expand_indicator_height">28.66dp</dimen>
+  <dimen name="qs_panel_expand_indicator_shadow_spread">1.17dp</dimen>
+  <dimen name="qs_panel_expand_indicator_stroke_width">3.5dp</dimen>
+  <dimen name="qs_panel_expand_indicator_width">36.0dp</dimen>
+  <dimen name="qs_tile_icon_bg_size">46.0dp</dimen>
+  <dimen name="qs_tile_label_text_size">10.67sp</dimen>
+</resources>

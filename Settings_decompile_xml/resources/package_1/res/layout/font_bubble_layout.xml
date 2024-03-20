@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:gravity="end"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/font_bubble_margin"
+                android:layout_marginEnd="@dimen/font_bubble_margin">
+    <LinearLayout android:id="@id/font_bubble_right_layout"
+                  android:background="@drawable/bubble_right"
+                  android:paddingTop="@dimen/font_bubble_padding"
+                  android:paddingBottom="@dimen/font_bubble_padding"
+                  android:layout_width="@dimen/font_bubble_right_width"
+                  android:layout_height="wrap_content"
+                  android:contentDescription="@string/how_adjust_font_size"
+                  android:paddingStart="@dimen/font_bubble_padding"
+                  android:paddingEnd="10.0dp">
+      <TextView android:textSize="@dimen/font_bubble_size"
+                android:textColor="#ffffff"
+                android:gravity="start"
+                android:id="@id/font_bubble_right"
+                android:focusable="false"
+                android:clickable="false"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/how_adjust_font_size"
+                android:includeFontPadding="false" />
+    </LinearLayout>
+  </LinearLayout>
+  <LinearLayout android:gravity="start"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/font_bubble_marginTop"
+                android:layout_marginStart="@dimen/font_bubble_margin"
+                android:layout_marginEnd="@dimen/font_bubble_margin">
+    <LinearLayout android:id="@id/font_bubble_left_layout"
+                  android:background="@drawable/bubble_left"
+                  android:paddingTop="@dimen/font_bubble_padding"
+                  android:paddingBottom="@dimen/font_bubble_padding"
+                  android:layout_width="@dimen/font_bubble_left_width"
+                  android:layout_height="wrap_content"
+                  android:contentDescription="@string/adjust_font_size_answer_cn"
+                  android:paddingStart="@dimen/font_bubble_padding"
+                  android:paddingEnd="@dimen/font_bubble_padding">
+      <TextView android:textSize="@dimen/font_bubble_size"
+                android:textColor="@color/font_bubble_left_font_color"
+                android:gravity="start"
+                android:id="@id/font_bubble_left"
+                android:focusable="false"
+                android:clickable="false"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/adjust_font_size_answer_cn"
+                android:includeFontPadding="false" />
+    </LinearLayout>
+  </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,115 @@
+.class final Landroidx/compose/runtime/ComposerImpl$insertMovableContentGuarded$1$2;
+.super Lkotlin/jvm/internal/Lambda;
+.source "Composer.kt"
+
+# interfaces
+.implements Lkotlin/jvm/functions/Function3;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Landroidx/compose/runtime/ComposerImpl;->insertMovableContentGuarded(Ljava/util/List;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x18
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lkotlin/jvm/internal/Lambda;",
+        "Lkotlin/jvm/functions/Function3<",
+        "Landroidx/compose/runtime/Applier<",
+        "*>;",
+        "Landroidx/compose/runtime/SlotWriter;",
+        "Landroidx/compose/runtime/RememberManager;",
+        "Lkotlin/Unit;",
+        ">;"
+    }
+.end annotation
+
+
+# static fields
+.field public static final INSTANCE:Landroidx/compose/runtime/ComposerImpl$insertMovableContentGuarded$1$2;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    .line 0
+    new-instance v0, Landroidx/compose/runtime/ComposerImpl$insertMovableContentGuarded$1$2;
+
+    invoke-direct {v0}, Landroidx/compose/runtime/ComposerImpl$insertMovableContentGuarded$1$2;-><init>()V
+
+    sput-object v0, Landroidx/compose/runtime/ComposerImpl$insertMovableContentGuarded$1$2;->INSTANCE:Landroidx/compose/runtime/ComposerImpl$insertMovableContentGuarded$1$2;
+
+    return-void
+.end method
+
+.method constructor <init>()V
+    .locals 1
+
+    .line 0
+    const/4 v0, 0x3
+
+    invoke-direct {p0, v0}, Lkotlin/jvm/internal/Lambda;-><init>(I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public bridge synthetic invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    .line 3180
+    check-cast p1, Landroidx/compose/runtime/Applier;
+
+    check-cast p2, Landroidx/compose/runtime/SlotWriter;
+
+    check-cast p3, Landroidx/compose/runtime/RememberManager;
+
+    invoke-virtual {p0, p1, p2, p3}, Landroidx/compose/runtime/ComposerImpl$insertMovableContentGuarded$1$2;->invoke(Landroidx/compose/runtime/Applier;Landroidx/compose/runtime/SlotWriter;Landroidx/compose/runtime/RememberManager;)V
+
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    return-object p0
+.end method
+
+.method public final invoke(Landroidx/compose/runtime/Applier;Landroidx/compose/runtime/SlotWriter;Landroidx/compose/runtime/RememberManager;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroidx/compose/runtime/Applier<",
+            "*>;",
+            "Landroidx/compose/runtime/SlotWriter;",
+            "Landroidx/compose/runtime/RememberManager;",
+            ")V"
+        }
+    .end annotation
+
+    const-string p0, "applier"
+
+    invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string/jumbo p0, "slots"
+
+    invoke-static {p2, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string p0, "<anonymous parameter 2>"
+
+    invoke-static {p3, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const/4 p0, 0x0
+
+    .line 3183
+    invoke-static {p2, p1, p0}, Landroidx/compose/runtime/ComposerImpl;->access$insertMovableContentGuarded$positionToParentOf(Landroidx/compose/runtime/SlotWriter;Landroidx/compose/runtime/Applier;I)V
+
+    .line 3184
+    invoke-virtual {p2}, Landroidx/compose/runtime/SlotWriter;->endGroup()I
+
+    return-void
+.end method

@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<ScrollView android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fillViewport="true" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:orientation="vertical"
+                android:paddingLeft="@dimen/preference_item_padding_side"
+                android:paddingTop="@dimen/screen_padding_top"
+                android:paddingRight="@dimen/preference_item_padding_side"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center_vertical"
+                  android:background="?attr/preferenceItemBackground"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  style="@style/Widget.PreferenceItem">
+      <TextView android:paddingLeft="@dimen/preference_item_padding_side"
+                android:paddingRight="@dimen/preference_item_padding_side"
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/android_beam_witch_label"
+                android:layout_weight="1.0"
+                style="@style/Miuix.AppCompat.TextAppearance.List.Primary" />
+      <miuix.slidingwidget.widget.SlidingButton android:id="@id/android_beam_switch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/preference_item_padding_side" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical"
+                  android:background="?attr/preferenceItemBackground"
+                  android:paddingRight="0.0dp"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  style="@style/Widget.PreferenceItem">
+      <TextView android:id="@id/android_beam_explained"
+                android:paddingLeft="@dimen/preference_item_padding_side"
+                android:paddingRight="@dimen/preference_item_padding_side"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/android_beam_explained"
+                style="@style/Miuix.AppCompat.TextAppearance.List.Secondary" />
+      <ImageView android:id="@id/android_beam_image"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="@dimen/preference_item_padding_side"
+                 android:layout_marginRight="@dimen/preference_item_padding_side"
+                 android:src="@drawable/android_beam_sample"
+                 android:contentDescription="@null" />
+      <TextView android:id="@id/android_beam_tips"
+                android:paddingLeft="@dimen/preference_item_padding_side"
+                android:paddingRight="@dimen/preference_item_padding_side"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/android_beam_tips"
+                style="@style/Miuix.AppCompat.TextAppearance.List.Secondary" />
+    </LinearLayout>
+  </LinearLayout>
+</ScrollView>

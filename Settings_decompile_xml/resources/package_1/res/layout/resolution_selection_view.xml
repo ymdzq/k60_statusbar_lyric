@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:nextFocusDown="@id/checkgroup"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:importantForAccessibility="no" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <miuix.visual.check.VisualCheckGroup android:id="@id/checkgroup"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/resolution_selection_margin_top"
+                        android:layout_marginBottom="@dimen/resolution_selection_margin_bottom"
+                        settings:itemSpacing="0.0dp"
+                        settings:lineGravity="center"
+                        settings:lineSpacing="2.0dp">
+    <com.android.settings.display.ResolutionVisualCheckBox android:orientation="vertical"
+                          android:id="@id/resolution_fhd"
+                          android:focusable="true"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content">
+      <miuix.visual.check.BorderLayout android:paddingLeft="@dimen/resolution_selection_image_view_padding_left"
+                            android:paddingTop="@dimen/resolution_selection_image_view_padding_top"
+                            android:paddingRight="@dimen/resolution_selection_image_view_padding_right"
+                            android:paddingBottom="@dimen/resolution_selection_image_view_padding_bottom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+        <ImageView android:id="@id/fhd_img_view"
+                   android:layout_width="@dimen/resolution_selection_image_view_width"
+                   android:layout_height="@dimen/resolution_selection_image_view_height" />
+      </miuix.visual.check.BorderLayout>
+      <miuix.visual.check.VisualCheckedTextView android:textSize="@dimen/resolution_text_size"
+                            android:textStyle="bold"
+                            android:textColor="@color/visual_check_text_color"
+                            android:layout_gravity="center_horizontal"
+                            android:id="@id/fhd_text_view"
+                            android:layout_width="@dimen/resolution_text_view_fhd_width"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/resolution_text_view_margin_top"
+                            android:textAlignment="center" />
+      <miuix.visual.check.VisualCheckedTextView android:textSize="@dimen/resolution_text_summary_fhd_size"
+                            android:textColor="@color/visual_check_text_color"
+                            android:layout_gravity="center_horizontal"
+                            android:id="@id/fhd_text_view_summary"
+                            android:layout_width="@dimen/resolution_text_view_summary_fhd_width"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/resolution_text_view_summary_margin_top"
+                            android:textAlignment="center" />
+    </com.android.settings.display.ResolutionVisualCheckBox>
+    <com.android.settings.display.ResolutionVisualCheckBox android:orientation="vertical"
+                          android:id="@id/resolution_qhd"
+                          android:focusable="true"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content">
+      <miuix.visual.check.BorderLayout android:paddingLeft="@dimen/resolution_selection_image_view_padding_left"
+                            android:paddingTop="@dimen/resolution_selection_image_view_padding_top"
+                            android:paddingRight="@dimen/resolution_selection_image_view_padding_right"
+                            android:paddingBottom="@dimen/resolution_selection_image_view_padding_bottom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+        <ImageView android:id="@id/qhd_img_view"
+                   android:layout_width="@dimen/resolution_selection_image_view_width"
+                   android:layout_height="@dimen/resolution_selection_image_view_height" />
+      </miuix.visual.check.BorderLayout>
+      <miuix.visual.check.VisualCheckedTextView android:textSize="@dimen/resolution_text_size"
+                            android:textStyle="bold"
+                            android:textColor="@color/visual_check_text_color"
+                            android:layout_gravity="center_horizontal"
+                            android:id="@id/qhd_text_view"
+                            android:layout_width="@dimen/resolution_text_view_qhd_width"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/resolution_text_view_margin_top"
+                            android:textAlignment="center" />
+      <miuix.visual.check.VisualCheckedTextView android:textSize="@dimen/resolution_text_summary_qhd_size"
+                            android:textColor="@color/visual_check_text_color"
+                            android:layout_gravity="center_horizontal"
+                            android:id="@id/qhd_text_view_summary"
+                            android:layout_width="@dimen/resolution_text_view_summary_qhd_width"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/resolution_text_view_summary_margin_top"
+                            android:textAlignment="center" />
+    </com.android.settings.display.ResolutionVisualCheckBox>
+  </miuix.visual.check.VisualCheckGroup>
+</LinearLayout>

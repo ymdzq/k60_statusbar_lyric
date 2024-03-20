@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<set android:shareInterpolator="false" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <translatewithclip android:interpolator="@anim/decelerate_cubic"
+                     android:duration="350"
+                     settings:damping="0.4"
+                     settings:floatingHeight="@dimen/miuix_appcompat_floating_window_fixed_height_minor"
+                     settings:floatingWidth="@dimen/miuix_appcompat_floating_window_fixed_width_minor"
+                     settings:isAutoDpi="true"
+                     settings:response="0.36"
+                     settings:roundCornerRadius="@dimen/miuix_appcompat_floating_window_background_radius"
+                     settings:xOffset="0" />
+</set>

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:background="?android:attr/actionModeBackground"
+              android:paddingLeft="23.3dp"
+              android:paddingRight="23.3dp"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:layout_width="fill_parent"
+                android:layout_height="0.0dp"
+                android:layout_marginTop="30.7dp"
+                android:layout_weight="1.0">
+    <Button android:textSize="11.0sp"
+            android:id="@android:id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?attr/actionModeCancelButtonStyle" />
+    <TextView android:textColor="@color/action_mode_title_default_button_text_dark"
+              android:ellipsize="end"
+              android:gravity="center"
+              android:id="@android:id/title"
+              android:layout_width="0.0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1.0"
+              style="@style/Miuix.AppCompat.TextAppearance.Widget.ActionMode.Title" />
+    <Button android:textSize="11.0sp"
+            android:id="@android:id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?attr/actionModeSelectButtonStyle" />
+  </LinearLayout>
+  <ImageView android:background="@drawable/provision_list_divider"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:importantForAccessibility="noHideDescendants" />
+</LinearLayout>

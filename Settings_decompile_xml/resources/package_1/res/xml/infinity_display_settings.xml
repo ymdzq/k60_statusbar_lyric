@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/infinity_display_settings" xmlns:android="http://schemas.android.com/apk/res/android">
+  <CheckBoxPreference android:title="@string/notch_force_black_title"
+                      android:key="notch_force_black"
+                      android:summary="@string/notch_force_black_desc" />
+  <CheckBoxPreference android:title="@string/cutout_type_title"
+                      android:key="cutout_type"
+                      android:summary="@string/cutout_type_desc" />
+  <PreferenceScreen android:title="@string/cutout_mode_title"
+                    android:key="cutout_mode"
+                    android:fragment="com.android.settings.CutoutModeSettings" />
+  <PreferenceCategory android:title="@string/navigation_type_settings"
+                      android:key="navigation_type_category">
+    <Preference android:layout="@layout/navigation_type_settings" />
+  </PreferenceCategory>
+  <PreferenceCategory android:key="navigation_setting_category">
+    <CheckBoxPreference android:title="@string/fsg_mistake_touch_title"
+                        android:key="fsg_mistake_touch"
+                        android:summary="@string/fsg_mistake_touch_summary" />
+    <CheckBoxPreference android:title="@string/navigation_guide_appswitch_anim_title"
+                        android:key="navigation_appswitch_anim"
+                        android:summary="@string/navigation_guide_appswitch_anim_summary" />
+    <CheckBoxPreference android:title="@string/switch_screen_button_order"
+                        android:key="switch_screen_button_order"
+                        android:summary="@string/switch_screen_button_order_desc" />
+    <PreferenceScreen android:title="@string/screen_max_aspect_ratio_title"
+                      android:key="screen_max_aspect_ratio"
+                      android:summary="@string/screen_max_aspect_ratio_desc"
+                      android:fragment="com.android.settings.MaxAspectRatioSettings" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/navigation_guide_settings"
+                      android:key="navigation_guide_category">
+    <Preference android:icon="@drawable/navigation_bar_guide_home"
+                android:layout="@layout/navigation_guide_item"
+                android:title="@string/navigation_guide_home_title"
+                android:key="navigation_guide_home"
+                android:summary="@string/navigation_guide_home_summary"
+                showIcon="true" />
+    <Preference android:icon="@drawable/navigation_bar_guide_recent"
+                android:layout="@layout/navigation_guide_item"
+                android:title="@string/navigation_guide_recent_title"
+                android:key="navigation_guide_recent"
+                android:summary="@string/navigation_guide_recent_summary"
+                showIcon="true" />
+    <Preference android:icon="@drawable/navigation_bar_guide_back"
+                android:layout="@layout/navigation_guide_item"
+                android:title="@string/navigation_guide_back_title"
+                android:key="navigation_guide_back"
+                android:summary="@string/navigation_guide_back_summary"
+                showIcon="true" />
+    <Preference android:icon="@drawable/navigation_bar_guide_app"
+                android:layout="@layout/navigation_guide_item"
+                android:title="@string/navigation_guide_app_title"
+                android:key="navigation_guide_app"
+                android:summary="@string/navigation_guide_app_summary"
+                showIcon="true" />
+    <Preference android:icon="@drawable/navigation_bar_guide_appswitch"
+                android:layout="@layout/navigation_guide_item_without_arrow"
+                android:title="@string/navigation_guide_appswitch_title"
+                android:key="navigation_guide_appswitch"
+                android:summary="@string/navigation_guide_appswitch_summary"
+                showIcon="true" />
+  </PreferenceCategory>
+</PreferenceScreen>

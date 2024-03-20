@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<RelativeLayout android:background="@android:color/transparent"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <RelativeLayout android:orientation="vertical"
+                  android:id="@id/hint_layout"
+                  android:background="@drawable/deferred_setup_corner"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="4.0dp"
+                  android:minHeight="50.0dp"
+                  android:layout_centerHorizontal="true"
+                  android:paddingStart="16.0dp"
+                  android:paddingEnd="12.0dp"
+                  android:layout_marginStart="24.0dp"
+                  android:layout_marginEnd="24.0dp">
+    <TextView android:textSize="15.0sp"
+              android:textColor="@color/deferred_setup_text_color"
+              android:id="@id/deferred_setup_title"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="18.18dp"
+              android:layout_centerVertical="true"
+              android:layout_marginEnd="29.1dp" />
+    <ImageView android:id="@id/deferred_setup_arrow"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/ic_setup_hint"
+               android:layout_centerVertical="true"
+               android:layout_alignParentEnd="true" />
+  </RelativeLayout>
+</RelativeLayout>

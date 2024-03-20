@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/xiaoai_shortcut_settings_title" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+  <PreferenceCategory android:key="gesture_category" />
+  <PreferenceCategory android:key="key_item">
+    <miuix.preference.RadioButtonPreferenceCategory android:key="key_category" />
+  </PreferenceCategory>
+  <PreferenceCategory android:key="other_category" />
+</PreferenceScreen>

@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+  <plurals name="abbrev_a_hour_ago">
+    <item quantity="other">%d سائەت ئىلگىرى</item>
+  </plurals>
+  <plurals name="abbrev_half_hour_ago">
+    <item quantity="other">يېرىم سائەت ئىلگىرى</item>
+  </plurals>
+  <plurals name="abbrev_in_a_hour">
+    <item quantity="other">%d سائەتتىن كېيىن</item>
+  </plurals>
+  <plurals name="abbrev_in_half_hour">
+    <item quantity="other">يېرىم سائەتتىن كېيىن</item>
+  </plurals>
+  <plurals name="abbrev_in_less_than_one_minute">
+    <item quantity="other">ھازىر</item>
+  </plurals>
+  <plurals name="abbrev_in_num_minutes">
+    <item quantity="other">%dمىنۇتتىن كېيىن</item>
+  </plurals>
+  <plurals name="abbrev_less_than_one_minute_ago">
+    <item quantity="other">باياتىن</item>
+  </plurals>
+  <plurals name="abbrev_num_minutes_ago">
+    <item quantity="other">%dمىنۇت ئىلگىرى</item>
+  </plurals>
+  <plurals name="auto_disable_screenbuttons_disabled_header_title">
+    <item quantity="other">%d دانە ئەپتە ئېكران كونۇپكىسى ئاپتوماتىك توسمايدۇ</item>
+  </plurals>
+  <plurals name="auto_disable_screenbuttons_enabled_header_title">
+    <item quantity="other">%d دانە ئەپتە ئېكران كونۇپكىسى ئاپتوماتىك توسىدۇ</item>
+  </plurals>
+  <plurals name="auto_startup_count">
+    <item quantity="other">%dدانە ئەپنىڭ ئۆزلۈكىدىن قوزغىلىشىغا رۇخسەت</item>
+  </plurals>
+  <plurals name="bg_network_allow_count">
+    <item quantity="other">%d دانە ئەپ ئار سۇپىدا تورغا ئۇلانسا بولىدۇ</item>
+  </plurals>
+  <plurals name="bg_network_restrict_count">
+    <item quantity="other">%d دانە ئەپنىڭ ئارقا سۇپىدا تورغا ئۇلىنىشىنى چەكلەش</item>
+  </plurals>
+  <plurals name="bt_usable_device_title">
+    <item quantity="other">ئىشلەتكىلى بولىدىغان ئۈسكۈنە (%d)</item>
+  </plurals>
+  <plurals name="clean_time">
+    <item quantity="other">%d سېكونت</item>
+  </plurals>
+  <plurals name="color_game_led_freq_entries">
+    <item quantity="other">%d سېكۇنتتا بىر قېتىم</item>
+  </plurals>
+  <plurals name="connected_devices_number">
+    <item quantity="other">%dدانە ئۈسكۈنە</item>
+  </plurals>
+  <plurals name="firewall_item_summary">
+    <item quantity="other">%s دانە ئەپنىڭ تورغا ئۇلىنىشى چەكلەندى</item>
+  </plurals>
+  <plurals name="free_wifi_connected_count">
+    <item quantity="other">%1$dئادەم توردا</item>
+  </plurals>
+  <plurals name="lockpassword_password_too_long">
+    <item quantity="other">ئەڭ كۆپ بولغاندا %d خانە ھەرپنى قوللايدۇ</item>
+  </plurals>
+  <plurals name="lockpassword_password_too_short">
+    <item quantity="other">ئاز بولغاندا %d دانە خەت كىرگۈزۈڭ</item>
+  </plurals>
+  <plurals name="lockpassword_pin_fixed_length">
+    <item quantity="other">رەقەملىك پارولدا%dخانە سان بولسۇن</item>
+  </plurals>
+  <plurals name="lockpassword_pin_too_long">
+    <item quantity="other">ئەڭ كۆپ بولغاندا %d خانە ساننى قوللايدۇ</item>
+  </plurals>
+  <plurals name="lockpassword_pin_too_short">
+    <item quantity="other">ئاز بولغاندا %d خەت كىرگۈزۈڭ</item>
+  </plurals>
+  <plurals name="lockpattern_too_many_failed_confirmation_attempts">
+    <item quantity="other">كۆپ قېتىم قۇلۇپنى ئاچالمىدىڭىز%dسېكۇنتتىن كېيىن قايتا سىناڭ</item>
+  </plurals>
+  <plurals name="lockpattern_too_many_failed_confirmation_attempts_footer">
+    <item quantity="other">%d سېكۇنتتىن كېيىن قايتا سىناڭ</item>
+  </plurals>
+  <plurals name="max_number_of_processes">
+    <item quantity="other">%d دىن ئېشىپ كەتمىسۇن</item>
+  </plurals>
+  <plurals name="miui_sos_emergency_contacts_quantity">
+    <item quantity="other">%d نەپەر قوشۇلدى</item>
+  </plurals>
+  <plurals name="miui_wifi_wakeup_summary">
+    <item quantity="other">ئەتراپتا ساقلانغان تورنى بايقىغاندا WLAN نى ئاپتوماتىك ئېچىپ، %dمىنۇت ئىچىدە ئۇلانمىسا ئاپتوماتىك تاقىلىدۇ</item>
+  </plurals>
+  <plurals name="miuix_appcompat_items_selected">
+    <item quantity="other">%d تۈر تاللاندى</item>
+  </plurals>
+  <plurals name="nrca_info">
+    <item quantity="other">مەشغۇلات ئىجرا بولىۋاتىدۇ، %d سېكۇنت ساقلاڭ</item>
+  </plurals>
+  <plurals name="saved_network_checked_num">
+    <item quantity="other">تاللانغان%dتۈر</item>
+  </plurals>
+  <plurals name="show_cit_countdown">
+    <item quantity="other">پەقەت%1$d قەدەم بىلەن cit قا كىرەلەيسىز</item>
+  </plurals>
+  <plurals name="show_dev_countdown">
+    <item quantity="other">ھازىر يەنە %1$d قېتىم مەشغۇلات قىلىنسىلا ئىجادكارلار ھالىتىگە كىرىدۇ.</item>
+  </plurals>
+  <plurals name="show_pho_countdown">
+    <item quantity="other">پەقەت%1$d قەدەم بىلەن تېلېفون ئۇچۇرىغا كىرەلەيسىز</item>
+  </plurals>
+  <plurals name="show_rep_countdown">
+    <item quantity="other">پەقەت%1$dقەدەم بىلەن خاتىرىگە ئېرىشەلەيسىز</item>
+  </plurals>
+  <plurals name="special_access_summary">
+    <item quantity="other">%d دانە ئەپ سانلىق مەلۇماتنى چەكسىز ئىشلەتسە بولىدۇ</item>
+  </plurals>
+  <plurals name="status_bar_settings_disabled_header_title">
+    <item quantity="other">%d دانە ئەپ ئەۋەتىش ئۇقتۇرۇشى چەكلەندى</item>
+  </plurals>
+  <plurals name="status_bar_settings_enabled_header_title">
+    <item quantity="other">%d دانە ئەپ ئۇقتۇرۇش ئەۋەتىشىگە رۇخسەت</item>
+  </plurals>
+  <plurals name="string_after_int_minute">
+    <item quantity="other">%d مىنۇت</item>
+  </plurals>
+  <plurals name="string_bits_per_sample">
+    <item quantity="other">%d خانا/ئەۋرىشكە</item>
+  </plurals>
+  <plurals name="string_int_hour">
+    <item quantity="other">%d سائەت</item>
+  </plurals>
+  <plurals name="string_int_minute">
+    <item quantity="other">%d مىنۇت</item>
+  </plurals>
+  <plurals name="string_int_second">
+    <item quantity="other">%d سېكونت</item>
+  </plurals>
+  <plurals name="switch_headset_anti_lost_summary">
+    <item quantity="other">تىڭشىغۇچ قۇلاقتىن ياكى قېپىدىن ئايرىلىپ %d مىنۇتتىن كېيىن يوقاپ كېتىشتىن ساقلىنىش ئەسكەرتىشى كۆرۈنىدۇ</item>
+  </plurals>
+  <plurals name="usage_state_device_explain_today">
+    <item quantity="other">بۈگۈن جەمئىي قۇلۇپ ئېچىلغىنى %d قېتىم</item>
+  </plurals>
+  <plurals name="usage_state_device_explain_week">
+    <item quantity="other">يېقىنقى7 كۈندە جەمئىي%d قېتىم قۇلۇپ ئېچىلدى</item>
+  </plurals>
+  <plurals name="usage_state_device_noti_explain_today">
+    <item quantity="other">بۈگۈنكى جەمئىي ئۇقتۇرۇش%d دانە</item>
+  </plurals>
+  <plurals name="usage_state_device_noti_explain_week">
+    <item quantity="other">يېقىنقى 7 كۈندىكى ئۇقتۇرۇش جەمئىي%dدانە</item>
+  </plurals>
+  <plurals name="usage_state_hour">
+    <item quantity="other">%d سائەت</item>
+  </plurals>
+  <plurals name="usage_state_hour24">
+    <item quantity="other">%d (سائەت)</item>
+  </plurals>
+  <plurals name="usage_state_hour_text">
+    <item quantity="other">سائەت</item>
+  </plurals>
+  <plurals name="usage_state_minute">
+    <item quantity="other">%d مىنۇت</item>
+  </plurals>
+  <plurals name="usage_state_miunte_text">
+    <item quantity="other">مىنۇت</item>
+  </plurals>
+  <plurals name="usage_state_noti_count">
+    <item quantity="other">%d دانە</item>
+  </plurals>
+  <plurals name="usage_state_unlock_count">
+    <item quantity="other">%d قېتىم</item>
+  </plurals>
+  <plurals name="usage_state_week_day_hour">
+    <item quantity="other">ھەپتە ئاخىرى:%d سائەت</item>
+  </plurals>
+  <plurals name="usage_state_week_day_minute">
+    <item quantity="other">ھەپتە ئاخىرى:%d مىنۇت</item>
+  </plurals>
+  <plurals name="usage_state_work_day_hour">
+    <item quantity="other">خىزمەت كۈنى:%d سائەت</item>
+  </plurals>
+  <plurals name="usage_state_work_day_minute">
+    <item quantity="other">خىزمەت كۈنى:%d مىنۇت</item>
+  </plurals>
+  <plurals name="usagestats_device_notification_des_hour">
+    <item quantity="other">سائەت</item>
+  </plurals>
+  <plurals name="usagestats_device_notification_des_min">
+    <item quantity="other">مىنۇت</item>
+  </plurals>
+  <plurals name="virus_scan_app_find_risk">
+    <item quantity="other">%d دانە ئەپتە خەتەر بايقالدى، ئۆچۈرۋېتىشىڭىزنى تەۋسىيە قىلىمىز</item>
+  </plurals>
+  <plurals name="wifi_share_count">
+    <item quantity="other">مەن جەمئىي %dدانە ئاممىۋى تورنى ھەمبەھىرلىدىم</item>
+  </plurals>
+  <plurals name="wifi_tether_connected_summary">
+    <item quantity="other">%1$d دانە ئۈسكۈنىگە ئۇلاندى</item>
+  </plurals>
+</resources>

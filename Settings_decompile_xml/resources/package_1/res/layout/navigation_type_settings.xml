@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<com.android.settings.view.NavigationBarGuideView android:orientation="horizontal"
+                      android:id="@id/navigation_guide"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:paddingStart="@dimen/miuix_preference_item_padding_start"
+                      android:paddingEnd="@dimen/miuix_preference_item_padding_end" xmlns:android="http://schemas.android.com/apk/res/android">
+  <RelativeLayout android:id="@id/virtual_keys_container"
+                  android:layout_width="0.0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="@dimen/navigation_type_margin_top"
+                  android:layout_marginBottom="@dimen/navigation_type_margin_bottom"
+                  android:layout_weight="1.0">
+    <ImageView android:id="@id/video_view_virtual_keys"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/navigation_picker_virtual_keys"
+               android:adjustViewBounds="true"
+               android:maxWidth="@dimen/navigation_type_video_width"
+               android:maxHeight="@dimen/navigation_type_video_height"
+               android:layout_centerHorizontal="true" />
+    <RadioButton android:textSize="@dimen/navigation_type_radio_button_text_size"
+                 android:textColor="@color/color_radio_button_text"
+                 android:id="@id/radio_button_virtual_keys"
+                 android:clickable="false"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="@dimen/navigation_type_radio_margin_top"
+                 android:text="@string/navigation_type_radio_text_virtual_key"
+                 android:layout_below="@id/video_view_virtual_keys"
+                 android:layout_alignStart="@id/video_view_virtual_keys"
+                 style="@style/Widget.CompoundButton.RadioButton.Circle" />
+  </RelativeLayout>
+  <View android:layout_width="@dimen/navigation_type_video_margin_start"
+        android:layout_height="fill_parent" />
+  <RelativeLayout android:id="@id/full_screen_container"
+                  android:layout_width="0.0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="@dimen/navigation_type_margin_top"
+                  android:layout_marginBottom="@dimen/navigation_type_margin_bottom"
+                  android:layout_weight="1.0">
+    <VideoView android:id="@id/video_view_full_screen"
+               android:layout_width="@dimen/navigation_type_video_width"
+               android:layout_height="@dimen/navigation_type_video_height"
+               android:layout_centerHorizontal="true"
+               android:importantForAccessibility="no" />
+    <View android:id="@id/navigation_handle"
+          android:background="@drawable/navigation_gesture_line_bg"
+          android:visibility="gone"
+          android:layout_width="@dimen/navigation_gesture_line_width"
+          android:layout_height="@dimen/navigation_gesture_line_height"
+          android:layout_marginBottom="@dimen/navigation_gesture_line_margin_bottom"
+          android:layout_alignBottom="@id/video_view_full_screen"
+          android:layout_centerHorizontal="true" />
+    <RadioButton android:textSize="@dimen/navigation_type_radio_button_text_size"
+                 android:textColor="@color/color_radio_button_text"
+                 android:id="@id/radio_button_full_screen"
+                 android:clickable="false"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="@dimen/navigation_type_radio_margin_top"
+                 android:text="@string/navigation_type_radio_text_full_screen"
+                 android:layout_below="@id/video_view_full_screen"
+                 android:layout_alignStart="@id/video_view_full_screen"
+                 style="@style/Widget.CompoundButton.RadioButton.Circle" />
+  </RelativeLayout>
+</com.android.settings.view.NavigationBarGuideView>

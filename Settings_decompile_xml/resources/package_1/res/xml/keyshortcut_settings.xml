@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/key_settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+  <com.android.settingslib.miuisettings.preference.miuix.DropDownPreference android:title="@string/long_press_home_key"
+                        android:key="long_press_home_key" />
+  <com.android.settingslib.miuisettings.preference.miuix.DropDownPreference android:title="@string/long_press_menu_key"
+                        android:key="long_press_menu_key" />
+  <com.android.settingslib.miuisettings.preference.miuix.DropDownPreference android:title="@string/long_press_back_key"
+                        android:key="long_press_back_key" />
+  <com.android.settingslib.miuisettings.preference.miuix.DropDownPreference android:title="@string/key_combination_power_home"
+                        android:key="key_combination_power_home" />
+  <com.android.settingslib.miuisettings.preference.miuix.DropDownPreference android:title="@string/key_combination_power_menu"
+                        android:key="key_combination_power_menu" />
+  <com.android.settingslib.miuisettings.preference.miuix.DropDownPreference android:title="@string/key_combination_power_back"
+                        android:key="key_combination_power_back" />
+  <com.android.settingslib.miuisettings.preference.miuix.DropDownPreference android:title="@string/menu_key"
+                        android:key="press_menu" />
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/fp_nav_center_back_to_home_title"
+                        android:key="pref_fingerprint_nav_center_to_home"
+                        android:dependency="pref_single_key_use" />
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/single_key_use"
+                        android:key="pref_single_key_use"
+                        android:summary="@string/single_key_use_summary"
+                        android:disableDependentsState="true" />
+</PreferenceScreen>

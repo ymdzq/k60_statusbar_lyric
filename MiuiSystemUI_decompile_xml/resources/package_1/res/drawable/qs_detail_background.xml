@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<transition xmlns:android="http://schemas.android.com/apk/res/android">
+  <item>
+    <inset>
+      <shape>
+        <corners android:radius="?android:attr/dialogCornerRadius" />
+        <solid android:color="@color/transparent" />
+      </shape>
+    </inset>
+  </item>
+  <item>
+    <inset>
+      <shape>
+        <corners android:radius="?android:attr/dialogCornerRadius" />
+        <solid android:color="@color/transparent" />
+      </shape>
+    </inset>
+  </item>
+</transition>

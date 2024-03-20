@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:key="notch_and_status_bar_settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res/com.android.settings" xmlns:app="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:title="@string/status_bar_settings_status_bar"
+                      android:key="settings_status_bar">
+    <CheckBoxPreference android:persistent="false"
+                        android:title="@string/show_notification_icon_title"
+                        android:key="show_notification_icon" />
+    <CheckBoxPreference android:persistent="false"
+                        android:title="@string/show_network_speed_title"
+                        android:key="show_network_speed" />
+    <CheckBoxPreference android:persistent="false"
+                        android:title="@string/show_carrier_under_keyguard_title"
+                        android:key="show_carrier_under_keyguard" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:persistent="false"
+                          android:title="@string/custom_carrier_title"
+                          android:key="custom_carrier" />
+    <miuix.preference.DropDownPreference android:title="@string/battery_indicator_title"
+                          android:key="battery_indicator" />
+    <ListPreference android:persistent="false"
+                    android:entries="@array/notification_shade_shortcut_entries"
+                    android:title="@string/notification_shade_shortcut_title"
+                    android:key="notification_shade_shortcut"
+                    android:entryValues="@array/notification_shade_shortcut_values" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/notch_settings"
+                      android:key="settings_notch">
+    <PreferenceScreen android:title="@string/notch_style_mod_title"
+                      android:key="notch_style_mode"
+                      android:summary="@string/notch_style_mod_description"
+                      android:fragment="com.android.settings.InfinityDisplayStyleFragment" />
+    <CheckBoxPreference android:title="@string/notch_force_black_title"
+                        android:key="notch_force_black"
+                        android:summary="@string/notch_force_black_desc" />
+    <CheckBoxPreference android:title="@string/cutout_type_title"
+                        android:key="cutout_type"
+                        android:summary="@string/cutout_type_desc" />
+    <PreferenceScreen android:title="@string/cutout_mode_title"
+                      android:key="cutout_mode"
+                      android:fragment="com.android.settings.CutoutModeSettings" />
+  </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center_vertical"
+              android:layout_gravity="center_vertical"
+              android:paddingTop="@dimen/settings_banner_ly_padding_top_and_bottom"
+              android:paddingBottom="@dimen/settings_banner_ly_padding_top_and_bottom"
+              android:clipChildren="false"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingStart="@dimen/settings_banner_ly_padding_start_and_end"
+              android:paddingEnd="@dimen/settings_banner_ly_padding_start_and_end" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <LinearLayout android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/settings_banner_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/settings_banner_ly_inner_padding_start_and_end"
+                android:paddingEnd="@dimen/settings_banner_ly_inner_padding_start_and_end">
+    <LinearLayout android:gravity="center"
+                  android:orientation="horizontal"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:minWidth="@dimen/miuix_preference_main_icon_min_width"
+                  android:layout_marginEnd="@dimen/settings_banner_ly_inner_padding_start_and_end">
+      <ImageView android:gravity="center"
+                 android:layout_gravity="center"
+                 android:id="@android:id/icon"
+                 android:layout_width="@dimen/settings_banner_icon_size"
+                 android:layout_height="@dimen/settings_banner_icon_size"
+                 android:scaleType="fitCenter"
+                 android:adjustViewBounds="true"
+                 style="@style/Widget.PreferenceIcon" />
+    </LinearLayout>
+    <RelativeLayout android:gravity="center_vertical"
+                    android:layout_gravity="center_vertical"
+                    android:paddingTop="@dimen/settings_banner_text_padding_top_and_bottom"
+                    android:paddingBottom="@dimen/settings_banner_text_padding_top_and_bottom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0">
+      <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.PreferenceList"
+                android:ellipsize="end"
+                android:id="@android:id/title"
+                android:fadingEdge="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:textAlignment="viewStart"
+                android:hyphenationFrequency="full" />
+      <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.List.Secondary.Preference"
+                android:id="@android:id/summary"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/miuix_preference_summary_margin_top"
+                android:layout_below="@android:id/title"
+                android:textAlignment="viewStart"
+                android:layout_alignStart="@android:id/title" />
+    </RelativeLayout>
+    <androidx.appcompat.widget.AppCompatImageView android:gravity="center"
+                          android:layout_gravity="center|end"
+                          android:id="@id/arrow_right"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:paddingStart="@dimen/settings_banner_arrow_right_padding_start"
+                          android:layout_marginStart="@dimen/settings_banner_ly_inner_padding_start_and_end"
+                          settings:srcCompat="@drawable/miuix_appcompat_arrow_right" />
+  </LinearLayout>
+</LinearLayout>

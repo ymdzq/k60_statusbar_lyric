@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:background="?attr/preferenceCategoryBackground"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <TextView android:layout_gravity="center|start"
+            android:id="@android:id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewStart"
+            style="@style/Miuix.AppCompat.TextAppearance.PreferenceCategory" />
+  <TextView android:textAppearance="?android:attr/textAppearanceListItemSecondary"
+            android:textColor="?android:attr/textColorSecondary"
+            android:ellipsize="end"
+            android:id="@android:id/summary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true" />
+</LinearLayout>

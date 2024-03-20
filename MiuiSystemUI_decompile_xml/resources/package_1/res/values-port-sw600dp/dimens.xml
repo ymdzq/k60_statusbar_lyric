@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+  <dimen name="keyguard_clock_top_margin">0.0dp</dimen>
+  <dimen name="modal_dialog_button_margin_center">14.0dp</dimen>
+  <dimen name="modal_dialog_button_margin_left_right">44.67dp</dimen>
+  <dimen name="modal_dialog_d_margin_top">25.0dp</dimen>
+  <dimen name="notification_clear_all_bottom_margin">48.0dp</dimen>
+  <dimen name="notification_clear_all_size">56.0dp</dimen>
+  <dimen name="notification_modal_menu_margin_top">32.7dp</dimen>
+  <dimen name="notification_panel_margin_horizontal">48.0dp</dimen>
+  <dimen name="notification_panel_width">504.0dp</dimen>
+  <dimen name="notification_panel_width_lockscreen">661.0dp</dimen>
+  <dimen name="qqs_layout_padding_bottom">16.0dp</dimen>
+  <dimen name="qs_tiles_page_horizontal_margin">32.0dp</dimen>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:bottom="153.0px">
+    <shape android:shape="rectangle">
+      <corners android:topLeftRadius="33.0px"
+               android:topRightRadius="33.0px" />
+      <solid android:color="@color/seekbar_color_top" />
+    </shape>
+  </item>
+  <item android:top="153.0px">
+    <shape android:shape="rectangle">
+      <corners android:bottomLeftRadius="33.0px"
+               android:bottomRightRadius="33.0px" />
+      <solid android:color="@color/seekbar_color_bottom" />
+    </shape>
+  </item>
+</layer-list>

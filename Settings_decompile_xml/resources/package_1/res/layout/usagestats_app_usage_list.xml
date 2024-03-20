@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<FrameLayout android:background="@color/usage_stats_white"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+  <com.android.settings.usagestats.widget.CustomListView android:id="@id/usagestats_app_list"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:paddingStart="@dimen/usage_stats_app_list_padding_start"
+                        android:paddingEnd="@dimen/usage_stats_app_list_padding_end" />
+</FrameLayout>

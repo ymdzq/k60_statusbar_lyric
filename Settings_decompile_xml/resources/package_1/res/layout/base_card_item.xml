@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+  <ImageView android:id="@id/card_icon"
+             android:layout_width="@dimen/base_card_item_img_width"
+             android:layout_height="@dimen/base_card_item_img_width"
+             android:layout_marginBottom="@dimen/base_card_item_img_margin" />
+  <TextView android:textSize="@dimen/devices_params_grid_item_title_size"
+            android:id="@id/card_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/CardInstructionsText" />
+  <TextView android:textSize="@dimen/devices_params_grid_item_value_size"
+            android:gravity="start"
+            android:id="@id/card_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_card_item_card_value_margin"
+            android:fontFamily="mipro-medium"
+            android:textAlignment="viewStart"
+            android:layout_marginEnd="1.7dp" />
+</LinearLayout>

@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center_vertical"
+              android:orientation="horizontal"
+              android:id="@id/miui_bubble_flyout_text_container"
+              android:background="@drawable/shape_bubble_message_bg_left"
+              android:layout_width="wrap_content"
+              android:layout_height="@dimen/bubble_message_view_height" xmlns:android="http://schemas.android.com/apk/res/android">
+  <com.android.wm.shell.miuifreeform.miuibubbles.views.RoundImageView android:id="@id/bubble_message_icon"
+                        android:layout_width="@dimen/bubble_message_icon_size"
+                        android:layout_height="@dimen/bubble_message_icon_size"
+                        android:scaleType="centerInside"
+                        android:layout_marginEnd="@dimen/bubble_message_icon_me" />
+  <LinearLayout android:gravity="start"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+    <TextView android:textSize="@dimen/bubble_message_title_size"
+              android:textColor="@color/bubble_message_title"
+              android:ellipsize="end"
+              android:id="@id/bubble_message_title"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:maxLines="1" />
+    <TextView android:textSize="@dimen/bubble_message_context_size"
+              android:textColor="@color/bubble_message_content"
+              android:ellipsize="end"
+              android:id="@id/bubble_message_content"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:maxWidth="@dimen/bubble_message_view_max_width"
+              android:maxLines="1"
+              android:layout_marginEnd="@dimen/bubble_message_context_margin_end" />
+  </LinearLayout>
+</LinearLayout>

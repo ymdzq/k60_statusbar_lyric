@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<ScrollView android:layout_width="fill_parent"
+            android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:orientation="vertical"
+                android:padding="8.0dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+    <TextView android:id="@id/bluetooth_broadcast_current_pin"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content" />
+    <RadioGroup android:id="@id/bluetooth_broadcast_pin_config_radio_group"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+      <include android:id="@id/bluetooth_broadcast_pin_unencrypted"
+               layout="@layout/preference_widget_dialog_radiobutton" />
+      <include android:id="@id/bluetooth_broadcast_pin_4"
+               layout="@layout/preference_widget_dialog_radiobutton" />
+      <include android:id="@id/bluetooth_broadcast_pin_16"
+               layout="@layout/preference_widget_dialog_radiobutton" />
+    </RadioGroup>
+  </LinearLayout>
+</ScrollView>

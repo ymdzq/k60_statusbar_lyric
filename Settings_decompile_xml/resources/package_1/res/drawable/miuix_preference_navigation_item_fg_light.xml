@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <item android:left="@dimen/miuix_preference_navigation_item_mask_padding_horizontal"
+        android:top="@dimen/miuix_preference_navigation_item_mask_padding_vertical"
+        android:right="@dimen/miuix_preference_navigation_item_mask_padding_horizontal"
+        android:bottom="@dimen/miuix_preference_navigation_item_mask_padding_vertical">
+    <drawable settings:activatedAlpha="0.04"
+              settings:hoveredActivatedAlpha="0.09"
+              settings:hoveredAlpha="0.03"
+              settings:normalAlpha="0.0"
+              settings:pressedAlpha="0.12"
+              settings:tintColor="@color/miuix_preference_item_tint_color_light"
+              settings:tintRadius="@dimen/miuix_preference_navigation_item_mask_radius"
+              class="miuix.appcompat.app.AlphaBlendingDrawable" />
+  </item>
+</layer-list>

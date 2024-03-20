@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:persistent="true"
+                  android:title="@string/accessibility_settings"
+                  android:key="accessibility_settings_screen" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceScreen android:title="@string/accessibility_settings_tabs_general"
+                    android:key="accessibility_settings_tabs_general"
+                    android:fragment="com.android.settings.accessibility.GeneralAccessibilitySettings" />
+  <PreferenceScreen android:title="@string/accessibility_settings_tabs_visual"
+                    android:key="accessibility_settings_tabs_visual"
+                    android:fragment="com.android.settings.accessibility.VisualAccessibilitySettings" />
+  <PreferenceScreen android:title="@string/accessibility_settings_tabs_hearing"
+                    android:key="accessibility_settings_tabs_hearing"
+                    android:fragment="com.android.settings.accessibility.HearingAccessibilitySettings" />
+  <PreferenceScreen android:title="@string/accessibility_settings_tabs_physical"
+                    android:key="accessibility_settings_tabs_physical"
+                    android:fragment="com.android.settings.accessibility.PhysicalAccessibilitySettings" />
+</PreferenceScreen>

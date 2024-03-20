@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<RelativeLayout android:id="@id/background"
+                android:background="@drawable/stylus_edit_show_bg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/stylus_schematic_diagram" xmlns:android="http://schemas.android.com/apk/res/android">
+  <ImageView android:id="@id/pen"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+             android:src="@drawable/keyboard_show_icon"
+             android:scaleType="fitCenter"
+             android:layout_centerInParent="true" />
+  <TextView android:textSize="@dimen/keyboard_key_text_sp"
+            android:textColor="@color/stylus_pen_key"
+            android:id="@id/function_key_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/keyboard_funtion_key"
+            android:fontFamily="mipro-regular" />
+  <LinearLayout android:orientation="horizontal"
+                android:id="@id/mask"
+                android:background="@color/stylus_setting_background"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:alpha="0.5" />
+</RelativeLayout>

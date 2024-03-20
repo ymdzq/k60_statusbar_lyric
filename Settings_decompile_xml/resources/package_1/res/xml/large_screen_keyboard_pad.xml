@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/device_ime_keyboard_pad"
+                  android:key="device_ime_keyboard_pad" xmlns:android="http://schemas.android.com/apk/res/android">
+  <PreferenceCategory android:key="device_ime_keyboard_pad_category">
+    <com.android.settings.inputmethod.LargeScreenKeyboardPreference android:icon="@drawable/imitate_real_keyboard"
+                          android:layout="@layout/large_screen_keyboard_guide_item_pad"
+                          android:title="@string/imitate_real_keyboard"
+                          android:key="imitate_real_keyboard"
+                          android:summary="@string/imitate_real_keyboard_summary"
+                          showIcon="true" />
+    <com.android.settings.inputmethod.LargeScreenKeyboardPreference android:icon="@drawable/symbol_fast_input"
+                          android:layout="@layout/large_screen_keyboard_guide_item_pad"
+                          android:title="@string/symbol_fast_input"
+                          android:key="symbol_fast_input"
+                          android:summary="@string/symbol_fast_input_summary"
+                          showIcon="true" />
+    <com.android.settings.inputmethod.LargeScreenKeyboardPreference android:icon="@drawable/separate_keyboard_pad"
+                          android:layout="@layout/large_screen_keyboard_guide_item_pad"
+                          android:title="@string/separate_keyboard"
+                          android:key="separate_keyboard_pad"
+                          android:summary="@string/separate_keyboard_summary_pad"
+                          showIcon="true" />
+  </PreferenceCategory>
+</PreferenceScreen>

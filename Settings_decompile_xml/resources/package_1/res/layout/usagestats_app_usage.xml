@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:background="@color/usage_stats_white"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingStart="@dimen/usage_state_app_usage_padding_left"
+              android:paddingEnd="@dimen/usage_state_app_usage_padding_right" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/usage_state_app_usage_margin_top">
+    <TextView android:textSize="@dimen/usage_state_text_size70"
+              android:textColor="@color/usage_stats_black90"
+              android:layout_width="0.0dp"
+              android:layout_height="wrap_content"
+              android:text="@string/usage_state_today_total_text"
+              android:layout_weight="1.0"
+              android:textAlignment="viewStart" />
+    <RelativeLayout android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+      <View android:layout_gravity="end"
+            android:id="@id/menu_point"
+            android:background="@android:color/transparent"
+            android:layout_width="1.0dp"
+            android:layout_height="1.0dp"
+            android:layout_marginTop="-10.0dp"
+            android:layout_alignEnd="@id/tv_app_usage_mouth_channel" />
+      <TextView android:textSize="@dimen/usage_state_channel_text_size"
+                android:gravity="center"
+                android:id="@id/tv_app_usage_mouth_channel"
+                android:background="@drawable/drawable_app_usage_channel_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/usage_state_channel_margin"
+                android:text="@string/usage_state_channel_mouth"
+                android:drawableEnd="@drawable/ic_arrow_down"
+                android:paddingStart="8.0dp"
+                android:paddingEnd="8.0dp"
+                android:layout_marginStart="@dimen/usage_state_channel_margin" />
+    </RelativeLayout>
+  </LinearLayout>
+  <LinearLayout android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+    <TextView android:textSize="27.27dp"
+              android:textColor="@color/usage_stats_black90"
+              android:id="@id/tv_app_usage_hour"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content" />
+    <TextView android:textSize="@dimen/usage_state_text_size70"
+              android:textColor="@color/usage_stats_black90"
+              android:id="@id/tv_app_usage_hour_text"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content" />
+    <TextView android:textSize="@dimen/usage_state_text_size75"
+              android:textColor="@color/usage_stats_black90"
+              android:id="@id/tv_app_usage_miunte"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content" />
+    <TextView android:textSize="@dimen/usage_state_text_size70"
+              android:textColor="@color/usage_stats_black90"
+              android:id="@id/tv_app_usage_miunte_text"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content" />
+  </LinearLayout>
+  <com.android.settings.usagestats.widget.NewBarChartView android:id="@id/app_usage_bar_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/usage_state_app_usage_bar_view_height"
+                        android:layout_marginTop="@dimen/usage_state_app_usage_bar_view_margin_top"
+                        android:layout_marginBottom="@dimen/usage_state_app_usage_bar_view_margin_bottom" />
+</LinearLayout>

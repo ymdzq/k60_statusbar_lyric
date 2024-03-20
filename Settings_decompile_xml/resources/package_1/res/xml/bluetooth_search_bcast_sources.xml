@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/bluetooth_search_bcast_sources_pref_title"
+                  android:key="bluetooth_search_bcast_sources_detail_screen" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/bluetooth_bcast_rcvr_device_name"
+                        android:key="bt_bcast_rcvr_device"
+                        android:summary="@string/summary_placeholder" />
+  <com.android.settings.bluetooth.BluetoothProgressCategory android:title="@string/bluetooth_paired_device_title"
+                        android:key="available_audio_sources" />
+  <com.android.settingslib.widget.FooterPreference />
+</PreferenceScreen>

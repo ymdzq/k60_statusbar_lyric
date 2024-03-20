@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center_vertical"
+              android:layout_gravity="center_vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingStart="@dimen/miuix_preference_item_padding_start"
+              android:paddingEnd="@dimen/preference_bt_custom_margin_end" xmlns:android="http://schemas.android.com/apk/res/android">
+  <TextView android:textSize="@dimen/bt_custom_preference_title_size"
+            android:ellipsize="middle"
+            android:id="@android:id/title"
+            android:fadingEdge="horizontal"
+            android:layout_width="0.0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/bt_custom_preference_title_margin"
+            android:layout_marginBottom="@dimen/bt_custom_preference_title_margin"
+            android:singleLine="true"
+            android:layout_weight="1.0"
+            android:fontFamily="mipro-medium"
+            android:textAlignment="viewStart" />
+  <LinearLayout android:gravity="center"
+                android:orientation="vertical"
+                android:id="@id/refresh_frame"
+                android:layout_width="@dimen/preference_bt_custom_widget_width"
+                android:layout_height="fill_parent"
+                android:minWidth="@dimen/miuix_preference_widget_width">
+    <FrameLayout android:layout_width="@dimen/bt_custom_widget_background_width"
+                 android:layout_height="@dimen/bt_custom_widget_background_width">
+      <ImageView android:id="@id/refresh_anim_bg"
+                 android:layout_width="fill_parent"
+                 android:layout_height="fill_parent"
+                 android:src="@drawable/bt_refresh_background"
+                 android:scaleType="centerInside"
+                 android:contentDescription="@string/bluetooth_scan_for_devices" />
+      <ImageView android:layout_gravity="center"
+                 android:id="@id/refresh_anim"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:src="@drawable/bt_refresh"
+                 android:scaleType="centerInside"
+                 android:contentDescription="@string/bluetooth_scan_for_devices" />
+    </FrameLayout>
+  </LinearLayout>
+</LinearLayout>

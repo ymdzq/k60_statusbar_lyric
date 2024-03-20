@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<shape android:shape="rectangle" xmlns:android="http://schemas.android.com/apk/res/android">
+  <solid android:color="@color/time_zen_mode_bg" />
+  <corners android:topLeftRadius="16.0dp"
+           android:topRightRadius="16.0dp" />
+  <padding android:left="@dimen/auto_rule_padding_left"
+           android:top="@dimen/auto_rule_first_item_padding_top"
+           android:right="@dimen/auto_rule_padding_right" />
+</shape>

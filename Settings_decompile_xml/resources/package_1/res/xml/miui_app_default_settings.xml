@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+  <com.android.settings.applications.defaultapps.DefaultAppValuePreference android:title="@string/home_app"
+                        android:key="default_home"
+                        android:fragment="com.android.settings.applications.defaultapps.DefaultHomePicker" />
+  <com.android.settings.applications.defaultapps.DefaultAppValuePreference android:title="@string/default_phone_title"
+                        android:key="default_phone_app"
+                        android:fragment="com.android.settings.applications.defaultapps.DefaultPhonePicker" />
+  <com.android.settings.applications.defaultapps.DefaultAppValuePreference android:title="@string/sms_application_title"
+                        android:key="default_sms_app"
+                        android:fragment="com.android.settings.applications.defaultapps.DefaultSmsPicker" />
+  <com.android.settings.applications.defaultapps.DefaultAppValuePreference android:key="default_call_screening" />
+  <com.android.settings.applications.defaultapps.DefaultAppValuePreference android:title="@string/default_browser_title"
+                        android:key="default_browser"
+                        android:fragment="com.android.settings.applications.defaultapps.DefaultBrowserPicker" />
+  <com.android.settings.applications.defaultapps.DefaultAppValuePreference android:title="@string/voice_helper_title"
+                        android:key="default_camera" />
+  <com.android.settings.applications.defaultapps.DefaultAppValuePreference android:title="@string/voice_helper_title"
+                        android:key="default_gallery" />
+  <com.android.settings.applications.defaultapps.DefaultAppValuePreference android:title="@string/voice_helper_title"
+                        android:key="default_music" />
+  <com.android.settings.applications.defaultapps.DefaultAppValuePreference android:title="@string/voice_helper_title"
+                        android:key="default_email" />
+  <com.android.settings.applications.defaultapps.DefaultAppValuePreference android:title="@string/voice_helper_title"
+                        android:key="default_video" />
+  <com.android.settings.applications.defaultapps.DefaultAppValuePreference android:title="@string/voice_helper_title"
+                        android:key="default_voice_helper">
+    <intent android:targetPackage="com.android.settings"
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.android.settings.Settings$ManageVoiceActivity" />
+  </com.android.settings.applications.defaultapps.DefaultAppValuePreference>
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/domain_urls_title"
+                        android:key="domain_urls"
+                        android:fragment="com.android.settings.applications.managedomainurls.ManageDomainUrls" />
+  <com.android.settings.applications.defaultapps.DefaultAppValuePreference android:title="@string/assist_and_voice_input_title"
+                        android:key="default_voice_input">
+    <intent android:targetPackage="com.android.settings"
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.android.settings.Settings$ManageAssistActivity" />
+  </com.android.settings.applications.defaultapps.DefaultAppValuePreference>
+</PreferenceScreen>

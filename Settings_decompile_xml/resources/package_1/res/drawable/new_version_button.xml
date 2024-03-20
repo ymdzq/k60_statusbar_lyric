@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+  <solid android:color="@color/new_version_button_color" />
+  <corners android:radius="@dimen/new_version_button_corner" />
+  <padding android:left="@dimen/new_versin_button_paddingLeft"
+           android:top="@dimen/new_versin_button_paddingTop"
+           android:right="@dimen/new_versin_button_paddingLeft"
+           android:bottom="@dimen/new_versin_button_paddingTop" />
+</shape>

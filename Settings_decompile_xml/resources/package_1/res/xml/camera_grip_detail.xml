@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <miuix.preference.DropDownPreference android:title="@string/photography_handle_quick_launch_camera_title"
+                        android:key="quick_launch_camera"
+                        android:summary="@string/photography_handle_long_press_camera_key_enter_camera" />
+  <miuix.preference.CheckBoxPreference android:title="@string/photography_handle_charge_protected"
+                        android:key="preference_handle_charge_protect"
+                        android:summary="@string/photography_handle_charge_protected_summary" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/photography_handle_button_function_settings"
+                        android:key="handle_key_function_settings"
+                        settings:showRightArrow="true" />
+  <com.android.settings.cameragrip.HandleFirmwareUpdatePreference android:layout="@layout/mihandle_ota_update"
+                        android:title="@string/camera_grip_firmware_title_text"
+                        android:key="key_for_mihandle_firmware_update" />
+</PreferenceScreen>

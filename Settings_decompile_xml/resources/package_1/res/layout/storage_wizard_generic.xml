@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<com.google.android.setupdesign.GlifLayout android:id="@id/setup_wizard_layout"
+                      android:layout_width="fill_parent"
+                      android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+  <LinearLayout android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                style="@style/SudContentFrame">
+    <ImageView android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:src="@drawable/storage_wizard_sd_png"
+               android:contentDescription="@null"
+               style="@style/StorageImageStyle1" />
+    <TextView android:gravity="center_horizontal"
+              android:id="@id/storage_wizard_body"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              style="@style/StorageTextStyle1" />
+    <TextView android:gravity="center_horizontal"
+              android:id="@id/storage_wizard_second_body"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              style="@style/StorageTextStyle2" />
+    <TextView android:id="@id/storage_wizard_third_body"
+              android:visibility="gone"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              style="@style/StorageTextStyle2" />
+    <FrameLayout android:id="@id/storage_wizard_aux"
+                 android:visibility="gone"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content" />
+  </LinearLayout>
+</com.google.android.setupdesign.GlifLayout>

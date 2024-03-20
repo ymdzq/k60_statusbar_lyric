@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<miuix.springback.view.SpringBackLayout android:layout_width="fill_parent"
+                      android:layout_height="fill_parent"
+                      settings:scrollableView="@id/miui_lab_sv" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <miuix.core.widget.NestedScrollView android:id="@id/miui_lab_sv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content">
+      <LinearLayout android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+        <ImageView android:gravity="center"
+                   android:id="@id/miui_lab"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="@dimen/miui_lab_marginTop"
+                   android:src="@drawable/logo_miui_lab"
+                   android:contentDescription="@null" />
+        <TextView android:textSize="@dimen/miui_lab_logo_size"
+                  android:gravity="center"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="@dimen/miui_lab_logo_marginTop"
+                  android:text="@string/miui_lab_settings" />
+        <TextView android:textSize="@dimen/miui_lab_slogan_size"
+                  android:textColor="@color/usage_stats_black60"
+                  android:gravity="center"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="@dimen/miui_lab_slogan_marginTop"
+                  android:layout_marginBottom="@dimen/miui_lab_marginBottom"
+                  android:text="@string/miui_lab_slogan"
+                  android:maxLines="2" />
+      </LinearLayout>
+      <FrameLayout android:id="@id/prefs_container"
+                   android:clipChildren="false"
+                   android:clipToPadding="false"
+                   android:layout_width="fill_parent"
+                   android:layout_height="0.0dp"
+                   android:layout_weight="1.0"
+                   android:smoothScrollbar="false" />
+    </LinearLayout>
+  </miuix.core.widget.NestedScrollView>
+</miuix.springback.view.SpringBackLayout>

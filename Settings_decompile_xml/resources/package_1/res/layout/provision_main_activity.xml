@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+  <include layout="@layout/provision_lyt_title" />
+  <FrameLayout android:layout_gravity="center_horizontal"
+               android:id="@id/provision_preview_layout"
+               android:layout_width="@dimen/provision_preview_width"
+               android:layout_height="@dimen/provision_preview_height">
+    <include layout="@layout/provision_anim_display" />
+  </FrameLayout>
+  <include layout="@layout/provision_fragment_content" />
+  <include android:id="@id/provision_lyt_btn"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginBottom="@dimen/provision_margin_bottom"
+           layout="@layout/provision_btn_layout" />
+</LinearLayout>

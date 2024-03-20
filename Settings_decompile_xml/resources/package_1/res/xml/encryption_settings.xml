@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/security_settings_title" xmlns:android="http://schemas.android.com/apk/res/android">
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:persistent="false"
+                        android:title="@string/security_encryption_title"
+                        android:key="security_encryption_enable"
+                        android:defaultValue="false" />
+  <PreferenceCategory android:title="@string/security_encryption_attention_title"
+                      android:key="warning_info_category">
+    <com.android.settingslib.miuisettings.preference.Preference android:layout="@layout/encryption_text_preference" />
+  </PreferenceCategory>
+</PreferenceScreen>

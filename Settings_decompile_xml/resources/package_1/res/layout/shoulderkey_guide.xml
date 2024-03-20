@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:importantForAccessibility="no" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+  <ImageView android:id="@id/shoulderkey_guide_image"
+             android:layout_width="@dimen/shoulderkey_guide_image_view_width"
+             android:layout_height="@dimen/shoulderkey_guide_image_view_height"
+             android:layout_marginTop="@dimen/shoulderkey_guide_image_view_vertical_margin"
+             android:layout_marginBottom="@dimen/shoulderkey_guide_image_view_vertical_margin"
+             android:src="@drawable/shoulderkey_indicator_image" />
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/source_info_details_title" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:key="broadcast_source_details_category">
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/bcast_source_info_sid"
+                          android:key="broadcast_si_sourceId"
+                          android:summary="00" />
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/bcast_source_address"
+                          android:key="broadcast_si_source_address"
+                          android:summary="00:00:00:00:00:00" />
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/bcast_metadata_sync_state"
+                          android:key="broadcast_si_metadata_state"
+                          android:summary="NONE" />
+    <com.android.settingslib.miuisettings.preference.MultiSelectListPreference android:persistent="false"
+                          android:entries="@array/bcast_channel_selection"
+                          android:title="@string/bcast_audio_sync_state"
+                          android:key="broadcast_si_audio_state"
+                          android:entryValues="@array/bcast_channel_selection"
+                          style="@style/SettingsMultiSelectListPreference" />
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/bcast_source_enc_status"
+                          android:key="broadcast_si_encryption_state"
+                          android:summary="No encryption key" />
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/bcast_source_metadata"
+                          android:key="broadcast_si_metadata"
+                          android:summary="Music" />
+    <com.android.settingslib.miuisettings.preference.SwitchPreference android:title="@string/bcast_enable_audio_sync"
+                          android:key="broadcast_si_enable_audio_sync"
+                          android:defaultValue="false" />
+    <com.android.settingslib.miuisettings.preference.EditTextPreference android:ems="16"
+                          android:title="@string/bcast_update_code_title"
+                          android:key="update_broadcast_code"
+                          android:summary="@string/bcast_update_code_summary"
+                          android:defaultValue=""
+                          android:inputType="text" />
+    <com.android.settingslib.widget.ActionButtonsPreference android:title="@string/bcast_info_update"
+                          android:key="bcast_si_update_button"
+                          settings:allowDividerBelow="true" />
+  </PreferenceCategory>
+</PreferenceScreen>

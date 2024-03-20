@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:persistent="false"
+                        android:title="@string/status_operator"
+                        android:key="operator_name" />
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:persistent="false"
+                        android:title="@string/status_signal_strength"
+                        android:key="signal_strength" />
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:persistent="false"
+                        android:title="@string/status_data_network_type"
+                        android:key="network_type" />
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:persistent="false"
+                        android:title="@string/status_latest_area_info"
+                        android:key="latest_area_info" />
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:persistent="false"
+                        android:title="@string/status_service_state"
+                        android:key="service_state" />
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:persistent="false"
+                        android:title="@string/status_roaming"
+                        android:key="roaming_state" />
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:persistent="false"
+                        android:title="@string/status_data_state"
+                        android:key="data_state" />
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:persistent="false"
+                        android:title="@string/status_number"
+                        android:key="number" />
+</PreferenceScreen>

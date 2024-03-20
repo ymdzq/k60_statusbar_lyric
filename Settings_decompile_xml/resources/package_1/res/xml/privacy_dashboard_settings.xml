@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/privacy_dashboard_title"
+                  android:key="privacy_dashboard_page" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/work_policy_privacy_settings"
+                        android:key="work_policy_info"
+                        android:summary="@string/work_policy_privacy_settings_summary"
+                        settings:controller="com.android.settings.privacy.WorkPolicyInfoPreferenceController" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/interact_across_profiles_title"
+                        android:key="interact_across_profiles_privacy"
+                        android:fragment="com.android.settings.applications.specialaccess.interactacrossprofiles.InteractAcrossProfilesSettings"
+                        settings:controller="com.android.settings.applications.specialaccess.interactacrossprofiles.InteractAcrossProfilesController"
+                        settings:searchable="false" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/accessibility_usage_title"
+                        android:key="privacy_accessibility_usage"
+                        settings:controller="com.android.settings.privacy.AccessibilityUsagePreferenceController">
+    <intent android:action="android.intent.action.REVIEW_ACCESSIBILITY_SERVICES" />
+  </com.android.settingslib.miuisettings.preference.Preference>
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/permissions_usage_title"
+                        android:key="privacy_permissions_usage"
+                        android:summary="@string/permissions_usage_summary"
+                        settings:controller="com.android.settings.privacy.PrivacyHubPreferenceController">
+    <intent android:action="android.intent.action.REVIEW_PERMISSION_USAGE" />
+  </com.android.settingslib.miuisettings.preference.Preference>
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/app_permissions"
+                        android:key="privacy_manage_perms"
+                        android:summary="@string/runtime_permissions_summary_control_app_access">
+    <intent android:action="android.intent.action.MANAGE_PERMISSIONS" />
+  </com.android.settingslib.miuisettings.preference.Preference>
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/app_data_sharing_updates_title"
+                        android:key="privacy_app_data_sharing_updates"
+                        android:summary="@string/app_data_sharing_updates_summary"
+                        settings:controller="com.android.settings.privacy.AppDataSharingUpdatesPreferenceController">
+    <intent android:action="android.intent.action.REVIEW_APP_DATA_SHARING_UPDATES" />
+  </com.android.settingslib.miuisettings.preference.Preference>
+  <com.android.settingslib.RestrictedSwitchPreference android:title="@string/camera_toggle_title"
+                        android:key="privacy_camera_toggle"
+                        android:summary="@string/perm_toggle_description"
+                        settings:controller="com.android.settings.privacy.CameraToggleController" />
+  <com.android.settingslib.RestrictedSwitchPreference android:title="@string/mic_toggle_title"
+                        android:key="privacy_mic_toggle"
+                        android:summary="@string/mic_toggle_description"
+                        settings:controller="com.android.settings.privacy.MicToggleController" />
+  <com.android.settingslib.miuisettings.preference.SwitchPreference android:title="@string/show_password"
+                        android:key="show_password"
+                        android:summary="@string/show_password_summary"
+                        settings:controller="com.android.settings.security.ShowPasswordPreferenceController" />
+  <com.android.settingslib.miuisettings.preference.SwitchPreference android:title="@string/media_controls_lockscreen_title"
+                        android:key="privacy_media_controls_lockscreen"
+                        android:summary="@string/media_controls_lockscreen_description"
+                        settings:controller="com.android.settings.sound.MediaControlsLockScreenPreferenceController" />
+  <PreferenceCategory android:key="privacy_services" />
+  <PreferenceCategory android:key="dashboard_tile_placeholder" />
+  <com.android.settings.widget.TipPreference android:enabled="false"
+                        android:layout="@layout/preference_invisible"
+                        android:title="@string/advanced_apps" />
+  <com.android.settingslib.miuisettings.preference.SwitchPreference android:title="@string/show_clip_access_notification"
+                        android:key="show_clip_access_notification"
+                        android:summary="@string/show_clip_access_notification_summary"
+                        settings:controller="com.android.settings.privacy.ShowClipAccessNotificationPreferenceController" />
+</PreferenceScreen>

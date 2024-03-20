@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<ScrollView android:layout_width="fill_parent"
+            android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+    <LinearLayout android:gravity="center_vertical"
+                  android:orientation="horizontal"
+                  android:id="@id/ll_switch"
+                  android:background="?attr/preferenceItemBackground"
+                  android:paddingTop="6.0dp"
+                  android:paddingBottom="6.0dp"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content">
+      <LinearLayout android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:layout_width="0.0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0">
+        <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.PreferenceList"
+                  android:id="@id/tv_title"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:text="@string/usage_state_remind_title"
+                  android:textAlignment="viewStart" />
+        <TextView android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:text="@string/usage_state_remind_summary"
+                  android:textAlignment="viewStart"
+                  style="@style/Miuix.AppCompat.TextAppearance.PreferenceCategory" />
+      </LinearLayout>
+      <miuix.slidingwidget.widget.SlidingButton android:id="@id/set_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8.0dp" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_horizontal"
+                  android:orientation="vertical"
+                  android:id="@id/ll_normal_container"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="5.0dp">
+      <FrameLayout android:background="?attr/preferenceCategoryBackground"
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content">
+        <TextView android:layout_gravity="center|start"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/usage_stats_normal_day"
+                  android:textAllCaps="true"
+                  style="@style/Miuix.AppCompat.TextAppearance.PreferenceCategory" />
+      </FrameLayout>
+      <LinearLayout android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:id="@id/ll_normal_day_time_set"
+                    android:background="?attr/preferenceItemBackground"
+                    android:layout_width="fill_parent"
+                    android:layout_height="52.36dp">
+        <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.PreferenceList"
+                  android:id="@id/tv_normal_time_title"
+                  android:layout_width="0.0dp"
+                  android:layout_height="wrap_content"
+                  android:text="@string/usage_state_usage_time"
+                  android:layout_weight="1.0"
+                  android:textAlignment="viewStart" />
+        <TextView android:textSize="13.09sp"
+                  android:id="@id/tv_normal_time"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  style="@style/Miuix.AppCompat.TextAppearance.PreferenceCategory" />
+        <ImageView android:layout_width="6.18dp"
+                   android:layout_height="13.46dp"
+                   android:src="@drawable/app_usage_arrow_selector"
+                   android:layout_marginStart="6.91dp" />
+      </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_horizontal"
+                  android:orientation="vertical"
+                  android:id="@id/ll_week_container"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content">
+      <FrameLayout android:background="?attr/preferenceCategoryBackground"
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content">
+        <TextView android:layout_gravity="center|start"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/usage_stats_week_day"
+                  android:textAllCaps="true"
+                  style="@style/Miuix.AppCompat.TextAppearance.PreferenceCategory" />
+      </FrameLayout>
+      <LinearLayout android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:id="@id/ll_week_day_time_set"
+                    android:background="?attr/preferenceItemBackground"
+                    android:layout_width="fill_parent"
+                    android:layout_height="52.36dp">
+        <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.PreferenceList"
+                  android:id="@id/tv_week_day_time_title"
+                  android:layout_width="0.0dp"
+                  android:layout_height="wrap_content"
+                  android:text="@string/usage_state_usage_time"
+                  android:layout_weight="1.0"
+                  android:textAlignment="viewStart" />
+        <TextView android:textSize="13.09sp"
+                  android:id="@id/tv_week_day_time"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  style="@style/Miuix.AppCompat.TextAppearance.PreferenceCategory" />
+        <ImageView android:layout_width="6.18dp"
+                   android:layout_height="13.46dp"
+                   android:src="@drawable/app_usage_arrow_selector"
+                   android:layout_marginStart="6.91dp" />
+      </LinearLayout>
+    </LinearLayout>
+  </LinearLayout>
+</ScrollView>

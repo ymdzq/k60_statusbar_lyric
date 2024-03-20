@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<RelativeLayout android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <miuix.springback.view.SpringBackLayout android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/modifier_keys_restore"
+                        android:layout_alignParentTop="true"
+                        settings:scrollableView="@id/id_0x7f0a093b">
+    <miuix.core.widget.NestedScrollView android:id="@id/id_0x7f0a093b"
+                          android:layout_width="fill_parent"
+                          android:layout_height="wrap_content">
+      <LinearLayout android:orientation="vertical"
+                    android:id="@id/scroll_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/prefs_container"
+                     android:clipChildren="false"
+                     android:clipToPadding="false"
+                     android:layout_width="fill_parent"
+                     android:layout_height="0.0dp"
+                     android:layout_weight="1.0"
+                     android:smoothScrollbar="false" />
+      </LinearLayout>
+    </miuix.core.widget.NestedScrollView>
+  </miuix.springback.view.SpringBackLayout>
+  <TextView android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:id="@id/modifier_keys_restore"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="44.0dp"
+            android:maxWidth="336.0dp"
+            android:text="@string/modifier_keys_reset_title"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/miuix_preference_item_padding_start"
+            android:layout_marginEnd="@dimen/miuix_preference_item_padding_end"
+            style="@style/Widget.Button.Danger" />
+</RelativeLayout>

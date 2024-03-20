@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:miui="http://schemas.android.com/apk/res/com.android.settings">
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:persistent="false"
+                        android:title="@string/screen_monochrome_mode_title"
+                        android:key="monochrome_mode_enable"
+                        android:summary="@string/screen_monochrome_mode_summary" />
+  <PreferenceCategory android:persistent="false"
+                      android:title="@string/screen_monochrome_mode_range_title">
+    <com.android.settings.display.PaperModePreference android:persistent="false"
+                          android:title="@string/screen_monochrome_mode_global_title"
+                          android:key="monochrome_mode_global"
+                          android:summary="@string/screen_monochrome_mode_global_summary" />
+    <com.android.settings.display.PaperModePreference android:persistent="false"
+                          android:title="@string/screen_monochrome_mode_local_title"
+                          android:key="monochrome_mode_local"
+                          android:summary="@string/screen_monochrome_mode_local_summary" />
+  </PreferenceCategory>
+</PreferenceScreen>

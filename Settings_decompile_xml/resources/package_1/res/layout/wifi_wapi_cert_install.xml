@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<ScrollView android:layout_width="fill_parent"
+            android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:orientation="vertical"
+                android:padding="8.0dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+    <TextView android:textColor="@color/wifi_dialog_text_color"
+              android:id="@id/wapi_cert_create_subdir_text"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text="@string/wifi_wapi_cert_create_subdir"
+              android:labelFor="@id/wapi_cert_create_subdir_edit"
+              style="?android:attr/textAppearanceSmall" />
+    <EditText android:id="@id/wapi_cert_create_subdir_edit"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="2.0dp"
+              android:singleLine="true"
+              style="@style/Widget.EditText.Dialog" />
+    <TextView android:textColor="@color/wifi_dialog_text_color"
+              android:id="@id/wapi_as_cert_text"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="8.0dp"
+              android:text="@string/wifi_wapi_as_cert"
+              android:labelFor="@id/wapi_as_cert_edit"
+              style="?android:attr/textAppearanceSmall" />
+    <EditText android:id="@id/wapi_as_cert_edit"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="2.0dp"
+              android:singleLine="true"
+              style="@style/Widget.EditText.Dialog" />
+    <TextView android:textColor="@color/wifi_dialog_text_color"
+              android:id="@id/wapi_user_cert_text"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="8.0dp"
+              android:text="@string/wifi_wapi_user_cert"
+              android:labelFor="@id/wapi_user_cert_edit"
+              style="?android:attr/textAppearanceSmall" />
+    <EditText android:id="@id/wapi_user_cert_edit"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="2.0dp"
+              android:singleLine="true"
+              style="@style/Widget.EditText.Dialog" />
+  </LinearLayout>
+</ScrollView>

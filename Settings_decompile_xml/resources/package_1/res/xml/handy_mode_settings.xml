@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/handy_mode" xmlns:android="http://schemas.android.com/apk/res/android">
+  <PreferenceCategory>
+    <com.android.settingslib.miuisettings.preference.Preference android:enabled="false"
+                          android:layout="@layout/handy_mode_guide" />
+  </PreferenceCategory>
+  <com.android.settings.display.HandyModeHintPreference android:persistent="false"
+                        android:enabled="false"
+                        android:layout="@layout/handy_mode_hint"
+                        android:title="@string/handy_mode_hint"
+                        android:key="handy_mode_hint" />
+  <PreferenceCategory />
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:persistent="false"
+                        android:title="@string/handy_mode_enable"
+                        android:key="handy_mode_state"
+                        android:summary="@string/handy_mode_tips" />
+</PreferenceScreen>

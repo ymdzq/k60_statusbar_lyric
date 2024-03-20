@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="horizontal"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/input_method_manage_item_margin_top_or_bottom"
+              android:layout_marginBottom="@dimen/input_method_manage_item_margin_top_or_bottom"
+              android:minHeight="@dimen/input_method_manage_item_min_height" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:orientation="horizontal"
+                android:id="@id/head"
+                android:background="@drawable/preference_card_head_bg"
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/input_method_manage_item_min_height"
+                android:layout_weight="706.0">
+    <ImageView android:layout_gravity="center_vertical"
+               android:id="@android:id/icon"
+               android:layout_width="@dimen/input_method_manage_item_icon_height_or_width"
+               android:layout_height="@dimen/input_method_manage_item_icon_height_or_width"
+               android:scaleType="fitXY"
+               android:layout_marginStart="@dimen/input_method_manage_item_icon_margin_start" />
+    <LinearLayout android:layout_gravity="center_vertical"
+                  android:orientation="vertical"
+                  android:id="@id/text"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="@dimen/input_method_manage_item_text_margin_start">
+      <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.PreferenceList"
+                android:textSize="@dimen/input_method_manage_item_title_text_size"
+                android:textColor="@color/input_method_manage_title_color"
+                android:id="@android:id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+      <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.List.Secondary"
+                android:textColor="@color/input_method_manage_summary_color"
+                android:id="@android:id/summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="yhyorion@gmail.com"
+                android:alpha="0.6" />
+    </LinearLayout>
+  </LinearLayout>
+  <RelativeLayout android:id="@id/end"
+                  android:background="@drawable/preference_card_end_bg"
+                  android:layout_width="0.0dp"
+                  android:layout_height="fill_parent"
+                  android:minHeight="@dimen/input_method_manage_item_min_height"
+                  android:layout_weight="300.0">
+    <View android:background="@color/input_method_manage_line_color"
+          android:layout_width="0.7dp"
+          android:layout_height="33.46dp"
+          android:layout_marginTop="@dimen/input_method_manage_item_line_margin_top_or_bottom"
+          android:layout_marginBottom="@dimen/input_method_manage_item_line_margin_top_or_bottom"
+          android:layout_centerVertical="true" />
+    <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.PreferenceList"
+              android:textSize="15.27sp"
+              android:textStyle="bold"
+              android:textColor="#0d84ff"
+              android:ellipsize="marquee"
+              android:gravity="center"
+              android:id="@id/value_right"
+              android:focusable="true"
+              android:focusableInTouchMode="true"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/sync_now"
+              android:singleLine="true"
+              android:layout_centerInParent="true"
+              android:marqueeRepeatLimit="marquee_forever" />
+    <ImageView android:id="@id/sync_img"
+               android:visibility="gone"
+               android:layout_width="19.45dp"
+               android:layout_height="19.45dp"
+               android:src="@drawable/action_sync"
+               android:layout_centerInParent="true" />
+  </RelativeLayout>
+</LinearLayout>

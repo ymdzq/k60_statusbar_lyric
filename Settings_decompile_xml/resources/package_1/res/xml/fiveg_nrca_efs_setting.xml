@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/fiveg_nrca_switch_title"
+                  android:key="development_nrca_settings"
+                  settings:controller="com.android.settings.development.FiveGNrcaPreferenceController"
+                  settings:searchable="false" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:title="@string/sim_nrca_title"
+                      android:key="sim0_nrca_category_key" />
+  <PreferenceCategory android:title="@string/sim_nrca_title"
+                      android:key="sim1_nrca_category_key" />
+  <PreferenceCategory android:key="nrca_property">
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:enabled="false"
+                          android:title="@string/nrca_type_title"
+                          android:key="nrca_type" />
+  </PreferenceCategory>
+</PreferenceScreen>

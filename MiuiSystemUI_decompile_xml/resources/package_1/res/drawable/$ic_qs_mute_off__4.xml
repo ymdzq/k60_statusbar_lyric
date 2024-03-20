@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<set xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+  <objectAnimator android:interpolator="@android:anim/decelerate_interpolator"
+                  android:duration="300"
+                  android:startOffset="11"
+                  android:valueFrom="@color/qs_tile_icon_enabled_color"
+                  android:valueTo="@color/qs_tile_icon_disabled_color"
+                  android:valueType="colorType"
+                  android:propertyName="strokeColor" />
+  <objectAnimator android:interpolator="@android:anim/decelerate_interpolator"
+                  android:duration="300"
+                  android:startOffset="11"
+                  android:valueFrom="1"
+                  android:valueTo="0"
+                  android:valueType="floatType"
+                  android:propertyName="trimPathEnd" />
+  <objectAnimator android:interpolator="@android:anim/decelerate_interpolator"
+                  android:duration="38"
+                  android:startOffset="161"
+                  android:valueFrom="1"
+                  android:valueTo="0"
+                  android:valueType="floatType"
+                  android:propertyName="strokeAlpha" />
+</set>

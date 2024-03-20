@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+  <PreferenceCategory android:title="@string/ai_button_title_global">
+    <com.android.settings.ai.LongPressAiPreference android:key="key_single_press_AI_button" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/single_press_AI_button">
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/ai_settings_click_title"
+                          android:key="key_click_task" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/ai_settings_long_click_category">
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/ai_settings_long_click_title"
+                          android:key="key_long_task" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/ai_settings_double_click_category">
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/ai_settings_double_click_title"
+                          android:key="key_double_task" />
+  </PreferenceCategory>
+</PreferenceScreen>

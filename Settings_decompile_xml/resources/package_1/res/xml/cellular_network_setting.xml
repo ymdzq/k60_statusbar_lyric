@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/cellular_network_title"
+                  android:key="cellular_network_settings"
+                  settings:controller="com.android.settings.development.CellularNetworkController"
+                  settings:searchable="false" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:title="@string/debug_networking_category"
+                      android:key="debug_networking_category">
+    <Preference android:title="@string/fiveg_nrca_switch_title"
+                android:key="new_radio_carrier_aggregation"
+                android:summary="@string/fiveg_nrca_switch_summary"
+                android:fragment="com.android.settings.development.FiveGNrcaConfigFragment" />
+    <Preference android:title="@string/fiveg_vonr_switch_title"
+                android:key="voice_over_new_radio"
+                android:summary="@string/fiveg_vonr_switch_summary"
+                android:fragment="com.android.settings.development.FiveGVonrConfigFragment" />
+    <SwitchPreference android:title="@string/fiveg_sa_vice_switch_title"
+                      android:key="button_vice_sim_5g_sa_network"
+                      android:summary="@string/fiveg_sa_switch_summary" />
+    <SwitchPreference android:title="@string/enable_preferred_network_type_title"
+                      android:key="enable_preferred_network_type"
+                      android:summary="@string/enable_preferred_network_type_summary" />
+    <SwitchPreference android:title="@string/enable_crbt_pref_title"
+                      android:key="button_enable_crbt"
+                      android:summary="@string/enable_crbt_pref_summary" />
+    <SwitchPreference android:title="@string/dsda_switch_title"
+                      android:key="button_dsda"
+                      android:summary="@string/dsda_switch_summary" />
+    <SwitchPreference android:title="@string/wificall_switch_title"
+                      android:key="button_wificall"
+                      android:summary="@string/wificall_switch_summary" />
+  </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:persistent="false"
+                        android:title="@string/accessibility_screen_reader_haptic_title"
+                        android:key="accessibility_screen_reader"
+                        settings:controller="com.android.settings.accessibility.haptic.ScreenReaderCheckboxController" />
+  <PreferenceCategory android:key="accessibility_screen_reader_category"
+                      android:dependency="accessibility_screen_reader">
+    <miuix.preference.RadioSetPreferenceCategory>
+      <com.android.settings.accessibility.haptic.HapticRadioButtonPreference android:key="com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService" />
+    </miuix.preference.RadioSetPreferenceCategory>
+    <miuix.preference.RadioSetPreferenceCategory>
+      <com.android.settings.accessibility.haptic.HapticRadioButtonPreference android:key="com.bjbyhd.voiceback/com.bjbyhd.voiceback.BoyhoodVoiceBackService" />
+    </miuix.preference.RadioSetPreferenceCategory>
+    <miuix.preference.RadioSetPreferenceCategory>
+      <com.android.settings.accessibility.haptic.HapticRadioButtonPreference android:key="com.android.tback/net.tatans.soundback.SoundBackService" />
+    </miuix.preference.RadioSetPreferenceCategory>
+    <miuix.preference.RadioSetPreferenceCategory>
+      <com.android.settings.accessibility.haptic.HapticRadioButtonPreference android:key="com.nirenr.talkman/com.nirenr.talkman.TalkManAccessibilityService" />
+    </miuix.preference.RadioSetPreferenceCategory>
+    <miuix.preference.RadioSetPreferenceCategory>
+      <com.android.settings.accessibility.haptic.HapticRadioButtonPreference android:key="com.dianming.phoneapp/com.dianming.phoneapp.MyAccessibilityService" />
+    </miuix.preference.RadioSetPreferenceCategory>
+  </PreferenceCategory>
+  <com.android.settings.widget.CustomCheckBoxPreference android:persistent="false"
+                        android:title="@string/haptic_switch_title"
+                        android:key="accessibility_screen_reader_haptic"
+                        android:summary="@string/haptic_switch_summary"
+                        settings:controller="com.android.settings.accessibility.haptic.ScreenReaderHapticController" />
+  <PreferenceCategory android:key="preference_category_function_key"
+                      android:dependency="accessibility_screen_reader_haptic">
+    <com.android.settings.accessibility.haptic.HapticDemoPreference android:title="@string/haptic_experience"
+                          android:key="haptic_experience"
+                          settings:controller="com.android.settings.accessibility.haptic.HapticDemoPreferenceController" />
+    <PreferenceScreen android:title="@string/haptic_experience_details"
+                      android:key="haptic_experience_details">
+      <intent android:targetPackage="com.miui.accessibility"
+              android:targetClass="com.miui.accessibility.haptic.settings.detail.HapticDetailSettings" />
+    </PreferenceScreen>
+  </PreferenceCategory>
+</PreferenceScreen>

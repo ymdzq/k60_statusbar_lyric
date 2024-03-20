@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<RelativeLayout android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:id="@id/item"
+                android:background="?attr/preferenceItemBackground"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16.0dp"
+                android:paddingStart="29.0dp"
+                android:paddingEnd="29.0dp" xmlns:android="http://schemas.android.com/apk/res/android">
+  <FrameLayout android:id="@id/fl_bg"
+               android:background="@drawable/large_screen_keyboard_fold_item_bg"
+               android:layout_width="fill_parent"
+               android:layout_height="@dimen/large_screen_keyboard_bg_height_fold"
+               android:layout_centerHorizontal="true">
+    <ImageView android:layout_gravity="center"
+               android:id="@android:id/icon"
+               android:layout_width="@dimen/large_screen_keyboard_icon_width_fold"
+               android:layout_height="@dimen/large_screen_keyboard_icon_height_fold" />
+  </FrameLayout>
+  <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.PreferenceList"
+            android:textSize="18.0sp"
+            android:ellipsize="marquee"
+            android:id="@android:id/title"
+            android:fadingEdge="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16.0dp"
+            android:singleLine="true"
+            android:layout_below="@id/fl_bg"
+            android:layout_alignStart="@id/fl_bg" />
+  <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.List.Secondary.Preference"
+            android:textSize="14.0sp"
+            android:id="@android:id/summary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="3"
+            android:layout_below="@android:id/title"
+            android:layout_alignStart="@id/fl_bg" />
+</RelativeLayout>

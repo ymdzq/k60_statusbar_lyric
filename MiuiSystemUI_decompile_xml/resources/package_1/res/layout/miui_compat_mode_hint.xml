@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:paddingBottom="@dimen/miui_guide_bubble_window_padding_bottom"
+              android:clickable="true"
+              android:clipToPadding="false"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingEnd="@dimen/miui_guide_bubble_window_padding_end" xmlns:android="http://schemas.android.com/apk/res/android">
+  <TextView android:textSize="@dimen/miui_guide_bubble_window_text_size"
+            android:textColor="@color/miui_guide_bubble_window_text_color"
+            android:layout_gravity="start"
+            android:id="@id/miui_compat_mode_hint_text"
+            android:background="@drawable/miui_compat_hint_bubble"
+            android:paddingLeft="@dimen/miui_guide_bubble_window_text_padding_horizon"
+            android:paddingTop="@dimen/miui_guide_bubble_window_text_padding_vertical"
+            android:paddingRight="@dimen/miui_guide_bubble_window_text_padding_horizon"
+            android:paddingBottom="@dimen/miui_guide_bubble_window_text_padding_vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/miui_restart_button_description"
+            android:lineSpacingExtra="@dimen/miui_guide_bubble_window_line_space_extra"
+            android:textAlignment="viewStart" />
+  <ImageView android:layout_gravity="end"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="@dimen/miui_compat_hint_point_margin_top"
+             android:layout_marginRight="@dimen/miui_compat_hint_point_margin_right"
+             android:src="@drawable/miui_compat_hint_point"
+             android:contentDescription="@null" />
+</LinearLayout>

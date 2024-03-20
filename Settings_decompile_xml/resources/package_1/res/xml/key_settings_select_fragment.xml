@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+  <PreferenceCategory android:title="@string/key_gesture_function_preview"
+                      android:key="key_gesture_function_category">
+    <com.android.settings.KeySettingsPreviewPreference android:title="@string/key_gesture_function_preview"
+                          android:key="key_gesture_function_preview" />
+  </PreferenceCategory>
+  <miuix.preference.RadioButtonPreferenceCategory android:title="@string/key_gesture_function_optional"
+                        android:key="key_gesture_function_optional" />
+</PreferenceScreen>

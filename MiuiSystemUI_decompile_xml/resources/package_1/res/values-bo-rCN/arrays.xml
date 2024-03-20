@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+  <string-array name="battery_options">
+    <item>ཀུན་བརྒྱ་ཆའི་གྲངས་མངོན་འཆར།</item>
+    <item>གློག་གསོག་སྐབས་བརྒྱ་ཆའི་གྲངས་མངོན་འཆར（སོར་འཇོག）</item>
+    <item>པར་རྟགས་འདི་མངོན་འཆར་མི་བྱེད།</item>
+  </string-array>
+  <string-array name="clock_options">
+    <item>ཆུ་ཚོད། སྐར་མ། སྐར་ཆ་མངོན་འཆར།</item>
+    <item>ཆུ་ཚོད་དང་སྐར་མ་མངོན་འཆར（སོར་འཇོག）</item>
+    <item>པར་རྟགས་འདི་མངོན་འཆར་མི་བྱེད།</item>
+  </string-array>
+  <string-array name="nav_bar_buttons">
+    <item>དྲས་སྦྱར་པང་།</item>
+    <item>འཐེབ་ཨང་།</item>
+    <item>ཡང་དག་ངང་སྐོར་བ་དང་མཐེབ་གཞོང་བརྗེ་ཆས།</item>
+    <item>མེད།</item>
+  </string-array>
+  <string-array name="nav_bar_layouts">
+    <item>དཀྱུས་མ།</item>
+    <item>དམ་ཟབ།</item>
+    <item>གཡོན་ཕྱོགས།</item>
+    <item>གཡོན་ལ་ཕྱོགས།</item>
+  </string-array>
+  <string-array name="udfps_accessibility_touch_hints">
+    <item>གཡོན་དུ་སྤོས།</item>
+    <item>མར་སྤོས།</item>
+    <item>གཡས་སུ་སྤོས།</item>
+    <item>ཡར་སྤོས།</item>
+  </string-array>
+</resources>

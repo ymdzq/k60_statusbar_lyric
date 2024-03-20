@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:background="?attr/preferenceItemBackground"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:importantForAccessibility="no" xmlns:android="http://schemas.android.com/apk/res/android">
+  <ImageView android:id="@id/image"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:src="@drawable/image_miui_nfc"
+             android:importantForAccessibility="no" />
+  <TextView android:textSize="@dimen/miui_nfc_preference_text_size"
+            android:textColor="@color/headset_find_device_60"
+            android:id="@id/text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/miui_nfc_preference_text_margin"
+            android:layout_marginBottom="@dimen/miui_nfc_preference_text_margin" />
+</LinearLayout>

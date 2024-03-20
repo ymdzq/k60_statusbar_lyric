@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<vector android:height="@dimen/miui_keyboard_shortcuts_indicator_size"
+        android:width="@dimen/miui_keyboard_shortcuts_indicator_size"
+        android:viewportWidth="12.0"
+        android:viewportHeight="12.0" xmlns:android="http://schemas.android.com/apk/res/android">
+  <path android:fillColor="#000000"
+        android:pathData="M6,6m-6,0a6,6 0,1 1,12 0a6,6 0,1 1,-12 0"
+        android:strokeAlpha="0.6"
+        android:fillAlpha="0.6" />
+</vector>

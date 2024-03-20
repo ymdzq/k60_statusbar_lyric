@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<androidx.core.widget.NestedScrollView android:layout_width="fill_parent"
+                      android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="12.0dp"
+                android:layout_marginStart="@dimen/search_history_ly_margin_start"
+                android:layout_marginEnd="@dimen/search_history_ly_margin_end">
+    <RelativeLayout android:layout_width="fill_parent"
+                    android:layout_height="@dimen/search_result_item_layout_height">
+      <TextView android:textSize="@dimen/search_description_text_size"
+                android:textColor="@color/anc_text_unselect_color"
+                android:id="@id/search_history_tv"
+                android:focusable="true"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search_history_description"
+                android:layout_centerInParent="true"
+                android:fontFamily="mipro-regular"
+                android:layout_alignParentStart="true" />
+    </RelativeLayout>
+    <com.android.settings.widget.FlowLayout android:id="@id/search_history_fl"
+                          android:layout_width="fill_parent"
+                          android:layout_height="wrap_content" />
+    <RelativeLayout android:gravity="center"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/search_result_item_layout_height"
+                    android:layout_marginTop="@dimen/search_history_clear_margin_top"
+                    android:layout_marginBottom="@dimen/search_history_clear_margin_bottom">
+      <TextView android:textSize="@dimen/search_description_text_size"
+                android:textColor="@color/transparent_60_balck"
+                android:id="@id/search_history_clear_tv"
+                android:focusable="true"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search_history_clear_description"
+                android:fontFamily="mipro-regular" />
+    </RelativeLayout>
+  </LinearLayout>
+</androidx.core.widget.NestedScrollView>

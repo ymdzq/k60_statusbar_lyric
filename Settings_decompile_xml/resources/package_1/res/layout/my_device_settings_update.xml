@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center_vertical"
+              android:layout_gravity="center_vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <ImageView android:gravity="center"
+             android:id="@id/update_icon"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="@dimen/preference_item_padding_inner"
+             android:layout_marginBottom="@dimen/preference_item_padding_inner"
+             android:scaleType="fitCenter"
+             android:adjustViewBounds="true"
+             android:contentDescription="@null"
+             android:paddingEnd="@dimen/preference_icon_padding_end" />
+  <LinearLayout android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0">
+    <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.PreferenceList"
+              android:ellipsize="end"
+              android:id="@id/update_title"
+              android:fadingEdge="horizontal"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:maxLines="2" />
+    <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.List.Secondary"
+              android:ellipsize="end"
+              android:id="@id/update_summary"
+              android:fadingEdge="horizontal"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:maxLines="2" />
+  </LinearLayout>
+  <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.List.Secondary"
+            android:ellipsize="marquee"
+            android:gravity="end"
+            android:id="@id/update_value_right"
+            android:paddingTop="6.0dp"
+            android:paddingBottom="6.0dp"
+            android:fadingEdge="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="135.0dp"
+            android:maxLines="10" />
+  <ImageView android:gravity="center"
+             android:layout_gravity="center|end"
+             android:id="@id/arrow_right"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:src="@drawable/miuix_appcompat_arrow_right"
+             android:contentDescription="@null"
+             android:layout_marginStart="@dimen/preference_item_padding_inner" />
+</LinearLayout>

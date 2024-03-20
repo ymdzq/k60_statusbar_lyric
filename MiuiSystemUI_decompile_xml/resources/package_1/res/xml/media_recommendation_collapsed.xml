@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<ConstraintSet xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto">
+  <Constraint android:id="@id/sizing_view"
+              android:layout_width="fill_parent"
+              android:layout_height="@dimen/qs_media_session_height_collapsed" />
+  <Constraint android:id="@id/media_cover1_container"
+              android:layout_marginBottom="@dimen/qs_media_padding"
+              android:layout_marginEnd="@dimen/qs_media_rec_album_side_margin"
+              systemui:r0x7f040429="0"
+              systemui:r0x7f040430="@id/media_cover2_container"
+              systemui:r0x7f040439="1.0"
+              systemui:r0x7f04043a="2"
+              systemui:r0x7f040443="0"
+              systemui:r0x7f040447="0"
+              systemui:r0x7f040448="0.5"
+              style="@style/MediaPlayer.Recommendation.AlbumContainer" />
+  <Constraint android:id="@id/media_title1"
+              android:visibility="gone" />
+  <Constraint android:id="@id/media_subtitle1"
+              android:visibility="gone" />
+  <Constraint android:id="@id/media_cover2_container"
+              android:layout_marginBottom="@dimen/qs_media_padding"
+              android:layout_marginEnd="@dimen/qs_media_rec_album_side_margin"
+              systemui:r0x7f040429="0"
+              systemui:r0x7f040430="@id/media_cover3_container"
+              systemui:r0x7f040442="@id/media_cover1_container"
+              systemui:r0x7f040447="0"
+              systemui:r0x7f040448="0.5"
+              style="@style/MediaPlayer.Recommendation.AlbumContainer" />
+  <Constraint android:id="@id/media_title2"
+              android:visibility="gone" />
+  <Constraint android:id="@id/media_subtitle2"
+              android:visibility="gone" />
+  <Constraint android:id="@id/media_cover3_container"
+              android:layout_marginBottom="@dimen/qs_media_padding"
+              android:layout_marginEnd="@dimen/qs_media_padding"
+              systemui:r0x7f040429="0"
+              systemui:r0x7f04042f="0"
+              systemui:r0x7f040442="@id/media_cover2_container"
+              systemui:r0x7f040447="0"
+              systemui:r0x7f040448="0.5"
+              style="@style/MediaPlayer.Recommendation.AlbumContainer" />
+  <Constraint android:id="@id/media_title3"
+              android:visibility="gone" />
+  <Constraint android:id="@id/media_subtitle3"
+              android:visibility="gone" />
+</ConstraintSet>

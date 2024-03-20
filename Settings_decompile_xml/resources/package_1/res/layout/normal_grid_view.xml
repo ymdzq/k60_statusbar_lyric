@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<com.android.settings.widget.SettingsStatusCard android:orientation="vertical"
+                      android:id="@id/card"
+                      android:paddingTop="@dimen/secure_card_padding_top"
+                      android:paddingBottom="@dimen/secure_card_padding_bottom"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:paddingStart="@dimen/secure_card_padding_start"
+                      android:paddingEnd="@dimen/secure_card_padding_start" xmlns:android="http://schemas.android.com/apk/res/android" />

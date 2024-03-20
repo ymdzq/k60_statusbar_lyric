@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:background="@color/ai_sub_background"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+  <View android:layout_width="fill_parent"
+        android:layout_height="@dimen/ai_settings_sub_status_bar_height" />
+  <RelativeLayout android:layout_width="fill_parent"
+                  android:layout_height="@dimen/ai_settings_title_height">
+    <ImageView android:id="@id/ai_settings_back"
+               android:layout_width="@dimen/ai_settings_sub_back"
+               android:layout_height="@dimen/ai_settings_sub_back"
+               android:layout_marginLeft="@dimen/ai_settings_sub_title_margin_left"
+               android:src="@drawable/ai_settings_back"
+               android:layout_centerVertical="true" />
+    <TextView android:textSize="@dimen/ai_settings_sub_title_text_size"
+              android:textStyle="bold"
+              android:id="@id/ai_settings_sub_title"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerInParent="true" />
+    <View android:layout_marginTop="@dimen/ai_settings_sub_title_margin_top"
+          android:layout_below="@id/ai_settings_sub_title"
+          style="@style/Divider.Settings" />
+  </RelativeLayout>
+  <androidx.recyclerview.widget.RecyclerView android:id="@id/rcv_custom_op"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" />
+</LinearLayout>

@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/privacy_settings_new" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <com.android.settings.BackupImagePreference android:layout="@layout/backup_image_layout"
+                        android:key="backup_image"
+                        settings:controller="com.android.settings.backup.BackupImageController" />
+  <PreferenceCategory android:title="@string/system_backup_section_title_new"
+                      android:key="local_backup_category">
+    <com.android.settings.backup.CustomBackupPreference android:title="@string/local_backup_usestatus_title"
+                          android:key="local_backup_usestatus" />
+    <com.android.settings.backup.CustomRadioButtonPreference android:layout="@layout/miuix_preference_radiobutton_two_state_background"
+                          android:title="@string/phone_backup_title"
+                          android:key="phone_backup"
+                          android:summary="@string/phone_backup_summary"
+                          settings:controller="com.android.settings.backup.LocalPhoneController" />
+    <com.android.settings.backup.CustomRadioButtonPreference android:layout="@layout/miuix_preference_radiobutton_two_state_background"
+                          android:title="@string/computer_backup_title"
+                          android:key="computer_backup"
+                          android:summary="@string/computer_backup_summary"
+                          settings:controller="com.android.settings.backup.LocalComputerController" />
+    <com.android.settings.backup.CustomRadioButtonPreference android:layout="@layout/miuix_preference_radiobutton_two_state_background"
+                          android:title="@string/flash_drive_backup_restore"
+                          android:key="flash_drive_backup"
+                          android:summary="@string/flash_drive_backup_restore_summary"
+                          settings:controller="com.android.settings.backup.MiuiFlashDriveBackupController">
+      <intent android:targetPackage="com.miui.backup"
+              android:action="miui.intent.backup.USB_HOME_ACTIVITY" />
+    </com.android.settings.backup.CustomRadioButtonPreference>
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/cloud_category_text"
+                      android:key="cloud_backup_category">
+    <PreferenceScreen android:title="@string/micloud_service_title"
+                      android:key="cloud_restore"
+                      android:summary="@string/micloud_service_summary" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/google_backup_section_title"
+                      android:key="backup_category"
+                      settings:controller="com.android.settings.MiuiBaseCategoryController">
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/privacy_settings_title"
+                          android:key="google_backup"
+                          settings:controller="com.android.settings.backup.GoogleBackupSettingsController" />
+    <com.android.settingslib.miuisettings.preference.Preference android:persistent="false"
+                          android:title="@string/backup_data_title"
+                          android:key="backup_data"
+                          android:fragment="com.android.settings.backup.ToggleBackupSettingFragment"
+                          settings:controller="com.android.settings.backup.BackupDataPreferenceController" />
+    <com.android.settingslib.miuisettings.preference.Preference android:persistent="false"
+                          android:title="@string/backup_configure_account_title"
+                          android:key="configure_account"
+                          settings:controller="com.android.settings.backup.ConfigureAccountPreferenceController">
+      <intent android:action="dummy" />
+    </com.android.settingslib.miuisettings.preference.Preference>
+    <com.android.settingslib.miuisettings.preference.SwitchPreference android:title="@string/auto_restore_title"
+                          android:key="auto_restore"
+                          android:summary="@string/auto_restore_summary"
+                          settings:controller="com.android.settings.backup.AutoRestorePreferenceController" />
+  </PreferenceCategory>
+  <PreferenceCategory android:key="help_feedback_category">
+    <PreferenceScreen android:title="@string/help_and_feedback_title"
+                      android:key="help_and_feedback">
+      <intent android:targetPackage="com.android.settings"
+              android:targetClass="com.android.settings.backup.CommonIssueActivity" />
+    </PreferenceScreen>
+  </PreferenceCategory>
+  <com.android.settingslib.miuisettings.preference.Preference android:persistent="false"
+                        android:title="@string/backup_data_management_title"
+                        android:key="data_management"
+                        settings:controller="com.android.settings.backup.DataManagementPreferenceController" />
+  <com.android.settingslib.miuisettings.preference.Preference android:persistent="false"
+                        android:enabled="false"
+                        android:title="@string/backup_inactive_title"
+                        android:selectable="false"
+                        android:key="backup_inactive"
+                        settings:controller="com.android.settings.backup.BackupInactivePreferenceController" />
+</PreferenceScreen>

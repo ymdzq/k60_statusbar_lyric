@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:background="@drawable/view_background"
+              android:layout_width="@dimen/row_width"
+              android:layout_height="fill_parent"
+              android:layout_margin="@dimen/a11ymenu_layout_margin"
+              android:elevation="@dimen/elevation" xmlns:android="http://schemas.android.com/apk/res/android">
+  <androidx.viewpager.widget.ViewPager android:gravity="center"
+                        android:layout_gravity="center"
+                        android:id="@id/view_pager"
+                        android:paddingLeft="@dimen/a11ymenu_layout_margin"
+                        android:paddingTop="@dimen/table_margin_top"
+                        android:paddingRight="@dimen/a11ymenu_layout_margin"
+                        android:paddingBottom="@dimen/a11ymenu_layout_margin"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+  <include layout="@layout/footerlayout_switch_page" />
+</LinearLayout>

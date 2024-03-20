@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/nfc_payment_settings_title" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/nfc_default_payment_settings_title"
+                        android:key="nfc_payment_app"
+                        android:fragment="com.android.settings.nfc.DefaultPaymentSettings" />
+  <com.android.settingslib.miuisettings.preference.miuix.DropDownPreference android:title="@string/nfc_payment_use_default"
+                        android:key="nfc_foreground"
+                        android:dialogTitle="@string/nfc_payment_use_default_dialog"
+                        settings:controller="com.android.settings.nfc.NfcForegroundPreferenceController"
+                        settings:entries="@array/nfc_payment_favor"
+                        settings:entryValues="@array/nfc_payment_favor_values" />
+</PreferenceScreen>

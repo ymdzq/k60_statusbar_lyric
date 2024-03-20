@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<com.miui.clock.smartframe.MiuiSmartFrameClock android:layout_width="fill_parent"
+                      android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto">
+  <include android:id="@id/clock_container"
+           android:layout_width="@dimen/miui_smart_frame_clock_width"
+           android:layout_height="@dimen/miui_smart_frame_clock_height"
+           android:layout_marginTop="@dimen/miui_smart_frame_clock_margin_top"
+           systemui:r0x7f04042f="0"
+           systemui:r0x7f040443="0"
+           systemui:r0x7f040447="0"
+           layout="@layout/layout_miui_clock_smart_frame" />
+  <FrameLayout android:id="@id/magazine_info_container"
+               android:visibility="gone"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="@dimen/miui_smart_frame_clock_gallery_margin_top"
+               android:layout_marginStart="@dimen/miui_smart_frame_clock_gallery_margin_start"
+               android:layout_marginEnd="@dimen/miui_smart_frame_clock_gallery_margin_end"
+               systemui:r0x7f04042f="0"
+               systemui:r0x7f040443="0"
+               systemui:r0x7f040446="@id/clock_container" />
+</com.miui.clock.smartframe.MiuiSmartFrameClock>

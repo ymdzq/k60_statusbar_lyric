@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center_vertical"
+              android:orientation="horizontal"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:layout_alignParentTop="true" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <ImageView android:id="@android:id/home"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:src="@drawable/action_bar_back"
+             android:contentDescription="@string/back_button" />
+  <LinearLayout android:gravity="center_vertical"
+                android:id="@id/search_container"
+                android:background="?attr/searchEditTextBackground"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatImageView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:scaleType="centerInside"
+                          android:paddingStart="@dimen/miuix_appcompat_edit_text_search_bg_icon_padding_start"
+                          android:paddingEnd="@dimen/miuix_appcompat_edit_text_search_bg_icon_padding_end"
+                          settings:srcCompat="?attr/miuixAppcompatEditTextSearchIcon" />
+    <miuix.androidbasewidget.widget.ClearableEditText android:id="@android:id/input"
+                          android:background="@null"
+                          android:layout_width="0.0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_weight="1.0"
+                          settings:drawableEndCompat="?attr/clearableEditTextIcon"
+                          style="?attr/searchEditTextStyle" />
+  </LinearLayout>
+</LinearLayout>

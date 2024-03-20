@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<layer-list android:paddingRight="@dimen/bubble_message_bg_arrow_ps"
+            android:shape="rectangle" xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:gravity="center|right"
+        android:height="@dimen/bubble_message_bg_arrow_w"
+        android:width="@dimen/bubble_message_bg_arrow_w"
+        android:right="2.0dp">
+    <rotate android:fromDegrees="45.0"
+            android:pivotX="50.0%"
+            android:pivotY="50.0%">
+      <shape android:shape="rectangle">
+        <corners android:topRightRadius="2.0dp" />
+        <solid android:color="@color/bubble_message_bg" />
+      </shape>
+    </rotate>
+  </item>
+  <item android:right="@dimen/bubble_message_bg_arrow_h">
+    <shape android:shape="rectangle">
+      <corners android:radius="@dimen/bubble_message_radius" />
+      <solid android:color="@color/bubble_message_bg" />
+      <padding android:left="@dimen/bubble_message_padding"
+               android:top="@dimen/bubble_message_padding"
+               android:right="@dimen/bubble_message_padding"
+               android:bottom="@dimen/bubble_message_padding" />
+    </shape>
+  </item>
+</layer-list>

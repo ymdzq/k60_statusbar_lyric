@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:title="@string/screen_projection" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/screen_projection_title"
+                        android:key="pref_key_enable_screen_projection"
+                        android:summary="@string/enable_screen_projection_summary"
+                        android:defaultValue="false" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/screen_projection_sample_title"
+                        android:key="pref_key_screen_projection_example"
+                        android:summary="@string/screen_projection_sample_summary"
+                        android:fragment="com.android.settings.projection.ScreenProjectionExampleFragment" />
+  <PreferenceCategory android:title="@string/screen_projection_characteristics" />
+  <com.android.settings.widget.ImagePreference android:title="@string/screen_projection_characteristics_small_window_title"
+                        android:key="pref_key_screen_projection_characteristic_small_window"
+                        android:summary="@string/screen_projection_characteristics_small_window_summary"
+                        settings:image="@drawable/projection_characteristic_small_window" />
+  <com.android.settings.widget.ImagePreference android:title="@string/screen_projection_characteristics_off_screen_title"
+                        android:key="pref_key_screen_projection_characteristic_off_screen"
+                        android:summary="@string/screen_projection_characteristics_off_screen_summary"
+                        settings:image="@drawable/projection_characteristic_off_screen" />
+  <com.android.settings.widget.ImagePreference android:title="@string/screen_projection_characteristics_privacy_protect_title"
+                        android:key="pref_key_screen_projection_characteristic_privacy_protect"
+                        android:summary="@string/screen_projection_characteristics_privacy_protect_summary"
+                        settings:image="@drawable/projection_characteristic_privacy_protect" />
+  <PreferenceCategory android:title="@string/account_other" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/screen_projection_help"
+                        android:key="pref_key_screen_projection_help">
+    <intent android:action="com.milink.ui.activity.SpecificationActivity" />
+  </com.android.settingslib.miuisettings.preference.Preference>
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/keyguard_security_setting_privacy_policy"
+                        android:key="pref_key_screen_projection_privacy_policy"
+                        settings:showRightArrow="true" />
+</PreferenceScreen>

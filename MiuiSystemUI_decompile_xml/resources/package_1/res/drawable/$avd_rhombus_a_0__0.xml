@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<vector android:height="174.0dp"
+        android:width="141.0dp"
+        android:viewportWidth="141.0"
+        android:viewportHeight="174.0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+  <group android:name="_R_G">
+    <group android:name="_R_G_L_1_G"
+           android:translateX="70.5"
+           android:translateY="110.0">
+      <path android:name="_R_G_L_1_G_D_0_P_0"
+            android:fillColor="#ffffff"
+            android:pathData=" M-2 53.73 C-11.45,53.73 -20.09,51.19 -27.94,46.1 C-35.79,40.87 -42.11,32.37 -46.91,20.59 C-51.7,8.82 -54.1,-6.44 -54.1,-25.19 C-54.1,-43.79 -51.78,-58.9 -47.13,-70.53 C-42.33,-82.16 -36.83,-89.48 -28.38,-95.6 C-20.97,-100.97 -11.74,-103.23 -2,-103.23 C-0.16,-103 0.06,-101.53 -2,-101.11 C-9.7,-101.11 -15.87,-97.76 -20.37,-90.49 C-24.88,-83.37 -27.88,-74.39 -29.62,-63.06 C-31.37,-51.87 -32.3,-38.99 -32.3,-25.19 C-32.3,-3.24 -30.05,15.07 -25.54,29.75 C-20.89,44.43 -13.04,51.77 -2,51.77 C0.44,51.97 0.34,53.75 -2,53.73c "
+            android:fillAlpha="1.0"
+            android:fillType="nonZero" />
+    </group>
+    <group android:name="_R_G_L_0_G"
+           android:translateX="70.5"
+           android:translateY="110.0">
+      <path android:name="_R_G_L_0_G_D_0_P_0"
+            android:fillColor="#ffffff"
+            android:pathData=" M-2 51.77 C8.66,51.56 16.82,44.43 21.33,29.75 C25.98,15.07 28.8,-3.24 28.8,-25.19 C28.8,-37.29 27.7,-50.04 25.85,-62.63 C24.31,-73.12 22.13,-83.06 16.86,-90.53 C12.43,-96.81 5.38,-101.19 -2,-101.11 C-4.06,-101.44 -3.87,-103.03 -2,-103.23 C7.47,-103 17.75,-101.44 24.47,-96.16 C33.72,-88.9 38.5,-82.19 42.91,-70.53 C47.7,-58.9 50.1,-43.79 50.1,-25.19 C50.1,-6.44 47.7,8.82 42.91,20.59 C38.11,32.37 31.79,40.87 23.94,46.1 C16.09,51.19 7.28,53.78 -2,53.73 C-4.5,53.81 -4.59,52.13 -2,51.77c "
+            android:fillAlpha="1.0"
+            android:fillType="nonZero" />
+    </group>
+  </group>
+  <group android:name="time_group" />
+</vector>

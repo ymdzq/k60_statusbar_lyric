@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<miuix.smooth.SmoothContainerDrawable2 android:radius="133.33dp" xmlns:android="http://schemas.android.com/apk/res/android">
+  <child>
+    <shape android:shape="rectangle">
+      <solid android:color="@color/camera_grip_firmware_update_button_button_backgroud" />
+    </shape>
+  </child>
+</miuix.smooth.SmoothContainerDrawable2>

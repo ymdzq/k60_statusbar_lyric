@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:title="@string/aod_name_wanxiang"
+                      android:key="aod_settings_category">
+    <com.android.settingslib.MiuiRestrictedSwitchPreference android:title="@string/ambient_display_screen_title"
+                          android:key="aod_settings_switch"
+                          settings:userRestriction="no_ambient_display" />
+    <com.android.settings.AodValuePreference android:title="@string/ambient_display_screen_title"
+                          android:key="aod_mode_value_preference"
+                          settings:userRestriction="no_ambient_display">
+      <intent android:targetPackage="com.miui.aod"
+              android:action="com.miui.aod.style_list"
+              android:targetClass="com.miui.aod.settings.AodStyleCategoriesActivity" />
+    </com.android.settings.AodValuePreference>
+    <com.android.settings.AodValuePreference android:title="@string/aod_show_mode_title"
+                          android:key="aod_show_mode"
+                          settings:userRestriction="no_ambient_display">
+      <intent android:targetPackage="com.miui.aod"
+              android:action="com.miui.aod.Setting"
+              android:targetClass="com.miui.aod.settings.AodShowModeSettingActivity" />
+    </com.android.settings.AodValuePreference>
+    <com.android.settings.AodStylePreference android:title="@string/aod_style_title"
+                          android:key="aod_show_style"
+                          android:summary="@string/aod_style_description"
+                          settings:showRightArrow="false"
+                          settings:userRestriction="no_ambient_display">
+      <intent android:targetPackage="com.miui.aod"
+              android:action="com.miui.aod.style_list"
+              android:targetClass="com.miui.aod.settings.AodStyleCategoriesActivity" />
+    </com.android.settings.AodStylePreference>
+    <com.android.settings.AodValuePreference android:title="@string/aod_notification_style"
+                          android:key="aod_notification_status"
+                          settings:userRestriction="no_ambient_display">
+      <intent android:targetPackage="com.miui.aod"
+              android:action="android.intent.action.MAIN"
+              android:targetClass="com.miui.aod.settings.NotificationAnimationSelectActivity" />
+    </com.android.settings.AodValuePreference>
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/wakeup_and_sleep_settings_category_name"
+                      android:key="wakeup_and_sleep_settings_category">
+    <com.android.settings.KeyguardTimeoutListPreference android:persistent="false"
+                          android:entries="@array/screen_timeout_entries"
+                          android:title="@string/screen_timeout"
+                          android:key="screen_timeout"
+                          android:entryValues="@array/screen_timeout_values" />
+    <CheckBoxPreference android:title="@string/leave_loclscreen_title"
+                        android:key="miui_tof_screen_off"
+                        android:summary="@string/leave_loclscreen_summary" />
+    <CheckBoxPreference android:title="@string/near_loclscreen_title"
+                        android:key="miui_tof_screen_on"
+                        android:summary="@string/near_loclscreen_summary" />
+    <CheckBoxPreference android:title="@string/eye_gaze_title"
+                        android:key="eye_gaze"
+                        android:summary="@string/eye_gaze_summary" />
+    <CheckBoxPreference android:title="@string/gaze_lock_screen_title"
+                        android:key="gaze_lock_screen"
+                        android:summary="@string/gaze_lock_screen_summary" />
+    <CheckBoxPreference android:title="@string/pick_up_gesture_wakeup_title"
+                        android:key="pick_up_gesture_wakeup" />
+    <CheckBoxPreference android:title="@string/gesture_wakeup_title"
+                        android:key="gesture_wakeup"
+                        android:summary="@string/gesture_wakeup_summary" />
+    <CheckBoxPreference android:persistent="false"
+                        android:title="@string/wakeup_for_keyguard_notification_title"
+                        android:key="wakeup_for_keyguard_notification" />
+    <CheckBoxPreference android:persistent="false"
+                        android:title="@string/smartcover_lock_or_unlock_screen_tittle"
+                        android:key="smartcover_lock_or_unlock_screen"
+                        android:summary="@string/smartcover_sensitive_summary" />
+    <CheckBoxPreference android:persistent="false"
+                        android:title="@string/lock_screen_after_fold_screen_title"
+                        android:key="lock_screen_after_fold_screen"
+                        android:summary="@string/lock_screen_after_fold_screen_summary" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/lock_screen_display_category_name"
+                      android:key="lock_screen_display_category">
+    <com.android.settings.LockScreenInfoPreference android:title="@string/lock_screen_signature_title"
+                          android:key="lock_screen_signature" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:persistent="false"
+                          android:title="@string/lockscreen_magazine"
+                          android:key="lockscreen_magazine"
+                          android:summary="@string/lockscreen_magazine_summary" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/keyguard_security_setting_others"
+                      android:key="others_category">
+    <CheckBoxPreference android:persistent="true"
+                        android:title="@string/pref_volume_launch_camera_title"
+                        android:key="volume_launch_camera"
+                        android:summary="@string/volume_launch_camera_summary" />
+    <com.android.settingslib.miuisettings.preference.miuix.DropDownPreference android:persistent="true"
+                          android:title="@string/pref_volume_launch_camera_title"
+                          android:key="volume_down_launch_camera_or_take_photo"
+                          android:summary="@string/volume_launch_camera_summary" />
+    <CheckBoxPreference android:persistent="false"
+                        android:title="@string/screen_on_proximity_sensor_title"
+                        android:key="screen_on_proximity_sensor"
+                        android:summary="@string/screen_on_proximity_sensor_summary" />
+  </PreferenceCategory>
+</PreferenceScreen>

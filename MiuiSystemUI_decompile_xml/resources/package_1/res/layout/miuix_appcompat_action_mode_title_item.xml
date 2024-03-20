@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <Button android:id="@android:id/button1"
+          android:layout_width="@dimen/miuix_appcompat_action_button_width"
+          android:layout_height="@dimen/miuix_appcompat_action_button_height"
+          style="?attr/actionModeCancelButtonStyle" />
+  <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.Widget.ActionMode.Title"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:id="@android:id/title"
+            android:layout_width="0.0dp"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_weight="1.0" />
+  <Button android:id="@android:id/button2"
+          android:layout_width="@dimen/miuix_appcompat_action_button_width"
+          android:layout_height="@dimen/miuix_appcompat_action_button_height"
+          style="?attr/actionModeSelectButtonStyle" />
+</LinearLayout>

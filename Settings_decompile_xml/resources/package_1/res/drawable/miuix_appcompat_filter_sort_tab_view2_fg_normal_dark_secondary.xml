@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<drawable settings:activatedAlpha="0.0"
+          settings:hoveredActivatedAlpha="0.0"
+          settings:hoveredAlpha="0.05"
+          settings:normalAlpha="0.0"
+          settings:pressedAlpha="0.12"
+          settings:tintColor="@color/miuix_navigator_filter_sort_tab_view2_tint_dark"
+          settings:tintRadius="@dimen/miuix_appcompat_filter_sort_tab_view2_corner"
+          class="miuix.miuixbasewidget.widget.internal.FilterSortTabView2ForegroundDrawable" xmlns:settings="http://schemas.android.com/apk/res-auto" />

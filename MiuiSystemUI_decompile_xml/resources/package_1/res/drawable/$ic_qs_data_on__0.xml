@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<vector android:name="vector"
+        android:height="@dimen/qs_tile_icon_size"
+        android:width="@dimen/qs_tile_icon_size"
+        android:viewportWidth="64.0"
+        android:viewportHeight="64.0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+  <group android:name="group_right">
+    <path android:name="right_bar"
+          android:fillColor="@color/qs_tile_icon_disabled_color"
+          android:pathData="M 43 52.9 C 43 52.567 43 52.233 43 51.9 L 43 51.9 C 43 50.7 41.9 49.7 40.7 49.9 C 39.7 50.1 39 51 39 52 L 39 53 C 39 54.2 40.1 55.2 41.3 55 C 42.3 54.8 43 53.9 43 52.9"
+          android:strokeWidth="1.0"
+          android:fillAlpha="0.0" />
+    <group android:name="group_right_arrow1"
+           android:pivotX="41.0"
+           android:pivotY="8.8"
+           android:translateY="33.0">
+      <path android:name="right_arrow1"
+            android:fillColor="@color/qs_tile_icon_disabled_color"
+            android:pathData="M 43 19.8 C 43 19.6 43.2 19.5 43.4 19.6 L 48.6 21.8 C 48.9 21.9 49.3 22 49.6 21.9 C 50.2 21.7 50.6 21.3 50.8 20.8 C 51 20.4 50.9 19.9 50.6 19.6 L 42.5 9.7 C 42.1 9.3 41.6 9 41 9 C 39.9 9 39 9.9 39 11 L 39 19.8"
+            android:strokeWidth="1.0"
+            android:fillAlpha="0.0" />
+    </group>
+    <group android:name="group_right_arrow2"
+           android:pivotX="41.0"
+           android:pivotY="21.0"
+           android:scaleX="0.0"
+           android:scaleY="0.0" />
+  </group>
+  <group android:name="group_left">
+    <group android:name="group_left_arrow1"
+           android:pivotX="23.0"
+           android:pivotY="55.2"
+           android:scaleX="0.98992217"
+           android:scaleY="0.98992217"
+           android:translateY="-33.0">
+      <path android:name="left_arrow1"
+            android:fillColor="@color/qs_tile_icon_disabled_color"
+            android:pathData="M 21 44.2 C 21 44.4 20.8 44.5 20.6 44.4 L 15.4 42.2 C 15.1 42.1 14.7 42 14.4 42.1 C 13.8 42.3 13.4 42.7 13.2 43.2 C 13 43.6 13.1 44.1 13.4 44.4 L 21.5 54.3 C 21.9 54.7 22.4 55 23 55 C 24.1 55 25 54.1 25 53 L 25 44.2"
+            android:strokeWidth="1.0"
+            android:fillAlpha="0.0" />
+    </group>
+    <path android:name="left_bar"
+          android:fillColor="@color/qs_tile_icon_disabled_color"
+          android:pathData="M 25 11 C 25 9.8 23.9 8.8 22.7 9 C 21.7 9.2 21 10.1 21 11.1 L 21 11.3 C 21 12.5 22.1 13.5 23.3 13.3 C 24.3 13.1 25 12.2 25 11.2 L 25 11 Z"
+          android:strokeWidth="1.0"
+          android:fillAlpha="0.0" />
+  </group>
+  <path android:name="path_2"
+        android:fillColor="@color/qs_tile_icon_disabled_color"
+        android:pathData="M 22.7 9 C 21.7 9.2 21 10.1 21 11.1 L 21 44.2 C 21 44.4 20.8 44.5 20.6 44.4 L 15.4 42.2 C 15.1 42.1 14.7 42 14.4 42.1 C 13.8 42.3 13.4 42.7 13.2 43.2 C 13 43.6 13.1 44.1 13.4 44.4 L 21.4 54.1 C 21.8 54.7 22.6 55.1 23.3 55 C 23.5 55 23.6 54.9 23.7 54.9 C 23.8 54.9 23.9 54.8 23.9 54.8 C 24.5 54.5 24.9 53.8 24.9 53.1 L 24.9 11 C 25 9.8 23.9 8.8 22.7 9 Z M 50.6 19.6 L 42.6 9.9 C 42.2 9.3 41.4 8.9 40.7 9 C 40.5 9 40.4 9.1 40.3 9.1 C 40.2 9.1 40.1 9.2 40.1 9.2 C 39.5 9.5 39.1 10.2 39.1 10.9 L 39.1 53 C 39.1 54.2 40.2 55.2 41.4 55 C 42.4 54.8 43.1 53.9 43.1 52.9 L 43.1 19.8 C 43.1 19.6 43.3 19.5 43.5 19.6 L 48.7 21.8 C 49 21.9 49.4 22 49.7 21.9 C 50.3 21.7 50.7 21.3 50.9 20.8 C 51 20.4 50.9 19.9 50.6 19.6 Z"
+        android:strokeWidth="1.0" />
+</vector>

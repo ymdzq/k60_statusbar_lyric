@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center_horizontal"
+              android:orientation="vertical"
+              android:paddingTop="30.0px"
+              android:paddingBottom="90.0px"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <ImageView android:id="@id/speaker_icon"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:src="@drawable/sound_speaker_icon" />
+  <TextView android:textSize="@dimen/sound_speaker_desc_text_size"
+            android:textColor="@color/sound_speaker_desc_color"
+            android:gravity="center_horizontal"
+            android:id="@id/speaker_summary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28.0px" />
+  <ImageView android:id="@id/speaker_harman"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="30.0px"
+             android:src="@drawable/sound_speaker_harman" />
+</LinearLayout>

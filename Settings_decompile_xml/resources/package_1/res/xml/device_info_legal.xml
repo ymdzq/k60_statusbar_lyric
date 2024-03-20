@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/legal_information" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/legal_written_offer"
+                        android:key="writtenOffer"
+                        settings:showRightArrow="true" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/license_title"
+                        android:key="license">
+    <intent android:action="android.settings.LICENSE" />
+  </com.android.settingslib.miuisettings.preference.Preference>
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/terms_title"
+                        android:key="terms">
+    <intent android:action="android.settings.TERMS" />
+  </com.android.settingslib.miuisettings.preference.Preference>
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/module_license_title"
+                        android:key="module_license"
+                        android:fragment="com.android.settings.deviceinfo.legal.ModuleLicensesDashboard"
+                        settings:controller="com.android.settings.deviceinfo.legal.ModuleLicensesListPreferenceController" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/copyright"
+                        android:key="miuiCopyright"
+                        settings:showRightArrow="true" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/user_agreement"
+                        android:key="miuiUserAgreement"
+                        settings:showRightArrow="true" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/privacy_policy"
+                        android:key="miuiPrivacyPolicy"
+                        settings:showRightArrow="true" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/sar"
+                        android:key="miuiSar"
+                        settings:showRightArrow="true" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/user_experience_program"
+                        android:key="miuiUserExperienceProgram"
+                        settings:showRightArrow="true" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/poco_launcher_user_agreement"
+                        android:key="pocoUserAgreement"
+                        settings:showRightArrow="true" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/poco_launcher_privacy_policy"
+                        android:key="pocoPrivacyPolicy"
+                        settings:showRightArrow="true" />
+</PreferenceScreen>

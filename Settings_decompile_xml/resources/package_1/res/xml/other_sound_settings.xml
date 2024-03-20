@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:title="@string/more_volume_settings"
+                      android:key="more_volume_settings_category">
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:persistent="false"
+                          android:title="@string/notification_volume_control"
+                          android:key="ntf_single_setting"
+                          android:summary="@string/notification_volume_control_note" />
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:persistent="false"
+                          android:title="@string/sound_assist_key_title"
+                          android:key="sound_assist_key"
+                          android:summary="@string/sound_assist_key_summary" />
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:persistent="false"
+                          android:title="@string/multi_music_coexistence_title"
+                          android:key="multi_music_coexistence"
+                          android:summary="@string/multi_music_coexistence_summary" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/system_sound_effect_settings" />
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/dtmf_tone_enable_title"
+                        android:key="dtmf_tone"
+                        android:defaultValue="true"
+                        settings:controller="com.android.settings.sound.DtmfToneController" />
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/sound_effects_enable_title"
+                        android:key="sound_effects"
+                        android:defaultValue="true"
+                        settings:controller="com.android.settings.sound.SoundEffectsController" />
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/lock_sound_effect_enable_title"
+                        android:key="lock_sounds"
+                        android:defaultValue="true"
+                        settings:controller="com.android.settings.sound.LockSoundsController" />
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/backtouch_enable_title"
+                        android:key="backtouch"
+                        android:defaultValue="true"
+                        settings:controller="com.android.settings.sound.BacktouchSoundsController" />
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:persistent="false"
+                        android:title="@string/has_screenshot_sound"
+                        android:key="screenshot_sound"
+                        settings:controller="com.android.settings.sound.ScreenshotSoundsController" />
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:persistent="false"
+                        android:title="@string/app_uninstall_sounds_enable_title"
+                        android:key="app_uninstall_sound"
+                        settings:controller="com.android.settings.sound.AppUninstallSoundsController" />
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/delete_sound_effect"
+                        android:key="delete_sound_effect"
+                        android:defaultValue="true"
+                        settings:controller="com.android.settings.sound.DeleteSoundEffectController" />
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/sound_stereo_mode_title"
+                        android:key="stereo_mode"
+                        android:summary="@string/sound_stereo_mode_summary"
+                        android:defaultValue="true"
+                        settings:controller="com.android.settings.sound.MiuiStereoModeController" />
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/switch_power_sound"
+                        android:key="power_sound"
+                        android:defaultValue="true"
+                        settings:controller="com.android.settings.sound.MiuiPowerSoundController" />
+</PreferenceScreen>

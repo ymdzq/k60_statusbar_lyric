@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/how_backup_title"
+                        android:key="how_backup">
+    <intent android:targetPackage="com.android.settings.backup"
+            android:targetClass="com.android.settings.backup.DetailQuestionActivity" />
+  </com.android.settingslib.miuisettings.preference.Preference>
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/how_restore_backup_title"
+                        android:key="how_restore_backup">
+    <intent android:targetPackage="com.android.settings.backup"
+            android:targetClass="com.android.settings.backup.DetailQuestionActivity" />
+  </com.android.settingslib.miuisettings.preference.Preference>
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/how_encrypt_title"
+                        android:key="how_encrypt">
+    <intent android:targetPackage="com.android.settings.backup"
+            android:targetClass="com.android.settings.backup.DetailQuestionActivity" />
+  </com.android.settingslib.miuisettings.preference.Preference>
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/backup_difference_title"
+                        android:key="backup_difference">
+    <intent android:targetPackage="com.android.settings.backup"
+            android:targetClass="com.android.settings.backup.DetailQuestionActivity" />
+  </com.android.settingslib.miuisettings.preference.Preference>
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/backup_restore_data_title"
+                        android:key="backup_restore">
+    <intent android:targetPackage="com.android.settings.backup"
+            android:targetClass="com.android.settings.backup.DetailQuestionActivity" />
+  </com.android.settingslib.miuisettings.preference.Preference>
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/datasize_decrease_title"
+                        android:key="datasize_decrease">
+    <intent android:targetPackage="com.android.settings.backup"
+            android:targetClass="com.android.settings.backup.DetailQuestionActivity" />
+  </com.android.settingslib.miuisettings.preference.Preference>
+</PreferenceScreen>

@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center_vertical"
+              android:layout_gravity="center_vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingStart="28.0dp"
+              android:paddingEnd="@dimen/search_item_padding_end" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/preference_icon_minWidth">
+    <ImageView android:id="@id/settings_search_item_image"
+               android:layout_width="35.0dp"
+               android:layout_height="35.0dp"
+               android:layout_marginTop="18.0dp"
+               android:layout_marginBottom="18.0dp"
+               android:scaleType="centerInside" />
+  </LinearLayout>
+  <RelativeLayout android:gravity="center_vertical"
+                  android:layout_gravity="center_vertical"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1.0">
+    <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.PreferenceList"
+              android:ellipsize="end"
+              android:id="@id/settings_search_item_name"
+              android:paddingTop="10.0dp"
+              android:fadingEdge="horizontal"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:maxLines="2"
+              android:paddingStart="16.0dp" />
+    <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.List.Secondary.Preference"
+              android:id="@id/settings_search_item_path"
+              android:paddingBottom="10.0dp"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:maxLines="10"
+              android:layout_below="@id/settings_search_item_name"
+              android:paddingStart="16.0dp"
+              android:layout_alignStart="@id/settings_search_item_name" />
+  </RelativeLayout>
+</LinearLayout>

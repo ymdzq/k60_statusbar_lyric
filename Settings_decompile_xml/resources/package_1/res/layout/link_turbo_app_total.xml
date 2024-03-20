@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center_vertical"
+              android:orientation="vertical"
+              android:background="?attr/preferenceCategoryBackground"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:gravity="center_vertical"
+                android:paddingTop="@dimen/link_turbo_padding"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+    <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.Large"
+              android:textStyle="bold"
+              android:ellipsize="marquee"
+              android:gravity="center"
+              android:id="@id/day_total"
+              android:fadingEdge="horizontal"
+              android:layout_width="0.0dp"
+              android:layout_height="wrap_content"
+              android:singleLine="true"
+              android:layout_weight="1.0" />
+    <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.Large"
+              android:textStyle="bold"
+              android:ellipsize="marquee"
+              android:gravity="center"
+              android:id="@id/month_total"
+              android:fadingEdge="horizontal"
+              android:layout_width="0.0dp"
+              android:layout_height="wrap_content"
+              android:singleLine="true"
+              android:layout_weight="1.0" />
+  </LinearLayout>
+  <LinearLayout android:gravity="center_vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+    <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.List.Secondary.Preference"
+              android:ellipsize="marquee"
+              android:gravity="center"
+              android:fadingEdge="horizontal"
+              android:layout_width="0.0dp"
+              android:layout_height="wrap_content"
+              android:text="@string/link_turbo_usage_state_today_total"
+              android:singleLine="true"
+              android:layout_weight="1.0" />
+    <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.List.Secondary.Preference"
+              android:ellipsize="marquee"
+              android:gravity="center"
+              android:fadingEdge="horizontal"
+              android:layout_width="0.0dp"
+              android:layout_height="wrap_content"
+              android:text="@string/link_turbo_usage_state_month_total"
+              android:singleLine="true"
+              android:layout_weight="1.0" />
+  </LinearLayout>
+  <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.List.Secondary.Preference"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:paddingTop="@dimen/link_turbo_padding"
+            android:paddingBottom="@dimen/link_turbo_title_padding"
+            android:fadingEdge="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/link_turbo_prompt" />
+  <include layout="@layout/link_turbo_app_list_header" />
+</LinearLayout>

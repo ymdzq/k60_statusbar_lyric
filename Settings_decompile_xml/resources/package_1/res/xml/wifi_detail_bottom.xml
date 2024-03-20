@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+  <com.android.settings.wifi.MiuiWifiDetailPreference android:title="@string/wifi_menu_modify"
+                        android:key="wifi_detail_modify" />
+  <com.android.settings.wifi.MiuiWifiDetailPreference android:title="@string/button_disconnect_network"
+                        android:key="wifi_detail_disconnect" />
+  <com.android.settings.wifi.MiuiWifiDetailPreference android:title="@string/wifi_menu_forget"
+                        android:key="wifi_detail_delete" />
+</PreferenceScreen>

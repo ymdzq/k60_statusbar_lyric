@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<miuix.smooth.SmoothContainerDrawable2 android:radius="@dimen/dark_mode_picture_radius" xmlns:android="http://schemas.android.com/apk/res/android">
+  <child>
+    <layer-list>
+      <item android:drawable="@drawable/image_light_mode_top_fold_land" />
+    </layer-list>
+  </child>
+</miuix.smooth.SmoothContainerDrawable2>

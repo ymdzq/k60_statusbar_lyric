@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:key="account_sync">
+    <com.android.settings.widget.TogglePreference android:title="@string/account_settings_menu_auto_sync"
+                          android:key="account_settings_menu_auto_sync"
+                          android:order="-1" />
+    <com.android.settings.widget.TogglePreference android:title="@string/account_settings_menu_auto_sync_personal"
+                          android:key="account_settings_menu_auto_sync_personal"
+                          android:order="-1" />
+    <com.android.settings.widget.TogglePreference android:title="@string/account_settings_menu_auto_sync_work"
+                          android:key="account_settings_menu_auto_sync_work"
+                          android:order="-1" />
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:persistent="false"
+                          android:title="@string/sync_wifi_only"
+                          android:key="wifi_only"
+                          android:order="0" />
+  </PreferenceCategory>
+  <com.android.settings.widget.MiuiPreferenceCategoryRtl android:title="@string/google_title"
+                        android:key="google_category">
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:persistent="false"
+                          android:layout="@layout/preference_system_app"
+                          android:title="@string/gmscore_settings_title"
+                          android:key="gmscore_settings">
+      <intent android:targetPackage="com.miui.securitycenter"
+              android:action="miui.intent.action.APP_SETTINGS"
+              android:targetClass="com.miui.googlebase.ui.GmsCoreSettings" />
+    </com.android.settingslib.miuisettings.preference.ValuePreference>
+  </com.android.settings.widget.MiuiPreferenceCategoryRtl>
+  <PreferenceCategory android:title="@string/header_category_accounts"
+                      android:key="account_other" />
+</PreferenceScreen>

@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<com.android.systemui.statusbar.views.MiuiClock android:textAppearance="@style/TextAppearance.StatusBar.Clock"
+                      android:gravity="center|start"
+                      android:id="@id/pad_clock"
+                      android:layout_width="wrap_content"
+                      android:layout_height="fill_parent"
+                      android:singleLine="true"
+                      android:paddingStart="@dimen/pad_clock_padding_start"
+                      android:paddingEnd="@dimen/pad_clock_padding_end"
+                      systemui:r0x7f040000="0"
+                      systemui:r0x7f040001="4" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto" />

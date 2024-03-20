@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<set xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+  <objectAnimator android:interpolator="@android:anim/decelerate_interpolator"
+                  android:duration="300"
+                  android:startOffset="15"
+                  android:valueFrom="@color/qs_tile_icon_disabled_color"
+                  android:valueTo="@color/qs_tile_icon_enabled_color"
+                  android:valueType="colorType"
+                  android:propertyName="fillColor" />
+  <objectAnimator android:interpolator="@android:interpolator/fast_out_slow_in"
+                  android:duration="300"
+                  android:startOffset="15"
+                  android:valueFrom="M 43 51.1 C 43 49.9 41.9 48.9 40.7 49.1 C 39.7 49.3 39 50.2 39 51.2 L 39 53 C 39 54.2 40.1 55.2 41.3 55 C 42.3 54.8 43 53.9 43 52.9 L 43 51.1 Z"
+                  android:valueTo="M 43 11 C 43 9.8 41.9 8.8 40.7 9 C 39.7 9.2 39 10.1 39 11.1 L 39 53 C 39 54.2 40.1 55.2 41.3 55 C 42.3 54.8 43 53.9 43 52.9 L 43 11 Z"
+                  android:valueType="pathType"
+                  android:propertyName="pathData" />
+  <objectAnimator android:interpolator="@android:interpolator/fast_out_slow_in"
+                  android:duration="50"
+                  android:startOffset="15"
+                  android:valueFrom="0"
+                  android:valueTo="1"
+                  android:valueType="floatType"
+                  android:propertyName="fillAlpha" />
+</set>

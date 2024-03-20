@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:title="@string/dark_mode_time_settings"
+                      android:key="dark_mode_time_group">
+    <com.android.settings.widget.CustomCheckBoxPreference android:persistent="false"
+                          android:title="@string/dark_mode_time_settings"
+                          android:key="dark_mode_time_enable" />
+    <miuix.preference.RadioButtonPreferenceCategory android:key="dark_mode_time_radio_group">
+      <miuix.preference.RadioSetPreferenceCategory>
+        <com.android.settings.display.DarkModePreference android:persistent="false"
+                              android:title="@string/dark_mode_day_night_mode_title"
+                              android:key="dark_mode_sun_time_mode"
+                              android:summary="@string/dark_mode_day_night_mode_summary"
+                              android:dependency="dark_mode_time_enable" />
+      </miuix.preference.RadioSetPreferenceCategory>
+      <miuix.preference.RadioSetPreferenceCategory>
+        <com.android.settings.display.DarkModePreference android:persistent="false"
+                              android:title="@string/dark_mode_auto_time_title"
+                              android:key="dark_mode_auto_time_mode"
+                              android:summary="@string/dark_mode_auto_time_summary"
+                              android:dependency="dark_mode_time_enable" />
+        <com.android.settings.dndmode.LabelPreference android:persistent="false"
+                              android:title="@string/paper_mode_start_time_title"
+                              android:key="dark_mode_start_time"
+                              android:dependency="dark_mode_auto_time_mode"
+                              settings:applyExtraPadding="false"
+                              settings:clickable="true" />
+        <com.android.settings.dndmode.LabelPreference android:persistent="false"
+                              android:title="@string/paper_mode_end_time_title"
+                              android:key="dark_mode_end_time"
+                              android:dependency="dark_mode_auto_time_mode"
+                              settings:applyExtraPadding="false"
+                              settings:clickable="true" />
+      </miuix.preference.RadioSetPreferenceCategory>
+    </miuix.preference.RadioButtonPreferenceCategory>
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/more_dark_mode_settings"
+                      android:key="dark_mode_more_settings">
+    <com.android.settings.widget.CustomCheckBoxPreference android:persistent="false"
+                          android:title="@string/dark_mode_font_background_title"
+                          android:key="font_background_settings" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/dark_mode_apps_header"
+                      android:key="dark_mode_apps_list" />
+</PreferenceScreen>

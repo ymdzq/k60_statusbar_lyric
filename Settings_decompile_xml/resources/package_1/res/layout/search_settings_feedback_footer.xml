@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingStart="@dimen/search_item_padding_start"
+              android:paddingEnd="@dimen/search_item_padding_end" xmlns:android="http://schemas.android.com/apk/res/android">
+  <TextView android:textSize="@dimen/search_description_text_size"
+            android:textColor="@color/search_result_highlight"
+            android:id="@id/tv_search_feedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8.0dp"
+            android:layout_marginBottom="8.0dp"
+            android:text="@string/search_result_feedback_text"
+            android:fontFamily="sans-serif-medium" />
+</LinearLayout>

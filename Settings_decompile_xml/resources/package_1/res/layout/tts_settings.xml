@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<RelativeLayout android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <miuix.springback.view.SpringBackLayout android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/tts_button_lyt"
+                        android:layout_alignParentTop="true"
+                        settings:scrollableView="@id/id_0x7f0a093b">
+    <miuix.core.widget.NestedScrollView android:id="@id/id_0x7f0a093b"
+                          android:layout_width="fill_parent"
+                          android:layout_height="wrap_content">
+      <LinearLayout android:orientation="vertical"
+                    android:id="@id/scroll_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/prefs_container"
+                     android:clipChildren="false"
+                     android:clipToPadding="false"
+                     android:layout_width="fill_parent"
+                     android:layout_height="0.0dp"
+                     android:layout_weight="1.0"
+                     android:smoothScrollbar="false" />
+      </LinearLayout>
+    </miuix.core.widget.NestedScrollView>
+  </miuix.springback.view.SpringBackLayout>
+  <LinearLayout android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:id="@id/tts_button_lyt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/tts_bottom_button_marginBottom"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="@dimen/paper_mode_view_padding"
+                android:layout_marginEnd="@dimen/paper_mode_view_padding">
+    <Button android:ellipsize="end"
+            android:id="@id/tts_play"
+            android:layout_width="0.0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/tts_play"
+            android:layout_weight="1.0"
+            android:fontFamily="mipro-medium"
+            android:layout_marginEnd="@dimen/tts_bottom_button_divider"
+            style="?android:attr/buttonBarButtonStyle" />
+    <Button android:ellipsize="end"
+            android:id="@id/tts_reset"
+            android:layout_width="0.0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/tts_reset"
+            android:layout_weight="1.0"
+            android:fontFamily="mipro-medium"
+            style="?android:attr/buttonBarButtonStyle" />
+  </LinearLayout>
+</RelativeLayout>

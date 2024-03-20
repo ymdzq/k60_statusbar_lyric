@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:clipChildren="false"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <miuix.visual.check.VisualCheckBox android:orientation="vertical"
+                        android:id="@id/checkbox"
+                        android:clipChildren="false"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/visual_box_margin_left_right">
+    <miuix.visual.check.BorderLayout android:gravity="center"
+                          android:id="@id/checkbox_borderlayout"
+                          android:layout_width="@dimen/visual_border_width_big"
+                          android:layout_height="@dimen/visual_border_height"
+                          settings:checkedBackGround="@drawable/visual_checkbox_border_layout_bg">
+      <TextView android:textSize="@dimen/visual_text_font_size"
+                android:gravity="center"
+                android:id="@id/check_text"
+                android:background="@drawable/font_settings_text_view_background"
+                android:layout_width="@dimen/visual_text_width_big"
+                android:layout_height="@dimen/visual_text_height"
+                android:text="小米兰亭Pro"
+                android:fontFamily="mipro-bold" />
+    </miuix.visual.check.BorderLayout>
+  </miuix.visual.check.VisualCheckBox>
+  <miuix.visual.check.VisualCheckBox android:orientation="vertical"
+                        android:id="@id/checkbox_3points"
+                        android:visibility="gone"
+                        android:clipChildren="false"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+    <miuix.visual.check.BorderLayout android:gravity="center"
+                          android:id="@id/checkbox3points_borderlayout"
+                          android:layout_width="@dimen/visual_border_width_big"
+                          android:layout_height="@dimen/visual_border_height"
+                          settings:checkedBackGround="@drawable/visual_checkbox_border_layout_bg">
+      <LinearLayout android:gravity="center"
+                    android:id="@id/image_layout"
+                    android:background="@drawable/font_settings_text_view_background"
+                    android:layout_width="@dimen/visual_text_width_big"
+                    android:layout_height="@dimen/visual_text_height">
+        <ImageView android:id="@id/image"
+                   android:background="@drawable/points3_bg"
+                   android:duplicateParentState="true"
+                   android:layout_width="21.82dp"
+                   android:layout_height="10.91dp"
+                   android:contentDescription="@string/wifi_more" />
+      </LinearLayout>
+    </miuix.visual.check.BorderLayout>
+  </miuix.visual.check.VisualCheckBox>
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<vector android:height="@dimen/wifi_icon_size"
+        android:width="@dimen/wifi_icon_size"
+        android:viewportWidth="64.0"
+        android:viewportHeight="64.0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+  <group android:name="group">
+    <path android:name="path_3"
+          android:fillColor="@color/wifi_signal_icon_color"
+          android:pathData="M 51.637 46.24 C 51.857 45.7 52.537 44.76 53.837 44.76 C 55.357 44.76 56.137 45.76 56.137 47.24 C 56.137 48.68 55.357 49.74 53.997 49.74 C 52.437 49.74 51.577 48 51.637 46.24 Z M 48.657 46 C 48.657 49.52 50.617 52.18 54.017 52.18 C 57.017 52.18 58.877 49.8 58.877 47.1 C 58.877 44.24 57.057 42.46 54.817 42.46 C 53.657 42.46 52.577 42.82 51.777 43.56 C 52.197 41.68 53.517 40.28 55.917 39.94 C 56.354 39.88 56.769 39.842 57.177 39.827 C 57.398 39.819 57.577 39.641 57.577 39.42 L 57.577 37.68 C 57.577 37.459 57.398 37.279 57.177 37.285 C 54.849 37.345 52.85 37.938 51.317 39.32 C 49.657 40.8 48.657 43.08 48.657 46 Z"
+          android:strokeWidth="1.0" />
+    <group android:name="group_1">
+      <path android:fillColor="@color/wifi_signal_icon_color"
+            android:pathData="M37.8422,46.3599C38.232,45.9702 38.236,45.3336 37.8068,44.9878C36.2633,43.7444 34.3012,43 32.166,43C30.0377,43 28.0814,43.7396 26.5402,44.9758C26.1097,45.3211 26.1131,45.9588 26.5034,46.349L31.4711,51.3168C31.8617,51.7073 32.4948,51.7073 32.8853,51.3168L37.8422,46.3599Z"
+            android:fillType="evenOdd" />
+    </group>
+  </group>
+</vector>

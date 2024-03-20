@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/pre_install_application" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <com.android.settings.widget.CustomTextColorValuePreference android:title="@string/pre_install_app_other"
+                        android:key="more_pre_install_app" />
+  <PreferenceCategory android:title="@string/pre_install_category_question">
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/pre_install_question_uninstall_title"
+                          android:summary="@string/pre_install_question_uninstall_summary" />
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/pre_install_question_disable_title"
+                          android:summary="@string/pre_install_question_disable_summary" />
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/pre_install_question_query_title"
+                          android:summary="@string/pre_install_question_query_summary" />
+  </PreferenceCategory>
+</PreferenceScreen>

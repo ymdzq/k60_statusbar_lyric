@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:paddingStart="12.8dp"
+                      android:paddingEnd="12.8dp" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <ViewFlipper android:id="@id/view_filpper"
+               android:layout_width="fill_parent"
+               android:layout_height="0.0dp"
+               settings:layout_constraintDimensionRatio="h,2:1"
+               settings:layout_constraintTop_toTopOf="parent" />
+  <LinearLayout android:id="@id/show_page_position_layout"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5.0dp"
+                settings:layout_constraintEnd_toEndOf="parent"
+                settings:layout_constraintStart_toStartOf="parent"
+                settings:layout_constraintTop_toBottomOf="@id/view_filpper">
+    <View android:background="@drawable/screen_enhance_engine_view_count_circle"
+          android:layout_width="15.0dp"
+          android:layout_height="15.0dp" />
+    <View android:background="@drawable/screen_enhance_engine_view_count_circle"
+          android:layout_width="15.0dp"
+          android:layout_height="15.0dp"
+          android:layout_marginStart="5.0dp" />
+    <View android:background="@drawable/screen_enhance_engine_view_count_circle"
+          android:layout_width="15.0dp"
+          android:layout_height="15.0dp"
+          android:layout_marginStart="5.0dp" />
+    <View android:background="@drawable/screen_enhance_engine_view_count_circle"
+          android:layout_width="15.0dp"
+          android:layout_height="15.0dp"
+          android:layout_marginStart="5.0dp" />
+    <View android:background="@drawable/screen_enhance_engine_view_count_circle"
+          android:layout_width="15.0dp"
+          android:layout_height="15.0dp"
+          android:layout_marginStart="5.0dp" />
+  </LinearLayout>
+  <TextView android:textSize="13.8sp"
+            android:textColor="@color/normal_summary_color"
+            android:id="@id/screen_enhance_engine_top_summary"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.9dp"
+            android:fontFamily="mipro-medium"
+            settings:layout_constraintEnd_toEndOf="parent"
+            settings:layout_constraintStart_toStartOf="parent"
+            settings:layout_constraintTop_toBottomOf="@id/show_page_position_layout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

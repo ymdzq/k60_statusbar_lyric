@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:title="@string/close_lid_display_settings_title" xmlns:android="http://schemas.android.com/apk/res/android">
+  <com.android.settings.widget.CloseLidDisplayVideoPreference android:layout="@layout/close_lid_display_video_layout"
+                        android:key="video_demonstration" />
+  <PreferenceCategory android:key="close_lid_display_setting_option">
+    <miuix.preference.RadioButtonPreferenceCategory android:key="close_lid_display_setting_optional">
+      <miuix.preference.RadioButtonPreference android:layout="@layout/miuix_preference_radiobutton_two_state_background"
+                            android:title="@string/swipe_up_to_continue_using"
+                            android:key="swipe_up_to_continue_using" />
+      <miuix.preference.RadioButtonPreference android:layout="@layout/miuix_preference_radiobutton_two_state_background"
+                            android:title="@string/intelligent_keep_screen_on"
+                            android:key="intelligent_keep_screen_on"
+                            android:summary="@string/intelligent_keep_screen_on_summary" />
+      <miuix.preference.RadioButtonPreference android:layout="@layout/miuix_preference_radiobutton_two_state_background"
+                            android:title="@string/keep_screen_on"
+                            android:key="keep_screen_on" />
+      <miuix.preference.RadioButtonPreference android:layout="@layout/miuix_preference_radiobutton_two_state_background"
+                            android:title="@string/lock_screen_now"
+                            android:key="lock_screen_now" />
+    </miuix.preference.RadioButtonPreferenceCategory>
+  </PreferenceCategory>
+</PreferenceScreen>

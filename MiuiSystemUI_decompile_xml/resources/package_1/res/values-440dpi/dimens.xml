@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+  <dimen name="battery_meter_charging_height">20.36dp</dimen>
+  <dimen name="battery_meter_charging_width">6.91dp</dimen>
+  <dimen name="battery_meter_height">20.36dp</dimen>
+  <dimen name="battery_meter_progress_center_left_offset">1.09dp</dimen>
+  <dimen name="battery_meter_progress_height">6.4545dp</dimen>
+  <dimen name="battery_meter_progress_width">18.1818dp</dimen>
+  <dimen name="battery_meter_quick_charging_height">20.36dp</dimen>
+  <dimen name="battery_meter_quick_charging_width">6.54dp</dimen>
+  <dimen name="battery_meter_width">30.54dp</dimen>
+  <dimen name="battery_percent_mark_view_padding_top">5.0dp</dimen>
+  <dimen name="fsgesture_demoinro_normal_textsize">18.19sp</dimen>
+  <dimen name="fsgesture_demoinro_titletextsize">32.0sp</dimen>
+  <dimen name="fsgesture_final_icon_margin_top">224.0dp</dimen>
+  <dimen name="fsgesture_final_summary_size">14.55dp</dimen>
+  <dimen name="fsgesture_final_title_size">28.0dp</dimen>
+  <dimen name="fsgesture_step_text_size">18.19sp</dimen>
+</resources>

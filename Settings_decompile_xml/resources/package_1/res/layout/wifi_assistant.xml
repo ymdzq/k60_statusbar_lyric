@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<miuix.springback.view.SpringBackLayout android:layout_width="fill_parent"
+                      android:layout_height="fill_parent"
+                      settings:scrollableView="@id/id_0x7f0a093b" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <miuix.core.widget.NestedScrollView android:id="@id/id_0x7f0a093b"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+    <LinearLayout android:gravity="center_horizontal"
+                  android:orientation="vertical"
+                  android:layout_width="fill_parent"
+                  android:layout_height="fill_parent">
+      <FrameLayout android:id="@id/options"
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content" />
+      <LinearLayout android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/wifi_assistant_description_margin"
+                    android:paddingTop="5.0dp"
+                    android:paddingRight="@dimen/wifi_assistant_description_margin"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+        <TextView android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:text="@string/wifi_assistant_description"
+                  style="@style/Miuix.AppCompat.TextAppearance.PreferenceCategory" />
+      </LinearLayout>
+    </LinearLayout>
+  </miuix.core.widget.NestedScrollView>
+</miuix.springback.view.SpringBackLayout>

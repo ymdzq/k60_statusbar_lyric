@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<miuix.springback.view.SpringBackLayout android:layout_width="fill_parent"
+                      android:layout_height="fill_parent"
+                      settings:scrollOrientation="vertical"
+                      settings:scrollableView="@id/container_layout" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <androidx.core.widget.NestedScrollView android:scrollbarStyle="outsideOverlay"
+                        android:id="@id/container_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content">
+      <include android:id="@id/software_shortcut"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               layout="@layout/accessibility_edit_shortcut_component_pad" />
+      <include android:id="@id/hardware_shortcut"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               layout="@layout/accessibility_edit_shortcut_component_pad" />
+      <include android:id="@id/triple_tap_shortcut"
+               android:visibility="gone"
+               layout="@layout/accessibility_edit_shortcut_component_pad" />
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+</miuix.springback.view.SpringBackLayout>

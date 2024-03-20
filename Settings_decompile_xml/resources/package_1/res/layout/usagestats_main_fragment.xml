@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<FrameLayout android:background="@color/usage_stats_transparent"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+  <com.android.settings.usagestats.widget.CustomListView android:id="@id/usagestats_list_item"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" />
+  <FrameLayout android:id="@id/tab_container"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content" />
+  <LinearLayout android:gravity="center_horizontal"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:id="@id/loading_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+    <miuix.androidbasewidget.widget.ProgressBar android:layout_gravity="center"
+                          android:id="@id/my_progressBar"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content" />
+    <TextView android:textSize="12.36sp"
+              android:textColor="@color/usage_stats_black60"
+              android:id="@id/loading_text"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="8.0dp"
+              android:textAlignment="viewStart" />
+  </LinearLayout>
+</FrameLayout>

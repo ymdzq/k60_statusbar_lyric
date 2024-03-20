@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:key="color_led_custom_preference_screen" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:miui="http://schemas.android.com/apk/res/com.android.settings" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:key="color_led_switch_category">
+    <com.android.settingslib.miuisettings.preference.miuix.DropDownPreference android:title="@string/color_game_led_freq_title"
+                          android:key="color_game_led_freq"
+                          settings:entryValues="@array/color_game_led_freq_values" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/color_game_led_color_title"
+                      android:key="color_led_custom_category"
+                      settings:controller="com.android.settings.MiuiBaseCategoryController" />
+</PreferenceScreen>

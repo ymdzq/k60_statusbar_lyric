@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<FrameLayout android:id="@id/keyguard_foreground_layer"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+  <ImageView android:id="@id/deducted_image_view"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+             android:scaleType="centerCrop"
+             android:importantForAccessibility="no" />
+  <com.android.keyguard.widget.ColorRibbonsContainer android:layout_gravity="bottom"
+                        android:id="@id/color_ribbons_container"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+    <ImageView android:layout_gravity="bottom|center|left"
+               android:id="@id/left_colored_ribbon_1"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginBottom="@dimen/left_colored_ribbon1_margin_bottom"
+               android:src="@drawable/left_colored_ribbons_1"
+               android:importantForAccessibility="no" />
+    <ImageView android:layout_gravity="bottom|center|left"
+               android:id="@id/left_colored_ribbon_2"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/left_colored_ribbons_2"
+               android:importantForAccessibility="no" />
+    <ImageView android:layout_gravity="bottom|center|right"
+               android:id="@id/right_colored_ribbon_1"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/right_colored_ribbons_1"
+               android:importantForAccessibility="no" />
+    <ImageView android:layout_gravity="bottom|center|right"
+               android:id="@id/right_colored_ribbon_2"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/right_colored_ribbons_2"
+               android:importantForAccessibility="no" />
+  </com.android.keyguard.widget.ColorRibbonsContainer>
+</FrameLayout>

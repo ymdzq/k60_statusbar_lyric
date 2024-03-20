@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:persistent="true"
+                  android:title="@string/accessibility_settings"
+                  android:key="accessibility_settings_screen" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:persistent="false"
+                      android:key="user_installed_services_category" />
+  <PreferenceCategory android:persistent="false"
+                      android:title="@string/screen_reader_category_title"
+                      android:key="screen_reader_category">
+    <com.android.settings.MiuiValuePreference android:persistent="false"
+                          android:title="@string/accessibility_screen_reader_haptic_title"
+                          android:key="accessibility_screen_reader_haptic"
+                          android:order="-1"
+                          android:fragment="com.android.settings.accessibility.HapticSettingsFragment"
+                          settings:controller="com.android.settings.accessibility.ScreenReaderController" />
+    <com.android.settingslib.miuisettings.preference.miuix.DropDownPreference android:persistent="false"
+                          android:title="@string/miui_type_style_title"
+                          android:key="miui_typing_style_accessibility"
+                          android:summary="@string/miui_type_style_summary"
+                          android:order="99"
+                          settings:controller="com.android.settings.accessibility.MiuiTypeStylePreferenceController"
+                          settings:entries="@array/typing_style_entries"
+                          settings:entryValues="@array/typing_style_values" />
+    <com.android.settings.MiuiValuePreference android:persistent="false"
+                          android:title="@string/tts_settings_title"
+                          android:key="tts_settings_preference"
+                          android:order="100"
+                          android:fragment="com.android.settings.tts.TextToSpeechSettings"
+                          settings:controller="com.android.settings.language.TtsPreferenceController" />
+  </PreferenceCategory>
+  <PreferenceCategory android:persistent="false"
+                      android:title="@string/display_category_title"
+                      android:key="display_category">
+    <com.android.settings.display.ScreenZoomPreference android:persistent="false"
+                          android:title="@string/screen_zoom_title"
+                          android:key="accessibility_settings_screen_zoom">
+      <intent android:targetPackage="com.android.settings"
+              android:action="android.intent.action.MAIN"
+              android:targetClass="com.android.settings.display.ScreenZoomActivity" />
+    </com.android.settings.display.ScreenZoomPreference>
+    <com.android.settingslib.miuisettings.preference.SwitchPreference android:persistent="false"
+                          android:title="@string/dark_ui_mode"
+                          android:key="dark_ui_mode_accessibility"
+                          settings:controller="com.android.settings.display.DarkUIPreferenceController"
+                          settings:searchable="false" />
+    <com.android.settings.MiuiValuePreference android:persistent="false"
+                          android:title="@string/accessibility_screen_magnification_title"
+                          android:key="magnification_preference_screen"
+                          android:fragment="com.android.settings.accessibility.MagnificationPreferenceFragment"
+                          settings:controller="com.android.settings.accessibility.MagnificationPreferenceController" />
+    <com.android.settingslib.miuisettings.preference.SwitchPreference android:persistent="false"
+                          android:title="@string/accessibility_disable_animations"
+                          android:key="toggle_disable_animations"
+                          settings:controller="com.android.settings.accessibility.DisableAnimationsPreferenceController" />
+  </PreferenceCategory>
+  <PreferenceCategory android:persistent="false"
+                      android:title="@string/experimental_category_title"
+                      android:key="experimental_category">
+    <com.android.settingslib.miuisettings.preference.SwitchPreference android:persistent="false"
+                          android:title="@string/accessibility_toggle_high_text_contrast_preference_title"
+                          android:key="toggle_high_text_contrast_preference"
+                          settings:controller="com.android.settings.accessibility.HighTextContrastPreferenceController" />
+    <com.android.settingslib.miuisettings.preference.SwitchPreference android:title="@string/toggle_auto_speaker_preference_title"
+                          android:key="toggle_auto_speaker_preference"
+                          android:summary="@string/toggle_auto_speaker_preference_summary" />
+    <com.android.settings.MiuiValuePreference android:persistent="false"
+                          android:title="@string/accessibility_display_daltonizer_preference_title"
+                          android:key="daltonizer_preference"
+                          android:fragment="com.android.settings.accessibility.ToggleDaltonizerPreferenceFragment"
+                          settings:controller="com.android.settings.accessibility.DaltonizerPreferenceController" />
+    <com.android.settings.MiuiValuePreference android:persistent="false"
+                          android:title="@string/accessibility_display_inversion_preference_title"
+                          android:key="toggle_inversion_preference"
+                          android:fragment="com.android.settings.accessibility.ToggleColorInversionPreferenceFragment"
+                          settings:controller="com.android.settings.accessibility.ColorInversionPreferenceController" />
+  </PreferenceCategory>
+</PreferenceScreen>

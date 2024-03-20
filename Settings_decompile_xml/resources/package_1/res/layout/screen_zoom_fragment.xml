@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:id="@id/top_screen"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <miuix.springback.view.SpringBackLayout android:layout_width="fill_parent"
+                        android:layout_height="0.0dp"
+                        android:layout_weight="1.0"
+                        settings:scrollableView="@id/screen_zoom_scrollview">
+    <androidx.core.widget.NestedScrollView android:id="@id/screen_zoom_scrollview"
+                          android:layout_width="fill_parent"
+                          android:layout_height="fill_parent">
+      <LinearLayout android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+        <Space android:layout_width="fill_parent"
+               android:layout_height="10.0dp" />
+        <include layout="@layout/screen_zoom_page_1" />
+        <Space android:layout_width="fill_parent"
+               android:layout_height="@dimen/page_layout_space" />
+        <include layout="@layout/screen_zoom_page_2" />
+      </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+  </miuix.springback.view.SpringBackLayout>
+  <LinearLayout android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/font_size_view_hit_margin_top">
+    <TextView android:textColor="@color/font_size_view_big_color"
+              android:layout_gravity="center_horizontal"
+              android:id="@id/font_hint_view"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="@dimen/font_size_view_hit_margin_bottom" />
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_height="@dimen/font_size_view_height"
+                  android:layout_marginBottom="@dimen/font_size_view_margin_bottom">
+      <ImageView android:gravity="center"
+                 android:layout_gravity="center_vertical"
+                 android:id="@id/btn_screen_zoom_smaller"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:src="@drawable/ic_zoom_smaller"
+                 android:layout_weight="2.0" />
+      <com.android.settings.display.FontSizeAdjustView android:id="@id/font_view"
+                            android:background="@drawable/shape_corner_matrix"
+                            android:layout_width="0.0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="9.0" />
+      <ImageView android:gravity="center"
+                 android:layout_gravity="center_vertical"
+                 android:id="@id/btn_screen_zoom_bigger"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:src="@drawable/ic_zoom_bigger"
+                 android:layout_weight="2.0" />
+    </LinearLayout>
+  </LinearLayout>
+</LinearLayout>

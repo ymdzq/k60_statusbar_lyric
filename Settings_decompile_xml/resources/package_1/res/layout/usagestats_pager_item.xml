@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<merge android:orientation="vertical"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <FrameLayout android:id="@id/usagestats_list"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content" />
+  <include layout="@layout/usagestats_widget_divide" />
+  <FrameLayout android:id="@id/devicestats_unlock"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content" />
+  <include android:visibility="gone"
+           layout="@layout/usagestats_widget_divide" />
+  <FrameLayout android:id="@id/devicestats_notification"
+               android:visibility="gone"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content" />
+</merge>

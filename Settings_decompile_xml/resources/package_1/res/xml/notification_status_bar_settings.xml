@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/notification_status_bar"
+                  android:key="notification_status_bar_settings" xmlns:android="http://schemas.android.com/apk/res/android">
+  <PreferenceCategory android:title="@string/notification_settings"
+                      android:key="notification_settings"
+                      android:shouldDisableView="true">
+    <com.android.settings.notification.NotificationCardPreference android:key="notification_card_settings"
+                          android:shouldDisableView="true" />
+    <PreferenceScreen android:title="@string/status_bar_settings_manage_notification"
+                      android:key="notification_managing"
+                      android:shouldDisableView="true">
+      <intent android:targetPackage="com.miui.notification"
+              android:action="android.settings.ALL_APPS_NOTIFICATION_SETTINGS">
+        <extra android:name="launch_source"
+               android:value="1" />
+        <extra android:name="display_type"
+               android:value="241" />
+      </intent>
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/notification_style_settings"
+                      android:key="notification_style_settings"
+                      android:shouldDisableView="true">
+      <intent android:targetPackage="com.miui.notification"
+              android:action="miui.settings.NOTIFICATION_DISPLAY_SETTINGS">
+        <extra android:name="launch_source"
+               android:value="1" />
+        <extra android:name="display_type"
+               android:value="241" />
+      </intent>
+    </PreferenceScreen>
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/status_bar_settings_status_bar"
+                      android:key="settings_status_bar">
+    <miuix.preference.DropDownPreference android:title="@string/title_show_notification_icon_count"
+                          android:key="show_notification_icon_count" />
+    <CheckBoxPreference android:persistent="false"
+                        android:title="@string/show_network_speed_title"
+                        android:key="show_network_speed" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:persistent="false"
+                          android:title="@string/custom_carrier_title"
+                          android:key="custom_carrier" />
+    <miuix.preference.DropDownPreference android:title="@string/battery_indicator_title"
+                          android:key="battery_indicator" />
+    <PreferenceScreen android:title="@string/notch_style_mod_title"
+                      android:key="notch_style_mode"
+                      android:fragment="com.android.settings.InfinityDisplayStyleFragment" />
+    <CheckBoxPreference android:title="@string/notch_force_black_title"
+                        android:key="notch_force_black"
+                        android:summary="@string/notch_force_black_desc" />
+    <CheckBoxPreference android:title="@string/cutout_type_title"
+                        android:key="cutout_type"
+                        android:summary="@string/cutout_type_desc" />
+    <PreferenceScreen android:title="@string/cutout_mode_title"
+                      android:key="cutout_mode"
+                      android:fragment="com.android.settings.CutoutModeSettings" />
+    <PreferenceScreen android:title="@string/lock_screen_action"
+                      android:key="lock_screen_action"
+                      android:fragment="com.android.settings.LockScreenActionsSettings" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/control_center"
+                      android:key="control_center">
+    <com.android.settings.controlcenter.ControlCenterPreference android:title="@string/control_center_style"
+                          android:key="control_center_style"
+                          android:summary="@string/control_center_style_summary"
+                          android:fragment="com.android.settings.controlcenter.ControlCenterSettings" />
+    <CheckBoxPreference android:persistent="false"
+                        android:title="@string/title_wordless_mode"
+                        android:key="wordless_mode" />
+    <miuix.preference.DropDownPreference android:title="@string/title_smart_device_control"
+                          android:key="smart_device_control" />
+    <CheckBoxPreference android:persistent="false"
+                        android:title="@string/title_quick_control_all_devices"
+                        android:key="quick_control_all_devices"
+                        android:summary="@string/summary_quick_control_all_devices" />
+  </PreferenceCategory>
+</PreferenceScreen>

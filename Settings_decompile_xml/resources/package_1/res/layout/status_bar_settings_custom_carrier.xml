@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="15.0dp" xmlns:android="http://schemas.android.com/apk/res/android">
+  <miuix.androidbasewidget.widget.StateEditText android:ellipsize="end"
+                        android:gravity="center|right"
+                        android:id="@id/edit_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLength="50"
+                        android:inputType="text"
+                        android:imeOptions="actionNone"
+                        android:textDirection="locale"
+                        android:textAlignment="viewEnd"
+                        style="@style/WidgetStateEditText" />
+</LinearLayout>

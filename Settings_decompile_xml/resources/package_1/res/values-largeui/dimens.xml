@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+  <dimen name="background_application_manage_item_operation_width">80.0dp</dimen>
+  <dimen name="settings_panel_default_height">75.0dp</dimen>
+  <dimen name="volumes_settings_panel_height">325.0dp</dimen>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<FrameLayout android:background="?attr/preferenceCategoryBackground"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:minHeight="1.0px"
+             android:importantForAccessibility="no" xmlns:android="http://schemas.android.com/apk/res/android">
+  <TextView android:textColor="?attr/preferenceSecondaryTextColor"
+            android:layout_gravity="center|start"
+            android:id="@android:id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="true"
+            style="@style/Miuix.AppCompat.TextAppearance.PreferenceList" />
+</FrameLayout>

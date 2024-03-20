@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:title="@string/keep_screen_on_after_folding_title" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+  <com.android.settingslib.miuisettings.preference.Preference android:layout="@layout/keep_screen_on_after_folding_small_screen_image_preference_layout"
+                        android:key="small_screen_image" />
+  <com.android.settingslib.miuisettings.preference.Preference android:layout="@layout/keep_screen_on_after_folding_image_preference_layout"
+                        android:key="large_screen_image" />
+  <com.android.settingslib.miuisettings.preference.Preference android:layout="@layout/keep_screen_on_after_folding_text_preference_layout" />
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/keep_screen_on_after_folding_title"
+                        android:key="lock_screen_after_fold_screen"
+                        android:defaultValue="true"
+                        android:summaryOn="@string/keep_screen_on_after_folding_on_summary"
+                        android:summaryOff="@string/keep_screen_on_after_folding_off_summary" />
+</PreferenceScreen>

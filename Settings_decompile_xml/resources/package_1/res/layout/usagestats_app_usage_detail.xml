@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<ScrollView android:layout_width="fill_parent"
+            android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:orientation="vertical"
+                android:background="@color/usage_stats_white"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+    <ImageView android:layout_gravity="center_horizontal"
+               android:id="@id/iv_detail_icon"
+               android:layout_width="@dimen/usage_stats_detail_iv_wh"
+               android:layout_height="@dimen/usage_stats_detail_iv_wh"
+               android:layout_marginTop="@dimen/usage_stats_detail_iv_margin_top" />
+    <TextView android:textSize="@dimen/usage_stats_detail_name_text_size"
+              android:textColor="@color/usage_state_black"
+              android:layout_gravity="center_horizontal"
+              android:id="@id/tv_app_name"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/usage_stats_detail_name_margin_top" />
+    <View android:background="@color/usage_stats_black10"
+          android:layout_width="fill_parent"
+          android:layout_height="@dimen/usage_stats_divide_line_height"
+          android:layout_marginTop="@dimen/usage_stats_divide_margin_height" />
+    <TextView android:textSize="@dimen/usage_state_text_size70"
+              android:textColor="@color/usage_stats_black90"
+              android:id="@id/tv_usage_time"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/usage_stats_app_usage_list_title_margin_top"
+              android:text="@string/usage_state_today_total_text"
+              android:layout_marginStart="@dimen/usage_state_app_usage_padding_left" />
+    <com.android.settings.usagestats.widget.NewBarChartView android:id="@id/bar_app_usage_detail"
+                          android:paddingBottom="@dimen/usage_stats_detail_bar_padding_bottom"
+                          android:layout_width="fill_parent"
+                          android:layout_height="@dimen/usage_stats_detail_bar_view_height"
+                          android:layout_marginStart="@dimen/usage_state_app_usage_padding_left"
+                          android:layout_marginEnd="@dimen/usage_stats_detail_bar_margin_end" />
+    <FrameLayout android:id="@id/fl_limit_container"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content" />
+  </LinearLayout>
+</ScrollView>

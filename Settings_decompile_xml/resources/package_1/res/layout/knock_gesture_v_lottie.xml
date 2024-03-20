@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<com.android.settings.knock.KnockGestureLottieView android:orientation="vertical"
+                      android:id="@id/navigation_guide"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <FrameLayout android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="30.0dp">
+    <com.airbnb.lottie.LottieAnimationView android:layout_gravity="center"
+                          android:id="@id/knock_gesture_v"
+                          android:layout_width="@dimen/freeform_vedio_view_width"
+                          android:layout_height="@dimen/freeform_vedio_view_height"
+                          settings:lottie_autoPlay="true"
+                          settings:lottie_loop="true"
+                          settings:lottie_rawRes="@raw/double_click_power_key" />
+  </FrameLayout>
+</com.android.settings.knock.KnockGestureLottieView>

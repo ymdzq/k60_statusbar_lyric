@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/ad_service" xmlns:android="http://schemas.android.com/apk/res/android">
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/use_personalized_ad_service"
+                        android:key="personalized_ad_switch"
+                        android:summary="@string/use_personalized_ad_service_summary" />
+</PreferenceScreen>

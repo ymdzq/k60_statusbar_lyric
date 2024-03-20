@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:layout_width="fill_parent"
+              android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+  <FrameLayout android:clipChildren="true"
+               android:layout_width="fill_parent"
+               android:layout_height="fill_parent">
+    <SurfaceView android:layout_gravity="center"
+                 android:id="@id/surface_view"
+                 android:layout_width="fill_parent"
+                 android:layout_height="fill_parent" />
+    <com.android.settings.wifi.dpp.MiuiQrDecorateView android:id="@id/decorate_view"
+                          android:layout_width="fill_parent"
+                          android:layout_height="fill_parent" />
+    <LinearLayout android:gravity="center_horizontal"
+                  android:orientation="vertical"
+                  android:layout_width="fill_parent"
+                  android:layout_height="fill_parent">
+      <TextView android:textSize="46.0px"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:id="@android:id/summary"
+                android:background="@drawable/wifi_scan_with_qr_code"
+                android:paddingLeft="20.0dp"
+                android:paddingTop="10.0dp"
+                android:paddingRight="20.0dp"
+                android:paddingBottom="10.0dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="142.3dp"
+                android:minWidth="@dimen/scanner_summary_min_width"
+                android:layout_marginStart="24.0dp"
+                android:layout_marginEnd="24.0dp"
+                android:accessibilityLiveRegion="polite" />
+      <LinearLayout android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+        <TextView android:id="@id/error_message"
+                  android:visibility="invisible"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="142.3dp"
+                  android:textAlignment="center"
+                  android:layout_marginStart="24.0dp"
+                  android:layout_marginEnd="24.0dp"
+                  style="@style/TextAppearance.ErrorText" />
+        <FrameLayout android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginTop="250.0dp">
+          <LinearLayout android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+            <ImageView android:gravity="center"
+                       android:layout_gravity="center_horizontal"
+                       android:id="@id/icon_dpp_qrcode"
+                       android:visibility="gone"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content" />
+            <FrameLayout android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="10.0dp">
+              <TextView android:textSize="15.0dp"
+                        android:textColor="@android:color/white"
+                        android:gravity="center"
+                        android:layout_gravity="center_horizontal"
+                        android:id="@id/dpp_qrCode_summary"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+            </FrameLayout>
+          </LinearLayout>
+        </FrameLayout>
+      </LinearLayout>
+    </LinearLayout>
+  </FrameLayout>
+</LinearLayout>

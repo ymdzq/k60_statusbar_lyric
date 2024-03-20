@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+  <PreferenceCategory>
+    <com.android.settingslib.miuisettings.preference.Preference android:enabled="false"
+                          android:layout="@layout/back_tap_guide" />
+  </PreferenceCategory>
+  <PreferenceCategory android:key="back_tap">
+    <com.android.settingslib.miuisettings.preference.miuix.DropDownPreference android:title="@string/back_double_tap"
+                          android:key="back_double_tap" />
+    <com.android.settingslib.miuisettings.preference.miuix.DropDownPreference android:title="@string/back_triple_tap"
+                          android:key="back_triple_tap" />
+  </PreferenceCategory>
+</PreferenceScreen>

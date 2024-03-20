@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<vector android:height="12.0dp"
+        android:width="11.0dp"
+        android:viewportWidth="11.0"
+        android:viewportHeight="12.0" xmlns:android="http://schemas.android.com/apk/res/android">
+  <path android:fillColor="@color/external_ram_icon_fill_color"
+        android:pathData="M5.932,7.43L6.085,2.768H4.915L5.068,7.43H5.932ZM6.085,9.545V8.375H4.915V9.545H6.085Z"
+        android:strokeAlpha="0.6"
+        android:fillAlpha="0.6" />
+  <path android:fillColor="#00000000"
+        android:pathData="M5.5,6m-5,0a5,5 0,1 1,10 0a5,5 0,1 1,-10 0"
+        android:strokeColor="@color/external_ram_icon_fill_color"
+        android:strokeWidth="1.0"
+        android:strokeAlpha="0.6"
+        android:fillAlpha="0.6" />
+</vector>

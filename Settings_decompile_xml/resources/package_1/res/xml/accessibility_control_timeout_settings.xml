@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/accessibility_control_timeout_preference_title" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <com.android.settingslib.widget.TopIntroPreference android:title="@string/accessibility_control_timeout_preference_intro_text"
+                        android:key="accessibility_control_timeout_intro" />
+  <com.android.settings.accessibility.LottieAnimationPreference android:persistent="false"
+                        android:title="@string/summary_placeholder"
+                        android:key="accessibility_control_timeout_video"
+                        settings:controller="com.android.settings.accessibility.LottieAnimationPreferenceController" />
+  <miuix.preference.RadioButtonPreferenceCategory android:key="time_radio_group">
+    <miuix.preference.RadioSetPreferenceCategory>
+      <miuix.preference.RadioButtonPreference android:title="@string/accessibility_timeout_default"
+                            android:key="accessibility_control_timeout_default"
+                            settings:allowDividerAbove="true"
+                            settings:controller="com.android.settings.accessibility.AccessibilityTimeoutController" />
+    </miuix.preference.RadioSetPreferenceCategory>
+    <miuix.preference.RadioSetPreferenceCategory>
+      <miuix.preference.RadioButtonPreference android:title="@string/accessibility_timeout_10secs"
+                            android:key="accessibility_control_timeout_10secs"
+                            settings:controller="com.android.settings.accessibility.AccessibilityTimeoutController" />
+    </miuix.preference.RadioSetPreferenceCategory>
+    <miuix.preference.RadioSetPreferenceCategory>
+      <miuix.preference.RadioButtonPreference android:title="@string/accessibility_timeout_30secs"
+                            android:key="accessibility_control_timeout_30secs"
+                            settings:controller="com.android.settings.accessibility.AccessibilityTimeoutController" />
+    </miuix.preference.RadioSetPreferenceCategory>
+    <miuix.preference.RadioSetPreferenceCategory>
+      <miuix.preference.RadioButtonPreference android:title="@string/accessibility_timeout_1min"
+                            android:key="accessibility_control_timeout_1min"
+                            settings:controller="com.android.settings.accessibility.AccessibilityTimeoutController" />
+    </miuix.preference.RadioSetPreferenceCategory>
+    <miuix.preference.RadioSetPreferenceCategory>
+      <miuix.preference.RadioButtonPreference android:title="@string/accessibility_timeout_2mins"
+                            android:key="accessibility_control_timeout_2mins"
+                            settings:controller="com.android.settings.accessibility.AccessibilityTimeoutController" />
+    </miuix.preference.RadioSetPreferenceCategory>
+  </miuix.preference.RadioButtonPreferenceCategory>
+  <com.android.settings.accessibility.AccessibilityFooterPreference android:title="@string/accessibility_control_timeout_preference_summary"
+                        android:selectable="false"
+                        android:key="accessibility_control_timeout_footer"
+                        settings:controller="com.android.settings.accessibility.AccessibilityControlTimeoutFooterPreferenceController"
+                        settings:searchable="false" />
+</PreferenceScreen>

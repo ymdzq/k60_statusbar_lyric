@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<set xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+  <objectAnimator android:interpolator="@android:anim/decelerate_interpolator"
+                  android:duration="300"
+                  android:valueFrom="@color/qs_tile_icon_enabled_color"
+                  android:valueTo="@color/qs_tile_icon_disabled_color"
+                  android:valueType="colorType"
+                  android:propertyName="fillColor" />
+  <objectAnimator android:interpolator="@android:interpolator/fast_out_slow_in"
+                  android:duration="100"
+                  android:valueFrom="M 32.9 19.1 C 28.6 18.5 25 21.8 25 26 L 25 36.2 C 25 37.3 25.9 38.2 27 38.2 C 28.1 38.2 29 37.3 29 36.2 L 29 26 C 29 24.2 30.7 22.7 32.6 23 C 34 23.3 35 24.6 35 26.1 L 35 28.4 C 35 28.95 35.225 29.45 35.587 29.813 C 35.95 30.175 36.45 30.4 37 30.4 C 37.55 30.4 38.05 30.175 38.413 29.813 C 38.775 29.45 39 28.95 39 28.4 L 39 26.3 C 39 22.7 36.5 19.5 32.9 19.1 Z"
+                  android:valueTo="M 32.9 19.1 C 28.6 18.5 25 21.8 25 26 L 25 36.2 C 25 37.3 25.9 38.2 27 38.2 C 28.1 38.2 29 37.3 29 36.2 L 29 26 C 29 24.2 30.7 22.7 32.6 23 C 34 23.3 35 24.6 35 26.1 L 35 27 C 35 26.867 35 26.733 35 26.6 C 35 27.7 35.9 28.6 37 28.6 C 38.1 28.6 39 27.7 39 26.6 C 39 26.733 39 26.867 39 27 L 39 26.3 C 39 22.7 36.5 19.5 32.9 19.1 Z"
+                  android:valueType="pathType"
+                  android:propertyName="pathData" />
+</set>

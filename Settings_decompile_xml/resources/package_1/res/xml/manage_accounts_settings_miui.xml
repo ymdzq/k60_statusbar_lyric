@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+  <PreferenceCategory android:key="account_sync">
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/sync_enable"
+                          android:key="sync_enable"
+                          android:order="-1" />
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:persistent="false"
+                          android:title="@string/sync_wifi_only"
+                          android:key="wifi_only"
+                          android:order="0"
+                          android:dependency="sync_enable" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/xiaomi_account"
+                      android:key="account_xiaomi">
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:persistent="false"
+                          android:title="@string/xiaomi_cloud_service"
+                          android:key="xiaomi_cloud_service" />
+    <com.android.settingslib.miuisettings.preference.Preference android:persistent="false"
+                          android:enabled="false"
+                          android:layout="@layout/preference_textview_secondary"
+                          android:title="@string/xiaomi_cloud_service_description" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/account_other"
+                      android:key="account_other" />
+</PreferenceScreen>

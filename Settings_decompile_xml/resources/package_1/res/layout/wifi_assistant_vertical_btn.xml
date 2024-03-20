@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:id="@id/contentPanel"
+              style="@style/dialog_btn_vertical_group" xmlns:android="http://schemas.android.com/apk/res/android">
+  <Button android:textSize="@dimen/text_font_size_51"
+          android:id="@id/wifi_candidate"
+          android:visibility="gone"
+          style="@style/wifi_assistant_dialog_btn_normal" />
+  <Button android:textSize="@dimen/text_font_size_51"
+          android:id="@id/wifi_negative"
+          style="@style/wifi_assistant_dialog_btn_normal" />
+  <Button android:textSize="@dimen/text_font_size_51"
+          android:id="@id/wifi_positive"
+          style="@style/wifi_assistant_dialog_btn_suggestion" />
+</LinearLayout>

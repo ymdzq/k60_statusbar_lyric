@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<miuix.springback.view.SpringBackLayout android:layout_width="fill_parent"
+                      android:layout_height="fill_parent"
+                      settings:scrollableView="@id/scroll_view" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <androidx.core.widget.NestedScrollView android:id="@id/scroll_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical"
+                  android:focusable="true"
+                  android:focusableInTouchMode="true"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:importantForAccessibility="no">
+      <TextView android:textSize="@dimen/haptic_text_size"
+                android:textColor="#ffffff"
+                android:id="@id/haptic_text"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="@dimen/video_text_margin_bottom"
+                android:text="@string/crisp_text"
+                android:alpha="0.6"
+                android:layout_marginStart="@dimen/video_text_margin_start_end"
+                android:layout_marginEnd="@dimen/video_text_margin_start_end" />
+      <com.android.settings.haptic.widget.HapticGridView android:id="@id/ringtone_grid"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+</miuix.springback.view.SpringBackLayout>

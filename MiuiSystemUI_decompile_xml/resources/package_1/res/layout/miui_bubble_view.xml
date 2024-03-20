@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<com.android.wm.shell.miuifreeform.miuibubbles.views.MiuiBubbleImageView android:id="@id/miui_bubble_view"
+                      android:background="@android:color/transparent"
+                      android:layout_width="@dimen/miui_bubble_size"
+                      android:layout_height="@dimen/miui_bubble_size"
+                      android:scaleType="centerCrop"
+                      android:elevation="@dimen/miui_bubble_elevation" xmlns:android="http://schemas.android.com/apk/res/android" />

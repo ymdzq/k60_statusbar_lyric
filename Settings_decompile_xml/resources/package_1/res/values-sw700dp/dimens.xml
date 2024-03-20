@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+  <dimen name="provision_anim_floating_window_height_edge">238.0dp</dimen>
+  <dimen name="provision_anim_floating_window_width_edge">188.97dp</dimen>
+  <dimen name="provision_anim_margin_end">131.0dp</dimen>
+  <dimen name="provision_anim_margin_start">131.0dp</dimen>
+  <dimen name="provision_container_margin_top">30.6dp</dimen>
+  <dimen name="provision_margin_bottom">12.0dp</dimen>
+  <dimen name="provision_navigation_height">109.18dp</dimen>
+  <dimen name="provision_padding_top">43.65dp</dimen>
+  <dimen name="provision_padding_top_miui14">48.65dp</dimen>
+  <dimen name="provision_preview_height">238.0dp</dimen>
+  <dimen name="provision_preview_width">395.0dp</dimen>
+  <dimen name="provision_text_padding_bottom">43.0dp</dimen>
+  <dimen name="provision_text_padding_end">73.3dp</dimen>
+  <dimen name="provision_text_padding_start">73.3dp</dimen>
+  <dimen name="provision_text_padding_top">34.0dp</dimen>
+</resources>

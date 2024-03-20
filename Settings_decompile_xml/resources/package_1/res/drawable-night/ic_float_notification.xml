@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<vector android:height="@dimen/notification_card_icon_height"
+        android:width="@dimen/notification_card_icon_width"
+        android:viewportWidth="124.0"
+        android:viewportHeight="236.0" xmlns:android="http://schemas.android.com/apk/res/android">
+  <path android:fillColor="#00000000"
+        android:pathData="M18,4L106,4A14,14 0,0 1,120 18L120,218A14,14 0,0 1,106 232L18,232A14,14 0,0 1,4 218L4,18A14,14 0,0 1,18 4z"
+        android:strokeColor="#ffffff"
+        android:strokeWidth="8.0"
+        android:strokeAlpha="0.2" />
+  <path android:fillColor="#0073dd"
+        android:pathData="M19,13L105,13A6,6 0,0 1,111 19L111,35A6,6 0,0 1,105 41L19,41A6,6 0,0 1,13 35L13,19A6,6 0,0 1,19 13z" />
+</vector>

@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:persistent="false"
+                  android:title="@string/accessibility_display_inversion_preference_title" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <com.android.settings.widget.VideoPreference android:persistent="false"
+                        android:title="@string/summary_placeholder"
+                        android:selectable="false"
+                        android:key="color_inversion_preview"
+                        settings:allowDividerBelow="true"
+                        settings:controller="com.android.settings.widget.VideoPreferenceController"
+                        settings:searchable="false" />
+</PreferenceScreen>

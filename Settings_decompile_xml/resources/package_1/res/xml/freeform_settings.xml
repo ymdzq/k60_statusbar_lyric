@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/freeform_guide_settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory>
+    <com.android.settingslib.miuisettings.preference.Preference android:enabled="false"
+                          android:layout="@layout/freeform_vedio" />
+  </PreferenceCategory>
+  <PreferenceCategory android:key="freeform_dock_category">
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/gd_setting_title"
+                          android:key="dock_assistant"
+                          settings:controller="com.android.settings.special.SuperAssistantController">
+      <intent android:targetPackage="com.miui.securitycenter"
+              android:action="com.miui.dock.ACTION_SETTINGS" />
+    </com.android.settingslib.miuisettings.preference.Preference>
+    <miuix.preference.TextPreference android:title="@string/miui_bubbles_notification"
+                          android:key="miui_bubbles_notification">
+      <intent android:targetPackage="com.miui.securitycenter"
+              android:action="com.miui.bubbles.BUBBLES_SETTINGS" />
+    </miuix.preference.TextPreference>
+    <CheckBoxPreference android:persistent="false"
+                        android:gravity="center|right"
+                        android:title="@string/freeform_recommend_open_switch_title"
+                        android:key="freeform_recommend_main_switch_preference"
+                        android:summary="@string/freeform_recommend_open_switch_summary" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/operation_guide_title"
+                      android:key="freeform_guide_category">
+    <com.android.settingslib.miuisettings.preference.Preference android:icon="@drawable/multi_window_cvw"
+                          android:layout="@layout/freeform_guide_item"
+                          android:title="@string/multi_window_cvw_title"
+                          android:key="key_multi_window_cvw"
+                          android:summary="@string/multi_window_cvw_summary"
+                          showIcon="true" />
+    <com.android.settingslib.miuisettings.preference.Preference android:icon="@drawable/freeform_guide_notification_drop_down"
+                          android:layout="@layout/freeform_guide_item"
+                          android:title="@string/freeform_guide_notification_drop_down_title"
+                          android:key="key_freeform_guide_notification_drop_down"
+                          android:summary="@string/freeform_guide_notification_drop_down_summary"
+                          showIcon="true" />
+    <com.android.settingslib.miuisettings.preference.Preference android:icon="@drawable/freeform_guide_move"
+                          android:layout="@layout/freeform_guide_item"
+                          android:title="@string/freeform_guide_move_title"
+                          android:key="key_freeform_guide_move"
+                          android:summary="@string/freeform_guide_move_summary"
+                          showIcon="true" />
+    <com.android.settingslib.miuisettings.preference.Preference android:icon="@drawable/freeform_guide_to_sidehide"
+                          android:layout="@layout/freeform_guide_item"
+                          android:title="@string/freeform_guide_to_sidehide_title"
+                          android:key="key_freeform_guide_to_sidehide"
+                          android:summary="@string/freeform_guide_to_sidehide_summary"
+                          showIcon="true" />
+    <com.android.settingslib.miuisettings.preference.Preference android:icon="@drawable/freeform_guide_drop_down_to_fullscreen"
+                          android:layout="@layout/freeform_guide_item"
+                          android:title="@string/freeform_guide_drop_down_to_fullscreen_title"
+                          android:key="key_freeform_guide_drop_down_to_fullscreen"
+                          android:summary="@string/freeform_guide_drop_down_to_fullscreen_summary"
+                          showIcon="true" />
+    <com.android.settingslib.miuisettings.preference.Preference android:icon="@drawable/freeform_guide_move_to_small_freeform_window"
+                          android:layout="@layout/freeform_guide_item"
+                          android:title="@string/freeform_guide_move_to_small_freeform_window_title"
+                          android:key="key_freeform_guide_move_to_small_freeform_window"
+                          android:summary="@string/freeform_guide_move_to_small_freeform_window_summary"
+                          showIcon="true" />
+    <com.android.settingslib.miuisettings.preference.Preference android:icon="@drawable/freeform_guide_slide_to_small_freeform"
+                          android:layout="@layout/freeform_guide_item"
+                          android:title="@string/freeform_guide_slide_to_small_freeform_title"
+                          android:key="key_freeform_guide_slide_to_small_freeform"
+                          android:summary="@string/freeform_guide_slide_to_small_freeform_summary"
+                          showIcon="true" />
+    <com.android.settingslib.miuisettings.preference.Preference android:icon="@drawable/freeform_guide_multiple_window"
+                          android:layout="@layout/freeform_guide_item"
+                          android:title="@string/freeform_guide_multiple_window_title"
+                          android:key="key_freeform_guide_multiple_window"
+                          android:summary="@string/freeform_guide_multiple_window_summary"
+                          showIcon="true" />
+    <com.android.settingslib.miuisettings.preference.Preference android:icon="@drawable/freeform_guide_free_drag"
+                          android:layout="@layout/freeform_guide_item"
+                          android:title="@string/freeform_guide_free_drag_title"
+                          android:key="key_freeform_guide_free_drag"
+                          android:summary="@string/freeform_guide_free_drag_summary"
+                          showIcon="true" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/split_operation_guide_title"
+                      android:key="gesture_split_guide_category">
+    <com.android.settingslib.miuisettings.preference.Preference android:icon="@drawable/freeform_gesture_to_split_screen"
+                          android:layout="@layout/freeform_guide_item"
+                          android:title="@string/gesture_to_split_screen"
+                          android:key="key_freeform_Gesture_Split_Screen"
+                          android:summary="@string/three_fingers_slide_horizontally_into_splitscreen_pad"
+                          showIcon="true" />
+    <com.android.settingslib.miuisettings.preference.Preference android:icon="@drawable/freedom_guide_split_screen_combination"
+                          android:layout="@layout/freeform_guide_item"
+                          android:title="@string/freeform_guide_split_screen_combination_pad"
+                          android:key="key_freeform_guide_split_screen_combination"
+                          android:summary="@string/freeform_guide_split_screen_combination_summary_pad"
+                          showIcon="true" />
+  </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/more_connection" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <com.android.settingslib.RestrictedPreference android:title="@string/wifi_tether_settings_title"
+                        android:key="wifi_tether_settings">
+    <intent android:targetPackage="com.android.settings"
+            android:targetClass="com.android.settings.Settings$TetherSettingsActivity" />
+  </com.android.settingslib.RestrictedPreference>
+  <com.android.settingslib.RestrictedSwitchPreference android:persistent="false"
+                        android:title="@string/airplane_mode"
+                        android:key="toggle_airplane"
+                        android:disableDependentsState="true"
+                        settings:useAdminDisabledSummary="true"
+                        settings:userRestriction="no_airplane_mode" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/vpn_settings_title"
+                        android:key="vpn_settings"
+                        android:fragment="com.android.settings.vpn2.MiuiVpnSettings" />
+  <com.android.settingslib.RestrictedPreference android:title="@string/private_dns_title"
+                        android:key="private_dns_settings"
+                        android:fragment="com.android.settings.network.PrivateDnsSettingsFragment" />
+  <PreferenceCategory />
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:key="mimirror_settings" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/xiaomi_transfer"
+                        android:key="mishare_settings">
+    <intent android:action="com.miui.mishare.action.MiShareSettings" />
+  </com.android.settingslib.miuisettings.preference.Preference>
+  <com.android.settings.MiuiValuePreference android:title="@string/nfc_quick_toggle_title"
+                        android:key="miui_nfc"
+                        android:fragment="com.android.settings.nfc.MiuiNfcDetail"
+                        settings:controller="com.android.settings.wireless.MiuiNFCController" />
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/screen_projection"
+                        android:key="screen_projection" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/print_settings"
+                        android:key="miprint_settings"
+                        android:fragment="com.android.settings.print.PrintSettingsFragment" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/ucar_screen_projection_title"
+                        android:key="ucar_screen_settings">
+    <intent android:targetPackage="com.miui.carlink"
+            android:action="miui.intent.action.UCAR_APP_SETTINGS" />
+  </com.android.settingslib.miuisettings.preference.Preference>
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/photography_handle_title"
+                        android:key="camera_grip_settings"
+                        android:fragment="com.android.settings.cameragrip.CameraGripDetail"
+                        settings:controller="com.android.settings.cameragrip.CameraGripController" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/launch_smarthome"
+                        android:key="uwb_settings"
+                        settings:showRightArrow="true" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/wfd_settings_title"
+                        android:key="wfd_settings"
+                        android:summary="@string/wfd_settings_description"
+                        android:fragment="com.android.settings.wfd.MiuiWifiDisplaySettings" />
+  <PreferenceCategory android:title="@string/nfc_category_title"
+                      android:key="nfc_category" />
+  <com.android.settingslib.widget.MainSwitchPreference android:persistent="false"
+                        android:title="@string/nfc_quick_toggle_title"
+                        android:key="toggle_nfc"
+                        android:summary="@string/nfc_quick_toggle_summary" />
+  <com.android.settingslib.miuisettings.preference.SwitchPreference android:title="@string/nfc_secure_settings_title"
+                        android:key="nfc_secure_settings"
+                        android:summary="@string/nfc_secure_toggle_summary" />
+  <com.android.settingslib.RestrictedPreference android:title="@string/android_beam_settings_title"
+                        android:key="android_beam_settings"
+                        android:fragment="com.android.settings.nfc.MiuiAndroidBeam"
+                        style="?attr/preferenceStyle" />
+  <com.android.settingslib.miuisettings.preference.ListPreference android:persistent="false"
+                        android:title="@string/nfc_se_route_title"
+                        android:key="se_route"
+                        android:entryValues="@array/nfc_se_route_values" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/nfc_payment_settings_title"
+                        android:key="nfc_payment"
+                        android:fragment="com.android.settings.nfc.PaymentSettings" />
+  <com.android.settingslib.miuisettings.preference.Preference android:persistent="false"
+                        android:title="@string/nfc_repair_title"
+                        android:key="nfc_repair"
+                        android:summary="@string/nfc_repair_summary" />
+  <com.android.settingslib.RestrictedSwitchPreference android:persistent="false"
+                        android:title="@string/nfc_dnd_mode_title"
+                        android:key="toggle_nfc_dnd_mode"
+                        android:summary="@string/nfc_dnd_mode_summary" />
+  <PreferenceCategory settings:controller="com.android.settings.MiuiBaseCategoryController">
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/data_usage_summary_title"
+                          android:key="data_usage_settings">
+      <intent android:targetPackage="com.miui.securitycenter"
+              android:targetClass="com.miui.networkassistant.ui.activity.TrafficSortedActivity" />
+    </com.android.settingslib.miuisettings.preference.Preference>
+    <com.android.settingslib.RestrictedPreference android:title="@string/reset_network_title"
+                          android:key="network_reset"
+                          android:fragment="com.android.settings.ResetNetwork"
+                          settings:keywords="@string/keywords_network_reset"
+                          settings:useAdminDisabledSummary="true"
+                          settings:userRestriction="no_network_reset"
+                          style="?attr/preferenceStyle" />
+    <com.android.settingslib.RestrictedPreference android:title="@string/network_settings_title"
+                          android:key="mobile_network_settings"
+                          android:dependency="toggle_airplane"
+                          settings:keywords="@string/keywords_more_mobile_networks"
+                          settings:useAdminDisabledSummary="true"
+                          settings:userRestriction="no_config_mobile_networks"
+                          style="?attr/preferenceStyle">
+      <intent android:targetPackage="com.android.phone"
+              android:action="android.intent.action.MAIN"
+              android:targetClass="com.android.phone.settings.MobileNetworkSettings" />
+    </com.android.settingslib.RestrictedPreference>
+  </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:id="@id/bluetoothShareBroadcast" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:key="bluetooth_show"
+                      android:order="1">
+    <com.android.settings.bluetooth.GuidePreference android:persistent="false"
+                          android:enabled="false"
+                          android:key="pref_key_guide"
+                          android:order="1" />
+    <com.android.settingslib.RestrictedSwitchPreference android:visibility="gone"
+                          android:title="@string/bluetooth_broadcast_audio_onlysource"
+                          android:key="bluetooth_broadcast_enable"
+                          android:order="2"
+                          android:disableDependentsState="false" />
+    <com.android.settingslib.miuisettings.preference.miuix.DropDownPreference android:title="@string/auto_disable_broadcast_audio"
+                          android:key="ba_auto_disable"
+                          android:order="4"
+                          settings:entries="@array/ba_disable_timeout"
+                          settings:entryValues="@array/ba_disable_timeout_value" />
+  </PreferenceCategory>
+</PreferenceScreen>

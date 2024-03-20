@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<animated-vector android:drawable="@drawable/$ic_qs_vibrate_on__0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+  <target android:name="group"
+          android:animation="@drawable/$ic_qs_vibrate_on__1" />
+  <target android:name="group1"
+          android:animation="@drawable/$ic_qs_vibrate_on__2" />
+  <target android:name="group2"
+          android:animation="@drawable/$ic_qs_vibrate_on__3" />
+  <target android:name="group3"
+          android:animation="@drawable/$ic_qs_vibrate_on__4" />
+  <target android:name="group4"
+          android:animation="@drawable/$ic_qs_vibrate_on__5" />
+  <target android:name="center"
+          android:animation="@drawable/$ic_qs_vibrate_on__6" />
+  <target android:name="left1"
+          android:animation="@drawable/$ic_qs_vibrate_on__7" />
+  <target android:name="left2"
+          android:animation="@drawable/$ic_qs_vibrate_on__8" />
+  <target android:name="right1"
+          android:animation="@drawable/$ic_qs_vibrate_on__9" />
+  <target android:name="right2"
+          android:animation="@drawable/$ic_qs_vibrate_on__10" />
+</animated-vector>

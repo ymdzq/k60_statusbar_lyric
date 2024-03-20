@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+  <integer name="confirm_password_btn_bottom_space">2</integer>
+  <integer name="confirm_password_entry_and_btn_space">0</integer>
+  <integer name="design_snackbar_text_max_lines">1</integer>
+  <integer name="normal_camera_face_enroll_bottom">621</integer>
+  <integer name="normal_camera_face_enroll_left">148</integer>
+  <integer name="normal_camera_face_enroll_right">588</integer>
+  <integer name="normal_camera_face_enroll_top">160</integer>
+  <integer name="normal_camera_mul_face_detect_bottom">693</integer>
+  <integer name="normal_camera_mul_face_detect_left">90</integer>
+  <integer name="normal_camera_mul_face_detect_right">581</integer>
+  <integer name="normal_camera_mul_face_detect_top">160</integer>
+  <integer name="normal_camera_mul_face_enroll_bottom">621</integer>
+  <integer name="normal_camera_mul_face_enroll_left">148</integer>
+  <integer name="normal_camera_mul_face_enroll_right">588</integer>
+  <integer name="normal_camera_mul_face_enroll_top">160</integer>
+</resources>

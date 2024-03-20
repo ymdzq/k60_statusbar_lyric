@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<vector android:height="@dimen/input_method_select_function_icon_size"
+        android:width="@dimen/input_method_select_function_icon_size"
+        android:viewportWidth="84.0"
+        android:viewportHeight="84.0" xmlns:android="http://schemas.android.com/apk/res/android">
+  <path android:fillColor="@color/input_method_function_icon_color_unselected"
+        android:pathData="M73,42C73,59.1208 59.1208,73 42,73C24.8792,73 11,59.1208 11,42C11,24.8792 24.8792,11 42,11C59.1208,11 73,24.8792 73,42ZM68.303,42C68.303,56.5268 56.5268,68.303 42,68.303C27.4732,68.303 15.697,56.5268 15.697,42C15.697,27.4732 27.4732,15.697 42,15.697C56.5268,15.697 68.303,27.4732 68.303,42ZM28.5,39C27.1193,39 26,40.1193 26,41.5C26,42.8807 27.1193,44 28.5,44H55.5C56.8807,44 58,42.8807 58,41.5C58,40.1193 56.8807,39 55.5,39H28.5Z"
+        android:fillType="evenOdd" />
+</vector>

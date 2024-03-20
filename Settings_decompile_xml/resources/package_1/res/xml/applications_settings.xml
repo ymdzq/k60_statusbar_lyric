@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/system_app_settings"
+                        android:key="system_app_settings"
+                        android:fragment="com.android.settings.applications.SystemAppSettings" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/applications_settings"
+                        android:key="applications_settings"
+                        android:fragment="com.android.settings.applications.ApplicationsContainer" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/launcher_icon_management"
+                        android:key="launcher_icon_management"
+                        settings:controller="com.android.settings.applications.LauncherIconManagerController">
+    <intent android:action="com.miui.home.settings.action.ALL_HIDE_APP_SETTINGS" />
+  </com.android.settingslib.miuisettings.preference.Preference>
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/already_delete_system_app"
+                        android:key="already_delete_system_app"
+                        settings:controller="com.android.settings.applications.LauncherIconManagerController">
+    <intent android:action="com.miui.home.settings.action.DELETED_SYSTEM_APPS_SETTINGS" />
+  </com.android.settingslib.miuisettings.preference.Preference>
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/xspace"
+                        android:key="xspace"
+                        settings:controller="com.android.settings.applications.XSpaceSettingsController">
+    <intent android:targetPackage="com.miui.securitycore"
+            android:targetClass="com.miui.xspace.ui.activity.XSpaceSettingActivity" />
+  </com.android.settingslib.miuisettings.preference.Preference>
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/permission_manager"
+                        android:key="permission_manager"
+                        android:fragment="com.android.settings.permcenter.PermissonManagerContainer"
+                        settings:controller="com.android.settings.applications.PermissionManagerController">
+    <intent android:action="miui.intent.action.LICENSE_MANAGER" />
+  </com.android.settingslib.miuisettings.preference.Preference>
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/application_lock_name"
+                        android:key="application_lock"
+                        settings:controller="com.android.settings.applications.ApplicationLockController">
+    <intent android:action="com.miui.securitycenter.action.TRANSITION" />
+  </com.android.settingslib.miuisettings.preference.Preference>
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/application_mode_name"
+                        android:key="application_mode">
+    <intent android:targetPackage="com.android.settings"
+            android:targetClass="com.android.settings.applicationmode.ApplicationModeActivity" />
+  </com.android.settingslib.miuisettings.preference.Preference>
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/safe_install_mode_settings"
+                        android:key="safe_install_mode_pref"
+                        settings:controller="com.android.settings.applications.SafeInstallModeController">
+    <intent android:targetPackage="com.miui.packageinstaller"
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.miui.packageInstaller.ui.secure.SecureModeActivity" />
+  </com.android.settingslib.miuisettings.preference.Preference>
+</PreferenceScreen>

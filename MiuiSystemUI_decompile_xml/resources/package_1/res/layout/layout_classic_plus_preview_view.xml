@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical"
+                      android:id="@id/clock_container"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto">
+  <androidx.constraintlayout.widget.Group android:id="@id/second_line"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        systemui:r0x7f0401da="area2,time_view2" />
+  <View android:id="@id/area1"
+        android:layout_width="1.0dp"
+        android:layout_height="@dimen/classic_plus_area_time_height"
+        systemui:r0x7f04042a="@id/area2"
+        systemui:r0x7f040443="0"
+        systemui:r0x7f040447="0"
+        systemui:r0x7f040449="2" />
+  <View android:id="@id/area2"
+        android:layout_width="1.0dp"
+        android:layout_height="@dimen/classic_plus_area_time_height"
+        systemui:r0x7f040429="0"
+        systemui:r0x7f040443="0"
+        systemui:r0x7f040446="@id/area1" />
+  <com.miui.clock.MiuiTextGlassView android:textSize="@dimen/classic_time_area_plus_text_size"
+                        android:textColor="@color/classic_color_white"
+                        android:gravity="center_horizontal"
+                        android:id="@id/time_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:letterSpacing="-0.02"
+                        systemui:r0x7f040429="@id/area1"
+                        systemui:r0x7f040447="@id/area1" />
+  <com.miui.clock.MiuiTextGlassView android:textSize="@dimen/classic_time_area_plus_text_size"
+                        android:textColor="@color/classic_color_white"
+                        android:gravity="center_horizontal"
+                        android:id="@id/time_view2"
+                        android:visibility="gone"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:letterSpacing="-0.02"
+                        systemui:r0x7f040429="@id/area2"
+                        systemui:r0x7f040447="@id/area2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

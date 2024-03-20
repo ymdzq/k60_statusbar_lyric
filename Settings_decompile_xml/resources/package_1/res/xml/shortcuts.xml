@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+  <shortcut android:icon="@drawable/ic_shortcut_display"
+            android:shortcutId="manifest-shortcut-display"
+            android:shortcutShortLabel="@string/display_settings_new">
+    <intent android:action="android.settings.DISPLAY_SETTINGS" />
+  </shortcut>
+  <shortcut android:icon="@drawable/ic_shortcut_sound"
+            android:shortcutId="manifest-shortcut-sound"
+            android:shortcutShortLabel="@string/sound_vibrate_settings">
+    <intent android:action="android.settings.SOUND_SETTINGS" />
+  </shortcut>
+  <shortcut android:icon="@drawable/ic_shortcut_wifi"
+            android:shortcutId="manifest-shortcut-wifi"
+            android:shortcutShortLabel="@string/wifi_settings">
+    <intent android:action="android.settings.WIFI_SETTINGS" />
+  </shortcut>
+</shortcuts>

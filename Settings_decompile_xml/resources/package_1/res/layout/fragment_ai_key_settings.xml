@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<ScrollView android:layout_width="fill_parent"
+            android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+    <ImageView android:layout_width="160.0dp"
+               android:layout_height="170.0dp"
+               android:layout_margin="40.0dp"
+               android:src="@drawable/ai_gesture_header" />
+    <View android:background="#d8d8d8"
+          android:layout_width="fill_parent"
+          android:layout_height="1.0dp" />
+    <RelativeLayout android:gravity="center_vertical"
+                    android:layout_gravity="center_vertical"
+                    android:id="@id/ai_single_click"
+                    android:paddingTop="14.0dp"
+                    android:paddingBottom="14.0dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+      <TextView android:textSize="@dimen/ai_settings_title"
+                android:textColor="@color/ai_settings_title_color"
+                android:id="@id/single_click_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="72.0dp"
+                android:text="@string/ai_key_single_click" />
+      <TextView android:textSize="@dimen/ai_settings_summary"
+                android:textColor="@color/ai_settings_summary_color"
+                android:id="@id/single_click_summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="72.0dp"
+                android:layout_marginTop="2.0dp"
+                android:layout_below="@id/single_click_title" />
+    </RelativeLayout>
+    <RelativeLayout android:gravity="center_vertical"
+                    android:layout_gravity="center_vertical"
+                    android:id="@id/ai_long_press"
+                    android:paddingTop="14.0dp"
+                    android:paddingBottom="14.0dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+      <TextView android:textSize="@dimen/ai_settings_title"
+                android:textColor="@color/ai_settings_title_color"
+                android:id="@id/long_press_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="72.0dp"
+                android:text="@string/ai_key_long_press" />
+      <TextView android:textSize="@dimen/ai_settings_summary"
+                android:textColor="@color/ai_settings_summary_color"
+                android:id="@id/long_press_summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="72.0dp"
+                android:layout_marginTop="2.0dp"
+                android:layout_below="@id/long_press_title" />
+    </RelativeLayout>
+    <RelativeLayout android:gravity="center_vertical"
+                    android:layout_gravity="center_vertical"
+                    android:id="@id/ai_double_click"
+                    android:paddingTop="14.0dp"
+                    android:paddingBottom="14.0dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+      <TextView android:textSize="@dimen/ai_settings_title"
+                android:textColor="@color/ai_settings_title_color"
+                android:id="@id/double_click_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="72.0dp"
+                android:text="@string/ai_key_double_click" />
+      <TextView android:textSize="@dimen/ai_settings_summary"
+                android:textColor="@color/ai_settings_summary_color"
+                android:id="@id/double_click_summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="72.0dp"
+                android:layout_marginTop="2.0dp"
+                android:layout_below="@id/double_click_title" />
+    </RelativeLayout>
+  </LinearLayout>
+</ScrollView>

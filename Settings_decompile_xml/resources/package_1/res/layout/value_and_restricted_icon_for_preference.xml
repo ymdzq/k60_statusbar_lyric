@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center_vertical"
+              android:layout_gravity="center_vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginEnd="@dimen/miuix_preference_item_padding_inner" xmlns:android="http://schemas.android.com/apk/res/android">
+  <ImageView android:id="@id/restricted_icon"
+             android:layout_width="16.0dp"
+             android:layout_height="16.0dp"
+             android:src="@drawable/ic_info" />
+  <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.List.Secondary"
+            android:ellipsize="marquee"
+            android:gravity="end"
+            android:id="@id/value_right"
+            android:paddingTop="@dimen/preference_value_padding_top"
+            android:paddingBottom="@dimen/preference_value_padding_bottom"
+            android:visibility="gone"
+            android:fadingEdge="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="@dimen/preference_value_max_width"
+            android:maxLines="10" />
+</LinearLayout>

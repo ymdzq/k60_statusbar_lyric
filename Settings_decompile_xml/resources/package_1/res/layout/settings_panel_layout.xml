@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:background="@drawable/settings_panel_layout_bg"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <TextView android:ellipsize="end"
+            android:layout_gravity="center"
+            android:id="@id/panel_title"
+            android:paddingTop="@dimen/dialog_title_vertical_padding_bottom"
+            android:paddingBottom="@dimen/dialog_title_vertical_padding_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            style="@style/Widget.DialogTitle" />
+  <FrameLayout android:id="@id/fragment_content"
+               android:visibility="gone"
+               android:layout_width="fill_parent"
+               android:layout_height="@dimen/settings_panel_default_height" />
+  <FrameLayout android:id="@id/fragment_other"
+               android:visibility="gone"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content" />
+  <LinearLayout android:orientation="horizontal"
+                android:id="@id/button_group"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/settings_panel_button_group_height"
+                android:layout_marginTop="20.0dp"
+                android:layout_marginBottom="20.0dp"
+                android:layout_marginStart="@dimen/miuix_appcompat_dialog_button_panel_horizontal_margin"
+                android:layout_marginEnd="@dimen/miuix_appcompat_dialog_button_panel_horizontal_margin">
+    <Button android:gravity="center"
+            android:id="@id/see_more"
+            android:layout_width="0.0dp"
+            android:layout_height="@dimen/settings_panel_button_group_height"
+            android:text="@string/see_more"
+            android:maxLines="2"
+            android:layout_weight="1.0"
+            style="?android:attr/buttonBarButtonStyle" />
+    <Space android:layout_width="15.0dp"
+           android:layout_height="fill_parent" />
+    <Button android:gravity="center"
+            android:id="@id/done"
+            android:layout_width="0.0dp"
+            android:layout_height="@dimen/settings_panel_button_group_height"
+            android:text="@string/done"
+            android:maxLines="2"
+            android:layout_weight="1.0"
+            style="?attr/buttonBarDefaultButtonStyle" />
+  </LinearLayout>
+</LinearLayout>

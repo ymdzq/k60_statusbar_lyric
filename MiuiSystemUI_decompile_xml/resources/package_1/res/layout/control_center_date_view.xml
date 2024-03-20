@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<com.android.systemui.controlcenter.phone.widget.ControlCenterDateView android:textAppearance="@style/TextAppearance.QSControl.Date"
+                      android:id="@id/date_time"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_alignBaseline="@id/big_time"
+                      android:layout_marginStart="@dimen/notification_panel_time_date_space"
+                      android:layout_marginEnd="@dimen/qs_control_title_margin_end"
+                      android:layout_toEndOf="@id/big_time"
+                      systemui:r0x7f040001="4"
+                      systemui:r0x7f040002="false" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto" />

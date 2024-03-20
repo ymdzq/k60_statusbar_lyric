@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<FrameLayout android:layout_width="fill_parent"
+             android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+  <FrameLayout android:id="@id/tips_fullscreen"
+               android:background="@drawable/drag_tips_background"
+               android:visibility="invisible"
+               android:layout_width="fill_parent"
+               android:layout_height="fill_parent"
+               android:layout_margin="20.0dp"
+               android:alpha="0.0">
+    <LinearLayout android:layout_gravity="center_horizontal"
+                  android:orientation="vertical"
+                  android:layout_width="120.0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="70.0dp">
+      <View android:layout_gravity="center_horizontal"
+            android:id="@id/iconView_fullscreen"
+            android:layout_width="30.0dp"
+            android:layout_height="30.0dp" />
+      <TextView android:textSize="@dimen/tips_text_size"
+                android:textStyle="normal"
+                android:textColor="@color/drag_tips_text_color"
+                android:id="@id/tv_fullscreen"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.0dp"
+                android:text="@string/drag_shadow_fullscreen_open"
+                android:fontFamily="MiSans"
+                android:textAlignment="center"
+                android:lineHeight="19.0sp" />
+    </LinearLayout>
+  </FrameLayout>
+  <LinearLayout android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical"
+                  android:id="@id/tips_splitLeft"
+                  android:background="@drawable/drag_tips_background"
+                  android:visibility="invisible"
+                  android:layout_width="wrap_content"
+                  android:layout_height="fill_parent"
+                  android:layout_margin="20.0dp"
+                  android:layout_weight="1.0"
+                  android:alpha="0.0">
+      <LinearLayout android:layout_gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:layout_width="120.0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="70.0dp">
+        <View android:layout_gravity="center_horizontal"
+              android:id="@id/iconView_splitLeft"
+              android:layout_width="30.0dp"
+              android:layout_height="30.0dp" />
+        <TextView android:textSize="@dimen/tips_text_size"
+                  android:textStyle="normal"
+                  android:textColor="@color/drag_tips_text_color"
+                  android:id="@id/tv_splitLeft"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="3.0dp"
+                  android:text="@string/drag_shadow_split_left_open"
+                  android:fontFamily="MiSans"
+                  android:textAlignment="center"
+                  android:lineHeight="19.0sp" />
+      </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical"
+                  android:id="@id/tips_splitRight"
+                  android:background="@drawable/drag_tips_background"
+                  android:visibility="invisible"
+                  android:layout_width="wrap_content"
+                  android:layout_height="fill_parent"
+                  android:layout_margin="20.0dp"
+                  android:layout_weight="1.0"
+                  android:alpha="0.0">
+      <LinearLayout android:layout_gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:layout_width="120.0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="70.0dp">
+        <View android:layout_gravity="center_horizontal"
+              android:id="@id/iconView_splitRight"
+              android:layout_width="30.0dp"
+              android:layout_height="30.0dp" />
+        <TextView android:textSize="@dimen/tips_text_size"
+                  android:textStyle="normal"
+                  android:textColor="@color/drag_tips_text_color"
+                  android:id="@id/tv_splitRight"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="3.0dp"
+                  android:text="@string/drag_shadow_split_right_open"
+                  android:fontFamily="MiSans"
+                  android:textAlignment="center"
+                  android:lineHeight="19.0sp" />
+      </LinearLayout>
+    </LinearLayout>
+  </LinearLayout>
+  <FrameLayout android:layout_gravity="center"
+               android:id="@id/tips_freeform"
+               android:background="@drawable/drag_tips_background"
+               android:visibility="invisible"
+               android:layout_width="288.0dp"
+               android:layout_height="461.0dp"
+               android:alpha="0.0">
+    <LinearLayout android:layout_gravity="center_horizontal"
+                  android:orientation="vertical"
+                  android:layout_width="120.0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="70.0dp">
+      <View android:layout_gravity="center_horizontal"
+            android:id="@id/iconView_freeform"
+            android:layout_width="30.0dp"
+            android:layout_height="30.0dp" />
+      <TextView android:textSize="@dimen/tips_text_size"
+                android:textStyle="normal"
+                android:textColor="@color/drag_tips_text_color"
+                android:id="@id/tv_freeform"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.0dp"
+                android:text="@string/drag_shadow_freeform_open"
+                android:fontFamily="MiSans"
+                android:textAlignment="center"
+                android:lineHeight="19.0sp" />
+    </LinearLayout>
+  </FrameLayout>
+</FrameLayout>

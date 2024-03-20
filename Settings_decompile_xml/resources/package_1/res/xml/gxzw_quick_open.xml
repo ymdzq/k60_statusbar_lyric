@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res/com.android.settings" xmlns:miuisettings="http://schemas.android.com/apk/miuisettings">
+  <PreferenceCategory android:key="gxzw_quick_open_navigation_category">
+    <Preference android:layout="@layout/gxzw_quick_open_navigation" />
+  </PreferenceCategory>
+  <PreferenceCategory android:key="gxzw_quick_open_category">
+    <CheckBoxPreference android:title="@string/gxzw_quick_open_enable_title"
+                        android:key="gxzw_quick_open_enable" />
+  </PreferenceCategory>
+</PreferenceScreen>

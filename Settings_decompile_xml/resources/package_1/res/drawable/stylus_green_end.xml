@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<vector android:height="15.0dp"
+        android:width="161.0dp"
+        android:viewportWidth="322.0"
+        android:viewportHeight="30.0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+  <group>
+    <clip-path android:pathData="M310,0h12v30h-12z" />
+    <path android:fillColor="@drawable/$stylus_green_end__0"
+          android:pathData="M24.199,4.6C26.458,3.629 27.588,3.144 28.758,2.802C29.798,2.498 30.86,2.28 31.935,2.148C33.145,2 34.375,2 36.834,2H307C314.18,2 320,7.82 320,15C320,22.18 314.18,28 307,28H36.834C34.375,28 33.145,28 31.935,27.852C30.86,27.72 29.798,27.502 28.758,27.198C27.588,26.856 26.458,26.371 24.199,25.4L10.261,19.41C7.026,18.02 5.409,17.325 4.918,16.348C4.491,15.5 4.491,14.5 4.918,13.652C5.409,12.675 7.026,11.98 10.261,10.59L24.199,4.6Z" />
+  </group>
+</vector>

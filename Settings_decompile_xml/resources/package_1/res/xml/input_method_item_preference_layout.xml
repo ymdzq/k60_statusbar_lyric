@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="horizontal"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/input_method_manage_item_margin_top_or_bottom"
+              android:layout_marginBottom="@dimen/input_method_manage_item_margin_top_or_bottom"
+              android:minHeight="@dimen/input_method_manage_item_min_height"
+              android:layout_marginStart="@dimen/preference_bt_custom_margin_start"
+              android:layout_marginEnd="@dimen/preference_bt_custom_margin_end" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:orientation="horizontal"
+                android:id="@id/head"
+                android:background="@drawable/preference_system_app_new_head_bg"
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/input_method_manage_item_min_height"
+                android:layout_weight="706.0">
+    <ImageView android:layout_gravity="center_vertical"
+               android:id="@android:id/icon"
+               android:layout_width="@dimen/input_method_manage_item_icon_height_or_width"
+               android:layout_height="@dimen/input_method_manage_item_icon_height_or_width"
+               android:scaleType="fitXY"
+               android:layout_marginStart="@dimen/input_method_manage_item_icon_margin_start" />
+    <LinearLayout android:layout_gravity="center_vertical"
+                  android:orientation="vertical"
+                  android:id="@id/text"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="@dimen/input_method_manage_item_text_margin_start">
+      <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.PreferenceList"
+                android:textSize="@dimen/input_method_manage_item_title_text_size"
+                android:textColor="@color/input_method_manage_title_color"
+                android:id="@android:id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+      <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.List.Secondary"
+                android:textSize="@dimen/input_method_manage_item_summary_text_size"
+                android:textColor="@color/input_method_manage_summary_color"
+                android:id="@android:id/summary"
+                android:paddingTop="2.5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.6" />
+    </LinearLayout>
+  </LinearLayout>
+  <RelativeLayout android:id="@id/end"
+                  android:background="@drawable/preference_system_app_new_end_bg"
+                  android:layout_width="0.0dp"
+                  android:layout_height="fill_parent"
+                  android:minHeight="@dimen/input_method_manage_item_min_height"
+                  android:layout_weight="300.0">
+    <View android:background="@color/input_method_manage_line_color"
+          android:layout_width="0.7dp"
+          android:layout_height="33.46dp"
+          android:layout_marginTop="@dimen/input_method_manage_item_line_margin_top_or_bottom"
+          android:layout_marginBottom="@dimen/input_method_manage_item_line_margin_top_or_bottom"
+          android:layout_centerVertical="true" />
+    <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.PreferenceList"
+              android:textSize="@dimen/input_method_manage_item_enable_text_size"
+              android:textColor="#ffffff"
+              android:gravity="center"
+              android:id="@id/enable_mode"
+              android:background="@drawable/button_text_enable_normal_bg"
+              android:layout_width="74.18dp"
+              android:layout_height="32.0dp"
+              android:layout_centerInParent="true" />
+  </RelativeLayout>
+  <LinearLayout android:gravity="center"
+                android:orientation="vertical"
+                android:id="@android:id/widget_frame"
+                android:visibility="gone"
+                android:clipChildren="false"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:minWidth="@dimen/miuix_preference_widget_width" />
+</LinearLayout>

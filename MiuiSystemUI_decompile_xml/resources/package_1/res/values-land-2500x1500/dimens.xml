@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+  <dimen name="doodle_width">917.7dp</dimen>
+  <dimen name="miui_magazine_a_clock_margin_bottom">87.0dp</dimen>
+  <dimen name="miui_magazine_b_clock_margin_end">171.0dp</dimen>
+  <dimen name="miui_magazine_b_clock_margin_start">171.0dp</dimen>
+  <dimen name="miui_magazine_b_clock_notification_margin_end">373.0dp</dimen>
+  <dimen name="miui_magazine_b_clock_notification_margin_start">373.0dp</dimen>
+  <dimen name="miui_magazine_c_clock_notification_margin_start">40.0dp</dimen>
+  <dimen name="miui_magazine_c_clock_notification_margin_top">83.0dp</dimen>
+  <dimen name="miui_magazine_c_clock_style2_margin_top">58.5dp</dimen>
+  <dimen name="notification_bottom_classic">80.0dp</dimen>
+  <dimen name="notification_bottom_graffiti">261.0dp</dimen>
+  <dimen name="notification_bottom_magazine_a">114.0dp</dimen>
+  <dimen name="notification_bottom_magazine_c">88.0dp</dimen>
+  <dimen name="notification_bottom_smart_frame">237.0dp</dimen>
+  <dimen name="sf_shape_height">587.0dp</dimen>
+  <dimen name="sf_shape_margin_bottom">71.0dp</dimen>
+  <dimen name="sf_shape_margin_left">612.0dp</dimen>
+  <dimen name="sf_shape_margin_top">52.0dp</dimen>
+  <dimen name="sf_shape_width">466.0dp</dimen>
+</resources>

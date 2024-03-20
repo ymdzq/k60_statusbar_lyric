@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<RelativeLayout android:background="@color/stylus_setting_background"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/stylus_shortcut_height"
+                android:paddingStart="@dimen/stylus_margin_start_inner"
+                android:paddingEnd="@dimen/stylus_margin_start_inner" xmlns:android="http://schemas.android.com/apk/res/android">
+  <RelativeLayout android:layout_width="fill_parent"
+                  android:layout_height="fill_parent">
+    <ImageView android:id="@id/image"
+               android:layout_width="@dimen/stylus_icon_width"
+               android:layout_height="fill_parent"
+               android:src="@drawable/stylus_shortcut_actions_icon"
+               android:scaleType="fitCenter" />
+    <LinearLayout android:gravity="center|start"
+                  android:orientation="vertical"
+                  android:layout_width="fill_parent"
+                  android:layout_height="fill_parent"
+                  android:layout_marginStart="@dimen/stylus_margin_inner"
+                  android:layout_toStartOf="@id/arrow"
+                  android:layout_toEndOf="@id/image">
+      <TextView android:textSize="@dimen/stylus_title_text_size"
+                android:textColor="@color/stylus_color_black"
+                android:gravity="start"
+                android:id="@id/title"
+                android:scrollbars="none"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/stylus_quick_write"
+                android:fontFamily="mipro-medium" />
+      <TextView android:textSize="@dimen/stylus_summary_text_size"
+                android:textColor="@color/stylus_menu_summary_color"
+                android:gravity="start"
+                android:id="@id/summary"
+                android:scrollbars="none"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/stylus_summary_text_mt"
+                android:text="@string/stylus_quick_write_summary"
+                android:fontFamily="mipro-regular"
+                android:letterSpacing="-0.02" />
+    </LinearLayout>
+    <ImageView android:id="@id/arrow"
+               android:paddingLeft="@dimen/stylus_function_arrow_left"
+               android:layout_width="@dimen/stylus_function_arrow_width"
+               android:layout_height="fill_parent"
+               android:src="@drawable/stylus_function_arrow"
+               android:scaleType="center"
+               android:layout_alignParentEnd="true" />
+  </RelativeLayout>
+  <LinearLayout android:orientation="horizontal"
+                android:id="@id/mask"
+                android:background="@color/stylus_setting_background"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:alpha="0.5" />
+</RelativeLayout>

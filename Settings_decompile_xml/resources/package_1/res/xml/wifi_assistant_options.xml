@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/wifi_assistant" xmlns:android="http://schemas.android.com/apk/res/android">
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/wifi_assistant"
+                        android:key="slide_wifi_assistant"
+                        android:summary="@string/wifi_assistant_summary" />
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/wifi_assistant_data_prompt"
+                        android:key="slide_data_prompt"
+                        android:summary="@string/wifi_assistant_data_prompt_summary" />
+</PreferenceScreen>

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<RelativeLayout android:layout_width="fill_parent"
+                android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+  <ImageView android:id="@id/wifi_detail_description_image"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:contentDescription="@null"
+             android:layout_alignParentStart="true" />
+  <TextView android:textSize="@dimen/wifi_detail_grid__title_size"
+            android:textColor="@color/basic_info_item_title_color"
+            android:id="@android:id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/wifi_detail_grid__title_top"
+            android:layout_below="@id/wifi_detail_description_image"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="mipro-medium"
+            android:layout_alignParentStart="true" />
+  <com.android.settings.wifi.WifiDetailSummaryTextView android:textSize="@dimen/wifi_detail_grid__summary_size"
+                        android:textColor="@color/basic_info_item_summary_color"
+                        android:id="@android:id/text2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/wifi_detail_grid__summary_top"
+                        android:layout_marginBottom="@dimen/wifi_detail_grid__summary_bottom"
+                        android:layout_below="@android:id/text1"
+                        android:layout_alignParentStart="true" />
+</RelativeLayout>

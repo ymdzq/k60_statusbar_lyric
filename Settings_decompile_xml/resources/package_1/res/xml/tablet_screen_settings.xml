@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/tablet_screen_settings_title" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:persistent="false"
+                      android:title="@string/tablet_screen_special_function_title"
+                      android:key="tablet_screen_special_function">
+    <CheckBoxPreference android:title="@string/leave_loclscreen_title"
+                        android:key="miui_tof_screen_off"
+                        android:summary="@string/leave_loclscreen_summary" />
+    <CheckBoxPreference android:title="@string/miui_tof_screen_on_title"
+                        android:key="miui_tof_screen_on"
+                        android:summary="@string/miui_tof_screen_on_msg" />
+    <CheckBoxPreference android:title="@string/gaze_lock_screen_title"
+                        android:key="gaze_lock_screen"
+                        android:summary="@string/gaze_lock_screen_summary" />
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/freeform_guide_settings"
+                          android:key="freeform_guide_settings"
+                          settings:controller="com.android.settings.special.FreeformGuideController">
+      <intent android:targetPackage="com.miui.freeform"
+              android:action="com.miui.freeform.settings.action.FREEFORM_SETTINGS"
+              android:targetClass="com.miui.freeform.settings.FreeformGuideSettingsActivity" />
+    </com.android.settingslib.miuisettings.preference.Preference>
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/miui_desktop_mode_settings"
+                          android:key="miui_desktop_mode_settings"
+                          settings:controller="com.android.settings.desktopmode.MiuiDesktopModeController">
+      <intent android:targetPackage="com.miui.freeform"
+              android:action="com.miui.freeform.settings.action.DESKTOP_SETTINGS"
+              android:targetClass="com.miui.freeform.guide.MiuiDesktopModeActivity" />
+    </com.android.settingslib.miuisettings.preference.Preference>
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/interconnection"
+                          android:key="mimirror_settings" />
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/device_ime_keyboard_pad"
+                          android:key="device_ime_keyboard"
+                          android:fragment="com.android.settings.inputmethod.LargeScreenKeyboardPadFragment" />
+    <Preference android:title="@string/beauty_fc_assistant"
+                android:key="beauty_fc_assistant"
+                settings:controller="com.android.settings.special.BeautyFrontCameraController">
+      <intent android:targetPackage="com.miui.securitycenter"
+              android:action="com.miui.gamebooster.action.ACCESS_BEAUTY" />
+    </Preference>
+    <Preference android:title="@string/conversation_assistant"
+                android:key="conversation_assistant"
+                settings:controller="com.android.settings.special.ConversationController">
+      <intent android:targetPackage="com.miui.securitycenter"
+              android:action="com.miui.gamebooster.action.ACCESS_CONVERSATION" />
+    </Preference>
+    <Preference android:title="@string/kid_space_settings"
+                android:key="kid_space_settings"
+                settings:controller="com.android.settings.special.KidModeDisplayController">
+      <intent android:targetPackage="com.miui.greenguard"
+              android:targetClass="com.miui.child.home.kidspace.activity.KidModeActivity" />
+    </Preference>
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/tofgesture_settings"
+                          android:key="tof_gesture"
+                          android:fragment="com.android.settings.tofgesture.TofGestureSettings"
+                          settings:controller="com.android.settings.special.TofGestureController" />
+  </PreferenceCategory>
+  <PreferenceCategory android:persistent="false"
+                      android:title="@string/tablet_screen_application_adaptation_title"
+                      android:key="tablet_screen_application_adaptation">
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/application_mode_name"
+                          android:key="application_mode">
+      <intent android:targetPackage="com.android.settings"
+              android:targetClass="com.android.settings.applicationmode.ApplicationModeActivity" />
+    </com.android.settingslib.miuisettings.preference.Preference>
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/autoui_mode_name"
+                          android:key="autoui_mode"
+                          android:fragment="com.android.settings.autouimode.AutoUIModeFragment"
+                          settings:controller="com.android.settings.special.AutoUIModeGuideController" />
+  </PreferenceCategory>
+</PreferenceScreen>

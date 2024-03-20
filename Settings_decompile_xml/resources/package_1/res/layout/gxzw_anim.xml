@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/gxzw_anim_background"
+                      android:layout_width="fill_parent"
+                      android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <RelativeLayout android:background="@drawable/shape_gxzw_anim_preview_bg"
+                  android:paddingBottom="26.0dp"
+                  android:layout_width="0.0dp"
+                  android:layout_height="0.0dp"
+                  android:layout_marginTop="24.0dp"
+                  android:layout_marginBottom="40.0dp"
+                  settings:layout_constraintBottom_toTopOf="@id/gxzw_anim_select_view"
+                  settings:layout_constraintDimensionRatio="227:486"
+                  settings:layout_constraintLeft_toLeftOf="parent"
+                  settings:layout_constraintRight_toRightOf="parent"
+                  settings:layout_constraintTop_toTopOf="parent">
+    <LinearLayout android:orientation="horizontal"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="55.0dp"
+                  android:layout_centerHorizontal="true"
+                  android:layoutDirection="ltr">
+      <TextView android:textSize="45.0sp"
+                android:textColor="#ffffff"
+                android:layout_gravity="center"
+                android:id="@id/horizontal_hour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.03" />
+      <TextView android:textSize="45.0sp"
+                android:textColor="#ffffff"
+                android:layout_gravity="center"
+                android:id="@id/horizontal_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/digital_clock_dot"
+                android:letterSpacing="0.03" />
+      <TextView android:textSize="45.0sp"
+                android:textColor="#ffffff"
+                android:layout_gravity="center"
+                android:id="@id/horizontal_min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.03" />
+    </LinearLayout>
+    <com.android.settings.MutedVideoView android:id="@id/gxzw_anim_preview"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentBottom="true"
+                          android:layout_centerHorizontal="true"
+                          android:importantForAccessibility="no"
+                          android:layout_marginStart="15.0dp"
+                          android:layout_marginEnd="15.0dp" />
+  </RelativeLayout>
+  <miuix.recyclerview.widget.RecyclerView android:id="@id/gxzw_anim_select_view"
+                        android:clipToPadding="false"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/gxzw_anim_select_view_margin_bottom"
+                        android:paddingHorizontal="16.0dp"
+                        settings:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<layer-list android:opacity="opaque" xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:gravity="bottom"
+        android:height="@dimen/status_bar_height">
+    <shape android:shape="rectangle">
+      <solid android:color="#ff000000" />
+    </shape>
+  </item>
+  <item android:bottom="@dimen/status_bar_height">
+    <nine-patch android:src="@drawable/force_black_top_corner_rot180" />
+  </item>
+</layer-list>

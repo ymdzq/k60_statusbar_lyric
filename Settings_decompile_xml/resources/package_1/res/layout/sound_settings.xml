@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<miuix.springback.view.SpringBackLayout android:layout_width="fill_parent"
+                      android:layout_height="fill_parent"
+                      settings:scrollableView="@id/id_0x7f0a093b" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <miuix.core.widget.NestedScrollView android:id="@id/id_0x7f0a093b"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical"
+                  android:descendantFocusability="blocksDescendants"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content">
+      <com.android.settings.sound.coolsound.RingtoneCardGridView android:id="@id/ringtone_grid_view"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="0.0dp" />
+      <FrameLayout android:id="@id/prefs_container"
+                   android:clipChildren="false"
+                   android:clipToPadding="false"
+                   android:layout_width="fill_parent"
+                   android:layout_height="0.0dp"
+                   android:layout_weight="1.0"
+                   android:smoothScrollbar="false" />
+    </LinearLayout>
+  </miuix.core.widget.NestedScrollView>
+</miuix.springback.view.SpringBackLayout>

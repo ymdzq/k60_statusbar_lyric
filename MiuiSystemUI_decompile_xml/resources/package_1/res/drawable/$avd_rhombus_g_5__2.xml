@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<set android:ordering="together" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+  <objectAnimator android:interpolator="@drawable/drawable_0x7f080079"
+                  android:duration="500"
+                  android:startOffset="0"
+                  android:valueFrom="M-39.7 -0.55 C-39.7,-0.55 -39.7,-77.55 -39.7,-77.55 C-39.7,-77.55 37.1,-77.55 37.1,-77.55 C37.1,-77.55 37.1,-88.45 37.1,-88.45 C37.1,-88.45 39.3,-88.45 39.3,-88.45 C39.3,-88.45 39.3,-52.35 39.3,-52.35 C39.3,-52.35 -37.5,-52.35 -37.5,-52.35 C-37.5,-52.35 -37.5,-0.55 -37.5,-0.55 C-37.5,-0.55 -39.7,-0.55 -39.7,-0.55c "
+                  android:valueTo="M-37.25 -2.55 C-37.25,-2.55 -37.25,-77.55 -37.25,-77.55 C-37.25,-77.55 35.95,-77.55 35.95,-77.55 C35.95,-77.55 35.95,-88.45 35.95,-88.45 C35.95,-88.45 37.35,-88.45 37.35,-88.45 C37.35,-88.45 37.35,-58.25 37.35,-58.25 C37.35,-58.25 -35.95,-58.25 -35.95,-58.25 C-35.95,-58.25 -35.95,-2.55 -35.95,-2.55 C-35.95,-2.55 -37.25,-2.55 -37.25,-2.55c "
+                  android:valueType="pathType"
+                  android:propertyName="pathData" />
+</set>

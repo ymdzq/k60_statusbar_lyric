@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<RelativeLayout android:background="@color/camera_grip_firmware_update_backgroud"
+                android:paddingTop="@dimen/camera_grip_firmware_padding_top_bottom"
+                android:paddingBottom="@dimen/camera_grip_firmware_padding_top_bottom"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/camera_grip_firmware_padding_start_stop"
+                android:paddingEnd="@dimen/camera_grip_firmware_padding_start_stop" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+    <TextView android:id="@id/title"
+              android:layout_width="@dimen/firmeware_update_title_size"
+              android:layout_height="wrap_content"
+              style="@style/camera_grip_firmware_title" />
+    <TextView android:id="@id/textview_mihandle_update_describe"
+              android:layout_width="@dimen/firmeware_update_title_size"
+              android:layout_height="wrap_content"
+              android:text="@string/camera_grip_firmware_update_describe"
+              style="@style/camera_grip_firmware_title_describe" />
+  </LinearLayout>
+  <TextView android:textSize="@dimen/firmeware_update_state_text_size"
+            android:textColor="@color/camera_grip_firmware_update_text_color"
+            android:id="@id/textview_mihandle_update_setting"
+            android:layout_width="@dimen/firmeware_update_state_size"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true" />
+  <Button android:textSize="@dimen/firmeware_update_button_text_size"
+          android:textColor="@color/camera_grip_firmware_update_button_text_color"
+          android:id="@id/button_mihandle_update_setting"
+          android:background="@drawable/camera_grip_firmware_update_button_view"
+          android:layout_width="@dimen/firmeware_update_button_width"
+          android:layout_height="@dimen/firmeware_update_button_height"
+          android:text="@string/camera_grip_firmware_need_update"
+          android:layout_centerVertical="true"
+          android:layout_alignParentEnd="true"
+          style="@style/Widget.Button.Negative" />
+</RelativeLayout>

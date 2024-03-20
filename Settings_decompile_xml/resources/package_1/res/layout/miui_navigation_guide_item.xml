@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center_vertical"
+              android:layout_gravity="center_vertical"
+              android:background="?attr/preferenceItemBackground"
+              android:clipChildren="false"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <LinearLayout android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/preference_icon_minWidth">
+    <ImageView android:gravity="center"
+               android:layout_gravity="center"
+               android:id="@id/icon"
+               android:layout_width="@dimen/miui_navigation_guide_icon_width"
+               android:layout_height="@dimen/miui_navigation_guide_icon_height"
+               android:layout_marginTop="@dimen/miui_navigation_guide_icon_top_bottom"
+               android:layout_marginBottom="@dimen/miui_navigation_guide_icon_top_bottom"
+               android:scaleType="fitCenter"
+               android:adjustViewBounds="true"
+               android:paddingStart="@dimen/miui_navigation_guide_icon_start"
+               android:paddingEnd="@dimen/miui_navigation_guide_icon_end" />
+  </LinearLayout>
+  <RelativeLayout android:gravity="center_vertical"
+                  android:layout_gravity="center_vertical"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1.0"
+                  style="@style/Widget.PreferenceItem">
+    <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.PreferenceList"
+              android:ellipsize="end"
+              android:id="@id/title"
+              android:fadingEdge="horizontal"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:maxLines="2"
+              android:textAlignment="viewStart"
+              android:textFontWeight="500" />
+    <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.List.Secondary.Preference"
+              android:id="@id/summary"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/miuix_preference_summary_margin_top"
+              android:layout_below="@id/title"
+              android:textAlignment="viewStart"
+              android:layout_alignStart="@id/title"
+              android:textFontWeight="400" />
+  </RelativeLayout>
+  <LinearLayout android:gravity="center"
+                android:orientation="vertical"
+                android:id="@id/widget_frame"
+                android:clipChildren="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/miuix_preference_widget_width" />
+  <androidx.appcompat.widget.AppCompatImageView android:gravity="center"
+                        android:layout_gravity="center|end"
+                        android:id="@id/arrow_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        settings:srcCompat="@drawable/miuix_appcompat_arrow_right" />
+</LinearLayout>

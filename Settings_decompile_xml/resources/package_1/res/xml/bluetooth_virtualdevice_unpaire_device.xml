@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/bluetooth_device_advanced_title" xmlns:android="http://schemas.android.com/apk/res/android">
+  <PreferenceCategory android:key="fake_container"
+                      android:order="3">
+    <com.android.settingslib.miuisettings.preference.EditTextPreference android:persistent="false"
+                          android:enabled="false"
+                          android:title="@string/bluetooth_device_advanced_rename_device"
+                          android:key="fake_rename_device"
+                          android:order="20"
+                          android:shouldDisableView="true"
+                          style="@style/wifi_item_edit_content" />
+  </PreferenceCategory>
+</PreferenceScreen>

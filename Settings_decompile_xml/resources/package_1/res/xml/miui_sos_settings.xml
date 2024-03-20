@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+  <com.android.settings.emergency.ui.view.ImagePreference android:enabled="false"
+                        android:key="key_sos_image" />
+  <CheckBoxPreference android:title="@string/miui_sos_enable_switch_title"
+                      android:key="miui_sos_enable"
+                      android:summary="@string/miui_sos_enable_switch_summary" />
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/miui_sos_contacts_add"
+                        android:key="miui_sos_contacts_add"
+                        android:dependency="miui_sos_enable" />
+  <PreferenceCategory android:title="@string/miui_sos_settings_category"
+                      android:key="miui_sos_settings"
+                      android:dependency="miui_sos_enable">
+    <CheckBoxPreference android:title="@string/miui_sos_calling_title"
+                        android:key="miui_sos_calling"
+                        android:summary="@string/miui_sos_calling_summary" />
+    <com.android.settings.emergency.ui.view.SosCustomPreference android:title="@string/miui_sos_play_voice"
+                          android:key="key_sos_player" />
+    <CheckBoxPreference android:title="@string/miui_sos_call_log_title"
+                        android:key="miui_sos_call_log"
+                        android:summary="@string/miui_sos_call_log_summary" />
+    <CheckBoxPreference android:title="@string/miui_sos_around_photo_title"
+                        android:key="miui_sos_around_photo"
+                        android:summary="@string/miui_sos_around_photo_summary" />
+    <CheckBoxPreference android:title="@string/miui_sos_around_voice_title"
+                        android:key="miui_sos_around_voice"
+                        android:summary="@string/miui_sos_around_voice_summary" />
+  </PreferenceCategory>
+  <PreferenceCategory android:key="miui_sos_guard">
+    <Preference android:title="@string/miui_sos_green_guard_title"
+                android:key="key_sos_guard"
+                android:summary="@string/miui_sos_green_guard_summary" />
+    <Preference android:title="@string/sos_privacy_policy"
+                android:key="key_sos_privacy" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/sos_privacy_policy_revoke"
+                          android:key="key_sos_privacy_revoke"
+                          android:dependency="miui_sos_enable" />
+  </PreferenceCategory>
+  <PreferenceCategory android:key="miui_sos_pa">
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/miui_sos_pa_title"
+                          android:key="key_sos_pa" />
+  </PreferenceCategory>
+</PreferenceScreen>

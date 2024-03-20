@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center"
+              android:orientation="vertical"
+              android:layout_width="116.36dp"
+              android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <FrameLayout android:id="@id/gxzw_recognizing_anim_container"
+               android:layout_width="116.0dp"
+               android:layout_height="145.0dp"
+               android:scaleType="center">
+    <ImageView android:layout_gravity="center"
+               android:id="@id/gxzw_recognizing_anim_icon"
+               android:background="@drawable/gxzw_recognizing_anim_bg"
+               android:layout_width="fill_parent"
+               android:layout_height="fill_parent"
+               android:layout_margin="7.3dp"
+               android:scaleType="centerInside"
+               android:layerType="hardware" />
+    <View android:layout_gravity="center"
+          android:id="@id/gxzw_recognizing_anim_frame"
+          android:background="@drawable/gxzw_selected_rectangle"
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:alpha="0.0"
+          android:layerType="hardware" />
+  </FrameLayout>
+  <TextView android:textSize="13.8sp"
+            android:gravity="center_horizontal"
+            android:id="@id/gxzw_recognizing_anim_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7.0dp"
+            android:fontFamily="sans-serif-medium" />
+</LinearLayout>

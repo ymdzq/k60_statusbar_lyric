@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:layout_gravity="center_horizontal"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_centerHorizontal="true"
+              android:layout_marginStart="@dimen/stylus_edit_show_bg_ms"
+              android:layout_marginEnd="@dimen/stylus_edit_show_bg_ms" xmlns:android="http://schemas.android.com/apk/res/android">
+  <com.android.settings.stylus.MiuiKeyboard android:layout_gravity="center"
+                        android:id="@id/keyboard"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" />
+</LinearLayout>

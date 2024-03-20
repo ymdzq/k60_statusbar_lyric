@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:title="@string/unlock_mode_title"
+                      android:key="unlock_mode_category">
+    <com.android.settings.security.UnlockModeCardPreference android:key="unlock_mode_card_preference" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/unlock_mode_title"
+                      android:key="unlock_mode"
+                      settings:controller="com.android.settings.MiuiBaseCategoryController">
+    <com.android.settings.MiuiValuePreference android:title="@string/password_unlock_title"
+                          android:key="password_unlock"
+                          settings:controller="com.android.settings.MiuiSearchController" />
+    <com.android.settings.MiuiValuePreference android:title="@string/privacy_password_use_finger_dialog_title"
+                          android:key="fingerprint_unlock"
+                          settings:controller="com.android.settings.MiuiSearchController" />
+    <com.android.settings.MiuiValuePreference android:title="@string/unlock_set_unlock_biometric_weak_title"
+                          android:key="face_unlock"
+                          settings:controller="com.android.settings.MiuiSearchController" />
+    <com.android.settings.MiuiValuePreference android:title="@string/bluetooth_unlock_title"
+                          android:key="bluetooth_unlock"
+                          android:fragment="com.android.settings.MiuiSecurityBluetoothSettingsFragment"
+                          settings:controller="com.android.settings.MiuiSearchController" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/lock_settings_profile_title"
+                      android:key="security_category_profile">
+    <com.android.settingslib.MiuiRestrictedSwitchPreference android:title="@string/lock_settings_profile_unification_title"
+                          android:key="unification"
+                          android:summary="@string/lock_settings_profile_unification_summary"
+                          settings:keywords="@string/keywords_unification"
+                          style="?attr/preferenceStyle" />
+    <com.android.settingslib.MiuiRestrictedPreference android:title="@string/unlock_set_unlock_launch_picker_title_profile"
+                          android:key="unlock_set_or_change_profile"
+                          android:summary="@string/unlock_set_unlock_mode_pattern"
+                          settings:keywords="@string/keywords_lockscreen" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/other_password"
+                      android:key="privacy_protection">
+    <com.android.settings.MiuiValuePreference android:title="@string/privacy_password_title"
+                          android:key="privacy_password"
+                          settings:showRightArrow="true" />
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/manage_password"
+                          android:key="manage_password"
+                          android:summary="@string/manage_password_summary">
+      <intent android:targetPackage="com.miui.contentcatcher"
+              android:targetClass="com.miui.contentcatcher.autofill.activitys.AutofillSettingActivity" />
+    </com.android.settingslib.miuisettings.preference.Preference>
+  </PreferenceCategory>
+  <PreferenceCategory android:key="security"
+                      settings:controller="com.android.settings.security.PrivacyAndSecurityDividerController">
+    <com.android.settingslib.RestrictedPreference android:title="@string/cell_broadcast_settings"
+                          android:key="cell_broadcast_settings"
+                          settings:showRightArrow="true" />
+    <com.android.settings.MiuiValuePreference android:title="@string/emergency_sos_title"
+                          android:key="emergency_sos_settings"
+                          android:fragment="com.android.settings.emergency.ui.SosSettings"
+                          settings:controller="com.android.settings.security.SosSettingsController" />
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/security_privacy_settings_title"
+                          android:key="security_privacy_settings"
+                          android:fragment="com.android.settings.security.SecuritySettings"
+                          settings:controller="com.android.settings.security.SecuritySettingsController" />
+  </PreferenceCategory>
+  <PreferenceCategory android:key="privacy_settings"
+                      settings:controller="com.android.settings.MiuiBaseCategoryController">
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/privacy_authorize_revoke_title"
+                          android:key="privacy_authorize_revoke"
+                          settings:controller="com.android.settings.security.PrivacyRevocationController">
+      <intent android:targetPackage="com.android.settings"
+              android:targetClass="com.android.settings.privacy.PrivacyRevocationSettings" />
+    </com.android.settingslib.miuisettings.preference.Preference>
+  </PreferenceCategory>
+</PreferenceScreen>

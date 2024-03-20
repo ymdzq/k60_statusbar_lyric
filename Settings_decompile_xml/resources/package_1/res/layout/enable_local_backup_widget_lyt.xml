@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:id="@id/enable_backup_text"
+              android:background="@drawable/enable_local_backup_bg"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+  <TextView android:textSize="14.5sp"
+            android:textColor="@color/enable_local_backup_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8.4dp"
+            android:layout_marginBottom="8.4dp"
+            android:text="@string/enable_local_backup"
+            android:fontFamily="mipro-medium"
+            android:layout_marginStart="21.8dp"
+            android:layout_marginEnd="21.8dp" />
+</LinearLayout>

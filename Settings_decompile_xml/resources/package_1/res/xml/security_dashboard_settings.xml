@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/security_privacy_settings_title"
+                  android:key="security_dashboard_page" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/special_access"
+                        android:key="special_access"
+                        android:fragment="com.android.settings.applications.specialaccess.SpecialAccessSettings"
+                        settings:controller="com.android.settings.MiuiSearchController" />
+  <PreferenceCategory android:title="@string/security_status"
+                      android:key="security_status"
+                      settings:controller="com.android.settings.security.SecurityCategoryController" />
+  <PreferenceCategory android:persistent="false"
+                      android:title="@string/advanced_security_title"
+                      android:key="advanced_security"
+                      android:order="60">
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/screen_pinning_title"
+                          android:key="screen_pinning_settings"
+                          android:fragment="com.android.settings.security.ScreenPinningSettings"
+                          settings:controller="com.android.settings.security.ScreenPinningPreferenceController" />
+    <com.android.settings.MiuiValuePreference android:title="@string/wifi_protection_settings_title"
+                          android:key="wifi_protection_settings"
+                          android:summary="@string/wifi_protection_on"
+                          android:order="61"
+                          android:fragment="com.android.settings.security.WifiProtectionSettings" />
+    <com.android.settingslib.miuisettings.preference.Preference android:persistent="false"
+                          android:title="@string/manage_fakecell_settings"
+                          android:key="manage_fakecell_settings">
+      <intent android:targetPackage="com.android.phone"
+              android:action="miui.intent.action.FAKECELL"
+              android:targetClass="com.android.phone.settings.FakeCellSettingsActivity" />
+    </com.android.settingslib.miuisettings.preference.Preference>
+    <com.android.settingslib.miuisettings.preference.SwitchPreference android:title="@string/show_password"
+                          android:key="show_password"
+                          android:summary="@string/show_password_summary"
+                          android:order="71"
+                          settings:controller="com.android.settings.security.ShowPasswordPreferenceController" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/user_experience_program"
+                      android:order="90">
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:persistent="false"
+                          android:title="@string/user_experience_program_title"
+                          android:key="user_experience_program"
+                          android:summary="@string/user_experience_program_summary"
+                          android:defaultValue="true" />
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/user_experience_open_url"
+                          android:key="user_experience_open_url">
+      <intent android:action="miui.intent.action.VIEW_LICENSE">
+        <extra android:name="android.intent.extra.LICENSE_TYPE"
+               android:value="8" />
+      </intent>
+    </com.android.settingslib.miuisettings.preference.Preference>
+    <com.android.settingslib.miuisettings.preference.Preference android:persistent="false"
+                          android:title="@string/upload_debug_log_title"
+                          android:key="upload_debug_log"
+                          android:summary="@string/upload_debug_log_summary"
+                          android:defaultValue="true">
+      <intent android:targetPackage="com.android.settings"
+              android:targetClass="com.android.settings.UsageAndDiagnosticsActivity" />
+    </com.android.settingslib.miuisettings.preference.Preference>
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/ad_service"
+                          android:key="ad_control_settings">
+      <intent android:targetPackage="com.android.settings"
+              android:targetClass="com.android.settings.ad.AdServiceSettings" />
+    </com.android.settingslib.miuisettings.preference.Preference>
+  </PreferenceCategory>
+  <PreferenceCategory android:order="90">
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/http_invoke_app"
+                          android:key="http_invoke_app">
+      <intent android:targetPackage="com.android.settings"
+              android:targetClass="com.android.settings.HttpInvokeAppSettings" />
+    </com.android.settingslib.miuisettings.preference.Preference>
+  </PreferenceCategory>
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/security_advanced_settings"
+                        android:key="security_advanced_settings"
+                        android:summary="@string/summary_placeholder"
+                        android:order="100"
+                        android:fragment="com.android.settings.security.SecurityAdvancedSettings"
+                        settings:controller="com.android.settings.security.SecurityAdvancedSettingsController"
+                        settings:keywords="@string/security_advanced_settings_keywords" />
+</PreferenceScreen>

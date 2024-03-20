@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/security_input_enable"
+                        android:key="miui_security_ime_enable" />
+  <PreferenceCategory android:title="@string/security_input_num_setting_title"
+                      android:key="num_keyboard_setting"
+                      android:dependency="miui_security_ime_enable">
+    <com.android.settings.inputmethod.FullScreenInputMethodPreference android:key="num_keyboard_order_setting" />
+  </PreferenceCategory>
+</PreferenceScreen>

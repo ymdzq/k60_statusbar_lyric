@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<RelativeLayout android:layout_width="fill_parent"
+                android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <ImageView android:layout_gravity="center_horizontal"
+             android:id="@id/phone_led_color"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="44.0dp"
+             android:src="@drawable/phone_led_color"
+             android:layout_centerHorizontal="true" />
+  <ImageView android:layout_gravity="center_horizontal"
+             android:id="@id/phone_model"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="16.1dp"
+             android:src="@drawable/phone_model"
+             android:layout_centerHorizontal="true" />
+  <com.android.settings.colorgameled.LedColorBitMapView android:layout_gravity="center_horizontal"
+                        android:id="@id/led_color_image"
+                        android:layout_width="@dimen/led_color_preview_width"
+                        android:layout_height="@dimen/led_color_preview_height"
+                        android:layout_marginTop="34.2dp"
+                        android:src="@drawable/led_color_preview"
+                        android:scaleType="fitCenter"
+                        android:layout_below="@id/phone_model"
+                        android:layout_centerHorizontal="true" />
+</RelativeLayout>

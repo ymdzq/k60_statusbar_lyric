@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<vector android:height="24.0dp"
+        android:width="24.0dp"
+        android:viewportWidth="24.0"
+        android:viewportHeight="24.0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+  <path android:fillColor="#807dfc"
+        android:pathData="M6,0L18,0A6,6 0,0 1,24 6L24,18A6,6 0,0 1,18 24L6,24A6,6 0,0 1,0 18L0,6A6,6 0,0 1,6 0z" />
+  <path android:fillColor="@drawable/$ic_clear_sdcard_data__0"
+        android:pathData="M5.696,6.5324C5.696,5.5756 6.4741,4.8 7.434,4.8H13.0141C13.475,4.8 13.9171,4.9826 14.243,5.3074L17.787,8.84C18.1129,9.1649 18.296,9.6055 18.296,10.065V17.4677C18.296,18.4245 17.5179,19.2 16.5581,19.2H7.434C6.4741,19.2 5.696,18.4245 5.696,17.4677V6.5324Z"
+        android:fillType="evenOdd" />
+  <path android:fillColor="#ffffff"
+        android:pathData="M5.696,6.5324C5.696,5.5756 6.4741,4.8 7.434,4.8H13.0141C13.475,4.8 13.9171,4.9826 14.243,5.3074L17.787,8.84C18.1129,9.1649 18.296,9.6055 18.296,10.065V17.4677C18.296,18.4245 17.5179,19.2 16.5581,19.2H7.434C6.4741,19.2 5.696,18.4245 5.696,17.4677V6.5324Z"
+        android:fillType="evenOdd" />
+  <path android:fillColor="#00000000"
+        android:pathData="M6,0.0769L18,0.0769A5.9231,5.9231 0,0 1,23.9231 6L23.9231,18A5.9231,5.9231 0,0 1,18 23.9231L6,23.9231A5.9231,5.9231 0,0 1,0.0769 18L0.0769,6A5.9231,5.9231 0,0 1,6 0.0769z"
+        android:strokeColor="#ffffff"
+        android:strokeWidth="0.153846"
+        android:strokeAlpha="0.1" />
+</vector>

@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<View android:background="@drawable/preference_divider_bg"
+      android:layout_width="fill_parent"
+      android:layout_height="@dimen/divider_height"
+      android:layout_marginLeft="@dimen/divider_margin_left_right"
+      android:layout_marginTop="@dimen/divider_margin_top_bottom"
+      android:layout_marginRight="@dimen/divider_margin_left_right"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentTop="true"
+      android:layout_alignParentRight="true"
+      android:alpha="0.1" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

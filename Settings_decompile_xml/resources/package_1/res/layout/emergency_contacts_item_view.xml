@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<com.android.settings.emergency.ui.view.ContactsItemView android:orientation="vertical"
+                      android:id="@id/reply_view"
+                      android:background="@drawable/emergency_contacts_list_item_bg"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:paddingStart="@dimen/sos_common_padding"
+                      android:paddingEnd="@dimen/sos_common_padding" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/view_dimen_160">
+    <ImageView android:layout_gravity="center_vertical"
+               android:id="@id/delete_btn"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/miuix_appcompat_btn_inline_delete_light"
+               android:contentDescription="@string/miui_sos_emergency_delete"
+               android:layout_marginEnd="@dimen/view_dimen_30" />
+    <TextView android:textSize="16.0sp"
+              android:gravity="center_vertical"
+              android:id="@id/name"
+              android:layout_width="wrap_content"
+              android:layout_height="fill_parent"
+              android:maxEms="8"
+              android:singleLine="true"
+              android:layout_weight="1.0"
+              android:textDirection="locale" />
+    <TextView android:textSize="16.0sp"
+              android:gravity="center|end"
+              android:id="@id/number"
+              android:layout_width="wrap_content"
+              android:layout_height="fill_parent"
+              android:maxEms="7"
+              android:singleLine="true" />
+    <ImageView android:layout_gravity="center_vertical"
+               android:id="@id/drag_btn"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/item_drag_move"
+               android:importantForAccessibility="no"
+               android:layout_marginStart="@dimen/view_dimen_30" />
+  </LinearLayout>
+</com.android.settings.emergency.ui.view.ContactsItemView>

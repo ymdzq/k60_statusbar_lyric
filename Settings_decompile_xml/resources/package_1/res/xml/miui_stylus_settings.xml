@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/stylus_settings_title" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:miuisettings="http://schemas.android.com/apk/miuisettings" xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+  <PreferenceCategory android:key="stylus">
+    <com.android.settings.stylus.MiuiStylusMessagePreference android:key="stylus_not_connect_message" />
+    <com.android.settings.stylus.MiuiStylusGuidePreference android:key="stylus_show" />
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/global_stylus_title"
+                          android:key="stylus_handwriting_enable"
+                          android:summary="@string/global_stylus_summary" />
+    <com.android.settings.stylus.CustomColorTextPreference android:title="@string/stylus_ota_firmware_update"
+                          android:key="firmware_update"
+                          android:fragment="com.android.settings.stylus.StylusOtaFragment" />
+  </PreferenceCategory>
+  <PreferenceCategory android:key="function">
+    <PreferenceCategory android:title="@string/stylus_function_and_action" />
+    <com.android.settings.stylus.MiuiStylusFunctionPreference android:title="@string/stylus_quick_write"
+                          android:key="stylus_quick_write"
+                          android:summary="@string/stylus_quick_write_summary" />
+    <com.android.settings.stylus.MiuiStylusFunctionPreference android:title="@string/stylus_screen_shot"
+                          android:key="stylus_screen_shot"
+                          android:summary="@string/stylus_screen_shot_summary" />
+    <com.android.settings.stylus.MiuiStylusFunctionPreference android:title="@string/key_handwriting_input_title"
+                          android:key="stylus_hand_writing"
+                          android:summary="@string/key_handwriting_input_summary" />
+  </PreferenceCategory>
+</PreferenceScreen>

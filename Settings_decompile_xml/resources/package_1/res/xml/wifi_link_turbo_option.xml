@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/dual_wifi"
+                        android:key="dual_wifi"
+                        android:summary="@string/multi_network_acceleration_summery">
+    <intent android:targetPackage="com.android.settings"
+            android:action="android.settings.DUAL_WIFI.WIFI_SETTINGS" />
+  </com.android.settingslib.miuisettings.preference.ValuePreference>
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/network_auto_switch"
+                        android:key="wifi_assistant"
+                        android:summary="@string/network_auto_switch_summery" />
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/dual_wifi"
+                        android:key="global_dual_wifi"
+                        android:summary="@string/multi_network_acceleration_summery" />
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/wifi_link_turbo"
+                        android:key="enable_wifi_link_turbo"
+                        android:summary="@string/data_acceleration_summery" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/smart_dual_sim_title"
+                        android:key="button_smart_dual_sim_key">
+    <intent android:targetPackage="com.android.phone"
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.android.phone.settings.MiuiConfigureMobileSettings" />
+  </com.android.settingslib.miuisettings.preference.Preference>
+  <com.android.settingslib.miuisettings.preference.miuix.DropDownPreference android:singleLine="true"
+                        android:title="@string/wifi_link_turbo_mode"
+                        android:key="wifi_link_turbo_mode"
+                        settings:entries="@array/wifi_link_turbo_mode_entries"
+                        settings:entryValues="@array/wifi_link_turbo_mode_values" />
+</PreferenceScreen>

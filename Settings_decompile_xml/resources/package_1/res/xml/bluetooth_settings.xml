@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/bluetooth_settings" xmlns:android="http://schemas.android.com/apk/res/android">
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/bluetooth_enable"
+                        android:key="bluetooth_enable"
+                        android:order="-6"
+                        android:disableDependentsState="false" />
+  <com.android.settings.bluetooth.BluetoothUpdateTextPreference android:persistent="false"
+                        android:title="@string/bluetooth_version"
+                        android:key="bluetooth_version_update"
+                        android:order="-2" />
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/device_name"
+                        android:key="bluetooth_device_name_edit"
+                        android:order="-4" />
+  <PreferenceCategory android:title="@string/bluetooth_other_settings"
+                      android:key="bluetooth_advanced_settings"
+                      android:order="500">
+    <com.android.settingslib.miuisettings.preference.Preference android:persistent="false"
+                          android:title="@string/advanced_settings"
+                          android:fragment="com.android.settings.bluetooth.BluetoothAdvancedSettings" />
+    <com.android.settingslib.miuisettings.preference.Preference android:persistent="false"
+                          android:visibility="invisible"
+                          android:title="@string/connect_help"
+                          android:key="bt_connect_help_flag">
+      <intent android:targetPackage="com.android.settings.bluetooth"
+              android:action="com.android.settings.bluetooth.MiuiHeadsetActivityPlugin"
+              android:targetClass="com.android.settings.bluetooth.MiuiHeadsetActivityPlugin" />
+    </com.android.settingslib.miuisettings.preference.Preference>
+  </PreferenceCategory>
+</PreferenceScreen>

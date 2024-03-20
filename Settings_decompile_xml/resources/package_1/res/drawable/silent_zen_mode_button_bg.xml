@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<miuix.smooth.SmoothGradientDrawable android:shape="rectangle" xmlns:android="http://schemas.android.com/apk/res/android">
+  <solid android:color="@color/silent_zen_mode_bg_color" />
+  <corners android:radius="16.0dp" />
+</miuix.smooth.SmoothGradientDrawable>

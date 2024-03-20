@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<com.android.internal.widget.LinearLayoutWithDefaultTouchRecepient android:orientation="vertical"
+                      android:id="@id/topLayout"
+                      android:background="@color/main_page_background"
+                      android:layout_width="fill_parent"
+                      android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res/settings">
+  <RelativeLayout android:id="@id/split_screen_layout"
+                  android:background="@color/split_screen_layout_color"
+                  android:visibility="gone"
+                  android:clickable="true"
+                  android:layout_width="fill_parent"
+                  android:layout_height="fill_parent">
+    <TextView android:textColor="@android:color/white"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/privacy_header_text_less_than_half"
+              android:layout_centerInParent="true" />
+  </RelativeLayout>
+  <LinearLayout android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dp"
+                android:layout_weight="1.0">
+    <RelativeLayout android:id="@id/choose_relative_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+      <RelativeLayout android:id="@id/top_actionBar"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="@dimen/back_button_alight_top_cetus"
+                      android:minHeight="@dimen/miui_face_enroll_back_linear_height"
+                      android:paddingStart="@dimen/count_time_bar_margin_left"
+                      android:paddingEnd="@dimen/count_time_bar_margin_right">
+        <TextView android:ellipsize="end"
+                  android:id="@id/privacy_password_choose_access_control_back"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:maxLines="1"
+                  android:layout_centerVertical="true"
+                  android:onClick="backClick"
+                  android:drawableStart="@drawable/privacypassword_back_icon" />
+        <TextView android:textColor="@color/unlock_text_title"
+                  android:ellipsize="marquee"
+                  android:id="@id/privacy_password_choose_access_control_back_text"
+                  android:focusable="true"
+                  android:focusableInTouchMode="true"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/privacy_password"
+                  android:maxLines="1"
+                  android:scrollHorizontally="true"
+                  android:singleLine="true"
+                  android:marqueeRepeatLimit="marquee_forever"
+                  style="@style/ActionBarTitleTextPadding" />
+      </RelativeLayout>
+      <TextView android:textSize="@dimen/big_add_account_title_size"
+                android:textColor="@color/big_add_account_title_text_color"
+                android:ellipsize="end"
+                android:gravity="start"
+                android:layout_gravity="center|start|top"
+                android:id="@id/big_title"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/big_add_account_margin_top"
+                android:text="@string/privacy_password"
+                android:maxLines="1"
+                android:maxEms="9"
+                android:layout_below="@id/top_actionBar"
+                android:fontFamily="sans-serif-light"
+                android:layout_marginStart="@dimen/big_add_account_margin_start" />
+      <LinearLayout android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:id="@id/privacy_password_icon_container"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/privacy_choose_icon_margin_top"
+                    android:layout_below="@id/big_title">
+        <LinearLayout android:gravity="center"
+                      android:id="@id/icon_layout"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content">
+          <ImageView android:id="@id/privacy_choose_icon"
+                     android:layout_width="@dimen/privacy_choose_icon_width"
+                     android:layout_height="@dimen/privacy_choose_icon_height"
+                     android:src="@drawable/icon_app_lock_cetus" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content">
+          <TextView android:textSize="@dimen/privacy_password_setting_size"
+                    android:textColor="@color/unlock_text_title"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:id="@id/privacy_password_setting"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/privacy_password_setting_margin_top"
+                    android:text="@string/setting_privacy_password"
+                    android:maxLines="1" />
+          <TextView android:textSize="@dimen/privacy_password_header_text_size"
+                    android:textColor="@color/unlock_text_summary"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:id="@id/privacy_passwordheaderText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/privacy_password_header_margin_top"
+                    android:maxLines="1"
+                    android:layout_below="@id/privacy_password_setting" />
+        </LinearLayout>
+      </LinearLayout>
+    </RelativeLayout>
+    <FrameLayout android:layout_gravity="center"
+                 android:id="@id/pattern_layout"
+                 android:paddingTop="@dimen/pattern_layout_margin_top"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1.0">
+      <com.android.settings.PrivacyLockPatternView android:layout_gravity="center_horizontal"
+                            android:id="@id/choose__lockPattern"
+                            style="@style/SecurityLockPatternView" />
+    </FrameLayout>
+  </LinearLayout>
+  <include android:id="@id/button_layout"
+           layout="@layout/privacy_password_choose_lock_pattern_button_cetus" />
+</com.android.internal.widget.LinearLayoutWithDefaultTouchRecepient>

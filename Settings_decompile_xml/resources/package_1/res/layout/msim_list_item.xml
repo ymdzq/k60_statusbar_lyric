@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center_vertical"
+              android:layout_gravity="center_vertical"
+              android:orientation="vertical"
+              android:background="@drawable/list_item_bg_dialog"
+              android:layout_width="fill_parent"
+              style="@style/Widget.ListView.Item.DoubleLine" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+    <miuix.androidbasewidget.widget.CheckedTextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.AlertDialogListItem.SingleChoice"
+                          android:ellipsize="end"
+                          android:gravity="center_vertical"
+                          android:id="@id/txt_sim_displayname"
+                          android:fadingEdge="horizontal"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:checkMark="?android:attr/listChoiceIndicatorSingle"
+                          android:singleLine="true" />
+    <ImageView android:layout_gravity="center_vertical"
+               android:id="@id/img_sim_icon"
+               android:paddingLeft="7.0dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:contentDescription="@null" />
+  </LinearLayout>
+  <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.List.Secondary.Preference"
+            android:ellipsize="end"
+            android:id="@id/txt_sim_number"
+            android:fadingEdge="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24.0dp"
+            android:singleLine="true" />
+</LinearLayout>

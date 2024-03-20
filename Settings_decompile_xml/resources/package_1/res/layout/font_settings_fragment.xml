@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<RelativeLayout android:id="@id/top_screen"
+                android:background="@color/font_settings_bg_color"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+  <ScrollView android:id="@id/font_scroll_view"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_above="@id/font_size_settings_layout"
+              android:layout_alignParentTop="true">
+    <include layout="@layout/font_bubble_layout" />
+  </ScrollView>
+  <LinearLayout android:orientation="vertical"
+                android:id="@id/font_size_settings_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/divider_margin_top_bottom"
+                android:layout_alignParentBottom="true">
+    <include layout="@layout/divider_line" />
+    <com.android.settings.display.FontSettingsScrollView android:id="@id/bottom_scroll_view"
+                          android:paddingTop="@dimen/divider_margin_top_bottom"
+                          android:clipChildren="false"
+                          android:clipToPadding="false"
+                          android:layout_width="fill_parent"
+                          android:layout_height="wrap_content"
+                          android:fillViewport="true">
+      <LinearLayout android:orientation="vertical"
+                    android:clipChildren="false"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center"
+                      android:layout_gravity="center"
+                      android:clipChildren="false"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content">
+          <androidx.recyclerview.widget.RecyclerView android:layout_gravity="center"
+                                android:id="@id/font_recycler_view"
+                                android:paddingLeft="@dimen/visual_box_margin"
+                                android:paddingRight="@dimen/visual_box_margin"
+                                android:clipChildren="false"
+                                android:clipToPadding="false"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:height="@id/visual_box_reyclerview_height" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginBottom="@dimen/font_weight_view_margin_top">
+          <LinearLayout android:gravity="center"
+                        android:orientation="vertical"
+                        android:id="@id/font_hint_view_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/font_hint_view_layout_height">
+            <TextView android:textColor="@color/font_settings_view_big_color"
+                      android:layout_gravity="center"
+                      android:id="@id/font_hint_view"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="@dimen/font_hint_view_margin_top"
+                      android:layout_marginBottom="@dimen/font_hint_view_margin_bottom" />
+          </LinearLayout>
+          <LinearLayout android:layout_width="fill_parent"
+                        android:layout_height="@dimen/font_size_view_height">
+            <ImageView android:gravity="center"
+                       android:layout_gravity="center_vertical"
+                       android:layout_width="0.0dp"
+                       android:layout_height="26.9dp"
+                       android:src="@drawable/ic_a_small"
+                       android:layout_weight="2.0" />
+            <com.android.settings.display.FontSizeAdjustView android:id="@id/font_view"
+                                  android:background="@drawable/shape_corner_matrix"
+                                  android:layout_width="0.0dp"
+                                  android:layout_height="fill_parent"
+                                  android:layout_weight="9.0" />
+            <ImageView android:gravity="center"
+                       android:layout_gravity="center_vertical"
+                       android:layout_width="0.0dp"
+                       android:layout_height="26.9dp"
+                       android:src="@drawable/ic_a_big"
+                       android:layout_weight="2.0" />
+          </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical"
+                      android:id="@id/ll_font_weight"
+                      android:paddingBottom="@dimen/font_weight_seekbar_bottom_margin"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content">
+          <LinearLayout android:layout_width="fill_parent"
+                        android:layout_height="@dimen/font_size_view_height">
+            <ImageView android:gravity="center"
+                       android:layout_gravity="center_vertical"
+                       android:id="@id/iv_font_weight_light"
+                       android:layout_width="0.0dp"
+                       android:layout_height="26.9dp"
+                       android:src="@drawable/textIcon_thin"
+                       android:layout_weight="2.0" />
+            <com.android.settings.display.FontWeightAdjustView android:id="@id/fontweight_view"
+                                  android:background="@drawable/shape_corner_matrix"
+                                  android:layout_width="0.0dp"
+                                  android:layout_height="fill_parent"
+                                  android:progressDrawable="@null"
+                                  android:thumb="@null"
+                                  android:layout_weight="9.0" />
+            <ImageView android:gravity="center"
+                       android:layout_gravity="center_vertical"
+                       android:id="@id/iv_font_weight_heavy"
+                       android:layout_width="0.0dp"
+                       android:layout_height="26.9dp"
+                       android:src="@drawable/textIcon_thick"
+                       android:layout_weight="2.0" />
+          </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@id/recommend_layout"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginBottom="@dimen/font_recommend_bottom">
+          <LinearLayout android:orientation="vertical"
+                        android:id="@id/line_layout"
+                        android:background="@drawable/shape_corner"
+                        android:paddingBottom="@dimen/recommend_region_padding_bottom"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/recommend_region_margin"
+                        android:layout_marginEnd="@dimen/recommend_region_margin">
+            <TextView android:textSize="@dimen/font_recommend_size"
+                      android:textColor="@color/recommend_title_color"
+                      android:id="@id/recommend_title_tv"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="@dimen/recommend_title_margin_top"
+                      android:layout_marginBottom="@dimen/recommend_title_margin_bottom"
+                      android:text="@string/font_settings_recommend_title"
+                      android:layout_marginStart="@dimen/recommend_title_margin_start" />
+          </LinearLayout>
+        </LinearLayout>
+      </LinearLayout>
+    </com.android.settings.display.FontSettingsScrollView>
+  </LinearLayout>
+</RelativeLayout>

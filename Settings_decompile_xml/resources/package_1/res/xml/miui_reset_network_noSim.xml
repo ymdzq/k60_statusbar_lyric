@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+  <PreferenceCategory android:title="@string/reset_network_category">
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/reset_network_wifi"
+                          style="?attr/preferenceInformationStyle" />
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/reset_network_bluetooth"
+                          style="?attr/preferenceInformationStyle" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/choose_a_card_to_reset"
+                      android:key="subscription_chooser" />
+</PreferenceScreen>

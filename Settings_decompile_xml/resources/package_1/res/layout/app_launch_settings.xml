@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<miuix.springback.view.SpringBackLayout android:layout_width="fill_parent"
+                      android:layout_height="fill_parent"
+                      settings:scrollableView="@id/app_launch_scrollview" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <miuix.core.widget.NestedScrollView android:id="@id/app_launch_scrollview"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content">
+      <LinearLayout android:orientation="vertical"
+                    android:id="@id/app_head"
+                    android:background="?attr/preferenceItemBackground"
+                    android:visibility="visible"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="122.6dp">
+        <ImageView android:layout_gravity="center"
+                   android:id="@id/app_detail_icon"
+                   android:layout_width="64.0dp"
+                   android:layout_height="64.0dp"
+                   android:scaleType="fitXY"
+                   android:importantForAccessibility="no" />
+        <TextView android:textSize="16.0sp"
+                  android:ellipsize="marquee"
+                  android:layout_gravity="center"
+                  android:id="@id/app_detail_title"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="5.0dp"
+                  android:singleLine="true" />
+        <TextView android:textSize="12.0sp"
+                  android:ellipsize="marquee"
+                  android:layout_gravity="center"
+                  android:id="@id/app_detail_summary"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:singleLine="true"
+                  android:layout_marginStart="70.0dp"
+                  android:layout_marginEnd="70.0dp" />
+      </LinearLayout>
+      <FrameLayout android:id="@id/prefs_container"
+                   android:clipChildren="false"
+                   android:clipToPadding="false"
+                   android:layout_width="fill_parent"
+                   android:layout_height="0.0dp"
+                   android:layout_weight="1.0"
+                   android:smoothScrollbar="false" />
+    </LinearLayout>
+  </miuix.core.widget.NestedScrollView>
+</miuix.springback.view.SpringBackLayout>

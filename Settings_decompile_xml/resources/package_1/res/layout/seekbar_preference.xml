@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center_vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:minHeight="@dimen/miuix_appcompat_list_preferred_item_height_large"
+              android:paddingEnd="?android:attr/scrollbarSize" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent">
+    <ImageView android:layout_gravity="center"
+               android:id="@android:id/icon"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:minWidth="48.0dp"
+               android:contentDescription="@null" />
+  </LinearLayout>
+  <RelativeLayout android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1.0">
+    <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.PreferenceList"
+              android:ellipsize="marquee"
+              android:id="@android:id/title"
+              android:fadingEdge="horizontal"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:singleLine="true" />
+    <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.List.Secondary.Preference"
+              android:textColor="?android:attr/textColorSecondary"
+              android:id="@android:id/summary"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:maxLines="4"
+              android:layout_below="@android:id/title"
+              android:layout_alignStart="@android:id/title" />
+    <LinearLayout android:gravity="center"
+                  android:orientation="vertical"
+                  android:id="@android:id/widget_frame"
+                  android:layout_width="wrap_content"
+                  android:layout_height="fill_parent"
+                  android:layout_below="@android:id/summary"
+                  android:layout_alignStart="@android:id/title" />
+    <miuix.androidbasewidget.widget.SeekBar android:id="@id/seekbar"
+                          android:layout_width="fill_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_below="@android:id/summary"
+                          android:layout_toEndOf="@android:id/widget_frame"
+                          android:layout_alignParentEnd="true" />
+  </RelativeLayout>
+</LinearLayout>

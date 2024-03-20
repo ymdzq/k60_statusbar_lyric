@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<vector android:height="@dimen/notification_card_icon_height"
+        android:width="@dimen/notification_card_icon_width"
+        android:viewportWidth="220.0"
+        android:viewportHeight="139.0" xmlns:android="http://schemas.android.com/apk/res/android">
+  <path android:fillColor="#e5e5e5"
+        android:pathData="M0,0h220v139h-220z" />
+  <group>
+    <clip-path android:pathData="M-1581,-335h2560v1600h-2560z" />
+    <path android:fillColor="#000000"
+          android:pathData="M-1581,-335h2560v1600h-2560z" />
+    <path android:fillColor="#000000"
+          android:pathData="M-760,-335.198h1740v1454h-1740z" />
+    <path android:fillColor="#000000"
+          android:pathData="M-760,-79.198h1740v370h-1740z" />
+    <path android:fillColor="#242424"
+          android:pathData="M-79,-49.198L299,-49.198A36,36 0,0 1,335 -13.198L335,194.802A36,36 0,0 1,299 230.802L-79,230.802A36,36 0,0 1,-115 194.802L-115,-13.198A36,36 0,0 1,-79 -49.198z" />
+    <path android:fillColor="#1d1d1d"
+          android:pathData="M18,2.802L202,2.802A16,16 0,0 1,218 18.802L218,120.802A16,16 0,0 1,202 136.802L18,136.802A16,16 0,0 1,2 120.802L2,18.802A16,16 0,0 1,18 2.802z"
+          android:strokeColor="#585858"
+          android:strokeWidth="4.0" />
+    <path android:fillColor="#0d84ff"
+          android:pathData="M66,13L154,13A6,6 0,0 1,160 19L160,25A6,6 0,0 1,154 31L66,31A6,6 0,0 1,60 25L60,19A6,6 0,0 1,66 13z" />
+  </group>
+</vector>

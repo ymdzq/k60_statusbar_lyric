@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <com.android.settings.widget.MiuiNFCImagePreference />
+  <PreferenceCategory android:key="nfc_category" />
+  <com.android.settingslib.widget.MainSwitchPreference android:persistent="false"
+                        android:title="@string/nfc_quick_toggle_title"
+                        android:key="toggle_nfc"
+                        android:summary="@string/nfc_quick_toggle_summary" />
+  <com.android.settingslib.miuisettings.preference.SwitchPreference android:title="@string/nfc_secure_settings_title"
+                        android:key="nfc_secure_settings"
+                        android:summary="@string/nfc_secure_toggle_summary" />
+  <miuix.preference.DropDownPreference android:title="@string/nfc_payment_default"
+                        android:key="nfc_payment"
+                        settings:controller="com.android.settings.nfc.MiuiNfcPayPreferenceController" />
+  <com.android.settingslib.miuisettings.preference.SwitchPreference android:persistent="false"
+                        android:title="@string/nfc_dnd_mode_title"
+                        android:key="toggle_nfc_dnd_mode"
+                        android:summary="@string/preference_toggle_nfc_dnd_mode_summary" />
+  <miuix.preference.DropDownPreference android:title="@string/nfc_notification_mode_title"
+                        android:key="nfc_notification_mode"
+                        settings:controller="com.android.settings.wireless.MiuiNfcNotificationController"
+                        settings:entries="@array/nfc_notification_mode_titles"
+                        settings:entrySummaries="@array/nfc_notification_mode_summaries"
+                        settings:entryValues="@array/nfc_notification_mode_values" />
+  <com.android.settingslib.RestrictedPreference android:persistent="false"
+                        android:title="@string/android_beam_settings_title"
+                        android:key="android_beam_settings"
+                        android:fragment="com.android.settings.nfc.MiuiBeamFragment" />
+  <com.android.settingslib.miuisettings.preference.Preference android:persistent="false"
+                        android:title="@string/nfc_repair_title"
+                        android:key="nfc_repair"
+                        android:summary="@string/nfc_repair_summary" />
+</PreferenceScreen>

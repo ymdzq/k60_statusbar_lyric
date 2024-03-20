@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:title="@string/fingerprint_manage_tittle"
+                      android:key="fingerprint_list" />
+  <PreferenceCategory android:title="@string/unlock_type_category_title"
+                      android:key="unlock_type">
+    <miuix.preference.DropDownPreference android:title="@string/fingerprint_unlock_type"
+                          android:key="fingerprint_unlock_type"
+                          settings:defaultValue="0"
+                          settings:entries="@array/fingerprint_unlock_type_entries"
+                          settings:entryValues="@array/fingerprint_unlock_type_values" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/apply_fingerprint_to"
+                      android:key="apply_fingerprint_to" />
+  <PreferenceCategory android:title="@string/gxzw_anim_title"
+                      android:key="gxzw_anim_type">
+    <PreferenceScreen android:title="@string/gxzw_anim_title"
+                      android:key="gxzw_anim" />
+    <CheckBoxPreference android:title="@string/gxzw_vibrate_title"
+                        android:key="gxzw_vibrate"
+                        android:summary="@string/gxzw_vibrate_summary" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/fingerprint_others_title"
+                      android:key="fingerprint_others">
+    <CheckBoxPreference android:title="@string/gxzw_lowlight_open_title"
+                        android:key="gxzw_lowlight_open"
+                        android:summary="@string/gxzw_lowlight_open_summary" />
+    <CheckBoxPreference android:title="@string/gxzw_aod_show_tittle"
+                        android:key="gxzw_aod_show"
+                        android:summary="@string/gxzw_aod_show_summary" />
+  </PreferenceCategory>
+</PreferenceScreen>

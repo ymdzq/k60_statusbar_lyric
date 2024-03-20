@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<RelativeLayout android:id="@id/background"
+                android:background="@drawable/stylus_edit_show_bg"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:contentDescription="@string/stylus_schematic_diagram" xmlns:android="http://schemas.android.com/apk/res/android">
+  <ImageView android:id="@id/pen_image"
+             android:layout_width="0.0dp"
+             android:layout_height="0.0dp"
+             android:src="@drawable/stylus_show_icon"
+             android:scaleType="fitXY" />
+  <TextView android:textSize="@dimen/stylus_key_text_sp"
+            android:textColor="@color/stylus_pen_key"
+            android:id="@id/main_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/stylus_btn_quick_write"
+            android:fontFamily="mipro-regular" />
+  <ImageView android:id="@id/main_blue_point"
+             android:layout_width="@dimen/stylus_edit_point_wh"
+             android:layout_height="@dimen/stylus_edit_point_wh"
+             android:src="@drawable/stylus_blue_point"
+             android:scaleType="fitXY" />
+  <TextView android:textSize="@dimen/stylus_key_text_sp"
+            android:textColor="@color/stylus_pen_key"
+            android:id="@id/second_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/stylus_btn_screen_shot"
+            android:fontFamily="mipro-regular" />
+  <ImageView android:id="@id/second_blue_point"
+             android:layout_width="@dimen/stylus_edit_point_wh"
+             android:layout_height="@dimen/stylus_edit_point_wh"
+             android:src="@drawable/stylus_blue_point"
+             android:scaleType="fitXY" />
+  <LinearLayout android:orientation="horizontal"
+                android:id="@id/mask"
+                android:background="@color/stylus_setting_background"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:alpha="0.5" />
+</RelativeLayout>

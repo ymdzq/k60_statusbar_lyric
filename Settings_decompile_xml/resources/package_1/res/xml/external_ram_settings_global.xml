@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/external_ram_title" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <com.android.settings.widget.ExternalRamRadioButtonPreference android:title="@string/zen_mode_turned_off"
+                        android:key="key_close_external_ram"
+                        android:order="0" />
+  <com.android.settingslib.widget.FooterPreference android:title="@string/external_ram_intro"
+                        android:key="key_external_ram_intro_text"
+                        android:order="1000" />
+</PreferenceScreen>

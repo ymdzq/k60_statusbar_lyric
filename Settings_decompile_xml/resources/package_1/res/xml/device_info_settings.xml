@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/about_settings" xmlns:android="http://schemas.android.com/apk/res/android">
+  <com.android.settings.widget.CustomValuePreference android:title="@string/miui_updater"
+                        android:key="miui_update" />
+  <PreferenceCategory />
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:persistent="false"
+                        android:title="@string/device_name"
+                        android:key="device_name" />
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/model_number"
+                        android:key="model_number" />
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/firmware_version"
+                        android:key="firmware_version" />
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/security_patch"
+                        android:key="security_patch" />
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/device_miui_version"
+                        android:key="device_miui_version" />
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/device_opcust_version"
+                        android:key="device_opcust_version" />
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/model_name"
+                        android:key="model_name" />
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/device_cpu"
+                        android:key="device_cpu" />
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/device_memory"
+                        android:key="device_memory" />
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/device_internal_memory"
+                        android:key="device_internal_memory" />
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/baseband_version"
+                        android:key="baseband_version" />
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/kernel_version"
+                        android:key="kernel_version" />
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/hardware_version"
+                        android:key="hardware_version" />
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/wifi_type_approval_title"
+                        android:key="wifi_type_approval" />
+  <PreferenceScreen android:title="@string/device_status"
+                    android:key="status_info"
+                    android:summary="@string/device_status_summary"
+                    android:fragment="com.android.settings.deviceinfo.aboutphone.MyDeviceInfoFragment" />
+  <PreferenceCategory android:key="user">
+    <PreferenceScreen android:title="@string/legal_information"
+                      android:key="container"
+                      android:fragment="com.android.settings.Legal" />
+    <PreferenceScreen android:title="@string/settings_safetylegal_title"
+                      android:key="safetylegal">
+      <intent android:action="android.settings.SAFETY" />
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/instruction_title"
+                      android:key="instruction" />
+    <PreferenceScreen android:title="@string/approve_title"
+                      android:key="credentials"
+                      android:fragment="com.android.settings.credentials.MiuiCredentialsFragment" />
+  </PreferenceCategory>
+</PreferenceScreen>

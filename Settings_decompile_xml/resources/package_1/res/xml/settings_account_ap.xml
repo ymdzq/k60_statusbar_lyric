@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/lyra_account_ap_title"
+                        android:key="pref_key_account_ap"
+                        android:summary="@string/lyra_account_ap_summary" />
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/lyra_auto_connect_title"
+                        android:key="pref_key_auto_open_softap"
+                        android:summary="@string/lyra_auto_connect_summary" />
+</PreferenceScreen>

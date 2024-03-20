@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:title="@string/system_and_device_section_title"
+                      android:key="system_and_device_section">
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/date_and_time_settings_title"
+                          android:key="date_time_settings"
+                          android:fragment="com.android.settings.datetime.DateTimeSettings"
+                          settings:controller="com.android.settings.personal.DateTimeController" />
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/language_settings"
+                          android:key="language_settings"
+                          android:fragment="com.android.settings.language.MiuiLanguageAndInputSettings" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/locale_settings"
+                          android:key="locale_settings"
+                          android:fragment="com.android.settings.locale.MiuiLocaleSettings"
+                          settings:controller="com.android.settings.personal.LocaleController" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/assistance_category_title"
+                      android:key="assistance_category">
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/accessibility_settings"
+                          android:key="accessibility_settings">
+      <intent android:targetPackage="com.android.settings"
+              android:targetClass="com.android.settings.accessibility.MiuiAccessibilitySettingsActivity" />
+    </com.android.settingslib.miuisettings.preference.Preference>
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/wallet_header_title"
+                          android:key="mi_wallet_settings"
+                          settings:showRightArrow="true" />
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/gesture_settings_title"
+                          android:key="gesture_shortcut_settings">
+      <intent android:targetPackage="com.miui.securitycore"
+              android:action="com.miui.miinput.action.GESTURE_SHORTCUT" />
+    </com.android.settingslib.miuisettings.preference.Preference>
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/edge_mode_state_title"
+                          android:key="edge_settings"
+                          settings:controller="com.android.settings.personal.EdgeController">
+      <intent android:targetPackage="com.miui.securitycore"
+              android:action="com.miui.miinput.action.EDGE_SUPPRESSION" />
+    </com.android.settingslib.miuisettings.preference.Preference>
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/touch_assistant"
+                          android:key="touch_assistant"
+                          settings:controller="com.android.settings.personal.TouchAssistantController">
+      <intent android:targetPackage="com.miui.touchassistant"
+              android:action="miui.intent.action.TOUCH_ASSISTANT_SETTINGS" />
+    </com.android.settingslib.miuisettings.preference.Preference>
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/handy_mode"
+                          android:key="handy_mode_settings"
+                          android:fragment="com.android.settings.display.HandyModeFragment"
+                          settings:controller="com.android.settings.personal.HandyModeController" />
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/speaker_clean"
+                          android:key="speaker_settings"
+                          settings:controller="com.android.settings.personal.SpeakerSettingsController">
+      <intent android:action="android.settings.SPEAKER_SETTINGS" />
+    </com.android.settingslib.miuisettings.preference.Preference>
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/screen_recorder_title"
+                          android:key="screen_recorder"
+                          settings:controller="com.android.settings.personal.ScreenRecorderController">
+      <intent android:targetPackage="com.miui.screenrecorder"
+              android:targetClass="com.miui.screenrecorder.activity.ScreenRecorderSettingActivity" />
+    </com.android.settingslib.miuisettings.preference.Preference>
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/miui_special_feature"
+                      android:key="special_feature_category">
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/game_booster_title"
+                          android:key="game_booster"
+                          settings:controller="com.android.settings.special.GameBoosterController"
+                          settings:showRightArrow="true" />
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/beauty_fc_assistant"
+                          android:key="beauty_fc_assistant"
+                          settings:controller="com.android.settings.special.BeautyFrontCameraController">
+      <intent android:targetPackage="com.miui.securitycenter"
+              android:action="com.miui.gamebooster.action.ACCESS_BEAUTY" />
+    </com.android.settingslib.miuisettings.preference.Preference>
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/conversation_assistant"
+                          android:key="conversation_assistant"
+                          settings:controller="com.android.settings.special.ConversationController">
+      <intent android:targetPackage="com.miui.securitycenter"
+              android:action="com.miui.gamebooster.action.ACCESS_CONVERSATION" />
+    </com.android.settingslib.miuisettings.preference.Preference>
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/taplus_title"
+                          android:key="taplus_settings"
+                          settings:controller="com.android.settings.special.TaplusController">
+      <intent android:targetPackage="com.miui.contentextension"
+              android:action="com.miui.contentextension.action.TAPLUS_SETTINGS" />
+    </com.android.settingslib.miuisettings.preference.Preference>
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/freeform_guide_settings"
+                          android:key="freeform_guide_settings"
+                          settings:controller="com.android.settings.special.FreeformGuideController">
+      <intent android:targetPackage="com.miui.freeform"
+              android:action="com.miui.freeform.settings.action.FREEFORM_SETTINGS"
+              android:targetClass="com.miui.freeform.settings.FreeformGuideSettingsActivity" />
+    </com.android.settingslib.miuisettings.preference.Preference>
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/miui_desktop_mode_settings"
+                          android:key="miui_desktop_mode_settings"
+                          settings:controller="com.android.settings.desktopmode.MiuiDesktopModeController">
+      <intent android:targetPackage="com.miui.freeform"
+              android:action="com.miui.freeform.settings.action.DESKTOP_SETTINGS"
+              android:targetClass="com.miui.freeform.guide.MiuiDesktopModeActivity" />
+    </com.android.settingslib.miuisettings.preference.Preference>
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/external_ram_title"
+                          android:key="external_ram"
+                          android:fragment="com.android.settings.special.ExternalRamFragment"
+                          settings:controller="com.android.settings.personal.ExternalRamEntryController" />
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/kid_space_settings"
+                          android:key="kid_space_settings"
+                          settings:controller="com.android.settings.special.KidModeDisplayController">
+      <intent android:targetPackage="com.miui.securityadd"
+              android:targetClass="com.miui.child.home.kidspace.activity.KidModeActivity" />
+    </com.android.settingslib.miuisettings.preference.Preference>
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/oldman_mode_settings"
+                          android:key="easy_mode_pref"
+                          settings:controller="com.android.settings.special.EasyModeController">
+      <intent android:action="com.xiaomi.action.ENTER_ELDERLY_MODE" />
+    </com.android.settingslib.miuisettings.preference.Preference>
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/led_settings"
+                          android:key="led_settings"
+                          android:fragment="com.android.settings.LedSettings"
+                          settings:controller="com.android.settings.personal.LedController" />
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/video_tool_box_title"
+                          android:key="video_tool_box"
+                          settings:controller="com.android.settings.special.VideoToolBoxController">
+      <intent android:targetPackage="com.miui.securitycenter"
+              android:action="com.miui.gamebooster.action.VIDEOBOX_SETTINGS" />
+    </com.android.settingslib.miuisettings.preference.Preference>
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/quick_reply_title"
+                          android:key="quick_reply"
+                          settings:controller="com.android.settings.special.QuickReplyController">
+      <intent android:targetPackage="com.miui.securitycenter"
+              android:action="miui.intent.action.QUICK_REPLY_SETTINGS" />
+    </com.android.settingslib.miuisettings.preference.Preference>
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/color_lamp_title"
+                          android:key="color_lamp_settings"
+                          android:fragment="com.android.settings.colorlamp.ColorLampSettings"
+                          settings:controller="com.android.settings.special.ColorLampEntryController" />
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/second_space"
+                          android:key="second_space"
+                          settings:controller="com.android.settings.special.SecondSpaceController">
+      <intent android:targetPackage="com.miui.securitycore"
+              android:targetClass="com.miui.securityspace.ui.activity.PrivateSpaceMainActivity" />
+    </com.android.settingslib.miuisettings.preference.Preference>
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/slider_title"
+                          android:key="slider_display"
+                          android:fragment="com.android.settings.slider.SliderDisplaySettings"
+                          settings:controller="com.android.settings.special.SliderDisplayController" />
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/color_led_title"
+                          android:key="color_led_settings"
+                          android:fragment="com.android.settings.colorled.ColorLedSettings"
+                          settings:controller="com.android.settings.special.ColorLedEntryController" />
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/color_game_led_title"
+                          android:key="color_game_led_settings"
+                          android:fragment="com.android.settings.colorgameled.ColorGameLedSettings"
+                          settings:controller="com.android.settings.special.ColorGameLedEntryController" />
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/title_special_features_health_global"
+                          android:key="health_global"
+                          settings:controller="com.android.settings.special.HealthGlobalController">
+      <intent android:targetPackage="com.mi.healthglobal"
+              android:targetClass="com.mi.healthglobal.HeartrateHomeActivity" />
+    </com.android.settingslib.miuisettings.preference.Preference>
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/shoulder_key_settings"
+                          android:key="shoulder_key_settings"
+                          android:fragment="com.android.settings.shoulderkey.ShoulderKeySettings"
+                          settings:controller="com.android.settings.special.ShoulderKeyEntryController" />
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/voip_assistant_settings"
+                          android:key="miui_voip_assistant_screen"
+                          settings:controller="com.android.settings.special.PersonalVoipAssistantController">
+      <intent android:targetPackage="com.miui.audiomonitor"
+              android:targetClass="com.miui.audiomonitor.VoipAssistantActivity" />
+    </com.android.settingslib.miuisettings.preference.Preference>
+  </PreferenceCategory>
+  <PreferenceCategory android:key="development_settings_category"
+                      settings:controller="com.android.settings.MiuiBaseCategoryController">
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/sync_settings"
+                          android:key="account_sync_settings"
+                          android:fragment="com.android.settings.accounts.MiuiAccountSettings" />
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/enterprise_mode"
+                          android:key="enterprise_mode_settings">
+      <intent android:targetPackage="com.miui.securitycore"
+              android:action="miui.intent.action.ENTERPRISE_ACTIVATION" />
+    </com.android.settingslib.miuisettings.preference.Preference>
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/extension_function"
+                          android:key="extension_function_settings"
+                          android:fragment="com.android.settings.special.ExtensionFunctionFragment" />
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/development_settings_title"
+                          android:key="development_settings"
+                          android:fragment="com.android.settings.development.DevelopmentSettingsDashboardFragment"
+                          settings:controller="com.android.settings.personal.DevelopmentSettingsController" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/otg_settings"
+                          android:key="otg_settings"
+                          android:fragment="com.android.settings.OtgSettings"
+                          settings:controller="com.android.settings.personal.OtgSettingsController" />
+  </PreferenceCategory>
+</PreferenceScreen>

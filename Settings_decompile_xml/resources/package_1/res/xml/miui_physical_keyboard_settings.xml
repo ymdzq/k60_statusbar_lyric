@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/miui_keyboard_mouse_touch"
+                  android:key="keyboard_mouse_touch" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:key="keyboard_shortcut_key">
+    <com.android.settingslib.miuisettings.preference.Preference android:key="keyboard_customer_shortcut_key"
+                          android:fragment="com.android.settings.stylus.MiuiKeyboardShortcutFragment" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/miui_keyboard_assistance_category"
+                      android:key="keyboard_assistance_category"
+                      android:contentDescription="@string/miui_keyboard_assistance_category">
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/miui_keyboard_back_light"
+                          android:key="keyboard_back_light"
+                          android:defaultValue="true"
+                          android:contentDescription="@string/miui_keyboard_back_light" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/miui_pointer_settings_category"
+                      android:key="pointer_settings_category"
+                      android:contentDescription="@string/miui_pointer_settings_category">
+    <com.android.settings.stylus.MiuiPointSpeedSeekBarPreference android:title="@string/miui_pointer_speed"
+                          android:key="pointer_speed"
+                          android:contentDescription="@string/miui_pointer_speed" />
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/natural_scroll"
+                          android:key="mouse_gesture_naturalscroll"
+                          android:defaultValue="false"
+                          android:contentDescription="@string/natural_scroll" />
+  </PreferenceCategory>
+</PreferenceScreen>

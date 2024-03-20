@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:title="@string/effect_preview" />
+  <com.android.settings.display.TopImagePreference android:layout="@layout/preview_preference"
+                        android:key="top_image" />
+  <com.android.settings.display.TemperatureSeekBarPreference android:persistent="true"
+                        android:title="@string/adjust_temperature_title"
+                        android:key="adjust_temperature" />
+  <com.android.settings.widget.PaperModeTipPreference android:persistent="false"
+                        android:enabled="false"
+                        android:key="paper_mode_hdr_hint" />
+</PreferenceScreen>

@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:key="root" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:key="block_category"
+                      android:order="1">
+    <CheckBoxPreference android:persistent="false"
+                        android:title="@string/block_title"
+                        android:key="block" />
+  </PreferenceCategory>
+  <PreferenceCategory android:key="fold_category"
+                      android:order="2">
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:persistent="false"
+                          android:title="@string/fold_title"
+                          android:key="fold" />
+  </PreferenceCategory>
+  <PreferenceCategory android:key="aggregate_category"
+                      android:order="3">
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:persistent="false"
+                          android:title="@string/aggregate_title"
+                          android:key="aggregate" />
+  </PreferenceCategory>
+  <PreferenceCategory android:key="focus_category"
+                      android:order="4">
+    <CheckBoxPreference android:persistent="false"
+                        android:title="@string/focus_title"
+                        android:key="focus"
+                        android:summary="@string/focus_summary" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/notification_app_permissions"
+                      android:key="main_category"
+                      android:order="10">
+    <CheckBoxPreference android:persistent="false"
+                        android:title="@string/badge_title"
+                        android:key="badge" />
+    <CheckBoxPreference android:persistent="false"
+                        android:title="@string/priority_title"
+                        android:key="priority"
+                        android:summary="@string/priority_summary" />
+    <CheckBoxPreference android:persistent="false"
+                        android:title="@string/allow_float_title"
+                        android:key="allow_float"
+                        android:summary="@string/allow_float_summary" />
+    <CheckBoxPreference android:persistent="false"
+                        android:title="@string/allow_keyguard_title"
+                        android:key="allow_keyguard"
+                        android:summary="@string/allow_keyguard_summary" />
+    <CheckBoxPreference android:persistent="false"
+                        android:title="@string/allow_sound_title"
+                        android:key="allow_sound" />
+    <CheckBoxPreference android:persistent="false"
+                        android:title="@string/allow_vibrate_title"
+                        android:key="allow_vibrate" />
+    <CheckBoxPreference android:persistent="false"
+                        android:title="@string/allow_lights_title"
+                        android:key="allow_lights" />
+    <CheckBoxPreference android:persistent="false"
+                        android:title="@string/allow_ongoing_title"
+                        android:key="allow_ongoing" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:persistent="false"
+                          android:title="@string/visibility_override_title"
+                          android:key="visibility_override" />
+  </PreferenceCategory>
+  <PreferenceCategory android:key="app_category"
+                      android:order="1000">
+    <Preference android:persistent="false"
+                android:title="@string/app_link_title"
+                android:key="app_link" />
+  </PreferenceCategory>
+</PreferenceScreen>

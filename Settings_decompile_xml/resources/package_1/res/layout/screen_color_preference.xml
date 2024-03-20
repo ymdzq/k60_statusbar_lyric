@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<RelativeLayout android:layout_width="fill_parent"
+                android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <com.android.settings.display.ScreenColorBitMapView android:layout_gravity="center_horizontal"
+                        android:id="@id/screen_color_image"
+                        android:focusable="true"
+                        android:layout_width="@dimen/screen_color_preview_diameter_new"
+                        android:layout_height="@dimen/screen_color_preview_diameter_new"
+                        android:layout_marginTop="@dimen/screen_color_preview_margin_top"
+                        android:src="@drawable/screen_color_preview"
+                        android:scaleType="fitCenter"
+                        android:layout_centerHorizontal="true"
+                        android:contentDescription="@string/adjust_temperature_title" />
+  <miuix.miuixbasewidget.widget.FilterSortView2 android:id="@id/filter_sort_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="17.1dp"
+                        android:layout_below="@id/screen_color_image"
+                        android:layout_marginStart="@dimen/paper_mode_view_padding"
+                        android:layout_marginEnd="@dimen/paper_mode_view_padding">
+    <view android:id="@id/nature_color"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/nature_color"
+          settings:indicatorVisibility="gone"
+          class="miuix.miuixbasewidget.widget.FilterSortView2$TabView" />
+    <view android:id="@id/warm_color"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/warm_color"
+          settings:indicatorVisibility="gone"
+          class="miuix.miuixbasewidget.widget.FilterSortView2$TabView" />
+    <view android:id="@id/cool_color"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/cool_color"
+          settings:indicatorVisibility="gone"
+          class="miuix.miuixbasewidget.widget.FilterSortView2$TabView" />
+    <view android:id="@id/custom_color"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/custom_color"
+          settings:indicatorVisibility="gone"
+          class="miuix.miuixbasewidget.widget.FilterSortView2$TabView" />
+  </miuix.miuixbasewidget.widget.FilterSortView2>
+</RelativeLayout>

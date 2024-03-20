@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <item android:drawable="@drawable/ic_xiaoai_open"
+        settings:state_muted="false" />
+  <item android:drawable="@drawable/ic_xiaoai_off"
+        settings:state_muted="true" />
+</selector>

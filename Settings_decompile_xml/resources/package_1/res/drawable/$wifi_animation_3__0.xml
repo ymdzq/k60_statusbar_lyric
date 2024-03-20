@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<vector android:height="@dimen/wifi_icon_size"
+        android:width="@dimen/wifi_icon_size"
+        android:viewportWidth="64.0"
+        android:viewportHeight="64.0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+  <group android:name="group">
+    <group android:name="group_3">
+      <path android:fillColor="@color/wifi_signal_icon_color"
+            android:pathData="M51.9829,32.2187C52.3732,31.8284 52.3747,31.1944 51.9716,30.8173C46.7879,25.9684 39.8232,23 32.1655,23C24.5143,23 17.5548,25.9635 12.3725,30.8051C11.969,31.1821 11.9702,31.8165 12.3607,32.2069L14.4821,34.3283C14.8727,34.7189 15.5047,34.7171 15.911,34.3429C20.1864,30.4051 25.8953,28 32.1655,28C38.4416,28 44.1554,30.4096 48.4322,34.3541C48.8384,34.7288 49.4708,34.7308 49.8616,34.34L51.9829,32.2187Z"
+            android:fillType="evenOdd" />
+    </group>
+  </group>
+</vector>

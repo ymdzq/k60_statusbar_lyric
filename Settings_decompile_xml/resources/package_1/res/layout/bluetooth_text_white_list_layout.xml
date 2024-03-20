@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<miuix.springback.view.SpringBackLayout android:layout_width="fill_parent"
+                      android:layout_height="fill_parent"
+                      settings:scrollableView="@id/scrollviewaaa" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <miuix.core.widget.NestedScrollView android:id="@id/scrollviewaaa"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical"
+                  android:paddingTop="13.8dp"
+                  android:paddingBottom="@dimen/miuix_preference_item_padding_bottom"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content">
+      <EditText android:id="@id/bluetooth_text_white_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/add_text_app_name_here"
+                android:inputType="textNoSuggestions"
+                android:textAlignment="viewStart"
+                android:paddingStart="@dimen/edit_text_padding"
+                android:layout_marginStart="@dimen/edit_text_margin"
+                android:layout_marginEnd="@dimen/edit_text_margin" />
+      <TextView android:textSize="@dimen/instruction_text_size"
+                android:textColor="@color/prompt_text_color"
+                android:paddingLeft="?android:attr/listPreferredItemPaddingLeft"
+                android:paddingTop="12.0dp"
+                android:paddingRight="?android:attr/listPreferredItemPaddingRight"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/add_one_text_app_name_once" />
+    </LinearLayout>
+  </miuix.core.widget.NestedScrollView>
+</miuix.springback.view.SpringBackLayout>

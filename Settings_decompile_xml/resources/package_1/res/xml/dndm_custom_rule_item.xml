@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<RelativeLayout android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/miuix_preference_item_padding_start"
+                android:paddingEnd="@dimen/miuix_preference_item_padding_end" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/delete_btn"
+                android:layout_alignParentStart="true">
+    <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.PreferenceList"
+              android:ellipsize="end"
+              android:id="@id/title"
+              android:fadingEdge="horizontal"
+              android:clickable="true"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:singleLine="true"
+              android:layout_centerVertical="true" />
+  </LinearLayout>
+  <ImageView android:id="@id/delete_btn"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:src="@drawable/miuix_appcompat_btn_inline_delete_light"
+             android:layout_centerVertical="true"
+             android:layout_alignParentEnd="true" />
+</RelativeLayout>

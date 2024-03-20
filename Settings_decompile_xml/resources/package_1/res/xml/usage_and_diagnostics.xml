@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/upload_debug_log_title" xmlns:android="http://schemas.android.com/apk/res/android">
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/upload_debug_log_title"
+                        android:key="uplaod_log_switch" />
+  <com.android.settingslib.miuisettings.preference.Preference android:layout="@layout/usage_and_diagnostics_tip_preference_layout"
+                        android:key="upload_tip" />
+</PreferenceScreen>

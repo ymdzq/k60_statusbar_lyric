@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<vector android:height="@dimen/sos_player_icon_length"
+        android:width="@dimen/sos_player_icon_length"
+        android:autoMirrored="true"
+        android:viewportWidth="80.0"
+        android:viewportHeight="80.0" xmlns:android="http://schemas.android.com/apk/res/android">
+  <group>
+    <clip-path android:pathData="M27,21h29v38h-29z M 0,0" />
+    <path android:fillColor="@color/sos_player_bg"
+          android:pathData="M27,53.4479L27,26.5521C27,24.1668 29.6489,22.7355 31.6441,24.0427L52.1699,37.4906C53.9778,38.6751 53.9778,41.3249 52.1699,42.5094L31.6441,55.9573C29.6489,57.2645 27,55.8332 27,53.4479Z" />
+  </group>
+</vector>

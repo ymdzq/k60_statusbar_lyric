@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <com.android.settingslib.miuisettings.preference.RadioButtonPreferenceCategory android:title="@string/quiet_group"
+                        android:key="key_quiet_mode_defined">
+    <com.android.settings.dndmode.RadioButtonWithArrow android:title="@string/quiet_off_mode"
+                          android:key="off"
+                          settings:clickable="false" />
+    <com.android.settings.dndmode.RadioButtonWithArrow android:title="@string/quiet_no_interruptions_mode"
+                          android:key="silent"
+                          settings:clickable="false" />
+    <com.android.settings.dndmode.RadioButtonWithArrow android:title="@string/quiet_important_interruptions_mode"
+                          android:key="quiet"
+                          settings:clickable="false" />
+  </com.android.settingslib.miuisettings.preference.RadioButtonPreferenceCategory>
+</PreferenceScreen>

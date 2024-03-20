@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:state_selected="true"
+        android:color="@color/actionbar_haptic_crisp_select" />
+  <item android:state_active="true"
+        android:color="@color/actionbar_haptic_crisp_select" />
+  <item android:state_active="false"
+        android:color="@color/actionbar_haptic_crisp_normal" />
+  <item android:state_selected="false"
+        android:color="@color/actionbar_haptic_crisp_normal" />
+</selector>

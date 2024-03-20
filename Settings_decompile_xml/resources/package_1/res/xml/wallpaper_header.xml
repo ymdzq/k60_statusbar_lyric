@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+  <header android:icon="@drawable/ic_wallpaper_settings"
+          android:id="@id/wallpaper_settings"
+          android:title="@string/wallpaper_settings_title">
+    <intent android:targetPackage="com.miui.miwallpaper"
+            android:targetClass="com.miui.miwallpaper.activity.WallpaperSettingActivity" />
+  </header>
+</preference-headers>

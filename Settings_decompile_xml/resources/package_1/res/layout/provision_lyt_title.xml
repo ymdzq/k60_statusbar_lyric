@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center_horizontal"
+              android:orientation="vertical"
+              android:id="@id/provision_lyt_title"
+              android:paddingLeft="@dimen/provision_title_padding"
+              android:paddingTop="@dimen/provision_padding_top"
+              android:paddingRight="@dimen/provision_title_padding"
+              android:paddingBottom="@dimen/provision_container_margin_top"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <include layout="@layout/provision_big_title" />
+  <Space android:id="@id/provision_title_space"
+         android:visibility="gone"
+         android:layout_width="fill_parent"
+         android:layout_height="@dimen/provision_text_size_title_margin" />
+  <TextView android:id="@id/provision_sub_title"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/ProvisionPageSubTitleTextStyle" />
+</LinearLayout>

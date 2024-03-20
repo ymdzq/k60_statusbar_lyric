@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<FrameLayout android:background="?attr/preferenceItemBackground"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <TextView android:textSize="12.0sp"
+            android:textColor="@color/ad_service_instructions_color"
+            android:id="@id/ad_service_instructions_link_text_view"
+            android:paddingTop="12.0dp"
+            android:paddingBottom="12.0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/about_ad_service_instructions"
+            style="@style/Miuix.AppCompat.TextAppearance.List.Secondary" />
+</FrameLayout>

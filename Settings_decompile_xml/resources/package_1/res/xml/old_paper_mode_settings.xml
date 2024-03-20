@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:persistent="false"
+                        android:title="@string/screen_paper_mode_title"
+                        android:key="paper_mode_enable"
+                        android:summary="@string/screen_paper_mode_summary" />
+  <PreferenceCategory android:key="paper_mode_time_group">
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:persistent="false"
+                          android:title="@string/screen_paper_mode_time_title"
+                          android:key="paper_mode_time_enable"
+                          android:summary="@string/screen_paper_mode_time_summary" />
+    <miuix.preference.RadioButtonPreferenceCategory android:key="paper_mode_time_radio_group">
+      <miuix.preference.RadioSetPreferenceCategory>
+        <com.android.settings.display.PaperModePreference android:persistent="false"
+                              android:title="@string/paper_mode_auto_twilight_title"
+                              android:key="paper_mode_auto_twilight"
+                              android:summary="@string/paper_mode_auto_twilight_summary"
+                              android:dependency="paper_mode_time_enable" />
+      </miuix.preference.RadioSetPreferenceCategory>
+      <miuix.preference.RadioSetPreferenceCategory android:key="paper_mode_customize_time_group">
+        <com.android.settings.display.PaperModePreference android:persistent="false"
+                              android:title="@string/paper_mode_customize_time_title"
+                              android:key="paper_mode_customize_time"
+                              android:summary="@string/paper_mode_customize_time_summary"
+                              android:dependency="paper_mode_time_enable" />
+        <com.android.settings.dndmode.LabelPreference android:persistent="false"
+                              android:title="@string/paper_mode_start_time_title"
+                              android:key="paper_mode_start_time"
+                              android:dependency="paper_mode_customize_time"
+                              settings:clickable="true" />
+        <com.android.settings.dndmode.LabelPreference android:persistent="false"
+                              android:title="@string/paper_mode_end_time_title"
+                              android:key="paper_mode_end_time"
+                              android:dependency="paper_mode_customize_time"
+                              settings:clickable="true" />
+      </miuix.preference.RadioSetPreferenceCategory>
+    </miuix.preference.RadioButtonPreferenceCategory>
+  </PreferenceCategory>
+  <PreferenceCategory android:key="paper_mode_adjust_level_group">
+    <com.android.settings.widget.MiuiSeekBarPreference android:persistent="true"
+                          android:title="@string/screen_paper_mode_adjust_level"
+                          android:key="paper_mode_adjust_level"
+                          android:dependency="paper_mode_enable" />
+    <com.android.settings.widget.TipPreference android:persistent="false"
+                          android:enabled="false"
+                          android:layout="@layout/text_tips_preference"
+                          android:key="paper_mode_hdr_hint" />
+  </PreferenceCategory>
+</PreferenceScreen>

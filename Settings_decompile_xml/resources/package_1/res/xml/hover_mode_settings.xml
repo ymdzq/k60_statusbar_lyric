@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/hover_mode_name" xmlns:android="http://schemas.android.com/apk/res/android">
+  <PreferenceCategory>
+    <com.android.settingslib.miuisettings.preference.Preference android:enabled="false"
+                          android:layout="@layout/hover_mode_guide_video" />
+  </PreferenceCategory>
+  <PreferenceCategory android:persistent="false"
+                      android:title="@string/hover_mode_no_support_apps"
+                      android:key="hover_mode_app_list" />
+</PreferenceScreen>

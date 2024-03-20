@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/screen_enhance_engine_title"
+                  android:key="screen_enhance_engine" xmlns:android="http://schemas.android.com/apk/res/android">
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:persistent="false"
+                        android:title="@string/screen_enhance_engine_sr_title"
+                        android:key="screen_enhance_engine_sr">
+    <intent android:action="miui.settings.intent.action.SCREEN_ENHANCE_ENGINE_SR" />
+  </com.android.settingslib.miuisettings.preference.ValuePreference>
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:persistent="false"
+                        android:title="@string/screen_enhance_engine_ai_title"
+                        android:key="screen_enhance_engine_ai">
+    <intent android:action="miui.settings.intent.action.SCREEN_ENHANCE_ENGINE_AI" />
+  </com.android.settingslib.miuisettings.preference.ValuePreference>
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:persistent="false"
+                        android:title="@string/screen_enhance_engine_s2h_title"
+                        android:key="screen_enhance_engine_s2h">
+    <intent android:action="miui.settings.intent.action.SCREEN_ENHANCE_ENGINE_S2H" />
+  </com.android.settingslib.miuisettings.preference.ValuePreference>
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:persistent="false"
+                        android:title="@string/screen_enhance_engine_memc_title"
+                        android:key="screen_enhance_engine_memc">
+    <intent android:action="miui.settings.intent.action.SCREEN_ENHANCE_ENGINE_MEMC" />
+  </com.android.settingslib.miuisettings.preference.ValuePreference>
+</PreferenceScreen>

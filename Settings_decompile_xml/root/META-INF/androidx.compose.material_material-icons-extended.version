@@ -1,0 +1,1 @@
+task ':compose:material:material-icons-extended:writeVersionFile' property 'version'

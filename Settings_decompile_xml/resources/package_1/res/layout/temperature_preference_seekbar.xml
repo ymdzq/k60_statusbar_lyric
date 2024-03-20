@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center_vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:minHeight="@dimen/miuix_appcompat_list_preferred_item_height_large" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+  <LinearLayout android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9.1dp"
+                android:layout_marginBottom="14.9dp">
+    <LinearLayout android:gravity="center_vertical"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="12.0dp">
+      <ImageView android:id="@id/title_icon"
+                 android:background="@drawable/temperature_icon"
+                 android:layout_width="23.3dp"
+                 android:layout_height="23.3dp" />
+      <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.PreferenceList"
+                android:textSize="@dimen/volume_seekbar_title_text_size"
+                android:ellipsize="marquee"
+                android:id="@android:id/title"
+                android:fadingEdge="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:fontFamily="mipro-medium"
+                android:layout_marginStart="@dimen/seekbar_title_left_margin" />
+    </LinearLayout>
+    <miuix.androidbasewidget.widget.SeekBar android:id="@id/seekbar"
+                          android:layout_width="fill_parent"
+                          android:layout_height="wrap_content"
+                          android:progressDrawable="@drawable/multi_gradient_bg" />
+  </LinearLayout>
+</LinearLayout>

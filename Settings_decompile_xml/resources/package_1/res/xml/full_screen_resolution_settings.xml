@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/screen_resolution_title"
+                  android:key="screen_resolution" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+  <com.android.settings.display.ScreenResolutionPreference android:key="full_screen_resolution_selection" />
+  <PreferenceCategory android:key="save_battery_mode_category">
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:persistent="false"
+                          android:title="@string/save_battery_mode"
+                          android:key="save_battery_mode"
+                          android:summary="@string/save_battery_mode_summary" />
+  </PreferenceCategory>
+</PreferenceScreen>

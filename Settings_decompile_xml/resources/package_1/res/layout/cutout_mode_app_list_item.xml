@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center_vertical"
+              android:id="@id/item"
+              android:background="?attr/preferenceItemBackground"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingStart="@dimen/miuix_preference_item_padding_start"
+              android:paddingEnd="@dimen/miuix_preference_item_padding_end" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <ImageView android:layout_gravity="center"
+             android:id="@android:id/icon"
+             android:layout_width="@dimen/notification_large_icon_width"
+             android:layout_height="@dimen/notification_large_icon_height"
+             android:scaleType="fitCenter"
+             android:layout_marginEnd="@dimen/miuix_preference_item_padding_inner" />
+  <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.PreferenceList"
+            android:ellipsize="marquee"
+            android:gravity="center|start"
+            android:layout_gravity="center_vertical"
+            android:id="@android:id/title"
+            android:fadingEdge="horizontal"
+            android:layout_width="0.0dp"
+            android:layout_height="@dimen/miuix_appcompat_list_preferred_item_height"
+            android:singleLine="true"
+            android:layout_weight="1.0" />
+  <miuix.appcompat.widget.Spinner android:entries="@array/cutout_mode_entries"
+                        android:layout_gravity="center|right"
+                        android:id="@id/spinner"
+                        android:background="@null"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        settings:spinnerModeCompat="dropdown" />
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<vector android:height="@dimen/header_icon_size"
+        android:width="@dimen/header_icon_size"
+        android:autoMirrored="true"
+        android:viewportWidth="64.0"
+        android:viewportHeight="64.0" xmlns:android="http://schemas.android.com/apk/res/android">
+  <path android:fillColor="#807dfc"
+        android:pathData="M32,38m-26,0a26,26 0,1 1,52 0a26,26 0,1 1,-52 0" />
+  <path android:fillColor="#807dfc"
+        android:pathData="M32,1L32,1A8,8 0,0 1,40 9L40,21A8,8 0,0 1,32 29L32,29A8,8 0,0 1,24 21L24,9A8,8 0,0 1,32 1z" />
+  <path android:fillColor="#807dfc"
+        android:pathData="M21,1L43,1A4,4 0,0 1,47 5L47,5A4,4 0,0 1,43 9L21,9A4,4 0,0 1,17 5L17,5A4,4 0,0 1,21 1z" />
+  <path android:fillColor="#ffffff"
+        android:pathData="M37,48m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0" />
+  <path android:fillColor="#ffffff"
+        android:pathData="M47.5,39.5m-2.5,0a2.5,2.5 0,1 1,5 0a2.5,2.5 0,1 1,-5 0" />
+</vector>

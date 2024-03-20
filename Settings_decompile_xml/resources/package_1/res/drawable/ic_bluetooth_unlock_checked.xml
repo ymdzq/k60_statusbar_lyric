@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<vector android:height="@dimen/card_icon_size"
+        android:width="@dimen/card_icon_size"
+        android:viewportWidth="100.0"
+        android:viewportHeight="100.0" xmlns:android="http://schemas.android.com/apk/res/android">
+  <path android:fillColor="#00000000"
+        android:pathData="M37.533,12L69,31.175L10,67.558"
+        android:strokeColor="#ffffff"
+        android:strokeWidth="7.0"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+  <path android:fillColor="#00000000"
+        android:pathData="M37.533,87.223L69,68.048L10,31.665"
+        android:strokeColor="#ffffff"
+        android:strokeWidth="7.0"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+  <path android:fillColor="#00000000"
+        android:pathData="M37.534,12V86.733"
+        android:strokeColor="#ffffff"
+        android:strokeWidth="7.0"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+</vector>

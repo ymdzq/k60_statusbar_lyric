@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+  <PreferenceCategory android:title="@string/erase_optional"
+                      android:key="erase_optional">
+    <CheckBoxPreference android:persistent="false"
+                        android:title="@string/sd_data"
+                        android:key="remove_sd_data_check"
+                        style="?attr/preferenceInformationStyle" />
+    <CheckBoxPreference android:title="@string/erase_application"
+                        android:key="erase_application"
+                        android:summary="@string/erase_application_description" />
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/erase_external_storage"
+                          android:key="erase_external_storage"
+                          android:summary="@string/erase_external_storage_description" />
+  </PreferenceCategory>
+</PreferenceScreen>

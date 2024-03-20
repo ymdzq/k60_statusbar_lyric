@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:layout_width="wrap_content"
+              android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <Button android:textSize="14.0sp"
+          android:textColor="#0d84ff"
+          android:ellipsize="marquee"
+          android:gravity="center"
+          android:id="@id/update_text"
+          android:background="@drawable/new_version"
+          android:visibility="gone"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:maxWidth="@dimen/miuix_preference_text_max_width"
+          android:text="@string/stylus_ota_new_version"
+          android:singleLine="true"
+          android:layout_alignParentRight="true" />
+  <TextView android:textSize="14.0sp"
+            android:textColor="#7f7f7f"
+            android:id="@id/latest_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/stylus_ota_latest" />
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+  <PreferenceCategory android:title="@string/title_font_current2"
+                      android:key="font">
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/more_font_pref_title"
+                          android:key="more_font_settings"
+                          android:order="5000" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/title_font_settings"
+                      android:key="font_settings">
+    <com.android.settings.display.LiteFontSizePreference android:key="font_size" />
+    <com.android.settings.display.LiteFontWeightPreference android:key="font_weight" />
+  </PreferenceCategory>
+</PreferenceScreen>

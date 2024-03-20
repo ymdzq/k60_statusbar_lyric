@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/location_settings_title" xmlns:android="http://schemas.android.com/apk/res/android">
+  <com.android.settingslib.RestrictedSwitchPreference android:persistent="true"
+                        android:title="@string/location_access_title"
+                        android:key="location_toggle"
+                        android:summary="@string/location_access_summary"
+                        style="?attr/preferenceStyle" />
+  <com.android.settingslib.RestrictedSwitchPreference android:enabled="false"
+                        android:title="@string/managed_profile_location_switch_title"
+                        android:selectable="true"
+                        android:key="managed_profile_location_switch"
+                        style="?attr/preferenceStyle" />
+  <PreferenceCategory android:title="@string/location_mode_screen_title"
+                      android:key="location_mode">
+    <com.android.settingslib.widget.RadioButtonPreference android:persistent="false"
+                          android:title="@string/location_mode_high_accuracy_title"
+                          android:key="high_accuracy"
+                          android:summary="@string/location_mode_high_accuracy_description" />
+    <com.android.settingslib.widget.RadioButtonPreference android:persistent="false"
+                          android:title="@string/location_mode_battery_saving_title"
+                          android:key="battery_saving"
+                          android:summary="@string/location_mode_battery_saving_description" />
+    <com.android.settingslib.widget.RadioButtonPreference android:persistent="false"
+                          android:title="@string/location_mode_sensors_only_title"
+                          android:key="sensors_only"
+                          android:summary="@string/location_mode_sensors_only_description" />
+  </PreferenceCategory>
+  <PreferenceCategory />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/location_scanning_screen_title"
+                        android:key="location_scanning"
+                        android:fragment="com.android.settings.location.ScanningSettings" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/location_app_level_permissions"
+                        android:key="app_level_permissions">
+    <intent android:action="android.intent.action.MANAGE_PERMISSION_APPS">
+      <extra android:name="android.intent.extra.PERMISSION_NAME"
+             android:value="android.permission-group.LOCATION" />
+    </intent>
+  </com.android.settingslib.miuisettings.preference.Preference>
+  <com.android.settingslib.widget.LayoutPreference android:layout="@layout/app_entities_header"
+                        android:selectable="false"
+                        android:key="apps_dashboard" />
+  <PreferenceCategory android:key="location_services" />
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/assisted_gps"
+                        android:key="assisted_gps"
+                        android:summaryOn="@string/assisted_gps_enabled"
+                        android:summaryOff="@string/assisted_gps_disabled" />
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/agps_roaming"
+                        android:key="agps_roaming"
+                        android:summary="@string/agps_roaming_summary"
+                        android:dependency="assisted_gps" />
+  <PreferenceScreen android:title="@string/location_agps_params_settings_title"
+                    android:key="assisted_gps_params"
+                    android:dependency="assisted_gps">
+    <intent android:targetPackage="com.android.settings"
+            android:targetClass="com.android.settings.AgpsSettings" />
+  </PreferenceScreen>
+</PreferenceScreen>

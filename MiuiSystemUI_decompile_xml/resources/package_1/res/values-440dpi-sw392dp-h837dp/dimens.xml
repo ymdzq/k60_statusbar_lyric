@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+  <dimen name="recents_task_view_icon_padding_bottom">5.0dp</dimen>
+</resources>

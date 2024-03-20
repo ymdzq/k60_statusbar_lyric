@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/shoulder_key_shortcut_settings" xmlns:android="http://schemas.android.com/apk/res/android">
+  <com.android.settings.shoulderkey.FullImagePreference android:enabled="false"
+                        android:key="shoulder_key_shortcut_guide_image" />
+  <miuix.preference.DropDownPreference android:title="@string/shoulder_key_shortcut_double_click"
+                        android:key="shoulder_key_double_click" />
+  <miuix.preference.DropDownPreference android:title="@string/shoulder_key_shortcut_long_press"
+                        android:key="shoulder_key_long_press" />
+</PreferenceScreen>

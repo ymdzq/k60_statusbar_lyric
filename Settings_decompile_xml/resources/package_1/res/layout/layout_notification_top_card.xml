@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="horizontal"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingStart="@dimen/notification_card_horizontal_margin"
+              android:paddingEnd="@dimen/notification_card_horizontal_margin" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:orientation="vertical"
+                android:id="@id/lock_screen_notification_card"
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:contentDescription="@string/status_bar_app_enable_keyguard"
+                style="@style/NotificationCard">
+    <ImageView android:layout_gravity="center"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/ic_lock_screen_notification" />
+    <TextView android:layout_gravity="center"
+              android:id="@id/lock_screen_notification_card_text"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/notification_card_text_margin_top"
+              android:text="@string/status_bar_app_enable_keyguard"
+              style="@style/NotificationCardText" />
+  </LinearLayout>
+  <LinearLayout android:orientation="vertical"
+                android:id="@id/float_notification_card"
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:contentDescription="@string/status_bar_app_enable_floating"
+                style="@style/NotificationCard">
+    <ImageView android:layout_gravity="center"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/ic_float_notification" />
+    <TextView android:layout_gravity="center"
+              android:id="@id/float_notification_card_text"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/notification_card_text_margin_top"
+              android:text="@string/status_bar_app_enable_floating"
+              style="@style/NotificationCardText" />
+  </LinearLayout>
+  <LinearLayout android:orientation="vertical"
+                android:id="@id/show_app_badge_card"
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:contentDescription="@string/show_badge_notifications_short"
+                style="@style/NotificationCard">
+    <ImageView android:layout_gravity="center"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/ic_notification_badge" />
+    <TextView android:layout_gravity="center"
+              android:id="@id/show_app_badge_card_text"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/notification_card_text_margin_top"
+              android:text="@string/show_badge_notifications_short"
+              style="@style/NotificationCardText" />
+  </LinearLayout>
+</LinearLayout>

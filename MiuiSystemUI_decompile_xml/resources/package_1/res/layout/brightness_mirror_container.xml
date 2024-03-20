@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<FrameLayout android:layout_gravity="@integer/notification_panel_layout_gravity"
+             android:id="@id/brightness_mirror_container"
+             android:visibility="invisible"
+             android:layout_width="@dimen/brightness_mirror_container_width"
+             android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <include layout="@layout/quick_settings_brightness_dialog" />
+</FrameLayout>

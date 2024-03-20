@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="vertical"
+              android:background="@color/input_method_function_select_background"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <RelativeLayout android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="@dimen/input_method_clipboard_settings_image_margin_top"
+                  android:layout_marginBottom="@dimen/input_method_clipboard_settings_bg_image_margin_bottom">
+    <ImageView android:id="@id/bg_image"
+               android:layout_width="fill_parent"
+               android:layout_height="@dimen/input_method_clipboard_settings_bg_image_height"
+               android:src="@drawable/input_method_clipboard_settings_bg" />
+    <ImageView android:id="@id/red_point"
+               android:layout_width="fill_parent"
+               android:layout_height="@dimen/input_method_clipboard_settings_bg_image_height"
+               android:src="@drawable/input_method_clipboard_settings_red_point" />
+    <ImageView android:id="@id/bubble_image"
+               android:layout_width="fill_parent"
+               android:layout_height="@dimen/input_method_clipboard_settings_bg_image_height"
+               android:src="@drawable/input_method_clipboard_settings_cloud_bubble" />
+  </RelativeLayout>
+  <TextView android:textSize="@dimen/input_method_clipboard_settings_tips_text_size"
+            android:textColor="@color/input_method_cloud_paste_tips_text_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/input_method_clipboard_settings_tips_margin_bottom"
+            android:text="@string/input_method_quick_cloud_tips"
+            android:layout_marginStart="@dimen/input_method_clipboard_settings_tips_margin_start" />
+</LinearLayout>

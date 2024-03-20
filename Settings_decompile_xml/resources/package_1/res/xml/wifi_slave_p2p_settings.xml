@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/slave_wifi_menu_p2p" xmlns:android="http://schemas.android.com/apk/res/android">
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:persistent="false"
+                        android:title="@string/device_name"
+                        android:key="slave_p2p_this_device"
+                        android:fragment="com.android.settings.MiuiDeviceNameEditFragment" />
+  <PreferenceCategory android:title="@string/wifi_p2p_peer_devices"
+                      android:key="slave_p2p_peer_devices" />
+  <PreferenceCategory android:title="@string/wifi_p2p_remembered_groups"
+                      android:key="slave_p2p_persistent_group" />
+</PreferenceScreen>

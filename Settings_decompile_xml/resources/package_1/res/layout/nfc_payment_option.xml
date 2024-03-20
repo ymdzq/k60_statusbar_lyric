@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center_vertical"
+              android:orientation="horizontal"
+              android:id="@id/content"
+              android:background="@android:color/transparent"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:minHeight="?android:attr/listPreferredItemHeightSmall"
+              android:paddingStart="16.0dp"
+              android:paddingEnd="12.0dp" xmlns:android="http://schemas.android.com/apk/res/android">
+  <RadioButton android:gravity="center_vertical"
+               android:id="@id/button"
+               android:focusable="false"
+               android:clickable="false"
+               android:layout_width="35.0dp"
+               android:layout_height="wrap_content"
+               android:paddingEnd="12.0dp" />
+  <LinearLayout android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0">
+    <TextView android:textAppearance="?android:attr/textAppearanceListItem"
+              android:textColor="?android:attr/textColorAlertDialogListItem"
+              android:ellipsize="marquee"
+              android:gravity="center|start"
+              android:id="@id/text1"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:singleLine="true" />
+    <TextView android:textAppearance="?android:attr/textAppearanceListItemSecondary"
+              android:textColor="?android:attr/textColorAlertDialogListItem"
+              android:ellipsize="marquee"
+              android:gravity="center|start"
+              android:id="@id/text2"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:singleLine="true" />
+  </LinearLayout>
+</LinearLayout>

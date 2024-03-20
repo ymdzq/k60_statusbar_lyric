@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<miuix.springback.view.SpringBackLayout android:layout_width="fill_parent"
+                      android:layout_height="fill_parent"
+                      settings:scrollableView="@id/id_0x7f0a093b" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <miuix.core.widget.NestedScrollView android:id="@id/id_0x7f0a093b"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical"
+                  android:paddingTop="@dimen/miuix_preference_item_padding_top"
+                  android:paddingBottom="@dimen/miuix_preference_item_padding_bottom"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content">
+      <EditText android:id="@id/device_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/device_name_input_hint"
+                android:inputType="textNoSuggestions"
+                android:textAlignment="viewStart"
+                android:paddingStart="@dimen/edit_text_padding"
+                android:layout_marginStart="@dimen/device_name_edit_text_margin"
+                android:layout_marginEnd="@dimen/device_name_edit_text_margin" />
+      <TextView android:textSize="@dimen/instruction_text_size"
+                android:textColor="@color/prompt_text_color"
+                android:paddingLeft="@dimen/device_name_edit_usage_padding"
+                android:paddingTop="12.0dp"
+                android:paddingRight="@dimen/device_name_edit_usage_padding"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/device_name_usage_point" />
+    </LinearLayout>
+  </miuix.core.widget.NestedScrollView>
+</miuix.springback.view.SpringBackLayout>

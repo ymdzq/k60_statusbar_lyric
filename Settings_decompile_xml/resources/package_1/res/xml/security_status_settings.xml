@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/security_status" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/find_my_device"
+                        android:key="find_my_device"
+                        settings:controller="com.android.settings.security.FindMyDeviceController" />
+  <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/security_update"
+                        android:key="security_update"
+                        settings:controller="com.android.settings.security.SecurityUpdateController" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/security_update"
+                        android:key="security_status_package_verifier"
+                        settings:controller="com.android.settings.security.SecurityPackageVerifier" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/security_update"
+                        android:key="security_status_partial_system_updates" />
+</PreferenceScreen>

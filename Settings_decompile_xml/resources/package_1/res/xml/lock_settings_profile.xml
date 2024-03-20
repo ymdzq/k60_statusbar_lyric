@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:title="@string/lock_settings_profile_title"
+                      android:key="security_category_profile">
+    <com.android.settingslib.MiuiRestrictedSwitchPreference android:title="@string/lock_settings_profile_unification_title"
+                          android:key="unification"
+                          android:summary="@string/lock_settings_profile_unification_summary"
+                          settings:keywords="@string/keywords_unification"
+                          style="?android:attr/preferenceScreenStyle" />
+    <com.android.settingslib.MiuiRestrictedPreference android:title="@string/unlock_set_unlock_launch_picker_title_profile"
+                          android:key="unlock_set_or_change_profile"
+                          android:summary="@string/unlock_set_unlock_mode_pattern"
+                          settings:keywords="@string/keywords_lockscreen" />
+  </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/battery_settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:title="@string/battery_settings_title"
+                      android:key="battery_category" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/power_center"
+                        android:key="power_center">
+    <intent android:action="miui.intent.action.POWER_MANAGER" />
+  </com.android.settingslib.miuisettings.preference.Preference>
+  <PreferenceScreen android:title="@string/power_usage_history"
+                    android:key="power_usage"
+                    android:fragment="com.android.settings.fuelgauge.PowerUsageSummary" />
+  <PreferenceScreen android:title="@string/power_hide_mode_title"
+                    android:key="power_hide_mode"
+                    android:summary="@string/power_hide_mode_summary">
+    <intent android:action="miui.intent.action.POWER_HIDE_MODE_ACTIVITY" />
+  </PreferenceScreen>
+  <PreferenceCategory android:title="@string/performance_category"
+                      android:key="performance_category" />
+  <com.android.settingslib.miuisettings.preference.miuix.DropDownPreference android:persistent="false"
+                        android:title="@string/power_mode"
+                        android:key="power_mode"
+                        settings:entries="@array/power_mode_entries" />
+</PreferenceScreen>

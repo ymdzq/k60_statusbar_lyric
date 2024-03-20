@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center_vertical"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingEnd="?android:attr/scrollbarSize" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:id="@id/title_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/title_layout_top_margin"
+                android:layout_marginBottom="@dimen/title_layout_bottom_margin">
+    <com.android.settings.sound.VolumeStreamStateView android:layout_gravity="center"
+                          android:id="@android:id/icon"
+                          android:layout_width="@dimen/volume_icon_width"
+                          android:layout_height="@dimen/volume_icon_height" />
+    <TextView android:textSize="@dimen/volume_seekbar_title_text_size"
+              android:ellipsize="marquee"
+              android:id="@android:id/title"
+              android:fadingEdge="horizontal"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:fontFamily="mipro-medium"
+              android:layout_marginStart="@dimen/seekbar_title_left_margin" />
+  </LinearLayout>
+  <miuix.androidbasewidget.widget.SeekBar android:id="@id/seekbar"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/volume_seekbar_margin_bottom" />
+</LinearLayout>

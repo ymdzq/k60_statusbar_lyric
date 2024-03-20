@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+  <miuix.preference.RadioButtonPreference android:layout="@layout/miuix_preference_radiobutton_two_state_background"
+                        android:title="@string/default_suppression_title"
+                        android:key="default_suppression" />
+  <miuix.preference.RadioButtonPreference android:layout="@layout/miuix_preference_radiobutton_two_state_background"
+                        android:title="@string/strong_suppression_title"
+                        android:key="strong_suppression"
+                        android:summary="@string/strong_suppression_summary" />
+  <miuix.preference.RadioButtonPreference android:layout="@layout/miuix_preference_radiobutton_two_state_background"
+                        android:title="@string/wake_suppression_title"
+                        android:key="wake_suppression"
+                        android:summary="@string/wake_suppression_summary" />
+  <miuix.preference.RadioButtonPreference android:layout="@layout/miuix_preference_radiobutton_two_state_background"
+                        android:title="@string/diy_suppression_title"
+                        android:key="custom_suppression"
+                        android:summary="@string/diy_suppression_summary" />
+  <com.android.settings.widget.MagicSeekBarPreference android:persistent="true"
+                        android:title="@string/seek_bar_info"
+                        android:key="edge_mode_adjust_level" />
+  <com.android.settings.keys.RestrictedEdgeDescriptionPreference android:persistent="false"
+                        android:enabled="false"
+                        android:layout="@layout/restricted_info_lyt"
+                        android:title="@string/edge_mode_state_summary"
+                        android:key="restricted_info" />
+</PreferenceScreen>

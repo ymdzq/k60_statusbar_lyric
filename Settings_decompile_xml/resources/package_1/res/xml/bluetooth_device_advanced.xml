@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/bluetooth_device_advanced_title" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto" xmlns:app="http://schemas.android.com/apk/res-auto">
+  <com.android.settingslib.miuisettings.preference.EditTextPreference android:persistent="false"
+                        android:title="@string/bluetooth_device_advanced_rename_device"
+                        android:key="rename_device"
+                        android:order="20"
+                        style="@style/wifi_item_edit_content" />
+  <com.android.settingslib.miuisettings.preference.Preference android:persistent="false"
+                        android:title="@string/bluetooth_device_context_unpair"
+                        android:key="unpair"
+                        android:order="40" />
+  <PreferenceCategory android:title="@string/bluetooth_device_advanced_profile_header_title"
+                      android:key="profile_container"
+                      android:order="100" />
+  <PreferenceCategory android:title="@string/stylus_ota_update"
+                      android:key="update_ota"
+                      android:order="110">
+    <com.android.settings.stylus.CustomColorTextPreference android:title="@string/handle_ota_update_title"
+                          android:key="firmwareOta"
+                          android:widgetLayout="@layout/new_version" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/bt_ldac_property"
+                      android:key="ldac_container"
+                      android:order="120">
+    <com.android.settings.widget.TipPreference android:persistent="false"
+                          android:enabled="false"
+                          android:layout="@layout/preference_textview_secondary"
+                          android:title="@string/bt_ldac_declaration"
+                          android:key="codec_claimer"
+                          android:order="1" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/bt_audio_share_property"
+                      android:key="audio_share_container"
+                      android:order="50" />
+  <PreferenceCategory android:title="@string/bt_audio_repair_property"
+                      android:key="audio_repair_container"
+                      android:order="130" />
+  <PreferenceCategory android:title="@string/bluetooth_share_audio"
+                      android:key="bleShareAudioCategory"
+                      android:order="200">
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/bluetooth_share_broadcast_jion"
+                          android:key="bleAudioBroadcastAdd"
+                          android:order="2"
+                          app:showRightArrow="true" />
+  </PreferenceCategory>
+</PreferenceScreen>

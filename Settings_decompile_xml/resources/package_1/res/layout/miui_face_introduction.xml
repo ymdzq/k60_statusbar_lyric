@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<ScrollView android:background="@android:color/black"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fillViewport="true" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+    <LinearLayout android:id="@id/back_image"
+                  android:layout_width="@dimen/miui_face_enroll_back_linear_width"
+                  android:layout_height="@dimen/miui_face_enroll_back_linear_height">
+      <ImageView android:layout_gravity="center_vertical"
+                 android:layout_width="@dimen/miui_face_enroll_back_image_width"
+                 android:layout_height="@dimen/miui_face_enroll_back_image_height"
+                 android:src="@drawable/face_input_back"
+                 android:scaleType="center"
+                 android:contentDescription="@string/accessibility_back"
+                 android:layout_marginStart="@dimen/miui_face_enroll_back_image_start" />
+    </LinearLayout>
+    <TextureView android:layout_gravity="center_horizontal"
+                 android:id="@id/miui_face_input_introduction_video"
+                 android:layout_width="@dimen/miui_face_enroll_suggestion_video_width"
+                 android:layout_height="@dimen/miui_face_enroll_suggestion_video_width"
+                 android:layout_marginTop="@dimen/miui_face_enroll_introduction_video_top" />
+    <TextView android:textSize="@dimen/miui_face_enroll_introduction_title_text_size"
+              android:textColor="@color/miui_face_input_normal_text_color"
+              android:layout_gravity="center_horizontal"
+              android:id="@id/miui_face_input_introduction_title"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/miui_face_enroll_introduction_title_top"
+              android:text="@string/face_data_input_title"
+              android:fontFamily="mipro-regular" />
+    <TextView android:textSize="@dimen/miui_face_enroll_introduction_message_text_size"
+              android:textColor="@color/miui_face_input_first_suggestion_color"
+              android:gravity="center"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/miui_face_enroll_introduction_message_top"
+              android:text="@string/face_data_introduction_msg"
+              android:fontFamily="mipro-regular"
+              android:layout_marginStart="@dimen/miui_face_enroll_introduction_message_horizontal"
+              android:layout_marginEnd="@dimen/miui_face_enroll_introduction_message_horizontal" />
+    <View android:layout_width="wrap_content"
+          android:layout_height="0.0dp"
+          android:layout_weight="1.0" />
+    <Button android:textSize="@dimen/miui_face_enroll_button_text_size"
+            android:id="@id/miui_face_recoginition_intorduction_next"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/miui_face_enroll_button_horizontal"
+            android:text="@string/face_data_introduction_next"
+            android:layout_marginStart="@dimen/miui_face_enroll_button_horizontal"
+            android:layout_marginEnd="@dimen/miui_face_enroll_button_horizontal"
+            style="@style/Widget.Button.Warning" />
+  </LinearLayout>
+</ScrollView>

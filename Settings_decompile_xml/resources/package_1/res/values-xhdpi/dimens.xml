@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+  <dimen name="notification_large_icon_height">36.67dp</dimen>
+  <dimen name="notification_large_icon_width">36.67dp</dimen>
+  <dimen name="privacy_list_header_footer_padding_start_end">40.0dp</dimen>
+  <dimen name="sos_common_padding">26.667dp</dimen>
+  <dimen name="sos_direction_back_height">251.333dp</dimen>
+  <dimen name="sos_direction_back_width">132.667dp</dimen>
+  <dimen name="sos_direction_marginBottom">20.0dp</dimen>
+  <dimen name="sos_direction_marginTop">13.33dp</dimen>
+  <dimen name="sos_linear_margin_end">23.33dp</dimen>
+  <dimen name="sos_linear_margin_start">23.33dp</dimen>
+  <dimen name="sos_linear_total_height">65.67dp</dimen>
+  <dimen name="sos_player_icon_length">26.67dp</dimen>
+  <dimen name="sos_player_icon_margin_end">11.0dp</dimen>
+  <dimen name="sos_player_linear_height">44.67dp</dimen>
+  <dimen name="sos_player_text_margin_start">14.67dp</dimen>
+  <dimen name="sos_player_text_size">13.33sp</dimen>
+  <dimen name="sos_recycleview_margin_top">13.33dp</dimen>
+  <dimen name="text_dimen_36">12.0sp</dimen>
+  <dimen name="text_dimen_50">16.67sp</dimen>
+  <dimen name="view_dimen_102">34.0dp</dimen>
+  <dimen name="view_dimen_105">35.0dp</dimen>
+  <dimen name="view_dimen_109">36.29dp</dimen>
+  <dimen name="view_dimen_14">4.66dp</dimen>
+  <dimen name="view_dimen_156">52.0dp</dimen>
+  <dimen name="view_dimen_160">53.333dp</dimen>
+  <dimen name="view_dimen_200">66.67dp</dimen>
+  <dimen name="view_dimen_27">9.0dp</dimen>
+  <dimen name="view_dimen_30">10.0dp</dimen>
+  <dimen name="view_dimen_354">118.0dp</dimen>
+  <dimen name="view_dimen_380">126.66dp</dimen>
+  <dimen name="view_dimen_43">14.33dp</dimen>
+  <dimen name="view_dimen_46">15.33dp</dimen>
+  <dimen name="view_dimen_47">15.71dp</dimen>
+  <dimen name="view_dimen_48">16.0dp</dimen>
+  <dimen name="view_dimen_54">18.0dp</dimen>
+  <dimen name="view_dimen_64">21.33dp</dimen>
+  <dimen name="view_dimen_72">24.0dp</dimen>
+</resources>

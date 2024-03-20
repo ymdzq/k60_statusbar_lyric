@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/fiveg_vonr_switch_title"
+                  android:key="development_vonr_settings"
+                  settings:controller="com.android.settings.development.FiveGVonrPreferenceController"
+                  settings:searchable="false" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:title="@string/sim_vonr_title"
+                      android:key="sim0_vonr_category_key" />
+  <PreferenceCategory android:title="@string/sim_vonr_title"
+                      android:key="sim1_vonr_category_key" />
+</PreferenceScreen>

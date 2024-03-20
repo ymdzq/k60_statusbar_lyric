@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:gravity="center_vertical"
+              android:background="?attr/preferenceItemBackground"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:minHeight="@dimen/miuix_appcompat_list_preferred_item_height_large" xmlns:android="http://schemas.android.com/apk/res/android">
+  <ImageView android:layout_gravity="center_vertical"
+             android:id="@id/mute_button"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content" />
+  <LinearLayout android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingRight="0.0dp"
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                style="@style/Widget.PreferenceItem">
+    <TextView android:textAppearance="?android:attr/textAppearanceSmall"
+              android:textSize="@dimen/volume_decription_size"
+              android:textColor="@color/shadow"
+              android:id="@id/description_text"
+              android:paddingLeft="16.0dp"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content" />
+    <miuix.androidbasewidget.widget.SeekBar android:id="@id/volume_seekbar"
+                          android:paddingLeft="16.0dp"
+                          android:layout_width="fill_parent"
+                          android:layout_height="wrap_content" />
+  </LinearLayout>
+</LinearLayout>

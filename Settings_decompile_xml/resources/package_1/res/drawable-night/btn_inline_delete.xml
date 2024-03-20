@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<vector android:height="@dimen/miuix_appcompat_btn_inline_size"
+        android:width="@dimen/miuix_appcompat_btn_inline_size"
+        android:viewportWidth="26.0"
+        android:viewportHeight="26.0" xmlns:android="http://schemas.android.com/apk/res/android">
+  <path android:fillColor="#ffffff"
+        android:pathData="M13,25C19.627,25 25,19.627 25,13C25,6.373 19.627,1 13,1C6.373,1 1,6.373 1,13C1,19.627 6.373,25 13,25Z"
+        android:fillAlpha="0.2" />
+  <path android:fillColor="#00000000"
+        android:pathData="M13,25.368C19.83,25.368 25.368,19.83 25.368,13C25.368,6.17 19.83,0.632 13,0.632C6.17,0.632 0.632,6.17 0.632,13C0.632,19.83 6.17,25.368 13,25.368Z"
+        android:strokeColor="#ffffff"
+        android:strokeWidth="0.735294"
+        android:strokeAlpha="0.2" />
+  <path android:fillColor="#ffffff"
+        android:pathData="M16.899,10.66C17.33,10.229 17.33,9.53 16.899,9.1C16.469,8.669 15.77,8.669 15.34,9.1L13,11.439L10.66,9.1C10.23,8.669 9.531,8.669 9.101,9.1C8.67,9.53 8.67,10.229 9.101,10.66L11.44,12.999L9.101,15.339C8.67,15.77 8.67,16.468 9.101,16.899C9.531,17.329 10.23,17.329 10.66,16.899L13,14.559L15.34,16.899C15.77,17.329 16.469,17.329 16.899,16.899C17.33,16.468 17.33,15.77 16.899,15.339L14.56,12.999L16.899,10.66Z"
+        android:fillAlpha="0.4"
+        android:fillType="evenOdd" />
+</vector>

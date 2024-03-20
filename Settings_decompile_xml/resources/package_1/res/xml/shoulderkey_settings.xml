@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/shoulder_key_settings_title" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:key="shoulder_key_guide">
+    <com.android.settingslib.miuisettings.preference.Preference android:enabled="false"
+                          android:layout="@layout/shoulderkey_guide" />
+  </PreferenceCategory>
+  <PreferenceCategory android:key="shoulder_key_features">
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/shoulder_key_sound_settings"
+                          android:key="shoulder_key_sound_effect"
+                          android:fragment="com.android.settings.shoulderkey.SoundEffectSettings"
+                          settings:showRightArrow="true" />
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/shoulder_key_game_light_settings"
+                          android:key="shoulder_key_game_light_effect"
+                          settings:showRightArrow="true">
+      <intent android:targetPackage="com.miui.securitycenter"
+              android:action="com.miui.gamebooster.action.ACCESS_LIGHTEFFECT" />
+    </com.android.settingslib.miuisettings.preference.ValuePreference>
+    <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/shoulder_key_shortcut_settings"
+                          android:key="shoulder_key_shortcut"
+                          android:summary="@string/shoulder_key_shortcut_settings_summary"
+                          android:fragment="com.android.settings.shoulderkey.ShortcutSettings"
+                          settings:showRightArrow="true" />
+  </PreferenceCategory>
+</PreferenceScreen>

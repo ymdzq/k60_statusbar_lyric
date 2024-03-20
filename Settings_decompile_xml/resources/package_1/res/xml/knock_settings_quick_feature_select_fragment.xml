@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+  <PreferenceCategory android:title="@string/key_gesture_function_preview"
+                      android:key="key_gesture_function_category">
+    <com.android.settingslib.miuisettings.preference.Preference android:enabled="false"
+                          android:layout="@layout/knock_gesture_v_lottie" />
+  </PreferenceCategory>
+  <miuix.preference.RadioButtonPreferenceCategory android:title="@string/key_gesture_function_optional"
+                        android:key="knock_gesture_function_optional" />
+</PreferenceScreen>

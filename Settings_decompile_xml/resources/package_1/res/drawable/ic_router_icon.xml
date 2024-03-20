@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<vector android:height="24.0dp"
+        android:width="24.0dp"
+        android:viewportWidth="68.0"
+        android:viewportHeight="68.0" xmlns:android="http://schemas.android.com/apk/res/android">
+  <path android:fillColor="@color/wifi_detail_item_icon_color"
+        android:pathData="M4.5,37C4.5,33.4101 7.4102,30.5 11,30.5H56C59.5899,30.5 62.5,33.4101 62.5,37V55C62.5,58.5899 59.5899,61.5 56,61.5H11C7.4102,61.5 4.5,58.5899 4.5,55V37ZM11,35.5C10.1716,35.5 9.5,36.1716 9.5,37V55C9.5,55.8284 10.1716,56.5 11,56.5H56C56.8284,56.5 57.5,55.8284 57.5,55V37C57.5,36.1716 56.8284,35.5 56,35.5H11Z"
+        android:strokeAlpha="0.5"
+        android:fillType="evenOdd" />
+  <path android:fillColor="@color/wifi_detail_item_icon_color"
+        android:pathData="M14,9.5C14,8.1193 15.1193,7 16.5,7C17.8807,7 19,8.1193 19,9.5V30.5C19,31.8807 17.8807,33 16.5,33C15.1193,33 14,31.8807 14,30.5V9.5Z"
+        android:strokeAlpha="0.5" />
+  <path android:fillColor="@color/wifi_detail_item_icon_color"
+        android:pathData="M31,9.5C31,8.1193 32.1193,7 33.5,7C34.8807,7 36,8.1193 36,9.5V30.5C36,31.8807 34.8807,33 33.5,33C32.1193,33 31,31.8807 31,30.5V9.5Z"
+        android:strokeAlpha="0.5" />
+  <path android:fillColor="@color/wifi_detail_item_icon_color"
+        android:pathData="M48,9.5C48,8.1193 49.1193,7 50.5,7C51.8807,7 53,8.1193 53,9.5V30.5C53,31.8807 51.8807,33 50.5,33C49.1193,33 48,31.8807 48,30.5V9.5Z"
+        android:strokeAlpha="0.5" />
+  <path android:fillColor="@color/wifi_detail_item_icon_color"
+        android:pathData="M14,44C14,43.4477 14.4477,43 15,43H19C19.5523,43 20,43.4477 20,44V48C20,48.5523 19.5523,49 19,49H15C14.4477,49 14,48.5523 14,48V44Z"
+        android:strokeAlpha="0.5" />
+  <path android:fillColor="@color/wifi_detail_item_icon_color"
+        android:pathData="M25,44C25,43.4477 25.4477,43 26,43H30C30.5523,43 31,43.4477 31,44V48C31,48.5523 30.5523,49 30,49H26C25.4477,49 25,48.5523 25,48V44Z"
+        android:strokeAlpha="0.5" />
+  <path android:fillColor="@color/wifi_detail_item_icon_color"
+        android:pathData="M36,44C36,43.4477 36.4477,43 37,43H41C41.5523,43 42,43.4477 42,44V48C42,48.5523 41.5523,49 41,49H37C36.4477,49 36,48.5523 36,48V44Z"
+        android:strokeAlpha="0.5" />
+  <path android:fillColor="@color/wifi_detail_item_icon_color"
+        android:pathData="M47,44C47,43.4477 47.4477,43 48,43H52C52.5523,43 53,43.4477 53,44V48C53,48.5523 52.5523,49 52,49H48C47.4477,49 47,48.5523 47,48V44Z"
+        android:strokeAlpha="0.5" />
+</vector>

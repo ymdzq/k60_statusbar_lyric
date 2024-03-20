@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/advanced_settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:title="@string/wifi_connection_management" />
+  <com.android.settingslib.miuisettings.preference.miuix.DropDownPreference android:persistent="false"
+                        android:title="@string/connect_mode"
+                        android:key="connect_mode"
+                        android:summary="@string/connect_mode"
+                        settings:entries="@array/connect_mode_entries"
+                        settings:entryValues="@array/connect_mode_values" />
+  <com.android.settingslib.miuisettings.preference.Preference android:persistent="false"
+                        android:title="@string/saved_wifi"
+                        android:key="saved_wifi"
+                        android:fragment="com.android.settings.wifi.MiuiSavedAccessPointsWifiSettings" />
+  <com.android.settingslib.miuisettings.preference.SwitchPreference android:icon="@drawable/ic_auto_wifi"
+                        android:title="@string/wifi_wakeup"
+                        android:key="enable_wifi_wakeup"
+                        android:summary="@string/wifi_wakeup_summary"
+                        settings:controller="com.android.settings.wifi.WifiWakeupPreferenceController" />
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/wifi_notify_open_networks"
+                        android:key="notify_open_networks"
+                        android:summary="@string/wifi_notify_open_networks_summary"
+                        settings:controller="com.android.settings.wifi.NotifyOpenNetworksPreferenceController" />
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/wifi_install_credentials"
+                        android:key="install_credentials">
+    <intent android:targetPackage="com.android.certinstaller"
+            android:action="android.credentials.INSTALL"
+            android:targetClass="com.android.certinstaller.CertInstallerMain">
+      <extra android:name="certificate_install_usage"
+             android:value="wifi" />
+    </intent>
+  </com.android.settingslib.miuisettings.preference.Preference>
+  <com.android.settingslib.miuisettings.preference.Preference android:title="@string/wapi_cert_manage_title"
+                        android:key="wapi_cert_manage"
+                        settings:showRightArrow="true" />
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:persistent="false"
+                        android:title="@string/wifi_dialog_remind_type_title"
+                        android:key="dialog_remind_type" />
+  <com.android.settingslib.miuisettings.preference.miuix.DropDownPreference android:persistent="false"
+                        android:title="@string/select_ssid_type_title"
+                        android:key="select_ssid_type"
+                        android:dependency="dialog_remind_type"
+                        settings:entries="@array/wifi_ssid_type_entries"
+                        settings:entryValues="@array/wifi_ssid_type_values" />
+  <com.android.settingslib.miuisettings.preference.miuix.DropDownPreference android:persistent="false"
+                        android:title="@string/gsm_to_wifi_connect_type_title"
+                        android:key="connect_type"
+                        android:dependency="dialog_remind_type"
+                        settings:entries="@array/wifi_connect_type_entries"
+                        settings:entryValues="@array/wifi_connect_type_values" />
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:persistent="false"
+                        android:title="@string/wifi_priority_type_title"
+                        android:key="priority_type"
+                        android:summary="@string/wifi_priority_type_summary" />
+  <com.android.settingslib.miuisettings.preference.Preference android:persistent="false"
+                        android:title="@string/wifi_priority_settings_title"
+                        android:key="priority_settings"
+                        android:summary="@string/wifi_priority_settings_summary"
+                        android:dependency="priority_type"
+                        settings:showRightArrow="true" />
+</PreferenceScreen>

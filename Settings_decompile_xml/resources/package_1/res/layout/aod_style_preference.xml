@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="horizontal"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <ImageView android:layout_gravity="center"
+             android:id="@id/aod_style_icon"
+             android:paddingTop="11.0dp"
+             android:paddingBottom="11.0dp"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:scaleType="fitCenter" />
+  <ImageView android:id="@id/restricted_icon"
+             android:layout_width="16.0dp"
+             android:layout_height="16.0dp"
+             android:src="@drawable/ic_info"
+             android:scaleType="centerInside" />
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:orientation="horizontal"
+              android:id="@id/ringtone_settings_card"
+              android:layout_width="fill_parent"
+              android:layout_height="@dimen/ringtone_settings_card_height"
+              android:layout_marginTop="@dimen/card_ringtone_margin_top"
+              android:layout_marginBottom="@dimen/card_ringtone_margin_bottom" xmlns:android="http://schemas.android.com/apk/res/android">
+  <com.android.settings.sound.coolsound.RingtoneItemNotification android:id="@id/ringtone_notification"
+                        android:layout_width="0.0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0" />
+  <LinearLayout android:orientation="vertical"
+                android:layout_width="0.0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:layout_marginStart="@dimen/ringtone_card_margin_edge">
+    <com.android.settings.sound.coolsound.RingtoneItem android:id="@id/ringtone_call"
+                          android:layout_width="fill_parent"
+                          android:layout_height="0.0dp"
+                          android:layout_marginBottom="@dimen/ringtone_card_margin_edge"
+                          android:layout_weight="1.0" />
+    <com.android.settings.sound.coolsound.RingtoneItem android:id="@id/ringtone_alarm"
+                          android:layout_width="fill_parent"
+                          android:layout_height="0.0dp"
+                          android:layout_weight="1.0" />
+  </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<miuix.springback.view.SpringBackLayout android:layout_width="fill_parent"
+                      android:layout_height="fill_parent"
+                      settings:scrollableView="@id/id_0x7f0a093b" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <androidx.core.widget.NestedScrollView android:id="@id/id_0x7f0a093b"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:fillViewport="true">
+    <LinearLayout android:orientation="vertical"
+                  android:descendantFocusability="blocksDescendants"
+                  android:layout_width="fill_parent"
+                  android:layout_height="fill_parent">
+      <RelativeLayout android:orientation="vertical"
+                      android:layout_width="fill_parent"
+                      android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/prefs_container"
+                     android:clipChildren="false"
+                     android:clipToPadding="false"
+                     android:layout_width="fill_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_alignParentTop="true"
+                     android:layout_centerHorizontal="true"
+                     android:smoothScrollbar="false" />
+        <Button android:id="@id/feedback_btn"
+                android:paddingLeft="28.0dp"
+                android:paddingRight="28.0dp"
+                android:layout_width="336.0dp"
+                android:layout_height="48.0dp"
+                android:layout_marginBottom="27.0dp"
+                android:text="@string/feedback_btn_text"
+                android:layout_below="@id/prefs_container"
+                android:layout_centerHorizontal="true"
+                style="@style/Widget.Button.Primary" />
+      </RelativeLayout>
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+</miuix.springback.view.SpringBackLayout>

@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:layout_width="fill_parent"
+              android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+  <ImageView android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="38.0dp"
+             android:layout_marginTop="56.5dp"
+             android:layout_marginRight="38.0dp"
+             android:layout_marginBottom="20.0dp"
+             android:src="@drawable/keep_screen_on_after_folding" />
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/device_oaid" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:key="restore_device_id_category">
+    <com.android.settings.identification.IntroductionPreference android:key="introduction_oaid" />
+    <CheckBoxPreference android:title="@string/allow_oaid_used"
+                        android:key="allow_oaid_used"
+                        android:summary="@string/allow_oaid_used_desc"
+                        settings:isPreferenceVisible="false" />
+    <Preference android:title="@string/oaid_apps_title"
+                android:key="oaid_apps_manage"
+                android:summary="@string/oaid_apps_summary"
+                settings:isPreferenceVisible="false" />
+    <Preference android:title="@string/restore_oaid_title"
+                android:key="restore_oaid"
+                android:summary="@string/restore_oaid_content" />
+    <com.android.settings.identification.OAIDExhibitPreference android:key="oaid_string" />
+  </PreferenceCategory>
+</PreferenceScreen>

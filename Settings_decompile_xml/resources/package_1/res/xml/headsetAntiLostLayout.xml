@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:id="@id/headsetAntiLostLayout" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:key="headsetAntiLostKey">
+    <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/switch_headset_anti_lost"
+                          android:key="switch_mi_headset_loss_dialog"
+                          android:defaultValue="true" />
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/headset_find_title"
+                          android:key="find_device"
+                          settings:showRightArrow="true" />
+  </PreferenceCategory>
+</PreferenceScreen>

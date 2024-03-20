@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<vector android:height="@dimen/input_method_clipboard_settings_bg_image_height"
+        android:width="@dimen/input_method_clipboard_settings_bg_image_width"
+        android:viewportWidth="1008.0"
+        android:viewportHeight="573.0" xmlns:android="http://schemas.android.com/apk/res/android">
+  <path android:fillColor="#f22424"
+        android:pathData="M763.1,383.3m9,0a9,9 0,1 1,-18 0a9,9 0,1 1,18 0" />
+</vector>

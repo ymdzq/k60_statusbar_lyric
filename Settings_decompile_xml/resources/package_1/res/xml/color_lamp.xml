@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/color_lamp_title" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory>
+    <com.android.settingslib.miuisettings.preference.SwitchPreference android:title="@string/color_lamp_title"
+                          android:key="color_lamp_switch" />
+  </PreferenceCategory>
+  <PreferenceCategory>
+    <com.android.settingslib.miuisettings.preference.SwitchPreference android:title="@string/color_lamp_incall_pulse_title"
+                          android:key="color_lamp_incall_pulse"
+                          android:dependency="color_lamp_switch" />
+    <com.android.settingslib.miuisettings.preference.SwitchPreference android:title="@string/color_lamp_battery_title"
+                          android:key="color_lamp_battery"
+                          android:summary="@string/color_lamp_charging_summary"
+                          android:dependency="color_lamp_switch" />
+    <com.android.settingslib.miuisettings.preference.SwitchPreference android:title="@string/color_lamp_notification_pulse_title"
+                          android:key="color_lamp_notification_pulse"
+                          android:dependency="color_lamp_switch" />
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/color_lamp_applications_title"
+                          android:key="color_lamp_applications"
+                          android:summary="@string/color_lamp_applications_title_summary"
+                          android:dependency="color_lamp_switch"
+                          android:fragment="com.android.settings.NotificationAppListSettings" />
+  </PreferenceCategory>
+</PreferenceScreen>

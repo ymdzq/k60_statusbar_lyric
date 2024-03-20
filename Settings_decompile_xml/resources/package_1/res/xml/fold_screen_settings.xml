@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen android:title="@string/fold_screen_settings_title" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:persistent="false"
+                      android:title="@string/fold_screen_special_function_title"
+                      android:key="fold_screen_special_function">
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/freeform_guide_settings"
+                          android:key="freeform_guide_settings"
+                          settings:controller="com.android.settings.special.FreeformGuideController">
+      <intent android:targetPackage="com.miui.freeform"
+              android:action="com.miui.freeform.settings.action.FREEFORM_SETTINGS"
+              android:targetClass="com.miui.freeform.settings.FreeformGuideSettingsActivity" />
+    </com.android.settingslib.miuisettings.preference.Preference>
+    <Preference android:title="@string/close_lid_display_settings_title"
+                android:key="close_lid_display_settings"
+                android:fragment="com.android.settings.display.CloseLidDisplaySettingFragment" />
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/wallpaper_setting_title"
+                          android:key="dynamic_wallpaper">
+      <intent android:targetPackage="com.android.thememanager"
+              android:targetClass="com.android.thememanager.settings.ThemeAndWallpaperSettingActivity" />
+    </com.android.settingslib.miuisettings.preference.Preference>
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/device_ime_keyboard_fold"
+                          android:key="device_ime_keyboard"
+                          android:fragment="com.android.settings.inputmethod.LargeScreenKeyboardFoldFragment" />
+  </PreferenceCategory>
+  <PreferenceCategory android:persistent="false"
+                      android:title="@string/fold_screen_application_adaptation_title"
+                      android:key="fold_screen_application_adaptation">
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/fold_application_mode_name"
+                          android:key="application_mode">
+      <intent android:targetPackage="com.android.settings"
+              android:targetClass="com.android.settings.applicationmode.ApplicationModeActivity" />
+    </com.android.settingslib.miuisettings.preference.Preference>
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/fold_game_adaptation"
+                          android:key="game_mode">
+      <intent android:targetPackage="com.miui.securitycenter"
+              android:targetClass="com.miui.gamebooster.gamemode.GameModeSettingsActivity" />
+    </com.android.settingslib.miuisettings.preference.Preference>
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/hover_mode_name"
+                          android:key="hover_mode"
+                          android:fragment="com.android.settings.hovermode.HoverModeGuideSetting"
+                          settings:controller="com.android.settings.special.HoverModeGuideController" />
+    <com.android.settingslib.miuisettings.preference.Preference android:title="@string/autoui_mode_name"
+                          android:key="autoui_mode"
+                          android:fragment="com.android.settings.autouimode.AutoUIModeFragment"
+                          settings:controller="com.android.settings.special.AutoUIModeGuideController" />
+  </PreferenceCategory>
+</PreferenceScreen>

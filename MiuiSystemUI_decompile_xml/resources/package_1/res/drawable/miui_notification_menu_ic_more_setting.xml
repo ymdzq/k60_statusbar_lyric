@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<vector android:height="@dimen/miui_notification_modal_menu_icon_size"
+        android:width="@dimen/miui_notification_modal_menu_icon_size"
+        android:viewportWidth="78.0"
+        android:viewportHeight="78.0" xmlns:android="http://schemas.android.com/apk/res/android">
+  <path android:fillColor="@color/miui_notification_modal_menu_ic_color"
+        android:pathData="M19,39C19,42.3137 16.3137,45 13,45C9.6863,45 7,42.3137 7,39C7,35.6863 9.6863,33 13,33C16.3137,33 19,35.6863 19,39ZM45,39C45,42.3137 42.3137,45 39,45C35.6863,45 33,42.3137 33,39C33,35.6863 35.6863,33 39,33C42.3137,33 45,35.6863 45,39ZM65,45C68.3137,45 71,42.3137 71,39C71,35.6863 68.3137,33 65,33C61.6863,33 59,35.6863 59,39C59,42.3137 61.6863,45 65,45Z"
+        android:fillType="evenOdd" />
+</vector>

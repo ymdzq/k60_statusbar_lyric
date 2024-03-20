@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<ConstraintSet android:id="@id/qs_header_constraint" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto">
+  <Constraint android:id="@id/privacy_container">
+    <Layout android:layout_width="wrap_content"
+            android:layout_height="@dimen/large_screen_shade_header_min_height"
+            systemui:r0x7f04042a="@id/carrier_group"
+            systemui:r0x7f04042f="@id/end_guide"
+            systemui:r0x7f040439="1.0"
+            systemui:r0x7f040447="0" />
+  </Constraint>
+  <Constraint android:id="@id/clock">
+    <Layout android:layout_width="wrap_content"
+            android:layout_height="@dimen/large_screen_shade_header_min_height"
+            systemui:r0x7f040429="@id/carrier_group"
+            systemui:r0x7f040443="0"
+            systemui:r0x7f040446="@id/privacy_container" />
+    <Transform android:scaleX="@dimen/qqs_expand_clock_scale"
+               android:scaleY="@dimen/qqs_expand_clock_scale" />
+  </Constraint>
+  <Constraint android:id="@id/date">
+    <Layout android:layout_width="wrap_content"
+            android:layout_height="@dimen/new_qs_header_non_clickable_element_height"
+            systemui:r0x7f040429="0"
+            systemui:r0x7f040443="0"
+            systemui:r0x7f040446="@id/carrier_group" />
+  </Constraint>
+  <Constraint android:id="@id/carrier_group">
+    <Layout android:layout_width="0.0dp"
+            android:layout_height="@dimen/large_screen_shade_header_min_height"
+            systemui:r0x7f04042a="@id/batteryRemainingIcon"
+            systemui:r0x7f04042f="0"
+            systemui:r0x7f040443="@id/clock"
+            systemui:r0x7f040446="@id/privacy_container"
+            systemui:r0x7f04044c="1"
+            systemui:r0x7f04044e="48.0dp" />
+    <PropertySet android:alpha="1.0" />
+  </Constraint>
+  <Constraint android:id="@id/statusIcons">
+    <Layout android:layout_width="0.0dp"
+            android:layout_height="@dimen/new_qs_header_non_clickable_element_height"
+            systemui:r0x7f040429="@id/date"
+            systemui:r0x7f040430="@id/batteryRemainingIcon"
+            systemui:r0x7f040442="@id/date"
+            systemui:r0x7f040447="@id/date"
+            systemui:r0x7f04044c="1" />
+  </Constraint>
+  <Constraint android:id="@id/batteryRemainingIcon">
+    <Layout android:layout_width="0.0dp"
+            android:layout_height="@dimen/new_qs_header_non_clickable_element_height"
+            systemui:r0x7f040429="@id/date"
+            systemui:r0x7f04042f="0"
+            systemui:r0x7f040437="@dimen/new_qs_header_non_clickable_element_height"
+            systemui:r0x7f040447="@id/date"
+            systemui:r0x7f04044c="1" />
+  </Constraint>
+</ConstraintSet>

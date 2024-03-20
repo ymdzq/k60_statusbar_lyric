@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<miuix.springback.view.SpringBackLayout android:layout_width="fill_parent"
+                      android:layout_height="fill_parent"
+                      settings:scrollableView="@id/scroll_view" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <androidx.core.widget.NestedScrollView android:id="@id/scroll_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+    <RelativeLayout android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/miuix_preference_item_padding_start"
+                    android:layout_marginRight="@dimen/miuix_preference_item_padding_end">
+      <TextView android:textSize="20.0sp"
+                android:id="@id/detail_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15.0dp"
+                android:fontFamily="mipro-medium" />
+      <TextView android:textSize="15.3sp"
+                android:textColor="@color/detal_description_color"
+                android:id="@id/detail_description"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25.0dp"
+                android:layout_below="@id/detail_title"
+                android:fontFamily="mipro-regular"
+                android:textDirection="locale"
+                android:textAlignment="viewStart" />
+    </RelativeLayout>
+  </androidx.core.widget.NestedScrollView>
+</miuix.springback.view.SpringBackLayout>

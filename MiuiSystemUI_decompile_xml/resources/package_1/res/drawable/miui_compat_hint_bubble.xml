@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<shape android:shape="rectangle" xmlns:android="http://schemas.android.com/apk/res/android">
+  <solid android:color="@color/miui_guide_bubble_window_back_ground_color" />
+  <corners android:radius="@dimen/miui_guide_bubble_window_round_corner" />
+</shape>

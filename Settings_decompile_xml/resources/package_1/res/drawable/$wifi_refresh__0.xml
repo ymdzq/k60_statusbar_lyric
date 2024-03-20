@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<vector android:height="@dimen/wifi_btn_refresh_size"
+        android:width="@dimen/wifi_btn_refresh_size"
+        android:viewportWidth="36.0"
+        android:viewportHeight="36.0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+  <group android:name="group"
+         android:pivotX="18.0"
+         android:pivotY="18.0"
+         android:rotation="360.0">
+    <path android:fillColor="@color/bt_refresh_circle_bg_color"
+          android:pathData="M18,0L18,0A18,18 0,0 1,36 18L36,18A18,18 0,0 1,18 36L18,36A18,18 0,0 1,0 18L0,18A18,18 0,0 1,18 0z" />
+    <path android:fillColor="@color/bt_refresh_color"
+          android:pathData="M22.5688,22.5681C25.0922,20.0447 25.0922,15.9535 22.5688,13.4301C21.868,12.7292 21.0461,12.223 20.1705,11.9115L21.5814,10.5006C22.4105,10.8966 23.1875,11.438 23.8743,12.1247C27.1186,15.369 27.1186,20.6292 23.8743,23.8735C21.6998,26.048 18.6197,26.7651 15.848,26.0247L18.7983,23.0832L18.7983,24.4114C20.1767,24.2407 21.5106,23.6263 22.5688,22.5681Z" />
+    <path android:fillColor="@color/bt_refresh_color"
+          android:pathData="M20.1506,9.9732C17.3792,9.2333 14.2996,9.9504 12.1254,12.1247C8.8811,15.369 8.8811,20.6292 12.1254,23.8735C12.8119,24.56 13.5886,25.1012 14.4174,25.4972L15.8282,24.0864C14.953,23.7748 14.1315,23.2687 13.4308,22.5681C10.9074,20.0447 10.9074,15.9535 13.4308,13.4301C14.4569,12.404 15.7423,11.7951 17.076,11.6035L17.076,13.0335L20.1506,9.9732Z" />
+  </group>
+</vector>

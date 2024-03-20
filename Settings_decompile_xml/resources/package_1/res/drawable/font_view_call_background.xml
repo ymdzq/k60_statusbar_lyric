@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<miuix.smooth.SmoothContainerDrawable2 xmlns:android="http://schemas.android.com/apk/res/android">
+  <child>
+    <shape android:shape="rectangle">
+      <corners android:radius="48.0px" />
+      <stroke android:width="1.0px"
+              android:color="#1a000000" />
+      <solid android:color="@color/font_view_call_bg_color" />
+    </shape>
+  </child>
+</miuix.smooth.SmoothContainerDrawable2>
