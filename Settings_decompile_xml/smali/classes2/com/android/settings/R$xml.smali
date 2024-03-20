@@ -636,6 +636,8 @@
 
 .field public static final miui_sos_settings:I = 0x7f16013b # @xml/miui_sos_settings 'res/xml/miui_sos_settings.xml'
 
+.field public static final miui_status_bar_lyric_settings:I = 0x7f1622ff # @xml/miui_status_bar_lyric_settings 'res/xml/miui_status_bar_lyric_settings.xml'
+
 .field public static final miui_stylus_ota_pref:I = 0x7f16013c # @xml/miui_stylus_ota_pref 'res/xml/miui_stylus_ota_pref.xml'
 
 .field public static final miui_stylus_settings:I = 0x7f16013d # @xml/miui_stylus_settings 'res/xml/miui_stylus_settings.xml'

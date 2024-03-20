@@ -28,6 +28,8 @@
                android:value="241" />
       </intent>
     </PreferenceScreen>
+    <PreferenceScreen android:title="状态栏歌词"
+                      android:fragment="com.android.settings.MiuiStatusBarLyricSettings" />
   </PreferenceCategory>
   <PreferenceCategory android:title="@string/status_bar_settings_status_bar"
                       android:key="settings_status_bar">

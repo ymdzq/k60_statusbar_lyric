@@ -33208,4 +33208,5 @@
   <public id="0x7f16023a" type="xml" name="zen_mode_restrict_notifications_settings" />
   <public id="0x7f16023b" type="xml" name="zen_mode_schedule_rule_settings" />
   <public id="0x7f16023c" type="xml" name="zen_mode_settings" />
+  <public id="0x7f1622ff" type="xml" name="miui_status_bar_lyric_settings" />
 </resources>
