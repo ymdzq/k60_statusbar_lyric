@@ -301,7 +301,7 @@
     return-void
 .end method
 
-.method public abstract verifyLaunchSearchResultPageCaller(Landroid/content/Context;Landroid/content/ComponentName;)V
+.method public abstract verifyLaunchSearchResultPageCaller(Landroid/content/Context;Ljava/lang/String;)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/SecurityException;,

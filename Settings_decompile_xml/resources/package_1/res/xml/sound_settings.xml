@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8' ?>
-<PreferenceScreen android:key="sound_settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+<PreferenceScreen android:key="sound_settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:settings="http://schemas.android.com/apk/res/com.android.settings" xmlns:miui="http://schemas.android.com/apk/res/com.android.settings">
   <com.android.settings.sound.RingtoneCardPreference android:background="@null"
                         android:key="ringtone_card" />
   <miuix.preference.PreferenceCategory android:title="@string/volume_adjustment"
                         android:key="volume_adjustment"
-                        settings:needDividerLine="false">
+                        app:needDividerLine="false">
     <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:title="@string/silent_mode_title"
                           android:key="silent_mode"
                           android:defaultValue="false" />
@@ -71,7 +71,7 @@
                           android:key="zen_mode_category_label"
                           android:summary="@string/zen_mode_summary2"
                           android:fragment="com.android.settings.notification.MiuiDndDetailSettingsFragment"
-                          settings:clickable="true" />
+                          miui:clickable="true" />
   </PreferenceCategory>
   <PreferenceCategory android:title="@string/vibrate_category_title"
                       android:key="miui_vibrate_category" />
@@ -84,8 +84,8 @@
   <com.android.settingslib.miuisettings.preference.miuix.DropDownPreference android:layout="@layout/preference_ringtone"
                         android:title="@string/haptic_feedback_enable_title"
                         android:key="haptic_feedback_level"
-                        settings:entries="@array/haptic_feedback_level_texts"
-                        settings:entryValues="@array/haptic_feedback_level_values" />
+                        miui:entries="@array/haptic_feedback_level_texts"
+                        miui:entryValues="@array/haptic_feedback_level_values" />
   <PreferenceCategory android:title="@string/haptic_feedback_title"
                       android:key="haptic_feedback_category" />
   <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:persistent="false"
@@ -112,7 +112,7 @@
   </com.android.settingslib.miuisettings.preference.Preference>
   <com.android.settingslib.miuisettings.preference.Preference android:title="@string/headset_settings_title"
                         android:key="headset_settings"
-                        settings:controller="com.android.settings.sound.HeadsetSettingsController">
+                        miui:controller="com.android.settings.sound.HeadsetSettingsController">
     <intent android:targetPackage="com.miui.misound"
             android:targetClass="com.miui.misound.HeadsetSettingsActivity" />
   </com.android.settingslib.miuisettings.preference.Preference>
@@ -158,7 +158,7 @@
                           style="@style/RingTonePreferenceStyle" />
   </com.android.settings.widget.WorkOnlyCategory>
   <PreferenceCategory android:key="sound_speaker_category"
-                      settings:controller="com.android.settings.MiuiBaseCategoryController">
+                      miui:controller="com.android.settings.MiuiBaseCategoryController">
     <com.android.settings.soundsettings.SoundSpeakerDescPreference android:persistent="false"
                           android:key="sound_speaker_preference" />
   </PreferenceCategory>

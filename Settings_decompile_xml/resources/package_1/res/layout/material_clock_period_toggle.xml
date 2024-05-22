@@ -6,11 +6,11 @@
                       android:layout_height="@dimen/material_clock_period_toggle_height"
                       android:contentDescription="@string/material_clock_toggle_content_description"
                       android:layout_marginStart="@dimen/material_clock_period_toggle_margin_left"
-                      settings:checkedButton="@id/material_clock_period_am_button"
-                      settings:layout_constraintStart_toEndOf="@id/material_clock_display"
-                      settings:layout_constraintTop_toTopOf="parent"
-                      settings:selectionRequired="true"
-                      settings:singleSelection="true" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+                      app:checkedButton="@id/material_clock_period_am_button"
+                      app:layout_constraintStart_toEndOf="@id/material_clock_display"
+                      app:layout_constraintTop_toTopOf="parent"
+                      app:selectionRequired="true"
+                      app:singleSelection="true" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <com.google.android.material.button.MaterialButton android:id="@id/material_clock_period_am_button"
                         android:layout_width="wrap_content"
                         android:text="@string/material_timepicker_am"

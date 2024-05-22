@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/qs/tiles/MiuiCellularTile$$ExternalSyntheticLambda0;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -95,18 +95,27 @@
     iget-object v0, p0, Lcom/android/systemui/qs/tiles/MiuiCellularTile;->mSltListener:Lcom/android/systemui/qs/tiles/MiuiCellularTile$2;
 
     .line 40
-    iget-object p0, p0, Lcom/android/systemui/qs/tiles/MiuiCellularTile;->mSltController:Lcom/android/systemui/controlcenter/policy/SltController;
+    iget-object v1, p0, Lcom/android/systemui/qs/tiles/MiuiCellularTile;->mSltController:Lcom/android/systemui/controlcenter/policy/SltController;
 
     .line 42
-    invoke-interface {p0, v2, v0}, Lcom/android/systemui/statusbar/policy/CallbackController;->observe(Landroidx/lifecycle/LifecycleRegistry;Ljava/lang/Object;)V
+    invoke-interface {v1, v2, v0}, Lcom/android/systemui/statusbar/policy/CallbackController;->observe(Landroidx/lifecycle/LifecycleRegistry;Ljava/lang/Object;)V
 
     .line 44
-    return-void
+    iget-object p0, p0, Lcom/android/systemui/qs/tiles/MiuiCellularTile;->mLifecycleEventObserver:Landroidx/lifecycle/LifecycleEventObserver;
 
     .line 47
+    invoke-virtual {v2, p0}, Landroidx/lifecycle/LifecycleRegistry;->addObserver(Landroidx/lifecycle/LifecycleObserver;)V
+
+    .line 49
+    return-void
+
+    .line 52
+    nop
+
+    .line 53
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
     .end packed-switch
-    .line 48
+    .line 54
 .end method

@@ -2,14 +2,14 @@
 <merge android:layout_gravity="center"
        android:id="@id/material_clock_face"
        android:layout_width="256.0dp"
-       android:layout_height="256.0dp" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto">
+       android:layout_height="256.0dp" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <com.google.android.material.timepicker.ClockHandView android:id="@id/material_clock_hand"
                         android:tag="skip"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
-                        systemui:r0x7f040429="0"
-                        systemui:r0x7f04042f="0"
-                        systemui:r0x7f040443="0"
-                        systemui:r0x7f040447="0"
-                        systemui:r0x7f040694="24.0dp" />
+                        app:r0x7f040429="0"
+                        app:r0x7f04042f="0"
+                        app:r0x7f040443="0"
+                        app:r0x7f040447="0"
+                        app:r0x7f040694="24.0dp" />
 </merge>

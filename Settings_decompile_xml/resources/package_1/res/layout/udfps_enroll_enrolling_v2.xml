@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <RelativeLayout android:id="@id/suw_lift"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+                android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <ImageView android:id="@id/sud_layout_icon"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
@@ -40,9 +40,9 @@
                         android:layout_marginStart="16.0dp"
                         android:layout_marginEnd="17.0dp"
                         android:layout_alignParentStart="true"
-                        settings:lottie_autoPlay="true"
-                        settings:lottie_loop="true"
-                        settings:lottie_speed="0.85" />
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_speed="0.85" />
   <com.android.settings.biometrics2.ui.widget.UdfpsEnrollView android:id="@id/udfps_animation_view"
                         android:layout_width="218.42dp"
                         android:layout_height="216.0dp"

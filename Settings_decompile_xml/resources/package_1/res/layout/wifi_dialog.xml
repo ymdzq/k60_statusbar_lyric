@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <ScrollView android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fadeScrollbars="false" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+            android:fadeScrollbars="false" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <LinearLayout android:orientation="vertical"
                 android:id="@id/l_wifidialog"
                 android:layout_width="fill_parent"
@@ -32,8 +32,8 @@
                     android:hint="@string/wifi_ssid_hint"
                     android:singleLine="true"
                     android:inputType="textNoSuggestions"
-                    settings:layout_constraintEnd_toStartOf="@id/ssid_scanner_button"
-                    settings:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/ssid_scanner_button"
+                    app:layout_constraintStart_toStartOf="parent"
                     style="@style/wifi_item_edit_content" />
           <ImageButton android:id="@id/ssid_scanner_button"
                        android:background="?android:attr/selectableItemBackground"
@@ -43,7 +43,7 @@
                        android:minWidth="@dimen/min_tap_target_size"
                        android:minHeight="@dimen/min_tap_target_size"
                        android:contentDescription="@string/wifi_dpp_scan_qr_code"
-                       settings:layout_constraintEnd_toEndOf="parent" />
+                       app:layout_constraintEnd_toEndOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
         <LinearLayout android:id="@id/ssid_too_long_warning"
                       android:visibility="gone"
@@ -266,7 +266,7 @@
                               android:layout_height="wrap_content"
                               android:hint="@string/wifi_password"
                               android:inputType="textPassword"
-                              settings:miuixAppcompatWidgetManager="miuix.androidbasewidget.widget.PasswordWidgetManager"
+                              app:miuixAppcompatWidgetManager="miuix.androidbasewidget.widget.PasswordWidgetManager"
                               style="@style/input_capsule_horizontal_constant"
                               widgetManager="miui.widget.PasswordWidgetManager" />
         <ImageView android:layout_gravity="center|end"

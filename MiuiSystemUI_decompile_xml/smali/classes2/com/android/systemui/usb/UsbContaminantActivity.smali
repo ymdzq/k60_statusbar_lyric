@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/usb/UsbContaminantActivity;
 .super Landroid/app/Activity;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -54,7 +54,7 @@
     invoke-virtual {p1, v0}, Landroid/hardware/usb/UsbPort;->enableContaminantDetection(Z)V
 
     .line 9
-    const p1, 0x7f130c12    # @string/usb_port_enabled 'USB port enabled to detect chargers and accessories'
+    const p1, 0x7f130c18    # @string/usb_port_enabled 'USB port enabled to detect chargers and accessories'
 
     .line 12
     invoke-static {p0, p1, v0}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
@@ -284,7 +284,7 @@
     iget-object p1, p0, Lcom/android/systemui/usb/UsbContaminantActivity;->mTitle:Landroid/widget/TextView;
 
     .line 110
-    const v0, 0x7f130c06    # @string/usb_contaminant_title 'USB port disabled'
+    const v0, 0x7f130c0c    # @string/usb_contaminant_title 'USB port disabled'
 
     .line 112
     invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -299,7 +299,7 @@
     iget-object p1, p0, Lcom/android/systemui/usb/UsbContaminantActivity;->mMessage:Landroid/widget/TextView;
 
     .line 122
-    const v0, 0x7f130c05    # @string/usb_contaminant_message 'To protect your device from liquid or debris, the USB port is disabled and won’t detect any accessor ...'
+    const v0, 0x7f130c0b    # @string/usb_contaminant_message 'To protect your device from liquid or debris, the USB port is disabled and won’t detect any accessor ...'
 
     .line 124
     invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -314,7 +314,7 @@
     iget-object p1, p0, Lcom/android/systemui/usb/UsbContaminantActivity;->mEnableUsb:Landroid/widget/TextView;
 
     .line 134
-    const v0, 0x7f130c11    # @string/usb_disable_contaminant_detection 'Enable USB'
+    const v0, 0x7f130c17    # @string/usb_disable_contaminant_detection 'Enable USB'
 
     .line 136
     invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;

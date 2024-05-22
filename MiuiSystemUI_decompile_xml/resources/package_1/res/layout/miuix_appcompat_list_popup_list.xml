@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <miuix.springback.view.SpringBackLayout android:layout_width="fill_parent"
                       android:layout_height="fill_parent"
-                      systemui:r0x7f040672="@android:id/list" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto">
+                      app:r0x7f040672="@android:id/list" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <ListView android:id="@android:id/list"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"

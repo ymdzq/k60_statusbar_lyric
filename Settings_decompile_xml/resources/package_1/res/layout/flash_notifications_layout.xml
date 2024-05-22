@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <LinearLayout android:orientation="vertical"
               android:layout_width="fill_parent"
-              android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+              android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <miuix.springback.view.SpringBackLayout android:layout_width="fill_parent"
                         android:layout_height="0.0dp"
                         android:layout_weight="1.0"
-                        settings:scrollableView="@id/id_0x7f0a093b">
+                        app:scrollableView="@id/id_0x7f0a093b">
     <miuix.core.widget.NestedScrollView android:id="@id/id_0x7f0a093b"
                           android:layout_width="fill_parent"
                           android:layout_height="fill_parent">
@@ -18,24 +18,24 @@
                    android:layout_marginTop="28.0dp"
                    android:src="@drawable/flash_notifications_preview_1"
                    android:layout_marginEnd="56.0dp"
-                   settings:layout_constraintEnd_toStartOf="@id/flash_notifications_preview_2"
-                   settings:layout_constraintHorizontal_chainStyle="packed"
-                   settings:layout_constraintStart_toStartOf="parent"
-                   settings:layout_constraintTop_toTopOf="parent" />
+                   app:layout_constraintEnd_toStartOf="@id/flash_notifications_preview_2"
+                   app:layout_constraintHorizontal_chainStyle="packed"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent" />
         <ImageView android:id="@id/flash_notifications_preview_2"
                    android:layout_width="120.0dp"
                    android:layout_height="245.0dp"
                    android:src="@drawable/flash_notifications_preview_2"
-                   settings:layout_constraintBottom_toBottomOf="@id/flash_notifications_preview_1"
-                   settings:layout_constraintEnd_toEndOf="parent"
-                   settings:layout_constraintHorizontal_chainStyle="packed"
-                   settings:layout_constraintStart_toEndOf="@id/flash_notifications_preview_1"
-                   settings:layout_constraintTop_toTopOf="@id/flash_notifications_preview_1" />
+                   app:layout_constraintBottom_toBottomOf="@id/flash_notifications_preview_1"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintHorizontal_chainStyle="packed"
+                   app:layout_constraintStart_toEndOf="@id/flash_notifications_preview_1"
+                   app:layout_constraintTop_toTopOf="@id/flash_notifications_preview_1" />
         <FrameLayout android:id="@id/prefs_container"
                      android:layout_width="fill_parent"
                      android:layout_height="wrap_content"
                      android:layout_marginTop="24.0dp"
-                     settings:layout_constraintTop_toBottomOf="@id/flash_notifications_preview_1" />
+                     app:layout_constraintTop_toBottomOf="@id/flash_notifications_preview_1" />
       </androidx.constraintlayout.widget.ConstraintLayout>
     </miuix.core.widget.NestedScrollView>
   </miuix.springback.view.SpringBackLayout>

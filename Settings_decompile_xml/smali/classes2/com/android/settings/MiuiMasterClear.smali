@@ -1074,7 +1074,7 @@
 
     invoke-virtual {v1}, Landroid/app/Dialog;->show()V
 
-    const v1, 0x110a00c1
+    const v1, 0x110a00c6
 
     .line 875
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;

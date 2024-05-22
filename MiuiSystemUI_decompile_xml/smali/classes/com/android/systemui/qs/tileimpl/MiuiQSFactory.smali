@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/qs/tileimpl/MiuiQSFactory;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lcom/android/systemui/plugins/qs/QSFactory;
@@ -1184,7 +1184,7 @@
     goto/16 :goto_2
 
     :sswitch_19
-    const-string v0, "reduce_brightness"
+    const-string/jumbo v0, "reduce_brightness"
 
     .line 67
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1652,6 +1652,8 @@
 
     :cond_2b
     return-object v2
+
+    nop
 
     :sswitch_data_0
     .sparse-switch

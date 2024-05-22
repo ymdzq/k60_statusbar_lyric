@@ -9,5 +9,5 @@
            android:contentDescription="?attr/actionModeCloseContentDescription"
            android:paddingStart="12.0dp"
            android:layout_marginEnd="16.0dp"
-           settings:srcCompat="?attr/actionModeCloseDrawable"
-           style="?attr/actionModeCloseButtonStyle" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto" />
+           app:srcCompat="?attr/actionModeCloseDrawable"
+           style="?attr/actionModeCloseButtonStyle" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

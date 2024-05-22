@@ -2,7 +2,7 @@
 <ScrollView android:background="@android:color/black"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:fillViewport="true" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+            android:fillViewport="true" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <LinearLayout android:orientation="vertical"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent">
@@ -144,7 +144,7 @@
                               android:fontFamily="mipro-regular"
                               android:layout_marginStart="@dimen/miui_face_enroll_button_horizontal"
                               android:layout_marginEnd="@dimen/miui_face_enroll_button_horizontal"
-                              settings:drawableEndCompat="?attr/clearableEditTextIcon"
+                              app:drawableEndCompat="?attr/clearableEditTextIcon"
                               style="@style/Widget.EditText.Dark" />
       </RelativeLayout>
     </FrameLayout>

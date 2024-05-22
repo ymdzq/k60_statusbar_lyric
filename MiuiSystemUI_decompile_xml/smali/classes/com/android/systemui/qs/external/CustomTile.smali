@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/qs/external/CustomTile;
 .super Lcom/android/systemui/qs/tileimpl/QSTileImpl;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lcom/android/systemui/qs/external/TileLifecycleManager$TileChangeListener;
@@ -1453,71 +1453,71 @@
 
     .line 174
     :try_start_4
-    const-string v3, "reflect exempt background start exception!"
+    const-string/jumbo v3, "reflect exempt background start exception!"
 
     .line 175
     invoke-static {v5, v3, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 177
+    .line 178
     :cond_3
     :goto_0
     invoke-virtual {v2}, Landroid/service/quicksettings/Tile;->getActivityLaunchForClick()Landroid/app/PendingIntent;
 
-    .line 180
+    .line 181
     move-result-object p1
-
-    .line 183
-    if-eqz p1, :cond_4
 
     .line 184
+    if-eqz p1, :cond_4
+
+    .line 185
     invoke-virtual {v2}, Landroid/service/quicksettings/Tile;->getActivityLaunchForClick()Landroid/app/PendingIntent;
 
-    .line 186
+    .line 187
     move-result-object p1
 
-    .line 189
+    .line 190
     invoke-virtual {p0, p1}, Lcom/android/systemui/qs/external/CustomTile;->startActivityAndCollapse(Landroid/app/PendingIntent;)V
 
-    .line 190
+    .line 191
     goto :goto_1
 
-    .line 193
+    .line 194
     :cond_4
     invoke-virtual {v7, v0}, Lcom/android/systemui/qs/external/TileLifecycleManager;->onClick(Landroid/os/IBinder;)V
     :try_end_4
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_4 .. :try_end_4} :catch_2
     .catch Landroid/os/RemoteException; {:try_start_4 .. :try_end_4} :catch_3
 
-    .line 194
+    .line 195
     goto :goto_1
 
-    .line 197
+    .line 198
     :catch_2
     new-instance p0, Ljava/lang/StringBuilder;
 
-    .line 198
+    .line 199
     const-string p1, " NameNotFoundException: "
 
-    .line 200
+    .line 201
     invoke-direct {p0, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 202
+    .line 203
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 205
+    .line 206
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 208
+    .line 209
     move-result-object p0
 
-    .line 211
+    .line 212
     invoke-static {v5, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 212
+    .line 213
     :catch_3
     :goto_1
     return-void
-    .line 215
+    .line 216
 .end method
 
 .method public final handleDestroy()V

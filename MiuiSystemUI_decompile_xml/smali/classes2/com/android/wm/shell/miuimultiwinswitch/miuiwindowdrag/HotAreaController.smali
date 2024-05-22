@@ -1,6 +1,6 @@
 .class public Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # static fields
@@ -1031,16 +1031,14 @@
 
     move-object/from16 v0, p0
 
-    move-object/from16 v1, p1
+    move-object/from16 v3, p3
 
-    move-object/from16 v2, p3
+    const-string v1, "initHotAreas"
 
-    const-string v3, "initHotAreas"
-
-    const-string v4, "HotAreaController"
+    const-string v7, "HotAreaController"
 
     .line 1
-    invoke-static {v4, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v7, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 2
     invoke-direct/range {p0 .. p0}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->clearAllHotAreas()V
@@ -1048,82 +1046,82 @@
     .line 3
     invoke-virtual/range {p2 .. p2}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiDisplayInfo;->getDisplayLayout()Lcom/android/wm/shell/common/DisplayLayout;
 
-    move-result-object v3
+    move-result-object v1
 
     .line 4
-    iget-object v5, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mScreenSize:Landroid/graphics/Point;
+    iget-object v2, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mScreenSize:Landroid/graphics/Point;
 
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
 
-    move-result v6
+    move-result v4
 
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
 
-    move-result v7
+    move-result v5
 
-    invoke-virtual {v5, v6, v7}, Landroid/graphics/Point;->set(II)V
+    invoke-virtual {v2, v4, v5}, Landroid/graphics/Point;->set(II)V
 
     .line 5
     invoke-virtual/range {p2 .. p2}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiDisplayInfo;->getDisplayLayout()Lcom/android/wm/shell/common/DisplayLayout;
 
-    move-result-object v5
+    move-result-object v2
 
-    invoke-virtual {v5}, Lcom/android/wm/shell/common/DisplayLayout;->getOrientation()I
+    invoke-virtual {v2}, Lcom/android/wm/shell/common/DisplayLayout;->getOrientation()I
 
-    move-result v5
+    move-result v2
 
     .line 6
     invoke-static/range {p1 .. p1}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->getScreenType(Landroid/content/Context;)I
 
-    move-result v6
+    move-result v4
 
     .line 7
     invoke-virtual/range {p3 .. p3}, Landroid/app/ActivityManager$RunningTaskInfo;->getWindowingMode()I
 
-    move-result v7
+    move-result v5
 
     .line 8
     invoke-virtual/range {p3 .. p3}, Landroid/app/ActivityManager$RunningTaskInfo;->getConfiguration()Landroid/content/res/Configuration;
 
-    move-result-object v8
+    move-result-object v6
 
-    iget-object v8, v8, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    iget-object v6, v6, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
-    invoke-virtual {v8}, Landroid/app/WindowConfiguration;->getBounds()Landroid/graphics/Rect;
+    invoke-virtual {v6}, Landroid/app/WindowConfiguration;->getBounds()Landroid/graphics/Rect;
 
-    move-result-object v8
+    move-result-object v6
 
     .line 9
-    invoke-virtual {v8}, Landroid/graphics/Rect;->width()I
+    invoke-virtual {v6}, Landroid/graphics/Rect;->width()I
+
+    move-result v8
+
+    int-to-float v8, v8
+
+    .line 10
+    invoke-virtual {v6}, Landroid/graphics/Rect;->height()I
 
     move-result v9
 
     int-to-float v9, v9
 
-    .line 10
-    invoke-virtual {v8}, Landroid/graphics/Rect;->height()I
-
-    move-result v10
-
-    int-to-float v10, v10
-
     .line 11
     invoke-virtual/range {p3 .. p3}, Landroid/app/ActivityManager$RunningTaskInfo;->getWindowingMode()I
 
-    move-result v11
+    move-result v10
 
-    const/4 v12, 0x1
+    const/4 v11, 0x1
 
-    const/4 v13, 0x5
+    const/4 v12, 0x5
 
-    if-ne v11, v13, :cond_0
+    if-ne v10, v12, :cond_0
 
     .line 12
     invoke-static/range {p3 .. p3}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->supportedSplit(Landroid/app/ActivityManager$RunningTaskInfo;)Z
 
-    move-result v11
+    move-result v10
 
-    move v13, v12
+    move v12, v11
 
     goto :goto_0
 
@@ -1131,24 +1129,24 @@
     :cond_0
     invoke-virtual/range {p3 .. p3}, Landroid/app/ActivityManager$RunningTaskInfo;->getWindowingMode()I
 
-    move-result v11
+    move-result v10
 
-    const/4 v13, 0x6
+    const/4 v12, 0x6
 
-    if-ne v11, v13, :cond_1
+    if-ne v10, v12, :cond_1
 
     .line 14
-    iget-object v11, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mMiuiMultiWinSwitchUtils:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiMultiWinSwitchUtils;
+    iget-object v10, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mMiuiMultiWinSwitchUtils:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiMultiWinSwitchUtils;
 
-    iget v13, v2, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
+    iget v12, v3, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
-    invoke-virtual {v11, v13}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiMultiWinSwitchUtils;->isSupportFreeform(I)Z
+    invoke-virtual {v10, v12}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiMultiWinSwitchUtils;->isSupportFreeform(I)Z
 
-    move-result v11
+    move-result v10
 
-    move v13, v11
+    move v12, v10
 
-    move v11, v12
+    move v10, v11
 
     goto :goto_0
 
@@ -1156,333 +1154,679 @@
     :cond_1
     invoke-static/range {p3 .. p3}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->supportedSplit(Landroid/app/ActivityManager$RunningTaskInfo;)Z
 
-    move-result v11
+    move-result v10
 
     .line 16
-    iget-object v13, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mMiuiMultiWinSwitchUtils:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiMultiWinSwitchUtils;
+    iget-object v12, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mMiuiMultiWinSwitchUtils:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiMultiWinSwitchUtils;
 
-    iget v14, v2, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
+    iget v13, v3, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
-    invoke-virtual {v13, v14}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiMultiWinSwitchUtils;->isSupportFreeform(I)Z
+    invoke-virtual {v12, v13}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiMultiWinSwitchUtils;->isSupportFreeform(I)Z
 
-    move-result v13
+    move-result v12
 
     :goto_0
-    const v16, 0x3e051eb8    # 0.13f
+    const/4 v14, 0x3
 
-    const v17, 0x3e3851ec    # 0.18f
+    const/4 v13, 0x0
 
-    const/4 v15, 0x0
+    const/high16 v15, 0x3f000000    # 0.5f
 
-    const/high16 v14, 0x3f000000    # 0.5f
-
-    if-ne v7, v12, :cond_6
+    if-ne v5, v11, :cond_6
 
     .line 17
-    iput v15, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mOriginHotAreaType:I
+    iput v13, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mOriginHotAreaType:I
 
-    const/4 v7, 0x3
+    const/4 v5, 0x2
 
-    if-eq v6, v7, :cond_2
+    if-eq v4, v14, :cond_2
 
-    const/4 v7, 0x2
-
-    if-ne v6, v7, :cond_1b
-
-    goto :goto_1
+    if-ne v4, v5, :cond_1b
 
     :cond_2
-    const/4 v7, 0x2
+    const/high16 v4, 0x41a00000    # 20.0f
 
-    :goto_1
-    if-ne v5, v7, :cond_4
+    if-ne v2, v5, :cond_4
 
     .line 18
-    new-instance v5, Landroid/graphics/Rect;
+    new-instance v2, Landroid/graphics/Rect;
 
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v5
+
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
 
     move-result v6
 
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
-
-    move-result v7
-
-    invoke-direct {v5, v15, v15, v6, v7}, Landroid/graphics/Rect;-><init>(IIII)V
+    invoke-direct {v2, v13, v13, v5, v6}, Landroid/graphics/Rect;-><init>(IIII)V
 
     .line 19
+    new-instance v5, Landroid/graphics/Rect;
+
+    invoke-direct {v5}, Landroid/graphics/Rect;-><init>()V
+
+    .line 20
     new-instance v6, Landroid/graphics/Rect;
 
     invoke-direct {v6}, Landroid/graphics/Rect;-><init>()V
 
-    .line 20
-    new-instance v7, Landroid/graphics/Rect;
-
-    invoke-direct {v7}, Landroid/graphics/Rect;-><init>()V
-
     .line 21
-    filled-new-array {v6, v7}, [Landroid/graphics/Rect;
+    filled-new-array {v5, v6}, [Landroid/graphics/Rect;
 
-    move-result-object v8
+    move-result-object v14
 
-    invoke-virtual {v5, v8}, Landroid/graphics/Rect;->splitVertically([Landroid/graphics/Rect;)V
+    invoke-virtual {v2, v14}, Landroid/graphics/Rect;->splitVertically([Landroid/graphics/Rect;)V
 
     .line 22
-    new-instance v5, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+    new-instance v2, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
 
-    invoke-direct {v5, v12, v11}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
+    invoke-direct {v2, v11, v10}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
 
     .line 23
-    invoke-virtual {v5, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+    invoke-virtual {v2, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
 
     .line 24
-    invoke-virtual {v6}, Landroid/graphics/Rect;->width()I
+    invoke-virtual {v5}, Landroid/graphics/Rect;->width()I
 
-    move-result v8
+    move-result v14
 
-    int-to-float v8, v8
+    int-to-float v14, v14
 
-    mul-float/2addr v8, v14
+    mul-float/2addr v14, v15
 
-    div-float/2addr v8, v9
+    div-float/2addr v14, v8
 
-    invoke-virtual {v5, v8}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+    invoke-virtual {v2, v14}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
 
     .line 25
-    invoke-virtual {v6}, Landroid/graphics/Rect;->height()I
+    invoke-virtual {v5}, Landroid/graphics/Rect;->height()I
 
-    move-result v6
+    move-result v5
 
-    int-to-float v6, v6
+    int-to-float v5, v5
 
-    mul-float/2addr v6, v14
+    mul-float/2addr v5, v15
 
-    div-float/2addr v6, v10
+    div-float/2addr v5, v9
 
-    invoke-virtual {v5, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+    invoke-virtual {v2, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
 
     .line 26
-    iget-object v6, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+    iget-object v5, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
 
-    invoke-interface {v6, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v5, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 27
-    new-instance v5, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+    new-instance v2, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
 
-    const/4 v6, 0x2
+    const/4 v5, 0x2
 
-    invoke-direct {v5, v6, v11}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
+    invoke-direct {v2, v5, v10}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
 
     .line 28
-    invoke-virtual {v5, v7}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+    invoke-virtual {v2, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
 
     .line 29
-    invoke-virtual {v7}, Landroid/graphics/Rect;->width()I
+    invoke-virtual {v6}, Landroid/graphics/Rect;->width()I
 
-    move-result v6
+    move-result v5
 
-    int-to-float v6, v6
+    int-to-float v5, v5
 
-    mul-float/2addr v6, v14
+    mul-float/2addr v5, v15
 
-    div-float/2addr v6, v9
+    div-float/2addr v5, v8
 
-    invoke-virtual {v5, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+    invoke-virtual {v2, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
 
     .line 30
-    invoke-virtual {v7}, Landroid/graphics/Rect;->height()I
+    invoke-virtual {v6}, Landroid/graphics/Rect;->height()I
+
+    move-result v5
+
+    int-to-float v5, v5
+
+    mul-float/2addr v5, v15
+
+    div-float/2addr v5, v9
+
+    invoke-virtual {v2, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+
+    .line 31
+    iget-object v5, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+
+    .line 32
+    invoke-static {v5, v2, v13, v11}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+
+    move-result-object v2
+
+    .line 33
+    new-instance v5, Landroid/graphics/Rect;
+
+    .line 34
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
 
     move-result v6
 
     int-to-float v6, v6
 
-    mul-float/2addr v6, v14
+    const/high16 v10, 0x40000000    # 2.0f
 
     div-float/2addr v6, v10
 
-    invoke-virtual {v5, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
 
-    .line 31
-    iget-object v6, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+    move-result v14
 
-    .line 32
-    invoke-static {v6, v5, v15, v12}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+    int-to-float v14, v14
 
-    move-result-object v5
+    const/high16 v11, 0x40400000    # 3.0f
 
-    .line 33
-    new-instance v6, Landroid/graphics/Rect;
+    invoke-static {v14, v11, v4, v6}, Landroidx/constraintlayout/core/motion/utils/StopLogicEngine$$ExternalSyntheticOutline0;->m(FFFF)F
 
-    .line 34
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+    move-result v6
 
-    move-result v7
-
-    int-to-float v7, v7
-
-    const/high16 v8, 0x40000000    # 2.0f
-
-    div-float/2addr v7, v8
-
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v11
-
-    int-to-float v11, v11
-
-    const/high16 v12, 0x41a00000    # 20.0f
-
-    const/high16 v14, 0x40400000    # 3.0f
-
-    invoke-static {v11, v14, v12, v7}, Landroidx/constraintlayout/core/motion/utils/StopLogicEngine$$ExternalSyntheticOutline0;->m(FFFF)F
-
-    move-result v7
-
-    float-to-int v7, v7
+    float-to-int v6, v6
 
     .line 35
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
 
-    move-result v11
+    move-result v14
 
-    int-to-float v11, v11
+    int-to-float v14, v14
 
-    div-float/2addr v11, v8
+    div-float/2addr v14, v10
 
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
 
-    move-result v8
+    move-result v10
 
-    int-to-float v8, v8
+    int-to-float v10, v10
 
-    invoke-static {v8, v14, v12, v11}, Landroidx/constraintlayout/core/motion/utils/StopLogicEngine$$ExternalSyntheticOutline0;->m$1(FFFF)F
+    invoke-static {v10, v11, v4, v14}, Landroidx/constraintlayout/core/motion/utils/StopLogicEngine$$ExternalSyntheticOutline0;->m$1(FFFF)F
 
-    move-result v8
+    move-result v4
 
-    float-to-int v8, v8
+    float-to-int v4, v4
 
     .line 36
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
 
-    move-result v11
+    move-result v10
 
-    invoke-direct {v6, v7, v15, v8, v11}, Landroid/graphics/Rect;-><init>(IIII)V
+    invoke-direct {v5, v6, v13, v4, v10}, Landroid/graphics/Rect;-><init>(IIII)V
 
     .line 37
-    invoke-virtual {v5, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
-
-    const/high16 v6, 0x3f000000    # 0.5f
+    invoke-virtual {v2, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
 
     .line 38
-    invoke-virtual {v5, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+    invoke-virtual {v2, v15}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
 
     .line 39
-    invoke-virtual {v5, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+    invoke-virtual {v2, v15}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
 
     .line 40
-    iget-object v6, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+    iget-object v4, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
 
-    const/4 v7, 0x5
+    const/4 v5, 0x5
 
     .line 41
-    invoke-static {v6, v5, v7, v13}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+    invoke-static {v4, v2, v5, v12}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
 
-    move-result-object v5
+    move-result-object v10
 
     .line 42
-    new-instance v6, Landroid/graphics/Rect;
+    new-instance v2, Landroid/graphics/Rect;
 
     .line 43
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
 
-    move-result v7
+    move-result v4
 
-    int-to-float v7, v7
+    int-to-float v4, v4
 
-    const v8, 0x3e75c28f    # 0.24f
+    const v5, 0x3e75c28f    # 0.24f
 
-    mul-float/2addr v7, v8
+    mul-float/2addr v4, v5
 
-    float-to-int v7, v7
+    float-to-int v4, v4
 
     .line 44
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
 
-    move-result v8
+    move-result v5
 
-    int-to-float v8, v8
+    int-to-float v5, v5
 
-    const v11, 0x3df5c28f    # 0.12f
+    const v6, 0x3df5c28f    # 0.12f
 
-    mul-float/2addr v8, v11
+    mul-float/2addr v5, v6
 
-    float-to-int v8, v8
+    float-to-int v5, v5
 
     .line 45
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v6
+
+    int-to-float v6, v6
+
+    const v11, 0x3f428f5c    # 0.76f
+
+    mul-float/2addr v6, v11
+
+    float-to-int v6, v6
+
+    .line 46
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
 
     move-result v11
 
-    int-to-float v11, v11
-
-    const v12, 0x3f428f5c    # 0.76f
-
-    mul-float/2addr v11, v12
-
-    float-to-int v11, v11
-
-    .line 46
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
-
-    move-result v12
-
-    invoke-direct {v6, v7, v8, v11, v12}, Landroid/graphics/Rect;-><init>(IIII)V
+    invoke-direct {v2, v4, v5, v6, v11}, Landroid/graphics/Rect;-><init>(IIII)V
 
     .line 47
-    invoke-virtual {v5, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+    invoke-virtual {v10, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
 
     .line 48
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->getOrientation()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->getOrientation()I
 
-    move-result v3
+    move-result v1
 
-    const/4 v6, 0x1
+    const/4 v2, 0x1
 
-    if-ne v3, v6, :cond_3
+    if-ne v1, v2, :cond_3
 
-    const/4 v15, 0x1
+    const/4 v5, 0x1
+
+    goto :goto_1
+
+    :cond_3
+    move v5, v13
 
     .line 49
-    :cond_3
-    iget-object v3, v2, Landroid/app/ActivityManager$RunningTaskInfo;->realActivity:Landroid/content/ComponentName;
+    :goto_1
+    iget-object v1, v3, Landroid/app/ActivityManager$RunningTaskInfo;->realActivity:Landroid/content/ComponentName;
 
-    invoke-virtual {v3}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+    invoke-virtual {v1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
     .line 50
-    new-instance v6, Landroid/graphics/RectF;
+    new-instance v11, Landroid/graphics/RectF;
 
-    invoke-direct {v6}, Landroid/graphics/RectF;-><init>()V
+    invoke-direct {v11}, Landroid/graphics/RectF;-><init>()V
 
     .line 51
-    iget-object v2, v2, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityInfo:Landroid/content/pm/ActivityInfo;
+    iget v4, v3, Landroid/app/ActivityManager$RunningTaskInfo;->mTopActivityOrientation:I
 
-    iget v2, v2, Landroid/content/pm/ActivityInfo;->screenOrientation:I
+    move-object/from16 v1, p1
 
-    invoke-static {v1, v3, v2, v15, v6}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->getFreeformBoundsAndScale(Landroid/content/Context;Ljava/lang/String;IZLandroid/graphics/RectF;)F
+    move-object/from16 v3, p3
+
+    move-object v6, v11
+
+    invoke-static/range {v1 .. v6}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->getFreeformBoundsAndScale(Landroid/content/Context;Ljava/lang/String;Landroid/app/TaskInfo;IZLandroid/graphics/RectF;)F
 
     move-result v1
 
     .line 52
-    invoke-virtual {v6}, Landroid/graphics/RectF;->width()F
+    invoke-virtual {v11}, Landroid/graphics/RectF;->width()F
 
     move-result v2
 
     mul-float/2addr v2, v1
 
     .line 53
-    invoke-virtual {v6}, Landroid/graphics/RectF;->height()F
+    invoke-virtual {v11}, Landroid/graphics/RectF;->height()F
+
+    move-result v3
+
+    mul-float/2addr v3, v1
+
+    mul-float/2addr v2, v15
+
+    div-float/2addr v2, v8
+
+    .line 54
+    invoke-virtual {v10, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+
+    mul-float/2addr v3, v15
+
+    div-float/2addr v3, v9
+
+    .line 55
+    invoke-virtual {v10, v3}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+
+    .line 56
+    iget-object v1, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+
+    invoke-interface {v1, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    goto/16 :goto_e
+
+    .line 57
+    :cond_4
+    new-instance v2, Landroid/graphics/Rect;
+
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v4
+
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+
+    move-result v5
+
+    invoke-direct {v2, v13, v13, v4, v5}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    .line 58
+    new-instance v4, Landroid/graphics/Rect;
+
+    invoke-direct {v4}, Landroid/graphics/Rect;-><init>()V
+
+    .line 59
+    new-instance v5, Landroid/graphics/Rect;
+
+    invoke-direct {v5}, Landroid/graphics/Rect;-><init>()V
+
+    .line 60
+    filled-new-array {v4, v5}, [Landroid/graphics/Rect;
+
+    move-result-object v6
+
+    invoke-virtual {v2, v6}, Landroid/graphics/Rect;->splitVertically([Landroid/graphics/Rect;)V
+
+    .line 61
+    new-instance v6, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+
+    const/4 v11, 0x1
+
+    invoke-direct {v6, v11, v10}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
+
+    .line 62
+    invoke-virtual {v6, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+
+    .line 63
+    invoke-virtual {v4}, Landroid/graphics/Rect;->width()I
+
+    move-result v11
+
+    int-to-float v11, v11
+
+    mul-float/2addr v11, v15
+
+    div-float/2addr v11, v8
+
+    invoke-virtual {v6, v11}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+
+    .line 64
+    invoke-virtual {v4}, Landroid/graphics/Rect;->height()I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    mul-float/2addr v4, v15
+
+    div-float/2addr v4, v9
+
+    invoke-virtual {v6, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+
+    .line 65
+    iget-object v4, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+
+    invoke-interface {v4, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 66
+    new-instance v4, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+
+    const/4 v6, 0x2
+
+    invoke-direct {v4, v6, v10}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
+
+    .line 67
+    invoke-virtual {v4, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+
+    .line 68
+    invoke-virtual {v5}, Landroid/graphics/Rect;->width()I
+
+    move-result v6
+
+    int-to-float v6, v6
+
+    mul-float/2addr v6, v15
+
+    div-float/2addr v6, v8
+
+    invoke-virtual {v4, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+
+    .line 69
+    invoke-virtual {v5}, Landroid/graphics/Rect;->height()I
+
+    move-result v5
+
+    int-to-float v5, v5
+
+    mul-float/2addr v5, v15
+
+    div-float/2addr v5, v9
+
+    invoke-virtual {v4, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+
+    .line 70
+    iget-object v5, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+
+    const/4 v6, 0x1
+
+    .line 71
+    invoke-static {v5, v4, v13, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+
+    move-result-object v4
+
+    .line 72
+    new-instance v5, Landroid/graphics/Rect;
+
+    .line 73
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v6
+
+    int-to-float v6, v6
+
+    const/high16 v10, 0x40000000    # 2.0f
+
+    div-float/2addr v6, v10
+
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v11
+
+    int-to-float v11, v11
+
+    const/high16 v14, 0x41a00000    # 20.0f
+
+    const/high16 v15, 0x40400000    # 3.0f
+
+    invoke-static {v11, v15, v14, v6}, Landroidx/constraintlayout/core/motion/utils/StopLogicEngine$$ExternalSyntheticOutline0;->m(FFFF)F
+
+    move-result v6
+
+    float-to-int v6, v6
+
+    .line 74
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v11
+
+    int-to-float v11, v11
+
+    div-float/2addr v11, v10
+
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v10
+
+    int-to-float v10, v10
+
+    invoke-static {v10, v15, v14, v11}, Landroidx/constraintlayout/core/motion/utils/StopLogicEngine$$ExternalSyntheticOutline0;->m$1(FFFF)F
+
+    move-result v10
+
+    float-to-int v10, v10
+
+    .line 75
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+
+    move-result v11
+
+    invoke-direct {v5, v6, v13, v10, v11}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    .line 76
+    invoke-virtual {v4, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+
+    .line 77
+    invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
+
+    move-result v5
+
+    int-to-float v5, v5
+
+    const/high16 v6, 0x3f000000    # 0.5f
+
+    mul-float/2addr v5, v6
+
+    div-float/2addr v5, v8
+
+    invoke-virtual {v4, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+
+    .line 78
+    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    mul-float/2addr v2, v6
+
+    div-float/2addr v2, v9
+
+    invoke-virtual {v4, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+
+    .line 79
+    iget-object v2, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+
+    const/4 v5, 0x5
+
+    .line 80
+    invoke-static {v2, v4, v5, v12}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+
+    move-result-object v10
+
+    .line 81
+    new-instance v2, Landroid/graphics/Rect;
+
+    .line 82
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    const v5, 0x3e3851ec    # 0.18f
+
+    mul-float/2addr v4, v5
+
+    float-to-int v4, v4
+
+    .line 83
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+
+    move-result v5
+
+    int-to-float v5, v5
+
+    const v6, 0x3e051eb8    # 0.13f
+
+    mul-float/2addr v5, v6
+
+    float-to-int v5, v5
+
+    .line 84
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v6
+
+    int-to-float v6, v6
+
+    const v11, 0x3f51eb85    # 0.82f
+
+    mul-float/2addr v6, v11
+
+    float-to-int v6, v6
+
+    .line 85
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+
+    move-result v11
+
+    invoke-direct {v2, v4, v5, v6, v11}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    .line 86
+    invoke-virtual {v10, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+
+    .line 87
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->getOrientation()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    if-ne v1, v2, :cond_5
+
+    const/4 v1, 0x1
+
+    move v5, v1
+
+    goto :goto_2
+
+    :cond_5
+    move v5, v13
+
+    .line 88
+    :goto_2
+    iget-object v1, v3, Landroid/app/ActivityManager$RunningTaskInfo;->realActivity:Landroid/content/ComponentName;
+
+    invoke-virtual {v1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 89
+    new-instance v11, Landroid/graphics/RectF;
+
+    invoke-direct {v11}, Landroid/graphics/RectF;-><init>()V
+
+    .line 90
+    iget v4, v3, Landroid/app/ActivityManager$RunningTaskInfo;->mTopActivityOrientation:I
+
+    move-object/from16 v1, p1
+
+    move-object/from16 v3, p3
+
+    move-object v6, v11
+
+    invoke-static/range {v1 .. v6}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->getFreeformBoundsAndScale(Landroid/content/Context;Ljava/lang/String;Landroid/app/TaskInfo;IZLandroid/graphics/RectF;)F
+
+    move-result v1
+
+    .line 91
+    invoke-virtual {v11}, Landroid/graphics/RectF;->width()F
+
+    move-result v2
+
+    mul-float/2addr v2, v1
+
+    .line 92
+    invoke-virtual {v11}, Landroid/graphics/RectF;->height()F
 
     move-result v3
 
@@ -1492,83 +1836,415 @@
 
     mul-float/2addr v2, v1
 
-    div-float/2addr v2, v9
+    div-float/2addr v2, v8
 
-    .line 54
-    invoke-virtual {v5, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+    .line 93
+    invoke-virtual {v10, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
 
     mul-float/2addr v3, v1
 
-    div-float/2addr v3, v10
+    div-float/2addr v3, v9
 
-    .line 55
-    invoke-virtual {v5, v3}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+    .line 94
+    invoke-virtual {v10, v3}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
 
-    .line 56
+    .line 95
     iget-object v1, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
 
-    invoke-interface {v1, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v1, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto/16 :goto_e
 
-    .line 57
-    :cond_4
+    :cond_6
+    const v15, 0x3eac0831    # 0.336f
+
+    const v19, 0x3de66666    # 0.1125f
+
+    const/4 v11, 0x5
+
+    if-ne v5, v11, :cond_f
+
+    .line 96
+    iput v11, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mOriginHotAreaType:I
+
+    if-eq v4, v14, :cond_b
+
+    const/4 v5, 0x2
+
+    if-ne v4, v5, :cond_7
+
+    goto/16 :goto_5
+
+    :cond_7
+    if-ne v2, v5, :cond_9
+
+    .line 97
+    new-instance v2, Landroid/graphics/Rect;
+
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v4
+
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+
+    move-result v5
+
+    invoke-direct {v2, v13, v13, v4, v5}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    .line 98
+    new-instance v4, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+
+    invoke-direct {v4, v11, v12}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
+
+    .line 99
     new-instance v5, Landroid/graphics/Rect;
 
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+    .line 100
+    invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
 
     move-result v6
 
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
 
-    move-result v7
+    move-result v10
 
-    invoke-direct {v5, v15, v15, v6, v7}, Landroid/graphics/Rect;-><init>(IIII)V
+    invoke-direct {v5, v13, v13, v6, v10}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 58
-    new-instance v6, Landroid/graphics/Rect;
+    .line 101
+    invoke-virtual {v4, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
 
-    invoke-direct {v6}, Landroid/graphics/Rect;-><init>()V
+    .line 102
+    invoke-direct {v0, v4, v3}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->setFreeformHotAreaScale(Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;Landroid/app/ActivityManager$RunningTaskInfo;)V
 
-    .line 59
-    new-instance v7, Landroid/graphics/Rect;
+    .line 103
+    iget-object v3, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
 
-    invoke-direct {v7}, Landroid/graphics/Rect;-><init>()V
+    const/4 v5, 0x1
 
-    .line 60
-    filled-new-array {v6, v7}, [Landroid/graphics/Rect;
+    .line 104
+    invoke-static {v3, v4, v13, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
 
-    move-result-object v8
+    move-result-object v3
 
-    invoke-virtual {v5, v8}, Landroid/graphics/Rect;->splitVertically([Landroid/graphics/Rect;)V
+    .line 105
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
 
-    .line 61
-    new-instance v8, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+    move-result v4
 
-    const/4 v12, 0x1
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
 
-    invoke-direct {v8, v12, v11}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
+    move-result v5
 
-    .line 62
-    invoke-virtual {v8, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+    if-ge v4, v5, :cond_8
 
-    .line 63
-    invoke-virtual {v6}, Landroid/graphics/Rect;->width()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
 
-    move-result v12
+    move-result v4
 
-    int-to-float v12, v12
+    goto :goto_3
+
+    :cond_8
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+
+    move-result v4
+
+    .line 106
+    :goto_3
+    new-instance v5, Landroid/graphics/Rect;
+
+    .line 107
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v6
+
+    int-to-float v6, v6
+
+    mul-float/2addr v6, v15
+
+    float-to-int v6, v6
+
+    .line 108
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    const v10, 0x3f29fbe7    # 0.664f
+
+    mul-float/2addr v1, v10
+
+    float-to-int v1, v1
+
+    int-to-float v4, v4
+
+    const v10, 0x3d75c28f    # 0.06f
+
+    mul-float/2addr v4, v10
+
+    float-to-int v4, v4
+
+    invoke-direct {v5, v6, v13, v1, v4}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    .line 109
+    invoke-virtual {v3, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+
+    .line 110
+    invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    const/high16 v4, 0x3f000000    # 0.5f
+
+    mul-float/2addr v1, v4
+
+    div-float/2addr v1, v8
+
+    invoke-virtual {v3, v1}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+
+    .line 111
+    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    mul-float/2addr v1, v4
+
+    div-float/2addr v1, v9
+
+    invoke-virtual {v3, v1}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+
+    .line 112
+    iget-object v1, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+
+    invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    goto/16 :goto_e
+
+    .line 113
+    :cond_9
+    new-instance v2, Landroid/graphics/Rect;
+
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v4
+
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+
+    move-result v5
+
+    invoke-direct {v2, v13, v13, v4, v5}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    .line 114
+    new-instance v4, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+
+    const/4 v5, 0x5
+
+    invoke-direct {v4, v5, v12}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
+
+    .line 115
+    new-instance v5, Landroid/graphics/Rect;
+
+    .line 116
+    invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
+
+    move-result v6
+
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+
+    move-result v10
+
+    invoke-direct {v5, v13, v13, v6, v10}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    .line 117
+    invoke-virtual {v4, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+
+    .line 118
+    invoke-direct {v0, v4, v3}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->setFreeformHotAreaScale(Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;Landroid/app/ActivityManager$RunningTaskInfo;)V
+
+    .line 119
+    iget-object v3, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+
+    const/4 v5, 0x1
+
+    .line 120
+    invoke-static {v3, v4, v13, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+
+    move-result-object v3
+
+    .line 121
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v4
+
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+
+    move-result v5
+
+    if-ge v4, v5, :cond_a
+
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v4
+
+    goto :goto_4
+
+    :cond_a
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+
+    move-result v4
+
+    .line 122
+    :goto_4
+    new-instance v5, Landroid/graphics/Rect;
+
+    .line 123
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v1
+
+    int-to-float v4, v4
+
+    const v6, 0x3d75c28f    # 0.06f
+
+    mul-float/2addr v4, v6
+
+    float-to-int v4, v4
+
+    invoke-direct {v5, v13, v13, v1, v4}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    .line 124
+    invoke-virtual {v3, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+
+    .line 125
+    invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    const/high16 v4, 0x3f000000    # 0.5f
+
+    mul-float/2addr v1, v4
+
+    div-float/2addr v1, v8
+
+    invoke-virtual {v3, v1}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+
+    .line 126
+    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    mul-float/2addr v1, v4
+
+    div-float/2addr v1, v9
+
+    invoke-virtual {v3, v1}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+
+    .line 127
+    iget-object v1, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+
+    invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    goto/16 :goto_e
+
+    :cond_b
+    const/4 v5, 0x2
+
+    :goto_5
+    if-ne v2, v5, :cond_d
+
+    .line 128
+    new-instance v2, Landroid/graphics/Rect;
+
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v4
+
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+
+    move-result v5
+
+    invoke-direct {v2, v13, v13, v4, v5}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    .line 129
+    new-instance v4, Landroid/graphics/Rect;
+
+    invoke-direct {v4}, Landroid/graphics/Rect;-><init>()V
+
+    .line 130
+    new-instance v5, Landroid/graphics/Rect;
+
+    invoke-direct {v5}, Landroid/graphics/Rect;-><init>()V
+
+    .line 131
+    filled-new-array {v4, v5}, [Landroid/graphics/Rect;
+
+    move-result-object v6
+
+    invoke-virtual {v2, v6}, Landroid/graphics/Rect;->splitVertically([Landroid/graphics/Rect;)V
+
+    .line 132
+    new-instance v6, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+
+    const/4 v11, 0x1
+
+    invoke-direct {v6, v11, v10}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
+
+    .line 133
+    invoke-virtual {v6, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+
+    .line 134
+    invoke-virtual {v4}, Landroid/graphics/Rect;->width()I
+
+    move-result v11
+
+    int-to-float v11, v11
 
     const/high16 v14, 0x3f000000    # 0.5f
 
-    mul-float/2addr v12, v14
+    mul-float/2addr v11, v14
 
-    div-float/2addr v12, v9
+    div-float/2addr v11, v8
 
-    invoke-virtual {v8, v12}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+    invoke-virtual {v6, v11}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
 
-    .line 64
-    invoke-virtual {v6}, Landroid/graphics/Rect;->height()I
+    .line 135
+    invoke-virtual {v4}, Landroid/graphics/Rect;->height()I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    mul-float/2addr v4, v14
+
+    div-float/2addr v4, v9
+
+    invoke-virtual {v6, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+
+    .line 136
+    iget-object v4, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+
+    invoke-interface {v4, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 137
+    new-instance v4, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+
+    const/4 v6, 0x2
+
+    invoke-direct {v4, v6, v10}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
+
+    .line 138
+    invoke-virtual {v4, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+
+    .line 139
+    invoke-virtual {v5}, Landroid/graphics/Rect;->width()I
 
     move-result v6
 
@@ -1576,869 +2252,177 @@
 
     mul-float/2addr v6, v14
 
-    div-float/2addr v6, v10
+    div-float/2addr v6, v8
 
-    invoke-virtual {v8, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+    invoke-virtual {v4, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
 
-    .line 65
-    iget-object v6, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
-
-    invoke-interface {v6, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 66
-    new-instance v6, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
-
-    const/4 v8, 0x2
-
-    invoke-direct {v6, v8, v11}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
-
-    .line 67
-    invoke-virtual {v6, v7}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
-
-    .line 68
-    invoke-virtual {v7}, Landroid/graphics/Rect;->width()I
-
-    move-result v8
-
-    int-to-float v8, v8
-
-    mul-float/2addr v8, v14
-
-    div-float/2addr v8, v9
-
-    invoke-virtual {v6, v8}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
-
-    .line 69
-    invoke-virtual {v7}, Landroid/graphics/Rect;->height()I
-
-    move-result v7
-
-    int-to-float v7, v7
-
-    mul-float/2addr v7, v14
-
-    div-float/2addr v7, v10
-
-    invoke-virtual {v6, v7}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
-
-    .line 70
-    iget-object v7, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
-
-    const/4 v8, 0x1
-
-    .line 71
-    invoke-static {v7, v6, v15, v8}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
-
-    move-result-object v6
-
-    .line 72
-    new-instance v7, Landroid/graphics/Rect;
-
-    .line 73
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v8
-
-    int-to-float v8, v8
-
-    const/high16 v11, 0x40000000    # 2.0f
-
-    div-float/2addr v8, v11
-
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v12
-
-    int-to-float v12, v12
-
-    const/high16 v14, 0x41a00000    # 20.0f
-
-    const/high16 v15, 0x40400000    # 3.0f
-
-    invoke-static {v12, v15, v14, v8}, Landroidx/constraintlayout/core/motion/utils/StopLogicEngine$$ExternalSyntheticOutline0;->m(FFFF)F
-
-    move-result v8
-
-    float-to-int v8, v8
-
-    .line 74
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v12
-
-    int-to-float v12, v12
-
-    div-float/2addr v12, v11
-
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v11
-
-    int-to-float v11, v11
-
-    invoke-static {v11, v15, v14, v12}, Landroidx/constraintlayout/core/motion/utils/StopLogicEngine$$ExternalSyntheticOutline0;->m$1(FFFF)F
-
-    move-result v11
-
-    float-to-int v11, v11
-
-    .line 75
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
-
-    move-result v12
-
-    const/4 v14, 0x0
-
-    invoke-direct {v7, v8, v14, v11, v12}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    .line 76
-    invoke-virtual {v6, v7}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
-
-    .line 77
-    invoke-virtual {v5}, Landroid/graphics/Rect;->width()I
-
-    move-result v7
-
-    int-to-float v7, v7
-
-    const/high16 v8, 0x3f000000    # 0.5f
-
-    mul-float/2addr v7, v8
-
-    div-float/2addr v7, v9
-
-    invoke-virtual {v6, v7}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
-
-    .line 78
+    .line 140
     invoke-virtual {v5}, Landroid/graphics/Rect;->height()I
 
     move-result v5
 
     int-to-float v5, v5
 
-    mul-float/2addr v5, v8
+    mul-float/2addr v5, v14
 
-    div-float/2addr v5, v10
+    div-float/2addr v5, v9
 
-    invoke-virtual {v6, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+    invoke-virtual {v4, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
 
-    .line 79
+    .line 141
     iget-object v5, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
 
-    const/4 v7, 0x5
+    const/4 v6, 0x1
 
-    .line 80
-    invoke-static {v5, v6, v7, v13}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+    .line 142
+    invoke-static {v5, v4, v13, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
 
-    move-result-object v5
+    move-result-object v4
 
-    .line 81
-    new-instance v6, Landroid/graphics/Rect;
+    .line 143
+    new-instance v5, Landroid/graphics/Rect;
 
-    .line 82
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+    .line 144
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
 
-    move-result v7
+    move-result v6
 
-    int-to-float v7, v7
+    int-to-float v6, v6
 
-    mul-float v7, v7, v17
+    const/high16 v10, 0x40000000    # 2.0f
 
-    float-to-int v7, v7
+    div-float/2addr v6, v10
 
-    .line 83
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
-
-    move-result v8
-
-    int-to-float v8, v8
-
-    mul-float v8, v8, v16
-
-    float-to-int v8, v8
-
-    .line 84
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
 
     move-result v11
 
     int-to-float v11, v11
 
-    const v12, 0x3f51eb85    # 0.82f
+    mul-float v11, v11, v19
 
-    mul-float/2addr v11, v12
+    sub-float/2addr v6, v11
 
-    float-to-int v11, v11
+    float-to-int v6, v6
 
-    .line 85
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+    .line 145
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
 
-    move-result v12
+    move-result v11
 
-    invoke-direct {v6, v7, v8, v11, v12}, Landroid/graphics/Rect;-><init>(IIII)V
+    int-to-float v11, v11
 
-    .line 86
-    invoke-virtual {v5, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+    div-float/2addr v11, v10
 
-    .line 87
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->getOrientation()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
 
-    move-result v3
+    move-result v10
 
-    const/4 v6, 0x1
+    int-to-float v10, v10
 
-    if-ne v3, v6, :cond_5
+    mul-float v10, v10, v19
 
-    const/4 v15, 0x1
+    add-float/2addr v10, v11
 
-    goto :goto_2
+    float-to-int v10, v10
 
-    :cond_5
-    const/4 v15, 0x0
+    .line 146
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
 
-    .line 88
-    :goto_2
-    iget-object v3, v2, Landroid/app/ActivityManager$RunningTaskInfo;->realActivity:Landroid/content/ComponentName;
+    move-result v11
 
-    invoke-virtual {v3}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+    invoke-direct {v5, v6, v13, v10, v11}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    move-result-object v3
+    .line 147
+    invoke-virtual {v4, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
 
-    .line 89
-    new-instance v6, Landroid/graphics/RectF;
+    .line 148
+    invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
 
-    invoke-direct {v6}, Landroid/graphics/RectF;-><init>()V
+    move-result v5
 
-    .line 90
-    iget-object v2, v2, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityInfo:Landroid/content/pm/ActivityInfo;
+    int-to-float v5, v5
 
-    iget v2, v2, Landroid/content/pm/ActivityInfo;->screenOrientation:I
+    const/high16 v6, 0x3f000000    # 0.5f
 
-    invoke-static {v1, v3, v2, v15, v6}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->getFreeformBoundsAndScale(Landroid/content/Context;Ljava/lang/String;IZLandroid/graphics/RectF;)F
+    mul-float/2addr v5, v6
 
-    move-result v1
+    div-float/2addr v5, v8
 
-    .line 91
-    invoke-virtual {v6}, Landroid/graphics/RectF;->width()F
+    invoke-virtual {v4, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+
+    .line 149
+    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
 
     move-result v2
 
-    mul-float/2addr v2, v1
+    int-to-float v2, v2
 
-    .line 92
-    invoke-virtual {v6}, Landroid/graphics/RectF;->height()F
-
-    move-result v3
-
-    mul-float/2addr v3, v1
-
-    const/high16 v1, 0x3f000000    # 0.5f
-
-    mul-float/2addr v2, v1
+    mul-float/2addr v2, v6
 
     div-float/2addr v2, v9
 
-    .line 93
-    invoke-virtual {v5, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
-
-    mul-float/2addr v3, v1
-
-    div-float/2addr v3, v10
-
-    .line 94
-    invoke-virtual {v5, v3}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
-
-    .line 95
-    iget-object v1, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
-
-    invoke-interface {v1, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    goto/16 :goto_e
-
-    :cond_6
-    const v12, 0x3eac0831    # 0.336f
-
-    const v14, 0x3de66666    # 0.1125f
-
-    const/4 v15, 0x5
-
-    if-ne v7, v15, :cond_f
-
-    .line 96
-    iput v15, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mOriginHotAreaType:I
-
-    const/4 v1, 0x3
-
-    if-eq v6, v1, :cond_b
-
-    const/4 v1, 0x2
-
-    if-ne v6, v1, :cond_7
-
-    goto/16 :goto_5
-
-    :cond_7
-    if-ne v5, v1, :cond_9
-
-    .line 97
-    new-instance v1, Landroid/graphics/Rect;
-
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v5
-
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
-
-    move-result v6
-
-    const/4 v7, 0x0
-
-    invoke-direct {v1, v7, v7, v5, v6}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    .line 98
-    new-instance v5, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
-
-    invoke-direct {v5, v15, v13}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
-
-    .line 99
-    new-instance v6, Landroid/graphics/Rect;
-
-    .line 100
-    invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
-
-    move-result v8
-
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
-
-    move-result v11
-
-    invoke-direct {v6, v7, v7, v8, v11}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    .line 101
-    invoke-virtual {v5, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
-
-    .line 102
-    invoke-direct {v0, v5, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->setFreeformHotAreaScale(Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;Landroid/app/ActivityManager$RunningTaskInfo;)V
-
-    .line 103
-    iget-object v2, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
-
-    const/4 v6, 0x1
-
-    .line 104
-    invoke-static {v2, v5, v7, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
-
-    move-result-object v2
-
-    .line 105
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v5
-
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
-
-    move-result v6
-
-    if-ge v5, v6, :cond_8
-
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v5
-
-    goto :goto_3
-
-    :cond_8
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
-
-    move-result v5
-
-    .line 106
-    :goto_3
-    new-instance v6, Landroid/graphics/Rect;
-
-    .line 107
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v7
-
-    int-to-float v7, v7
-
-    mul-float/2addr v7, v12
-
-    float-to-int v7, v7
-
-    .line 108
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v3
-
-    int-to-float v3, v3
-
-    const v8, 0x3f29fbe7    # 0.664f
-
-    mul-float/2addr v3, v8
-
-    float-to-int v3, v3
-
-    int-to-float v5, v5
-
-    const v8, 0x3d75c28f    # 0.06f
-
-    mul-float/2addr v5, v8
-
-    float-to-int v5, v5
-
-    const/4 v8, 0x0
-
-    invoke-direct {v6, v7, v8, v3, v5}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    .line 109
-    invoke-virtual {v2, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
-
-    .line 110
-    invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
-
-    move-result v3
-
-    int-to-float v3, v3
-
-    const/high16 v5, 0x3f000000    # 0.5f
-
-    mul-float/2addr v3, v5
-
-    div-float/2addr v3, v9
-
-    invoke-virtual {v2, v3}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
-
-    .line 111
-    invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    mul-float/2addr v1, v5
-
-    div-float/2addr v1, v10
-
-    invoke-virtual {v2, v1}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
-
-    .line 112
-    iget-object v1, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
-
-    invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    goto/16 :goto_e
-
-    .line 113
-    :cond_9
-    new-instance v1, Landroid/graphics/Rect;
-
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v5
-
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
-
-    move-result v6
-
-    const/4 v7, 0x0
-
-    invoke-direct {v1, v7, v7, v5, v6}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    .line 114
-    new-instance v5, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
-
-    const/4 v6, 0x5
-
-    invoke-direct {v5, v6, v13}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
-
-    .line 115
-    new-instance v6, Landroid/graphics/Rect;
-
-    .line 116
-    invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
-
-    move-result v8
-
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
-
-    move-result v11
-
-    invoke-direct {v6, v7, v7, v8, v11}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    .line 117
-    invoke-virtual {v5, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
-
-    .line 118
-    invoke-direct {v0, v5, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->setFreeformHotAreaScale(Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;Landroid/app/ActivityManager$RunningTaskInfo;)V
-
-    .line 119
-    iget-object v2, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
-
-    const/4 v6, 0x1
-
-    .line 120
-    invoke-static {v2, v5, v7, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
-
-    move-result-object v2
-
-    .line 121
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v5
-
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
-
-    move-result v6
-
-    if-ge v5, v6, :cond_a
-
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v5
-
-    goto :goto_4
-
-    :cond_a
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
-
-    move-result v5
-
-    .line 122
-    :goto_4
-    new-instance v6, Landroid/graphics/Rect;
-
-    .line 123
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v3
-
-    int-to-float v5, v5
-
-    const v7, 0x3d75c28f    # 0.06f
-
-    mul-float/2addr v5, v7
-
-    float-to-int v5, v5
-
-    const/4 v7, 0x0
-
-    invoke-direct {v6, v7, v7, v3, v5}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    .line 124
-    invoke-virtual {v2, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
-
-    .line 125
-    invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
-
-    move-result v3
-
-    int-to-float v3, v3
-
-    const/high16 v5, 0x3f000000    # 0.5f
-
-    mul-float/2addr v3, v5
-
-    div-float/2addr v3, v9
-
-    invoke-virtual {v2, v3}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
-
-    .line 126
-    invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    mul-float/2addr v1, v5
-
-    div-float/2addr v1, v10
-
-    invoke-virtual {v2, v1}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
-
-    .line 127
-    iget-object v1, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
-
-    invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    goto/16 :goto_e
-
-    :cond_b
-    const/4 v1, 0x2
-
-    :goto_5
-    if-ne v5, v1, :cond_d
-
-    .line 128
-    new-instance v1, Landroid/graphics/Rect;
-
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v5
-
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
-
-    move-result v6
-
-    const/4 v7, 0x0
-
-    invoke-direct {v1, v7, v7, v5, v6}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    .line 129
-    new-instance v5, Landroid/graphics/Rect;
-
-    invoke-direct {v5}, Landroid/graphics/Rect;-><init>()V
-
-    .line 130
-    new-instance v6, Landroid/graphics/Rect;
-
-    invoke-direct {v6}, Landroid/graphics/Rect;-><init>()V
-
-    .line 131
-    filled-new-array {v5, v6}, [Landroid/graphics/Rect;
-
-    move-result-object v7
-
-    invoke-virtual {v1, v7}, Landroid/graphics/Rect;->splitVertically([Landroid/graphics/Rect;)V
-
-    .line 132
-    new-instance v7, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
-
-    const/4 v8, 0x1
-
-    invoke-direct {v7, v8, v11}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
-
-    .line 133
-    invoke-virtual {v7, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
-
-    .line 134
-    invoke-virtual {v5}, Landroid/graphics/Rect;->width()I
-
-    move-result v8
-
-    int-to-float v8, v8
-
-    const/high16 v12, 0x3f000000    # 0.5f
-
-    mul-float/2addr v8, v12
-
-    div-float/2addr v8, v9
-
-    invoke-virtual {v7, v8}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
-
-    .line 135
-    invoke-virtual {v5}, Landroid/graphics/Rect;->height()I
-
-    move-result v5
-
-    int-to-float v5, v5
-
-    mul-float/2addr v5, v12
-
-    div-float/2addr v5, v10
-
-    invoke-virtual {v7, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
-
-    .line 136
-    iget-object v5, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
-
-    invoke-interface {v5, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 137
-    new-instance v5, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
-
-    const/4 v7, 0x2
-
-    invoke-direct {v5, v7, v11}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
-
-    .line 138
-    invoke-virtual {v5, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
-
-    .line 139
-    invoke-virtual {v6}, Landroid/graphics/Rect;->width()I
-
-    move-result v7
-
-    int-to-float v7, v7
-
-    mul-float/2addr v7, v12
-
-    div-float/2addr v7, v9
-
-    invoke-virtual {v5, v7}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
-
-    .line 140
-    invoke-virtual {v6}, Landroid/graphics/Rect;->height()I
-
-    move-result v6
-
-    int-to-float v6, v6
-
-    mul-float/2addr v6, v12
-
-    div-float/2addr v6, v10
-
-    invoke-virtual {v5, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
-
-    .line 141
-    iget-object v6, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
-
-    const/4 v7, 0x1
-
-    const/4 v8, 0x0
-
-    .line 142
-    invoke-static {v6, v5, v8, v7}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
-
-    move-result-object v5
-
-    .line 143
-    new-instance v6, Landroid/graphics/Rect;
-
-    .line 144
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v7
-
-    int-to-float v7, v7
-
-    const/high16 v8, 0x40000000    # 2.0f
-
-    div-float/2addr v7, v8
-
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v11
-
-    int-to-float v11, v11
-
-    mul-float/2addr v11, v14
-
-    sub-float/2addr v7, v11
-
-    float-to-int v7, v7
-
-    .line 145
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v11
-
-    int-to-float v11, v11
-
-    div-float/2addr v11, v8
-
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v8
-
-    int-to-float v8, v8
-
-    mul-float/2addr v8, v14
-
-    add-float/2addr v8, v11
-
-    float-to-int v8, v8
-
-    .line 146
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
-
-    move-result v11
-
-    const/4 v12, 0x0
-
-    invoke-direct {v6, v7, v12, v8, v11}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    .line 147
-    invoke-virtual {v5, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
-
-    .line 148
-    invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
-
-    move-result v6
-
-    int-to-float v6, v6
-
-    const/high16 v7, 0x3f000000    # 0.5f
-
-    mul-float/2addr v6, v7
-
-    div-float/2addr v6, v9
-
-    invoke-virtual {v5, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
-
-    .line 149
-    invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    mul-float/2addr v1, v7
-
-    div-float/2addr v1, v10
-
-    invoke-virtual {v5, v1}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+    invoke-virtual {v4, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
 
     .line 150
-    iget-object v1, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+    iget-object v2, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
 
-    const/4 v6, 0x5
+    const/4 v5, 0x5
 
     .line 151
-    invoke-static {v1, v5, v6, v13}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+    invoke-static {v2, v4, v5, v12}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
 
-    move-result-object v1
+    move-result-object v2
 
     .line 152
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v4
+
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
 
     move-result v5
 
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+    if-ge v4, v5, :cond_c
 
-    move-result v6
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
 
-    if-ge v5, v6, :cond_c
-
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v5
+    move-result v4
 
     goto :goto_6
 
     :cond_c
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
 
-    move-result v5
+    move-result v4
 
     .line 153
     :goto_6
-    new-instance v6, Landroid/graphics/Rect;
+    new-instance v5, Landroid/graphics/Rect;
 
     .line 154
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
 
-    move-result v7
+    move-result v6
 
-    int-to-float v7, v7
+    int-to-float v6, v6
 
     const v8, 0x3d4ccccd    # 0.05f
 
-    mul-float/2addr v7, v8
+    mul-float/2addr v6, v8
 
-    float-to-int v7, v7
+    float-to-int v6, v6
 
-    int-to-float v5, v5
+    int-to-float v4, v4
 
     const v8, 0x3d2c0831    # 0.042f
 
-    mul-float/2addr v5, v8
+    mul-float/2addr v4, v8
 
-    float-to-int v5, v5
+    float-to-int v4, v4
 
     .line 155
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
 
     move-result v8
 
@@ -2451,259 +2435,253 @@
     float-to-int v8, v8
 
     .line 156
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
 
-    move-result v3
+    move-result v1
 
-    invoke-direct {v6, v7, v5, v8, v3}, Landroid/graphics/Rect;-><init>(IIII)V
+    invoke-direct {v5, v6, v4, v8, v1}, Landroid/graphics/Rect;-><init>(IIII)V
 
     .line 157
-    invoke-virtual {v1, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+    invoke-virtual {v2, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
 
     .line 158
-    invoke-direct {v0, v1, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->setFreeformHotAreaScale(Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;Landroid/app/ActivityManager$RunningTaskInfo;)V
+    invoke-direct {v0, v2, v3}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->setFreeformHotAreaScale(Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;Landroid/app/ActivityManager$RunningTaskInfo;)V
 
     .line 159
-    iget-object v2, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+    iget-object v1, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
 
-    invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto/16 :goto_e
 
     .line 160
     :cond_d
-    new-instance v1, Landroid/graphics/Rect;
+    new-instance v2, Landroid/graphics/Rect;
 
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v4
+
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
 
     move-result v5
 
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
-
-    move-result v6
-
-    const/4 v7, 0x0
-
-    invoke-direct {v1, v7, v7, v5, v6}, Landroid/graphics/Rect;-><init>(IIII)V
+    invoke-direct {v2, v13, v13, v4, v5}, Landroid/graphics/Rect;-><init>(IIII)V
 
     .line 161
+    new-instance v4, Landroid/graphics/Rect;
+
+    invoke-direct {v4}, Landroid/graphics/Rect;-><init>()V
+
+    .line 162
     new-instance v5, Landroid/graphics/Rect;
 
     invoke-direct {v5}, Landroid/graphics/Rect;-><init>()V
 
-    .line 162
-    new-instance v6, Landroid/graphics/Rect;
-
-    invoke-direct {v6}, Landroid/graphics/Rect;-><init>()V
-
     .line 163
-    filled-new-array {v5, v6}, [Landroid/graphics/Rect;
+    filled-new-array {v4, v5}, [Landroid/graphics/Rect;
 
-    move-result-object v7
+    move-result-object v6
 
-    invoke-virtual {v1, v7}, Landroid/graphics/Rect;->splitVertically([Landroid/graphics/Rect;)V
+    invoke-virtual {v2, v6}, Landroid/graphics/Rect;->splitVertically([Landroid/graphics/Rect;)V
 
     .line 164
-    new-instance v7, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+    new-instance v6, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
 
-    const/4 v8, 0x1
+    const/4 v11, 0x1
 
-    invoke-direct {v7, v8, v11}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
+    invoke-direct {v6, v11, v10}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
 
     .line 165
-    invoke-virtual {v7, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+    invoke-virtual {v6, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
 
-    const v5, 0x3eb33333    # 0.35f
+    const v4, 0x3eb33333    # 0.35f
 
     .line 166
-    invoke-virtual {v7, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+    invoke-virtual {v6, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
 
-    const v8, 0x3f333333    # 0.7f
+    const v11, 0x3f333333    # 0.7f
 
     .line 167
-    invoke-virtual {v7, v8}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+    invoke-virtual {v6, v11}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
 
     .line 168
-    iget-object v8, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+    iget-object v11, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
 
-    invoke-interface {v8, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v11, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 169
-    new-instance v7, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+    new-instance v6, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
 
-    const/4 v8, 0x2
+    const/4 v11, 0x2
 
-    invoke-direct {v7, v8, v11}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
+    invoke-direct {v6, v11, v10}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
 
     .line 170
-    invoke-virtual {v7, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+    invoke-virtual {v6, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
 
     .line 171
-    invoke-virtual {v7, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+    invoke-virtual {v6, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
 
-    const v5, 0x3f333333    # 0.7f
+    const v4, 0x3f333333    # 0.7f
 
     .line 172
-    invoke-virtual {v7, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+    invoke-virtual {v6, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
 
     .line 173
-    iget-object v5, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+    iget-object v4, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
 
-    const/4 v6, 0x1
-
-    const/4 v8, 0x0
+    const/4 v5, 0x1
 
     .line 174
-    invoke-static {v5, v7, v8, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+    invoke-static {v4, v6, v13, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
 
-    move-result-object v5
+    move-result-object v4
 
     .line 175
-    new-instance v6, Landroid/graphics/Rect;
+    new-instance v5, Landroid/graphics/Rect;
 
     .line 176
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v7
-
-    int-to-float v7, v7
-
-    const/high16 v8, 0x40000000    # 2.0f
-
-    div-float/2addr v7, v8
-
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v11
-
-    int-to-float v11, v11
-
-    mul-float/2addr v11, v14
-
-    sub-float/2addr v7, v11
-
-    float-to-int v7, v7
-
-    .line 177
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v11
-
-    int-to-float v11, v11
-
-    div-float/2addr v11, v8
-
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v8
-
-    int-to-float v8, v8
-
-    mul-float/2addr v8, v14
-
-    add-float/2addr v8, v11
-
-    float-to-int v8, v8
-
-    .line 178
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
-
-    move-result v11
-
-    const/4 v12, 0x0
-
-    invoke-direct {v6, v7, v12, v8, v11}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    .line 179
-    invoke-virtual {v5, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
-
-    .line 180
-    invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
 
     move-result v6
 
     int-to-float v6, v6
 
-    const/high16 v7, 0x3f000000    # 0.5f
+    const/high16 v10, 0x40000000    # 2.0f
 
-    mul-float/2addr v6, v7
+    div-float/2addr v6, v10
 
-    div-float/2addr v6, v9
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
 
-    invoke-virtual {v5, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+    move-result v11
+
+    int-to-float v11, v11
+
+    mul-float v11, v11, v19
+
+    sub-float/2addr v6, v11
+
+    float-to-int v6, v6
+
+    .line 177
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v11
+
+    int-to-float v11, v11
+
+    div-float/2addr v11, v10
+
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v10
+
+    int-to-float v10, v10
+
+    mul-float v10, v10, v19
+
+    add-float/2addr v10, v11
+
+    float-to-int v10, v10
+
+    .line 178
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+
+    move-result v11
+
+    invoke-direct {v5, v6, v13, v10, v11}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    .line 179
+    invoke-virtual {v4, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+
+    .line 180
+    invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
+
+    move-result v5
+
+    int-to-float v5, v5
+
+    const/high16 v6, 0x3f000000    # 0.5f
+
+    mul-float/2addr v5, v6
+
+    div-float/2addr v5, v8
+
+    invoke-virtual {v4, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
 
     .line 181
-    invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
+    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
 
-    move-result v1
+    move-result v2
 
-    int-to-float v1, v1
+    int-to-float v2, v2
 
-    mul-float/2addr v1, v7
+    mul-float/2addr v2, v6
 
-    div-float/2addr v1, v10
+    div-float/2addr v2, v9
 
-    invoke-virtual {v5, v1}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+    invoke-virtual {v4, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
 
     .line 182
-    iget-object v1, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+    iget-object v2, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
 
-    const/4 v6, 0x5
+    const/4 v5, 0x5
 
     .line 183
-    invoke-static {v1, v5, v6, v13}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+    invoke-static {v2, v4, v5, v12}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
 
-    move-result-object v1
+    move-result-object v2
 
     .line 184
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v4
+
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
 
     move-result v5
 
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+    if-ge v4, v5, :cond_e
 
-    move-result v6
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
 
-    if-ge v5, v6, :cond_e
-
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v5
+    move-result v4
 
     goto :goto_7
 
     :cond_e
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
 
-    move-result v5
+    move-result v4
 
     .line 185
     :goto_7
-    new-instance v6, Landroid/graphics/Rect;
+    new-instance v5, Landroid/graphics/Rect;
 
     .line 186
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
 
-    move-result v7
+    move-result v6
 
-    int-to-float v7, v7
+    int-to-float v6, v6
 
     const v8, 0x3da3d70a    # 0.08f
 
-    mul-float/2addr v7, v8
+    mul-float/2addr v6, v8
 
-    float-to-int v7, v7
+    float-to-int v6, v6
 
-    int-to-float v5, v5
+    int-to-float v4, v4
 
     const v8, 0x3d2c0831    # 0.042f
 
-    mul-float/2addr v5, v8
+    mul-float/2addr v4, v8
 
-    float-to-int v5, v5
+    float-to-int v4, v4
 
     .line 187
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
 
     move-result v8
 
@@ -2716,340 +2694,338 @@
     float-to-int v8, v8
 
     .line 188
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
 
-    move-result v3
+    move-result v1
 
-    invoke-direct {v6, v7, v5, v8, v3}, Landroid/graphics/Rect;-><init>(IIII)V
+    invoke-direct {v5, v6, v4, v8, v1}, Landroid/graphics/Rect;-><init>(IIII)V
 
     .line 189
-    invoke-virtual {v1, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+    invoke-virtual {v2, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
 
     .line 190
-    invoke-direct {v0, v1, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->setFreeformHotAreaScale(Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;Landroid/app/ActivityManager$RunningTaskInfo;)V
+    invoke-direct {v0, v2, v3}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->setFreeformHotAreaScale(Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;Landroid/app/ActivityManager$RunningTaskInfo;)V
 
     .line 191
-    iget-object v2, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+    iget-object v1, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
 
-    invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto/16 :goto_e
 
     .line 192
     :cond_f
-    iget v7, v8, Landroid/graphics/Rect;->left:I
+    iget v5, v6, Landroid/graphics/Rect;->left:I
 
-    const v15, 0x3dbc01a3    # 0.0918f
+    const v11, 0x3dbc01a3    # 0.0918f
 
     const v20, 0x3e178d50    # 0.148f
 
-    if-nez v7, :cond_18
+    if-nez v5, :cond_18
 
-    iget v7, v8, Landroid/graphics/Rect;->top:I
+    iget v5, v6, Landroid/graphics/Rect;->top:I
 
-    if-nez v7, :cond_18
+    if-nez v5, :cond_18
 
-    const/4 v7, 0x1
+    const/4 v5, 0x1
 
     .line 193
-    iput v7, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mOriginHotAreaType:I
+    iput v5, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mOriginHotAreaType:I
 
-    const/4 v7, 0x3
+    if-eq v4, v14, :cond_14
 
-    if-eq v6, v7, :cond_14
+    const/4 v5, 0x2
 
-    const/4 v7, 0x2
-
-    if-ne v6, v7, :cond_10
+    if-ne v4, v5, :cond_10
 
     goto/16 :goto_a
 
     :cond_10
-    if-ne v5, v7, :cond_12
+    if-ne v2, v5, :cond_12
 
     .line 194
-    new-instance v5, Landroid/graphics/Rect;
+    new-instance v2, Landroid/graphics/Rect;
 
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
 
-    move-result v6
+    move-result v4
 
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
 
-    move-result v7
+    move-result v5
 
-    const/4 v8, 0x0
-
-    invoke-direct {v5, v8, v8, v6, v7}, Landroid/graphics/Rect;-><init>(IIII)V
+    invoke-direct {v2, v13, v13, v4, v5}, Landroid/graphics/Rect;-><init>(IIII)V
 
     .line 195
-    new-instance v6, Landroid/graphics/Rect;
+    new-instance v4, Landroid/graphics/Rect;
 
-    invoke-direct {v6}, Landroid/graphics/Rect;-><init>()V
+    invoke-direct {v4}, Landroid/graphics/Rect;-><init>()V
 
     .line 196
-    new-instance v7, Landroid/graphics/Rect;
+    new-instance v5, Landroid/graphics/Rect;
 
-    invoke-direct {v7}, Landroid/graphics/Rect;-><init>()V
+    invoke-direct {v5}, Landroid/graphics/Rect;-><init>()V
 
     .line 197
-    filled-new-array {v6, v7}, [Landroid/graphics/Rect;
+    filled-new-array {v4, v5}, [Landroid/graphics/Rect;
 
-    move-result-object v8
+    move-result-object v6
 
-    invoke-virtual {v5, v8}, Landroid/graphics/Rect;->splitVertically([Landroid/graphics/Rect;)V
+    invoke-virtual {v2, v6}, Landroid/graphics/Rect;->splitVertically([Landroid/graphics/Rect;)V
 
     .line 198
-    new-instance v5, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
-
-    const/4 v8, 0x1
-
-    invoke-direct {v5, v8, v11}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
-
-    .line 199
-    invoke-virtual {v5, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
-
-    .line 200
-    invoke-virtual {v6}, Landroid/graphics/Rect;->width()I
-
-    move-result v8
-
-    int-to-float v8, v8
-
-    const/high16 v14, 0x3f000000    # 0.5f
-
-    mul-float/2addr v8, v14
-
-    div-float/2addr v8, v9
-
-    invoke-virtual {v5, v8}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
-
-    .line 201
-    invoke-virtual {v6}, Landroid/graphics/Rect;->height()I
-
-    move-result v6
-
-    int-to-float v6, v6
-
-    mul-float/2addr v6, v14
-
-    div-float/2addr v6, v10
-
-    invoke-virtual {v5, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
-
-    .line 202
-    iget-object v6, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
-
-    invoke-interface {v6, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 203
-    new-instance v5, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
-
-    const/4 v6, 0x2
-
-    invoke-direct {v5, v6, v11}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
-
-    .line 204
-    invoke-virtual {v5, v7}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
-
-    .line 205
-    invoke-virtual {v7}, Landroid/graphics/Rect;->width()I
-
-    move-result v6
-
-    int-to-float v6, v6
-
-    mul-float/2addr v6, v14
-
-    div-float/2addr v6, v9
-
-    invoke-virtual {v5, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
-
-    .line 206
-    invoke-virtual {v7}, Landroid/graphics/Rect;->height()I
-
-    move-result v6
-
-    int-to-float v6, v6
-
-    mul-float/2addr v6, v14
-
-    div-float/2addr v6, v10
-
-    invoke-virtual {v5, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
-
-    .line 207
-    iget-object v6, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
-
-    const/4 v7, 0x1
-
-    const/4 v8, 0x0
-
-    .line 208
-    invoke-static {v6, v5, v8, v7}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
-
-    move-result-object v5
-
-    .line 209
-    new-instance v6, Landroid/graphics/Rect;
-
-    .line 210
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v7
-
-    int-to-float v7, v7
-
-    mul-float/2addr v7, v12
-
-    float-to-int v7, v7
-
-    .line 211
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v8
-
-    int-to-float v8, v8
-
-    const v11, 0x3f29fbe7    # 0.664f
-
-    mul-float/2addr v8, v11
-
-    float-to-int v8, v8
-
-    .line 212
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
-
-    move-result v11
-
-    int-to-float v11, v11
-
-    mul-float/2addr v11, v15
-
-    float-to-int v11, v11
-
-    const/4 v12, 0x0
-
-    invoke-direct {v6, v7, v12, v8, v11}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    .line 213
-    invoke-virtual {v5, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
-
-    const/high16 v6, 0x3f000000    # 0.5f
-
-    .line 214
-    invoke-virtual {v5, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
-
-    .line 215
-    invoke-virtual {v5, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
-
-    .line 216
-    iget-object v6, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
-
-    const/4 v7, 0x5
-
-    .line 217
-    invoke-static {v6, v5, v7, v13}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
-
-    move-result-object v5
-
-    .line 218
-    new-instance v6, Landroid/graphics/Rect;
-
-    .line 219
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v7
-
-    int-to-float v7, v7
-
-    const v8, 0x3eb33333    # 0.35f
-
-    mul-float/2addr v7, v8
-
-    float-to-int v7, v7
-
-    .line 220
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
-
-    move-result v8
-
-    int-to-float v8, v8
-
-    mul-float/2addr v8, v15
-
-    float-to-int v8, v8
-
-    .line 221
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v11
-
-    int-to-float v11, v11
-
-    const v12, 0x3f266666    # 0.65f
-
-    mul-float/2addr v11, v12
-
-    float-to-int v11, v11
-
-    .line 222
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
-
-    move-result v12
-
-    invoke-direct {v6, v7, v8, v11, v12}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    .line 223
-    invoke-virtual {v5, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
-
-    .line 224
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->getOrientation()I
-
-    move-result v3
+    new-instance v2, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
 
     const/4 v6, 0x1
 
-    if-ne v3, v6, :cond_11
+    invoke-direct {v2, v6, v10}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
 
-    const/4 v15, 0x1
+    .line 199
+    invoke-virtual {v2, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+
+    .line 200
+    invoke-virtual {v4}, Landroid/graphics/Rect;->width()I
+
+    move-result v6
+
+    int-to-float v6, v6
+
+    const/high16 v14, 0x3f000000    # 0.5f
+
+    mul-float/2addr v6, v14
+
+    div-float/2addr v6, v8
+
+    invoke-virtual {v2, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+
+    .line 201
+    invoke-virtual {v4}, Landroid/graphics/Rect;->height()I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    mul-float/2addr v4, v14
+
+    div-float/2addr v4, v9
+
+    invoke-virtual {v2, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+
+    .line 202
+    iget-object v4, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+
+    invoke-interface {v4, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 203
+    new-instance v2, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v4, v10}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
+
+    .line 204
+    invoke-virtual {v2, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+
+    .line 205
+    invoke-virtual {v5}, Landroid/graphics/Rect;->width()I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    mul-float/2addr v4, v14
+
+    div-float/2addr v4, v8
+
+    invoke-virtual {v2, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+
+    .line 206
+    invoke-virtual {v5}, Landroid/graphics/Rect;->height()I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    mul-float/2addr v4, v14
+
+    div-float/2addr v4, v9
+
+    invoke-virtual {v2, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+
+    .line 207
+    iget-object v4, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+
+    const/4 v5, 0x1
+
+    .line 208
+    invoke-static {v4, v2, v13, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+
+    move-result-object v2
+
+    .line 209
+    new-instance v4, Landroid/graphics/Rect;
+
+    .line 210
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v5
+
+    int-to-float v5, v5
+
+    mul-float/2addr v5, v15
+
+    float-to-int v5, v5
+
+    .line 211
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v6
+
+    int-to-float v6, v6
+
+    const v10, 0x3f29fbe7    # 0.664f
+
+    mul-float/2addr v6, v10
+
+    float-to-int v6, v6
+
+    .line 212
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+
+    move-result v10
+
+    int-to-float v10, v10
+
+    mul-float/2addr v10, v11
+
+    float-to-int v10, v10
+
+    invoke-direct {v4, v5, v13, v6, v10}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    .line 213
+    invoke-virtual {v2, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+
+    const/high16 v4, 0x3f000000    # 0.5f
+
+    .line 214
+    invoke-virtual {v2, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+
+    .line 215
+    invoke-virtual {v2, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+
+    .line 216
+    iget-object v4, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+
+    const/4 v5, 0x5
+
+    .line 217
+    invoke-static {v4, v2, v5, v12}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+
+    move-result-object v10
+
+    .line 218
+    new-instance v2, Landroid/graphics/Rect;
+
+    .line 219
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    const v5, 0x3eb33333    # 0.35f
+
+    mul-float/2addr v4, v5
+
+    float-to-int v4, v4
+
+    .line 220
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+
+    move-result v5
+
+    int-to-float v5, v5
+
+    mul-float/2addr v5, v11
+
+    float-to-int v5, v5
+
+    .line 221
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v6
+
+    int-to-float v6, v6
+
+    const v11, 0x3f266666    # 0.65f
+
+    mul-float/2addr v6, v11
+
+    float-to-int v6, v6
+
+    .line 222
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+
+    move-result v11
+
+    invoke-direct {v2, v4, v5, v6, v11}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    .line 223
+    invoke-virtual {v10, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+
+    .line 224
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->getOrientation()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    if-ne v1, v2, :cond_11
+
+    const/4 v1, 0x1
+
+    move v5, v1
 
     goto :goto_8
 
     :cond_11
-    const/4 v15, 0x0
+    move v5, v13
 
     .line 225
     :goto_8
-    iget-object v3, v2, Landroid/app/ActivityManager$RunningTaskInfo;->realActivity:Landroid/content/ComponentName;
+    iget-object v1, v3, Landroid/app/ActivityManager$RunningTaskInfo;->realActivity:Landroid/content/ComponentName;
 
-    invoke-virtual {v3}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+    invoke-virtual {v1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
     .line 226
-    new-instance v6, Landroid/graphics/RectF;
+    new-instance v11, Landroid/graphics/RectF;
 
-    invoke-direct {v6}, Landroid/graphics/RectF;-><init>()V
+    invoke-direct {v11}, Landroid/graphics/RectF;-><init>()V
 
     .line 227
-    iget-object v2, v2, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityInfo:Landroid/content/pm/ActivityInfo;
+    iget v4, v3, Landroid/app/ActivityManager$RunningTaskInfo;->mTopActivityOrientation:I
 
-    iget v2, v2, Landroid/content/pm/ActivityInfo;->screenOrientation:I
+    move-object/from16 v1, p1
 
-    invoke-static {v1, v3, v2, v15, v6}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->getFreeformBoundsAndScale(Landroid/content/Context;Ljava/lang/String;IZLandroid/graphics/RectF;)F
+    move-object/from16 v3, p3
+
+    move-object v6, v11
+
+    invoke-static/range {v1 .. v6}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->getFreeformBoundsAndScale(Landroid/content/Context;Ljava/lang/String;Landroid/app/TaskInfo;IZLandroid/graphics/RectF;)F
 
     move-result v1
 
     .line 228
-    invoke-virtual {v6}, Landroid/graphics/RectF;->width()F
+    invoke-virtual {v11}, Landroid/graphics/RectF;->width()F
 
     move-result v2
 
     mul-float/2addr v2, v1
 
     .line 229
-    invoke-virtual {v6}, Landroid/graphics/RectF;->height()F
+    invoke-virtual {v11}, Landroid/graphics/RectF;->height()F
 
     move-result v3
 
@@ -3059,218 +3035,220 @@
 
     mul-float/2addr v2, v1
 
-    div-float/2addr v2, v9
+    div-float/2addr v2, v8
 
     .line 230
-    invoke-virtual {v5, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+    invoke-virtual {v10, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
 
     mul-float/2addr v3, v1
 
-    div-float/2addr v3, v10
+    div-float/2addr v3, v9
 
     .line 231
-    invoke-virtual {v5, v3}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+    invoke-virtual {v10, v3}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
 
     .line 232
     iget-object v1, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
 
-    invoke-interface {v1, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v1, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto/16 :goto_e
 
     .line 233
     :cond_12
-    new-instance v5, Landroid/graphics/Rect;
+    new-instance v2, Landroid/graphics/Rect;
 
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
 
-    move-result v6
+    move-result v4
 
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
-
-    move-result v7
-
-    const/4 v8, 0x0
-
-    invoke-direct {v5, v8, v8, v6, v7}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    .line 234
-    new-instance v6, Landroid/graphics/Rect;
-
-    invoke-direct {v6}, Landroid/graphics/Rect;-><init>()V
-
-    .line 235
-    new-instance v7, Landroid/graphics/Rect;
-
-    invoke-direct {v7}, Landroid/graphics/Rect;-><init>()V
-
-    .line 236
-    filled-new-array {v6, v7}, [Landroid/graphics/Rect;
-
-    move-result-object v8
-
-    invoke-virtual {v5, v8}, Landroid/graphics/Rect;->splitHorizontally([Landroid/graphics/Rect;)V
-
-    .line 237
-    new-instance v8, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
-
-    const/4 v12, 0x1
-
-    invoke-direct {v8, v12, v11}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
-
-    .line 238
-    invoke-virtual {v8, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
-
-    const/high16 v6, 0x3f000000    # 0.5f
-
-    .line 239
-    invoke-virtual {v8, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
-
-    .line 240
-    invoke-virtual {v8, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
-
-    .line 241
-    iget-object v12, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
-
-    invoke-interface {v12, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 242
-    new-instance v8, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
-
-    const/4 v12, 0x2
-
-    invoke-direct {v8, v12, v11}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
-
-    .line 243
-    invoke-virtual {v8, v7}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
-
-    .line 244
-    invoke-virtual {v8, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
-
-    .line 245
-    invoke-virtual {v8, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
-
-    .line 246
-    iget-object v6, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
-
-    const/4 v7, 0x5
-
-    .line 247
-    invoke-static {v6, v8, v7, v13}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
-
-    move-result-object v6
-
-    .line 248
-    invoke-virtual {v5}, Landroid/graphics/Rect;->height()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
 
     move-result v5
 
-    iget-object v7, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mSplitScreenController:Lcom/android/wm/shell/sosc/SoScSplitScreenController;
+    invoke-direct {v2, v13, v13, v4, v5}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    invoke-virtual {v7}, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->getDividerWidth()I
+    .line 234
+    new-instance v4, Landroid/graphics/Rect;
 
-    move-result v7
+    invoke-direct {v4}, Landroid/graphics/Rect;-><init>()V
 
-    sub-int/2addr v5, v7
+    .line 235
+    new-instance v5, Landroid/graphics/Rect;
+
+    invoke-direct {v5}, Landroid/graphics/Rect;-><init>()V
+
+    .line 236
+    filled-new-array {v4, v5}, [Landroid/graphics/Rect;
+
+    move-result-object v6
+
+    invoke-virtual {v2, v6}, Landroid/graphics/Rect;->splitHorizontally([Landroid/graphics/Rect;)V
+
+    .line 237
+    new-instance v6, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+
+    const/4 v11, 0x1
+
+    invoke-direct {v6, v11, v10}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
+
+    .line 238
+    invoke-virtual {v6, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+
+    const/high16 v4, 0x3f000000    # 0.5f
+
+    .line 239
+    invoke-virtual {v6, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+
+    .line 240
+    invoke-virtual {v6, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+
+    .line 241
+    iget-object v11, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+
+    invoke-interface {v11, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 242
+    new-instance v6, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+
+    const/4 v11, 0x2
+
+    invoke-direct {v6, v11, v10}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
+
+    .line 243
+    invoke-virtual {v6, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+
+    .line 244
+    invoke-virtual {v6, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+
+    .line 245
+    invoke-virtual {v6, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+
+    .line 246
+    iget-object v4, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+
+    const/4 v5, 0x5
+
+    .line 247
+    invoke-static {v4, v6, v5, v12}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+
+    move-result-object v10
+
+    .line 248
+    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
+
+    move-result v2
+
+    iget-object v4, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mSplitScreenController:Lcom/android/wm/shell/sosc/SoScSplitScreenController;
+
+    invoke-virtual {v4}, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->getDividerWidth()I
+
+    move-result v4
+
+    sub-int/2addr v2, v4
+
+    int-to-float v2, v2
+
+    const/high16 v4, 0x40400000    # 3.0f
+
+    div-float/2addr v2, v4
+
+    const/high16 v4, 0x41c00000    # 24.0f
+
+    sub-float/2addr v2, v4
+
+    float-to-int v2, v2
+
+    .line 249
+    new-instance v4, Landroid/graphics/Rect;
+
+    .line 250
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+
+    move-result v5
 
     int-to-float v5, v5
 
-    const/high16 v7, 0x40400000    # 3.0f
+    const/high16 v6, 0x40000000    # 2.0f
 
-    div-float/2addr v5, v7
+    div-float/2addr v5, v6
 
-    const/high16 v7, 0x41c00000    # 24.0f
+    int-to-float v6, v2
 
-    sub-float/2addr v5, v7
+    sub-float/2addr v5, v6
 
     float-to-int v5, v5
 
-    .line 249
-    new-instance v7, Landroid/graphics/Rect;
-
-    .line 250
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
-
-    move-result v8
-
-    int-to-float v8, v8
-
-    const/high16 v11, 0x40000000    # 2.0f
-
-    div-float/2addr v8, v11
-
-    int-to-float v11, v5
-
-    sub-float/2addr v8, v11
-
-    float-to-int v8, v8
-
     .line 251
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v6
+
+    .line 252
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
 
     move-result v11
 
-    .line 252
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+    sub-int/2addr v11, v2
 
-    move-result v12
-
-    sub-int/2addr v12, v5
-
-    const/4 v5, 0x0
-
-    invoke-direct {v7, v5, v8, v11, v12}, Landroid/graphics/Rect;-><init>(IIII)V
+    invoke-direct {v4, v13, v5, v6, v11}, Landroid/graphics/Rect;-><init>(IIII)V
 
     .line 253
-    invoke-virtual {v6, v7}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+    invoke-virtual {v10, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
 
     .line 254
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->getOrientation()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->getOrientation()I
 
-    move-result v3
+    move-result v1
 
-    const/4 v5, 0x1
+    const/4 v2, 0x1
 
-    if-ne v3, v5, :cond_13
+    if-ne v1, v2, :cond_13
 
-    const/4 v15, 0x1
+    const/4 v1, 0x1
+
+    move v5, v1
 
     goto :goto_9
 
     :cond_13
-    const/4 v15, 0x0
+    move v5, v13
 
     .line 255
     :goto_9
-    iget-object v3, v2, Landroid/app/ActivityManager$RunningTaskInfo;->realActivity:Landroid/content/ComponentName;
+    iget-object v1, v3, Landroid/app/ActivityManager$RunningTaskInfo;->realActivity:Landroid/content/ComponentName;
 
-    invoke-virtual {v3}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+    invoke-virtual {v1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
     .line 256
-    new-instance v5, Landroid/graphics/RectF;
+    new-instance v11, Landroid/graphics/RectF;
 
-    invoke-direct {v5}, Landroid/graphics/RectF;-><init>()V
+    invoke-direct {v11}, Landroid/graphics/RectF;-><init>()V
 
     .line 257
-    iget-object v2, v2, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityInfo:Landroid/content/pm/ActivityInfo;
+    iget v4, v3, Landroid/app/ActivityManager$RunningTaskInfo;->mTopActivityOrientation:I
 
-    iget v2, v2, Landroid/content/pm/ActivityInfo;->screenOrientation:I
+    move-object/from16 v1, p1
 
-    invoke-static {v1, v3, v2, v15, v5}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->getFreeformBoundsAndScale(Landroid/content/Context;Ljava/lang/String;IZLandroid/graphics/RectF;)F
+    move-object/from16 v3, p3
+
+    move-object v6, v11
+
+    invoke-static/range {v1 .. v6}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->getFreeformBoundsAndScale(Landroid/content/Context;Ljava/lang/String;Landroid/app/TaskInfo;IZLandroid/graphics/RectF;)F
 
     move-result v1
 
     .line 258
-    invoke-virtual {v5}, Landroid/graphics/RectF;->width()F
+    invoke-virtual {v11}, Landroid/graphics/RectF;->width()F
 
     move-result v2
 
     mul-float/2addr v2, v1
 
     .line 259
-    invoke-virtual {v5}, Landroid/graphics/RectF;->height()F
+    invoke-virtual {v11}, Landroid/graphics/RectF;->height()F
 
     move-result v3
 
@@ -3280,1405 +3258,138 @@
 
     mul-float/2addr v2, v1
 
-    div-float/2addr v2, v9
+    div-float/2addr v2, v8
 
     .line 260
-    invoke-virtual {v6, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+    invoke-virtual {v10, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
 
     mul-float/2addr v3, v1
 
-    div-float/2addr v3, v10
+    div-float/2addr v3, v9
 
     .line 261
-    invoke-virtual {v6, v3}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+    invoke-virtual {v10, v3}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
 
     .line 262
     iget-object v1, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
 
-    invoke-interface {v1, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v1, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto/16 :goto_e
 
     :cond_14
-    const/4 v7, 0x2
+    const/4 v5, 0x2
 
     :goto_a
-    if-ne v5, v7, :cond_16
+    if-ne v2, v5, :cond_16
 
     .line 263
-    new-instance v5, Landroid/graphics/Rect;
+    new-instance v2, Landroid/graphics/Rect;
 
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
 
-    move-result v6
+    move-result v4
 
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
 
-    move-result v7
+    move-result v5
 
-    const/4 v8, 0x0
-
-    invoke-direct {v5, v8, v8, v6, v7}, Landroid/graphics/Rect;-><init>(IIII)V
+    invoke-direct {v2, v13, v13, v4, v5}, Landroid/graphics/Rect;-><init>(IIII)V
 
     .line 264
-    new-instance v6, Landroid/graphics/Rect;
+    new-instance v4, Landroid/graphics/Rect;
 
-    invoke-direct {v6}, Landroid/graphics/Rect;-><init>()V
+    invoke-direct {v4}, Landroid/graphics/Rect;-><init>()V
 
     .line 265
-    new-instance v7, Landroid/graphics/Rect;
-
-    invoke-direct {v7}, Landroid/graphics/Rect;-><init>()V
-
-    .line 266
-    filled-new-array {v6, v7}, [Landroid/graphics/Rect;
-
-    move-result-object v8
-
-    invoke-virtual {v5, v8}, Landroid/graphics/Rect;->splitVertically([Landroid/graphics/Rect;)V
-
-    .line 267
-    new-instance v8, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
-
-    const/4 v12, 0x1
-
-    invoke-direct {v8, v12, v11}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
-
-    .line 268
-    invoke-virtual {v8, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
-
-    const/high16 v6, 0x3f000000    # 0.5f
-
-    .line 269
-    invoke-virtual {v8, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
-
-    .line 270
-    invoke-virtual {v8, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
-
-    .line 271
-    iget-object v12, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
-
-    invoke-interface {v12, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 272
-    new-instance v8, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
-
-    const/4 v12, 0x2
-
-    invoke-direct {v8, v12, v11}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
-
-    .line 273
-    invoke-virtual {v8, v7}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
-
-    .line 274
-    invoke-virtual {v8, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
-
-    .line 275
-    invoke-virtual {v8, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
-
-    .line 276
-    iget-object v6, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
-
-    const/4 v7, 0x1
-
-    const/4 v11, 0x0
-
-    .line 277
-    invoke-static {v6, v8, v11, v7}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
-
-    move-result-object v6
-
-    .line 278
-    new-instance v7, Landroid/graphics/Rect;
-
-    .line 279
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v8
-
-    int-to-float v8, v8
-
-    const/high16 v11, 0x40000000    # 2.0f
-
-    div-float/2addr v8, v11
-
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v12
-
-    int-to-float v12, v12
-
-    mul-float/2addr v12, v14
-
-    sub-float/2addr v8, v12
-
-    float-to-int v8, v8
-
-    .line 280
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v12
-
-    int-to-float v12, v12
-
-    div-float/2addr v12, v11
-
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v11
-
-    int-to-float v11, v11
-
-    mul-float/2addr v11, v14
-
-    add-float/2addr v11, v12
-
-    float-to-int v11, v11
-
-    .line 281
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
-
-    move-result v12
-
-    const/4 v14, 0x0
-
-    invoke-direct {v7, v8, v14, v11, v12}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    .line 282
-    invoke-virtual {v6, v7}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
-
-    .line 283
-    invoke-virtual {v5}, Landroid/graphics/Rect;->width()I
-
-    move-result v7
-
-    int-to-float v7, v7
-
-    const/high16 v8, 0x3f000000    # 0.5f
-
-    mul-float/2addr v7, v8
-
-    div-float/2addr v7, v9
-
-    invoke-virtual {v6, v7}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
-
-    .line 284
-    invoke-virtual {v5}, Landroid/graphics/Rect;->height()I
-
-    move-result v5
-
-    int-to-float v5, v5
-
-    mul-float/2addr v5, v8
-
-    div-float/2addr v5, v10
-
-    invoke-virtual {v6, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
-
-    .line 285
-    iget-object v5, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
-
-    const/4 v7, 0x5
-
-    .line 286
-    invoke-static {v5, v6, v7, v13}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
-
-    move-result-object v5
-
-    .line 287
-    new-instance v6, Landroid/graphics/Rect;
-
-    .line 288
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v7
-
-    int-to-float v7, v7
-
-    const v8, 0x3e75c28f    # 0.24f
-
-    mul-float/2addr v7, v8
-
-    float-to-int v7, v7
-
-    .line 289
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
-
-    move-result v8
-
-    int-to-float v8, v8
-
-    const v11, 0x3df5c28f    # 0.12f
-
-    mul-float/2addr v8, v11
-
-    float-to-int v8, v8
-
-    .line 290
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v11
-
-    int-to-float v11, v11
-
-    const v12, 0x3f428f5c    # 0.76f
-
-    mul-float/2addr v11, v12
-
-    float-to-int v11, v11
-
-    .line 291
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
-
-    move-result v12
-
-    invoke-direct {v6, v7, v8, v11, v12}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    .line 292
-    invoke-virtual {v5, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
-
-    .line 293
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->getOrientation()I
-
-    move-result v3
-
-    const/4 v6, 0x1
-
-    if-ne v3, v6, :cond_15
-
-    const/4 v15, 0x1
-
-    goto :goto_b
-
-    :cond_15
-    const/4 v15, 0x0
-
-    .line 294
-    :goto_b
-    iget-object v3, v2, Landroid/app/ActivityManager$RunningTaskInfo;->realActivity:Landroid/content/ComponentName;
-
-    invoke-virtual {v3}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
-
-    move-result-object v3
-
-    .line 295
-    new-instance v6, Landroid/graphics/RectF;
-
-    invoke-direct {v6}, Landroid/graphics/RectF;-><init>()V
-
-    .line 296
-    iget-object v2, v2, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityInfo:Landroid/content/pm/ActivityInfo;
-
-    iget v2, v2, Landroid/content/pm/ActivityInfo;->screenOrientation:I
-
-    invoke-static {v1, v3, v2, v15, v6}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->getFreeformBoundsAndScale(Landroid/content/Context;Ljava/lang/String;IZLandroid/graphics/RectF;)F
-
-    move-result v1
-
-    .line 297
-    invoke-virtual {v6}, Landroid/graphics/RectF;->width()F
-
-    move-result v2
-
-    mul-float/2addr v2, v1
-
-    .line 298
-    invoke-virtual {v6}, Landroid/graphics/RectF;->height()F
-
-    move-result v3
-
-    mul-float/2addr v3, v1
-
-    const/high16 v1, 0x3f000000    # 0.5f
-
-    mul-float/2addr v2, v1
-
-    div-float/2addr v2, v9
-
-    .line 299
-    invoke-virtual {v5, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
-
-    mul-float/2addr v3, v1
-
-    div-float/2addr v3, v10
-
-    .line 300
-    invoke-virtual {v5, v3}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
-
-    .line 301
-    iget-object v1, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
-
-    invoke-interface {v1, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    goto/16 :goto_e
-
-    .line 302
-    :cond_16
-    new-instance v5, Landroid/graphics/Rect;
-
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v6
-
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
-
-    move-result v7
-
-    const/4 v8, 0x0
-
-    invoke-direct {v5, v8, v8, v6, v7}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    .line 303
-    new-instance v6, Landroid/graphics/Rect;
-
-    invoke-direct {v6}, Landroid/graphics/Rect;-><init>()V
-
-    .line 304
-    new-instance v7, Landroid/graphics/Rect;
-
-    invoke-direct {v7}, Landroid/graphics/Rect;-><init>()V
-
-    .line 305
-    filled-new-array {v6, v7}, [Landroid/graphics/Rect;
-
-    move-result-object v8
-
-    invoke-virtual {v5, v8}, Landroid/graphics/Rect;->splitVertically([Landroid/graphics/Rect;)V
-
-    .line 306
-    new-instance v8, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
-
-    const/4 v12, 0x1
-
-    invoke-direct {v8, v12, v11}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
-
-    .line 307
-    invoke-virtual {v8, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
-
-    const/high16 v6, 0x3f000000    # 0.5f
-
-    .line 308
-    invoke-virtual {v8, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
-
-    .line 309
-    invoke-virtual {v8, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
-
-    .line 310
-    iget-object v12, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
-
-    invoke-interface {v12, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 311
-    new-instance v8, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
-
-    const/4 v12, 0x2
-
-    invoke-direct {v8, v12, v11}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
-
-    .line 312
-    invoke-virtual {v8, v7}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
-
-    .line 313
-    invoke-virtual {v8, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
-
-    .line 314
-    invoke-virtual {v8, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
-
-    .line 315
-    iget-object v6, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
-
-    const/4 v7, 0x1
-
-    const/4 v11, 0x0
-
-    .line 316
-    invoke-static {v6, v8, v11, v7}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
-
-    move-result-object v6
-
-    .line 317
-    new-instance v7, Landroid/graphics/Rect;
-
-    .line 318
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v8
-
-    int-to-float v8, v8
-
-    const/high16 v11, 0x40000000    # 2.0f
-
-    div-float/2addr v8, v11
-
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v12
-
-    int-to-float v12, v12
-
-    mul-float v12, v12, v20
-
-    sub-float/2addr v8, v12
-
-    float-to-int v8, v8
-
-    .line 319
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v12
-
-    int-to-float v12, v12
-
-    div-float/2addr v12, v11
-
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v11
-
-    int-to-float v11, v11
-
-    mul-float v11, v11, v20
-
-    add-float/2addr v11, v12
-
-    float-to-int v11, v11
-
-    .line 320
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
-
-    move-result v12
-
-    const/4 v14, 0x0
-
-    invoke-direct {v7, v8, v14, v11, v12}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    .line 321
-    invoke-virtual {v6, v7}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
-
-    .line 322
-    invoke-virtual {v5}, Landroid/graphics/Rect;->width()I
-
-    move-result v7
-
-    int-to-float v7, v7
-
-    const/high16 v8, 0x3f000000    # 0.5f
-
-    mul-float/2addr v7, v8
-
-    div-float/2addr v7, v9
-
-    invoke-virtual {v6, v7}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
-
-    .line 323
-    invoke-virtual {v5}, Landroid/graphics/Rect;->height()I
-
-    move-result v5
-
-    int-to-float v5, v5
-
-    mul-float/2addr v5, v8
-
-    div-float/2addr v5, v10
-
-    invoke-virtual {v6, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
-
-    .line 324
-    iget-object v5, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
-
-    const/4 v7, 0x5
-
-    .line 325
-    invoke-static {v5, v6, v7, v13}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
-
-    move-result-object v5
-
-    .line 326
-    new-instance v6, Landroid/graphics/Rect;
-
-    .line 327
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v7
-
-    int-to-float v7, v7
-
-    mul-float v7, v7, v17
-
-    float-to-int v7, v7
-
-    .line 328
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
-
-    move-result v8
-
-    int-to-float v8, v8
-
-    mul-float v8, v8, v16
-
-    float-to-int v8, v8
-
-    .line 329
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v11
-
-    int-to-float v11, v11
-
-    const v12, 0x3f51eb85    # 0.82f
-
-    mul-float/2addr v11, v12
-
-    float-to-int v11, v11
-
-    .line 330
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
-
-    move-result v12
-
-    invoke-direct {v6, v7, v8, v11, v12}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    .line 331
-    invoke-virtual {v5, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
-
-    .line 332
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->getOrientation()I
-
-    move-result v3
-
-    const/4 v6, 0x1
-
-    if-ne v3, v6, :cond_17
-
-    const/4 v15, 0x1
-
-    goto :goto_c
-
-    :cond_17
-    const/4 v15, 0x0
-
-    .line 333
-    :goto_c
-    iget-object v3, v2, Landroid/app/ActivityManager$RunningTaskInfo;->realActivity:Landroid/content/ComponentName;
-
-    invoke-virtual {v3}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
-
-    move-result-object v3
-
-    .line 334
-    new-instance v6, Landroid/graphics/RectF;
-
-    invoke-direct {v6}, Landroid/graphics/RectF;-><init>()V
-
-    .line 335
-    iget-object v2, v2, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityInfo:Landroid/content/pm/ActivityInfo;
-
-    iget v2, v2, Landroid/content/pm/ActivityInfo;->screenOrientation:I
-
-    invoke-static {v1, v3, v2, v15, v6}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->getFreeformBoundsAndScale(Landroid/content/Context;Ljava/lang/String;IZLandroid/graphics/RectF;)F
-
-    move-result v1
-
-    .line 336
-    invoke-virtual {v6}, Landroid/graphics/RectF;->width()F
-
-    move-result v2
-
-    mul-float/2addr v2, v1
-
-    .line 337
-    invoke-virtual {v6}, Landroid/graphics/RectF;->height()F
-
-    move-result v3
-
-    mul-float/2addr v3, v1
-
-    const/high16 v1, 0x3f000000    # 0.5f
-
-    mul-float/2addr v2, v1
-
-    div-float/2addr v2, v9
-
-    .line 338
-    invoke-virtual {v5, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
-
-    mul-float/2addr v3, v1
-
-    div-float/2addr v3, v10
-
-    .line 339
-    invoke-virtual {v5, v3}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
-
-    .line 340
-    iget-object v1, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
-
-    invoke-interface {v1, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    goto/16 :goto_e
-
-    :cond_18
-    const/4 v7, 0x2
-
-    .line 341
-    iput v7, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mOriginHotAreaType:I
-
-    const/4 v8, 0x3
-
-    if-eq v6, v8, :cond_20
-
-    if-ne v6, v7, :cond_19
-
-    goto/16 :goto_11
-
-    :cond_19
-    if-ne v5, v7, :cond_1c
-
-    .line 342
-    new-instance v5, Landroid/graphics/Rect;
-
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v6
-
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
-
-    move-result v7
-
-    const/4 v8, 0x0
-
-    invoke-direct {v5, v8, v8, v6, v7}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    .line 343
-    new-instance v6, Landroid/graphics/Rect;
-
-    invoke-direct {v6}, Landroid/graphics/Rect;-><init>()V
-
-    .line 344
-    new-instance v7, Landroid/graphics/Rect;
-
-    invoke-direct {v7}, Landroid/graphics/Rect;-><init>()V
-
-    .line 345
-    filled-new-array {v6, v7}, [Landroid/graphics/Rect;
-
-    move-result-object v8
-
-    invoke-virtual {v5, v8}, Landroid/graphics/Rect;->splitVertically([Landroid/graphics/Rect;)V
-
-    .line 346
-    new-instance v5, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
-
-    const/4 v8, 0x1
-
-    invoke-direct {v5, v8, v11}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
-
-    .line 347
-    invoke-virtual {v5, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
-
-    .line 348
-    invoke-virtual {v6}, Landroid/graphics/Rect;->width()I
-
-    move-result v8
-
-    int-to-float v8, v8
-
-    const/high16 v14, 0x3f000000    # 0.5f
-
-    mul-float/2addr v8, v14
-
-    div-float/2addr v8, v9
-
-    invoke-virtual {v5, v8}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
-
-    .line 349
-    invoke-virtual {v6}, Landroid/graphics/Rect;->height()I
-
-    move-result v6
-
-    int-to-float v6, v6
-
-    mul-float/2addr v6, v14
-
-    div-float/2addr v6, v10
-
-    invoke-virtual {v5, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
-
-    .line 350
-    iget-object v6, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
-
-    invoke-interface {v6, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 351
-    new-instance v5, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
-
-    const/4 v6, 0x2
-
-    invoke-direct {v5, v6, v11}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
-
-    .line 352
-    invoke-virtual {v5, v7}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
-
-    .line 353
-    invoke-virtual {v7}, Landroid/graphics/Rect;->width()I
-
-    move-result v6
-
-    int-to-float v6, v6
-
-    mul-float/2addr v6, v14
-
-    div-float/2addr v6, v9
-
-    invoke-virtual {v5, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
-
-    .line 354
-    invoke-virtual {v7}, Landroid/graphics/Rect;->height()I
-
-    move-result v6
-
-    int-to-float v6, v6
-
-    mul-float/2addr v6, v14
-
-    div-float/2addr v6, v10
-
-    invoke-virtual {v5, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
-
-    .line 355
-    iget-object v6, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
-
-    const/4 v7, 0x1
-
-    const/4 v8, 0x0
-
-    .line 356
-    invoke-static {v6, v5, v8, v7}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
-
-    move-result-object v5
-
-    .line 357
-    new-instance v6, Landroid/graphics/Rect;
-
-    .line 358
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v7
-
-    int-to-float v7, v7
-
-    mul-float/2addr v7, v12
-
-    float-to-int v7, v7
-
-    .line 359
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v8
-
-    int-to-float v8, v8
-
-    const v11, 0x3f29fbe7    # 0.664f
-
-    mul-float/2addr v8, v11
-
-    float-to-int v8, v8
-
-    .line 360
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
-
-    move-result v11
-
-    int-to-float v11, v11
-
-    mul-float/2addr v11, v15
-
-    float-to-int v11, v11
-
-    const/4 v12, 0x0
-
-    invoke-direct {v6, v7, v12, v8, v11}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    .line 361
-    invoke-virtual {v5, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
-
-    const/high16 v6, 0x3f000000    # 0.5f
-
-    .line 362
-    invoke-virtual {v5, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
-
-    .line 363
-    invoke-virtual {v5, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
-
-    .line 364
-    iget-object v6, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
-
-    const/4 v7, 0x5
-
-    .line 365
-    invoke-static {v6, v5, v7, v13}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
-
-    move-result-object v5
-
-    .line 366
-    new-instance v6, Landroid/graphics/Rect;
-
-    .line 367
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v7
-
-    int-to-float v7, v7
-
-    const v8, 0x3eb33333    # 0.35f
-
-    mul-float/2addr v7, v8
-
-    float-to-int v7, v7
-
-    .line 368
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
-
-    move-result v8
-
-    int-to-float v8, v8
-
-    mul-float/2addr v8, v15
-
-    float-to-int v8, v8
-
-    .line 369
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v11
-
-    int-to-float v11, v11
-
-    const v12, 0x3f266666    # 0.65f
-
-    mul-float/2addr v11, v12
-
-    float-to-int v11, v11
-
-    .line 370
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
-
-    move-result v12
-
-    invoke-direct {v6, v7, v8, v11, v12}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    .line 371
-    invoke-virtual {v5, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
-
-    .line 372
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->getOrientation()I
-
-    move-result v3
-
-    const/4 v6, 0x1
-
-    if-ne v3, v6, :cond_1a
-
-    const/4 v15, 0x1
-
-    goto :goto_d
-
-    :cond_1a
-    const/4 v15, 0x0
-
-    .line 373
-    :goto_d
-    iget-object v3, v2, Landroid/app/ActivityManager$RunningTaskInfo;->realActivity:Landroid/content/ComponentName;
-
-    invoke-virtual {v3}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
-
-    move-result-object v3
-
-    .line 374
-    new-instance v6, Landroid/graphics/RectF;
-
-    invoke-direct {v6}, Landroid/graphics/RectF;-><init>()V
-
-    .line 375
-    iget-object v2, v2, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityInfo:Landroid/content/pm/ActivityInfo;
-
-    iget v2, v2, Landroid/content/pm/ActivityInfo;->screenOrientation:I
-
-    invoke-static {v1, v3, v2, v15, v6}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->getFreeformBoundsAndScale(Landroid/content/Context;Ljava/lang/String;IZLandroid/graphics/RectF;)F
-
-    move-result v1
-
-    .line 376
-    invoke-virtual {v6}, Landroid/graphics/RectF;->width()F
-
-    move-result v2
-
-    mul-float/2addr v2, v1
-
-    .line 377
-    invoke-virtual {v6}, Landroid/graphics/RectF;->height()F
-
-    move-result v3
-
-    mul-float/2addr v3, v1
-
-    const/high16 v1, 0x3f000000    # 0.5f
-
-    mul-float/2addr v2, v1
-
-    div-float/2addr v2, v9
-
-    .line 378
-    invoke-virtual {v5, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
-
-    mul-float/2addr v3, v1
-
-    div-float/2addr v3, v10
-
-    .line 379
-    invoke-virtual {v5, v3}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
-
-    .line 380
-    iget-object v1, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
-
-    invoke-interface {v1, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    :cond_1b
-    :goto_e
-    move-object/from16 v16, v4
-
-    goto/16 :goto_14
-
-    .line 381
-    :cond_1c
     new-instance v5, Landroid/graphics/Rect;
 
     invoke-direct {v5}, Landroid/graphics/Rect;-><init>()V
 
-    .line 382
-    new-instance v6, Landroid/graphics/Rect;
-
-    invoke-direct {v6}, Landroid/graphics/Rect;-><init>()V
-
-    .line 383
-    iget-object v7, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mSplitScreenController:Lcom/android/wm/shell/sosc/SoScSplitScreenController;
-
-    invoke-virtual {v7, v5, v6}, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->getStageBounds(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
-
-    .line 384
-    invoke-virtual {v5}, Landroid/graphics/Rect;->height()I
-
-    move-result v7
-
-    int-to-float v7, v7
-
-    const/high16 v8, 0x3f800000    # 1.0f
-
-    mul-float/2addr v7, v8
-
-    invoke-virtual {v6}, Landroid/graphics/Rect;->height()I
-
-    move-result v8
-
-    int-to-float v8, v8
-
-    div-float/2addr v7, v8
-
-    const v8, 0x3ecccccd    # 0.4f
-
-    cmpg-float v8, v7, v8
-
-    if-gez v8, :cond_1d
-
-    const v7, 0x3f19999a    # 0.6f
-
-    goto :goto_f
-
-    :cond_1d
-    const v8, 0x3f19999a    # 0.6f
-
-    cmpg-float v7, v7, v8
-
-    if-gez v7, :cond_1e
-
-    const v7, 0x3f28f5c3    # 0.66f
-
-    goto :goto_f
-
-    :cond_1e
-    const v7, 0x3f3851ec    # 0.72f
-
-    .line 385
-    :goto_f
-    invoke-virtual {v6}, Landroid/graphics/Rect;->height()I
-
-    move-result v6
-
-    add-int/lit8 v6, v6, 0x18
-
-    iget-object v8, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mSplitScreenController:Lcom/android/wm/shell/sosc/SoScSplitScreenController;
-
-    invoke-virtual {v8}, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->getDividerWidth()I
-
-    move-result v8
-
-    add-int/2addr v8, v6
-
-    int-to-float v6, v8
-
-    .line 386
-    new-instance v8, Landroid/graphics/Rect;
-
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
-
-    move-result v12
-
-    int-to-float v12, v12
-
-    sub-float/2addr v12, v6
-
-    .line 387
-    invoke-virtual {v5}, Landroid/graphics/Rect;->height()I
-
-    move-result v14
-
-    int-to-float v14, v14
-
-    const/high16 v15, 0x40000000    # 2.0f
-
-    invoke-static {v14, v7, v15, v12}, Landroidx/constraintlayout/core/motion/utils/StopLogicEngine$$ExternalSyntheticOutline0;->m(FFFF)F
-
-    move-result v12
-
-    float-to-int v12, v12
-
-    .line 388
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v14
-
-    .line 389
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
-
-    move-result v15
-
-    move-object/from16 v16, v4
-
-    const/4 v4, 0x0
-
-    invoke-direct {v8, v4, v12, v14, v15}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    .line 390
-    new-instance v12, Landroid/graphics/Rect;
-
-    iget v14, v5, Landroid/graphics/Rect;->top:I
-
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v15
-
-    .line 391
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
-
-    move-result v17
-
-    invoke-virtual {v8}, Landroid/graphics/Rect;->height()I
-
-    move-result v18
-
-    move/from16 v19, v10
-
-    sub-int v10, v17, v18
-
-    invoke-direct {v12, v4, v14, v15, v10}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    .line 392
-    new-instance v4, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
-
-    const/4 v10, 0x1
-
-    invoke-direct {v4, v10, v11}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
-
-    .line 393
-    invoke-virtual {v4, v12}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
-
-    const/high16 v10, 0x3f000000    # 0.5f
-
-    .line 394
-    invoke-virtual {v4, v10}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
-
-    .line 395
-    invoke-virtual {v4, v10}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
-
-    .line 396
-    iget-object v12, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
-
-    invoke-interface {v12, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 397
-    new-instance v4, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
-
-    const/4 v12, 0x2
-
-    invoke-direct {v4, v12, v11}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
-
-    .line 398
-    invoke-virtual {v4, v8}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
-
-    .line 399
-    invoke-virtual {v4, v10}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
-
-    .line 400
-    invoke-virtual {v4, v10}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
-
-    .line 401
-    iget-object v8, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
-
-    const/4 v10, 0x5
-
-    .line 402
-    invoke-static {v8, v4, v10, v13}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
-
-    move-result-object v4
-
-    .line 403
-    new-instance v8, Landroid/graphics/Rect;
-
-    .line 404
-    invoke-virtual {v5}, Landroid/graphics/Rect;->height()I
-
-    move-result v5
-
-    int-to-float v5, v5
-
-    const/high16 v10, 0x3f800000    # 1.0f
-
-    sub-float/2addr v10, v7
-
-    mul-float/2addr v10, v5
-
-    float-to-int v5, v10
-
-    .line 405
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v7
-
-    .line 406
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
-
-    move-result v10
-
-    int-to-float v10, v10
-
-    sub-float/2addr v10, v6
-
-    float-to-int v6, v10
-
-    const/4 v10, 0x0
-
-    invoke-direct {v8, v10, v5, v7, v6}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    .line 407
-    invoke-virtual {v4, v8}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
-
-    .line 408
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->getOrientation()I
-
-    move-result v3
-
-    const/4 v5, 0x1
-
-    if-ne v3, v5, :cond_1f
-
-    const/4 v15, 0x1
-
-    goto :goto_10
-
-    :cond_1f
-    const/4 v15, 0x0
-
-    .line 409
-    :goto_10
-    iget-object v3, v2, Landroid/app/ActivityManager$RunningTaskInfo;->realActivity:Landroid/content/ComponentName;
-
-    invoke-virtual {v3}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
-
-    move-result-object v3
-
-    .line 410
-    new-instance v5, Landroid/graphics/RectF;
-
-    invoke-direct {v5}, Landroid/graphics/RectF;-><init>()V
-
-    .line 411
-    iget-object v2, v2, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityInfo:Landroid/content/pm/ActivityInfo;
-
-    iget v2, v2, Landroid/content/pm/ActivityInfo;->screenOrientation:I
-
-    invoke-static {v1, v3, v2, v15, v5}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->getFreeformBoundsAndScale(Landroid/content/Context;Ljava/lang/String;IZLandroid/graphics/RectF;)F
-
-    move-result v1
-
-    .line 412
-    invoke-virtual {v5}, Landroid/graphics/RectF;->width()F
-
-    move-result v2
-
-    mul-float/2addr v2, v1
-
-    .line 413
-    invoke-virtual {v5}, Landroid/graphics/RectF;->height()F
-
-    move-result v3
-
-    mul-float/2addr v3, v1
-
-    const/high16 v1, 0x3f000000    # 0.5f
-
-    mul-float/2addr v2, v1
-
-    div-float/2addr v2, v9
-
-    .line 414
-    invoke-virtual {v4, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
-
-    mul-float/2addr v3, v1
-
-    div-float v3, v3, v19
-
-    .line 415
-    invoke-virtual {v4, v3}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
-
-    .line 416
-    iget-object v1, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
-
-    invoke-interface {v1, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    goto/16 :goto_14
-
-    :cond_20
-    :goto_11
-    move-object/from16 v16, v4
-
-    move/from16 v19, v10
-
-    const/high16 v4, 0x40800000    # 4.0f
-
-    const/4 v6, 0x2
-
-    if-ne v5, v6, :cond_22
-
-    .line 417
-    new-instance v5, Landroid/graphics/Rect;
-
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v6
-
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
-
-    move-result v7
-
-    const/4 v8, 0x0
-
-    invoke-direct {v5, v8, v8, v6, v7}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    .line 418
-    new-instance v6, Landroid/graphics/Rect;
-
-    invoke-direct {v6}, Landroid/graphics/Rect;-><init>()V
-
-    .line 419
-    new-instance v7, Landroid/graphics/Rect;
-
-    invoke-direct {v7}, Landroid/graphics/Rect;-><init>()V
-
-    .line 420
-    filled-new-array {v6, v7}, [Landroid/graphics/Rect;
-
-    move-result-object v8
-
-    invoke-virtual {v5, v8}, Landroid/graphics/Rect;->splitVertically([Landroid/graphics/Rect;)V
-
-    .line 421
-    new-instance v8, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
-
-    const/4 v10, 0x1
-
-    invoke-direct {v8, v10, v11}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
-
-    .line 422
-    invoke-virtual {v8, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
-
-    const/high16 v6, 0x3f000000    # 0.5f
-
-    .line 423
-    invoke-virtual {v8, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
-
-    .line 424
-    invoke-virtual {v8, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
-
-    .line 425
-    iget-object v10, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
-
-    invoke-interface {v10, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 426
-    new-instance v8, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
-
-    const/4 v10, 0x2
-
-    invoke-direct {v8, v10, v11}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
-
-    .line 427
-    invoke-virtual {v8, v7}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
-
-    .line 428
-    invoke-virtual {v8, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
-
-    .line 429
-    invoke-virtual {v8, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
-
-    .line 430
-    iget-object v6, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
-
-    const/4 v7, 0x1
-
-    const/4 v10, 0x0
-
-    .line 431
-    invoke-static {v6, v8, v10, v7}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+    .line 266
+    filled-new-array {v4, v5}, [Landroid/graphics/Rect;
 
     move-result-object v6
 
-    .line 432
-    new-instance v7, Landroid/graphics/Rect;
+    invoke-virtual {v2, v6}, Landroid/graphics/Rect;->splitVertically([Landroid/graphics/Rect;)V
 
-    .line 433
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+    .line 267
+    new-instance v6, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
 
-    move-result v8
+    const/4 v11, 0x1
 
-    int-to-float v8, v8
+    invoke-direct {v6, v11, v10}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
+
+    .line 268
+    invoke-virtual {v6, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+
+    const/high16 v4, 0x3f000000    # 0.5f
+
+    .line 269
+    invoke-virtual {v6, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+
+    .line 270
+    invoke-virtual {v6, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+
+    .line 271
+    iget-object v11, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+
+    invoke-interface {v11, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 272
+    new-instance v6, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+
+    const/4 v11, 0x2
+
+    invoke-direct {v6, v11, v10}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
+
+    .line 273
+    invoke-virtual {v6, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+
+    .line 274
+    invoke-virtual {v6, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+
+    .line 275
+    invoke-virtual {v6, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+
+    .line 276
+    iget-object v4, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+
+    const/4 v5, 0x1
+
+    .line 277
+    invoke-static {v4, v6, v13, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+
+    move-result-object v4
+
+    .line 278
+    new-instance v5, Landroid/graphics/Rect;
+
+    .line 279
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v6
+
+    int-to-float v6, v6
 
     const/high16 v10, 0x40000000    # 2.0f
 
-    div-float/2addr v8, v10
+    div-float/2addr v6, v10
 
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
 
     move-result v11
 
     int-to-float v11, v11
 
-    mul-float/2addr v11, v14
+    mul-float v11, v11, v19
 
-    sub-float/2addr v8, v11
+    sub-float/2addr v6, v11
 
-    float-to-int v8, v8
+    float-to-int v6, v6
 
-    .line 434
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+    .line 280
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
 
     move-result v11
 
@@ -4686,101 +3397,1362 @@
 
     div-float/2addr v11, v10
 
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
 
     move-result v10
 
     int-to-float v10, v10
 
-    mul-float/2addr v10, v14
+    mul-float v10, v10, v19
+
+    add-float/2addr v10, v11
+
+    float-to-int v10, v10
+
+    .line 281
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+
+    move-result v11
+
+    invoke-direct {v5, v6, v13, v10, v11}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    .line 282
+    invoke-virtual {v4, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+
+    .line 283
+    invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
+
+    move-result v5
+
+    int-to-float v5, v5
+
+    const/high16 v6, 0x3f000000    # 0.5f
+
+    mul-float/2addr v5, v6
+
+    div-float/2addr v5, v8
+
+    invoke-virtual {v4, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+
+    .line 284
+    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    mul-float/2addr v2, v6
+
+    div-float/2addr v2, v9
+
+    invoke-virtual {v4, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+
+    .line 285
+    iget-object v2, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+
+    const/4 v5, 0x5
+
+    .line 286
+    invoke-static {v2, v4, v5, v12}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+
+    move-result-object v10
+
+    .line 287
+    new-instance v2, Landroid/graphics/Rect;
+
+    .line 288
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    const v5, 0x3e75c28f    # 0.24f
+
+    mul-float/2addr v4, v5
+
+    float-to-int v4, v4
+
+    .line 289
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+
+    move-result v5
+
+    int-to-float v5, v5
+
+    const v6, 0x3df5c28f    # 0.12f
+
+    mul-float/2addr v5, v6
+
+    float-to-int v5, v5
+
+    .line 290
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v6
+
+    int-to-float v6, v6
+
+    const v11, 0x3f428f5c    # 0.76f
+
+    mul-float/2addr v6, v11
+
+    float-to-int v6, v6
+
+    .line 291
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+
+    move-result v11
+
+    invoke-direct {v2, v4, v5, v6, v11}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    .line 292
+    invoke-virtual {v10, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+
+    .line 293
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->getOrientation()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    if-ne v1, v2, :cond_15
+
+    const/4 v1, 0x1
+
+    move v5, v1
+
+    goto :goto_b
+
+    :cond_15
+    move v5, v13
+
+    .line 294
+    :goto_b
+    iget-object v1, v3, Landroid/app/ActivityManager$RunningTaskInfo;->realActivity:Landroid/content/ComponentName;
+
+    invoke-virtual {v1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 295
+    new-instance v11, Landroid/graphics/RectF;
+
+    invoke-direct {v11}, Landroid/graphics/RectF;-><init>()V
+
+    .line 296
+    iget v4, v3, Landroid/app/ActivityManager$RunningTaskInfo;->mTopActivityOrientation:I
+
+    move-object/from16 v1, p1
+
+    move-object/from16 v3, p3
+
+    move-object v6, v11
+
+    invoke-static/range {v1 .. v6}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->getFreeformBoundsAndScale(Landroid/content/Context;Ljava/lang/String;Landroid/app/TaskInfo;IZLandroid/graphics/RectF;)F
+
+    move-result v1
+
+    .line 297
+    invoke-virtual {v11}, Landroid/graphics/RectF;->width()F
+
+    move-result v2
+
+    mul-float/2addr v2, v1
+
+    .line 298
+    invoke-virtual {v11}, Landroid/graphics/RectF;->height()F
+
+    move-result v3
+
+    mul-float/2addr v3, v1
+
+    const/high16 v1, 0x3f000000    # 0.5f
+
+    mul-float/2addr v2, v1
+
+    div-float/2addr v2, v8
+
+    .line 299
+    invoke-virtual {v10, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+
+    mul-float/2addr v3, v1
+
+    div-float/2addr v3, v9
+
+    .line 300
+    invoke-virtual {v10, v3}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+
+    .line 301
+    iget-object v1, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+
+    invoke-interface {v1, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    goto/16 :goto_e
+
+    .line 302
+    :cond_16
+    new-instance v2, Landroid/graphics/Rect;
+
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v4
+
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+
+    move-result v5
+
+    invoke-direct {v2, v13, v13, v4, v5}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    .line 303
+    new-instance v4, Landroid/graphics/Rect;
+
+    invoke-direct {v4}, Landroid/graphics/Rect;-><init>()V
+
+    .line 304
+    new-instance v5, Landroid/graphics/Rect;
+
+    invoke-direct {v5}, Landroid/graphics/Rect;-><init>()V
+
+    .line 305
+    filled-new-array {v4, v5}, [Landroid/graphics/Rect;
+
+    move-result-object v6
+
+    invoke-virtual {v2, v6}, Landroid/graphics/Rect;->splitVertically([Landroid/graphics/Rect;)V
+
+    .line 306
+    new-instance v6, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+
+    const/4 v11, 0x1
+
+    invoke-direct {v6, v11, v10}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
+
+    .line 307
+    invoke-virtual {v6, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+
+    const/high16 v4, 0x3f000000    # 0.5f
+
+    .line 308
+    invoke-virtual {v6, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+
+    .line 309
+    invoke-virtual {v6, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+
+    .line 310
+    iget-object v11, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+
+    invoke-interface {v11, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 311
+    new-instance v6, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+
+    const/4 v11, 0x2
+
+    invoke-direct {v6, v11, v10}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
+
+    .line 312
+    invoke-virtual {v6, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+
+    .line 313
+    invoke-virtual {v6, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+
+    .line 314
+    invoke-virtual {v6, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+
+    .line 315
+    iget-object v4, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+
+    const/4 v5, 0x1
+
+    .line 316
+    invoke-static {v4, v6, v13, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+
+    move-result-object v4
+
+    .line 317
+    new-instance v5, Landroid/graphics/Rect;
+
+    .line 318
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v6
+
+    int-to-float v6, v6
+
+    const/high16 v10, 0x40000000    # 2.0f
+
+    div-float/2addr v6, v10
+
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v11
+
+    int-to-float v11, v11
+
+    mul-float v11, v11, v20
+
+    sub-float/2addr v6, v11
+
+    float-to-int v6, v6
+
+    .line 319
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v11
+
+    int-to-float v11, v11
+
+    div-float/2addr v11, v10
+
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v10
+
+    int-to-float v10, v10
+
+    mul-float v10, v10, v20
+
+    add-float/2addr v10, v11
+
+    float-to-int v10, v10
+
+    .line 320
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+
+    move-result v11
+
+    invoke-direct {v5, v6, v13, v10, v11}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    .line 321
+    invoke-virtual {v4, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+
+    .line 322
+    invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
+
+    move-result v5
+
+    int-to-float v5, v5
+
+    const/high16 v6, 0x3f000000    # 0.5f
+
+    mul-float/2addr v5, v6
+
+    div-float/2addr v5, v8
+
+    invoke-virtual {v4, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+
+    .line 323
+    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    mul-float/2addr v2, v6
+
+    div-float/2addr v2, v9
+
+    invoke-virtual {v4, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+
+    .line 324
+    iget-object v2, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+
+    const/4 v5, 0x5
+
+    .line 325
+    invoke-static {v2, v4, v5, v12}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+
+    move-result-object v10
+
+    .line 326
+    new-instance v2, Landroid/graphics/Rect;
+
+    .line 327
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    const v5, 0x3e3851ec    # 0.18f
+
+    mul-float/2addr v4, v5
+
+    float-to-int v4, v4
+
+    .line 328
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+
+    move-result v5
+
+    int-to-float v5, v5
+
+    const v6, 0x3e051eb8    # 0.13f
+
+    mul-float/2addr v5, v6
+
+    float-to-int v5, v5
+
+    .line 329
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v6
+
+    int-to-float v6, v6
+
+    const v11, 0x3f51eb85    # 0.82f
+
+    mul-float/2addr v6, v11
+
+    float-to-int v6, v6
+
+    .line 330
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+
+    move-result v11
+
+    invoke-direct {v2, v4, v5, v6, v11}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    .line 331
+    invoke-virtual {v10, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+
+    .line 332
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->getOrientation()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    if-ne v1, v2, :cond_17
+
+    const/4 v1, 0x1
+
+    move v5, v1
+
+    goto :goto_c
+
+    :cond_17
+    move v5, v13
+
+    .line 333
+    :goto_c
+    iget-object v1, v3, Landroid/app/ActivityManager$RunningTaskInfo;->realActivity:Landroid/content/ComponentName;
+
+    invoke-virtual {v1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 334
+    new-instance v11, Landroid/graphics/RectF;
+
+    invoke-direct {v11}, Landroid/graphics/RectF;-><init>()V
+
+    .line 335
+    iget v4, v3, Landroid/app/ActivityManager$RunningTaskInfo;->mTopActivityOrientation:I
+
+    move-object/from16 v1, p1
+
+    move-object/from16 v3, p3
+
+    move-object v6, v11
+
+    invoke-static/range {v1 .. v6}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->getFreeformBoundsAndScale(Landroid/content/Context;Ljava/lang/String;Landroid/app/TaskInfo;IZLandroid/graphics/RectF;)F
+
+    move-result v1
+
+    .line 336
+    invoke-virtual {v11}, Landroid/graphics/RectF;->width()F
+
+    move-result v2
+
+    mul-float/2addr v2, v1
+
+    .line 337
+    invoke-virtual {v11}, Landroid/graphics/RectF;->height()F
+
+    move-result v3
+
+    mul-float/2addr v3, v1
+
+    const/high16 v1, 0x3f000000    # 0.5f
+
+    mul-float/2addr v2, v1
+
+    div-float/2addr v2, v8
+
+    .line 338
+    invoke-virtual {v10, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+
+    mul-float/2addr v3, v1
+
+    div-float/2addr v3, v9
+
+    .line 339
+    invoke-virtual {v10, v3}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+
+    .line 340
+    iget-object v1, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+
+    invoke-interface {v1, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    goto/16 :goto_e
+
+    :cond_18
+    const/4 v5, 0x2
+
+    .line 341
+    iput v5, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mOriginHotAreaType:I
+
+    if-eq v4, v14, :cond_20
+
+    if-ne v4, v5, :cond_19
+
+    goto/16 :goto_11
+
+    :cond_19
+    if-ne v2, v5, :cond_1c
+
+    .line 342
+    new-instance v2, Landroid/graphics/Rect;
+
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v4
+
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+
+    move-result v5
+
+    invoke-direct {v2, v13, v13, v4, v5}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    .line 343
+    new-instance v4, Landroid/graphics/Rect;
+
+    invoke-direct {v4}, Landroid/graphics/Rect;-><init>()V
+
+    .line 344
+    new-instance v5, Landroid/graphics/Rect;
+
+    invoke-direct {v5}, Landroid/graphics/Rect;-><init>()V
+
+    .line 345
+    filled-new-array {v4, v5}, [Landroid/graphics/Rect;
+
+    move-result-object v6
+
+    invoke-virtual {v2, v6}, Landroid/graphics/Rect;->splitVertically([Landroid/graphics/Rect;)V
+
+    .line 346
+    new-instance v2, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+
+    const/4 v6, 0x1
+
+    invoke-direct {v2, v6, v10}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
+
+    .line 347
+    invoke-virtual {v2, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+
+    .line 348
+    invoke-virtual {v4}, Landroid/graphics/Rect;->width()I
+
+    move-result v6
+
+    int-to-float v6, v6
+
+    const/high16 v14, 0x3f000000    # 0.5f
+
+    mul-float/2addr v6, v14
+
+    div-float/2addr v6, v8
+
+    invoke-virtual {v2, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+
+    .line 349
+    invoke-virtual {v4}, Landroid/graphics/Rect;->height()I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    mul-float/2addr v4, v14
+
+    div-float/2addr v4, v9
+
+    invoke-virtual {v2, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+
+    .line 350
+    iget-object v4, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+
+    invoke-interface {v4, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 351
+    new-instance v2, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v4, v10}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
+
+    .line 352
+    invoke-virtual {v2, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+
+    .line 353
+    invoke-virtual {v5}, Landroid/graphics/Rect;->width()I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    mul-float/2addr v4, v14
+
+    div-float/2addr v4, v8
+
+    invoke-virtual {v2, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+
+    .line 354
+    invoke-virtual {v5}, Landroid/graphics/Rect;->height()I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    mul-float/2addr v4, v14
+
+    div-float/2addr v4, v9
+
+    invoke-virtual {v2, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+
+    .line 355
+    iget-object v4, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+
+    const/4 v5, 0x1
+
+    .line 356
+    invoke-static {v4, v2, v13, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+
+    move-result-object v2
+
+    .line 357
+    new-instance v4, Landroid/graphics/Rect;
+
+    .line 358
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v5
+
+    int-to-float v5, v5
+
+    mul-float/2addr v5, v15
+
+    float-to-int v5, v5
+
+    .line 359
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v6
+
+    int-to-float v6, v6
+
+    const v10, 0x3f29fbe7    # 0.664f
+
+    mul-float/2addr v6, v10
+
+    float-to-int v6, v6
+
+    .line 360
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+
+    move-result v10
+
+    int-to-float v10, v10
+
+    mul-float/2addr v10, v11
+
+    float-to-int v10, v10
+
+    invoke-direct {v4, v5, v13, v6, v10}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    .line 361
+    invoke-virtual {v2, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+
+    const/high16 v4, 0x3f000000    # 0.5f
+
+    .line 362
+    invoke-virtual {v2, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+
+    .line 363
+    invoke-virtual {v2, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+
+    .line 364
+    iget-object v4, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+
+    const/4 v5, 0x5
+
+    .line 365
+    invoke-static {v4, v2, v5, v12}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+
+    move-result-object v10
+
+    .line 366
+    new-instance v2, Landroid/graphics/Rect;
+
+    .line 367
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    const v5, 0x3eb33333    # 0.35f
+
+    mul-float/2addr v4, v5
+
+    float-to-int v4, v4
+
+    .line 368
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+
+    move-result v5
+
+    int-to-float v5, v5
+
+    mul-float/2addr v5, v11
+
+    float-to-int v5, v5
+
+    .line 369
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v6
+
+    int-to-float v6, v6
+
+    const v11, 0x3f266666    # 0.65f
+
+    mul-float/2addr v6, v11
+
+    float-to-int v6, v6
+
+    .line 370
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+
+    move-result v11
+
+    invoke-direct {v2, v4, v5, v6, v11}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    .line 371
+    invoke-virtual {v10, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+
+    .line 372
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->getOrientation()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    if-ne v1, v2, :cond_1a
+
+    const/4 v1, 0x1
+
+    move v5, v1
+
+    goto :goto_d
+
+    :cond_1a
+    move v5, v13
+
+    .line 373
+    :goto_d
+    iget-object v1, v3, Landroid/app/ActivityManager$RunningTaskInfo;->realActivity:Landroid/content/ComponentName;
+
+    invoke-virtual {v1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 374
+    new-instance v11, Landroid/graphics/RectF;
+
+    invoke-direct {v11}, Landroid/graphics/RectF;-><init>()V
+
+    .line 375
+    iget v4, v3, Landroid/app/ActivityManager$RunningTaskInfo;->mTopActivityOrientation:I
+
+    move-object/from16 v1, p1
+
+    move-object/from16 v3, p3
+
+    move-object v6, v11
+
+    invoke-static/range {v1 .. v6}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->getFreeformBoundsAndScale(Landroid/content/Context;Ljava/lang/String;Landroid/app/TaskInfo;IZLandroid/graphics/RectF;)F
+
+    move-result v1
+
+    .line 376
+    invoke-virtual {v11}, Landroid/graphics/RectF;->width()F
+
+    move-result v2
+
+    mul-float/2addr v2, v1
+
+    .line 377
+    invoke-virtual {v11}, Landroid/graphics/RectF;->height()F
+
+    move-result v3
+
+    mul-float/2addr v3, v1
+
+    const/high16 v1, 0x3f000000    # 0.5f
+
+    mul-float/2addr v2, v1
+
+    div-float/2addr v2, v8
+
+    .line 378
+    invoke-virtual {v10, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+
+    mul-float/2addr v3, v1
+
+    div-float/2addr v3, v9
+
+    .line 379
+    invoke-virtual {v10, v3}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+
+    .line 380
+    iget-object v1, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+
+    invoke-interface {v1, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :cond_1b
+    :goto_e
+    move-object/from16 v18, v7
+
+    goto/16 :goto_14
+
+    .line 381
+    :cond_1c
+    new-instance v2, Landroid/graphics/Rect;
+
+    invoke-direct {v2}, Landroid/graphics/Rect;-><init>()V
+
+    .line 382
+    new-instance v4, Landroid/graphics/Rect;
+
+    invoke-direct {v4}, Landroid/graphics/Rect;-><init>()V
+
+    .line 383
+    iget-object v5, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mSplitScreenController:Lcom/android/wm/shell/sosc/SoScSplitScreenController;
+
+    invoke-virtual {v5, v2, v4}, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->getStageBounds(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
+
+    .line 384
+    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
+
+    move-result v5
+
+    int-to-float v5, v5
+
+    const/high16 v6, 0x3f800000    # 1.0f
+
+    mul-float/2addr v5, v6
+
+    invoke-virtual {v4}, Landroid/graphics/Rect;->height()I
+
+    move-result v6
+
+    int-to-float v6, v6
+
+    div-float/2addr v5, v6
+
+    const v6, 0x3ecccccd    # 0.4f
+
+    cmpg-float v6, v5, v6
+
+    if-gez v6, :cond_1d
+
+    const v5, 0x3f19999a    # 0.6f
+
+    goto :goto_f
+
+    :cond_1d
+    const v6, 0x3f19999a    # 0.6f
+
+    cmpg-float v5, v5, v6
+
+    if-gez v5, :cond_1e
+
+    const v5, 0x3f28f5c3    # 0.66f
+
+    goto :goto_f
+
+    :cond_1e
+    const v5, 0x3f3851ec    # 0.72f
+
+    .line 385
+    :goto_f
+    invoke-virtual {v4}, Landroid/graphics/Rect;->height()I
+
+    move-result v4
+
+    add-int/lit8 v4, v4, 0x18
+
+    iget-object v6, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mSplitScreenController:Lcom/android/wm/shell/sosc/SoScSplitScreenController;
+
+    invoke-virtual {v6}, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->getDividerWidth()I
+
+    move-result v6
+
+    add-int/2addr v6, v4
+
+    int-to-float v4, v6
+
+    .line 386
+    new-instance v6, Landroid/graphics/Rect;
+
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+
+    move-result v11
+
+    int-to-float v11, v11
+
+    sub-float/2addr v11, v4
+
+    .line 387
+    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
+
+    move-result v14
+
+    int-to-float v14, v14
+
+    const/high16 v15, 0x40000000    # 2.0f
+
+    invoke-static {v14, v5, v15, v11}, Landroidx/constraintlayout/core/motion/utils/StopLogicEngine$$ExternalSyntheticOutline0;->m(FFFF)F
+
+    move-result v11
+
+    float-to-int v11, v11
+
+    .line 388
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v14
+
+    .line 389
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+
+    move-result v15
+
+    invoke-direct {v6, v13, v11, v14, v15}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    .line 390
+    new-instance v11, Landroid/graphics/Rect;
+
+    iget v14, v2, Landroid/graphics/Rect;->top:I
+
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v15
+
+    .line 391
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+
+    move-result v16
+
+    invoke-virtual {v6}, Landroid/graphics/Rect;->height()I
+
+    move-result v17
+
+    move-object/from16 v18, v7
+
+    sub-int v7, v16, v17
+
+    invoke-direct {v11, v13, v14, v15, v7}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    .line 392
+    new-instance v7, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+
+    const/4 v14, 0x1
+
+    invoke-direct {v7, v14, v10}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
+
+    .line 393
+    invoke-virtual {v7, v11}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+
+    const/high16 v11, 0x3f000000    # 0.5f
+
+    .line 394
+    invoke-virtual {v7, v11}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+
+    .line 395
+    invoke-virtual {v7, v11}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+
+    .line 396
+    iget-object v14, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+
+    invoke-interface {v14, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 397
+    new-instance v7, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+
+    const/4 v14, 0x2
+
+    invoke-direct {v7, v14, v10}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
+
+    .line 398
+    invoke-virtual {v7, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+
+    .line 399
+    invoke-virtual {v7, v11}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+
+    .line 400
+    invoke-virtual {v7, v11}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+
+    .line 401
+    iget-object v6, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+
+    const/4 v10, 0x5
+
+    .line 402
+    invoke-static {v6, v7, v10, v12}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+
+    move-result-object v7
+
+    .line 403
+    new-instance v6, Landroid/graphics/Rect;
+
+    .line 404
+    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    const/high16 v10, 0x3f800000    # 1.0f
+
+    sub-float/2addr v10, v5
+
+    mul-float/2addr v10, v2
+
+    float-to-int v2, v10
+
+    .line 405
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v5
+
+    .line 406
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+
+    move-result v10
+
+    int-to-float v10, v10
+
+    sub-float/2addr v10, v4
+
+    float-to-int v4, v10
+
+    invoke-direct {v6, v13, v2, v5, v4}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    .line 407
+    invoke-virtual {v7, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+
+    .line 408
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->getOrientation()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    if-ne v1, v2, :cond_1f
+
+    const/4 v1, 0x1
+
+    move v5, v1
+
+    goto :goto_10
+
+    :cond_1f
+    move v5, v13
+
+    .line 409
+    :goto_10
+    iget-object v1, v3, Landroid/app/ActivityManager$RunningTaskInfo;->realActivity:Landroid/content/ComponentName;
+
+    invoke-virtual {v1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 410
+    new-instance v10, Landroid/graphics/RectF;
+
+    invoke-direct {v10}, Landroid/graphics/RectF;-><init>()V
+
+    .line 411
+    iget v4, v3, Landroid/app/ActivityManager$RunningTaskInfo;->mTopActivityOrientation:I
+
+    move-object/from16 v1, p1
+
+    move-object/from16 v3, p3
+
+    move-object v6, v10
+
+    invoke-static/range {v1 .. v6}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->getFreeformBoundsAndScale(Landroid/content/Context;Ljava/lang/String;Landroid/app/TaskInfo;IZLandroid/graphics/RectF;)F
+
+    move-result v1
+
+    .line 412
+    invoke-virtual {v10}, Landroid/graphics/RectF;->width()F
+
+    move-result v2
+
+    mul-float/2addr v2, v1
+
+    .line 413
+    invoke-virtual {v10}, Landroid/graphics/RectF;->height()F
+
+    move-result v3
+
+    mul-float/2addr v3, v1
+
+    const/high16 v1, 0x3f000000    # 0.5f
+
+    mul-float/2addr v2, v1
+
+    div-float/2addr v2, v8
+
+    .line 414
+    invoke-virtual {v7, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+
+    mul-float/2addr v3, v1
+
+    div-float/2addr v3, v9
+
+    .line 415
+    invoke-virtual {v7, v3}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+
+    .line 416
+    iget-object v1, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+
+    invoke-interface {v1, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    goto/16 :goto_14
+
+    :cond_20
+    :goto_11
+    move-object/from16 v18, v7
+
+    const/high16 v4, 0x40800000    # 4.0f
+
+    const/4 v5, 0x2
+
+    if-ne v2, v5, :cond_22
+
+    .line 417
+    new-instance v2, Landroid/graphics/Rect;
+
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v5
+
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+
+    move-result v6
+
+    invoke-direct {v2, v13, v13, v5, v6}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    .line 418
+    new-instance v5, Landroid/graphics/Rect;
+
+    invoke-direct {v5}, Landroid/graphics/Rect;-><init>()V
+
+    .line 419
+    new-instance v6, Landroid/graphics/Rect;
+
+    invoke-direct {v6}, Landroid/graphics/Rect;-><init>()V
+
+    .line 420
+    filled-new-array {v5, v6}, [Landroid/graphics/Rect;
+
+    move-result-object v7
+
+    invoke-virtual {v2, v7}, Landroid/graphics/Rect;->splitVertically([Landroid/graphics/Rect;)V
+
+    .line 421
+    new-instance v7, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+
+    const/4 v11, 0x1
+
+    invoke-direct {v7, v11, v10}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
+
+    .line 422
+    invoke-virtual {v7, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+
+    const/high16 v5, 0x3f000000    # 0.5f
+
+    .line 423
+    invoke-virtual {v7, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+
+    .line 424
+    invoke-virtual {v7, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+
+    .line 425
+    iget-object v11, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+
+    invoke-interface {v11, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 426
+    new-instance v7, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+
+    const/4 v11, 0x2
+
+    invoke-direct {v7, v11, v10}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
+
+    .line 427
+    invoke-virtual {v7, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+
+    .line 428
+    invoke-virtual {v7, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+
+    .line 429
+    invoke-virtual {v7, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+
+    .line 430
+    iget-object v5, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+
+    const/4 v6, 0x1
+
+    .line 431
+    invoke-static {v5, v7, v13, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+
+    move-result-object v5
+
+    .line 432
+    new-instance v6, Landroid/graphics/Rect;
+
+    .line 433
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v7
+
+    int-to-float v7, v7
+
+    const/high16 v10, 0x40000000    # 2.0f
+
+    div-float/2addr v7, v10
+
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v11
+
+    int-to-float v11, v11
+
+    mul-float v11, v11, v19
+
+    sub-float/2addr v7, v11
+
+    float-to-int v7, v7
+
+    .line 434
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v11
+
+    int-to-float v11, v11
+
+    div-float/2addr v11, v10
+
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v10
+
+    int-to-float v10, v10
+
+    mul-float v10, v10, v19
 
     add-float/2addr v10, v11
 
     float-to-int v10, v10
 
     .line 435
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
 
     move-result v11
 
-    const/4 v12, 0x0
-
-    invoke-direct {v7, v8, v12, v10, v11}, Landroid/graphics/Rect;-><init>(IIII)V
+    invoke-direct {v6, v7, v13, v10, v11}, Landroid/graphics/Rect;-><init>(IIII)V
 
     .line 436
-    invoke-virtual {v6, v7}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+    invoke-virtual {v5, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
 
     .line 437
-    invoke-virtual {v5}, Landroid/graphics/Rect;->width()I
+    invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
 
-    move-result v7
+    move-result v6
 
-    int-to-float v7, v7
+    int-to-float v6, v6
 
-    const/high16 v8, 0x3f000000    # 0.5f
+    const/high16 v7, 0x3f000000    # 0.5f
 
-    mul-float/2addr v7, v8
+    mul-float/2addr v6, v7
 
-    div-float/2addr v7, v9
+    div-float/2addr v6, v8
 
-    invoke-virtual {v6, v7}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+    invoke-virtual {v5, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
 
     .line 438
-    invoke-virtual {v5}, Landroid/graphics/Rect;->height()I
+    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    mul-float/2addr v2, v7
+
+    div-float/2addr v2, v9
+
+    invoke-virtual {v5, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+
+    .line 439
+    iget-object v2, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+
+    const/4 v6, 0x5
+
+    .line 440
+    invoke-static {v2, v5, v6, v12}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+
+    move-result-object v7
+
+    .line 441
+    new-instance v2, Landroid/graphics/Rect;
+
+    .line 442
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
 
     move-result v5
 
     int-to-float v5, v5
 
-    mul-float/2addr v5, v8
+    div-float/2addr v5, v4
 
-    div-float v5, v5, v19
-
-    invoke-virtual {v6, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
-
-    .line 439
-    iget-object v5, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
-
-    const/4 v7, 0x5
-
-    .line 440
-    invoke-static {v5, v6, v7, v13}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
-
-    move-result-object v5
-
-    .line 441
-    new-instance v6, Landroid/graphics/Rect;
-
-    .line 442
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v7
-
-    int-to-float v7, v7
-
-    div-float/2addr v7, v4
-
-    float-to-int v7, v7
+    float-to-int v5, v5
 
     .line 443
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
 
-    move-result v8
+    move-result v6
 
-    int-to-float v8, v8
+    int-to-float v6, v6
 
     const/high16 v10, 0x41200000    # 10.0f
 
-    div-float/2addr v8, v10
+    div-float/2addr v6, v10
 
-    float-to-int v8, v8
+    float-to-int v6, v6
 
     .line 444
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
 
     move-result v10
 
-    mul-int/lit8 v10, v10, 0x3
+    mul-int/2addr v10, v14
 
     int-to-float v10, v10
 
@@ -4789,62 +4761,68 @@
     float-to-int v4, v10
 
     .line 445
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
 
     move-result v10
 
-    invoke-direct {v6, v7, v8, v4, v10}, Landroid/graphics/Rect;-><init>(IIII)V
+    invoke-direct {v2, v5, v6, v4, v10}, Landroid/graphics/Rect;-><init>(IIII)V
 
     .line 446
-    invoke-virtual {v5, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+    invoke-virtual {v7, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
 
     .line 447
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->getOrientation()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->getOrientation()I
 
-    move-result v3
+    move-result v1
 
-    const/4 v4, 0x1
+    const/4 v2, 0x1
 
-    if-ne v3, v4, :cond_21
+    if-ne v1, v2, :cond_21
 
-    const/4 v15, 0x1
+    const/4 v1, 0x1
+
+    move v5, v1
 
     goto :goto_12
 
     :cond_21
-    const/4 v15, 0x0
+    move v5, v13
 
     .line 448
     :goto_12
-    iget-object v3, v2, Landroid/app/ActivityManager$RunningTaskInfo;->realActivity:Landroid/content/ComponentName;
+    iget-object v1, v3, Landroid/app/ActivityManager$RunningTaskInfo;->realActivity:Landroid/content/ComponentName;
 
-    invoke-virtual {v3}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+    invoke-virtual {v1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
     .line 449
-    new-instance v4, Landroid/graphics/RectF;
+    new-instance v10, Landroid/graphics/RectF;
 
-    invoke-direct {v4}, Landroid/graphics/RectF;-><init>()V
+    invoke-direct {v10}, Landroid/graphics/RectF;-><init>()V
 
     .line 450
-    iget-object v2, v2, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityInfo:Landroid/content/pm/ActivityInfo;
+    iget v4, v3, Landroid/app/ActivityManager$RunningTaskInfo;->mTopActivityOrientation:I
 
-    iget v2, v2, Landroid/content/pm/ActivityInfo;->screenOrientation:I
+    move-object/from16 v1, p1
 
-    invoke-static {v1, v3, v2, v15, v4}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->getFreeformBoundsAndScale(Landroid/content/Context;Ljava/lang/String;IZLandroid/graphics/RectF;)F
+    move-object/from16 v3, p3
+
+    move-object v6, v10
+
+    invoke-static/range {v1 .. v6}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->getFreeformBoundsAndScale(Landroid/content/Context;Ljava/lang/String;Landroid/app/TaskInfo;IZLandroid/graphics/RectF;)F
 
     move-result v1
 
     .line 451
-    invoke-virtual {v4}, Landroid/graphics/RectF;->width()F
+    invoke-virtual {v10}, Landroid/graphics/RectF;->width()F
 
     move-result v2
 
     mul-float/2addr v2, v1
 
     .line 452
-    invoke-virtual {v4}, Landroid/graphics/RectF;->height()F
+    invoke-virtual {v10}, Landroid/graphics/RectF;->height()F
 
     move-result v3
 
@@ -4854,124 +4832,120 @@
 
     mul-float/2addr v2, v1
 
-    div-float/2addr v2, v9
+    div-float/2addr v2, v8
 
     .line 453
-    invoke-virtual {v5, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+    invoke-virtual {v7, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
 
     mul-float/2addr v3, v1
 
-    div-float v3, v3, v19
+    div-float/2addr v3, v9
 
     .line 454
-    invoke-virtual {v5, v3}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+    invoke-virtual {v7, v3}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
 
     .line 455
     iget-object v1, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
 
-    invoke-interface {v1, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v1, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto/16 :goto_14
 
     .line 456
     :cond_22
-    new-instance v5, Landroid/graphics/Rect;
+    new-instance v2, Landroid/graphics/Rect;
 
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+
+    move-result v5
+
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
 
     move-result v6
 
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
-
-    move-result v7
-
-    const/4 v8, 0x0
-
-    invoke-direct {v5, v8, v8, v6, v7}, Landroid/graphics/Rect;-><init>(IIII)V
+    invoke-direct {v2, v13, v13, v5, v6}, Landroid/graphics/Rect;-><init>(IIII)V
 
     .line 457
+    new-instance v5, Landroid/graphics/Rect;
+
+    invoke-direct {v5}, Landroid/graphics/Rect;-><init>()V
+
+    .line 458
     new-instance v6, Landroid/graphics/Rect;
 
     invoke-direct {v6}, Landroid/graphics/Rect;-><init>()V
 
-    .line 458
-    new-instance v7, Landroid/graphics/Rect;
-
-    invoke-direct {v7}, Landroid/graphics/Rect;-><init>()V
-
     .line 459
-    filled-new-array {v6, v7}, [Landroid/graphics/Rect;
+    filled-new-array {v5, v6}, [Landroid/graphics/Rect;
 
-    move-result-object v8
+    move-result-object v7
 
-    invoke-virtual {v5, v8}, Landroid/graphics/Rect;->splitVertically([Landroid/graphics/Rect;)V
+    invoke-virtual {v2, v7}, Landroid/graphics/Rect;->splitVertically([Landroid/graphics/Rect;)V
 
     .line 460
-    new-instance v8, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+    new-instance v7, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
 
-    const/4 v10, 0x1
+    const/4 v11, 0x1
 
-    invoke-direct {v8, v10, v11}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
+    invoke-direct {v7, v11, v10}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
 
     .line 461
-    invoke-virtual {v8, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+    invoke-virtual {v7, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
 
-    const/high16 v6, 0x3f000000    # 0.5f
+    const/high16 v5, 0x3f000000    # 0.5f
 
     .line 462
-    invoke-virtual {v8, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+    invoke-virtual {v7, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
 
     .line 463
-    invoke-virtual {v8, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+    invoke-virtual {v7, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
 
     .line 464
-    iget-object v10, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+    iget-object v11, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
 
-    invoke-interface {v10, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v11, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 465
-    new-instance v8, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+    new-instance v7, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
 
-    const/4 v10, 0x2
+    const/4 v11, 0x2
 
-    invoke-direct {v8, v10, v11}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
+    invoke-direct {v7, v11, v10}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;-><init>(IZ)V
 
     .line 466
-    invoke-virtual {v8, v7}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+    invoke-virtual {v7, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
 
     .line 467
-    invoke-virtual {v8, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+    invoke-virtual {v7, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
 
     .line 468
-    invoke-virtual {v8, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+    invoke-virtual {v7, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
 
     .line 469
-    iget-object v6, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+    iget-object v5, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
 
-    const/4 v7, 0x1
-
-    const/4 v10, 0x0
+    const/4 v6, 0x1
 
     .line 470
-    invoke-static {v6, v8, v10, v7}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+    invoke-static {v5, v7, v13, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
 
-    move-result-object v6
+    move-result-object v5
 
     .line 471
-    new-instance v7, Landroid/graphics/Rect;
+    new-instance v6, Landroid/graphics/Rect;
 
     .line 472
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
 
-    move-result v8
+    move-result v7
 
-    int-to-float v8, v8
+    int-to-float v7, v7
 
     const/high16 v10, 0x40000000    # 2.0f
 
-    div-float/2addr v8, v10
+    div-float/2addr v7, v10
 
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
 
     move-result v11
 
@@ -4979,12 +4953,12 @@
 
     mul-float v11, v11, v20
 
-    sub-float/2addr v8, v11
+    sub-float/2addr v7, v11
 
-    float-to-int v8, v8
+    float-to-int v7, v7
 
     .line 473
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
 
     move-result v11
 
@@ -4992,7 +4966,7 @@
 
     div-float/2addr v11, v10
 
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
 
     move-result v10
 
@@ -5005,88 +4979,86 @@
     float-to-int v10, v10
 
     .line 474
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
 
     move-result v11
 
-    const/4 v12, 0x0
-
-    invoke-direct {v7, v8, v12, v10, v11}, Landroid/graphics/Rect;-><init>(IIII)V
+    invoke-direct {v6, v7, v13, v10, v11}, Landroid/graphics/Rect;-><init>(IIII)V
 
     .line 475
-    invoke-virtual {v6, v7}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+    invoke-virtual {v5, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
 
     .line 476
-    invoke-virtual {v5}, Landroid/graphics/Rect;->width()I
+    invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
 
-    move-result v7
+    move-result v6
 
-    int-to-float v7, v7
+    int-to-float v6, v6
 
-    const/high16 v8, 0x3f000000    # 0.5f
+    const/high16 v7, 0x3f000000    # 0.5f
 
-    mul-float/2addr v7, v8
+    mul-float/2addr v6, v7
 
-    div-float/2addr v7, v9
+    div-float/2addr v6, v8
 
-    invoke-virtual {v6, v7}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+    invoke-virtual {v5, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
 
     .line 477
-    invoke-virtual {v5}, Landroid/graphics/Rect;->height()I
+    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    mul-float/2addr v2, v7
+
+    div-float/2addr v2, v9
+
+    invoke-virtual {v5, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+
+    .line 478
+    iget-object v2, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
+
+    const/4 v6, 0x5
+
+    .line 479
+    invoke-static {v2, v5, v6, v12}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
+
+    move-result-object v7
+
+    .line 480
+    new-instance v2, Landroid/graphics/Rect;
+
+    .line 481
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
 
     move-result v5
 
     int-to-float v5, v5
 
-    mul-float/2addr v5, v8
+    div-float/2addr v5, v4
 
-    div-float v5, v5, v19
-
-    invoke-virtual {v6, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
-
-    .line 478
-    iget-object v5, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
-
-    const/4 v7, 0x5
-
-    .line 479
-    invoke-static {v5, v6, v7, v13}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController$$ExternalSyntheticOutline0;->m(Ljava/util/List;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;IZ)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;
-
-    move-result-object v5
-
-    .line 480
-    new-instance v6, Landroid/graphics/Rect;
-
-    .line 481
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
-
-    move-result v7
-
-    int-to-float v7, v7
-
-    div-float/2addr v7, v4
-
-    float-to-int v7, v7
+    float-to-int v5, v5
 
     .line 482
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
 
-    move-result v8
+    move-result v6
 
-    int-to-float v8, v8
+    int-to-float v6, v6
 
     const/high16 v10, 0x41200000    # 10.0f
 
-    div-float/2addr v8, v10
+    div-float/2addr v6, v10
 
-    float-to-int v8, v8
+    float-to-int v6, v6
 
     .line 483
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->width()I
 
     move-result v10
 
-    mul-int/lit8 v10, v10, 0x3
+    mul-int/2addr v10, v14
 
     int-to-float v10, v10
 
@@ -5095,62 +5067,66 @@
     float-to-int v4, v10
 
     .line 484
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->height()I
 
     move-result v10
 
-    invoke-direct {v6, v7, v8, v4, v10}, Landroid/graphics/Rect;-><init>(IIII)V
+    invoke-direct {v2, v5, v6, v4, v10}, Landroid/graphics/Rect;-><init>(IIII)V
 
     .line 485
-    invoke-virtual {v5, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
+    invoke-virtual {v7, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setHotAreaRegion(Landroid/graphics/Rect;)V
 
     .line 486
-    invoke-virtual {v3}, Lcom/android/wm/shell/common/DisplayLayout;->getOrientation()I
+    invoke-virtual {v1}, Lcom/android/wm/shell/common/DisplayLayout;->getOrientation()I
 
-    move-result v3
+    move-result v1
 
-    const/4 v4, 0x1
+    const/4 v2, 0x1
 
-    if-ne v3, v4, :cond_23
+    if-ne v1, v2, :cond_23
 
-    move v15, v4
+    move v5, v2
 
     goto :goto_13
 
     :cond_23
-    move v15, v12
+    move v5, v13
 
     .line 487
     :goto_13
-    iget-object v3, v2, Landroid/app/ActivityManager$RunningTaskInfo;->realActivity:Landroid/content/ComponentName;
+    iget-object v1, v3, Landroid/app/ActivityManager$RunningTaskInfo;->realActivity:Landroid/content/ComponentName;
 
-    invoke-virtual {v3}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+    invoke-virtual {v1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
     .line 488
-    new-instance v4, Landroid/graphics/RectF;
+    new-instance v10, Landroid/graphics/RectF;
 
-    invoke-direct {v4}, Landroid/graphics/RectF;-><init>()V
+    invoke-direct {v10}, Landroid/graphics/RectF;-><init>()V
 
     .line 489
-    iget-object v2, v2, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityInfo:Landroid/content/pm/ActivityInfo;
+    iget v4, v3, Landroid/app/ActivityManager$RunningTaskInfo;->mTopActivityOrientation:I
 
-    iget v2, v2, Landroid/content/pm/ActivityInfo;->screenOrientation:I
+    move-object/from16 v1, p1
 
-    invoke-static {v1, v3, v2, v15, v4}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->getFreeformBoundsAndScale(Landroid/content/Context;Ljava/lang/String;IZLandroid/graphics/RectF;)F
+    move-object/from16 v3, p3
+
+    move-object v6, v10
+
+    invoke-static/range {v1 .. v6}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->getFreeformBoundsAndScale(Landroid/content/Context;Ljava/lang/String;Landroid/app/TaskInfo;IZLandroid/graphics/RectF;)F
 
     move-result v1
 
     .line 490
-    invoke-virtual {v4}, Landroid/graphics/RectF;->width()F
+    invoke-virtual {v10}, Landroid/graphics/RectF;->width()F
 
     move-result v2
 
     mul-float/2addr v2, v1
 
     .line 491
-    invoke-virtual {v4}, Landroid/graphics/RectF;->height()F
+    invoke-virtual {v10}, Landroid/graphics/RectF;->height()F
 
     move-result v3
 
@@ -5160,22 +5136,22 @@
 
     mul-float/2addr v2, v1
 
-    div-float/2addr v2, v9
+    div-float/2addr v2, v8
 
     .line 492
-    invoke-virtual {v5, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
+    invoke-virtual {v7, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleX(F)V
 
     mul-float/2addr v3, v1
 
-    div-float v3, v3, v19
+    div-float/2addr v3, v9
 
     .line 493
-    invoke-virtual {v5, v3}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
+    invoke-virtual {v7, v3}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;->setScaleY(F)V
 
     .line 494
     iget-object v1, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->mHotAreaList:Ljava/util/List;
 
-    invoke-interface {v1, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v1, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 495
     :goto_14
@@ -5193,7 +5169,7 @@
 
     move-result-object v0
 
-    move-object/from16 v1, v16
+    move-object/from16 v1, v18
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 

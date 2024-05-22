@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/usb/UsbAccessoryUriActivity;
 .super Lcom/android/internal/app/AlertActivity;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Landroid/content/DialogInterface$OnClickListener;
@@ -334,7 +334,7 @@
 
     .line 148
     :cond_4
-    const v0, 0x7f130ba3    # @string/title_usb_accessory 'USB accessory'
+    const v0, 0x7f130ba9    # @string/title_usb_accessory 'USB accessory'
 
     .line 150
     invoke-virtual {p0, v0}, Lcom/android/internal/app/AlertActivity;->getString(I)Ljava/lang/String;
@@ -356,7 +356,7 @@
     move-result-object v0
 
     .line 164
-    const v1, 0x7f130bfe    # @string/usb_accessory_uri_prompt 'No installed apps work with this USB accessory. Learn more about this accessory at %1$s'
+    const v1, 0x7f130c04    # @string/usb_accessory_uri_prompt 'No installed apps work with this USB accessory. Learn more about this accessory at %1$s'
 
     .line 165
     invoke-virtual {p0, v1, v0}, Lcom/android/internal/app/AlertActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;

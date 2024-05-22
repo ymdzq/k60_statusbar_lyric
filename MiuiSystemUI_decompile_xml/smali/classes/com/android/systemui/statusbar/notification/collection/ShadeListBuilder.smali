@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/collection/ShadeListBuilder;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lcom/android/systemui/Dumpable;
@@ -5890,166 +5890,166 @@
     new-instance p0, Ljava/lang/StringBuilder;
 
     .line 14
-    const-string v4, "reentrant: "
+    const-string/jumbo v4, "reentrant: "
 
     .line 16
     invoke-direct {p0, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 18
+    .line 19
     invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 21
+    .line 22
     const-string p2, " rebuildState: "
 
-    .line 24
+    .line 25
     invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 26
+    .line 27
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 29
+    .line 30
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 32
+    .line 33
     move-result-object p0
 
-    .line 35
+    .line 36
     invoke-static {v2, v3, v1, p0}, Landroid/os/Trace;->instantForTrack(JLjava/lang/String;Ljava/lang/String;)V
 
-    .line 36
+    .line 37
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/notification/collection/NotifPipelineChoreographerImpl;->schedule()V
 
-    .line 39
+    .line 40
     return-void
 
-    .line 42
+    .line 43
     :cond_0
     iget-object p2, p0, Lcom/android/systemui/statusbar/notification/collection/ShadeListBuilder;->mPipelineState:Lcom/android/systemui/statusbar/notification/collection/listbuilder/PipelineState;
 
-    .line 43
+    .line 44
     iget p2, p2, Lcom/android/systemui/statusbar/notification/collection/listbuilder/PipelineState;->mState:I
 
-    .line 45
+    .line 46
     invoke-static {p1}, Lcom/android/systemui/statusbar/notification/collection/listbuilder/PipelineState;->getStateName(I)Ljava/lang/String;
 
-    .line 47
+    .line 48
     move-result-object p1
 
-    .line 50
+    .line 51
     invoke-static {p2}, Lcom/android/systemui/statusbar/notification/collection/listbuilder/PipelineState;->getStateName(I)Ljava/lang/String;
 
-    .line 51
+    .line 52
     move-result-object p2
 
-    .line 54
+    .line 55
     new-instance v4, Ljava/lang/IllegalStateException;
 
-    .line 55
+    .line 56
     const-string v5, "Reentrant notification pipeline rebuild of state "
 
-    .line 57
+    .line 58
     const-string v6, " while pipeline in state "
 
-    .line 59
+    .line 60
     const-string v7, "."
 
-    .line 61
+    .line 62
     invoke-static {v5, p1, v6, p2, v7}, Landroidx/constraintlayout/motion/widget/MotionLayout$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 63
+    .line 64
     move-result-object v5
 
-    .line 66
+    .line 67
     invoke-direct {v4, v5}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    .line 67
+    .line 68
     iget v5, p0, Lcom/android/systemui/statusbar/notification/collection/ShadeListBuilder;->mConsecutiveReentrantRebuilds:I
 
-    .line 70
+    .line 71
     add-int/lit8 v5, v5, 0x1
 
-    .line 72
+    .line 73
     iput v5, p0, Lcom/android/systemui/statusbar/notification/collection/ShadeListBuilder;->mConsecutiveReentrantRebuilds:I
 
-    .line 74
+    .line 75
     const/4 v6, 0x3
 
-    .line 76
+    .line 77
     const-string v7, "ShadeListBuilder"
 
-    .line 77
+    .line 78
     if-gt v5, v6, :cond_1
 
-    .line 79
+    .line 80
     new-instance v5, Ljava/lang/StringBuilder;
 
-    .line 81
+    .line 82
     const-string v6, "Allowing "
 
-    .line 83
+    .line 84
     invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 85
+    .line 86
     iget p0, p0, Lcom/android/systemui/statusbar/notification/collection/ShadeListBuilder;->mConsecutiveReentrantRebuilds:I
 
-    .line 88
+    .line 89
     invoke-virtual {v5, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 90
+    .line 91
     const-string p0, " consecutive reentrant notification pipeline rebuild(s)."
 
-    .line 93
+    .line 94
     invoke-virtual {v5, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 95
+    .line 96
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 98
+    .line 99
     move-result-object p0
-
-    .line 101
-    invoke-static {v7, p0, v4}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     .line 102
+    invoke-static {v7, p0, v4}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 103
     new-instance p0, Ljava/lang/StringBuilder;
 
-    .line 105
+    .line 106
     const-string v4, "rebuildStateName: "
 
-    .line 107
+    .line 108
     invoke-direct {p0, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 109
+    .line 110
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 112
+    .line 113
     const-string p1, " currentStateName: "
 
-    .line 115
+    .line 116
     invoke-static {p0, p1, p2}, Landroidx/constraintlayout/core/widgets/Barrier$$ExternalSyntheticOutline0;->m(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 117
+    .line 118
     move-result-object p0
 
-    .line 120
+    .line 121
     invoke-static {v2, v3, v1, p0}, Landroid/os/Trace;->instantForTrack(JLjava/lang/String;Ljava/lang/String;)V
 
-    .line 121
+    .line 122
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/notification/collection/NotifPipelineChoreographerImpl;->schedule()V
 
-    .line 124
+    .line 125
     return-void
 
-    .line 127
+    .line 128
     :cond_1
     const-string p0, "Crashing after more than 3 consecutive reentrant notification pipeline rebuilds."
 
-    .line 128
+    .line 129
     invoke-static {v7, p0, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 130
+    .line 131
     throw v4
-    .line 133
+    .line 134
 .end method
 
 .method public final setSectioners(Ljava/util/List;)V

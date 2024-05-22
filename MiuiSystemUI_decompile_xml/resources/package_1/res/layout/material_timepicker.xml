@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <merge android:id="@id/material_timepicker_container"
        android:layout_width="wrap_content"
-       android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto">
+       android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <include android:id="@id/material_clock_display"
            layout="@layout/material_clock_display" />
   <include android:id="@id/material_clock_period_toggle"
@@ -11,7 +11,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="36.0dp"
-                        systemui:r0x7f04042f="0"
-                        systemui:r0x7f040443="0"
-                        systemui:r0x7f040446="@id/material_clock_display" />
+                        app:r0x7f04042f="0"
+                        app:r0x7f040443="0"
+                        app:r0x7f040446="@id/material_clock_display" />
 </merge>

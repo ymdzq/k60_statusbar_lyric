@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/qs/tiles/MiuiAirplaneModeTile;
 .super Lcom/android/systemui/qs/tileimpl/QSTileImpl;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/connectivity/SignalCallback;
@@ -455,7 +455,7 @@
     if-ne v2, v3, :cond_2
 
     .line 26
-    const v0, 0x7f130954    # @string/quick_settings_airplane_state_change_message_on 'Airplane mode is on'
+    const v0, 0x7f130958    # @string/quick_settings_airplane_state_change_message_on 'Airplane mode is on'
 
     .line 28
     invoke-virtual {v1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -491,7 +491,7 @@
     if-ne v0, v2, :cond_4
 
     .line 47
-    const v0, 0x7f130953    # @string/quick_settings_airplane_state_change_message_off 'Airplane mode is off'
+    const v0, 0x7f130957    # @string/quick_settings_airplane_state_change_message_off 'Airplane mode is off'
 
     .line 49
     invoke-virtual {v1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -626,14 +626,14 @@
     if-eqz p2, :cond_3
 
     .line 71
-    const p2, 0x7f130b54    # @string/switch_bar_on 'On'
+    const p2, 0x7f130b5a    # @string/switch_bar_on 'On'
 
     .line 73
     goto :goto_2
 
     .line 76
     :cond_3
-    const p2, 0x7f130b53    # @string/switch_bar_off 'Off'
+    const p2, 0x7f130b59    # @string/switch_bar_off 'Off'
 
     .line 77
     :goto_2

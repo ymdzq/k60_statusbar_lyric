@@ -3,19 +3,17 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Landroidx/preference/Preference$OnPreferenceClickListener;
+.implements Landroidx/preference/Preference$OnPreferenceChangeListener;
 
 
 # instance fields
 .field public final synthetic f$0:Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController;
 
-.field public final synthetic f$1:Landroidx/preference/SwitchPreference;
-
-.field public final synthetic f$2:Ljava/lang/String;
+.field public final synthetic f$1:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController;Landroidx/preference/SwitchPreference;Ljava/lang/String;)V
+.method public synthetic constructor <init>(Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController;Ljava/lang/String;)V
     .locals 0
 
     .line 0
@@ -23,26 +21,22 @@
 
     iput-object p1, p0, Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController$$ExternalSyntheticLambda0;->f$0:Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController;
 
-    iput-object p2, p0, Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController$$ExternalSyntheticLambda0;->f$1:Landroidx/preference/SwitchPreference;
-
-    iput-object p3, p0, Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController$$ExternalSyntheticLambda0;->f$2:Ljava/lang/String;
+    iput-object p2, p0, Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController$$ExternalSyntheticLambda0;->f$1:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onPreferenceClick(Landroidx/preference/Preference;)Z
-    .locals 2
+.method public final onPreferenceChange(Landroidx/preference/Preference;Ljava/lang/Object;)Z
+    .locals 1
 
     .line 0
     iget-object v0, p0, Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController$$ExternalSyntheticLambda0;->f$0:Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController;
 
-    iget-object v1, p0, Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController$$ExternalSyntheticLambda0;->f$1:Landroidx/preference/SwitchPreference;
+    iget-object p0, p0, Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController$$ExternalSyntheticLambda0;->f$1:Ljava/lang/String;
 
-    iget-object p0, p0, Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController$$ExternalSyntheticLambda0;->f$2:Ljava/lang/String;
-
-    invoke-static {v0, v1, p0, p1}, Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController;->$r8$lambda$hsu8YEl8WWjjY-oDeitFyOcOELg(Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController;Landroidx/preference/SwitchPreference;Ljava/lang/String;Landroidx/preference/Preference;)Z
+    invoke-static {v0, p0, p1, p2}, Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController;->$r8$lambda$V34gZFpGC5jke7rIcRUvmY20VJY(Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController;Ljava/lang/String;Landroidx/preference/Preference;Ljava/lang/Object;)Z
 
     move-result p0
 

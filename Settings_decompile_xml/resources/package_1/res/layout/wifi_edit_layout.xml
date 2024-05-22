@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <miuix.springback.view.SpringBackLayout android:layout_width="fill_parent"
                       android:layout_height="fill_parent"
-                      settings:scrollableView="@id/id_0x7f0a093b" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+                      app:scrollableView="@id/id_0x7f0a093b" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <miuix.core.widget.NestedScrollView android:id="@id/id_0x7f0a093b"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent">
@@ -339,7 +339,7 @@
                               android:layout_height="wrap_content"
                               android:hint="@string/proxy_url_hint"
                               android:textAlignment="viewEnd"
-                              settings:miuixAppcompatLabel="@string/proxy_url_title"
+                              app:miuixAppcompatLabel="@string/proxy_url_title"
                               style="@style/input_capsule_horizontal" />
         <LinearLayout android:orientation="vertical"
                       android:id="@id/proxy_fields"
@@ -354,7 +354,7 @@
                                 android:hint="@string/proxy_hostname_hint"
                                 android:singleLine="true"
                                 android:textAlignment="viewEnd"
-                                settings:miuixAppcompatLabel="@string/proxy_hostname_label"
+                                app:miuixAppcompatLabel="@string/proxy_hostname_label"
                                 style="@style/input_capsule_horizontal" />
           <miuix.androidbasewidget.widget.StateEditText android:textAppearance="@style/Miuix.AppCompat.TextAppearance.PreferenceList"
                                 android:ellipsize="end"
@@ -366,7 +366,7 @@
                                 android:singleLine="true"
                                 android:inputType="number"
                                 android:textAlignment="viewEnd"
-                                settings:miuixAppcompatLabel="@string/proxy_port_label"
+                                app:miuixAppcompatLabel="@string/proxy_port_label"
                                 style="@style/input_capsule_horizontal" />
           <miuix.androidbasewidget.widget.StateEditText android:textAppearance="@style/Miuix.AppCompat.TextAppearance.PreferenceList"
                                 android:ellipsize="end"
@@ -377,7 +377,7 @@
                                 android:hint="@string/proxy_exclusionlist_hint"
                                 android:singleLine="true"
                                 android:textAlignment="viewEnd"
-                                settings:miuixAppcompatLabel="@string/proxy_exclusionlist_label"
+                                app:miuixAppcompatLabel="@string/proxy_exclusionlist_label"
                                 style="@style/input_capsule_horizontal" />
         </LinearLayout>
         <LinearLayout android:id="@id/ip_fields"
@@ -402,7 +402,7 @@
                                 android:hint="@string/wifi_ip_address_hint"
                                 android:singleLine="true"
                                 android:textAlignment="viewEnd"
-                                settings:miuixAppcompatLabel="@string/wifi_ip_address"
+                                app:miuixAppcompatLabel="@string/wifi_ip_address"
                                 style="@style/input_capsule_horizontal" />
           <miuix.androidbasewidget.widget.StateEditText android:textAppearance="@style/Miuix.AppCompat.TextAppearance.PreferenceList"
                                 android:id="@id/gateway"
@@ -412,7 +412,7 @@
                                 android:hint="@string/wifi_gateway_hint"
                                 android:singleLine="true"
                                 android:textAlignment="viewEnd"
-                                settings:miuixAppcompatLabel="@string/wifi_gateway"
+                                app:miuixAppcompatLabel="@string/wifi_gateway"
                                 style="@style/input_capsule_horizontal" />
           <miuix.androidbasewidget.widget.StateEditText android:textAppearance="@style/Miuix.AppCompat.TextAppearance.PreferenceList"
                                 android:id="@id/network_prefix_length"
@@ -423,7 +423,7 @@
                                 android:singleLine="true"
                                 android:inputType="number"
                                 android:textAlignment="viewEnd"
-                                settings:miuixAppcompatLabel="@string/wifi_network_prefix_length"
+                                app:miuixAppcompatLabel="@string/wifi_network_prefix_length"
                                 style="@style/input_capsule_horizontal" />
           <miuix.androidbasewidget.widget.StateEditText android:textAppearance="@style/Miuix.AppCompat.TextAppearance.PreferenceList"
                                 android:id="@id/dns1"
@@ -433,7 +433,7 @@
                                 android:hint="@string/wifi_dns1_hint"
                                 android:singleLine="true"
                                 android:textAlignment="viewEnd"
-                                settings:miuixAppcompatLabel="@string/wifi_dns1"
+                                app:miuixAppcompatLabel="@string/wifi_dns1"
                                 style="@style/input_capsule_horizontal" />
           <miuix.androidbasewidget.widget.StateEditText android:textAppearance="@style/Miuix.AppCompat.TextAppearance.PreferenceList"
                                 android:id="@id/dns2"
@@ -443,7 +443,7 @@
                                 android:hint="@string/wifi_dns2_hint"
                                 android:singleLine="true"
                                 android:textAlignment="viewEnd"
-                                settings:miuixAppcompatLabel="@string/wifi_dns2"
+                                app:miuixAppcompatLabel="@string/wifi_dns2"
                                 style="@style/input_capsule_horizontal" />
         </LinearLayout>
         <LinearLayout android:id="@id/privacy_settings_fields"

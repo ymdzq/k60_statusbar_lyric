@@ -16,6 +16,8 @@
 
 .field private mCutoutType:Landroidx/preference/CheckBoxPreference;
 
+.field private mDeviceControl:Landroidx/preference/CheckBoxPreference;
+
 .field private mHasMobileDataFeature:Z
 
 .field private mNotchForceBlack:Landroidx/preference/CheckBoxPreference;
@@ -44,6 +46,8 @@
 
 .field private mWordlessMode:Landroidx/preference/CheckBoxPreference;
 
+.field private mXiaomiSmartHub:Landroidx/preference/CheckBoxPreference;
+
 
 # direct methods
 .method static bridge synthetic -$$Nest$msetDripType(Lcom/android/settings/NotificationStatusBarSettings;Z)V
@@ -60,6 +64,15 @@
 
     .line 0
     invoke-direct {p0}, Lcom/android/settings/NotificationStatusBarSettings;->updateBatteryIndicator()V
+
+    return-void
+.end method
+
+.method static bridge synthetic -$$Nest$mupdateDeviceControl(Lcom/android/settings/NotificationStatusBarSettings;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Lcom/android/settings/NotificationStatusBarSettings;->updateDeviceControl()V
 
     return-void
 .end method
@@ -91,6 +104,15 @@
     return-void
 .end method
 
+.method static bridge synthetic -$$Nest$mupdateXiaomiSmartHub(Lcom/android/settings/NotificationStatusBarSettings;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Lcom/android/settings/NotificationStatusBarSettings;->updateXiaomiSmartHub()V
+
+    return-void
+.end method
+
 .method public constructor <init>()V
     .locals 0
 
@@ -105,7 +127,7 @@
 
     const/4 v0, 0x0
 
-    .line 192
+    .line 200
     :try_start_0
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
@@ -119,7 +141,7 @@
 
     move-result-object p0
 
-    .line 193
+    .line 201
     iget-boolean p0, p0, Landroid/content/pm/ApplicationInfo;->enabled:Z
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
@@ -129,7 +151,7 @@
     :catch_0
     move-exception p0
 
-    .line 196
+    .line 204
     invoke-virtual {p0}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 
     return v0
@@ -138,7 +160,7 @@
 .method private isDripType()Z
     .locals 2
 
-    .line 282
+    .line 290
     invoke-virtual {p0}, Lcom/android/settings/SettingsPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -165,7 +187,7 @@
 .method private isForceBlack()Z
     .locals 1
 
-    .line 270
+    .line 278
     invoke-virtual {p0}, Lcom/android/settings/SettingsPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -182,7 +204,7 @@
 .method private isForceBlackV2()Z
     .locals 1
 
-    .line 278
+    .line 286
     invoke-virtual {p0}, Lcom/android/settings/SettingsPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -199,7 +221,7 @@
 .method private setDripType(Z)V
     .locals 1
 
-    .line 286
+    .line 294
     invoke-virtual {p0}, Lcom/android/settings/SettingsPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -214,7 +236,7 @@
 .method private setForceBlack(Z)V
     .locals 1
 
-    .line 274
+    .line 282
     invoke-virtual {p0}, Lcom/android/settings/SettingsPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -231,17 +253,17 @@
 
     const-string v0, "com.miui.notification"
 
-    .line 185
+    .line 193
     invoke-direct {p0, v0}, Lcom/android/settings/NotificationStatusBarSettings;->isAppEnable(Ljava/lang/String;)Z
 
     move-result v0
 
-    .line 186
+    .line 194
     iget-object v1, p0, Lcom/android/settings/NotificationStatusBarSettings;->mNotifManager:Landroidx/preference/PreferenceScreen;
 
     invoke-virtual {v1, v0}, Landroidx/preference/Preference;->setEnabled(Z)V
 
-    .line 187
+    .line 195
     iget-object p0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mNotifStyle:Landroidx/preference/PreferenceScreen;
 
     invoke-virtual {p0, v0}, Landroidx/preference/Preference;->setEnabled(Z)V
@@ -254,7 +276,7 @@
 
     const-string v0, "battery_indicator"
 
-    .line 390
+    .line 398
     invoke-virtual {p0, v0}, Landroidx/preference/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
@@ -263,7 +285,7 @@
 
     iput-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mBatteryIndicator:Lmiuix/preference/DropDownPreference;
 
-    .line 394
+    .line 402
     sget-boolean v0, Lcom/android/settings/utils/StatusBarUtils;->IS_NOTCH:Z
 
     const-string v1, ""
@@ -272,7 +294,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 395
+    .line 403
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -285,7 +307,7 @@
 
     iput-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mBatteryEntries:[Ljava/lang/String;
 
-    .line 396
+    .line 404
     array-length v0, v0
 
     new-array v3, v0, [Ljava/lang/String;
@@ -295,14 +317,14 @@
     :goto_0
     if-ge v4, v0, :cond_0
 
-    .line 398
+    .line 406
     aput-object v1, v3, v4
 
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 400
+    .line 408
     :cond_0
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
@@ -314,12 +336,12 @@
 
     move-result-object v0
 
-    .line 401
+    .line 409
     iget-object v1, p0, Lcom/android/settings/NotificationStatusBarSettings;->mBatteryIndicator:Lmiuix/preference/DropDownPreference;
 
     invoke-virtual {v1, v3}, Lmiuix/preference/DropDownPreference;->setEntries([Ljava/lang/CharSequence;)V
 
-    .line 402
+    .line 410
     iget-object v1, p0, Lcom/android/settings/NotificationStatusBarSettings;->mBatteryIndicator:Lmiuix/preference/DropDownPreference;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
@@ -336,7 +358,7 @@
 
     goto :goto_2
 
-    .line 404
+    .line 412
     :cond_1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
@@ -350,7 +372,7 @@
 
     iput-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mBatteryEntries:[Ljava/lang/String;
 
-    .line 405
+    .line 413
     array-length v0, v0
 
     new-array v3, v0, [Ljava/lang/String;
@@ -360,14 +382,14 @@
     :goto_1
     if-ge v4, v0, :cond_2
 
-    .line 407
+    .line 415
     aput-object v1, v3, v4
 
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
-    .line 409
+    .line 417
     :cond_2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
@@ -379,12 +401,12 @@
 
     move-result-object v0
 
-    .line 410
+    .line 418
     iget-object v1, p0, Lcom/android/settings/NotificationStatusBarSettings;->mBatteryIndicator:Lmiuix/preference/DropDownPreference;
 
     invoke-virtual {v1, v3}, Lmiuix/preference/DropDownPreference;->setEntries([Ljava/lang/CharSequence;)V
 
-    .line 411
+    .line 419
     iget-object v1, p0, Lcom/android/settings/NotificationStatusBarSettings;->mBatteryIndicator:Lmiuix/preference/DropDownPreference;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
@@ -399,13 +421,13 @@
 
     invoke-virtual {v1, v3}, Lmiuix/preference/DropDownPreference;->setEntryValues([Ljava/lang/CharSequence;)V
 
-    .line 414
+    .line 422
     :goto_2
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->length()I
 
     move-result v1
 
-    .line 415
+    .line 423
     new-array v3, v1, [I
 
     move v4, v2
@@ -413,7 +435,7 @@
     :goto_3
     if-ge v4, v1, :cond_3
 
-    .line 417
+    .line 425
     invoke-virtual {v0, v4, v2}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v5
@@ -424,16 +446,16 @@
 
     goto :goto_3
 
-    .line 419
+    .line 427
     :cond_3
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 421
+    .line 429
     iget-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mBatteryIndicator:Lmiuix/preference/DropDownPreference;
 
     invoke-virtual {v0, v3}, Lmiuix/preference/DropDownPreference;->setEntryIcons([I)V
 
-    .line 422
+    .line 430
     iget-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mBatteryIndicator:Lmiuix/preference/DropDownPreference;
 
     new-instance v1, Lcom/android/settings/NotificationStatusBarSettings$4;
@@ -448,7 +470,7 @@
 .method private setupControlCenter()V
     .locals 2
 
-    .line 466
+    .line 474
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -468,17 +490,17 @@
     :cond_0
     const-string v0, "control_center_style"
 
-    .line 467
+    .line 475
     invoke-virtual {p0, v0}, Landroidx/preference/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
 
-    .line 468
+    .line 476
     iget-object v1, p0, Lcom/android/settings/NotificationStatusBarSettings;->mControlCenterCategory:Landroidx/preference/PreferenceCategory;
 
     invoke-virtual {v1, v0}, Landroidx/preference/PreferenceGroup;->removePreference(Landroidx/preference/Preference;)Z
 
-    .line 469
+    .line 477
     invoke-static {}, Lcom/android/settings/utils/StatusBarUtils;->noControlCenter()Z
 
     move-result v0
@@ -491,7 +513,7 @@
 
     if-nez v0, :cond_2
 
-    .line 470
+    .line 478
     :cond_1
     iget-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mNotificationStatusBar:Landroidx/preference/PreferenceScreen;
 
@@ -508,7 +530,7 @@
 
     const-string v0, "custom_carrier"
 
-    .line 348
+    .line 356
     invoke-virtual {p0, v0}, Landroidx/preference/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
@@ -517,7 +539,7 @@
 
     iput-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mCustomCarrier:Lcom/android/settingslib/miuisettings/preference/ValuePreference;
 
-    .line 349
+    .line 357
     sget-boolean v1, Lcom/android/settings/utils/StatusBarUtils;->IS_MX_TELCEL:Z
 
     const/4 v2, 0x0
@@ -530,18 +552,18 @@
 
     goto :goto_0
 
-    .line 354
+    .line 362
     :cond_0
     iget-boolean v1, p0, Lcom/android/settings/NotificationStatusBarSettings;->mHasMobileDataFeature:Z
 
     if-nez v1, :cond_1
 
-    .line 355
+    .line 363
     iget-object v1, p0, Lcom/android/settings/NotificationStatusBarSettings;->mStatusBarCategory:Landroidx/preference/PreferenceCategory;
 
     invoke-virtual {v1, v0}, Landroidx/preference/PreferenceGroup;->removePreference(Landroidx/preference/Preference;)Z
 
-    .line 356
+    .line 364
     iput-object v2, p0, Lcom/android/settings/NotificationStatusBarSettings;->mCustomCarrier:Lcom/android/settingslib/miuisettings/preference/ValuePreference;
 
     return-void
@@ -549,20 +571,53 @@
     :cond_1
     const/4 p0, 0x1
 
-    .line 359
+    .line 367
     invoke-virtual {v0, p0}, Lcom/android/settingslib/miuisettings/preference/ValuePreference;->setShowRightArrow(Z)V
 
     return-void
 
-    .line 350
+    .line 358
     :cond_2
     :goto_0
     iget-object v1, p0, Lcom/android/settings/NotificationStatusBarSettings;->mStatusBarCategory:Landroidx/preference/PreferenceCategory;
 
     invoke-virtual {v1, v0}, Landroidx/preference/PreferenceGroup;->removePreference(Landroidx/preference/Preference;)Z
 
-    .line 351
+    .line 359
     iput-object v2, p0, Lcom/android/settings/NotificationStatusBarSettings;->mCustomCarrier:Lcom/android/settingslib/miuisettings/preference/ValuePreference;
+
+    return-void
+.end method
+
+.method private setupDeviceControl()V
+    .locals 2
+
+    .line 510
+    invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
+
+    move-result-object v0
+
+    const-string v1, "device_control"
+
+    invoke-virtual {v0, v1}, Landroidx/preference/PreferenceGroup;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/preference/CheckBoxPreference;
+
+    iput-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mDeviceControl:Landroidx/preference/CheckBoxPreference;
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    .line 514
+    :cond_0
+    new-instance v1, Lcom/android/settings/NotificationStatusBarSettings$6;
+
+    invoke-direct {v1, p0}, Lcom/android/settings/NotificationStatusBarSettings$6;-><init>(Lcom/android/settings/NotificationStatusBarSettings;)V
+
+    invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setOnPreferenceChangeListener(Landroidx/preference/Preference$OnPreferenceChangeListener;)V
 
     return-void
 .end method
@@ -570,7 +625,7 @@
 .method private setupNotch()V
     .locals 3
 
-    .line 215
+    .line 223
     invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
 
     move-result-object v0
@@ -583,7 +638,7 @@
 
     iput-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mNotchStyleMode:Landroidx/preference/Preference;
 
-    .line 216
+    .line 224
     invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
 
     move-result-object v0
@@ -598,7 +653,7 @@
 
     iput-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mNotchForceBlack:Landroidx/preference/CheckBoxPreference;
 
-    .line 217
+    .line 225
     invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
 
     move-result-object v0
@@ -613,14 +668,14 @@
 
     iput-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mCutoutType:Landroidx/preference/CheckBoxPreference;
 
-    .line 218
+    .line 226
     new-instance v1, Lcom/android/settings/NotificationStatusBarSettings$1;
 
     invoke-direct {v1, p0}, Lcom/android/settings/NotificationStatusBarSettings$1;-><init>(Lcom/android/settings/NotificationStatusBarSettings;)V
 
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setOnPreferenceChangeListener(Landroidx/preference/Preference$OnPreferenceChangeListener;)V
 
-    .line 225
+    .line 233
     invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
 
     move-result-object v0
@@ -633,7 +688,7 @@
 
     iput-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mCutoutMode:Landroidx/preference/Preference;
 
-    .line 227
+    .line 235
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -650,15 +705,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 228
+    .line 236
     iget-object v2, p0, Lcom/android/settings/NotificationStatusBarSettings;->mStatusBarCategory:Landroidx/preference/PreferenceCategory;
 
     invoke-virtual {v2, v0}, Landroidx/preference/PreferenceGroup;->removePreference(Landroidx/preference/Preference;)Z
 
-    .line 229
+    .line 237
     iput-object v1, p0, Lcom/android/settings/NotificationStatusBarSettings;->mNotchStyleMode:Landroidx/preference/Preference;
 
-    .line 231
+    .line 239
     :cond_0
     invoke-static {}, Lcom/android/settings/utils/Utils;->supportNotchForceBlack()Z
 
@@ -670,15 +725,15 @@
 
     if-eqz v0, :cond_1
 
-    .line 232
+    .line 240
     iget-object v2, p0, Lcom/android/settings/NotificationStatusBarSettings;->mStatusBarCategory:Landroidx/preference/PreferenceCategory;
 
     invoke-virtual {v2, v0}, Landroidx/preference/PreferenceGroup;->removePreference(Landroidx/preference/Preference;)Z
 
-    .line 233
+    .line 241
     iput-object v1, p0, Lcom/android/settings/NotificationStatusBarSettings;->mNotchForceBlack:Landroidx/preference/CheckBoxPreference;
 
-    .line 235
+    .line 243
     :cond_1
     invoke-static {}, Lcom/android/settings/utils/Utils;->supportOverlayRoundedCorner()Z
 
@@ -686,17 +741,17 @@
 
     if-nez v0, :cond_2
 
-    .line 236
+    .line 244
     iget-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mStatusBarCategory:Landroidx/preference/PreferenceCategory;
 
     iget-object v2, p0, Lcom/android/settings/NotificationStatusBarSettings;->mCutoutType:Landroidx/preference/CheckBoxPreference;
 
     invoke-virtual {v0, v2}, Landroidx/preference/PreferenceGroup;->removePreference(Landroidx/preference/Preference;)Z
 
-    .line 237
+    .line 245
     iput-object v1, p0, Lcom/android/settings/NotificationStatusBarSettings;->mCutoutType:Landroidx/preference/CheckBoxPreference;
 
-    .line 239
+    .line 247
     :cond_2
     invoke-static {}, Lcom/android/settings/utils/Utils;->supportCutoutMode()Z
 
@@ -708,12 +763,12 @@
 
     if-eqz v0, :cond_3
 
-    .line 240
+    .line 248
     iget-object v2, p0, Lcom/android/settings/NotificationStatusBarSettings;->mStatusBarCategory:Landroidx/preference/PreferenceCategory;
 
     invoke-virtual {v2, v0}, Landroidx/preference/PreferenceGroup;->removePreference(Landroidx/preference/Preference;)Z
 
-    .line 241
+    .line 249
     iput-object v1, p0, Lcom/android/settings/NotificationStatusBarSettings;->mCutoutMode:Landroidx/preference/Preference;
 
     :cond_3
@@ -723,7 +778,7 @@
 .method private setupQuickControlAllDevices()V
     .locals 2
 
-    .line 545
+    .line 610
     invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
 
     move-result-object v0
@@ -742,11 +797,11 @@
 
     return-void
 
-    .line 549
+    .line 614
     :cond_0
-    new-instance v1, Lcom/android/settings/NotificationStatusBarSettings$7;
+    new-instance v1, Lcom/android/settings/NotificationStatusBarSettings$9;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/NotificationStatusBarSettings$7;-><init>(Lcom/android/settings/NotificationStatusBarSettings;)V
+    invoke-direct {v1, p0}, Lcom/android/settings/NotificationStatusBarSettings$9;-><init>(Lcom/android/settings/NotificationStatusBarSettings;)V
 
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setOnPreferenceChangeListener(Landroidx/preference/Preference$OnPreferenceChangeListener;)V
 
@@ -758,7 +813,7 @@
 
     const-string/jumbo v0, "show_network_speed"
 
-    .line 333
+    .line 341
     invoke-virtual {p0, v0}, Landroidx/preference/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
@@ -767,7 +822,7 @@
 
     iput-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mShowNetworkSpeed:Landroidx/preference/CheckBoxPreference;
 
-    .line 334
+    .line 342
     new-instance v1, Lcom/android/settings/NotificationStatusBarSettings$3;
 
     invoke-direct {v1, p0}, Lcom/android/settings/NotificationStatusBarSettings$3;-><init>(Lcom/android/settings/NotificationStatusBarSettings;)V
@@ -782,7 +837,7 @@
 
     const-string/jumbo v0, "show_notification_icon_count"
 
-    .line 290
+    .line 298
     invoke-virtual {p0, v0}, Landroidx/preference/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
@@ -795,7 +850,7 @@
 
     return-void
 
-    .line 294
+    .line 302
     :cond_0
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -807,7 +862,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 295
+    .line 303
     iget-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mStatusBarCategory:Landroidx/preference/PreferenceCategory;
 
     iget-object v1, p0, Lcom/android/settings/NotificationStatusBarSettings;->mShowNotificationIconCount:Lmiuix/preference/DropDownPreference;
@@ -816,12 +871,12 @@
 
     const/4 v0, 0x0
 
-    .line 296
+    .line 304
     iput-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mShowNotificationIconCount:Lmiuix/preference/DropDownPreference;
 
     return-void
 
-    .line 299
+    .line 307
     :cond_1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
@@ -841,12 +896,12 @@
 
     const/4 v2, 0x1
 
-    .line 300
+    .line 308
     filled-new-array {v1, v2, v0}, [I
 
     move-result-object v0
 
-    .line 301
+    .line 309
     :goto_0
     iget-object v2, p0, Lcom/android/settings/NotificationStatusBarSettings;->mShowNotificationEntries:[Ljava/lang/String;
 
@@ -854,7 +909,7 @@
 
     if-ge v1, v3, :cond_2
 
-    .line 302
+    .line 310
     aget-object v3, v2, v1
 
     aget v4, v0, v1
@@ -877,13 +932,13 @@
 
     goto :goto_0
 
-    .line 304
+    .line 312
     :cond_2
     iget-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mShowNotificationIconCount:Lmiuix/preference/DropDownPreference;
 
     invoke-virtual {v0, v2}, Lmiuix/preference/DropDownPreference;->setEntries([Ljava/lang/CharSequence;)V
 
-    .line 305
+    .line 313
     iget-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mShowNotificationIconCount:Lmiuix/preference/DropDownPreference;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
@@ -898,7 +953,7 @@
 
     invoke-virtual {v0, v1}, Lmiuix/preference/DropDownPreference;->setEntryValues([Ljava/lang/CharSequence;)V
 
-    .line 307
+    .line 315
     iget-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mShowNotificationIconCount:Lmiuix/preference/DropDownPreference;
 
     new-instance v1, Lcom/android/settings/NotificationStatusBarSettings$2;
@@ -915,7 +970,7 @@
 
     const-string/jumbo v0, "smart_device_control"
 
-    .line 502
+    .line 572
     invoke-virtual {p0, v0}, Landroidx/preference/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
@@ -928,55 +983,8 @@
 
     return-void
 
-    .line 506
+    .line 576
     :cond_0
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/android/settings/utils/Utils;->checkDeviceCenterAvailable(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 507
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    sget v1, Lcom/android/settings/R$array;->smart_home_entries:I
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mSmartDeviceControlEntries:[Ljava/lang/String;
-
-    .line 508
-    iget-object v1, p0, Lcom/android/settings/NotificationStatusBarSettings;->mSmartDeviceControl:Lmiuix/preference/DropDownPreference;
-
-    invoke-virtual {v1, v0}, Lmiuix/preference/DropDownPreference;->setEntries([Ljava/lang/CharSequence;)V
-
-    .line 509
-    iget-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mSmartDeviceControl:Lmiuix/preference/DropDownPreference;
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    sget v2, Lcom/android/settings/R$array;->smart_home_values:I
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lmiuix/preference/DropDownPreference;->setEntryValues([Ljava/lang/CharSequence;)V
-
-    goto :goto_0
-
-    .line 511
-    :cond_1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -989,12 +997,12 @@
 
     iput-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mSmartDeviceControlEntries:[Ljava/lang/String;
 
-    .line 512
+    .line 577
     iget-object v1, p0, Lcom/android/settings/NotificationStatusBarSettings;->mSmartDeviceControl:Lmiuix/preference/DropDownPreference;
 
     invoke-virtual {v1, v0}, Lmiuix/preference/DropDownPreference;->setEntries([Ljava/lang/CharSequence;)V
 
-    .line 513
+    .line 578
     iget-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mSmartDeviceControl:Lmiuix/preference/DropDownPreference;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
@@ -1009,13 +1017,12 @@
 
     invoke-virtual {v0, v1}, Lmiuix/preference/DropDownPreference;->setEntryValues([Ljava/lang/CharSequence;)V
 
-    .line 515
-    :goto_0
+    .line 579
     iget-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mSmartDeviceControl:Lmiuix/preference/DropDownPreference;
 
-    new-instance v1, Lcom/android/settings/NotificationStatusBarSettings$6;
+    new-instance v1, Lcom/android/settings/NotificationStatusBarSettings$8;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/NotificationStatusBarSettings$6;-><init>(Lcom/android/settings/NotificationStatusBarSettings;)V
+    invoke-direct {v1, p0}, Lcom/android/settings/NotificationStatusBarSettings$8;-><init>(Lcom/android/settings/NotificationStatusBarSettings;)V
 
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setOnPreferenceChangeListener(Landroidx/preference/Preference$OnPreferenceChangeListener;)V
 
@@ -1025,7 +1032,7 @@
 .method private setupWordlessMode()V
     .locals 2
 
-    .line 476
+    .line 484
     invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
 
     move-result-object v0
@@ -1044,7 +1051,7 @@
 
     return-void
 
-    .line 480
+    .line 488
     :cond_0
     new-instance v1, Lcom/android/settings/NotificationStatusBarSettings$5;
 
@@ -1055,10 +1062,43 @@
     return-void
 .end method
 
+.method private setupXiaomiSmartHub()V
+    .locals 2
+
+    .line 541
+    invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "xiaomi_smart_hub"
+
+    invoke-virtual {v0, v1}, Landroidx/preference/PreferenceGroup;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/preference/CheckBoxPreference;
+
+    iput-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mXiaomiSmartHub:Landroidx/preference/CheckBoxPreference;
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    .line 545
+    :cond_0
+    new-instance v1, Lcom/android/settings/NotificationStatusBarSettings$7;
+
+    invoke-direct {v1, p0}, Lcom/android/settings/NotificationStatusBarSettings$7;-><init>(Lcom/android/settings/NotificationStatusBarSettings;)V
+
+    invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setOnPreferenceChangeListener(Landroidx/preference/Preference$OnPreferenceChangeListener;)V
+
+    return-void
+.end method
+
 .method private updateBatteryIndicator()V
     .locals 3
 
-    .line 433
+    .line 441
     invoke-virtual {p0}, Lcom/android/settings/SettingsPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -1073,7 +1113,7 @@
 
     if-ltz v0, :cond_1
 
-    .line 435
+    .line 443
     iget-object v1, p0, Lcom/android/settings/NotificationStatusBarSettings;->mBatteryIndicator:Lmiuix/preference/DropDownPreference;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -1086,7 +1126,7 @@
 
     if-ltz v0, :cond_1
 
-    .line 436
+    .line 444
     iget-object v1, p0, Lcom/android/settings/NotificationStatusBarSettings;->mBatteryEntries:[Ljava/lang/String;
 
     array-length v1, v1
@@ -1095,13 +1135,13 @@
 
     goto :goto_0
 
-    .line 439
+    .line 447
     :cond_0
     iget-object v1, p0, Lcom/android/settings/NotificationStatusBarSettings;->mBatteryIndicator:Lmiuix/preference/DropDownPreference;
 
     invoke-virtual {v1, v0}, Lmiuix/preference/DropDownPreference;->setValueIndex(I)V
 
-    .line 440
+    .line 448
     iget-object v1, p0, Lcom/android/settings/NotificationStatusBarSettings;->mBatteryIndicator:Lmiuix/preference/DropDownPreference;
 
     iget-object p0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mBatteryEntries:[Ljava/lang/String;
@@ -1120,12 +1160,12 @@
 .method private updateCustomCarrier()V
     .locals 6
 
-    .line 363
+    .line 371
     iget-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mCustomCarrier:Lcom/android/settingslib/miuisettings/preference/ValuePreference;
 
     if-eqz v0, :cond_5
 
-    .line 364
+    .line 372
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1136,12 +1176,12 @@
 
     move-result-object v0
 
-    .line 365
+    .line 373
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 366
+    .line 374
     sget-boolean v2, Lcom/android/settings/utils/StatusBarUtils;->IS_CUST_SINGLE_SIM:Z
 
     if-eqz v2, :cond_0
@@ -1165,7 +1205,7 @@
     :goto_1
     if-ge v3, v2, :cond_4
 
-    .line 368
+    .line 376
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1180,7 +1220,7 @@
 
     move-result-object v4
 
-    .line 371
+    .line 379
     invoke-static {}, Lmiui/telephony/TelephonyManager;->getDefault()Lmiui/telephony/TelephonyManager;
 
     move-result-object v5
@@ -1191,7 +1231,7 @@
 
     if-eqz v5, :cond_1
 
-    .line 372
+    .line 380
     invoke-virtual {p0}, Lcom/android/settings/SettingsPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
@@ -1200,7 +1240,7 @@
 
     move-result-object v4
 
-    .line 373
+    .line 381
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v5
@@ -1210,7 +1250,7 @@
     :cond_1
     move-object v4, v0
 
-    .line 380
+    .line 388
     :cond_2
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1220,7 +1260,7 @@
 
     const-string v4, " | "
 
-    .line 382
+    .line 390
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_3
@@ -1228,7 +1268,7 @@
 
     goto :goto_1
 
-    .line 385
+    .line 393
     :cond_4
     iget-object p0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mCustomCarrier:Lcom/android/settingslib/miuisettings/preference/ValuePreference;
 
@@ -1242,17 +1282,106 @@
     return-void
 .end method
 
+.method private updateDeviceControl()V
+    .locals 4
+
+    .line 526
+    iget-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mDeviceControl:Landroidx/preference/CheckBoxPreference;
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    .line 529
+    :cond_0
+    sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_4
+
+    invoke-static {}, Lcom/android/settings/utils/StatusBarUtils;->isUserOwner()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    invoke-static {}, Lcom/android/settings/utils/StatusBarUtils;->noControlCenter()Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    .line 530
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/android/settings/utils/StatusBarUtils;->useControlCenter(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    .line 535
+    :cond_1
+    iget-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mDeviceControl:Landroidx/preference/CheckBoxPreference;
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v2}, Landroidx/preference/Preference;->setVisible(Z)V
+
+    .line 536
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/android/settings/utils/StatusBarUtils;->getSmartDeviceControl(Landroid/content/Context;)I
+
+    move-result v0
+
+    .line 537
+    iget-object p0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mDeviceControl:Landroidx/preference/CheckBoxPreference;
+
+    const/4 v3, 0x2
+
+    if-eq v0, v3, :cond_2
+
+    const/4 v3, 0x4
+
+    if-ne v0, v3, :cond_3
+
+    :cond_2
+    move v1, v2
+
+    :cond_3
+    invoke-virtual {p0, v1}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+
+    return-void
+
+    .line 532
+    :cond_4
+    :goto_0
+    iget-object p0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mDeviceControl:Landroidx/preference/CheckBoxPreference;
+
+    invoke-virtual {p0, v1}, Landroidx/preference/Preference;->setVisible(Z)V
+
+    return-void
+.end method
+
 .method private updateNotch()V
     .locals 4
 
-    .line 246
+    .line 254
     iget-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mNotchStyleMode:Landroidx/preference/Preference;
 
     const/4 v1, 0x1
 
     if-eqz v0, :cond_3
 
-    .line 247
+    .line 255
     invoke-direct {p0}, Lcom/android/settings/NotificationStatusBarSettings;->isForceBlack()Z
 
     move-result v0
@@ -1276,7 +1405,7 @@
     :goto_0
     move v0, v1
 
-    .line 248
+    .line 256
     :goto_1
     iget-object v2, p0, Lcom/android/settings/NotificationStatusBarSettings;->mCutoutMode:Landroidx/preference/Preference;
 
@@ -1284,10 +1413,10 @@
 
     xor-int/lit8 v3, v0, 0x1
 
-    .line 249
+    .line 257
     invoke-virtual {v2, v3}, Landroidx/preference/Preference;->setEnabled(Z)V
 
-    .line 251
+    .line 259
     :cond_2
     iget-object v2, p0, Lcom/android/settings/NotificationStatusBarSettings;->mCutoutType:Landroidx/preference/CheckBoxPreference;
 
@@ -1295,28 +1424,28 @@
 
     xor-int/2addr v0, v1
 
-    .line 252
+    .line 260
     invoke-virtual {v2, v0}, Landroidx/preference/Preference;->setEnabled(Z)V
 
-    .line 255
+    .line 263
     :cond_3
     iget-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mNotchForceBlack:Landroidx/preference/CheckBoxPreference;
 
     if-eqz v0, :cond_5
 
-    .line 256
+    .line 264
     invoke-direct {p0}, Lcom/android/settings/NotificationStatusBarSettings;->isForceBlack()Z
 
     move-result v2
 
     invoke-virtual {v0, v2}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
 
-    .line 257
+    .line 265
     iget-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mCutoutMode:Landroidx/preference/Preference;
 
     if-eqz v0, :cond_4
 
-    .line 258
+    .line 266
     invoke-direct {p0}, Lcom/android/settings/NotificationStatusBarSettings;->isForceBlack()Z
 
     move-result v2
@@ -1325,13 +1454,13 @@
 
     invoke-virtual {v0, v2}, Landroidx/preference/Preference;->setEnabled(Z)V
 
-    .line 260
+    .line 268
     :cond_4
     iget-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mCutoutType:Landroidx/preference/CheckBoxPreference;
 
     if-eqz v0, :cond_5
 
-    .line 261
+    .line 269
     invoke-direct {p0}, Lcom/android/settings/NotificationStatusBarSettings;->isForceBlack()Z
 
     move-result v2
@@ -1340,13 +1469,13 @@
 
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setEnabled(Z)V
 
-    .line 264
+    .line 272
     :cond_5
     iget-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mCutoutType:Landroidx/preference/CheckBoxPreference;
 
     if-eqz v0, :cond_6
 
-    .line 265
+    .line 273
     invoke-direct {p0}, Lcom/android/settings/NotificationStatusBarSettings;->isDripType()Z
 
     move-result p0
@@ -1360,14 +1489,14 @@
 .method private updateQuickControlAllDevices()V
     .locals 2
 
-    .line 559
+    .line 624
     iget-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mQuickControlAllDevices:Landroidx/preference/CheckBoxPreference;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 562
+    .line 627
     :cond_0
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
@@ -1379,14 +1508,14 @@
 
     if-eqz v0, :cond_2
 
-    .line 563
+    .line 628
     invoke-static {}, Lcom/android/settings/utils/StatusBarUtils;->noControlCenter()Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    .line 564
+    .line 629
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1397,7 +1526,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 565
+    .line 630
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1412,13 +1541,13 @@
 
     goto :goto_0
 
-    .line 569
+    .line 634
     :cond_1
     iget-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mQuickControlAllDevices:Landroidx/preference/CheckBoxPreference;
 
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setVisible(Z)V
 
-    .line 570
+    .line 635
     iget-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mQuickControlAllDevices:Landroidx/preference/CheckBoxPreference;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
@@ -1433,7 +1562,7 @@
 
     return-void
 
-    .line 566
+    .line 631
     :cond_2
     :goto_0
     iget-object p0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mQuickControlAllDevices:Landroidx/preference/CheckBoxPreference;
@@ -1448,7 +1577,7 @@
 .method private updateShowNetworkSpeed()V
     .locals 1
 
-    .line 344
+    .line 352
     iget-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mShowNetworkSpeed:Landroidx/preference/CheckBoxPreference;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -1467,14 +1596,14 @@
 .method private updateShowNotificationIconCount()V
     .locals 3
 
-    .line 319
+    .line 327
     iget-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mShowNotificationIconCount:Lmiuix/preference/DropDownPreference;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 322
+    .line 330
     :cond_0
     invoke-virtual {p0}, Lcom/android/settings/SettingsPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1490,7 +1619,7 @@
 
     if-ltz v0, :cond_2
 
-    .line 324
+    .line 332
     iget-object v1, p0, Lcom/android/settings/NotificationStatusBarSettings;->mShowNotificationIconCount:Lmiuix/preference/DropDownPreference;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -1503,7 +1632,7 @@
 
     if-ltz v0, :cond_2
 
-    .line 325
+    .line 333
     iget-object v1, p0, Lcom/android/settings/NotificationStatusBarSettings;->mShowNotificationEntries:[Ljava/lang/String;
 
     array-length v1, v1
@@ -1512,7 +1641,7 @@
 
     goto :goto_0
 
-    .line 328
+    .line 336
     :cond_1
     iget-object p0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mShowNotificationIconCount:Lmiuix/preference/DropDownPreference;
 
@@ -1528,7 +1657,7 @@
 .method private updateSmartDeviceControl()V
     .locals 3
 
-    .line 527
+    .line 591
     iget-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mSmartDeviceControl:Lmiuix/preference/DropDownPreference;
 
     if-eqz v0, :cond_5
@@ -1543,8 +1672,12 @@
 
     goto :goto_2
 
-    .line 530
+    .line 594
     :cond_0
+    sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
+
+    if-nez v0, :cond_4
+
     invoke-static {}, Lcom/android/settings/utils/StatusBarUtils;->isUserOwner()Z
 
     move-result v0
@@ -1557,7 +1690,7 @@
 
     if-nez v0, :cond_4
 
-    .line 531
+    .line 595
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1570,7 +1703,7 @@
 
     goto :goto_1
 
-    .line 535
+    .line 600
     :cond_1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
@@ -1580,7 +1713,7 @@
 
     move-result v0
 
-    .line 536
+    .line 601
     iget-object v1, p0, Lcom/android/settings/NotificationStatusBarSettings;->mSmartDeviceControl:Lmiuix/preference/DropDownPreference;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -1593,7 +1726,7 @@
 
     if-ltz v0, :cond_3
 
-    .line 537
+    .line 602
     iget-object v1, p0, Lcom/android/settings/NotificationStatusBarSettings;->mSmartDeviceControlEntries:[Ljava/lang/String;
 
     array-length v1, v1
@@ -1602,7 +1735,7 @@
 
     goto :goto_0
 
-    .line 540
+    .line 605
     :cond_2
     iget-object v1, p0, Lcom/android/settings/NotificationStatusBarSettings;->mSmartDeviceControl:Lmiuix/preference/DropDownPreference;
 
@@ -1610,7 +1743,7 @@
 
     invoke-virtual {v1, v2}, Landroidx/preference/Preference;->setVisible(Z)V
 
-    .line 541
+    .line 606
     iget-object p0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mSmartDeviceControl:Lmiuix/preference/DropDownPreference;
 
     invoke-virtual {p0, v0}, Lmiuix/preference/DropDownPreference;->setValueIndex(I)V
@@ -1619,7 +1752,7 @@
     :goto_0
     return-void
 
-    .line 532
+    .line 597
     :cond_4
     :goto_1
     iget-object p0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mSmartDeviceControl:Lmiuix/preference/DropDownPreference;
@@ -1636,14 +1769,14 @@
 .method private updateWordlessMode()V
     .locals 2
 
-    .line 490
+    .line 498
     iget-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mWordlessMode:Landroidx/preference/CheckBoxPreference;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 493
+    .line 501
     :cond_0
     invoke-static {}, Lcom/android/settings/utils/StatusBarUtils;->isUserOwner()Z
 
@@ -1669,7 +1802,7 @@
 
     goto :goto_0
 
-    .line 497
+    .line 505
     :cond_1
     iget-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mWordlessMode:Landroidx/preference/CheckBoxPreference;
 
@@ -1677,7 +1810,7 @@
 
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setVisible(Z)V
 
-    .line 498
+    .line 506
     iget-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mWordlessMode:Landroidx/preference/CheckBoxPreference;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
@@ -1692,7 +1825,7 @@
 
     return-void
 
-    .line 494
+    .line 502
     :cond_2
     :goto_0
     iget-object p0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mWordlessMode:Landroidx/preference/CheckBoxPreference;
@@ -1704,12 +1837,109 @@
     return-void
 .end method
 
+.method private updateXiaomiSmartHub()V
+    .locals 4
+
+    .line 557
+    iget-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mXiaomiSmartHub:Landroidx/preference/CheckBoxPreference;
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    .line 560
+    :cond_0
+    sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_4
+
+    invoke-static {}, Lcom/android/settings/utils/StatusBarUtils;->isUserOwner()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    invoke-static {}, Lcom/android/settings/utils/StatusBarUtils;->noControlCenter()Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    .line 561
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/android/settings/utils/StatusBarUtils;->useControlCenter(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/android/settings/utils/Utils;->checkDeviceCenterAvailable(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    .line 566
+    :cond_1
+    iget-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mXiaomiSmartHub:Landroidx/preference/CheckBoxPreference;
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v2}, Landroidx/preference/Preference;->setVisible(Z)V
+
+    .line 567
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/android/settings/utils/StatusBarUtils;->getSmartDeviceControl(Landroid/content/Context;)I
+
+    move-result v0
+
+    .line 568
+    iget-object p0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mXiaomiSmartHub:Landroidx/preference/CheckBoxPreference;
+
+    if-eq v0, v2, :cond_2
+
+    const/4 v3, 0x4
+
+    if-ne v0, v3, :cond_3
+
+    :cond_2
+    move v1, v2
+
+    :cond_3
+    invoke-virtual {p0, v1}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+
+    return-void
+
+    .line 563
+    :cond_4
+    :goto_0
+    iget-object p0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mXiaomiSmartHub:Landroidx/preference/CheckBoxPreference;
+
+    invoke-virtual {p0, v1}, Landroidx/preference/Preference;->setVisible(Z)V
+
+    return-void
+.end method
+
 
 # virtual methods
 .method public getName()Ljava/lang/String;
     .locals 0
 
-    .line 123
+    .line 127
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p0
@@ -1733,15 +1963,15 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 1
 
-    .line 133
+    .line 137
     invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
-    .line 134
+    .line 138
     sget p1, Lcom/android/settings/R$xml;->notification_status_bar_settings:I
 
     invoke-virtual {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->addPreferencesFromResource(I)V
 
-    .line 135
+    .line 139
     invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
 
     move-result-object p1
@@ -1752,7 +1982,7 @@
 
     const-string/jumbo p1, "notification_status_bar_settings"
 
-    .line 137
+    .line 141
     invoke-virtual {p0, p1}, Landroidx/preference/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object p1
@@ -1763,7 +1993,7 @@
 
     const-string/jumbo p1, "notification_managing"
 
-    .line 140
+    .line 144
     invoke-virtual {p0, p1}, Landroidx/preference/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object p1
@@ -1774,7 +2004,7 @@
 
     const-string/jumbo p1, "notification_style_settings"
 
-    .line 141
+    .line 145
     invoke-virtual {p0, p1}, Landroidx/preference/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object p1
@@ -1783,26 +2013,26 @@
 
     iput-object p1, p0, Lcom/android/settings/NotificationStatusBarSettings;->mNotifStyle:Landroidx/preference/PreferenceScreen;
 
-    .line 142
+    .line 146
     invoke-direct {p0}, Lcom/android/settings/NotificationStatusBarSettings;->setUpNotificationSettingsEnable()V
 
     const-string/jumbo p1, "phone"
 
-    .line 145
+    .line 149
     invoke-virtual {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Landroid/telephony/TelephonyManager;
 
-    .line 146
+    .line 150
     invoke-virtual {p1}, Landroid/telephony/TelephonyManager;->isDataCapable()Z
 
     move-result p1
 
     iput-boolean p1, p0, Lcom/android/settings/NotificationStatusBarSettings;->mHasMobileDataFeature:Z
 
-    .line 147
+    .line 151
     invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
 
     move-result-object p1
@@ -1817,22 +2047,22 @@
 
     iput-object p1, p0, Lcom/android/settings/NotificationStatusBarSettings;->mStatusBarCategory:Landroidx/preference/PreferenceCategory;
 
-    .line 148
+    .line 152
     invoke-direct {p0}, Lcom/android/settings/NotificationStatusBarSettings;->setupNotch()V
 
-    .line 149
+    .line 153
     invoke-direct {p0}, Lcom/android/settings/NotificationStatusBarSettings;->setupShowNotificationIconCount()V
 
-    .line 150
+    .line 154
     invoke-direct {p0}, Lcom/android/settings/NotificationStatusBarSettings;->setupShowNetworkSpeed()V
 
-    .line 151
+    .line 155
     invoke-direct {p0}, Lcom/android/settings/NotificationStatusBarSettings;->setupCustomCarrier()V
 
-    .line 152
+    .line 156
     invoke-direct {p0}, Lcom/android/settings/NotificationStatusBarSettings;->setupBatteryIndicator()V
 
-    .line 155
+    .line 159
     invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
 
     move-result-object p1
@@ -1847,16 +2077,22 @@
 
     iput-object p1, p0, Lcom/android/settings/NotificationStatusBarSettings;->mControlCenterCategory:Landroidx/preference/PreferenceCategory;
 
-    .line 156
+    .line 160
     invoke-direct {p0}, Lcom/android/settings/NotificationStatusBarSettings;->setupControlCenter()V
 
-    .line 157
+    .line 161
     invoke-direct {p0}, Lcom/android/settings/NotificationStatusBarSettings;->setupWordlessMode()V
 
-    .line 158
+    .line 162
+    invoke-direct {p0}, Lcom/android/settings/NotificationStatusBarSettings;->setupDeviceControl()V
+
+    .line 163
+    invoke-direct {p0}, Lcom/android/settings/NotificationStatusBarSettings;->setupXiaomiSmartHub()V
+
+    .line 164
     invoke-direct {p0}, Lcom/android/settings/NotificationStatusBarSettings;->setupSmartDeviceControl()V
 
-    .line 159
+    .line 165
     invoke-direct {p0}, Lcom/android/settings/NotificationStatusBarSettings;->setupQuickControlAllDevices()V
 
     return-void
@@ -1865,7 +2101,7 @@
 .method public onPause()V
     .locals 0
 
-    .line 177
+    .line 185
     invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
 
     return-void
@@ -1874,12 +2110,12 @@
 .method public onPreferenceTreeClick(Landroidx/preference/PreferenceScreen;Landroidx/preference/Preference;)Z
     .locals 7
 
-    .line 446
+    .line 454
     iget-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mCustomCarrier:Lcom/android/settingslib/miuisettings/preference/ValuePreference;
 
     if-ne p2, v0, :cond_0
 
-    .line 447
+    .line 455
     sget v6, Lcom/android/settings/R$string;->custom_carrier_title:I
 
     const-string v3, "com.android.settings.CarrierNameSettings"
@@ -1892,30 +2128,30 @@
 
     move-object v2, p0
 
-    .line 448
+    .line 456
     invoke-virtual/range {v1 .. v6}, Lcom/android/settings/SettingsPreferenceFragment;->startFragment(Landroidx/fragment/app/Fragment;Ljava/lang/String;ILandroid/os/Bundle;I)Z
 
     goto :goto_0
 
-    .line 449
+    .line 457
     :cond_0
     iget-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mNotchForceBlack:Landroidx/preference/CheckBoxPreference;
 
     if-ne p2, v0, :cond_2
 
-    .line 450
+    .line 458
     invoke-virtual {v0}, Landroidx/preference/TwoStatePreference;->isChecked()Z
 
     move-result v0
 
     invoke-direct {p0, v0}, Lcom/android/settings/NotificationStatusBarSettings;->setForceBlack(Z)V
 
-    .line 451
+    .line 459
     iget-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mCutoutMode:Landroidx/preference/Preference;
 
     if-eqz v0, :cond_1
 
-    .line 452
+    .line 460
     invoke-direct {p0}, Lcom/android/settings/NotificationStatusBarSettings;->isForceBlack()Z
 
     move-result v1
@@ -1924,13 +2160,13 @@
 
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setEnabled(Z)V
 
-    .line 454
+    .line 462
     :cond_1
     iget-object v0, p0, Lcom/android/settings/NotificationStatusBarSettings;->mCutoutType:Landroidx/preference/CheckBoxPreference;
 
     if-eqz v0, :cond_2
 
-    .line 455
+    .line 463
     invoke-direct {p0}, Lcom/android/settings/NotificationStatusBarSettings;->isForceBlack()Z
 
     move-result v1
@@ -1939,7 +2175,7 @@
 
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setEnabled(Z)V
 
-    .line 458
+    .line 466
     :cond_2
     :goto_0
     invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroidx/preference/PreferenceScreen;Landroidx/preference/Preference;)Z
@@ -1952,31 +2188,37 @@
 .method public onResume()V
     .locals 0
 
-    .line 164
+    .line 170
     invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
 
-    .line 165
+    .line 171
     invoke-direct {p0}, Lcom/android/settings/NotificationStatusBarSettings;->updateNotch()V
 
-    .line 166
+    .line 172
     invoke-direct {p0}, Lcom/android/settings/NotificationStatusBarSettings;->updateShowNotificationIconCount()V
 
-    .line 167
+    .line 173
     invoke-direct {p0}, Lcom/android/settings/NotificationStatusBarSettings;->updateShowNetworkSpeed()V
 
-    .line 168
+    .line 174
     invoke-direct {p0}, Lcom/android/settings/NotificationStatusBarSettings;->updateCustomCarrier()V
 
-    .line 169
+    .line 175
     invoke-direct {p0}, Lcom/android/settings/NotificationStatusBarSettings;->updateBatteryIndicator()V
 
-    .line 170
+    .line 176
     invoke-direct {p0}, Lcom/android/settings/NotificationStatusBarSettings;->updateWordlessMode()V
 
-    .line 171
+    .line 177
+    invoke-direct {p0}, Lcom/android/settings/NotificationStatusBarSettings;->updateDeviceControl()V
+
+    .line 178
+    invoke-direct {p0}, Lcom/android/settings/NotificationStatusBarSettings;->updateXiaomiSmartHub()V
+
+    .line 179
     invoke-direct {p0}, Lcom/android/settings/NotificationStatusBarSettings;->updateSmartDeviceControl()V
 
-    .line 172
+    .line 180
     invoke-direct {p0}, Lcom/android/settings/NotificationStatusBarSettings;->updateQuickControlAllDevices()V
 
     return-void

@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/android/settings/wifi/MiuiWifiSettings;)V
     .locals 0
 
-    .line 2691
+    .line 2704
     iput-object p1, p0, Lcom/android/settings/wifi/MiuiWifiSettings$24;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 1
 
-    .line 2694
+    .line 2707
     invoke-static {}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -47,7 +47,7 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2696
+    .line 2709
     :try_start_0
     iget-object p1, p0, Lcom/android/settings/wifi/MiuiWifiSettings$24;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
@@ -57,7 +57,7 @@
 
     invoke-static {p1, p2}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$fputmEasyTetherCoreService(Lcom/android/settings/wifi/MiuiWifiSettings;Lcom/android/bluetooth/ble/app/IMiuiNearbyApiService;)V
 
-    .line 2697
+    .line 2710
     iget-object p1, p0, Lcom/android/settings/wifi/MiuiWifiSettings$24;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-static {p1}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$fgetmEasyTetherCoreService(Lcom/android/settings/wifi/MiuiWifiSettings;)Lcom/android/bluetooth/ble/app/IMiuiNearbyApiService;
@@ -66,7 +66,7 @@
 
     if-nez p1, :cond_0
 
-    .line 2698
+    .line 2711
     invoke-static {}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -77,7 +77,7 @@
 
     return-void
 
-    .line 2701
+    .line 2714
     :cond_0
     iget-object p1, p0, Lcom/android/settings/wifi/MiuiWifiSettings$24;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
@@ -87,7 +87,7 @@
 
     if-nez p1, :cond_1
 
-    .line 2702
+    .line 2715
     iget-object p1, p0, Lcom/android/settings/wifi/MiuiWifiSettings$24;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     new-instance p2, Lcom/android/settings/wifi/MiuiWifiSettings$EasyTetherCoreCallback;
@@ -98,7 +98,7 @@
 
     invoke-static {p1, p2}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$fputmEasyTetherCoreCallback(Lcom/android/settings/wifi/MiuiWifiSettings;Lcom/android/bluetooth/ble/app/IEasyTetherCoreCallback;)V
 
-    .line 2704
+    .line 2717
     :cond_1
     iget-object p1, p0, Lcom/android/settings/wifi/MiuiWifiSettings$24;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
@@ -114,7 +114,7 @@
 
     invoke-interface {p1, p2}, Lcom/android/bluetooth/ble/app/IMiuiNearbyApiService;->register(Lcom/android/bluetooth/ble/app/IEasyTetherCoreCallback;)V
 
-    .line 2705
+    .line 2718
     iget-object p1, p0, Lcom/android/settings/wifi/MiuiWifiSettings$24;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-static {p1}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$fgetmEasyTetherCoreService(Lcom/android/settings/wifi/MiuiWifiSettings;)Lcom/android/bluetooth/ble/app/IMiuiNearbyApiService;
@@ -127,7 +127,7 @@
 
     invoke-static {p1}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$smupdateEasyTetherHotspotEntries(Ljava/util/Map;)V
 
-    .line 2706
+    .line 2719
     iget-object p0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$24;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-static {p0}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$mrefreshVirtualApInfoForEasyEther(Lcom/android/settings/wifi/MiuiWifiSettings;)V
@@ -139,7 +139,7 @@
     :catch_0
     move-exception p0
 
-    .line 2708
+    .line 2721
     invoke-static {}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -167,7 +167,7 @@
 .method public onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 1
 
-    .line 2714
+    .line 2727
     invoke-static {}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -176,7 +176,7 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2715
+    .line 2728
     iget-object p0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$24;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     const/4 p1, 0x0

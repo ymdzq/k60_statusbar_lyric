@@ -1,16 +1,16 @@
 <?xml version='1.0' encoding='utf-8' ?>
-<com.android.wm.shell.compatui.RestartDialogLayout style="@style/LetterboxDialog" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto">
+<com.android.wm.shell.compatui.RestartDialogLayout style="@style/LetterboxDialog" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <FrameLayout android:id="@id/letterbox_restart_dialog_container"
                android:background="@drawable/letterbox_restart_dialog_background"
                android:layout_width="0.0dp"
                android:layout_height="wrap_content"
                android:alpha="0.0"
                android:layout_marginHorizontal="@dimen/letterbox_restart_dialog_margin"
-               systemui:r0x7f040429="0"
-               systemui:r0x7f04042f="0"
-               systemui:r0x7f040443="0"
-               systemui:r0x7f040447="0"
-               systemui:layout_constraintWidth_max="@dimen/letterbox_restart_dialog_width">
+               app:r0x7f040429="0"
+               app:r0x7f04042f="0"
+               app:r0x7f040443="0"
+               app:r0x7f040447="0"
+               app:layout_constraintWidth_max="@dimen/letterbox_restart_dialog_width">
     <ScrollView android:layout_width="fill_parent"
                 android:layout_height="wrap_content">
       <LinearLayout android:gravity="center_horizontal"

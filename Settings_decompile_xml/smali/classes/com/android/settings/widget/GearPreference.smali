@@ -73,26 +73,44 @@
 
     iput-object p1, p0, Lcom/android/settings/widget/GearPreference;->rightArrowView:Landroid/widget/ImageView;
 
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_1
 
-    .line 105
-    invoke-virtual {p1, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    const-string p1, "default_credman_autofill_main"
 
     .line 106
+    invoke-virtual {p0}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    return-void
+
+    .line 109
+    :cond_0
+    iget-object p1, p0, Lcom/android/settings/widget/GearPreference;->rightArrowView:Landroid/widget/ImageView;
+
+    invoke-virtual {p1, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 110
     iget-object p0, p0, Lcom/android/settings/widget/GearPreference;->rightArrowView:Landroid/widget/ImageView;
 
     sget p1, Lcom/android/settings/R$drawable;->btn_inline_detail:I
 
     invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    :cond_0
+    :cond_1
     return-void
 .end method
 
 .method public onClick(Landroid/view/View;)V
     .locals 1
 
-    .line 113
+    .line 117
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result p1
@@ -101,12 +119,12 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 114
+    .line 118
     iget-object p1, p0, Lcom/android/settings/widget/GearPreference;->mOnGearClickListener:Lcom/android/settings/widget/GearPreference$OnGearClickListener;
 
     if-eqz p1, :cond_0
 
-    .line 115
+    .line 119
     invoke-interface {p1, p0}, Lcom/android/settings/widget/GearPreference$OnGearClickListener;->onGearClick(Lcom/android/settings/widget/GearPreference;)V
 
     :cond_0
@@ -128,12 +146,12 @@
 .method public setRightArrowDescription(Ljava/lang/CharSequence;)V
     .locals 0
 
-    .line 126
+    .line 130
     iget-object p0, p0, Lcom/android/settings/widget/GearPreference;->rightArrowView:Landroid/widget/ImageView;
 
     if-eqz p0, :cond_0
 
-    .line 127
+    .line 131
     invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
 
     :cond_0

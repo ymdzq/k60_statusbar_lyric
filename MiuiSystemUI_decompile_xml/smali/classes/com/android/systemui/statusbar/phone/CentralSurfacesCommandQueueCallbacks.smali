@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/phone/CentralSurfacesCommandQueueCallbacks;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/CommandQueue$Callbacks;
@@ -2290,7 +2290,7 @@
     iget-object p1, p1, Lcom/android/systemui/navigationbar/ScreenPinningNotify;->mContext:Landroid/content/Context;
 
     .line 21
-    const v0, 0x7f130a5b    # @string/screen_pinning_toast_start 'This app is pinned'
+    const v0, 0x7f130a61    # @string/screen_pinning_toast_start 'This app is pinned'
 
     .line 23
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -2318,7 +2318,7 @@
     iget-object p1, p1, Lcom/android/systemui/navigationbar/ScreenPinningNotify;->mContext:Landroid/content/Context;
 
     .line 40
-    const v0, 0x7f130a4e    # @string/screen_pinning_exit 'App unpinned'
+    const v0, 0x7f130a54    # @string/screen_pinning_exit 'App unpinned'
 
     .line 42
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -2484,7 +2484,7 @@
     if-eqz v0, :cond_4
 
     .line 71
-    const v0, 0x7f130a57    # @string/screen_pinning_toast_gesture_mode 'Slide up from the bottom of the screen and pause to unpin this app'
+    const v0, 0x7f130a5d    # @string/screen_pinning_toast_gesture_mode 'Slide up from the bottom of the screen and pause to unpin this app'
 
     .line 73
     goto :goto_1
@@ -2494,14 +2494,14 @@
     if-eqz v3, :cond_5
 
     .line 77
-    const v0, 0x7f130a59    # @string/screen_pinning_toast_navigation_mode 'Press and hold the back and preview buttons to unpin this app'
+    const v0, 0x7f130a5f    # @string/screen_pinning_toast_navigation_mode 'Press and hold the back and preview buttons to unpin this app'
 
     .line 79
     goto :goto_1
 
     .line 82
     :cond_5
-    const v0, 0x7f130a5a    # @string/screen_pinning_toast_recents_invisible 'To unpin this app, touch & hold Back and Home buttons'
+    const v0, 0x7f130a60    # @string/screen_pinning_toast_recents_invisible 'To unpin this app, touch & hold Back and Home buttons'
 
     .line 83
     :goto_1

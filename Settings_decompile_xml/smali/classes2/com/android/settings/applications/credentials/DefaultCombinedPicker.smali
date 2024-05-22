@@ -352,14 +352,14 @@
         }
     .end annotation
 
-    .line 350
+    .line 355
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 351
+    .line 356
     invoke-interface {p2}, Ljava/util/List;->size()I
 
     move-result v0
@@ -368,7 +368,7 @@
 
     const-string p1, "credential-provider"
 
-    .line 359
+    .line 364
     :cond_0
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
@@ -384,10 +384,10 @@
 
     move-result v2
 
-    .line 358
+    .line 363
     invoke-static {v0, v1, p1, v2}, Landroid/provider/Settings$Secure;->putStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
 
-    .line 361
+    .line 366
     invoke-direct {p0}, Lcom/android/settings/applications/credentials/DefaultCombinedPicker;->getCredentialProviderService()Landroid/credentials/CredentialManager;
 
     move-result-object v3
@@ -396,20 +396,20 @@
 
     return-void
 
-    .line 368
+    .line 373
     :cond_1
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 371
+    .line 376
     invoke-virtual {p0}, Lcom/android/settings/applications/credentials/DefaultCombinedPicker;->getUser()I
 
     move-result v0
 
     const/4 v1, 0x2
 
-    .line 370
+    .line 375
     invoke-virtual {v3, v0, v1}, Landroid/credentials/CredentialManager;->getCredentialProviderServices(II)Ljava/util/List;
 
     move-result-object v0
@@ -432,7 +432,7 @@
 
     check-cast v1, Landroid/credentials/CredentialProviderInfo;
 
-    .line 373
+    .line 378
     invoke-virtual {v1}, Landroid/credentials/CredentialProviderInfo;->isEnabled()Z
 
     move-result v2
@@ -445,7 +445,7 @@
 
     if-nez v2, :cond_2
 
-    .line 374
+    .line 379
     invoke-virtual {v1}, Landroid/credentials/CredentialProviderInfo;->getServiceInfo()Landroid/content/pm/ServiceInfo;
 
     move-result-object v1
@@ -462,11 +462,11 @@
 
     goto :goto_0
 
-    .line 378
+    .line 383
     :cond_3
     invoke-interface {v5, p2}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 381
+    .line 386
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p1
@@ -479,16 +479,16 @@
 
     if-eqz p1, :cond_4
 
-    .line 382
+    .line 387
     invoke-interface {v5}, Ljava/util/List;->clear()V
 
-    .line 388
+    .line 393
     :cond_4
     invoke-virtual {p0}, Lcom/android/settings/applications/credentials/DefaultCombinedPicker;->getUser()I
 
     move-result v6
 
-    .line 389
+    .line 394
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -503,7 +503,7 @@
 
     move-object v4, p2
 
-    .line 385
+    .line 390
     invoke-virtual/range {v3 .. v8}, Landroid/credentials/CredentialManager;->setEnabledProviders(Ljava/util/List;Ljava/util/List;ILjava/util/concurrent/Executor;Landroid/os/OutcomeReceiver;)V
 
     return-void
@@ -641,7 +641,7 @@
 .end method
 
 .method protected getConfirmationMessage(Lcom/android/settingslib/widget/CandidateInfo;)Ljava/lang/CharSequence;
-    .locals 1
+    .locals 2
 
     if-nez p1, :cond_0
 
@@ -664,20 +664,44 @@
 
     return-object p0
 
-    .line 284
+    .line 286
     :cond_0
+    invoke-virtual {p1}, Lcom/android/settingslib/widget/CandidateInfo;->getKey()Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p1}, Lcom/android/settingslib/widget/CandidateInfo;->getKey()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "com.miui.contentcatcher"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    .line 289
+    :cond_1
     invoke-virtual {p1}, Lcom/android/settingslib/widget/CandidateInfo;->loadLabel()Ljava/lang/CharSequence;
 
     move-result-object p1
 
-    .line 286
+    .line 291
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object p0
 
     sget v0, Lcom/android/settings/R$string;->credman_autofill_confirmation_message:I
 
-    .line 289
+    .line 294
     invoke-static {p1}, Landroid/text/Html;->escapeHtml(Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object p1
@@ -686,12 +710,12 @@
 
     move-result-object p1
 
-    .line 287
+    .line 292
     invoke-virtual {p0, v0, p1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 290
+    .line 295
     invoke-static {p0}, Landroid/text/Html;->fromHtml(Ljava/lang/String;)Landroid/text/Spanned;
 
     move-result-object p0
@@ -750,14 +774,14 @@
 .method protected getUser()I
     .locals 0
 
-    .line 404
+    .line 409
     iget p0, p0, Lcom/android/settings/applications/credentials/DefaultCombinedPicker;->mIntentSenderUserId:I
 
     if-ltz p0, :cond_0
 
     return p0
 
-    .line 407
+    .line 412
     :cond_0
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -858,12 +882,12 @@
 .method protected setDefaultKey(Ljava/lang/String;)Z
     .locals 6
 
-    .line 296
+    .line 301
     invoke-direct {p0}, Lcom/android/settings/applications/credentials/DefaultCombinedPicker;->getAllProviders()Ljava/util/List;
 
     move-result-object v0
 
-    .line 298
+    .line 303
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -883,7 +907,7 @@
 
     check-cast v1, Lcom/android/settings/applications/credentials/CombinedProviderInfo;
 
-    .line 299
+    .line 304
     invoke-virtual {v1}, Lcom/android/settings/applications/credentials/CombinedProviderInfo;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v3
@@ -906,7 +930,7 @@
 
     if-nez v1, :cond_2
 
-    .line 307
+    .line 312
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -915,13 +939,13 @@
 
     return v0
 
-    .line 312
+    .line 317
     :cond_2
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 313
+    .line 318
     invoke-virtual {v1}, Lcom/android/settings/applications/credentials/CombinedProviderInfo;->getCredentialProviderInfos()Ljava/util/List;
 
     move-result-object v4
@@ -943,7 +967,7 @@
 
     check-cast v5, Landroid/credentials/CredentialProviderInfo;
 
-    .line 314
+    .line 319
     invoke-virtual {v5}, Landroid/credentials/CredentialProviderInfo;->getServiceInfo()Landroid/content/pm/ServiceInfo;
 
     move-result-object v5
@@ -960,7 +984,7 @@
 
     goto :goto_1
 
-    .line 318
+    .line 323
     :cond_3
     invoke-virtual {v1}, Lcom/android/settings/applications/credentials/CombinedProviderInfo;->getAutofillServiceInfo()Landroid/service/autofill/AutofillServiceInfo;
 
@@ -968,38 +992,38 @@
 
     if-eqz v4, :cond_4
 
-    .line 321
+    .line 326
     invoke-virtual {v1}, Lcom/android/settings/applications/credentials/CombinedProviderInfo;->getAutofillServiceInfo()Landroid/service/autofill/AutofillServiceInfo;
 
     move-result-object v1
 
-    .line 322
+    .line 327
     invoke-virtual {v1}, Landroid/service/autofill/AutofillServiceInfo;->getServiceInfo()Landroid/content/pm/ServiceInfo;
 
     move-result-object v1
 
-    .line 323
+    .line 328
     invoke-virtual {v1}, Landroid/content/pm/ServiceInfo;->getComponentName()Landroid/content/ComponentName;
 
     move-result-object v1
 
-    .line 324
+    .line 329
     invoke-virtual {v1}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 327
+    .line 332
     :cond_4
     invoke-direct {p0, v2, v3}, Lcom/android/settings/applications/credentials/DefaultCombinedPicker;->setProviders(Ljava/lang/String;Ljava/util/List;)V
 
-    .line 331
+    .line 336
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p0
 
     if-eqz p0, :cond_6
 
-    .line 333
+    .line 338
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
@@ -1014,7 +1038,7 @@
 
     if-eqz p1, :cond_5
 
-    .line 336
+    .line 341
     invoke-virtual {p1, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p1
@@ -1028,11 +1052,11 @@
     :cond_5
     const/4 p1, 0x0
 
-    .line 339
+    .line 344
     :goto_2
     invoke-virtual {p0, p1}, Landroid/app/Activity;->setResult(I)V
 
-    .line 340
+    .line 345
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     :cond_6

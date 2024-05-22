@@ -3,15 +3,15 @@
               android:nextFocusDown="@id/checkgroup"
               android:layout_width="fill_parent"
               android:layout_height="wrap_content"
-              android:importantForAccessibility="no" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+              android:importantForAccessibility="no" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <miuix.visual.check.VisualCheckGroup android:id="@id/checkgroup"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/resolution_selection_margin_top"
                         android:layout_marginBottom="@dimen/resolution_selection_margin_bottom"
-                        settings:itemSpacing="0.0dp"
-                        settings:lineGravity="center"
-                        settings:lineSpacing="2.0dp">
+                        app:itemSpacing="0.0dp"
+                        app:lineGravity="center"
+                        app:lineSpacing="2.0dp">
     <com.android.settings.display.ResolutionVisualCheckBox android:orientation="vertical"
                           android:id="@id/resolution_fhd"
                           android:focusable="true"

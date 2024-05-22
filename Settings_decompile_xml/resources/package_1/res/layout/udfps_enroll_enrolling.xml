@@ -2,7 +2,7 @@
 <com.google.android.setupdesign.GlifLayout android:id="@id/setup_wizard_layout"
                       android:layout_width="fill_parent"
                       android:layout_height="fill_parent"
-                      style="?attr/fingerprint_layout_theme" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+                      style="?attr/fingerprint_layout_theme" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <LinearLayout android:orientation="vertical"
                 android:clipChildren="false"
                 android:clipToPadding="false"
@@ -28,9 +28,9 @@
                               android:layout_height="200.0dp"
                               android:layout_marginTop="@dimen/udfps_lottie_translate_y"
                               android:scaleType="centerInside"
-                              settings:lottie_autoPlay="true"
-                              settings:lottie_loop="true"
-                              settings:lottie_speed="0.85" />
+                              app:lottie_autoPlay="true"
+                              app:lottie_loop="true"
+                              app:lottie_speed="0.85" />
         <include layout="@layout/udfps_enroll_view" />
       </FrameLayout>
       <TextView android:gravity="center_horizontal"

@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <com.android.settings.accessibility.haptic.CustomLinearLayout android:orientation="vertical"
                       android:layout_width="fill_parent"
-                      android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+                      android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <FrameLayout android:layout_width="fill_parent"
                android:layout_height="wrap_content"
                android:paddingStart="@dimen/help_category_padding_start_end"
@@ -21,10 +21,10 @@
                   android:layout_width="fill_parent"
                   android:layout_height="0.0dp"
                   android:layout_marginTop="64.0px"
-                  settings:layout_constrainedHeight="true"
-                  settings:layout_constraintBottom_toBottomOf="parent"
-                  settings:layout_constraintDimensionRatio="W,1747:840"
-                  settings:layout_constraintTop_toTopOf="parent">
+                  app:layout_constrainedHeight="true"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  app:layout_constraintDimensionRatio="W,1747:840"
+                  app:layout_constraintTop_toTopOf="parent">
       <LinearLayout android:orientation="horizontal"
                     android:id="@id/time_container"
                     android:focusable="true"
@@ -56,10 +56,10 @@
         <com.android.settings.accessibility.haptic.CustomInputHapticView android:layout_width="fill_parent"
                               android:layout_height="0.0dp"
                               android:importantForAccessibility="no"
-                              settings:layout_constrainedHeight="true"
-                              settings:layout_constraintBottom_toBottomOf="parent"
-                              settings:layout_constraintDimensionRatio="H,672:91"
-                              settings:layout_constraintTop_toTopOf="parent" />
+                              app:layout_constrainedHeight="true"
+                              app:layout_constraintBottom_toBottomOf="parent"
+                              app:layout_constraintDimensionRatio="H,672:91"
+                              app:layout_constraintTop_toTopOf="parent" />
       </androidx.constraintlayout.widget.ConstraintLayout>
       <androidx.constraintlayout.widget.ConstraintLayout android:layout_gravity="center_horizontal"
                             android:orientation="horizontal"
@@ -79,19 +79,19 @@
                       android:layout_width="fill_parent"
                       android:layout_height="0.0dp"
                       android:importantForAccessibility="no"
-                      settings:layout_constrainedHeight="true"
-                      settings:layout_constraintBottom_toBottomOf="parent"
-                      settings:layout_constraintDimensionRatio="H,664:98"
-                      settings:layout_constraintTop_toTopOf="parent">
+                      app:layout_constrainedHeight="true"
+                      app:layout_constraintBottom_toBottomOf="parent"
+                      app:layout_constraintDimensionRatio="H,664:98"
+                      app:layout_constraintTop_toTopOf="parent">
           <com.android.settings.accessibility.haptic.CustomA11yHapticView android:layout_gravity="center_horizontal"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1.0"
                                 android:importantForAccessibility="no"
                                 android:layout_marginEnd="@dimen/tab_margin_end"
-                                settings:bg="@color/tab_color"
-                                settings:radius="@dimen/tab_radius"
-                                settings:text="@string/tab_text" />
+                                app:bg="@color/tab_color"
+                                app:radius="@dimen/tab_radius"
+                                app:text="@string/tab_text" />
           <com.android.settings.accessibility.haptic.CustomA11yHapticView android:layout_gravity="center_horizontal"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -99,9 +99,9 @@
                                 android:importantForAccessibility="no"
                                 android:layout_marginStart="@dimen/tab_margin_end"
                                 android:layout_marginEnd="@dimen/tab_margin_end"
-                                settings:bg="@color/tab_color"
-                                settings:radius="@dimen/tab_radius"
-                                settings:text="@string/tab_text" />
+                                app:bg="@color/tab_color"
+                                app:radius="@dimen/tab_radius"
+                                app:text="@string/tab_text" />
           <com.android.settings.accessibility.haptic.CustomA11yHapticView android:layout_gravity="center_horizontal"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -109,18 +109,18 @@
                                 android:importantForAccessibility="no"
                                 android:layout_marginStart="@dimen/tab_margin_end"
                                 android:layout_marginEnd="@dimen/tab_margin_end"
-                                settings:bg="@color/tab_color"
-                                settings:radius="@dimen/tab_radius"
-                                settings:text="@string/tab_text" />
+                                app:bg="@color/tab_color"
+                                app:radius="@dimen/tab_radius"
+                                app:text="@string/tab_text" />
           <com.android.settings.accessibility.haptic.CustomA11yHapticView android:layout_gravity="center_horizontal"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1.0"
                                 android:importantForAccessibility="no"
                                 android:layout_marginStart="@dimen/tab_margin_end"
-                                settings:bg="@color/tab_color"
-                                settings:radius="@dimen/tab_radius"
-                                settings:text="@string/tab_text" />
+                                app:bg="@color/tab_color"
+                                app:radius="@dimen/tab_radius"
+                                app:text="@string/tab_text" />
         </LinearLayout>
       </androidx.constraintlayout.widget.ConstraintLayout>
       <androidx.constraintlayout.widget.ConstraintLayout android:layout_gravity="center_horizontal"
@@ -136,10 +136,10 @@
                       android:layout_width="fill_parent"
                       android:layout_height="0.0dp"
                       android:importantForAccessibility="no"
-                      settings:layout_constrainedHeight="true"
-                      settings:layout_constraintBottom_toBottomOf="parent"
-                      settings:layout_constraintDimensionRatio="H,646:448"
-                      settings:layout_constraintTop_toTopOf="parent">
+                      app:layout_constrainedHeight="true"
+                      app:layout_constraintBottom_toBottomOf="parent"
+                      app:layout_constraintDimensionRatio="H,646:448"
+                      app:layout_constraintTop_toTopOf="parent">
           <LinearLayout android:layout_gravity="center_horizontal"
                         android:orientation="horizontal"
                         android:id="@id/picker_container"
@@ -157,8 +157,8 @@
                                   android:layout_height="wrap_content"
                                   android:contentDescription="@string/picker_text"
                                   android:importantForAccessibility="no"
-                                  settings:bg="@color/picker_bg"
-                                  settings:radius="@dimen/picker_radius" />
+                                  app:bg="@color/picker_bg"
+                                  app:radius="@dimen/picker_radius" />
           </LinearLayout>
           <LinearLayout android:layout_gravity="center_horizontal"
                         android:id="@id/seekbar_container"
@@ -193,10 +193,10 @@
                       android:layout_width="fill_parent"
                       android:layout_height="0.0dp"
                       android:importantForAccessibility="no"
-                      settings:layout_constrainedHeight="true"
-                      settings:layout_constraintBottom_toBottomOf="parent"
-                      settings:layout_constraintDimensionRatio="H,666:122"
-                      settings:layout_constraintTop_toTopOf="parent">
+                      app:layout_constrainedHeight="true"
+                      app:layout_constraintBottom_toBottomOf="parent"
+                      app:layout_constraintDimensionRatio="H,666:122"
+                      app:layout_constraintTop_toTopOf="parent">
           <LinearLayout android:layout_gravity="center_horizontal"
                         android:orientation="horizontal"
                         android:id="@id/normal_list_container"
@@ -214,8 +214,8 @@
                                   android:layout_height="wrap_content"
                                   android:contentDescription="@string/normal_list_text"
                                   android:importantForAccessibility="no"
-                                  settings:bg="@color/normal_list_bg"
-                                  settings:radius="@dimen/normal_list_radius" />
+                                  app:bg="@color/normal_list_bg"
+                                  app:radius="@dimen/normal_list_radius" />
           </LinearLayout>
           <LinearLayout android:layout_gravity="center_horizontal"
                         android:orientation="horizontal"
@@ -234,8 +234,8 @@
                                   android:layout_height="wrap_content"
                                   android:contentDescription="@string/checkbox_text"
                                   android:importantForAccessibility="no"
-                                  settings:bg="@color/checkbox_bg"
-                                  settings:radius="@dimen/checkbox_radius" />
+                                  app:bg="@color/checkbox_bg"
+                                  app:radius="@dimen/checkbox_radius" />
           </LinearLayout>
         </LinearLayout>
       </androidx.constraintlayout.widget.ConstraintLayout>
@@ -254,8 +254,8 @@
         <com.android.settings.accessibility.haptic.CustomA11yHapticView android:layout_width="wrap_content"
                               android:layout_height="wrap_content"
                               android:importantForAccessibility="no"
-                              settings:bg="@color/no_action_bg"
-                              settings:radius="@dimen/no_action_radius" />
+                              app:bg="@color/no_action_bg"
+                              app:radius="@dimen/no_action_radius" />
       </LinearLayout>
       <LinearLayout android:layout_gravity="center_horizontal"
                     android:orientation="horizontal"
@@ -273,8 +273,8 @@
         <com.android.settings.accessibility.haptic.CustomA11yHapticView android:layout_width="wrap_content"
                               android:layout_height="wrap_content"
                               android:importantForAccessibility="no"
-                              settings:bg="@color/highlight_list_bg"
-                              settings:radius="@dimen/highlight_list_radius" />
+                              app:bg="@color/highlight_list_bg"
+                              app:radius="@dimen/highlight_list_radius" />
       </LinearLayout>
       <LinearLayout android:layout_gravity="center_horizontal"
                     android:orientation="horizontal"
@@ -303,8 +303,8 @@
                                 android:layout_height="wrap_content"
                                 android:contentDescription="@string/button_normal_text"
                                 android:importantForAccessibility="no"
-                                settings:bg="@color/button_normal"
-                                settings:radius="@dimen/btn_radius" />
+                                app:bg="@color/button_normal"
+                                app:radius="@dimen/btn_radius" />
         </LinearLayout>
         <LinearLayout android:layout_gravity="center_horizontal"
                       android:orientation="horizontal"
@@ -323,8 +323,8 @@
                                 android:layout_height="wrap_content"
                                 android:contentDescription="@string/button_height_text"
                                 android:importantForAccessibility="no"
-                                settings:bg="@color/button_height_light"
-                                settings:radius="@dimen/btn_radius" />
+                                app:bg="@color/button_height_light"
+                                app:radius="@dimen/btn_radius" />
         </LinearLayout>
       </LinearLayout>
     </LinearLayout>

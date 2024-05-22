@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <LinearLayout android:layout_width="fill_parent"
               android:layout_height="wrap_content"
-              style="@style/SettingsBarChart" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto">
+              style="@style/SettingsBarChart" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
   <TextView android:id="@id/bar_chart_title"
             style="@style/SettingsBarChartTitle" />
   <LinearLayout android:gravity="center"
@@ -14,16 +14,16 @@
                   android:layout_height="wrap_content"
                   android:layout_marginBottom="20.0dp">
       <com.android.settingslib.widget.BarView android:id="@id/bar_view1"
-                            systemui:r0x7f0400c2="@color/settings_bar_view_1_color"
+                            settings:r0x7f0400c2="@color/settings_bar_view_1_color"
                             style="@style/SettingsBarViewStyle" />
       <com.android.settingslib.widget.BarView android:id="@id/bar_view2"
-                            systemui:r0x7f0400c2="@color/settings_bar_view_2_color"
+                            settings:r0x7f0400c2="@color/settings_bar_view_2_color"
                             style="@style/SettingsBarViewStyle" />
       <com.android.settingslib.widget.BarView android:id="@id/bar_view3"
-                            systemui:r0x7f0400c2="@color/settings_bar_view_3_color"
+                            settings:r0x7f0400c2="@color/settings_bar_view_3_color"
                             style="@style/SettingsBarViewStyle" />
       <com.android.settingslib.widget.BarView android:id="@id/bar_view4"
-                            systemui:r0x7f0400c2="@color/settings_bar_view_4_color"
+                            settings:r0x7f0400c2="@color/settings_bar_view_4_color"
                             style="@style/SettingsBarViewStyle" />
     </LinearLayout>
     <Button android:id="@id/bar_chart_details"

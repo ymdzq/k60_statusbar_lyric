@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/android/settings/wifi/MiuiWifiSettings;)V
     .locals 0
 
-    .line 2208
+    .line 2226
     iput-object p1, p0, Lcom/android/settings/wifi/MiuiWifiSettings$12;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 2
 
-    .line 2211
+    .line 2229
     iget-object v0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$12;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-static {v0}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$fgetmSkipButton(Lcom/android/settings/wifi/MiuiWifiSettings;)Landroid/widget/TextView;
@@ -49,7 +49,7 @@
 
     return-void
 
-    .line 2214
+    .line 2232
     :cond_0
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
@@ -65,14 +65,14 @@
 
     iget-object v0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$12;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
-    .line 2215
+    .line 2233
     invoke-static {v0}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$misMobileNetValidated(Lcom/android/settings/wifi/MiuiWifiSettings;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 2216
+    .line 2234
     iget-object p0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$12;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-static {p0}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$fgetmSkipButton(Lcom/android/settings/wifi/MiuiWifiSettings;)Landroid/widget/TextView;
@@ -85,7 +85,7 @@
 
     goto :goto_0
 
-    .line 2218
+    .line 2236
     :cond_1
     iget-object p0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$12;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 

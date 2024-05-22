@@ -6,8 +6,8 @@
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
                       android:layout_marginEnd="32.0dp"
-                      systemui:r0x7f040075="@style/TextAppearance.StatusBar.Expanded.UserSwitcher"
-                      systemui:r0x7f040640="@style/TextAppearance.StatusBar.Expanded.UserSwitcher" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto">
+                      sysui:r0x7f040075="@style/TextAppearance.StatusBar.Expanded.UserSwitcher"
+                      sysui:r0x7f040640="@style/TextAppearance.StatusBar.Expanded.UserSwitcher" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:sysui="http://schemas.android.com/apk/res-auto">
   <TextView android:id="@id/user_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -17,6 +17,6 @@
                         android:layout_width="@dimen/kg_framed_avatar_size"
                         android:layout_height="@dimen/kg_framed_avatar_size"
                         android:contentDescription="@null"
-                        systemui:r0x7f0400b9="18.0dp"
-                        systemui:r0x7f0400bb="1.0dp" />
+                        sysui:r0x7f0400b9="18.0dp"
+                        sysui:r0x7f0400bb="1.0dp" />
 </com.android.systemui.statusbar.policy.KeyguardUserDetailItemView>

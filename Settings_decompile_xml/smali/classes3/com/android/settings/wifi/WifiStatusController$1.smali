@@ -31,7 +31,7 @@
 .method constructor <init>(Lcom/android/settings/wifi/WifiStatusController;Landroid/os/Looper;)V
     .locals 0
 
-    .line 53
+    .line 54
     iput-object p1, p0, Lcom/android/settings/wifi/WifiStatusController$1;->this$0:Lcom/android/settings/wifi/WifiStatusController;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -42,14 +42,14 @@
 .method private synthetic lambda$handleMessage$0()V
     .locals 3
 
-    .line 61
+    .line 62
     iget-object v0, p0, Lcom/android/settings/wifi/WifiStatusController$1;->this$0:Lcom/android/settings/wifi/WifiStatusController;
 
     invoke-static {v0}, Lcom/android/settings/wifi/WifiStatusController;->-$$Nest$mgetWifiState(Lcom/android/settings/wifi/WifiStatusController;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 62
+    .line 63
     iget-object v1, p0, Lcom/android/settings/wifi/WifiStatusController$1;->this$0:Lcom/android/settings/wifi/WifiStatusController;
 
     invoke-static {v1}, Lcom/android/settings/wifi/WifiStatusController;->-$$Nest$fgetmVerbose(Lcom/android/settings/wifi/WifiStatusController;)Z
@@ -64,7 +64,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 63
+    .line 64
     :cond_0
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -84,14 +84,14 @@
 
     if-nez v1, :cond_1
 
-    .line 64
+    .line 65
     iget-object v1, p0, Lcom/android/settings/wifi/WifiStatusController$1;->this$0:Lcom/android/settings/wifi/WifiStatusController;
 
     invoke-static {v1, v0}, Lcom/android/settings/wifi/WifiStatusController;->-$$Nest$fputmStatusViewText(Lcom/android/settings/wifi/WifiStatusController;Ljava/lang/String;)V
 
     const/16 v0, 0x102
 
-    .line 65
+    .line 66
     invoke-virtual {p0, v0}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     :cond_1
@@ -103,10 +103,10 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
 
-    .line 56
+    .line 57
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    .line 57
+    .line 58
     iget p1, p1, Landroid/os/Message;->what:I
 
     const-string v0, "WifiStatusController"
@@ -115,7 +115,7 @@
 
     goto :goto_0
 
-    .line 76
+    .line 77
     :pswitch_0
     iget-object p0, p0, Lcom/android/settings/wifi/WifiStatusController$1;->this$0:Lcom/android/settings/wifi/WifiStatusController;
 
@@ -123,7 +123,7 @@
 
     goto :goto_0
 
-    .line 70
+    .line 71
     :pswitch_1
     iget-object p1, p0, Lcom/android/settings/wifi/WifiStatusController$1;->this$0:Lcom/android/settings/wifi/WifiStatusController;
 
@@ -137,7 +137,7 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 71
+    .line 72
     :cond_0
     iget-object p1, p0, Lcom/android/settings/wifi/WifiStatusController$1;->this$0:Lcom/android/settings/wifi/WifiStatusController;
 
@@ -147,7 +147,7 @@
 
     if-eqz p1, :cond_2
 
-    .line 72
+    .line 73
     iget-object p1, p0, Lcom/android/settings/wifi/WifiStatusController$1;->this$0:Lcom/android/settings/wifi/WifiStatusController;
 
     invoke-static {p1}, Lcom/android/settings/wifi/WifiStatusController;->access$100(Lcom/android/settings/wifi/WifiStatusController;)Landroid/widget/TextView;
@@ -164,7 +164,7 @@
 
     goto :goto_0
 
-    .line 59
+    .line 60
     :pswitch_2
     iget-object p1, p0, Lcom/android/settings/wifi/WifiStatusController$1;->this$0:Lcom/android/settings/wifi/WifiStatusController;
 
@@ -178,7 +178,7 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 60
+    .line 61
     :cond_1
     new-instance p1, Lcom/android/settings/wifi/WifiStatusController$1$$ExternalSyntheticLambda0;
 

@@ -1,4 +1,4 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <miuix.smooth.SmoothContainerDrawable2 android:radius="@dimen/borderlayout_bg_corner_radius"
-                      settings:miuix_strokeColor="@color/visual_check_borderlayout_bg_stroke_color"
-                      settings:miuix_strokeWidth="@dimen/borderlayout_bg_stroke_width" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto" />
+                      app:miuix_strokeColor="@color/visual_check_borderlayout_bg_stroke_color"
+                      app:miuix_strokeWidth="@dimen/borderlayout_bg_stroke_width" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

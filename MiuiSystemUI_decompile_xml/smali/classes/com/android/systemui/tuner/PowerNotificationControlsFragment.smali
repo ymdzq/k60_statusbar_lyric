@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/tuner/PowerNotificationControlsFragment;
 .super Landroid/app/Fragment;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # static fields
@@ -204,7 +204,7 @@
     if-eqz v0, :cond_0
 
     .line 41
-    const v0, 0x7f130b54    # @string/switch_bar_on 'On'
+    const v0, 0x7f130b5a    # @string/switch_bar_on 'On'
 
     .line 43
     invoke-virtual {p0, v0}, Landroid/app/Fragment;->getString(I)Ljava/lang/String;
@@ -217,7 +217,7 @@
 
     .line 50
     :cond_0
-    const v0, 0x7f130b53    # @string/switch_bar_off 'Off'
+    const v0, 0x7f130b59    # @string/switch_bar_off 'Off'
 
     .line 51
     invoke-virtual {p0, v0}, Landroid/app/Fragment;->getString(I)Ljava/lang/String;

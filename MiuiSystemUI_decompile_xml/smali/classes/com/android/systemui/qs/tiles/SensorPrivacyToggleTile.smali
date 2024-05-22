@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/systemui/qs/tiles/SensorPrivacyToggleTile;
 .super Lcom/android/systemui/qs/tileimpl/QSTileImpl;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/policy/IndividualSensorPrivacyController$Callback;
@@ -302,7 +302,7 @@
     if-eqz p2, :cond_2
 
     .line 61
-    const p2, 0x7f13096a    # @string/quick_settings_camera_mic_blocked 'Blocked'
+    const p2, 0x7f13096e    # @string/quick_settings_camera_mic_blocked 'Blocked'
 
     .line 63
     invoke-virtual {p0, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -318,7 +318,7 @@
 
     .line 72
     :cond_2
-    const p2, 0x7f130969    # @string/quick_settings_camera_mic_available 'Available'
+    const p2, 0x7f13096d    # @string/quick_settings_camera_mic_available 'Available'
 
     .line 73
     invoke-virtual {p0, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;

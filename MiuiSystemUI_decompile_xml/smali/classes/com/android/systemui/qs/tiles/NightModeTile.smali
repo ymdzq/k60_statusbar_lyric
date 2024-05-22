@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/qs/tiles/NightModeTile;
 .super Lcom/android/systemui/qs/tileimpl/QSTileImpl;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # static fields
@@ -184,7 +184,7 @@
     iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
 
     .line 2
-    const v0, 0x7f1309d6    # @string/quick_settings_nightmode_label 'Dark mode'
+    const v0, 0x7f1309dc    # @string/quick_settings_nightmode_label 'Dark mode'
 
     .line 4
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -480,7 +480,7 @@
 
     .line 16
     :cond_0
-    const v0, 0x7f1309d5    # @string/quick_settings_night_state_change_message_on 'Dark mode is on'
+    const v0, 0x7f1309db    # @string/quick_settings_night_state_change_message_on 'Dark mode is on'
 
     .line 17
     invoke-virtual {v2, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -496,7 +496,7 @@
 
     .line 27
     :cond_1
-    const v0, 0x7f1309d4    # @string/quick_settings_night_state_change_message_off 'Dark mode is off'
+    const v0, 0x7f1309da    # @string/quick_settings_night_state_change_message_off 'Dark mode is off'
 
     .line 28
     invoke-virtual {v2, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -523,7 +523,7 @@
     iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
 
     .line 4
-    const v0, 0x7f1309d6    # @string/quick_settings_nightmode_label 'Dark mode'
+    const v0, 0x7f1309dc    # @string/quick_settings_nightmode_label 'Dark mode'
 
     .line 6
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -677,14 +677,14 @@
     if-eqz v0, :cond_4
 
     .line 100
-    const v0, 0x7f130b54    # @string/switch_bar_on 'On'
+    const v0, 0x7f130b5a    # @string/switch_bar_on 'On'
 
     .line 102
     goto :goto_3
 
     .line 105
     :cond_4
-    const v0, 0x7f130b53    # @string/switch_bar_off 'Off'
+    const v0, 0x7f130b59    # @string/switch_bar_off 'Off'
 
     .line 106
     :goto_3

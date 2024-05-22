@@ -1,14 +1,14 @@
 <?xml version='1.0' encoding='utf-8' ?>
-<set xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+<set xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <translatewithclip android:duration="350"
-                     settings:damping="0.9"
-                     settings:floatingHeight="@dimen/miuix_appcompat_floating_window_fixed_height_major"
-                     settings:floatingWidth="@dimen/miuix_appcompat_floating_window_fixed_width_major"
-                     settings:interpolatorName="springInterpolator"
-                     settings:isAutoDpi="true"
-                     settings:response="0.5"
-                     settings:roundCornerRadius="@dimen/miuix_appcompat_floating_window_background_radius"
-                     settings:xOffset="0" />
+                     app:damping="0.9"
+                     app:floatingHeight="@dimen/miuix_appcompat_floating_window_fixed_height_major"
+                     app:floatingWidth="@dimen/miuix_appcompat_floating_window_fixed_width_major"
+                     app:interpolatorName="springInterpolator"
+                     app:isAutoDpi="true"
+                     app:response="0.5"
+                     app:roundCornerRadius="@dimen/miuix_appcompat_floating_window_background_radius"
+                     app:xOffset="0" />
   <alpha android:interpolator="@anim/decelerate_square"
          android:duration="100"
          android:startOffset="200"

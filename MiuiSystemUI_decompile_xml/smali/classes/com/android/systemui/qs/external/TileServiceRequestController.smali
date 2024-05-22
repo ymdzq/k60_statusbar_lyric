@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/qs/external/TileServiceRequestController;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # instance fields
@@ -294,7 +294,7 @@
     move-result-object v5
 
     .line 123
-    const v14, 0x7f13094d    # @string/qs_tile_request_dialog_text '%1$s wants to add the following tile to Quick Settings'
+    const v14, 0x7f130951    # @string/qs_tile_request_dialog_text '%1$s wants to add the following tile to Quick Settings'
 
     .line 124
     invoke-virtual {v4, v14, v5}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -494,7 +494,7 @@
     invoke-virtual {v2, v3}, Landroid/app/AlertDialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
     .line 272
-    const v3, 0x7f13094b    # @string/qs_tile_request_dialog_add 'Add tile'
+    const v3, 0x7f13094f    # @string/qs_tile_request_dialog_add 'Add tile'
 
     .line 275
     invoke-virtual {v2, v3, v0}, Lcom/android/systemui/statusbar/phone/SystemUIDialog;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)V
@@ -503,7 +503,7 @@
     const/4 v3, -0x2
 
     .line 281
-    const v4, 0x7f13094c    # @string/qs_tile_request_dialog_not_add 'Do not add tile'
+    const v4, 0x7f130950    # @string/qs_tile_request_dialog_not_add 'Do not add tile'
 
     .line 282
     invoke-virtual {v2, v3, v4, v0, v10}, Lcom/android/systemui/statusbar/phone/SystemUIDialog;->setButton(IILandroid/content/DialogInterface$OnClickListener;Z)V

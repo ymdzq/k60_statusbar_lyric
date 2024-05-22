@@ -36,7 +36,7 @@
         }
     .end annotation
 
-    .line 1714
+    .line 1717
     iput-object p1, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter$1;->this$1:Lcom/android/settings/MiuiSettings$HeaderAdapter;
 
     iput-object p2, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter$1;->val$header:Lcom/android/settingslib/miuisettings/preference/PreferenceActivity$Header;
@@ -55,10 +55,10 @@
 .method public onClick(Landroid/view/View;)V
     .locals 3
 
-    .line 1718
+    .line 1721
     sget-boolean p1, Lmiui/os/Build;->IS_MIPAD:Z
 
-    .line 1722
+    .line 1725
     iget-object p1, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter$1;->this$1:Lcom/android/settings/MiuiSettings$HeaderAdapter;
 
     invoke-static {p1}, Lcom/android/settings/MiuiSettings$HeaderAdapter;->-$$Nest$fgetmMiHomeManager(Lcom/android/settings/MiuiSettings$HeaderAdapter;)Lcom/android/settings/cust/MiHomeManager;
@@ -87,7 +87,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 1723
+    .line 1726
     iget-object p0, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter$1;->this$1:Lcom/android/settings/MiuiSettings$HeaderAdapter;
 
     invoke-static {p0}, Lcom/android/settings/MiuiSettings$HeaderAdapter;->-$$Nest$fgetmContext(Lcom/android/settings/MiuiSettings$HeaderAdapter;)Landroid/content/Context;
@@ -104,13 +104,13 @@
 
     return-void
 
-    .line 1727
+    .line 1730
     :cond_0
     iget p1, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter$1;->val$position:I
 
     if-ltz p1, :cond_5
 
-    .line 1728
+    .line 1731
     iget-object v1, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter$1;->this$1:Lcom/android/settings/MiuiSettings$HeaderAdapter;
 
     invoke-static {v1}, Lcom/android/settings/MiuiSettings$HeaderAdapter;->-$$Nest$fgetmHeaders(Lcom/android/settings/MiuiSettings$HeaderAdapter;)Ljava/util/List;
@@ -125,7 +125,7 @@
 
     goto/16 :goto_0
 
-    .line 1731
+    .line 1734
     :cond_1
     iget-object v1, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter$1;->this$1:Lcom/android/settings/MiuiSettings$HeaderAdapter;
 
@@ -149,7 +149,7 @@
 
     if-eq v1, v2, :cond_4
 
-    .line 1732
+    .line 1735
     iget-object v1, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter$1;->this$1:Lcom/android/settings/MiuiSettings$HeaderAdapter;
 
     iget-object v1, v1, Lcom/android/settings/MiuiSettings$HeaderAdapter;->this$0:Lcom/android/settings/MiuiSettings;
@@ -160,7 +160,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 1733
+    .line 1736
     iget-object v1, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter$1;->this$1:Lcom/android/settings/MiuiSettings$HeaderAdapter;
 
     iget-object v1, v1, Lcom/android/settings/MiuiSettings$HeaderAdapter;->this$0:Lcom/android/settings/MiuiSettings;
@@ -171,7 +171,7 @@
 
     invoke-virtual {v1, v0}, Landroid/view/View;->setActivated(Z)V
 
-    .line 1735
+    .line 1738
     :cond_2
     iget-object v1, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter$1;->this$1:Lcom/android/settings/MiuiSettings$HeaderAdapter;
 
@@ -183,7 +183,7 @@
 
     invoke-static {v1, v2}, Lcom/android/settings/MiuiSettings;->-$$Nest$fputmSelectedView(Lcom/android/settings/MiuiSettings;Landroid/view/View;)V
 
-    .line 1736
+    .line 1739
     iget-object v1, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter$1;->this$1:Lcom/android/settings/MiuiSettings$HeaderAdapter;
 
     iget-object v1, v1, Lcom/android/settings/MiuiSettings$HeaderAdapter;->this$0:Lcom/android/settings/MiuiSettings;
@@ -194,7 +194,7 @@
 
     if-eqz v1, :cond_3
 
-    .line 1737
+    .line 1740
     iget-object v1, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter$1;->this$1:Lcom/android/settings/MiuiSettings$HeaderAdapter;
 
     iget-object v1, v1, Lcom/android/settings/MiuiSettings$HeaderAdapter;->this$0:Lcom/android/settings/MiuiSettings;
@@ -207,7 +207,7 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setActivated(Z)V
 
-    .line 1740
+    .line 1743
     :cond_3
     iget-object v1, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter$1;->this$1:Lcom/android/settings/MiuiSettings$HeaderAdapter;
 
@@ -229,7 +229,7 @@
 
     if-eqz v1, :cond_4
 
-    .line 1741
+    .line 1744
     iget-object v1, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter$1;->this$1:Lcom/android/settings/MiuiSettings$HeaderAdapter;
 
     iget-object v1, v1, Lcom/android/settings/MiuiSettings$HeaderAdapter;->this$0:Lcom/android/settings/MiuiSettings;
@@ -240,7 +240,7 @@
 
     invoke-virtual {v1, v0}, Landroid/view/View;->setActivated(Z)V
 
-    .line 1744
+    .line 1747
     :cond_4
     iget-object v0, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter$1;->this$1:Lcom/android/settings/MiuiSettings$HeaderAdapter;
 
@@ -254,7 +254,7 @@
 
     check-cast v0, Lcom/android/settingslib/miuisettings/preference/PreferenceActivity$Header;
 
-    .line 1746
+    .line 1749
     :try_start_0
     iget-object p0, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter$1;->this$1:Lcom/android/settings/MiuiSettings$HeaderAdapter;
 
@@ -269,7 +269,7 @@
     :catch_0
     move-exception p0
 
-    .line 1748
+    .line 1751
     invoke-virtual {p0}, Landroid/content/res/Resources$NotFoundException;->printStackTrace()V
 
     :cond_5

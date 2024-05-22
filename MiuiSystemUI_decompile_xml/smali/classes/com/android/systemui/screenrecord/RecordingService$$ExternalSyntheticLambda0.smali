@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/screenrecord/RecordingService$$ExternalSyntheticLambda0;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lcom/android/systemui/plugins/ActivityStarter$OnDismissAction;
@@ -53,7 +53,7 @@
     move-result-object v1
 
     .line 9
-    const v2, 0x7f130a78    # @string/screenrecord_share_label 'Share'
+    const v2, 0x7f130a7e    # @string/screenrecord_share_label 'Share'
 
     .line 10
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;

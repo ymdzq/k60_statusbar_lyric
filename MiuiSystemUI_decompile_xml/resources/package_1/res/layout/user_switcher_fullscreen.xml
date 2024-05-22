@@ -2,7 +2,7 @@
 <LinearLayout android:orientation="vertical"
               android:id="@id/user_switcher_root"
               android:layout_width="fill_parent"
-              android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto">
+              android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:androidprv="http://schemas.android.com/apk/prv/res/android">
   <ScrollView android:layout_width="fill_parent"
               android:layout_height="0.0dp"
               android:fillViewport="true"
@@ -15,16 +15,16 @@
       <androidx.constraintlayout.helper.widget.Flow android:id="@id/flow"
                             android:layout_width="0.0dp"
                             android:layout_height="wrap_content"
-                            systemui:r0x7f040309="0.5"
-                            systemui:r0x7f04030a="@dimen/user_switcher_fullscreen_horizontal_gap"
-                            systemui:r0x7f04030b="2"
-                            systemui:r0x7f040312="2"
-                            systemui:r0x7f040314="44.0dp"
-                            systemui:r0x7f040316="3"
-                            systemui:r0x7f040429="0"
-                            systemui:r0x7f04042f="0"
-                            systemui:r0x7f040443="0"
-                            systemui:r0x7f040447="0" />
+                            app:r0x7f040309="0.5"
+                            app:r0x7f04030a="@dimen/user_switcher_fullscreen_horizontal_gap"
+                            app:r0x7f04030b="2"
+                            app:r0x7f040312="2"
+                            app:r0x7f040314="44.0dp"
+                            app:r0x7f040316="3"
+                            app:r0x7f040429="0"
+                            app:r0x7f04042f="0"
+                            app:r0x7f040443="0"
+                            app:r0x7f040447="0" />
     </com.android.systemui.user.UserSwitcherRootView>
   </ScrollView>
   <LinearLayout android:gravity="center|end"

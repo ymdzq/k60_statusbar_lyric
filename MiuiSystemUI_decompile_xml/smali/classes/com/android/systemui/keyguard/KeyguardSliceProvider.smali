@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/keyguard/KeyguardSliceProvider;
 .super Landroidx/slice/SliceProvider;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/policy/NextAlarmController$NextAlarmChangeCallback;
@@ -1022,7 +1022,7 @@
     move-result-object v1
 
     .line 45
-    const v2, 0x7f130b5b    # @string/system_ui_aod_date_pattern 'EEEMMMd'
+    const v2, 0x7f130b61    # @string/system_ui_aod_date_pattern 'EEEMMMd'
 
     .line 46
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;

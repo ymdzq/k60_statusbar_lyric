@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/qs/tiles/MiuiHotspotTile;
 .super Lcom/android/systemui/qs/tileimpl/QSTileImpl;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/connectivity/SignalCallback;
@@ -190,7 +190,7 @@
     iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
 
     .line 2
-    const v0, 0x7f1309b0    # @string/quick_settings_hotspot_label 'Hotspot'
+    const v0, 0x7f1309b6    # @string/quick_settings_hotspot_label 'Hotspot'
 
     .line 4
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -576,7 +576,7 @@
 
     .line 16
     :cond_0
-    const v0, 0x7f1309b5    # @string/quick_settings_hotspot_state_change_message_on 'Hotspot is on'
+    const v0, 0x7f1309bb    # @string/quick_settings_hotspot_state_change_message_on 'Hotspot is on'
 
     .line 17
     invoke-virtual {v2, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -592,7 +592,7 @@
 
     .line 27
     :cond_1
-    const v0, 0x7f1309b4    # @string/quick_settings_hotspot_state_change_message_off 'Hotspot is off'
+    const v0, 0x7f1309ba    # @string/quick_settings_hotspot_state_change_message_off 'Hotspot is off'
 
     .line 28
     invoke-virtual {v2, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -648,7 +648,7 @@
     iget-object v0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
 
     .line 18
-    const v3, 0x7f1309b0    # @string/quick_settings_hotspot_label 'Hotspot'
+    const v3, 0x7f1309b6    # @string/quick_settings_hotspot_label 'Hotspot'
 
     .line 20
     invoke-virtual {v0, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -905,14 +905,14 @@
     if-eqz p2, :cond_e
 
     .line 166
-    const p2, 0x7f130b54    # @string/switch_bar_on 'On'
+    const p2, 0x7f130b5a    # @string/switch_bar_on 'On'
 
     .line 168
     goto :goto_8
 
     .line 171
     :cond_e
-    const p2, 0x7f130b53    # @string/switch_bar_off 'Off'
+    const p2, 0x7f130b59    # @string/switch_bar_off 'Off'
 
     .line 172
     :goto_8

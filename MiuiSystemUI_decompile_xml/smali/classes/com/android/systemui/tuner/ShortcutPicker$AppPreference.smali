@@ -1,6 +1,6 @@
 .class Lcom/android/systemui/tuner/ShortcutPicker$AppPreference;
 .super Lcom/android/systemui/tuner/SelectablePreference;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # instance fields
@@ -32,7 +32,7 @@
     move-result-object v0
 
     .line 14
-    const v1, 0x7f130bdc    # @string/tuner_launch_app 'Launch %1$s'
+    const v1, 0x7f130be2    # @string/tuner_launch_app 'Launch %1$s'
 
     .line 15
     invoke-virtual {p1, v1, v0}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -56,7 +56,7 @@
     move-result-object p2
 
     .line 32
-    const v0, 0x7f130bd7    # @string/tuner_app '%1$s app'
+    const v0, 0x7f130bdd    # @string/tuner_app '%1$s app'
 
     .line 33
     invoke-virtual {p1, v0, p2}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;

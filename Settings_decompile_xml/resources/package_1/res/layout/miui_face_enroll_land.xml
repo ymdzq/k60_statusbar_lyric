@@ -2,14 +2,14 @@
 <ScrollView android:background="@android:color/black"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:fillViewport="true" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+            android:fillViewport="true" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent"
                         android:layout_height="fill_parent">
     <LinearLayout android:id="@id/back_image"
                   android:layout_width="@dimen/miui_face_enroll_back_linear_width"
                   android:layout_height="@dimen/miui_face_enroll_back_linear_height"
-                  settings:layout_constraintStart_toStartOf="parent"
-                  settings:layout_constraintTop_toTopOf="parent">
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toTopOf="parent">
       <ImageView android:layout_gravity="center_vertical"
                  android:layout_width="@dimen/miui_face_enroll_back_image_width"
                  android:layout_height="@dimen/miui_face_enroll_back_image_height"
@@ -19,8 +19,8 @@
     </LinearLayout>
     <FrameLayout android:layout_width="fill_parent"
                  android:layout_height="0.0dp"
-                 settings:layout_constraintBottom_toTopOf="@id/miui_face_input_nextorsuccess_button"
-                 settings:layout_constraintTop_toBottomOf="@id/back_image">
+                 app:layout_constraintBottom_toTopOf="@id/miui_face_input_nextorsuccess_button"
+                 app:layout_constraintTop_toBottomOf="@id/back_image">
       <FrameLayout android:layout_gravity="center_horizontal"
                    android:id="@id/miui_face_input_camera_preview_framelayout"
                    android:layout_width="@dimen/miui_face_enroll_camera_preview_width_land"
@@ -131,7 +131,7 @@
                               android:layout_centerHorizontal="true"
                               android:inputType="textNoSuggestions"
                               android:fontFamily="mipro-regular"
-                              settings:drawableEndCompat="?attr/clearableEditTextIcon"
+                              app:drawableEndCompat="?attr/clearableEditTextIcon"
                               style="@style/Widget.EditText.Dark" />
         <TextView android:textSize="@dimen/miui_face_enroll_name_text_size"
                   android:textColor="@color/miui_face_input_second_suggestion_color"
@@ -155,9 +155,9 @@
             android:layout_marginBottom="@dimen/miui_face_enroll_next_button_bottom_land"
             android:text="@string/face_data_introduction_add"
             android:fontFamily="mipro-regular"
-            settings:layout_constraintBottom_toBottomOf="parent"
-            settings:layout_constraintEnd_toEndOf="parent"
-            settings:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             style="@style/Widget.Button.Primary" />
   </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

@@ -1,6 +1,6 @@
 .class public final Lcom/miui/charge/MiuiChargeController;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lcom/miui/charge/view/IChargeAnimationListener;
@@ -1166,7 +1166,7 @@
     iget-object v3, v0, Lcom/miui/charge/MiuiChargeController;->mContext:Landroid/content/Context;
 
     .line 374
-    const v4, 0x7f130d1a    # @string/wireless_change_to_ac_charging 'Switched to wired charging'
+    const v4, 0x7f130d20    # @string/wireless_change_to_ac_charging 'Switched to wired charging'
 
     .line 376
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -3838,7 +3838,7 @@
 
     .line 96
     :cond_1
-    const p1, 0x7f130d1c    # @string/wireless_charge_dialog_cancel 'Got it'
+    const p1, 0x7f130d22    # @string/wireless_charge_dialog_cancel 'Got it'
 
     .line 99
     invoke-virtual {v3, p1, v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)V
@@ -4410,7 +4410,7 @@
     iget-object p2, p1, Lcom/miui/charge/container/MiuiChargeLogoView;->mStateTip:Lcom/miui/charge/container/MiuiChargeLogoView$AccessibilityDisableTextView;
 
     .line 299
-    const v5, 0x7f130a1b    # @string/rapid_charge_mode_tip 'Quick charge'
+    const v5, 0x7f130a21    # @string/rapid_charge_mode_tip 'Quick charge'
 
     .line 301
     invoke-virtual {p2, v5}, Landroid/widget/TextView;->setText(I)V

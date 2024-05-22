@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent"
                       android:layout_height="wrap_content"
-                      android:layoutDirection="locale" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto">
+                      android:layoutDirection="locale" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <ImageView android:id="@id/zen_icon"
              android:layout_width="@dimen/zen_mode_icon_size"
              android:layout_height="@dimen/zen_mode_icon_size"
@@ -9,8 +9,8 @@
              android:src="@drawable/dnd_notification_icon"
              android:contentDescription="@null"
              android:layout_marginStart="@dimen/zen_mode_icon_start_margin"
-             systemui:r0x7f040443="0"
-             systemui:r0x7f040447="0" />
+             app:r0x7f040443="0"
+             app:r0x7f040447="0" />
   <TextView android:textSize="@dimen/zen_mode_title_size"
             android:textStyle="bold"
             android:textColor="@color/notification_primary_text_color_light"
@@ -24,10 +24,10 @@
             android:fontFamily="sans-serif-medium"
             android:layout_marginStart="@dimen/zen_mode_title_start_margin"
             android:layout_marginEnd="@dimen/zen_mode_quit_start_margin"
-            systemui:r0x7f040430="@id/zen_quit"
-            systemui:r0x7f04043b="1.0"
-            systemui:r0x7f040442="@id/zen_icon"
-            systemui:r0x7f040447="0" />
+            app:r0x7f040430="@id/zen_quit"
+            app:r0x7f04043b="1.0"
+            app:r0x7f040442="@id/zen_icon"
+            app:r0x7f040447="0" />
   <TextView android:textSize="@dimen/zen_mode_content_size"
             android:textStyle="normal"
             android:textColor="@color/notification_secondary_text_color_light"
@@ -38,11 +38,11 @@
             android:layout_marginBottom="@dimen/miui_notification_content_margin_bottom"
             android:text="@string/zen_mode_warnings_all_time_content"
             android:fontFamily="sans-serif-medium"
-            systemui:r0x7f040429="0"
-            systemui:r0x7f04042f="@id/zen_title"
-            systemui:r0x7f04043b="1.0"
-            systemui:r0x7f040443="@id/zen_title"
-            systemui:r0x7f040446="@id/zen_title" />
+            app:r0x7f040429="0"
+            app:r0x7f04042f="@id/zen_title"
+            app:r0x7f04043b="1.0"
+            app:r0x7f040443="@id/zen_title"
+            app:r0x7f040446="@id/zen_title" />
   <TextView android:textSize="@dimen/zen_mode_quit_size"
             android:textStyle="bold"
             android:textColor="@color/notification_action_text_color"
@@ -57,7 +57,7 @@
             android:fontFamily="sans-serif-medium"
             android:layout_marginEnd="@dimen/zen_mode_title_end_margin"
             android:fallbackLineSpacing="false"
-            systemui:r0x7f040429="0"
-            systemui:r0x7f04042f="0"
-            systemui:r0x7f040447="0" />
+            app:r0x7f040429="0"
+            app:r0x7f04042f="0"
+            app:r0x7f040447="0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

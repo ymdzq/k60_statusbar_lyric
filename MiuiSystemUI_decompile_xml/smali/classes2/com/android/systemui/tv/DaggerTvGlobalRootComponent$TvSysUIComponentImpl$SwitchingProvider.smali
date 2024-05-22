@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Ljavax/inject/Provider;
@@ -36949,27 +36949,13 @@
 
     .line 80
     :pswitch_3c
-    new-instance v1, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;
-
-    iget-object v0, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
-
-    invoke-static {v0}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;->-$$Nest$fgetcontext(Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;)Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-direct {v1, v0}, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;-><init>(Landroid/content/Context;)V
-
-    return-object v1
-
-    .line 81
-    :pswitch_3d
     new-instance v1, Lcom/android/systemui/controlcenter/policy/SlaveWifiHelper;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
 
     invoke-static {v2}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;->-$$Nest$fgetcontext(Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;)Landroid/content/Context;
 
-    move-result-object v3
+    move-result-object v14
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
@@ -36981,9 +36967,9 @@
 
     move-result-object v2
 
-    move-object v4, v2
+    move-object v15, v2
 
-    check-cast v4, Lcom/android/systemui/broadcast/BroadcastDispatcher;
+    check-cast v15, Lcom/android/systemui/broadcast/BroadcastDispatcher;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
@@ -36995,9 +36981,9 @@
 
     move-result-object v2
 
-    move-object v5, v2
+    move-object/from16 v16, v2
 
-    check-cast v5, Lcom/android/systemui/controlcenter/policy/ControlCenterControllerImpl;
+    check-cast v16, Lcom/android/systemui/controlcenter/policy/ControlCenterControllerImpl;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
@@ -37009,9 +36995,9 @@
 
     move-result-object v2
 
-    move-object v6, v2
+    move-object/from16 v17, v2
 
-    check-cast v6, Lcom/android/systemui/statusbar/connectivity/AccessPointController;
+    check-cast v17, Lcom/android/systemui/statusbar/connectivity/AccessPointController;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
@@ -37023,9 +37009,9 @@
 
     move-result-object v2
 
-    move-object v7, v2
+    move-object/from16 v18, v2
 
-    check-cast v7, Ljava/util/concurrent/Executor;
+    check-cast v18, Ljava/util/concurrent/Executor;
 
     iget-object v0, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
 
@@ -37037,18 +37023,18 @@
 
     move-result-object v0
 
-    move-object v8, v0
+    move-object/from16 v19, v0
 
-    check-cast v8, Landroid/os/Handler;
+    check-cast v19, Landroid/os/Handler;
 
-    move-object v2, v1
+    move-object v13, v1
 
-    invoke-direct/range {v2 .. v8}, Lcom/android/systemui/controlcenter/policy/SlaveWifiHelper;-><init>(Landroid/content/Context;Lcom/android/systemui/broadcast/BroadcastDispatcher;Lcom/android/systemui/controlcenter/policy/ControlCenterControllerImpl;Lcom/android/systemui/statusbar/connectivity/AccessPointController;Ljava/util/concurrent/Executor;Landroid/os/Handler;)V
+    invoke-direct/range {v13 .. v19}, Lcom/android/systemui/controlcenter/policy/SlaveWifiHelper;-><init>(Landroid/content/Context;Lcom/android/systemui/broadcast/BroadcastDispatcher;Lcom/android/systemui/controlcenter/policy/ControlCenterControllerImpl;Lcom/android/systemui/statusbar/connectivity/AccessPointController;Ljava/util/concurrent/Executor;Landroid/os/Handler;)V
 
     return-object v1
 
-    .line 82
-    :pswitch_3e
+    .line 81
+    :pswitch_3d
     new-instance v1, Lcom/android/systemui/qs/tiles/MiuiWifiTile;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
@@ -37061,9 +37047,9 @@
 
     move-result-object v2
 
-    move-object v10, v2
+    move-object/from16 v21, v2
 
-    check-cast v10, Lcom/android/systemui/qs/QSHost;
+    check-cast v21, Lcom/android/systemui/qs/QSHost;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
@@ -37075,9 +37061,9 @@
 
     move-result-object v2
 
-    move-object v11, v2
+    move-object/from16 v22, v2
 
-    check-cast v11, Lcom/android/systemui/qs/QsEventLogger;
+    check-cast v22, Lcom/android/systemui/qs/QsEventLogger;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
@@ -37089,9 +37075,9 @@
 
     move-result-object v2
 
-    move-object v12, v2
+    move-object/from16 v23, v2
 
-    check-cast v12, Landroid/os/Looper;
+    check-cast v23, Landroid/os/Looper;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
 
@@ -37103,9 +37089,9 @@
 
     move-result-object v2
 
-    move-object v13, v2
+    move-object/from16 v24, v2
 
-    check-cast v13, Landroid/os/Handler;
+    check-cast v24, Landroid/os/Handler;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
@@ -37117,9 +37103,9 @@
 
     move-result-object v2
 
-    move-object v14, v2
+    move-object/from16 v25, v2
 
-    check-cast v14, Lcom/android/systemui/plugins/FalsingManager;
+    check-cast v25, Lcom/android/systemui/plugins/FalsingManager;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
 
@@ -37131,9 +37117,9 @@
 
     move-result-object v2
 
-    move-object v15, v2
+    move-object/from16 v26, v2
 
-    check-cast v15, Lcom/android/internal/logging/MetricsLogger;
+    check-cast v26, Lcom/android/internal/logging/MetricsLogger;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
@@ -37145,9 +37131,9 @@
 
     move-result-object v2
 
-    move-object/from16 v16, v2
+    move-object/from16 v27, v2
 
-    check-cast v16, Lcom/android/systemui/plugins/statusbar/StatusBarStateController;
+    check-cast v27, Lcom/android/systemui/plugins/statusbar/StatusBarStateController;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
@@ -37159,9 +37145,9 @@
 
     move-result-object v2
 
-    move-object/from16 v17, v2
+    move-object/from16 v28, v2
 
-    check-cast v17, Lcom/android/systemui/plugins/ActivityStarter;
+    check-cast v28, Lcom/android/systemui/plugins/ActivityStarter;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
@@ -37173,9 +37159,9 @@
 
     move-result-object v2
 
-    move-object/from16 v18, v2
+    move-object/from16 v29, v2
 
-    check-cast v18, Lcom/android/systemui/qs/logging/QSLogger;
+    check-cast v29, Lcom/android/systemui/qs/logging/QSLogger;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
@@ -37187,9 +37173,9 @@
 
     move-result-object v2
 
-    move-object/from16 v19, v2
+    move-object/from16 v30, v2
 
-    check-cast v19, Lcom/android/systemui/statusbar/connectivity/NetworkController;
+    check-cast v30, Lcom/android/systemui/statusbar/connectivity/NetworkController;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
@@ -37201,9 +37187,9 @@
 
     move-result-object v2
 
-    move-object/from16 v20, v2
+    move-object/from16 v31, v2
 
-    check-cast v20, Lcom/android/systemui/statusbar/connectivity/AccessPointController;
+    check-cast v31, Lcom/android/systemui/statusbar/connectivity/AccessPointController;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
@@ -37215,9 +37201,9 @@
 
     move-result-object v2
 
-    move-object/from16 v21, v2
+    move-object/from16 v32, v2
 
-    check-cast v21, Lcom/android/systemui/controlcenter/policy/SlaveWifiHelper;
+    check-cast v32, Lcom/android/systemui/controlcenter/policy/SlaveWifiHelper;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
@@ -37229,9 +37215,9 @@
 
     move-result-object v2
 
-    move-object/from16 v22, v2
+    move-object/from16 v33, v2
 
-    check-cast v22, Lcom/android/systemui/controlcenter/policy/ShareNetworkController;
+    check-cast v33, Lcom/android/systemui/controlcenter/policy/ShareNetworkController;
 
     iget-object v0, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
@@ -37243,18 +37229,18 @@
 
     move-result-object v0
 
-    move-object/from16 v23, v0
+    move-object/from16 v34, v0
 
-    check-cast v23, Lcom/android/systemui/controlcenter/policy/SltController;
+    check-cast v34, Lcom/android/systemui/controlcenter/policy/SltController;
 
-    move-object v9, v1
+    move-object/from16 v20, v1
 
-    invoke-direct/range {v9 .. v23}, Lcom/android/systemui/qs/tiles/MiuiWifiTile;-><init>(Lcom/android/systemui/qs/QSHost;Lcom/android/systemui/qs/QsEventLogger;Landroid/os/Looper;Landroid/os/Handler;Lcom/android/systemui/plugins/FalsingManager;Lcom/android/internal/logging/MetricsLogger;Lcom/android/systemui/plugins/statusbar/StatusBarStateController;Lcom/android/systemui/plugins/ActivityStarter;Lcom/android/systemui/qs/logging/QSLogger;Lcom/android/systemui/statusbar/connectivity/NetworkController;Lcom/android/systemui/statusbar/connectivity/AccessPointController;Lcom/android/systemui/controlcenter/policy/SlaveWifiHelper;Lcom/android/systemui/controlcenter/policy/ShareNetworkController;Lcom/android/systemui/controlcenter/policy/SltController;)V
+    invoke-direct/range {v20 .. v34}, Lcom/android/systemui/qs/tiles/MiuiWifiTile;-><init>(Lcom/android/systemui/qs/QSHost;Lcom/android/systemui/qs/QsEventLogger;Landroid/os/Looper;Landroid/os/Handler;Lcom/android/systemui/plugins/FalsingManager;Lcom/android/internal/logging/MetricsLogger;Lcom/android/systemui/plugins/statusbar/StatusBarStateController;Lcom/android/systemui/plugins/ActivityStarter;Lcom/android/systemui/qs/logging/QSLogger;Lcom/android/systemui/statusbar/connectivity/NetworkController;Lcom/android/systemui/statusbar/connectivity/AccessPointController;Lcom/android/systemui/controlcenter/policy/SlaveWifiHelper;Lcom/android/systemui/controlcenter/policy/ShareNetworkController;Lcom/android/systemui/controlcenter/policy/SltController;)V
 
     return-object v1
 
-    .line 83
-    :pswitch_3f
+    .line 82
+    :pswitch_3e
     new-instance v1, Lcom/android/systemui/qs/tiles/MiuiNfcTile;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
@@ -37267,9 +37253,9 @@
 
     move-result-object v2
 
-    move-object/from16 v25, v2
+    move-object v3, v2
 
-    check-cast v25, Lcom/android/systemui/qs/QSHost;
+    check-cast v3, Lcom/android/systemui/qs/QSHost;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
@@ -37281,9 +37267,9 @@
 
     move-result-object v2
 
-    move-object/from16 v26, v2
+    move-object v4, v2
 
-    check-cast v26, Lcom/android/systemui/qs/QsEventLogger;
+    check-cast v4, Lcom/android/systemui/qs/QsEventLogger;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
@@ -37295,9 +37281,9 @@
 
     move-result-object v2
 
-    move-object/from16 v27, v2
+    move-object v5, v2
 
-    check-cast v27, Landroid/os/Looper;
+    check-cast v5, Landroid/os/Looper;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
 
@@ -37309,9 +37295,9 @@
 
     move-result-object v2
 
-    move-object/from16 v28, v2
+    move-object v6, v2
 
-    check-cast v28, Landroid/os/Handler;
+    check-cast v6, Landroid/os/Handler;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
@@ -37323,9 +37309,9 @@
 
     move-result-object v2
 
-    move-object/from16 v29, v2
+    move-object v7, v2
 
-    check-cast v29, Lcom/android/systemui/plugins/FalsingManager;
+    check-cast v7, Lcom/android/systemui/plugins/FalsingManager;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
 
@@ -37337,9 +37323,9 @@
 
     move-result-object v2
 
-    move-object/from16 v30, v2
+    move-object v8, v2
 
-    check-cast v30, Lcom/android/internal/logging/MetricsLogger;
+    check-cast v8, Lcom/android/internal/logging/MetricsLogger;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
@@ -37351,9 +37337,9 @@
 
     move-result-object v2
 
-    move-object/from16 v31, v2
+    move-object v9, v2
 
-    check-cast v31, Lcom/android/systemui/plugins/statusbar/StatusBarStateController;
+    check-cast v9, Lcom/android/systemui/plugins/statusbar/StatusBarStateController;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
@@ -37365,9 +37351,9 @@
 
     move-result-object v2
 
-    move-object/from16 v32, v2
+    move-object v10, v2
 
-    check-cast v32, Lcom/android/systemui/plugins/ActivityStarter;
+    check-cast v10, Lcom/android/systemui/plugins/ActivityStarter;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
@@ -37379,9 +37365,9 @@
 
     move-result-object v2
 
-    move-object/from16 v33, v2
+    move-object v11, v2
 
-    check-cast v33, Lcom/android/systemui/qs/logging/QSLogger;
+    check-cast v11, Lcom/android/systemui/qs/logging/QSLogger;
 
     iget-object v0, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
@@ -37393,18 +37379,18 @@
 
     move-result-object v0
 
-    move-object/from16 v34, v0
+    move-object v12, v0
 
-    check-cast v34, Lcom/android/systemui/broadcast/BroadcastDispatcher;
+    check-cast v12, Lcom/android/systemui/broadcast/BroadcastDispatcher;
 
-    move-object/from16 v24, v1
+    move-object v2, v1
 
-    invoke-direct/range {v24 .. v34}, Lcom/android/systemui/qs/tiles/MiuiNfcTile;-><init>(Lcom/android/systemui/qs/QSHost;Lcom/android/systemui/qs/QsEventLogger;Landroid/os/Looper;Landroid/os/Handler;Lcom/android/systemui/plugins/FalsingManager;Lcom/android/internal/logging/MetricsLogger;Lcom/android/systemui/plugins/statusbar/StatusBarStateController;Lcom/android/systemui/plugins/ActivityStarter;Lcom/android/systemui/qs/logging/QSLogger;Lcom/android/systemui/broadcast/BroadcastDispatcher;)V
+    invoke-direct/range {v2 .. v12}, Lcom/android/systemui/qs/tiles/MiuiNfcTile;-><init>(Lcom/android/systemui/qs/QSHost;Lcom/android/systemui/qs/QsEventLogger;Landroid/os/Looper;Landroid/os/Handler;Lcom/android/systemui/plugins/FalsingManager;Lcom/android/internal/logging/MetricsLogger;Lcom/android/systemui/plugins/statusbar/StatusBarStateController;Lcom/android/systemui/plugins/ActivityStarter;Lcom/android/systemui/qs/logging/QSLogger;Lcom/android/systemui/broadcast/BroadcastDispatcher;)V
 
     return-object v1
 
-    .line 84
-    :pswitch_40
+    .line 83
+    :pswitch_3f
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "CCBluetooth"
@@ -37413,21 +37399,21 @@
 
     invoke-direct {v0, v1, v2}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;I)V
 
-    .line 85
+    .line 84
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 86
+    .line 85
     invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
 
     move-result-object v0
 
-    .line 87
+    .line 86
     invoke-static {v0}, Ldagger/internal/Preconditions;->checkNotNullFromProvides(Ljava/lang/Object;)V
 
     return-object v0
 
-    .line 88
-    :pswitch_41
+    .line 87
+    :pswitch_40
     new-instance v13, Lcom/android/systemui/qs/tiles/MiuiBluetoothTile;
 
     iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
@@ -37582,8 +37568,8 @@
 
     return-object v13
 
-    .line 89
-    :pswitch_42
+    .line 88
+    :pswitch_41
     new-instance v1, Lcom/android/systemui/qs/tiles/MiuiLocationTile;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
@@ -37760,8 +37746,8 @@
 
     return-object v1
 
-    .line 90
-    :pswitch_43
+    .line 89
+    :pswitch_42
     new-instance v1, Lcom/android/systemui/qs/tiles/MiuiAirplaneModeTile;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
@@ -37962,8 +37948,8 @@
 
     return-object v1
 
-    .line 91
-    :pswitch_44
+    .line 90
+    :pswitch_43
     new-instance v1, Lcom/android/systemui/qs/tiles/VibrateTile;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
@@ -38112,8 +38098,8 @@
 
     return-object v1
 
-    .line 92
-    :pswitch_45
+    .line 91
+    :pswitch_44
     new-instance v1, Lcom/android/systemui/qs/tiles/SyncTile;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
@@ -38248,8 +38234,8 @@
 
     return-object v1
 
-    .line 93
-    :pswitch_46
+    .line 92
+    :pswitch_45
     new-instance v1, Lcom/android/systemui/qs/tiles/ScreenShotTile;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
@@ -38384,8 +38370,8 @@
 
     return-object v1
 
-    .line 94
-    :pswitch_47
+    .line 93
+    :pswitch_46
     new-instance v1, Lcom/android/systemui/qs/tiles/ScreenLockTile;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
@@ -38520,8 +38506,8 @@
 
     return-object v1
 
-    .line 95
-    :pswitch_48
+    .line 94
+    :pswitch_47
     new-instance v1, Lcom/android/systemui/qs/tiles/QuietModeTile;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
@@ -38676,8 +38662,8 @@
 
     return-object v1
 
-    .line 96
-    :pswitch_49
+    .line 95
+    :pswitch_48
     new-instance v1, Lcom/android/systemui/qs/tiles/PowerSaverTile;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
@@ -38812,8 +38798,8 @@
 
     return-object v1
 
-    .line 97
-    :pswitch_4a
+    .line 96
+    :pswitch_49
     new-instance v1, Lcom/android/systemui/statusbar/policy/PaperModeControllerImpl;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
@@ -38862,8 +38848,8 @@
 
     return-object v1
 
-    .line 98
-    :pswitch_4b
+    .line 97
+    :pswitch_4a
     new-instance v1, Lcom/android/systemui/qs/tiles/PaperModeTile;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
@@ -39012,8 +38998,8 @@
 
     return-object v1
 
-    .line 99
-    :pswitch_4c
+    .line 98
+    :pswitch_4b
     new-instance v1, Lcom/android/systemui/qs/tiles/NightModeTile;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
@@ -39148,8 +39134,8 @@
 
     return-object v1
 
-    .line 100
-    :pswitch_4d
+    .line 99
+    :pswitch_4c
     new-instance v1, Lcom/android/systemui/util/RingerModeTrackerImpl;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
@@ -39192,8 +39178,8 @@
 
     return-object v1
 
-    .line 101
-    :pswitch_4e
+    .line 100
+    :pswitch_4d
     new-instance v1, Lcom/android/systemui/qs/tiles/MuteTile;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
@@ -39342,8 +39328,8 @@
 
     return-object v1
 
-    .line 102
-    :pswitch_4f
+    .line 101
+    :pswitch_4e
     new-instance v1, Lcom/android/systemui/qs/tiles/MiuiHotspotTile;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
@@ -39534,6 +39520,26 @@
 
     return-object v1
 
+    .line 102
+    :pswitch_4f
+    new-instance v1, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;
+
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
+
+    invoke-static {v2}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;->-$$Nest$fgetcontext(Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;)Landroid/content/Context;
+
+    move-result-object v2
+
+    iget-object v0, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    invoke-static {v0}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->-$$Nest$mcontrolCenterHandler(Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;)Landroid/os/Handler;
+
+    move-result-object v0
+
+    invoke-direct {v1, v2, v0}, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;-><init>(Landroid/content/Context;Landroid/os/Handler;)V
+
+    return-object v1
+
     .line 103
     :pswitch_50
     new-instance v1, Lcom/android/systemui/controlcenter/policy/DataUsageInfoController;
@@ -39669,6 +39675,8 @@
     .line 106
     :pswitch_53
     new-instance v1, Lcom/android/systemui/qs/tiles/MiuiCellularTile;
+
+    move-object v4, v1
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
@@ -39856,9 +39864,37 @@
 
     check-cast v17, Lcom/android/systemui/controlcenter/policy/DataUsageInfoController;
 
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    invoke-static {v2}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->-$$Nest$fgetcentralSurfacesImplProvider(Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;)Ljavax/inject/Provider;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    move-result-object v2
+
+    move-object/from16 v18, v2
+
+    check-cast v18, Lcom/android/systemui/statusbar/phone/CentralSurfaces;
+
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    invoke-static {v2}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->-$$Nest$fgetprovideUserTrackerProvider(Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;)Ljavax/inject/Provider;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    move-result-object v2
+
+    move-object/from16 v19, v2
+
+    check-cast v19, Lcom/android/systemui/settings/UserTracker;
+
     iget-object v0, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
-    invoke-static {v0}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->-$$Nest$fgetcentralSurfacesImplProvider(Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;)Ljavax/inject/Provider;
+    invoke-static {v0}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->-$$Nest$fgetshareNetworkControllerImplProvider(Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;)Ljavax/inject/Provider;
 
     move-result-object v0
 
@@ -39866,13 +39902,11 @@
 
     move-result-object v0
 
-    move-object/from16 v18, v0
+    move-object/from16 v20, v0
 
-    check-cast v18, Lcom/android/systemui/statusbar/phone/CentralSurfaces;
+    check-cast v20, Lcom/android/systemui/controlcenter/policy/ShareNetworkController;
 
-    move-object v4, v1
-
-    invoke-direct/range {v4 .. v18}, Lcom/android/systemui/qs/tiles/MiuiCellularTile;-><init>(Lcom/android/systemui/qs/QSHost;Lcom/android/systemui/qs/QsEventLogger;Landroid/os/Looper;Landroid/os/Handler;Lcom/android/systemui/plugins/FalsingManager;Lcom/android/internal/logging/MetricsLogger;Lcom/android/systemui/plugins/statusbar/StatusBarStateController;Lcom/android/systemui/plugins/ActivityStarter;Lcom/android/systemui/qs/logging/QSLogger;Lcom/android/systemui/statusbar/connectivity/NetworkController;Lcom/android/systemui/controlcenter/policy/ThermalController;Lcom/android/systemui/controlcenter/policy/SltController;Lcom/android/systemui/controlcenter/policy/DataUsageInfoController;Lcom/android/systemui/statusbar/phone/CentralSurfaces;)V
+    invoke-direct/range {v4 .. v20}, Lcom/android/systemui/qs/tiles/MiuiCellularTile;-><init>(Lcom/android/systemui/qs/QSHost;Lcom/android/systemui/qs/QsEventLogger;Landroid/os/Looper;Landroid/os/Handler;Lcom/android/systemui/plugins/FalsingManager;Lcom/android/internal/logging/MetricsLogger;Lcom/android/systemui/plugins/statusbar/StatusBarStateController;Lcom/android/systemui/plugins/ActivityStarter;Lcom/android/systemui/qs/logging/QSLogger;Lcom/android/systemui/statusbar/connectivity/NetworkController;Lcom/android/systemui/controlcenter/policy/ThermalController;Lcom/android/systemui/controlcenter/policy/SltController;Lcom/android/systemui/controlcenter/policy/DataUsageInfoController;Lcom/android/systemui/statusbar/phone/CentralSurfaces;Lcom/android/systemui/settings/UserTracker;Lcom/android/systemui/controlcenter/policy/ShareNetworkController;)V
 
     return-object v1
 
@@ -39890,9 +39924,9 @@
 
     move-result-object v2
 
-    move-object/from16 v20, v2
+    move-object/from16 v22, v2
 
-    check-cast v20, Lcom/android/systemui/qs/QSHost;
+    check-cast v22, Lcom/android/systemui/qs/QSHost;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
@@ -39904,9 +39938,9 @@
 
     move-result-object v2
 
-    move-object/from16 v21, v2
+    move-object/from16 v23, v2
 
-    check-cast v21, Lcom/android/systemui/qs/QsEventLogger;
+    check-cast v23, Lcom/android/systemui/qs/QsEventLogger;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
@@ -39918,9 +39952,9 @@
 
     move-result-object v2
 
-    move-object/from16 v22, v2
+    move-object/from16 v24, v2
 
-    check-cast v22, Landroid/os/Looper;
+    check-cast v24, Landroid/os/Looper;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
 
@@ -39932,9 +39966,9 @@
 
     move-result-object v2
 
-    move-object/from16 v23, v2
+    move-object/from16 v25, v2
 
-    check-cast v23, Landroid/os/Handler;
+    check-cast v25, Landroid/os/Handler;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
@@ -39946,9 +39980,9 @@
 
     move-result-object v2
 
-    move-object/from16 v24, v2
+    move-object/from16 v26, v2
 
-    check-cast v24, Lcom/android/systemui/plugins/FalsingManager;
+    check-cast v26, Lcom/android/systemui/plugins/FalsingManager;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
 
@@ -39960,9 +39994,9 @@
 
     move-result-object v2
 
-    move-object/from16 v25, v2
+    move-object/from16 v27, v2
 
-    check-cast v25, Lcom/android/internal/logging/MetricsLogger;
+    check-cast v27, Lcom/android/internal/logging/MetricsLogger;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
@@ -39974,9 +40008,9 @@
 
     move-result-object v2
 
-    move-object/from16 v26, v2
+    move-object/from16 v28, v2
 
-    check-cast v26, Lcom/android/systemui/plugins/statusbar/StatusBarStateController;
+    check-cast v28, Lcom/android/systemui/plugins/statusbar/StatusBarStateController;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
@@ -39988,9 +40022,9 @@
 
     move-result-object v2
 
-    move-object/from16 v27, v2
+    move-object/from16 v29, v2
 
-    check-cast v27, Lcom/android/systemui/plugins/ActivityStarter;
+    check-cast v29, Lcom/android/systemui/plugins/ActivityStarter;
 
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
@@ -40002,9 +40036,9 @@
 
     move-result-object v2
 
-    move-object/from16 v28, v2
+    move-object/from16 v30, v2
 
-    check-cast v28, Lcom/android/systemui/qs/logging/QSLogger;
+    check-cast v30, Lcom/android/systemui/qs/logging/QSLogger;
 
     iget-object v0, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
@@ -40016,13 +40050,13 @@
 
     move-result-object v0
 
-    move-object/from16 v29, v0
+    move-object/from16 v31, v0
 
-    check-cast v29, Lcom/android/systemui/statusbar/policy/FlashlightController;
+    check-cast v31, Lcom/android/systemui/statusbar/policy/FlashlightController;
 
-    move-object/from16 v19, v1
+    move-object/from16 v21, v1
 
-    invoke-direct/range {v19 .. v29}, Lcom/android/systemui/qs/tiles/MiuiFlashlightTile;-><init>(Lcom/android/systemui/qs/QSHost;Lcom/android/systemui/qs/QsEventLogger;Landroid/os/Looper;Landroid/os/Handler;Lcom/android/systemui/plugins/FalsingManager;Lcom/android/internal/logging/MetricsLogger;Lcom/android/systemui/plugins/statusbar/StatusBarStateController;Lcom/android/systemui/plugins/ActivityStarter;Lcom/android/systemui/qs/logging/QSLogger;Lcom/android/systemui/statusbar/policy/FlashlightController;)V
+    invoke-direct/range {v21 .. v31}, Lcom/android/systemui/qs/tiles/MiuiFlashlightTile;-><init>(Lcom/android/systemui/qs/QSHost;Lcom/android/systemui/qs/QsEventLogger;Landroid/os/Looper;Landroid/os/Handler;Lcom/android/systemui/plugins/FalsingManager;Lcom/android/internal/logging/MetricsLogger;Lcom/android/systemui/plugins/statusbar/StatusBarStateController;Lcom/android/systemui/plugins/ActivityStarter;Lcom/android/systemui/qs/logging/QSLogger;Lcom/android/systemui/statusbar/policy/FlashlightController;)V
 
     return-object v1
 

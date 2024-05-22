@@ -1,17 +1,17 @@
 <?xml version='1.0' encoding='utf-8' ?>
-<com.android.wm.shell.compatui.LetterboxEduDialogLayout style="@style/LetterboxDialog" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto">
+<com.android.wm.shell.compatui.LetterboxEduDialogLayout style="@style/LetterboxDialog" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:androidprv="http://schemas.android.com/apk/prv/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <FrameLayout android:id="@id/letterbox_education_dialog_container"
                android:background="@drawable/letterbox_education_dialog_background"
                android:layout_width="0.0dp"
                android:layout_height="wrap_content"
                android:alpha="0.0"
                android:layout_marginHorizontal="@dimen/letterbox_education_dialog_margin"
-               systemui:r0x7f040422="true"
-               systemui:r0x7f040429="0"
-               systemui:r0x7f04042f="0"
-               systemui:r0x7f040443="0"
-               systemui:r0x7f040447="0"
-               systemui:layout_constraintWidth_max="@dimen/letterbox_education_dialog_width">
+               app:r0x7f040422="true"
+               app:r0x7f040429="0"
+               app:r0x7f04042f="0"
+               app:r0x7f040443="0"
+               app:r0x7f040447="0"
+               app:layout_constraintWidth_max="@dimen/letterbox_education_dialog_width">
     <ScrollView android:layout_width="fill_parent"
                 android:layout_height="wrap_content">
       <LinearLayout android:gravity="center_horizontal"
@@ -43,13 +43,13 @@
                       android:layout_height="wrap_content">
           <com.android.wm.shell.compatui.LetterboxEduDialogActionLayout android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                systemui:r0x7f0403aa="@drawable/letterbox_education_ic_reposition"
-                                systemui:r0x7f0407e1="@string/letterbox_education_reposition_text" />
+                                app:r0x7f0403aa="@drawable/letterbox_education_ic_reposition"
+                                app:r0x7f0407e1="@string/letterbox_education_reposition_text" />
           <com.android.wm.shell.compatui.LetterboxEduDialogActionLayout android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="@dimen/letterbox_education_dialog_space_between_actions"
-                                systemui:r0x7f0403aa="@drawable/letterbox_education_ic_split_screen"
-                                systemui:r0x7f0407e1="@string/letterbox_education_split_screen_text" />
+                                app:r0x7f0403aa="@drawable/letterbox_education_ic_split_screen"
+                                app:r0x7f0407e1="@string/letterbox_education_split_screen_text" />
         </LinearLayout>
         <Button android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
                 android:textSize="14.0sp"

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8' ?>
-<PreferenceScreen android:title="@string/miui_lab_settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+<PreferenceScreen android:title="@string/miui_lab_settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
   <PreferenceCategory android:title="@string/miui_lab_features"
                       android:key="miui_lab_features">
     <com.android.settingslib.miuisettings.preference.ValuePreference android:icon="@drawable/ic_drive_mode"

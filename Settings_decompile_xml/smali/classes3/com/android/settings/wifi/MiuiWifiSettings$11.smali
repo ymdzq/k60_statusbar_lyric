@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/android/settings/wifi/MiuiWifiSettings;)V
     .locals 0
 
-    .line 2184
+    .line 2202
     iput-object p1, p0, Lcom/android/settings/wifi/MiuiWifiSettings$11;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -35,7 +35,7 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 9
 
-    .line 2187
+    .line 2205
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/16 v1, 0x5001
@@ -52,12 +52,12 @@
 
     if-nez v0, :cond_0
 
-    .line 2188
+    .line 2206
     iget-object p1, p0, Lcom/android/settings/wifi/MiuiWifiSettings$11;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-static {p1, v2}, Lcom/android/settings/wifi/MiuiWifiSettings;->access$102(Lcom/android/settings/wifi/MiuiWifiSettings;Z)Z
 
-    .line 2189
+    .line 2207
     iget-object v4, p0, Lcom/android/settings/wifi/MiuiWifiSettings$11;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     const-class p0, Lcom/android/settings/wifi/dpp/MiuishowDppQrCodeFragment;
@@ -78,7 +78,7 @@
 
     goto :goto_0
 
-    .line 2191
+    .line 2209
     :cond_0
     iget p1, p1, Landroid/os/Message;->what:I
 
@@ -94,12 +94,12 @@
 
     if-nez p1, :cond_2
 
-    .line 2192
+    .line 2210
     iget-object p1, p0, Lcom/android/settings/wifi/MiuiWifiSettings$11;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-static {p1, v2}, Lcom/android/settings/wifi/MiuiWifiSettings;->access$302(Lcom/android/settings/wifi/MiuiWifiSettings;Z)Z
 
-    .line 2193
+    .line 2211
     iget-object p1, p0, Lcom/android/settings/wifi/MiuiWifiSettings$11;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -126,7 +126,7 @@
 
     goto :goto_0
 
-    .line 2196
+    .line 2214
     :cond_1
     new-instance p1, Lcom/android/settings/wifi/dpp/MiuiWifiDppUtils;
 
@@ -138,7 +138,7 @@
 
     invoke-direct {p1, v0}, Lcom/android/settings/wifi/dpp/MiuiWifiDppUtils;-><init>(Landroid/content/Context;)V
 
-    .line 2197
+    .line 2215
     iget-object v0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$11;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-static {v0}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$fgetmWifiQrcode(Lcom/android/settings/wifi/MiuiWifiSettings;)Lcom/android/settings/wifi/dpp/WifiQrCode;
@@ -147,7 +147,7 @@
 
     invoke-virtual {p1, v0}, Lcom/android/settings/wifi/dpp/MiuiWifiDppUtils;->setWifiQrCode(Lcom/android/settings/wifi/dpp/WifiQrCode;)V
 
-    .line 2198
+    .line 2216
     iget-object p0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$11;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-static {p0}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$fgetmWifiNetworkConfig(Lcom/android/settings/wifi/MiuiWifiSettings;)Lcom/android/settings/wifi/dpp/WifiNetworkConfig;
@@ -156,7 +156,7 @@
 
     invoke-virtual {p1, p0}, Lcom/android/settings/wifi/dpp/MiuiWifiDppUtils;->setWifiNetworkConfig(Lcom/android/settings/wifi/dpp/WifiNetworkConfig;)V
 
-    .line 2199
+    .line 2217
     invoke-virtual {p1}, Lcom/android/settings/wifi/dpp/MiuiWifiDppUtils;->showWifiShareDialog()V
 
     nop

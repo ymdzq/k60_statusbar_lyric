@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8' ?>
-<PreferenceScreen android:key="root" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+<PreferenceScreen android:key="root" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <PreferenceCategory android:key="block_category"
                       android:order="1">
     <CheckBoxPreference android:persistent="false"
@@ -14,9 +14,9 @@
     <miuix.preference.DropDownPreference android:persistent="false"
                           android:title="@string/importance_title"
                           android:key="importance"
-                          settings:entries="@array/notifi_importance_entries"
-                          settings:entrySummaries="@array/notifi_importance_summaries"
-                          settings:entryValues="@array/notifi_importance_values" />
+                          app:entries="@array/notifi_importance_entries"
+                          app:entrySummaries="@array/notifi_importance_summaries"
+                          app:entryValues="@array/notifi_importance_values" />
     <CheckBoxPreference android:persistent="false"
                         android:title="@string/allow_float_title"
                         android:key="allow_float"

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8' ?>
-<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto">
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <TextView android:ellipsize="marquee"
             android:gravity="center|top"
             android:id="@id/remove_text"
@@ -12,10 +12,10 @@
             android:fontFamily="@android:string/config_wearMediaControlsPackage"
             android:layout_marginStart="@dimen/qs_media_padding"
             android:layout_marginEnd="@dimen/qs_media_padding"
-            systemui:r0x7f04042a="@id/cancel"
-            systemui:r0x7f04042f="0"
-            systemui:r0x7f040443="0"
-            systemui:r0x7f040446="@id/settings" />
+            app:r0x7f04042a="@id/cancel"
+            app:r0x7f04042f="0"
+            app:r0x7f040443="0"
+            app:r0x7f040446="@id/settings" />
   <ImageButton android:layout_gravity="top"
                android:id="@id/settings"
                android:background="@drawable/qs_media_light_source"
@@ -25,10 +25,10 @@
                android:src="@drawable/ic_settings"
                android:contentDescription="@string/controls_media_settings_button"
                android:layout_marginEnd="4.0dp"
-               systemui:r0x7f04042f="0"
-               systemui:r0x7f040437="@dimen/min_clickable_item_size"
-               systemui:r0x7f040447="0"
-               systemui:r0x7f04044e="@dimen/min_clickable_item_size" />
+               app:r0x7f04042f="0"
+               app:r0x7f040437="@dimen/min_clickable_item_size"
+               app:r0x7f040447="0"
+               app:r0x7f04044e="@dimen/min_clickable_item_size" />
   <FrameLayout android:id="@id/dismiss"
                android:background="@drawable/qs_media_light_source"
                android:layout_width="wrap_content"
@@ -36,20 +36,20 @@
                android:layout_marginBottom="@dimen/qs_media_padding"
                android:layout_marginStart="@dimen/qs_media_padding"
                android:layout_marginEnd="@dimen/qs_media_action_spacing"
-               systemui:r0x7f040423="true"
-               systemui:r0x7f040429="0"
-               systemui:r0x7f040430="@id/cancel"
-               systemui:r0x7f040437="@dimen/min_clickable_item_size"
-               systemui:r0x7f04043a="2"
-               systemui:r0x7f040443="0"
-               systemui:r0x7f040446="@id/remove_text">
+               app:r0x7f040423="true"
+               app:r0x7f040429="0"
+               app:r0x7f040430="@id/cancel"
+               app:r0x7f040437="@dimen/min_clickable_item_size"
+               app:r0x7f04043a="2"
+               app:r0x7f040443="0"
+               app:r0x7f040446="@id/remove_text">
     <TextView android:layout_gravity="center|top"
               android:id="@id/dismiss_text"
               android:background="@drawable/qs_media_solid_button"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:text="@string/controls_media_dismiss_button"
-              systemui:r0x7f04044e="@dimen/min_clickable_item_size"
+              app:r0x7f04044e="@dimen/min_clickable_item_size"
               style="@style/MediaPlayer.SolidButton" />
   </FrameLayout>
   <FrameLayout android:id="@id/cancel"
@@ -59,13 +59,13 @@
                android:layout_marginBottom="@dimen/qs_media_padding"
                android:layout_marginStart="@dimen/qs_media_action_spacing"
                android:layout_marginEnd="@dimen/qs_media_padding"
-               systemui:r0x7f040423="true"
-               systemui:r0x7f040429="0"
-               systemui:r0x7f04042f="0"
-               systemui:r0x7f040437="@dimen/min_clickable_item_size"
-               systemui:r0x7f040442="@id/dismiss"
-               systemui:r0x7f040446="@id/remove_text"
-               systemui:r0x7f04044e="@dimen/min_clickable_item_size">
+               app:r0x7f040423="true"
+               app:r0x7f040429="0"
+               app:r0x7f04042f="0"
+               app:r0x7f040437="@dimen/min_clickable_item_size"
+               app:r0x7f040442="@id/dismiss"
+               app:r0x7f040446="@id/remove_text"
+               app:r0x7f04044e="@dimen/min_clickable_item_size">
     <TextView android:layout_gravity="center|top"
               android:id="@id/cancel_text"
               android:layout_width="wrap_content"

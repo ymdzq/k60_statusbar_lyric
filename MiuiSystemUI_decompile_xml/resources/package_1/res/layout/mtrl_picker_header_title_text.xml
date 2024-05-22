@@ -4,5 +4,5 @@
           android:id="@id/mtrl_picker_title_text"
           android:layout_width="fill_parent"
           android:layout_height="wrap_content"
-          systemui:r0x7f0402f1="@dimen/mtrl_calendar_title_baseline_to_top"
-          style="?attr/materialCalendarHeaderTitle" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto" />
+          app:r0x7f0402f1="@dimen/mtrl_calendar_title_baseline_to_top"
+          style="?attr/materialCalendarHeaderTitle" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

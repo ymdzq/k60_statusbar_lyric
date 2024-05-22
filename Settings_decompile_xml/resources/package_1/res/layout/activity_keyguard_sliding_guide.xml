@@ -3,7 +3,7 @@
               android:orientation="vertical"
               android:id="@id/followGuide"
               android:layout_width="fill_parent"
-              android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+              android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <LinearLayout android:orientation="vertical"
                 android:layout_width="fill_parent"
                 android:layout_height="@dimen/exit_linearlayout_height"
@@ -68,9 +68,9 @@
               android:layout_height="wrap_content"
               android:minHeight="@dimen/guide_button_height"
               android:text="@string/guide_button_text"
-              settings:layout_constraintEnd_toEndOf="parent"
-              settings:layout_constraintStart_toStartOf="parent"
-              settings:layout_constraintWidth_max="@dimen/guide_button_width"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintWidth_max="@dimen/guide_button_width"
               style="@style/Widget.Button" />
     </androidx.constraintlayout.widget.ConstraintLayout>
   </LinearLayout>

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/KeyguardIndicationController$BaseKeyguardCallback;
 .super Lcom/android/keyguard/KeyguardUpdateMonitorCallback;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # instance fields
@@ -998,7 +998,7 @@
     iget-object v0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mContext:Landroid/content/Context;
 
     .line 4
-    const v1, 0x7f130a2e    # @string/require_unlock_for_nfc 'Unlock to use NFC'
+    const v1, 0x7f130a34    # @string/require_unlock_for_nfc 'Unlock to use NFC'
 
     .line 6
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;

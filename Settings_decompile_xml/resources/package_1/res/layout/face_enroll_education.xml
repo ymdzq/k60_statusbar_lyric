@@ -2,8 +2,8 @@
 <com.google.android.setupdesign.GlifLayout android:id="@id/setup_wizard_layout"
                       android:layout_width="fill_parent"
                       android:layout_height="fill_parent"
-                      settings:sucHeaderText="@string/security_settings_face_enroll_education_title"
-                      style="?attr/face_layout_theme" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+                      app:sucHeaderText="@string/security_settings_face_enroll_education_title"
+                      style="?attr/face_layout_theme" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <LinearLayout android:orientation="vertical"
                 android:clipChildren="false"
                 android:clipToPadding="false"
@@ -19,7 +19,7 @@
       <com.google.android.setupdesign.view.IllustrationVideoView android:id="@id/illustration_default"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            settings:sudVideo="@raw/face_education"
+                            app:sudVideo="@raw/face_education"
                             style="@style/SudContentIllustration" />
       <com.airbnb.lottie.LottieAnimationView android:id="@id/illustration_lottie"
                             android:visibility="gone"
@@ -27,9 +27,9 @@
                             android:layout_height="@dimen/illustration_lottie_height"
                             android:layout_marginTop="@dimen/lottie_animation_view_margin_top"
                             android:scaleType="centerInside"
-                            settings:lottie_autoPlay="true"
-                            settings:lottie_loop="true"
-                            settings:lottie_speed="1.5" />
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            app:lottie_speed="1.5" />
       <ImageView android:layout_gravity="center"
                  android:id="@id/illustration_accessibility"
                  android:visibility="invisible"
@@ -60,7 +60,7 @@
                               android:layout_width="fill_parent"
                               android:layout_height="wrap_content"
                               android:layout_marginTop="@dimen/limited_vision_button_toggle_margin_top"
-                              settings:messageText="@string/security_settings_face_enroll_introduction_accessibility" />
+                              app:messageText="@string/security_settings_face_enroll_introduction_accessibility" />
       </FrameLayout>
     </LinearLayout>
   </LinearLayout>

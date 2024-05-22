@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8' ?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:miui="http://schemas.android.com/apk/res/com.android.settings" xmlns:app="http://schemas.android.com/apk/res-auto">
   <miuix.preference.RadioButtonPreferenceCategory>
     <miuix.preference.RadioSetPreferenceCategory>
       <miuix.preference.RadioButtonPreference android:title="@string/private_dns_mode_off"
@@ -15,7 +15,7 @@
       <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/private_dns_mode_provider_custom_name"
                             android:key="private_dns_mode_provider_custom_name"
                             android:dependency="private_dns_mode_provider"
-                            settings:applyExtraPadding="false" />
+                            app:applyExtraPadding="false" />
     </miuix.preference.RadioSetPreferenceCategory>
   </miuix.preference.RadioButtonPreferenceCategory>
 </PreferenceScreen>

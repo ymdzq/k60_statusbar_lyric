@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/NotificationStatusBarSettings;->setupSmartDeviceControl()V
+    value = Lcom/android/settings/NotificationStatusBarSettings;->setupDeviceControl()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/android/settings/NotificationStatusBarSettings;)V
     .locals 0
 
-    .line 515
+    .line 514
     iput-object p1, p0, Lcom/android/settings/NotificationStatusBarSettings$6;->this$0:Lcom/android/settings/NotificationStatusBarSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,30 +38,30 @@
 .method public onPreferenceChange(Landroidx/preference/Preference;Ljava/lang/Object;)Z
     .locals 0
 
-    .line 518
+    .line 517
     iget-object p1, p0, Lcom/android/settings/NotificationStatusBarSettings$6;->this$0:Lcom/android/settings/NotificationStatusBarSettings;
 
     invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    check-cast p2, Ljava/lang/String;
+    check-cast p2, Ljava/lang/Boolean;
 
-    invoke-static {p2}, Lcom/android/settings/utils/Utils;->parseInt(Ljava/lang/String;)I
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p2
 
-    invoke-static {p1, p2}, Lcom/android/settings/utils/StatusBarUtils;->setSmartDeviceControl(Landroid/content/Context;I)V
+    invoke-static {p1, p2}, Lcom/android/settings/utils/StatusBarUtils;->setDeviceControl(Landroid/content/Context;Z)V
 
-    .line 519
+    .line 518
     iget-object p1, p0, Lcom/android/settings/NotificationStatusBarSettings$6;->this$0:Lcom/android/settings/NotificationStatusBarSettings;
 
-    invoke-static {p1}, Lcom/android/settings/NotificationStatusBarSettings;->-$$Nest$mupdateSmartDeviceControl(Lcom/android/settings/NotificationStatusBarSettings;)V
+    invoke-static {p1}, Lcom/android/settings/NotificationStatusBarSettings;->-$$Nest$mupdateDeviceControl(Lcom/android/settings/NotificationStatusBarSettings;)V
 
-    .line 520
+    .line 519
     iget-object p0, p0, Lcom/android/settings/NotificationStatusBarSettings$6;->this$0:Lcom/android/settings/NotificationStatusBarSettings;
 
-    invoke-static {p0}, Lcom/android/settings/NotificationStatusBarSettings;->-$$Nest$mupdateQuickControlAllDevices(Lcom/android/settings/NotificationStatusBarSettings;)V
+    invoke-static {p0}, Lcom/android/settings/NotificationStatusBarSettings;->-$$Nest$mupdateXiaomiSmartHub(Lcom/android/settings/NotificationStatusBarSettings;)V
 
     const/4 p0, 0x1
 

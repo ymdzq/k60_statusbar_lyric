@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/usb/UsbConfirmActivity;
 .super Lcom/android/systemui/usb/UsbDialogActivity;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # instance fields
@@ -232,14 +232,14 @@
     if-nez v1, :cond_1
 
     .line 32
-    const v1, 0x7f130c00    # @string/usb_audio_device_permission_prompt_title 'Allow %1$s to access %2$s?'
+    const v1, 0x7f130c06    # @string/usb_audio_device_permission_prompt_title 'Allow %1$s to access %2$s?'
 
     .line 34
     goto :goto_1
 
     .line 37
     :cond_1
-    const v1, 0x7f130bff    # @string/usb_audio_device_confirm_prompt_title 'Open %1$s to handle %2$s?'
+    const v1, 0x7f130c05    # @string/usb_audio_device_confirm_prompt_title 'Open %1$s to handle %2$s?'
 
     .line 38
     :goto_1

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/qs/tiles/AutoBrightnessTile;
 .super Lcom/android/systemui/qs/tileimpl/QSTileImpl;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # instance fields
@@ -142,7 +142,7 @@
     iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
 
     .line 2
-    const v0, 0x7f130957    # @string/quick_settings_autobrightness_label 'Auto brightness'
+    const v0, 0x7f13095b    # @string/quick_settings_autobrightness_label 'Auto brightness'
 
     .line 4
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -201,7 +201,7 @@
 
     .line 16
     :cond_0
-    const v0, 0x7f130959    # @string/quick_settings_autobrightness_state_change_message_on 'Auto brightness is on'
+    const v0, 0x7f13095d    # @string/quick_settings_autobrightness_state_change_message_on 'Auto brightness is on'
 
     .line 17
     invoke-virtual {v2, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -217,7 +217,7 @@
 
     .line 27
     :cond_1
-    const v0, 0x7f130958    # @string/quick_settings_autobrightness_state_change_message_off 'Auto brightness is off'
+    const v0, 0x7f13095c    # @string/quick_settings_autobrightness_state_change_message_off 'Auto brightness is off'
 
     .line 28
     invoke-virtual {v2, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -253,7 +253,7 @@
     iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
 
     .line 10
-    const v0, 0x7f130957    # @string/quick_settings_autobrightness_label 'Auto brightness'
+    const v0, 0x7f13095b    # @string/quick_settings_autobrightness_label 'Auto brightness'
 
     .line 12
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -337,14 +337,14 @@
     if-eqz v1, :cond_2
 
     .line 62
-    const v1, 0x7f130b54    # @string/switch_bar_on 'On'
+    const v1, 0x7f130b5a    # @string/switch_bar_on 'On'
 
     .line 64
     goto :goto_1
 
     .line 67
     :cond_2
-    const v1, 0x7f130b53    # @string/switch_bar_off 'Off'
+    const v1, 0x7f130b59    # @string/switch_bar_off 'Off'
 
     .line 68
     :goto_1

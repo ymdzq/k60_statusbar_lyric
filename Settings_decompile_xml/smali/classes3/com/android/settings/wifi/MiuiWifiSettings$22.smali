@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/android/settings/wifi/MiuiWifiSettings;)V
     .locals 0
 
-    .line 2604
+    .line 2617
     iput-object p1, p0, Lcom/android/settings/wifi/MiuiWifiSettings$22;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,14 +38,14 @@
 .method public run()V
     .locals 2
 
-    .line 2607
+    .line 2620
     invoke-static {}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$sfgetmEasyTetherVirtualAPPreferences()Ljava/util/Map;
 
     move-result-object p0
 
     monitor-enter p0
 
-    .line 2608
+    .line 2621
     :try_start_0
     invoke-static {}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$sfgetmEasyTetherConnectingPreference()Lcom/android/settings/wifi/MiuiVirtualWifiEntryPreference;
 
@@ -53,7 +53,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 2609
+    .line 2622
     invoke-static {}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$sfgetmEasyTetherConnectingPreference()Lcom/android/settings/wifi/MiuiVirtualWifiEntryPreference;
 
     move-result-object v0
@@ -62,14 +62,14 @@
 
     invoke-virtual {v0, v1}, Lcom/android/settings/wifi/MiuiVirtualWifiEntryPreference;->updateState(I)V
 
-    .line 2610
+    .line 2623
     invoke-static {}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$sfgetmEasyTetherConnectingPreference()Lcom/android/settings/wifi/MiuiVirtualWifiEntryPreference;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/android/settings/wifi/MiuiVirtualWifiEntryPreference;->updateSummary()V
 
-    .line 2612
+    .line 2625
     :cond_0
     monitor-exit p0
 

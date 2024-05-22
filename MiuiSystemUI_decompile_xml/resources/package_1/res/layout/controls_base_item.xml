@@ -8,15 +8,15 @@
                       android:layout_weight="1.0"
                       android:layout_marginStart="@dimen/control_spacing"
                       android:stateListAnimator="@anim/control_state_list_animator"
-                      android:screenReaderFocusable="true" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto">
+                      android:screenReaderFocusable="true" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <ImageView android:id="@id/icon"
              android:paddingTop="@dimen/control_padding_adjustment"
              android:focusable="false"
              android:clickable="false"
              android:layout_width="@dimen/control_icon_size"
              android:layout_height="@dimen/control_icon_size"
-             systemui:r0x7f040443="0"
-             systemui:r0x7f040447="0" />
+             app:r0x7f040443="0"
+             app:r0x7f040447="0" />
   <TextView android:textAppearance="@style/TextAppearance.Control.Status"
             android:ellipsize="marquee"
             android:id="@id/status"
@@ -30,9 +30,9 @@
             android:textDirection="locale"
             android:paddingStart="@dimen/control_status_padding"
             android:screenReaderFocusable="false"
-            systemui:r0x7f040429="@id/icon"
-            systemui:r0x7f04042f="0"
-            systemui:r0x7f040442="@id/icon" />
+            app:r0x7f040429="@id/icon"
+            app:r0x7f04042f="0"
+            app:r0x7f040442="@id/icon" />
   <TextView android:textAppearance="@style/TextAppearance.Control.Title"
             android:ellipsize="end"
             android:id="@id/id_0x7f0a09a2"
@@ -44,14 +44,14 @@
             android:layout_height="wrap_content"
             android:maxLines="1"
             android:textDirection="locale"
-            systemui:r0x7f04042a="@id/barrier"
-            systemui:r0x7f04042f="0"
-            systemui:r0x7f040443="0" />
+            app:r0x7f04042a="@id/barrier"
+            app:r0x7f04042f="0"
+            app:r0x7f040443="0" />
   <androidx.constraintlayout.widget.Barrier android:id="@id/barrier"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        systemui:r0x7f0400c7="2"
-                        systemui:r0x7f0401da="subtitle,favorite" />
+                        app:r0x7f0400c7="2"
+                        app:r0x7f0401da="subtitle,favorite" />
   <TextView android:textAppearance="@style/TextAppearance.Control.Subtitle"
             android:ellipsize="end"
             android:id="@id/subtitle"
@@ -64,9 +64,9 @@
             android:layout_height="wrap_content"
             android:maxLines="1"
             android:textDirection="locale"
-            systemui:r0x7f040430="@id/favorite"
-            systemui:r0x7f040443="0"
-            systemui:r0x7f040447="@id/favorite" />
+            app:r0x7f040430="@id/favorite"
+            app:r0x7f040443="0"
+            app:r0x7f040447="@id/favorite" />
   <CheckBox android:gravity="center"
             android:id="@id/favorite"
             android:background="@android:color/transparent"
@@ -78,9 +78,9 @@
             android:minHeight="0.0dp"
             android:selectable="false"
             android:importantForAccessibility="no"
-            systemui:r0x7f040429="0"
-            systemui:r0x7f04042f="0"
-            systemui:r0x7f040442="@id/subtitle" />
+            app:r0x7f040429="0"
+            app:r0x7f04042f="0"
+            app:r0x7f040442="@id/subtitle" />
   <ImageView android:id="@id/chevron_icon"
              android:focusable="false"
              android:visibility="invisible"
@@ -89,7 +89,7 @@
              android:layout_height="@dimen/control_chevron_icon_size"
              android:src="@drawable/ic_chevron_icon"
              android:autoMirrored="true"
-             systemui:r0x7f040429="0"
-             systemui:r0x7f04042f="0"
-             systemui:r0x7f040447="0" />
+             app:r0x7f040429="0"
+             app:r0x7f04042f="0"
+             app:r0x7f040447="0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

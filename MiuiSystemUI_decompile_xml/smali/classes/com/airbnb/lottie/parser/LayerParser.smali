@@ -1,6 +1,6 @@
 .class public abstract Lcom/airbnb/lottie/parser/LayerParser;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # static fields
@@ -22,128 +22,128 @@
     const-string v1, "ind"
 
     .line 4
-    const-string v2, "refId"
+    const-string/jumbo v2, "refId"
 
     .line 6
     const-string/jumbo v3, "ty"
 
-    .line 8
+    .line 9
     const-string v4, "parent"
 
-    .line 11
+    .line 12
     const-string/jumbo v5, "sw"
 
-    .line 13
+    .line 14
     const-string/jumbo v6, "sh"
 
-    .line 16
+    .line 17
     const-string/jumbo v7, "sc"
 
-    .line 19
+    .line 20
     const-string v8, "ks"
 
-    .line 22
+    .line 23
     const-string/jumbo v9, "tt"
 
-    .line 24
+    .line 25
     const-string v10, "masksProperties"
 
-    .line 27
+    .line 28
     const-string/jumbo v11, "shapes"
 
-    .line 29
+    .line 30
     const-string/jumbo v12, "t"
 
-    .line 32
+    .line 33
     const-string v13, "ef"
 
-    .line 35
+    .line 36
     const-string/jumbo v14, "sr"
 
-    .line 37
+    .line 38
     const-string/jumbo v15, "st"
 
-    .line 40
+    .line 41
     const-string/jumbo v16, "w"
 
-    .line 43
+    .line 44
     const-string v17, "h"
 
-    .line 46
+    .line 47
     const-string v18, "ip"
 
-    .line 48
+    .line 49
     const-string v19, "op"
 
-    .line 50
+    .line 51
     const-string/jumbo v20, "tm"
 
-    .line 52
+    .line 53
     const-string v21, "cl"
 
-    .line 55
+    .line 56
     const-string v22, "hd"
 
-    .line 57
+    .line 58
     filled-new-array/range {v0 .. v22}, [Ljava/lang/String;
 
-    .line 59
+    .line 60
     move-result-object v0
-
-    .line 62
-    invoke-static {v0}, Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;->of([Ljava/lang/String;)Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
 
     .line 63
-    move-result-object v0
+    invoke-static {v0}, Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;->of([Ljava/lang/String;)Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
 
-    .line 66
-    sput-object v0, Lcom/airbnb/lottie/parser/LayerParser;->NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
+    .line 64
+    move-result-object v0
 
     .line 67
+    sput-object v0, Lcom/airbnb/lottie/parser/LayerParser;->NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
+
+    .line 68
     const-string v0, "d"
 
-    .line 69
+    .line 70
     const-string v1, "a"
 
-    .line 71
+    .line 72
     filled-new-array {v0, v1}, [Ljava/lang/String;
 
-    .line 73
+    .line 74
     move-result-object v0
-
-    .line 76
-    invoke-static {v0}, Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;->of([Ljava/lang/String;)Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
 
     .line 77
-    move-result-object v0
-
-    .line 80
-    sput-object v0, Lcom/airbnb/lottie/parser/LayerParser;->TEXT_NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
-
-    .line 81
-    const-string/jumbo v0, "ty"
-
-    .line 83
-    const-string v1, "nm"
-
-    .line 86
-    filled-new-array {v0, v1}, [Ljava/lang/String;
-
-    .line 88
-    move-result-object v0
-
-    .line 91
     invoke-static {v0}, Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;->of([Ljava/lang/String;)Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
 
-    .line 92
+    .line 78
     move-result-object v0
 
-    .line 95
-    sput-object v0, Lcom/airbnb/lottie/parser/LayerParser;->EFFECTS_NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
+    .line 81
+    sput-object v0, Lcom/airbnb/lottie/parser/LayerParser;->TEXT_NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
+
+    .line 82
+    const-string/jumbo v0, "ty"
+
+    .line 84
+    const-string v1, "nm"
+
+    .line 87
+    filled-new-array {v0, v1}, [Ljava/lang/String;
+
+    .line 89
+    move-result-object v0
+
+    .line 92
+    invoke-static {v0}, Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;->of([Ljava/lang/String;)Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
+
+    .line 93
+    move-result-object v0
 
     .line 96
+    sput-object v0, Lcom/airbnb/lottie/parser/LayerParser;->EFFECTS_NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
+
+    .line 97
     return-void
-    .line 98
+    .line 99
 .end method
 
 .method public static parse(Lcom/airbnb/lottie/parser/moshi/JsonUtf8Reader;Lcom/airbnb/lottie/LottieComposition;)Lcom/airbnb/lottie/model/layer/Layer;

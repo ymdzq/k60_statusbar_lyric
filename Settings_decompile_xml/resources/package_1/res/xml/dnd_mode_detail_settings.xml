@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <PreferenceScreen android:title="@string/zen_mode_title"
-                  android:key="zen_mode_pref_screen" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+                  android:key="zen_mode_pref_screen" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:miui="http://schemas.android.com/apk/res/com.android.settings" xmlns:settings="http://schemas.android.com/apk/res-auto">
   <PreferenceCategory android:key="zen_mode_toggle_category">
     <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:persistent="false"
                           android:title="@string/zen_mode_title"
@@ -23,6 +23,6 @@
                           android:title="@string/auto_silent"
                           android:key="key_timing_mute"
                           android:summary="@string/auto_silent_info"
-                          settings:clickable="true" />
+                          miui:clickable="true" />
   </PreferenceCategory>
 </PreferenceScreen>

@@ -7,7 +7,7 @@
               android:layout_height="wrap_content"
               android:minHeight="@dimen/miuix_preference_item_min_height"
               android:paddingStart="@dimen/preference_item_padding"
-              android:paddingEnd="@dimen/preference_item_padding" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+              android:paddingEnd="@dimen/preference_item_padding" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <RelativeLayout android:gravity="center_vertical"
                   android:layout_gravity="center_vertical"
                   android:layout_width="wrap_content"
@@ -45,5 +45,5 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/miuix_preference_item_padding_inner"
-                        settings:srcCompat="@drawable/miuix_appcompat_arrow_right" />
+                        app:srcCompat="@drawable/miuix_appcompat_arrow_right" />
 </LinearLayout>

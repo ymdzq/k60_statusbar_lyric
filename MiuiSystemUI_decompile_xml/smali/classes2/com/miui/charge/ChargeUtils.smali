@@ -1,6 +1,6 @@
 .class public abstract Lcom/miui/charge/ChargeUtils;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # static fields
@@ -303,7 +303,7 @@
     if-eqz p1, :cond_1
 
     .line 12
-    const p0, 0x7f130d1e    # @string/wireless_charge_reset_device 'Charging is slow. Adjust your device.'
+    const p0, 0x7f130d24    # @string/wireless_charge_reset_device 'Charging is slow. Adjust your device.'
 
     .line 14
     invoke-virtual {p2, p0}, Landroid/content/Context;->getString(I)Ljava/lang/String;

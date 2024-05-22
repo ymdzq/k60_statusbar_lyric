@@ -22,15 +22,15 @@
 .method public constructor <init>(Lcom/android/settings/MiuiSettings$ProxyHeaderViewAdapter;Landroid/view/View;)V
     .locals 0
 
-    .line 1193
+    .line 1196
     iput-object p1, p0, Lcom/android/settings/MiuiSettings$ProxyHeaderViewAdapter$FixedViewHolder;->this$1:Lcom/android/settings/MiuiSettings$ProxyHeaderViewAdapter;
 
-    .line 1194
+    .line 1197
     invoke-direct {p0, p2}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
 
     const/4 p1, 0x0
 
-    .line 1195
+    .line 1198
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->setIsRecyclable(Z)V
 
     return-void

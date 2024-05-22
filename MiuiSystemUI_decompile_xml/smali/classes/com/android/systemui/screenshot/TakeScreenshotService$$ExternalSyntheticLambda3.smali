@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/screenshot/TakeScreenshotService$$ExternalSyntheticLambda3;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Ljava/util/function/Supplier;
@@ -37,7 +37,7 @@
     iget-object p0, p0, Lcom/android/systemui/screenshot/TakeScreenshotService;->mContext:Landroid/content/Context;
 
     .line 4
-    const v0, 0x7f130a7d    # @string/screenshot_blocked_by_admin 'Taking screenshots is blocked by your IT admin'
+    const v0, 0x7f130a83    # @string/screenshot_blocked_by_admin 'Taking screenshots is blocked by your IT admin'
 
     .line 6
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;

@@ -32,7 +32,7 @@
         }
     .end annotation
 
-    .line 2367
+    .line 2385
     iput-object p1, p0, Lcom/android/settings/wifi/MiuiWifiSettings$17;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     iput p2, p0, Lcom/android/settings/wifi/MiuiWifiSettings$17;->val$status:I
@@ -47,19 +47,19 @@
 .method public run()V
     .locals 3
 
-    .line 2370
+    .line 2388
     iget-object v0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$17;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$fputmIsConnecting(Lcom/android/settings/wifi/MiuiWifiSettings;Z)V
 
-    .line 2371
+    .line 2389
     iget v0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$17;->val$status:I
 
     if-lez v0, :cond_0
 
-    .line 2373
+    .line 2391
     invoke-static {}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -68,14 +68,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2374
+    .line 2392
     iget-object p0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$17;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-static {p0}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$mremoveVirtualAPPreference(Lcom/android/settings/wifi/MiuiWifiSettings;)V
 
     goto :goto_0
 
-    .line 2377
+    .line 2395
     :cond_0
     invoke-static {}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -85,7 +85,7 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2378
+    .line 2396
     iget-object v0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$17;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-static {v0}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$fgetmVirtualAPPreference(Lcom/android/settings/wifi/MiuiWifiSettings;)Lcom/android/settings/wifi/MiuiVirtualWifiEntryPreference;
@@ -94,7 +94,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 2379
+    .line 2397
     iget-object v0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$17;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-static {v0}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$fgetmVirtualAPPreference(Lcom/android/settings/wifi/MiuiWifiSettings;)Lcom/android/settings/wifi/MiuiVirtualWifiEntryPreference;
@@ -103,7 +103,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/settings/wifi/MiuiVirtualWifiEntryPreference;->updateState(I)V
 
-    .line 2380
+    .line 2398
     iget-object v0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$17;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-static {v0}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$fgetmVirtualAPPreference(Lcom/android/settings/wifi/MiuiWifiSettings;)Lcom/android/settings/wifi/MiuiVirtualWifiEntryPreference;
@@ -112,12 +112,12 @@
 
     invoke-virtual {v0}, Lcom/android/settings/wifi/MiuiVirtualWifiEntryPreference;->updateSummary()V
 
-    .line 2381
+    .line 2399
     iget-object v0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$17;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-virtual {v0}, Lcom/android/settings/wifi/MiuiWifiSettings;->updateWifiEntryPreferences()V
 
-    .line 2383
+    .line 2401
     :cond_1
     iget-object v0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$17;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
@@ -127,7 +127,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 2384
+    .line 2402
     iget-object v0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$17;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -140,7 +140,7 @@
 
     iget-object p0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$17;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
-    .line 2385
+    .line 2403
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p0
@@ -157,7 +157,7 @@
 
     const/4 v1, 0x1
 
-    .line 2384
+    .line 2402
     invoke-static {v0, p0, v1}, Lcom/android/settingslib/util/ToastUtil;->show(Landroid/content/Context;Ljava/lang/CharSequence;I)V
 
     :cond_2

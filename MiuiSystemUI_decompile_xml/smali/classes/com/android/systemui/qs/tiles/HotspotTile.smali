@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/qs/tiles/HotspotTile;
 .super Lcom/android/systemui/qs/tileimpl/QSTileImpl;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # instance fields
@@ -78,7 +78,7 @@
     iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
 
     .line 2
-    const v0, 0x7f1309b0    # @string/quick_settings_hotspot_label 'Hotspot'
+    const v0, 0x7f1309b6    # @string/quick_settings_hotspot_label 'Hotspot'
 
     .line 4
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -408,7 +408,7 @@
     iget-object v4, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
 
     .line 99
-    const v5, 0x7f1309b0    # @string/quick_settings_hotspot_label 'Hotspot'
+    const v5, 0x7f1309b6    # @string/quick_settings_hotspot_label 'Hotspot'
 
     .line 101
     invoke-virtual {v4, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -605,7 +605,7 @@
     if-nez v4, :cond_13
 
     .line 209
-    const p2, 0x7f130cbe    # @string/wifitrackerlib_admin_restricted_network 'Not allowed by your organization'
+    const p2, 0x7f130cc4    # @string/wifitrackerlib_admin_restricted_network 'Not allowed by your organization'
 
     .line 211
     invoke-virtual {p0, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -621,7 +621,7 @@
     if-eqz v3, :cond_14
 
     .line 219
-    const p2, 0x7f1309b3    # @string/quick_settings_hotspot_secondary_label_transient 'Turning on…'
+    const p2, 0x7f1309b9    # @string/quick_settings_hotspot_secondary_label_transient 'Turning on…'
 
     .line 221
     invoke-virtual {p0, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -637,7 +637,7 @@
     if-eqz p2, :cond_15
 
     .line 229
-    const p2, 0x7f1309b1    # @string/quick_settings_hotspot_secondary_label_data_saver_enabled 'Data Saver is on'
+    const p2, 0x7f1309b7    # @string/quick_settings_hotspot_secondary_label_data_saver_enabled 'Data Saver is on'
 
     .line 231
     invoke-virtual {p0, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -662,7 +662,7 @@
     move-result-object p0
 
     .line 246
-    const p2, 0x7f1309b2    # @string/quick_settings_hotspot_secondary_label_num_devices '{count, plural, =1 {# device} other {# devices} }'
+    const p2, 0x7f1309b8    # @string/quick_settings_hotspot_secondary_label_num_devices '{count, plural, =1 {# device} other {# devices} }'
 
     .line 247
     invoke-static {p0, p2, v0}, Lcom/android/systemui/util/PluralMessageFormaterKt;->icuMessageFormat(Landroid/content/res/Resources;II)Ljava/lang/String;

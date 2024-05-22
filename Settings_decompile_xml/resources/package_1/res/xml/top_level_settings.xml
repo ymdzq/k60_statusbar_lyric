@@ -55,7 +55,7 @@
                         settings:controller="com.android.settings.deviceinfo.TopLevelStoragePreferenceController"
                         settings:highlightableMenuKey="@string/menu_key_storage" />
   <com.android.settings.widget.HomepagePreference android:icon="@drawable/ic_volume_up_24dp"
-                        android:title="@string/string_0x7f132303"
+                        android:title="@string/string_0x7f13230b"
                         android:key="top_level_sound"
                         android:summary="@string/sound_dashboard_summary"
                         android:order="-90"

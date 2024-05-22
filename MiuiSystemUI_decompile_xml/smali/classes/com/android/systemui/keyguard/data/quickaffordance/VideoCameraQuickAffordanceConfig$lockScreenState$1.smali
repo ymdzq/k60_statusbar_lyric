@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/keyguard/data/quickaffordance/VideoCameraQuickAffordanceConfig$lockScreenState$1;
 .super Lkotlin/coroutines/jvm/internal/SuspendLambda;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function2;
@@ -268,7 +268,7 @@
     new-instance v5, Lcom/android/systemui/common/shared/model/ContentDescription$Resource;
 
     .line 103
-    const v6, 0x7f130c3e    # @string/video_camera 'Video camera'
+    const v6, 0x7f130c44    # @string/video_camera 'Video camera'
 
     .line 105
     invoke-direct {v5, v6}, Lcom/android/systemui/common/shared/model/ContentDescription$Resource;-><init>(I)V

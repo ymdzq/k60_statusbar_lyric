@@ -5,4 +5,4 @@
                       android:numColumns="3"
                       android:importantForAccessibility="noHideDescendants"
                       android:nestedScrollingEnabled="true"
-                      settings:appCount="6" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto" />
+                      app:appCount="6" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

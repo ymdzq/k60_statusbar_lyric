@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8' ?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <item android:state_enabled="false"
         android:color="?attr/colorOnSurface"
         android:alpha="@dimen/material_emphasis_disabled" />
   <item android:color="?attr/colorError"
-        settings:state_error="true" />
+        app:state_error="true" />
   <item android:state_checked="true"
         android:color="?attr/colorPrimary" />
   <item android:state_checked="false"

@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/wifi/WifiDebuggingSecondaryUserActivity;
 .super Lcom/android/internal/app/AlertActivity;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Landroid/content/DialogInterface$OnClickListener;
@@ -71,7 +71,7 @@
     iget-object p1, p0, Lcom/android/internal/app/AlertActivity;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
 
     .line 23
-    const v0, 0x7f130c74    # @string/wifi_debugging_secondary_user_title 'Wireless debugging not allowed'
+    const v0, 0x7f130c7a    # @string/wifi_debugging_secondary_user_title 'Wireless debugging not allowed'
 
     .line 25
     invoke-virtual {p0, v0}, Lcom/android/internal/app/AlertActivity;->getString(I)Ljava/lang/String;
@@ -83,7 +83,7 @@
     iput-object v0, p1, Lcom/android/internal/app/AlertController$AlertParams;->mTitle:Ljava/lang/CharSequence;
 
     .line 32
-    const v0, 0x7f130c73    # @string/wifi_debugging_secondary_user_message 'The user currently signed in to this device can’t turn on wireless debugging. To use this feature, s ...'
+    const v0, 0x7f130c79    # @string/wifi_debugging_secondary_user_message 'The user currently signed in to this device can’t turn on wireless debugging. To use this feature, s ...'
 
     .line 34
     invoke-virtual {p0, v0}, Lcom/android/internal/app/AlertActivity;->getString(I)Ljava/lang/String;

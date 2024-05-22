@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <set android:ordering="together" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f080243"
+  <objectAnimator android:interpolator="@drawable/$$ic_cc_qs_mute_on__2__0"
                   android:duration="17"
                   android:startOffset="0"
                   android:valueFrom="M23.54 -36.24 C23.54,-36.24 -41.59,32.38 -41.59,32.38 C-41.59,32.38 -31.09,41.63 -31.09,41.63 C-31.09,41.63 33.91,-27.12 33.91,-27.12 C33.91,-27.12 23.54,-36.24 23.54,-36.24c "
                   android:valueTo="M23.54 -36.24 C23.54,-36.24 -41.59,32.38 -41.59,32.38 C-41.59,32.38 -31.09,41.63 -31.09,41.63 C-31.09,41.63 33.91,-27.12 33.91,-27.12 C33.91,-27.12 23.54,-36.24 23.54,-36.24c "
                   android:valueType="pathType"
                   android:propertyName="pathData" />
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f080244"
+  <objectAnimator android:interpolator="@drawable/$$ic_cc_qs_mute_on__2__1"
                   android:duration="200"
                   android:startOffset="17"
                   android:valueFrom="M23.54 -36.24 C23.54,-36.24 -41.59,32.38 -41.59,32.38 C-41.59,32.38 -31.09,41.63 -31.09,41.63 C-31.09,41.63 33.91,-27.12 33.91,-27.12 C33.91,-27.12 23.54,-36.24 23.54,-36.24c "

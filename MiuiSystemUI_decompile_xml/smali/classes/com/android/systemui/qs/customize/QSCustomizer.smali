@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/qs/customize/QSCustomizer;
 .super Landroid/widget/LinearLayout;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # instance fields
@@ -169,7 +169,7 @@
     invoke-interface {p2, v2}, Landroid/view/MenuItem;->setShowAsAction(I)V
 
     .line 100
-    const p2, 0x7f130949    # @string/qs_edit 'Edit'
+    const p2, 0x7f13094d    # @string/qs_edit 'Edit'
 
     .line 103
     invoke-virtual {p1, p2}, Landroid/widget/Toolbar;->setTitle(I)V

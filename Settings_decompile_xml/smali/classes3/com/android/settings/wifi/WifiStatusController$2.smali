@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/android/settings/wifi/WifiStatusController;)V
     .locals 0
 
-    .line 145
+    .line 146
     iput-object p1, p0, Lcom/android/settings/wifi/WifiStatusController$2;->this$0:Lcom/android/settings/wifi/WifiStatusController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -35,12 +35,12 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
-    .line 148
+    .line 149
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 149
+    .line 150
     iget-object v0, p0, Lcom/android/settings/wifi/WifiStatusController$2;->this$0:Lcom/android/settings/wifi/WifiStatusController;
 
     invoke-static {v0}, Lcom/android/settings/wifi/WifiStatusController;->-$$Nest$fgetmVerbose(Lcom/android/settings/wifi/WifiStatusController;)Z
@@ -70,7 +70,7 @@
     :cond_0
     const-string v0, "android.net.wifi.WIFI_STATE_CHANGED"
 
-    .line 150
+    .line 151
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -81,7 +81,7 @@
 
     const/4 v0, 0x4
 
-    .line 151
+    .line 152
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
@@ -90,7 +90,7 @@
 
     if-ne p1, p2, :cond_1
 
-    .line 153
+    .line 154
     iget-object v0, p0, Lcom/android/settings/wifi/WifiStatusController$2;->this$0:Lcom/android/settings/wifi/WifiStatusController;
 
     invoke-static {v0}, Lcom/android/settings/wifi/WifiStatusController;->-$$Nest$fgetmWifiEnabled(Lcom/android/settings/wifi/WifiStatusController;)Z
@@ -110,13 +110,13 @@
 
     if-eqz v0, :cond_3
 
-    .line 155
+    .line 156
     :cond_2
     iget-object v0, p0, Lcom/android/settings/wifi/WifiStatusController$2;->this$0:Lcom/android/settings/wifi/WifiStatusController;
 
     invoke-virtual {v0}, Lcom/android/settings/wifi/WifiStatusController;->updateStatus()V
 
-    .line 157
+    .line 158
     :cond_3
     iget-object v0, p0, Lcom/android/settings/wifi/WifiStatusController$2;->this$0:Lcom/android/settings/wifi/WifiStatusController;
 
@@ -137,7 +137,7 @@
     :cond_5
     const-string v0, "android.net.wifi.STATE_CHANGE"
 
-    .line 158
+    .line 159
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -146,7 +146,7 @@
 
     const-string p1, "networkInfo"
 
-    .line 159
+    .line 160
     invoke-virtual {p2, p1}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object p1
@@ -155,7 +155,7 @@
 
     if-eqz p1, :cond_8
 
-    .line 160
+    .line 161
     invoke-virtual {p1}, Landroid/net/NetworkInfo;->isConnected()Z
 
     move-result p2
@@ -168,7 +168,7 @@
 
     if-eq p2, v0, :cond_8
 
-    .line 161
+    .line 162
     iget-object p2, p0, Lcom/android/settings/wifi/WifiStatusController$2;->this$0:Lcom/android/settings/wifi/WifiStatusController;
 
     invoke-virtual {p1}, Landroid/net/NetworkInfo;->isConnected()Z
@@ -177,7 +177,7 @@
 
     invoke-static {p2, p1}, Lcom/android/settings/wifi/WifiStatusController;->-$$Nest$fputmNetworkConnected(Lcom/android/settings/wifi/WifiStatusController;Z)V
 
-    .line 162
+    .line 163
     iget-object p1, p0, Lcom/android/settings/wifi/WifiStatusController$2;->this$0:Lcom/android/settings/wifi/WifiStatusController;
 
     invoke-virtual {p1}, Lcom/android/settings/wifi/WifiStatusController;->updateStatus()V
@@ -187,14 +187,14 @@
     :cond_6
     const-string p2, "com.xiaomi.bluetooth.action.connectedDeviceNameChanged"
 
-    .line 164
+    .line 165
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_8
 
-    .line 165
+    .line 166
     iget-object p1, p0, Lcom/android/settings/wifi/WifiStatusController$2;->this$0:Lcom/android/settings/wifi/WifiStatusController;
 
     invoke-static {p1}, Lcom/android/settings/wifi/WifiStatusController;->-$$Nest$fgetmEasyTetherCoreService(Lcom/android/settings/wifi/WifiStatusController;)Lcom/android/bluetooth/ble/app/IMiuiNearbyApiService;
@@ -203,7 +203,7 @@
 
     if-eqz p1, :cond_7
 
-    .line 167
+    .line 168
     :try_start_0
     iget-object p1, p0, Lcom/android/settings/wifi/WifiStatusController$2;->this$0:Lcom/android/settings/wifi/WifiStatusController;
 
@@ -217,7 +217,7 @@
 
     if-eqz p1, :cond_7
 
-    .line 169
+    .line 170
     iget-object p2, p0, Lcom/android/settings/wifi/WifiStatusController$2;->this$0:Lcom/android/settings/wifi/WifiStatusController;
 
     invoke-virtual {p1}, Lcom/android/bluetooth/ble/app/EasyTetherHotspotEntry;->getSsid()Ljava/lang/String;
@@ -226,7 +226,7 @@
 
     invoke-static {p2, p1}, Lcom/android/settings/wifi/WifiStatusController;->-$$Nest$fputmStatusViewText(Lcom/android/settings/wifi/WifiStatusController;Ljava/lang/String;)V
 
-    .line 170
+    .line 171
     iget-object p1, p0, Lcom/android/settings/wifi/WifiStatusController$2;->this$0:Lcom/android/settings/wifi/WifiStatusController;
 
     invoke-static {p1}, Lcom/android/settings/wifi/WifiStatusController;->-$$Nest$fgetmVerbose(Lcom/android/settings/wifi/WifiStatusController;)Z
@@ -235,7 +235,7 @@
 
     if-eqz p1, :cond_7
 
-    .line 171
+    .line 172
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -265,17 +265,17 @@
     :catch_0
     const-string p1, "getEasyTetherConnectedHotspotEntry error."
 
-    .line 175
+    .line 176
     invoke-static {v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 178
+    .line 179
     :cond_7
     :goto_1
     iget-object p1, p0, Lcom/android/settings/wifi/WifiStatusController$2;->this$0:Lcom/android/settings/wifi/WifiStatusController;
 
     invoke-virtual {p1}, Lcom/android/settings/wifi/WifiStatusController;->updateStatus()V
 
-    .line 180
+    .line 181
     :cond_8
     :goto_2
     iget-object p1, p0, Lcom/android/settings/wifi/WifiStatusController$2;->this$0:Lcom/android/settings/wifi/WifiStatusController;
@@ -286,7 +286,7 @@
 
     if-eqz p1, :cond_9
 
-    .line 181
+    .line 182
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V

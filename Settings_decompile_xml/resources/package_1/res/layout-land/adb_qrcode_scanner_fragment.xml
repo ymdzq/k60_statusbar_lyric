@@ -2,7 +2,7 @@
 <com.google.android.setupdesign.GlifLayout android:icon="@drawable/ic_scan_32dp"
                       android:layout_width="fill_parent"
                       android:layout_height="fill_parent"
-                      settings:sudDescriptionText="@string/adb_wireless_qrcode_pairing_description" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+                      app:sudDescriptionText="@string/adb_wireless_qrcode_pairing_description" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <LinearLayout android:gravity="center_horizontal"
                 android:orientation="vertical"
                 android:layout_width="fill_parent"

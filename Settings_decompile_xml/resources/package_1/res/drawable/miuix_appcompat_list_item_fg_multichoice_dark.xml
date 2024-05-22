@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8' ?>
-<miuix.appcompat.app.AlphaBlendingDrawable settings:hoveredAlpha="0.06"
-                      settings:normalAlpha="0.0"
-                      settings:pressedAlpha="0.15"
-                      settings:tintColor="@color/miuix_appcompat_tint_color_dark" xmlns:settings="http://schemas.android.com/apk/res-auto" />
+<miuix.appcompat.app.AlphaBlendingDrawable app:hoveredAlpha="0.06"
+                      app:normalAlpha="0.0"
+                      app:pressedAlpha="0.15"
+                      app:tintColor="@color/miuix_appcompat_tint_color_dark" xmlns:app="http://schemas.android.com/apk/res-auto" />

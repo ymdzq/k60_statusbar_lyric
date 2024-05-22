@@ -101,16 +101,6 @@
     .locals 3
 
     .line 213
-    sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
-
-    if-nez v0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    .line 214
-    :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
@@ -122,15 +112,52 @@
 
     const/16 v2, 0x80
 
-    .line 216
+    .line 215
     invoke-virtual {p0, v1, v2}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
 
     move-result-object p0
 
-    .line 220
+    .line 219
     iget-object p0, p0, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
 
     const-string v1, "is_support_device_center"
+
+    invoke-virtual {p0, v1, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return p0
+
+    :catchall_0
+    return v0
+.end method
+
+.method public static checkNewDeviceCenterEnabled(Landroid/content/Context;)Z
+    .locals 3
+
+    .line 229
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object p0
+
+    const/4 v0, 0x0
+
+    :try_start_0
+    const-string/jumbo v1, "miui.systemui.plugin"
+
+    const/16 v2, 0x80
+
+    .line 231
+    invoke-virtual {p0, v1, v2}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
+
+    move-result-object p0
+
+    .line 235
+    iget-object p0, p0, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
+
+    const-string/jumbo v1, "miui.systemui.plugin.new_device_center_enabled"
 
     invoke-virtual {p0, v1, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 

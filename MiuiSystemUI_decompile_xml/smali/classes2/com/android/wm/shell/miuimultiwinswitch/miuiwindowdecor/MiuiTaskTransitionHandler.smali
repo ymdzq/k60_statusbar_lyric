@@ -1,6 +1,6 @@
 .class public Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lcom/android/wm/shell/transition/Transitions$TransitionHandler;
@@ -19679,41 +19679,26 @@
 
     .line 85
     :cond_3
-    new-instance v0, Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;
-
-    .line 88
-    invoke-direct {v0}, Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;-><init>()V
-
-    .line 90
-    invoke-virtual {v0}, Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;->freeformToFullscreen()Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;
-
-    .line 93
-    iget-object v1, p1, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
-
-    .line 96
-    invoke-virtual {p2, v1, v0}, Landroid/window/WindowContainerTransaction;->setMiuiFreeformInfoChange(Landroid/window/WindowContainerToken;Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;)Landroid/window/WindowContainerTransaction;
-
-    .line 98
     const/16 v0, 0x102
 
-    .line 101
+    .line 88
     invoke-direct {p0, v0, p2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->startTransition(ILandroid/window/WindowContainerTransaction;)V
 
-    .line 103
+    .line 90
     iget-object p0, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mPendingFreeformModeTaskInfo:Landroid/util/SparseArray;
 
-    .line 106
+    .line 93
     iget p2, p1, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
-    .line 108
+    .line 95
     iget-object p1, p1, Landroid/app/ActivityManager$RunningTaskInfo;->miuiFreeFormStackInfo:Lmiui/app/MiuiFreeFormManager$MiuiFreeFormStackInfo;
 
-    .line 110
+    .line 97
     invoke-virtual {p0, p2, p1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 112
+    .line 99
     return-void
-    .line 115
+    .line 102
 .end method
 
 .method public startFreeformToSingleOpenTransition(Landroid/app/ActivityManager$RunningTaskInfo;Landroid/window/WindowContainerTransaction;)V
@@ -19778,396 +19763,415 @@
 .end method
 
 .method public startFullToFreeformTransition(Landroid/app/ActivityManager$RunningTaskInfo;Landroid/window/WindowContainerTransaction;)V
-    .locals 12
+    .locals 17
 
     .line 1
-    invoke-static {}, Lcom/android/wm/shell/miuidesktopmode/MiuiDesktopModeStatus;->isActive()Z
+    move-object/from16 v0, p0
 
     .line 2
-    move-result v0
+    move-object/from16 v7, p1
 
-    .line 5
-    const/4 v1, 0x0
+    .line 4
+    move-object/from16 v8, p2
 
     .line 6
-    if-eqz v0, :cond_2
-
-    .line 7
     invoke-static {}, Lcom/android/wm/shell/miuidesktopmode/MiuiDesktopModeStatus;->isActive()Z
 
-    .line 9
-    move-result v0
-
-    .line 12
-    if-eqz v0, :cond_0
-
-    .line 13
-    iget v0, p1, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
-
-    .line 15
-    invoke-static {v0}, Lmiui/app/MiuiFreeFormManager;->hasFreeformDesktopMemory(I)Z
-
-    .line 17
-    move-result v0
-
-    .line 20
-    if-nez v0, :cond_0
-
-    .line 21
-    goto :goto_0
-
-    .line 23
-    :cond_0
-    iget v0, p1, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
-
-    .line 24
-    invoke-static {v0}, Lmiui/app/MiuiFreeFormManager;->getFreeformLastScale(I)F
-
-    .line 26
-    move-result v0
-
-    .line 29
-    iget v2, p1, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
-
-    .line 30
-    invoke-static {v2}, Lmiui/app/MiuiFreeFormManager;->getFreeformLastPosition(I)Landroid/graphics/Rect;
-
-    .line 32
-    move-result-object v2
-
-    .line 35
-    iget v3, p1, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
-
-    .line 36
-    invoke-static {v2, v0, v3, v1}, Lmiui/app/MiuiFreeFormManager;->getFreeformRectDesktop(Landroid/graphics/Rect;FIZ)F
-
-    .line 38
-    move-result v0
-
-    .line 41
-    iget-object v1, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mFreeformStartScale:Landroid/util/SparseArray;
-
-    .line 42
-    iget v3, p1, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
-
-    .line 44
-    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    .line 46
-    move-result-object v4
-
-    .line 49
-    invoke-virtual {v1, v3, v4}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    .line 50
-    iget v1, p1, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
-
-    .line 53
-    invoke-direct {p0, v1, v2, v0}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->getFreeformRectAfterAutoLayout(ILandroid/graphics/Rect;F)Landroid/graphics/Rect;
-
-    .line 55
-    move-result-object v0
-
-    .line 58
-    if-eqz v0, :cond_1
-
-    .line 59
-    iget v1, v0, Landroid/graphics/Rect;->left:I
-
-    .line 61
-    iget v0, v0, Landroid/graphics/Rect;->top:I
-
-    .line 63
-    invoke-virtual {v2, v1, v0}, Landroid/graphics/Rect;->offsetTo(II)V
-
-    .line 65
-    :cond_1
-    iget-object v0, p1, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
-
-    .line 68
-    invoke-virtual {p2, v0, v2}, Landroid/window/WindowContainerTransaction;->setBounds(Landroid/window/WindowContainerToken;Landroid/graphics/Rect;)Landroid/window/WindowContainerTransaction;
-
-    .line 70
-    goto/16 :goto_1
-
-    .line 73
-    :cond_2
-    :goto_0
-    iget-object v0, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mDisplayController:Lcom/android/wm/shell/common/DisplayController;
-
-    .line 75
-    iget v2, p1, Landroid/app/ActivityManager$RunningTaskInfo;->displayId:I
-
-    .line 77
-    invoke-virtual {v0, v2}, Lcom/android/wm/shell/common/DisplayController;->getDisplayLayout(I)Lcom/android/wm/shell/common/DisplayLayout;
-
-    .line 79
-    move-result-object v0
-
-    .line 82
-    invoke-virtual {v0}, Lcom/android/wm/shell/common/DisplayLayout;->getOrientation()I
-
-    .line 83
-    move-result v2
-
-    .line 86
-    const/4 v3, 0x1
-
-    .line 87
-    if-ne v2, v3, :cond_3
-
-    .line 88
-    move v1, v3
-
-    .line 90
-    :cond_3
-    iget-object v2, p1, Landroid/app/ActivityManager$RunningTaskInfo;->realActivity:Landroid/content/ComponentName;
-
-    .line 91
-    invoke-virtual {v2}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
-
-    .line 93
-    move-result-object v2
-
-    .line 96
-    new-instance v3, Landroid/graphics/RectF;
-
-    .line 97
-    invoke-direct {v3}, Landroid/graphics/RectF;-><init>()V
-
-    .line 99
-    iget-object v4, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mContext:Landroid/content/Context;
-
-    .line 102
-    iget-object v5, p1, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityInfo:Landroid/content/pm/ActivityInfo;
-
-    .line 104
-    iget v5, v5, Landroid/content/pm/ActivityInfo;->screenOrientation:I
-
-    .line 106
-    invoke-static {v4, v2, v5, v1, v3}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->getFreeformBoundsAndScale(Landroid/content/Context;Ljava/lang/String;IZLandroid/graphics/RectF;)F
-
-    .line 108
+    .line 8
     move-result v1
 
-    .line 111
-    iget v2, v0, Lcom/android/wm/shell/common/DisplayLayout;->mWidth:I
+    .line 11
+    const/4 v2, 0x0
 
-    .line 112
-    div-int/lit8 v2, v2, 0x2
+    .line 12
+    if-eqz v1, :cond_2
 
-    .line 114
-    iget v4, v0, Lcom/android/wm/shell/common/DisplayLayout;->mHeight:I
+    .line 13
+    invoke-static {}, Lcom/android/wm/shell/miuidesktopmode/MiuiDesktopModeStatus;->isActive()Z
 
-    .line 116
-    div-int/lit8 v4, v4, 0x2
+    .line 15
+    move-result v1
 
-    .line 118
-    int-to-float v2, v2
+    .line 18
+    if-eqz v1, :cond_0
 
-    .line 120
-    invoke-virtual {v3}, Landroid/graphics/RectF;->width()F
+    .line 19
+    iget v1, v7, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
-    .line 121
-    move-result v5
+    .line 21
+    invoke-static {v1}, Lmiui/app/MiuiFreeFormManager;->hasFreeformDesktopMemory(I)Z
 
-    .line 124
-    mul-float/2addr v5, v1
+    .line 23
+    move-result v1
 
-    .line 125
-    const/high16 v6, 0x40000000    # 2.0f
+    .line 26
+    if-nez v1, :cond_0
 
-    .line 126
-    div-float/2addr v5, v6
+    .line 27
+    goto :goto_0
 
-    .line 128
-    sub-float/2addr v2, v5
+    .line 29
+    :cond_0
+    iget v1, v7, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
-    .line 129
-    float-to-int v2, v2
+    .line 30
+    invoke-static {v1}, Lmiui/app/MiuiFreeFormManager;->getFreeformLastScale(I)F
 
-    .line 130
-    int-to-float v4, v4
+    .line 32
+    move-result v1
 
-    .line 131
-    invoke-virtual {v3}, Landroid/graphics/RectF;->height()F
+    .line 35
+    iget v3, v7, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
-    .line 132
-    move-result v5
+    .line 36
+    invoke-static {v3}, Lmiui/app/MiuiFreeFormManager;->getFreeformLastPosition(I)Landroid/graphics/Rect;
 
-    .line 135
-    mul-float/2addr v5, v1
-
-    .line 136
-    div-float/2addr v5, v6
-
-    .line 137
-    sub-float/2addr v4, v5
-
-    .line 138
-    float-to-int v4, v4
-
-    .line 139
-    new-instance v5, Landroid/graphics/Rect;
-
-    .line 140
-    int-to-float v6, v2
-
-    .line 142
-    invoke-virtual {v3}, Landroid/graphics/RectF;->width()F
-
-    .line 143
-    move-result v7
-
-    .line 146
-    add-float/2addr v7, v6
-
-    .line 147
-    float-to-int v6, v7
-
-    .line 148
-    int-to-float v7, v4
-
-    .line 149
-    invoke-virtual {v3}, Landroid/graphics/RectF;->height()F
-
-    .line 150
-    move-result v3
-
-    .line 153
-    add-float/2addr v3, v7
-
-    .line 154
-    float-to-int v3, v3
-
-    .line 155
-    invoke-direct {v5, v2, v4, v6, v3}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    .line 156
-    iget-object v2, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mContext:Landroid/content/Context;
-
-    .line 159
-    iget-object v3, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mMiuiDisplayInfo:Lcom/android/wm/shell/miuimultiwinswitch/MiuiDisplayInfo;
-
-    .line 161
-    invoke-static {v2, v3, v5, v1}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->restrictedToValidFreeformRegion(Landroid/content/Context;Lcom/android/wm/shell/miuimultiwinswitch/MiuiDisplayInfo;Landroid/graphics/Rect;F)V
-
-    .line 163
-    invoke-static {}, Lcom/xiaomi/freeform/MiuiFreeformStub;->getInstance()Lcom/xiaomi/freeform/MiuiFreeformStub;
-
-    .line 166
-    move-result-object v6
-
-    .line 169
-    iget-object v7, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mContext:Landroid/content/Context;
-
-    .line 170
-    const/4 v8, 0x0
-
-    .line 172
-    iget-object v0, v0, Lcom/android/wm/shell/common/DisplayLayout;->mStableInsets:Landroid/graphics/Rect;
-
-    .line 173
-    iget v9, v0, Landroid/graphics/Rect;->top:I
-
-    .line 175
-    iget v10, v0, Landroid/graphics/Rect;->bottom:I
-
-    .line 177
-    const/4 v11, 0x0
-
-    .line 179
-    invoke-virtual/range {v6 .. v11}, Lcom/xiaomi/freeform/MiuiFreeformStub;->getFreeFormAccessibleArea(Landroid/content/Context;ZIIZ)Landroid/graphics/Rect;
-
-    .line 180
-    move-result-object v11
-
-    .line 183
-    invoke-static {}, Lcom/xiaomi/freeform/MiuiFreeformStub;->getInstance()Lcom/xiaomi/freeform/MiuiFreeformStub;
-
-    .line 184
-    move-result-object v6
-
-    .line 187
-    iget-object v7, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mContext:Landroid/content/Context;
-
-    .line 188
-    iget-object v0, p1, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityInfo:Landroid/content/pm/ActivityInfo;
-
-    .line 190
-    iget-object v9, v0, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
-
-    .line 192
-    move-object v8, v5
-
-    .line 194
-    move v10, v1
-
-    .line 195
-    invoke-virtual/range {v6 .. v11}, Lcom/xiaomi/freeform/MiuiFreeformStub;->getAvoidFreeformBounds(Landroid/content/Context;Landroid/graphics/Rect;Ljava/lang/String;FLandroid/graphics/Rect;)V
-
-    .line 196
-    iget-object v0, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mFreeformStartScale:Landroid/util/SparseArray;
-
-    .line 199
-    iget v2, p1, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
-
-    .line 201
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    .line 203
+    .line 38
     move-result-object v3
 
-    .line 206
-    invoke-virtual {v0, v2, v3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    .line 41
+    iget v4, v7, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
-    .line 207
-    iget v0, p1, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
+    .line 42
+    invoke-static {v3, v1, v4, v2}, Lmiui/app/MiuiFreeFormManager;->getFreeformRectDesktop(Landroid/graphics/Rect;FIZ)F
+
+    .line 44
+    move-result v1
+
+    .line 47
+    iget-object v2, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mFreeformStartScale:Landroid/util/SparseArray;
+
+    .line 48
+    iget v4, v7, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
+
+    .line 50
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    .line 52
+    move-result-object v5
+
+    .line 55
+    invoke-virtual {v2, v4, v5}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    .line 56
+    iget v2, v7, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
+
+    .line 59
+    invoke-direct {v0, v2, v3, v1}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->getFreeformRectAfterAutoLayout(ILandroid/graphics/Rect;F)Landroid/graphics/Rect;
+
+    .line 61
+    move-result-object v1
+
+    .line 64
+    if-eqz v1, :cond_1
+
+    .line 65
+    iget v2, v1, Landroid/graphics/Rect;->left:I
+
+    .line 67
+    iget v1, v1, Landroid/graphics/Rect;->top:I
+
+    .line 69
+    invoke-virtual {v3, v2, v1}, Landroid/graphics/Rect;->offsetTo(II)V
+
+    .line 71
+    :cond_1
+    iget-object v1, v7, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
+
+    .line 74
+    invoke-virtual {v8, v1, v3}, Landroid/window/WindowContainerTransaction;->setBounds(Landroid/window/WindowContainerToken;Landroid/graphics/Rect;)Landroid/window/WindowContainerTransaction;
+
+    .line 76
+    goto/16 :goto_2
+
+    .line 79
+    :cond_2
+    :goto_0
+    iget-object v1, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mDisplayController:Lcom/android/wm/shell/common/DisplayController;
+
+    .line 81
+    iget v3, v7, Landroid/app/ActivityManager$RunningTaskInfo;->displayId:I
+
+    .line 83
+    invoke-virtual {v1, v3}, Lcom/android/wm/shell/common/DisplayController;->getDisplayLayout(I)Lcom/android/wm/shell/common/DisplayLayout;
+
+    .line 85
+    move-result-object v9
+
+    .line 88
+    invoke-virtual {v9}, Lcom/android/wm/shell/common/DisplayLayout;->getOrientation()I
+
+    .line 89
+    move-result v1
+
+    .line 92
+    const/4 v3, 0x1
+
+    .line 93
+    if-ne v1, v3, :cond_3
+
+    .line 94
+    move v5, v3
+
+    .line 96
+    goto :goto_1
+
+    .line 97
+    :cond_3
+    move v5, v2
+
+    .line 98
+    :goto_1
+    iget-object v1, v7, Landroid/app/ActivityManager$RunningTaskInfo;->realActivity:Landroid/content/ComponentName;
+
+    .line 99
+    invoke-virtual {v1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    .line 101
+    move-result-object v2
+
+    .line 104
+    new-instance v10, Landroid/graphics/RectF;
+
+    .line 105
+    invoke-direct {v10}, Landroid/graphics/RectF;-><init>()V
+
+    .line 107
+    iget-object v1, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mContext:Landroid/content/Context;
+
+    .line 110
+    iget v4, v7, Landroid/app/ActivityManager$RunningTaskInfo;->mTopActivityOrientation:I
+
+    .line 112
+    move-object/from16 v3, p1
+
+    .line 114
+    move-object v6, v10
+
+    .line 116
+    invoke-static/range {v1 .. v6}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->getFreeformBoundsAndScale(Landroid/content/Context;Ljava/lang/String;Landroid/app/TaskInfo;IZLandroid/graphics/RectF;)F
+
+    .line 117
+    move-result v1
+
+    .line 120
+    iget v2, v9, Lcom/android/wm/shell/common/DisplayLayout;->mWidth:I
+
+    .line 121
+    div-int/lit8 v2, v2, 0x2
+
+    .line 123
+    iget v3, v9, Lcom/android/wm/shell/common/DisplayLayout;->mHeight:I
+
+    .line 125
+    div-int/lit8 v3, v3, 0x2
+
+    .line 127
+    int-to-float v2, v2
+
+    .line 129
+    invoke-virtual {v10}, Landroid/graphics/RectF;->width()F
+
+    .line 130
+    move-result v4
+
+    .line 133
+    mul-float/2addr v4, v1
+
+    .line 134
+    const/high16 v5, 0x40000000    # 2.0f
+
+    .line 135
+    div-float/2addr v4, v5
+
+    .line 137
+    sub-float/2addr v2, v4
+
+    .line 138
+    float-to-int v2, v2
+
+    .line 139
+    int-to-float v3, v3
+
+    .line 140
+    invoke-virtual {v10}, Landroid/graphics/RectF;->height()F
+
+    .line 141
+    move-result v4
+
+    .line 144
+    mul-float/2addr v4, v1
+
+    .line 145
+    div-float/2addr v4, v5
+
+    .line 146
+    sub-float/2addr v3, v4
+
+    .line 147
+    float-to-int v3, v3
+
+    .line 148
+    new-instance v4, Landroid/graphics/Rect;
+
+    .line 149
+    int-to-float v5, v2
+
+    .line 151
+    invoke-virtual {v10}, Landroid/graphics/RectF;->width()F
+
+    .line 152
+    move-result v6
+
+    .line 155
+    add-float/2addr v6, v5
+
+    .line 156
+    float-to-int v5, v6
+
+    .line 157
+    int-to-float v6, v3
+
+    .line 158
+    invoke-virtual {v10}, Landroid/graphics/RectF;->height()F
+
+    .line 159
+    move-result v10
+
+    .line 162
+    add-float/2addr v10, v6
+
+    .line 163
+    float-to-int v6, v10
+
+    .line 164
+    invoke-direct {v4, v2, v3, v5, v6}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    .line 165
+    iget-object v2, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mContext:Landroid/content/Context;
+
+    .line 168
+    iget-object v3, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mMiuiDisplayInfo:Lcom/android/wm/shell/miuimultiwinswitch/MiuiDisplayInfo;
+
+    .line 170
+    invoke-static {v2, v3, v4, v1}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->restrictedToValidFreeformRegion(Landroid/content/Context;Lcom/android/wm/shell/miuimultiwinswitch/MiuiDisplayInfo;Landroid/graphics/Rect;F)V
+
+    .line 172
+    invoke-static {}, Lcom/xiaomi/freeform/MiuiFreeformStub;->getInstance()Lcom/xiaomi/freeform/MiuiFreeformStub;
+
+    .line 175
+    move-result-object v10
+
+    .line 178
+    iget-object v11, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mContext:Landroid/content/Context;
+
+    .line 179
+    const/4 v12, 0x0
+
+    .line 181
+    iget-object v2, v9, Lcom/android/wm/shell/common/DisplayLayout;->mStableInsets:Landroid/graphics/Rect;
+
+    .line 182
+    iget v13, v2, Landroid/graphics/Rect;->top:I
+
+    .line 184
+    iget v14, v2, Landroid/graphics/Rect;->bottom:I
+
+    .line 186
+    const/4 v15, 0x0
+
+    .line 188
+    invoke-virtual/range {v10 .. v15}, Lcom/xiaomi/freeform/MiuiFreeformStub;->getFreeFormAccessibleArea(Landroid/content/Context;ZIIZ)Landroid/graphics/Rect;
+
+    .line 189
+    move-result-object v16
+
+    .line 192
+    invoke-static {}, Lcom/xiaomi/freeform/MiuiFreeformStub;->getInstance()Lcom/xiaomi/freeform/MiuiFreeformStub;
+
+    .line 193
+    move-result-object v11
+
+    .line 196
+    iget-object v12, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mContext:Landroid/content/Context;
+
+    .line 197
+    iget-object v2, v7, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityInfo:Landroid/content/pm/ActivityInfo;
+
+    .line 199
+    iget-object v14, v2, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
+
+    .line 201
+    move-object v13, v4
+
+    .line 203
+    move v15, v1
+
+    .line 204
+    invoke-virtual/range {v11 .. v16}, Lcom/xiaomi/freeform/MiuiFreeformStub;->getAvoidFreeformBounds(Landroid/content/Context;Landroid/graphics/Rect;Ljava/lang/String;FLandroid/graphics/Rect;)V
+
+    .line 205
+    iget-object v2, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mFreeformStartScale:Landroid/util/SparseArray;
+
+    .line 208
+    iget v3, v7, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
     .line 210
-    invoke-direct {p0, v0, v5, v1}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->getFreeformRectAfterAutoLayout(ILandroid/graphics/Rect;F)Landroid/graphics/Rect;
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     .line 212
-    move-result-object v0
+    move-result-object v5
 
     .line 215
-    if-eqz v0, :cond_4
+    invoke-virtual {v2, v3, v5}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     .line 216
-    iget v1, v0, Landroid/graphics/Rect;->left:I
+    iget v2, v7, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
-    .line 218
-    iget v0, v0, Landroid/graphics/Rect;->top:I
+    .line 219
+    invoke-direct {v0, v2, v4, v1}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->getFreeformRectAfterAutoLayout(ILandroid/graphics/Rect;F)Landroid/graphics/Rect;
 
-    .line 220
-    invoke-virtual {v5, v1, v0}, Landroid/graphics/Rect;->offsetTo(II)V
+    .line 221
+    move-result-object v1
 
-    .line 222
-    :cond_4
-    iget-object v0, p1, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
+    .line 224
+    if-eqz v1, :cond_4
 
     .line 225
-    invoke-virtual {p2, v0, v5}, Landroid/window/WindowContainerTransaction;->setBounds(Landroid/window/WindowContainerToken;Landroid/graphics/Rect;)Landroid/window/WindowContainerTransaction;
+    iget v2, v1, Landroid/graphics/Rect;->left:I
 
     .line 227
-    :goto_1
-    const/16 v0, 0xfa
+    iget v1, v1, Landroid/graphics/Rect;->top:I
 
-    .line 230
-    invoke-direct {p0, v0, p2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->startTransition(ILandroid/window/WindowContainerTransaction;)V
+    .line 229
+    invoke-virtual {v4, v2, v1}, Landroid/graphics/Rect;->offsetTo(II)V
 
-    .line 232
-    iget-object p0, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mPendingTaskInfo:Landroid/util/SparseArray;
+    .line 231
+    :cond_4
+    iget-object v1, v7, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
 
-    .line 235
-    iget p2, p1, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
+    .line 234
+    invoke-virtual {v8, v1, v4}, Landroid/window/WindowContainerTransaction;->setBounds(Landroid/window/WindowContainerToken;Landroid/graphics/Rect;)Landroid/window/WindowContainerTransaction;
 
-    .line 237
-    invoke-virtual {p0, p2, p1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    .line 236
+    :goto_2
+    const/16 v1, 0xfa
 
     .line 239
+    invoke-direct {v0, v1, v8}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->startTransition(ILandroid/window/WindowContainerTransaction;)V
+
+    .line 241
+    iget-object v0, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mPendingTaskInfo:Landroid/util/SparseArray;
+
+    .line 244
+    iget v1, v7, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
+
+    .line 246
+    invoke-virtual {v0, v1, v7}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    .line 248
     return-void
-    .line 242
+    .line 251
 .end method
 
 .method public startFullToSplitTransition(Landroid/app/ActivityManager$RunningTaskInfo;Landroid/window/WindowContainerTransaction;)V
@@ -20607,270 +20611,289 @@
 .end method
 
 .method public startSingleOpenToFreeformTransition(Landroid/app/ActivityManager$RunningTaskInfo;Landroid/window/WindowContainerTransaction;)V
-    .locals 12
+    .locals 17
 
     .line 1
-    iget-object v0, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mSplitScreenController:Lcom/android/wm/shell/sosc/SoScSplitScreenController;
+    move-object/from16 v0, p0
 
     .line 2
-    const/4 v1, 0x0
+    move-object/from16 v7, p1
 
     .line 4
-    invoke-static {v1, v0}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->animateDividerVisibility(ZLcom/android/wm/shell/sosc/SoScSplitScreenController;)V
+    move-object/from16 v8, p2
 
-    .line 5
-    iget-object v0, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mDisplayController:Lcom/android/wm/shell/common/DisplayController;
+    .line 6
+    iget-object v1, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mSplitScreenController:Lcom/android/wm/shell/sosc/SoScSplitScreenController;
 
     .line 8
-    iget v2, p1, Landroid/app/ActivityManager$RunningTaskInfo;->displayId:I
+    const/4 v2, 0x0
 
     .line 10
-    invoke-virtual {v0, v2}, Lcom/android/wm/shell/common/DisplayController;->getDisplayLayout(I)Lcom/android/wm/shell/common/DisplayLayout;
+    invoke-static {v2, v1}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->animateDividerVisibility(ZLcom/android/wm/shell/sosc/SoScSplitScreenController;)V
 
-    .line 12
-    move-result-object v0
+    .line 11
+    iget-object v1, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mDisplayController:Lcom/android/wm/shell/common/DisplayController;
 
-    .line 15
-    invoke-virtual {v0}, Lcom/android/wm/shell/common/DisplayLayout;->getOrientation()I
+    .line 14
+    iget v3, v7, Landroid/app/ActivityManager$RunningTaskInfo;->displayId:I
 
     .line 16
-    move-result v2
+    invoke-virtual {v1, v3}, Lcom/android/wm/shell/common/DisplayController;->getDisplayLayout(I)Lcom/android/wm/shell/common/DisplayLayout;
 
-    .line 19
-    const/4 v3, 0x1
-
-    .line 20
-    if-ne v2, v3, :cond_0
+    .line 18
+    move-result-object v9
 
     .line 21
-    move v1, v3
+    invoke-virtual {v9}, Lcom/android/wm/shell/common/DisplayLayout;->getOrientation()I
 
-    .line 23
-    :cond_0
-    iget-object v2, p1, Landroid/app/ActivityManager$RunningTaskInfo;->realActivity:Landroid/content/ComponentName;
-
-    .line 24
-    invoke-virtual {v2}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
-
-    .line 26
-    move-result-object v2
-
-    .line 29
-    new-instance v3, Landroid/graphics/RectF;
-
-    .line 30
-    invoke-direct {v3}, Landroid/graphics/RectF;-><init>()V
-
-    .line 32
-    iget-object v4, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mContext:Landroid/content/Context;
-
-    .line 35
-    iget-object v5, p1, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityInfo:Landroid/content/pm/ActivityInfo;
-
-    .line 37
-    iget v5, v5, Landroid/content/pm/ActivityInfo;->screenOrientation:I
-
-    .line 39
-    invoke-static {v4, v2, v5, v1, v3}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->getFreeformBoundsAndScale(Landroid/content/Context;Ljava/lang/String;IZLandroid/graphics/RectF;)F
-
-    .line 41
+    .line 22
     move-result v1
 
-    .line 44
-    iget v2, v0, Lcom/android/wm/shell/common/DisplayLayout;->mWidth:I
+    .line 25
+    const/4 v3, 0x1
+
+    .line 26
+    if-ne v1, v3, :cond_0
+
+    .line 27
+    move v5, v3
+
+    .line 29
+    goto :goto_0
+
+    .line 30
+    :cond_0
+    move v5, v2
+
+    .line 31
+    :goto_0
+    iget-object v1, v7, Landroid/app/ActivityManager$RunningTaskInfo;->realActivity:Landroid/content/ComponentName;
+
+    .line 32
+    invoke-virtual {v1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    .line 34
+    move-result-object v2
+
+    .line 37
+    new-instance v10, Landroid/graphics/RectF;
+
+    .line 38
+    invoke-direct {v10}, Landroid/graphics/RectF;-><init>()V
+
+    .line 40
+    iget-object v1, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mContext:Landroid/content/Context;
+
+    .line 43
+    iget v4, v7, Landroid/app/ActivityManager$RunningTaskInfo;->mTopActivityOrientation:I
 
     .line 45
-    div-int/lit8 v2, v2, 0x2
+    move-object/from16 v3, p1
 
     .line 47
-    iget v4, v0, Lcom/android/wm/shell/common/DisplayLayout;->mHeight:I
+    move-object v6, v10
 
     .line 49
-    div-int/lit8 v4, v4, 0x2
+    invoke-static/range {v1 .. v6}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->getFreeformBoundsAndScale(Landroid/content/Context;Ljava/lang/String;Landroid/app/TaskInfo;IZLandroid/graphics/RectF;)F
 
-    .line 51
-    int-to-float v2, v2
+    .line 50
+    move-result v1
 
     .line 53
-    invoke-virtual {v3}, Landroid/graphics/RectF;->width()F
+    iget v2, v9, Lcom/android/wm/shell/common/DisplayLayout;->mWidth:I
 
     .line 54
-    move-result v5
+    div-int/lit8 v2, v2, 0x2
 
-    .line 57
-    mul-float/2addr v5, v1
+    .line 56
+    iget v3, v9, Lcom/android/wm/shell/common/DisplayLayout;->mHeight:I
 
     .line 58
-    const/high16 v6, 0x40000000    # 2.0f
+    div-int/lit8 v3, v3, 0x2
 
-    .line 59
-    div-float/2addr v5, v6
-
-    .line 61
-    sub-float/2addr v2, v5
+    .line 60
+    int-to-float v2, v2
 
     .line 62
-    float-to-int v2, v2
+    invoke-virtual {v10}, Landroid/graphics/RectF;->width()F
 
     .line 63
-    int-to-float v4, v4
+    move-result v4
 
-    .line 64
-    invoke-virtual {v3}, Landroid/graphics/RectF;->height()F
+    .line 66
+    mul-float/2addr v4, v1
 
-    .line 65
-    move-result v5
+    .line 67
+    const/high16 v5, 0x40000000    # 2.0f
 
     .line 68
-    mul-float/2addr v5, v1
-
-    .line 69
-    div-float/2addr v5, v6
+    div-float/2addr v4, v5
 
     .line 70
-    sub-float/2addr v4, v5
+    sub-float/2addr v2, v4
 
     .line 71
-    float-to-int v4, v4
+    float-to-int v2, v2
 
     .line 72
-    new-instance v5, Landroid/graphics/Rect;
+    int-to-float v3, v3
 
     .line 73
-    int-to-float v6, v2
+    invoke-virtual {v10}, Landroid/graphics/RectF;->height()F
 
-    .line 75
-    invoke-virtual {v3}, Landroid/graphics/RectF;->width()F
+    .line 74
+    move-result v4
 
-    .line 76
-    move-result v7
+    .line 77
+    mul-float/2addr v4, v1
+
+    .line 78
+    div-float/2addr v4, v5
 
     .line 79
-    add-float/2addr v7, v6
+    sub-float/2addr v3, v4
 
     .line 80
-    float-to-int v6, v7
-
-    .line 81
-    int-to-float v7, v4
-
-    .line 82
-    invoke-virtual {v3}, Landroid/graphics/RectF;->height()F
-
-    .line 83
-    move-result v3
-
-    .line 86
-    add-float/2addr v3, v7
-
-    .line 87
     float-to-int v3, v3
 
+    .line 81
+    new-instance v4, Landroid/graphics/Rect;
+
+    .line 82
+    int-to-float v5, v2
+
+    .line 84
+    invoke-virtual {v10}, Landroid/graphics/RectF;->width()F
+
+    .line 85
+    move-result v6
+
     .line 88
-    invoke-direct {v5, v2, v4, v6, v3}, Landroid/graphics/Rect;-><init>(IIII)V
+    add-float/2addr v6, v5
 
     .line 89
-    iget-object v2, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mContext:Landroid/content/Context;
+    float-to-int v5, v6
+
+    .line 90
+    int-to-float v6, v3
+
+    .line 91
+    invoke-virtual {v10}, Landroid/graphics/RectF;->height()F
 
     .line 92
-    iget-object v3, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mMiuiDisplayInfo:Lcom/android/wm/shell/miuimultiwinswitch/MiuiDisplayInfo;
+    move-result v10
 
-    .line 94
-    invoke-static {v2, v3, v5, v1}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->restrictedToValidFreeformRegion(Landroid/content/Context;Lcom/android/wm/shell/miuimultiwinswitch/MiuiDisplayInfo;Landroid/graphics/Rect;F)V
+    .line 95
+    add-float/2addr v10, v6
 
     .line 96
-    invoke-static {}, Lcom/xiaomi/freeform/MiuiFreeformStub;->getInstance()Lcom/xiaomi/freeform/MiuiFreeformStub;
+    float-to-int v6, v10
 
-    .line 99
-    move-result-object v6
+    .line 97
+    invoke-direct {v4, v2, v3, v5, v6}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 102
-    iget-object v7, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mContext:Landroid/content/Context;
+    .line 98
+    iget-object v2, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mContext:Landroid/content/Context;
+
+    .line 101
+    iget-object v3, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mMiuiDisplayInfo:Lcom/android/wm/shell/miuimultiwinswitch/MiuiDisplayInfo;
 
     .line 103
-    const/4 v8, 0x0
+    invoke-static {v2, v3, v4, v1}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->restrictedToValidFreeformRegion(Landroid/content/Context;Lcom/android/wm/shell/miuimultiwinswitch/MiuiDisplayInfo;Landroid/graphics/Rect;F)V
 
     .line 105
-    iget-object v0, v0, Lcom/android/wm/shell/common/DisplayLayout;->mStableInsets:Landroid/graphics/Rect;
-
-    .line 106
-    iget v9, v0, Landroid/graphics/Rect;->top:I
-
-    .line 108
-    iget v10, v0, Landroid/graphics/Rect;->bottom:I
-
-    .line 110
-    const/4 v11, 0x0
-
-    .line 112
-    invoke-virtual/range {v6 .. v11}, Lcom/xiaomi/freeform/MiuiFreeformStub;->getFreeFormAccessibleArea(Landroid/content/Context;ZIIZ)Landroid/graphics/Rect;
-
-    .line 113
-    move-result-object v11
-
-    .line 116
     invoke-static {}, Lcom/xiaomi/freeform/MiuiFreeformStub;->getInstance()Lcom/xiaomi/freeform/MiuiFreeformStub;
 
-    .line 117
-    move-result-object v6
+    .line 108
+    move-result-object v10
 
-    .line 120
-    iget-object v7, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mContext:Landroid/content/Context;
+    .line 111
+    iget-object v11, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mContext:Landroid/content/Context;
+
+    .line 112
+    const/4 v12, 0x0
+
+    .line 114
+    iget-object v2, v9, Lcom/android/wm/shell/common/DisplayLayout;->mStableInsets:Landroid/graphics/Rect;
+
+    .line 115
+    iget v13, v2, Landroid/graphics/Rect;->top:I
+
+    .line 117
+    iget v14, v2, Landroid/graphics/Rect;->bottom:I
+
+    .line 119
+    const/4 v15, 0x0
 
     .line 121
-    iget-object v0, p1, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityInfo:Landroid/content/pm/ActivityInfo;
+    invoke-virtual/range {v10 .. v15}, Lcom/xiaomi/freeform/MiuiFreeformStub;->getFreeFormAccessibleArea(Landroid/content/Context;ZIIZ)Landroid/graphics/Rect;
 
-    .line 123
-    iget-object v9, v0, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
+    .line 122
+    move-result-object v16
 
     .line 125
-    move-object v8, v5
+    invoke-static {}, Lcom/xiaomi/freeform/MiuiFreeformStub;->getInstance()Lcom/xiaomi/freeform/MiuiFreeformStub;
 
-    .line 127
-    move v10, v1
-
-    .line 128
-    invoke-virtual/range {v6 .. v11}, Lcom/xiaomi/freeform/MiuiFreeformStub;->getAvoidFreeformBounds(Landroid/content/Context;Landroid/graphics/Rect;Ljava/lang/String;FLandroid/graphics/Rect;)V
+    .line 126
+    move-result-object v11
 
     .line 129
-    iget-object v0, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mPendingTaskInfo:Landroid/util/SparseArray;
+    iget-object v12, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mContext:Landroid/content/Context;
+
+    .line 130
+    iget-object v2, v7, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityInfo:Landroid/content/pm/ActivityInfo;
 
     .line 132
-    iget v2, p1, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
+    iget-object v14, v2, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
     .line 134
-    invoke-virtual {v0, v2, p1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    move-object v13, v4
 
     .line 136
-    iget-object v0, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mFreeformStartScale:Landroid/util/SparseArray;
+    move v15, v1
 
-    .line 139
-    iget v2, p1, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
+    .line 137
+    invoke-virtual/range {v11 .. v16}, Lcom/xiaomi/freeform/MiuiFreeformStub;->getAvoidFreeformBounds(Landroid/content/Context;Landroid/graphics/Rect;Ljava/lang/String;FLandroid/graphics/Rect;)V
+
+    .line 138
+    iget-object v2, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mPendingTaskInfo:Landroid/util/SparseArray;
 
     .line 141
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    iget v3, v7, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
     .line 143
-    move-result-object v1
+    invoke-virtual {v2, v3, v7}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 146
-    invoke-virtual {v0, v2, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    .line 145
+    iget-object v2, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mFreeformStartScale:Landroid/util/SparseArray;
 
-    .line 147
-    iget-object p1, p1, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
+    .line 148
+    iget v3, v7, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
     .line 150
-    invoke-virtual {p2, p1, v5}, Landroid/window/WindowContainerTransaction;->setBounds(Landroid/window/WindowContainerToken;Landroid/graphics/Rect;)Landroid/window/WindowContainerTransaction;
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     .line 152
-    const/16 p1, 0xfd
+    move-result-object v1
 
     .line 155
-    invoke-direct {p0, p1, p2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->startTransition(ILandroid/window/WindowContainerTransaction;)V
+    invoke-virtual {v2, v3, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 157
+    .line 156
+    iget-object v1, v7, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
+
+    .line 159
+    invoke-virtual {v8, v1, v4}, Landroid/window/WindowContainerTransaction;->setBounds(Landroid/window/WindowContainerToken;Landroid/graphics/Rect;)Landroid/window/WindowContainerTransaction;
+
+    .line 161
+    const/16 v1, 0xfd
+
+    .line 164
+    invoke-direct {v0, v1, v8}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->startTransition(ILandroid/window/WindowContainerTransaction;)V
+
+    .line 166
     return-void
-    .line 160
+    .line 169
 .end method
 
 .method public startSingleOpenToFullTransition(Landroid/app/ActivityManager$RunningTaskInfo;Landroid/window/WindowContainerTransaction;)V
@@ -21340,292 +21363,313 @@
 .end method
 
 .method public startSplitToFreeformTransition(Landroid/app/ActivityManager$RunningTaskInfo;Landroid/app/ActivityManager$RunningTaskInfo;Landroid/window/WindowContainerTransaction;)V
-    .locals 11
+    .locals 17
 
     .line 1
-    iget-object v0, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mPendingTaskInfo:Landroid/util/SparseArray;
+    move-object/from16 v0, p0
 
     .line 2
-    iget v1, p2, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
+    move-object/from16 v7, p1
 
     .line 4
-    invoke-virtual {v0, v1, p2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    move-object/from16 v1, p2
 
     .line 6
-    iget-object p2, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mDisplayController:Lcom/android/wm/shell/common/DisplayController;
+    move-object/from16 v8, p3
 
-    .line 9
-    iget v0, p1, Landroid/app/ActivityManager$RunningTaskInfo;->displayId:I
+    .line 8
+    iget-object v2, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mPendingTaskInfo:Landroid/util/SparseArray;
 
-    .line 11
-    invoke-virtual {p2, v0}, Lcom/android/wm/shell/common/DisplayController;->getDisplayLayout(I)Lcom/android/wm/shell/common/DisplayLayout;
+    .line 10
+    iget v3, v1, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
-    .line 13
-    move-result-object p2
+    .line 12
+    invoke-virtual {v2, v3, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 16
-    invoke-virtual {p2}, Lcom/android/wm/shell/common/DisplayLayout;->getOrientation()I
+    .line 14
+    iget-object v1, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mDisplayController:Lcom/android/wm/shell/common/DisplayController;
 
     .line 17
-    move-result v0
+    iget v2, v7, Landroid/app/ActivityManager$RunningTaskInfo;->displayId:I
 
-    .line 20
-    const/4 v1, 0x1
+    .line 19
+    invoke-virtual {v1, v2}, Lcom/android/wm/shell/common/DisplayController;->getDisplayLayout(I)Lcom/android/wm/shell/common/DisplayLayout;
 
     .line 21
-    if-ne v0, v1, :cond_0
-
-    .line 22
-    goto :goto_0
+    move-result-object v9
 
     .line 24
+    invoke-virtual {v9}, Lcom/android/wm/shell/common/DisplayLayout;->getOrientation()I
+
+    .line 25
+    move-result v1
+
+    .line 28
+    const/4 v2, 0x1
+
+    .line 29
+    if-ne v1, v2, :cond_0
+
+    .line 30
+    move v5, v2
+
+    .line 32
+    goto :goto_0
+
+    .line 33
     :cond_0
     const/4 v1, 0x0
 
-    .line 25
-    :goto_0
-    iget-object v0, p1, Landroid/app/ActivityManager$RunningTaskInfo;->realActivity:Landroid/content/ComponentName;
-
-    .line 26
-    invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
-
-    .line 28
-    move-result-object v0
-
-    .line 31
-    new-instance v2, Landroid/graphics/RectF;
-
-    .line 32
-    invoke-direct {v2}, Landroid/graphics/RectF;-><init>()V
-
     .line 34
-    iget-object v3, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mContext:Landroid/content/Context;
+    move v5, v1
 
-    .line 37
-    iget-object v4, p1, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityInfo:Landroid/content/pm/ActivityInfo;
+    .line 35
+    :goto_0
+    iget-object v1, v7, Landroid/app/ActivityManager$RunningTaskInfo;->realActivity:Landroid/content/ComponentName;
 
-    .line 39
-    iget v4, v4, Landroid/content/pm/ActivityInfo;->screenOrientation:I
+    .line 36
+    invoke-virtual {v1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    .line 38
+    move-result-object v2
 
     .line 41
-    invoke-static {v3, v0, v4, v1, v2}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->getFreeformBoundsAndScale(Landroid/content/Context;Ljava/lang/String;IZLandroid/graphics/RectF;)F
+    new-instance v10, Landroid/graphics/RectF;
 
-    .line 43
-    move-result v0
+    .line 42
+    invoke-direct {v10}, Landroid/graphics/RectF;-><init>()V
 
-    .line 46
-    iget v1, p2, Lcom/android/wm/shell/common/DisplayLayout;->mWidth:I
+    .line 44
+    iget-object v1, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mContext:Landroid/content/Context;
 
     .line 47
-    div-int/lit8 v1, v1, 0x2
+    iget v4, v7, Landroid/app/ActivityManager$RunningTaskInfo;->mTopActivityOrientation:I
 
     .line 49
-    iget v3, p2, Lcom/android/wm/shell/common/DisplayLayout;->mHeight:I
+    move-object/from16 v3, p1
 
     .line 51
-    div-int/lit8 v3, v3, 0x2
+    move-object v6, v10
 
     .line 53
-    int-to-float v1, v1
+    invoke-static/range {v1 .. v6}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->getFreeformBoundsAndScale(Landroid/content/Context;Ljava/lang/String;Landroid/app/TaskInfo;IZLandroid/graphics/RectF;)F
 
-    .line 55
-    invoke-virtual {v2}, Landroid/graphics/RectF;->width()F
+    .line 54
+    move-result v1
 
-    .line 56
-    move-result v4
+    .line 57
+    iget v2, v9, Lcom/android/wm/shell/common/DisplayLayout;->mWidth:I
 
-    .line 59
-    mul-float/2addr v4, v0
+    .line 58
+    div-int/lit8 v2, v2, 0x2
 
     .line 60
-    const/high16 v5, 0x40000000    # 2.0f
+    iget v3, v9, Lcom/android/wm/shell/common/DisplayLayout;->mHeight:I
 
-    .line 61
-    div-float/2addr v4, v5
-
-    .line 63
-    sub-float/2addr v1, v4
+    .line 62
+    div-int/lit8 v3, v3, 0x2
 
     .line 64
-    float-to-int v1, v1
-
-    .line 65
-    int-to-float v3, v3
+    int-to-float v2, v2
 
     .line 66
-    invoke-virtual {v2}, Landroid/graphics/RectF;->height()F
+    invoke-virtual {v10}, Landroid/graphics/RectF;->width()F
 
     .line 67
     move-result v4
 
     .line 70
-    mul-float/2addr v4, v0
+    mul-float/2addr v4, v1
 
     .line 71
-    div-float/2addr v4, v5
+    const/high16 v5, 0x40000000    # 2.0f
 
     .line 72
-    sub-float/2addr v3, v4
-
-    .line 73
-    float-to-int v3, v3
+    div-float/2addr v4, v5
 
     .line 74
-    new-instance v4, Landroid/graphics/Rect;
+    sub-float/2addr v2, v4
 
     .line 75
-    int-to-float v5, v1
-
-    .line 77
-    invoke-virtual {v2}, Landroid/graphics/RectF;->width()F
-
-    .line 78
-    move-result v6
-
-    .line 81
-    add-float/2addr v6, v5
-
-    .line 82
-    float-to-int v5, v6
-
-    .line 83
-    int-to-float v6, v3
-
-    .line 84
-    invoke-virtual {v2}, Landroid/graphics/RectF;->height()F
-
-    .line 85
-    move-result v2
-
-    .line 88
-    add-float/2addr v2, v6
-
-    .line 89
     float-to-int v2, v2
 
-    .line 90
-    invoke-direct {v4, v1, v3, v5, v2}, Landroid/graphics/Rect;-><init>(IIII)V
+    .line 76
+    int-to-float v3, v3
 
-    .line 91
-    iget-object v1, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mContext:Landroid/content/Context;
+    .line 77
+    invoke-virtual {v10}, Landroid/graphics/RectF;->height()F
+
+    .line 78
+    move-result v4
+
+    .line 81
+    mul-float/2addr v4, v1
+
+    .line 82
+    div-float/2addr v4, v5
+
+    .line 83
+    sub-float/2addr v3, v4
+
+    .line 84
+    float-to-int v3, v3
+
+    .line 85
+    new-instance v4, Landroid/graphics/Rect;
+
+    .line 86
+    int-to-float v5, v2
+
+    .line 88
+    invoke-virtual {v10}, Landroid/graphics/RectF;->width()F
+
+    .line 89
+    move-result v6
+
+    .line 92
+    add-float/2addr v6, v5
+
+    .line 93
+    float-to-int v5, v6
 
     .line 94
-    iget-object v2, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mMiuiDisplayInfo:Lcom/android/wm/shell/miuimultiwinswitch/MiuiDisplayInfo;
+    int-to-float v6, v3
+
+    .line 95
+    invoke-virtual {v10}, Landroid/graphics/RectF;->height()F
 
     .line 96
-    invoke-static {v1, v2, v4, v0}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->restrictedToValidFreeformRegion(Landroid/content/Context;Lcom/android/wm/shell/miuimultiwinswitch/MiuiDisplayInfo;Landroid/graphics/Rect;F)V
+    move-result v10
 
-    .line 98
-    invoke-static {}, Lcom/xiaomi/freeform/MiuiFreeformStub;->getInstance()Lcom/xiaomi/freeform/MiuiFreeformStub;
+    .line 99
+    add-float/2addr v10, v6
+
+    .line 100
+    float-to-int v6, v10
 
     .line 101
-    move-result-object v5
+    invoke-direct {v4, v2, v3, v5, v6}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 104
-    iget-object v6, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mContext:Landroid/content/Context;
+    .line 102
+    iget-object v2, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mContext:Landroid/content/Context;
 
     .line 105
-    const/4 v7, 0x0
+    iget-object v3, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mMiuiDisplayInfo:Lcom/android/wm/shell/miuimultiwinswitch/MiuiDisplayInfo;
 
     .line 107
-    iget-object p2, p2, Lcom/android/wm/shell/common/DisplayLayout;->mStableInsets:Landroid/graphics/Rect;
+    invoke-static {v2, v3, v4, v1}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->restrictedToValidFreeformRegion(Landroid/content/Context;Lcom/android/wm/shell/miuimultiwinswitch/MiuiDisplayInfo;Landroid/graphics/Rect;F)V
 
-    .line 108
-    iget v8, p2, Landroid/graphics/Rect;->top:I
-
-    .line 110
-    iget v9, p2, Landroid/graphics/Rect;->bottom:I
-
-    .line 112
-    const/4 v10, 0x0
-
-    .line 114
-    invoke-virtual/range {v5 .. v10}, Lcom/xiaomi/freeform/MiuiFreeformStub;->getFreeFormAccessibleArea(Landroid/content/Context;ZIIZ)Landroid/graphics/Rect;
-
-    .line 115
-    move-result-object v10
-
-    .line 118
+    .line 109
     invoke-static {}, Lcom/xiaomi/freeform/MiuiFreeformStub;->getInstance()Lcom/xiaomi/freeform/MiuiFreeformStub;
 
-    .line 119
-    move-result-object v5
+    .line 112
+    move-result-object v10
 
-    .line 122
-    iget-object v6, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mContext:Landroid/content/Context;
+    .line 115
+    iget-object v11, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mContext:Landroid/content/Context;
+
+    .line 116
+    const/4 v12, 0x0
+
+    .line 118
+    iget-object v2, v9, Lcom/android/wm/shell/common/DisplayLayout;->mStableInsets:Landroid/graphics/Rect;
+
+    .line 119
+    iget v13, v2, Landroid/graphics/Rect;->top:I
+
+    .line 121
+    iget v14, v2, Landroid/graphics/Rect;->bottom:I
 
     .line 123
-    iget-object p2, p1, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityInfo:Landroid/content/pm/ActivityInfo;
+    const/4 v15, 0x0
 
     .line 125
-    iget-object v8, p2, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
+    invoke-virtual/range {v10 .. v15}, Lcom/xiaomi/freeform/MiuiFreeformStub;->getFreeFormAccessibleArea(Landroid/content/Context;ZIIZ)Landroid/graphics/Rect;
 
-    .line 127
-    move-object v7, v4
+    .line 126
+    move-result-object v16
 
     .line 129
-    move v9, v0
+    invoke-static {}, Lcom/xiaomi/freeform/MiuiFreeformStub;->getInstance()Lcom/xiaomi/freeform/MiuiFreeformStub;
 
     .line 130
-    invoke-virtual/range {v5 .. v10}, Lcom/xiaomi/freeform/MiuiFreeformStub;->getAvoidFreeformBounds(Landroid/content/Context;Landroid/graphics/Rect;Ljava/lang/String;FLandroid/graphics/Rect;)V
+    move-result-object v11
 
-    .line 131
-    iget-object p2, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mFreeformStartScale:Landroid/util/SparseArray;
+    .line 133
+    iget-object v12, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mContext:Landroid/content/Context;
 
     .line 134
-    iget v1, p1, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
+    iget-object v2, v7, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityInfo:Landroid/content/pm/ActivityInfo;
 
     .line 136
-    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    iget-object v14, v2, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
     .line 138
-    move-result-object v0
+    move-object v13, v4
+
+    .line 140
+    move v15, v1
 
     .line 141
-    invoke-virtual {p2, v1, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    invoke-virtual/range {v11 .. v16}, Lcom/xiaomi/freeform/MiuiFreeformStub;->getAvoidFreeformBounds(Landroid/content/Context;Landroid/graphics/Rect;Ljava/lang/String;FLandroid/graphics/Rect;)V
 
     .line 142
-    iget-object p2, p1, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
+    iget-object v2, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mFreeformStartScale:Landroid/util/SparseArray;
 
     .line 145
-    invoke-virtual {p3, p2, v4}, Landroid/window/WindowContainerTransaction;->setBounds(Landroid/window/WindowContainerToken;Landroid/graphics/Rect;)Landroid/window/WindowContainerTransaction;
+    iget v3, v7, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
     .line 147
-    const/16 p2, 0xff
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    .line 150
-    invoke-direct {p0, p2, p3}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->startTransition(ILandroid/window/WindowContainerTransaction;)V
+    .line 149
+    move-result-object v1
 
     .line 152
-    iget-object p2, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mPendingTaskInfo:Landroid/util/SparseArray;
+    invoke-virtual {v2, v3, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 155
-    iget p3, p1, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
+    .line 153
+    iget-object v1, v7, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
 
-    .line 157
-    invoke-virtual {p2, p3, p1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    .line 156
+    invoke-virtual {v8, v1, v4}, Landroid/window/WindowContainerTransaction;->setBounds(Landroid/window/WindowContainerToken;Landroid/graphics/Rect;)Landroid/window/WindowContainerTransaction;
 
-    .line 159
-    new-instance p2, Landroid/window/WindowContainerTransaction;
+    .line 158
+    const/16 v1, 0xff
 
-    .line 162
-    invoke-direct {p2}, Landroid/window/WindowContainerTransaction;-><init>()V
+    .line 161
+    invoke-direct {v0, v1, v8}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->startTransition(ILandroid/window/WindowContainerTransaction;)V
 
-    .line 164
-    iget-object p1, p1, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
+    .line 163
+    iget-object v1, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mPendingTaskInfo:Landroid/util/SparseArray;
 
-    .line 167
-    invoke-virtual {p2, p1, v4}, Landroid/window/WindowContainerTransaction;->setBounds(Landroid/window/WindowContainerToken;Landroid/graphics/Rect;)Landroid/window/WindowContainerTransaction;
+    .line 166
+    iget v2, v7, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
-    .line 169
-    iget-object p0, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mTaskOrganizer:Lcom/android/wm/shell/ShellTaskOrganizer;
+    .line 168
+    invoke-virtual {v1, v2, v7}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 172
-    invoke-virtual {p0, p2}, Landroid/window/TaskOrganizer;->applyTransaction(Landroid/window/WindowContainerTransaction;)V
+    .line 170
+    new-instance v1, Landroid/window/WindowContainerTransaction;
 
-    .line 174
+    .line 173
+    invoke-direct {v1}, Landroid/window/WindowContainerTransaction;-><init>()V
+
+    .line 175
+    iget-object v2, v7, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
+
+    .line 178
+    invoke-virtual {v1, v2, v4}, Landroid/window/WindowContainerTransaction;->setBounds(Landroid/window/WindowContainerToken;Landroid/graphics/Rect;)Landroid/window/WindowContainerTransaction;
+
+    .line 180
+    iget-object v0, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mTaskOrganizer:Lcom/android/wm/shell/ShellTaskOrganizer;
+
+    .line 183
+    invoke-virtual {v0, v1}, Landroid/window/TaskOrganizer;->applyTransaction(Landroid/window/WindowContainerTransaction;)V
+
+    .line 185
     return-void
-    .line 177
+    .line 188
 .end method
 
 .method public startSplitToFullTransition(Landroid/app/ActivityManager$RunningTaskInfo;Landroid/window/WindowContainerTransaction;)V

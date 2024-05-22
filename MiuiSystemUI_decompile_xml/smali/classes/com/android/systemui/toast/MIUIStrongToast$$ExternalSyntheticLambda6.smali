@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/toast/MIUIStrongToast$$ExternalSyntheticLambda6;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -60,51 +60,51 @@
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     .line 17
-    const-string v2, "rect:"
+    const-string/jumbo v2, "rect:"
 
     .line 20
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 22
+    .line 23
     invoke-virtual {p0}, Landroid/graphics/Rect;->width()I
 
-    .line 25
+    .line 26
     move-result p0
-
-    .line 28
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     .line 29
-    const-string/jumbo p0, "width :"
-
-    .line 32
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 35
-    iget-object p0, v0, Lcom/android/systemui/toast/MIUIStrongToast;->mCutOut:Landroid/view/View;
-
-    .line 38
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    .line 40
-    move-result p0
-
-    .line 43
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
+    .line 30
+    const-string/jumbo p0, "width :"
+
+    .line 33
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 36
+    iget-object p0, v0, Lcom/android/systemui/toast/MIUIStrongToast;->mCutOut:Landroid/view/View;
+
+    .line 39
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+
+    .line 41
+    move-result p0
+
     .line 44
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 45
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 47
+    .line 48
     move-result-object p0
 
-    .line 50
+    .line 51
     const-string v0, "MIUIStrongToast"
 
-    .line 51
+    .line 52
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 53
+    .line 54
     return-void
-    .line 56
+    .line 57
 .end method

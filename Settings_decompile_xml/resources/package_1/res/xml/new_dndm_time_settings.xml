@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8' ?>
-<PreferenceScreen android:key="time_setting_root" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+<PreferenceScreen android:key="time_setting_root" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:miui="http://schemas.android.com/apk/res/com.android.settings" xmlns:settings="http://schemas.android.com/apk/res-auto">
   <com.android.settingslib.miuisettings.preference.EditTextPreference android:persistent="false"
                         android:layout="@layout/preference_ringtone"
                         android:title="@string/rule_name"
@@ -10,11 +10,11 @@
   <com.android.settings.dndmode.LabelPreference android:persistent="false"
                         android:title="@string/dndm_auto_time_turn_on"
                         android:key="start_time"
-                        settings:clickable="true" />
+                        miui:clickable="true" />
   <com.android.settings.dndmode.LabelPreference android:persistent="false"
                         android:title="@string/dndm_auto_time_turn_off"
                         android:key="end_time"
-                        settings:clickable="true" />
+                        miui:clickable="true" />
   <com.android.settingslib.miuisettings.preference.miuix.DropDownPreference android:persistent="false"
                         android:layout="@layout/preference_ringtone"
                         android:title="@string/silent_mode"

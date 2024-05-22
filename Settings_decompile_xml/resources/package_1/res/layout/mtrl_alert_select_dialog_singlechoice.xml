@@ -11,5 +11,5 @@
                  android:textAlignment="viewStart"
                  android:paddingStart="@dimen/abc_select_dialog_padding_start_material"
                  android:paddingEnd="?attr/dialogPreferredPadding"
-                 settings:drawableLeftCompat="?android:attr/listChoiceIndicatorSingle"
-                 settings:drawableStartCompat="?android:attr/listChoiceIndicatorSingle" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto" />
+                 app:drawableLeftCompat="?android:attr/listChoiceIndicatorSingle"
+                 app:drawableStartCompat="?android:attr/listChoiceIndicatorSingle" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

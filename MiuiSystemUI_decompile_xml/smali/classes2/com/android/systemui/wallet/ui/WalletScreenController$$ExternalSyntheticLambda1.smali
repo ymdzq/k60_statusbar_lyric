@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/wallet/ui/WalletScreenController$$ExternalSyntheticLambda1;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -79,7 +79,7 @@
     move-result-object p0
 
     .line 29
-    const v1, 0x7f130c5b    # @string/wallet_error_generic 'There was a problem getting your cards, please try again later'
+    const v1, 0x7f130c61    # @string/wallet_error_generic 'There was a problem getting your cards, please try again later'
 
     .line 30
     invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;

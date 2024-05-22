@@ -33,10 +33,10 @@
 .method public constructor <init>(Lcom/android/settings/wifi/MiuiWifiSettings;)V
     .locals 1
 
-    .line 2400
+    .line 2418
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2401
+    .line 2419
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -51,7 +51,7 @@
 .method public onApConnectedStatusUpdate(ILcom/xiaomi/mirror/synergy/MiuiSynergySdk$SameAccountAccessPoint;)V
     .locals 0
 
-    .line 2416
+    .line 2434
     iget-object p0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$LocalSameAccountApCallback;->mWifiSettingsRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -62,12 +62,12 @@
 
     if-eqz p0, :cond_0
 
-    .line 2418
+    .line 2436
     invoke-static {p0, p1, p2}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$mapConnectedStatusUpdated(Lcom/android/settings/wifi/MiuiWifiSettings;ILcom/xiaomi/mirror/synergy/MiuiSynergySdk$SameAccountAccessPoint;)V
 
     goto :goto_0
 
-    .line 2420
+    .line 2438
     :cond_0
     invoke-static {}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
@@ -84,7 +84,7 @@
 .method public onApInfoUpdate(Lcom/xiaomi/mirror/synergy/MiuiSynergySdk$SameAccountAccessPoint;)V
     .locals 0
 
-    .line 2406
+    .line 2424
     iget-object p0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$LocalSameAccountApCallback;->mWifiSettingsRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -95,12 +95,12 @@
 
     if-eqz p0, :cond_0
 
-    .line 2408
+    .line 2426
     invoke-static {p0, p1}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$mrefreshVirtualApInfo(Lcom/android/settings/wifi/MiuiWifiSettings;Lcom/xiaomi/mirror/synergy/MiuiSynergySdk$SameAccountAccessPoint;)V
 
     goto :goto_0
 
-    .line 2410
+    .line 2428
     :cond_0
     invoke-static {}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$sfgetTAG()Ljava/lang/String;
 

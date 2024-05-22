@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <set android:ordering="together" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f08038d"
+  <objectAnimator android:interpolator="@drawable/$$ic_sound_bars_anim__1__0"
                   android:duration="333"
                   android:startOffset="0"
                   android:repeatCount="infinite"
@@ -9,7 +9,7 @@
                   android:valueTo="M0.09 0.27 C0.09,0.27 0.09,0.28 0.09,0.28 C0.09,0.34 0.05,0.38 0,0.38 C-0.05,0.38 -0.09,0.34 -0.09,0.28 C-0.09,0.28 -0.09,0.27 -0.09,0.27 C-0.09,0.22 -0.05,0.18 0,0.18 C0.05,0.18 0.09,0.22 0.09,0.27c "
                   android:valueType="pathType"
                   android:propertyName="pathData" />
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f08038e"
+  <objectAnimator android:interpolator="@drawable/$$ic_sound_bars_anim__1__1"
                   android:duration="333"
                   android:startOffset="333"
                   android:repeatCount="infinite"
@@ -18,7 +18,7 @@
                   android:valueTo="M0.09 -0.28 C0.09,-0.28 0.09,0.28 0.09,0.28 C0.09,0.34 0.05,0.38 0,0.38 C-0.05,0.38 -0.09,0.34 -0.09,0.28 C-0.09,0.28 -0.09,-0.28 -0.09,-0.28 C-0.09,-0.34 -0.05,-0.38 0,-0.38 C0.05,-0.38 0.09,-0.34 0.09,-0.28c "
                   android:valueType="pathType"
                   android:propertyName="pathData" />
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f08038f"
+  <objectAnimator android:interpolator="@drawable/$$ic_sound_bars_anim__1__2"
                   android:duration="333"
                   android:startOffset="667"
                   android:repeatCount="infinite"

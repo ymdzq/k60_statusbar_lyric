@@ -2100,6 +2100,16 @@
               "resource": "control_center"
             }, 
             {
+              "preference_key": "lock_screen_device_control", 
+              "is_checkbox": "true", 
+              "resource": "title_device_control"
+            }, 
+            {
+              "preference_key": "lock_screen_xiaomi_smart_hub", 
+              "is_checkbox": "true", 
+              "resource": "title_xiaomi_smart_hub"
+            }, 
+            {
               "preference_key": "lock_screen_smart_device_control", 
               "is_checkbox": "true", 
               "resource": "title_smart_device_control"
@@ -2126,6 +2136,18 @@
           "preference_key": "wordless_mode", 
           "is_checkbox": "true", 
           "resource": "title_wordless_mode"
+        }, 
+        {
+          "category": "control_center", 
+          "preference_key": "device_control", 
+          "is_checkbox": "true", 
+          "resource": "title_device_control"
+        }, 
+        {
+          "category": "control_center", 
+          "preference_key": "xiaomi_smart_hub", 
+          "is_checkbox": "true", 
+          "resource": "title_xiaomi_smart_hub"
         }, 
         {
           "category": "control_center", 
@@ -4796,6 +4818,11 @@
               "preference_key": "ex_func_mi_cloud_service", 
               "is_checkbox": "true", 
               "resource": "micloud_service_title"
+            }, 
+            {
+              "preference_key": "ex_func_game_booster", 
+              "is_checkbox": "true", 
+              "resource": "game_booster_title"
             }
           ]
         }, 

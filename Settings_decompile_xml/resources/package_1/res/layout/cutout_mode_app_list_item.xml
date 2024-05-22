@@ -5,7 +5,7 @@
               android:layout_width="fill_parent"
               android:layout_height="wrap_content"
               android:paddingStart="@dimen/miuix_preference_item_padding_start"
-              android:paddingEnd="@dimen/miuix_preference_item_padding_end" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+              android:paddingEnd="@dimen/miuix_preference_item_padding_end" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <ImageView android:layout_gravity="center"
              android:id="@android:id/icon"
              android:layout_width="@dimen/notification_large_icon_width"
@@ -28,5 +28,5 @@
                         android:background="@null"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        settings:spinnerModeCompat="dropdown" />
+                        app:spinnerModeCompat="dropdown" />
 </LinearLayout>

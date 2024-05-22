@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/tuner/ShortcutPicker;
 .super Landroidx/preference/PreferenceFragment;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lcom/android/systemui/tuner/TunerService$Tunable;
@@ -132,7 +132,7 @@
     invoke-direct {p1, v0, v2}, Landroidx/preference/PreferenceCategory;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 20
-    const v3, 0x7f130be2    # @string/tuner_other_apps 'Other apps'
+    const v3, 0x7f130be8    # @string/tuner_other_apps 'Other apps'
 
     .line 23
     invoke-virtual {p1, v3}, Landroidx/preference/Preference;->setTitle(I)V

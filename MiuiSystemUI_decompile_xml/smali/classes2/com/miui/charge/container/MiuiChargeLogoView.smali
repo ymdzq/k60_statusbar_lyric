@@ -1,6 +1,6 @@
 .class public Lcom/miui/charge/container/MiuiChargeLogoView;
 .super Landroid/widget/RelativeLayout;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # instance fields
@@ -193,7 +193,7 @@
 
     move-result-object p3
 
-    const v0, 0x7f130a1b    # @string/rapid_charge_mode_tip 'Quick charge'
+    const v0, 0x7f130a21    # @string/rapid_charge_mode_tip 'Quick charge'
 
     invoke-virtual {p3, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -428,7 +428,7 @@
     move-result-object v1
 
     .line 10
-    const v2, 0x7f130a1b    # @string/rapid_charge_mode_tip 'Quick charge'
+    const v2, 0x7f130a21    # @string/rapid_charge_mode_tip 'Quick charge'
 
     .line 11
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;

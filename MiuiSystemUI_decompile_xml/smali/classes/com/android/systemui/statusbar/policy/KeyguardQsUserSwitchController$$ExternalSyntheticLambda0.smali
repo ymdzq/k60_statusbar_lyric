@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/statusbar/policy/KeyguardQsUserSwitchController$$ExternalSyntheticLambda0;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -111,7 +111,7 @@
     invoke-virtual {p1, v0}, Landroid/app/AlertDialog;->setCanceledOnTouchOutside(Z)V
 
     .line 54
-    const v0, 0x7f130951    # @string/qs_user_switch_dialog_title 'Select user'
+    const v0, 0x7f130955    # @string/qs_user_switch_dialog_title 'Select user'
 
     .line 57
     invoke-virtual {p1, v0}, Landroid/app/AlertDialog;->setTitle(I)V
@@ -123,7 +123,7 @@
     invoke-direct {v0, p0}, Lcom/android/systemui/qs/user/UserSwitchDialogController$showDialog$1$1;-><init>(Lcom/android/systemui/qs/user/UserSwitchDialogController;)V
 
     .line 65
-    const v2, 0x7f1309a4    # @string/quick_settings_done 'Done'
+    const v2, 0x7f1309aa    # @string/quick_settings_done 'Done'
 
     .line 68
     invoke-virtual {p1, v2, v0}, Lcom/android/systemui/statusbar/phone/SystemUIDialog;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)V
@@ -138,7 +138,7 @@
     const/4 v2, -0x3
 
     .line 79
-    const v3, 0x7f1309c5    # @string/quick_settings_more_user_settings 'Manage users'
+    const v3, 0x7f1309cb    # @string/quick_settings_more_user_settings 'Manage users'
 
     .line 80
     const/4 v4, 0x0

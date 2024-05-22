@@ -3,7 +3,7 @@
               android:layout_gravity="center_vertical"
               android:background="?attr/preferenceItemBackground"
               android:layout_width="fill_parent"
-              android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto">
+              android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <LinearLayout android:gravity="center"
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
@@ -57,5 +57,5 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/miuix_preference_item_padding_inner"
-                        systemui:srcCompat="@drawable/miuix_appcompat_intent_arrow_right" />
+                        app:srcCompat="@drawable/miuix_appcompat_intent_arrow_right" />
 </LinearLayout>

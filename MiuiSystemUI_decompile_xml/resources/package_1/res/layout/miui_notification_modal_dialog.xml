@@ -1,14 +1,14 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent"
-                      android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto">
+                      android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <ImageView android:id="@id/modal_dialog_icon"
              android:layout_width="@dimen/miui_notification_modal_dialog_menu_icon_size"
              android:layout_height="@dimen/miui_notification_modal_dialog_menu_icon_size"
              android:layout_marginTop="@dimen/modal_dialog_icon_margin_top"
              android:tint="@color/modal_dialog_icon"
              android:layout_marginStart="@dimen/modal_dialog_icon_margin_left"
-             systemui:r0x7f040443="0"
-             systemui:r0x7f040447="0" />
+             app:r0x7f040443="0"
+             app:r0x7f040447="0" />
   <LinearLayout android:orientation="horizontal"
                 android:id="@id/modal_dialog_button_container"
                 android:layout_width="fill_parent"
@@ -16,10 +16,10 @@
                 android:layout_marginBottom="@dimen/modal_dialog_button_margin_bottom"
                 android:layout_marginStart="@dimen/modal_dialog_button_margin_left_right"
                 android:layout_marginEnd="@dimen/modal_dialog_button_margin_left_right"
-                systemui:r0x7f040429="0"
-                systemui:r0x7f04042f="0"
-                systemui:r0x7f040443="0"
-                systemui:r0x7f040446="@id/modal_dialog_button_barrier">
+                app:r0x7f040429="0"
+                app:r0x7f04042f="0"
+                app:r0x7f040443="0"
+                app:r0x7f040446="@id/modal_dialog_button_barrier">
     <TextView android:id="@id/modal_dialog_negative_button"
               android:layout_width="0.0dp"
               android:layout_height="fill_parent"
@@ -39,9 +39,9 @@
             android:layout_width="0.0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/modal_dialog_list_margin_top"
-            systemui:r0x7f04042f="0"
-            systemui:r0x7f040443="0"
-            systemui:r0x7f040446="@id/modal_dialog_title" />
+            app:r0x7f04042f="0"
+            app:r0x7f040443="0"
+            app:r0x7f040446="@id/modal_dialog_title" />
   <TextView android:textAppearance="@style/Miui.Notification.Title"
             android:textColor="@color/modal_dialog_title"
             android:id="@id/modal_dialog_title"
@@ -52,10 +52,10 @@
             android:importantForAccessibility="yes"
             android:layout_marginStart="@dimen/modal_dialog_margin_left_right"
             android:layout_marginEnd="@dimen/modal_dialog_margin_left_right"
-            systemui:r0x7f040429="@id/modal_dialog_icon"
-            systemui:r0x7f04042f="0"
-            systemui:r0x7f040443="0"
-            systemui:r0x7f040447="@id/modal_dialog_icon" />
+            app:r0x7f040429="@id/modal_dialog_icon"
+            app:r0x7f04042f="0"
+            app:r0x7f040443="0"
+            app:r0x7f040447="@id/modal_dialog_icon" />
   <TextView android:textAppearance="@style/Miui.Notification.Text"
             android:textColor="@color/modal_dialog_message"
             android:id="@id/modal_dialog_message"
@@ -67,12 +67,12 @@
             android:importantForAccessibility="yes"
             android:layout_marginStart="@dimen/modal_dialog_message_margin_right"
             android:layout_marginEnd="@dimen/modal_dialog_message_margin_right"
-            systemui:r0x7f04042f="0"
-            systemui:r0x7f040443="0"
-            systemui:r0x7f040446="@id/modal_dialog_title" />
+            app:r0x7f04042f="0"
+            app:r0x7f040443="0"
+            app:r0x7f040446="@id/modal_dialog_title" />
   <androidx.constraintlayout.widget.Barrier android:id="@id/modal_dialog_button_barrier"
                         android:layout_width="0.0dp"
                         android:layout_height="0.0dp"
-                        systemui:r0x7f0400c7="3"
-                        systemui:r0x7f0401da="modal_dialog_message, modal_dialog_list" />
+                        app:r0x7f0400c7="3"
+                        app:r0x7f0401da="modal_dialog_message, modal_dialog_list" />
 </androidx.constraintlayout.widget.ConstraintLayout>

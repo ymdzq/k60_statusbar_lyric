@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/statusbar/policy/DateView;
 .super Landroid/widget/TextView;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # instance fields
@@ -88,7 +88,7 @@
     move-result-object p1
 
     .line 46
-    const p2, 0x7f130b5c    # @string/system_ui_date_pattern '@android:string/zen_mode_default_events_name'
+    const p2, 0x7f130b62    # @string/system_ui_date_pattern '@android:string/zen_mode_default_events_name'
 
     .line 47
     invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;

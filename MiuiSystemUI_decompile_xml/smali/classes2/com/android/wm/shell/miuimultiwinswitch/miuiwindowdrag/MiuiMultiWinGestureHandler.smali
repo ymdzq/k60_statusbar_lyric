@@ -1,6 +1,6 @@
 .class public Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lcom/android/wm/shell/transition/Transitions$TransitionHandler;
@@ -1803,41 +1803,6 @@
     .line 24
 .end method
 
-.method private notifyForegroundInfoChanged(Landroid/app/ActivityManager$RunningTaskInfo;)V
-    .locals 2
-
-    .line 1
-    new-instance v0, Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;
-
-    .line 2
-    invoke-direct {v0}, Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;-><init>()V
-
-    .line 4
-    invoke-virtual {v0}, Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;->freeformToFullscreen()Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;
-
-    .line 7
-    new-instance v1, Landroid/window/WindowContainerTransaction;
-
-    .line 10
-    invoke-direct {v1}, Landroid/window/WindowContainerTransaction;-><init>()V
-
-    .line 12
-    iget-object p1, p1, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
-
-    .line 15
-    invoke-virtual {v1, p1, v0}, Landroid/window/WindowContainerTransaction;->setMiuiFreeformInfoChange(Landroid/window/WindowContainerToken;Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;)Landroid/window/WindowContainerTransaction;
-
-    .line 17
-    iget-object p0, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mRTDAOrganizer:Lcom/android/wm/shell/RootTaskDisplayAreaOrganizer;
-
-    .line 20
-    invoke-virtual {p0, v1}, Landroid/window/DisplayAreaOrganizer;->applyTransaction(Landroid/window/WindowContainerTransaction;)V
-
-    .line 22
-    return-void
-    .line 25
-.end method
-
 .method private onTransitionEnd(I)V
     .locals 3
 
@@ -2007,284 +1972,296 @@
 
     .line 55
     :goto_0
-    iget-object v1, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
+    move v7, v2
 
     .line 56
+    iget-object v1, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
+
+    .line 57
     invoke-virtual {v1}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 58
+    .line 59
     move-result-object v1
-
-    .line 61
-    iget-object v1, v1, Landroid/app/ActivityManager$RunningTaskInfo;->realActivity:Landroid/content/ComponentName;
 
     .line 62
+    iget-object v1, v1, Landroid/app/ActivityManager$RunningTaskInfo;->realActivity:Landroid/content/ComponentName;
+
+    .line 63
     invoke-virtual {v1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
-    .line 64
-    move-result-object v1
-
-    .line 67
-    new-instance v3, Landroid/graphics/RectF;
+    .line 65
+    move-result-object v4
 
     .line 68
-    invoke-direct {v3}, Landroid/graphics/RectF;-><init>()V
+    new-instance v1, Landroid/graphics/RectF;
 
-    .line 70
-    iget-object v4, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mContext:Landroid/content/Context;
+    .line 69
+    invoke-direct {v1}, Landroid/graphics/RectF;-><init>()V
 
-    .line 73
-    iget-object v5, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
+    .line 71
+    iget-object v3, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mContext:Landroid/content/Context;
 
-    .line 75
-    invoke-virtual {v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
+    .line 74
+    iget-object v2, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
 
-    .line 77
+    .line 76
+    invoke-virtual {v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
+
+    .line 78
     move-result-object v5
 
-    .line 80
-    iget-object v5, v5, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityInfo:Landroid/content/pm/ActivityInfo;
-
     .line 81
-    iget v5, v5, Landroid/content/pm/ActivityInfo;->screenOrientation:I
+    iget-object v2, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
 
-    .line 83
-    invoke-static {v4, v1, v5, v2, v3}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->getFreeformBoundsAndScale(Landroid/content/Context;Ljava/lang/String;IZLandroid/graphics/RectF;)F
+    .line 82
+    invoke-virtual {v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 85
-    move-result v1
+    .line 84
+    move-result-object v2
+
+    .line 87
+    iget v6, v2, Landroid/app/ActivityManager$RunningTaskInfo;->mTopActivityOrientation:I
 
     .line 88
-    iget-object v2, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mTaskBounds:Landroid/graphics/Rect;
+    move-object v8, v1
 
-    .line 89
-    invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
+    .line 90
+    invoke-static/range {v3 .. v8}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->getFreeformBoundsAndScale(Landroid/content/Context;Ljava/lang/String;Landroid/app/TaskInfo;IZLandroid/graphics/RectF;)F
 
     .line 91
     move-result v2
 
     .line 94
-    int-to-float v2, v2
+    iget-object v3, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mTaskBounds:Landroid/graphics/Rect;
 
     .line 95
-    iget-object v4, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mMiuiMultiWinAnimInfo:Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;
+    invoke-virtual {v3}, Landroid/graphics/Rect;->width()I
 
-    .line 96
-    invoke-virtual {v4}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;->getScaleX()F
-
-    .line 98
-    move-result v4
-
-    .line 101
-    mul-float/2addr v4, v2
-
-    .line 102
-    iget-object v2, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mTaskBounds:Landroid/graphics/Rect;
-
-    .line 103
-    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
-
-    .line 105
-    move-result v2
-
-    .line 108
-    int-to-float v2, v2
-
-    .line 109
-    iget-object v5, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mMiuiMultiWinAnimInfo:Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;
-
-    .line 110
-    invoke-virtual {v5}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;->getScaleY()F
-
-    .line 112
-    move-result v5
-
-    .line 115
-    mul-float/2addr v5, v2
-
-    .line 116
-    iget-object v2, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mMiuiMultiWinAnimInfo:Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;
-
-    .line 117
-    invoke-virtual {v2}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;->getPosX()F
-
-    .line 119
-    move-result v2
-
-    .line 122
-    const/high16 v6, 0x40000000    # 2.0f
-
-    .line 123
-    div-float/2addr v4, v6
-
-    .line 125
-    add-float/2addr v4, v2
-
-    .line 126
-    iget-object v2, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mMiuiMultiWinAnimInfo:Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;
-
-    .line 127
-    invoke-virtual {v2}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;->getPosY()F
-
-    .line 129
-    move-result v2
-
-    .line 132
-    div-float/2addr v5, v6
-
-    .line 133
-    add-float/2addr v5, v2
-
-    .line 134
-    invoke-virtual {v3}, Landroid/graphics/RectF;->width()F
-
-    .line 135
-    move-result v2
-
-    .line 138
-    mul-float/2addr v2, v1
-
-    .line 139
-    div-float/2addr v2, v6
-
-    .line 140
-    sub-float/2addr v4, v2
-
-    .line 141
-    invoke-virtual {v3}, Landroid/graphics/RectF;->height()F
-
-    .line 142
-    move-result v2
-
-    .line 145
-    mul-float/2addr v2, v1
-
-    .line 146
-    div-float/2addr v2, v6
-
-    .line 147
-    sub-float/2addr v5, v2
-
-    .line 148
-    new-instance v2, Landroid/graphics/Rect;
-
-    .line 149
-    float-to-int v6, v4
-
-    .line 151
-    float-to-int v7, v5
-
-    .line 152
-    invoke-virtual {v3}, Landroid/graphics/RectF;->width()F
-
-    .line 153
-    move-result v8
-
-    .line 156
-    add-float/2addr v8, v4
-
-    .line 157
-    float-to-int v4, v8
-
-    .line 158
-    invoke-virtual {v3}, Landroid/graphics/RectF;->height()F
-
-    .line 159
+    .line 97
     move-result v3
 
+    .line 100
+    int-to-float v3, v3
+
+    .line 101
+    iget-object v4, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mMiuiMultiWinAnimInfo:Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;
+
+    .line 102
+    invoke-virtual {v4}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;->getScaleX()F
+
+    .line 104
+    move-result v4
+
+    .line 107
+    mul-float/2addr v4, v3
+
+    .line 108
+    iget-object v3, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mTaskBounds:Landroid/graphics/Rect;
+
+    .line 109
+    invoke-virtual {v3}, Landroid/graphics/Rect;->height()I
+
+    .line 111
+    move-result v3
+
+    .line 114
+    int-to-float v3, v3
+
+    .line 115
+    iget-object v5, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mMiuiMultiWinAnimInfo:Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;
+
+    .line 116
+    invoke-virtual {v5}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;->getScaleY()F
+
+    .line 118
+    move-result v5
+
+    .line 121
+    mul-float/2addr v5, v3
+
+    .line 122
+    iget-object v3, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mMiuiMultiWinAnimInfo:Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;
+
+    .line 123
+    invoke-virtual {v3}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;->getPosX()F
+
+    .line 125
+    move-result v3
+
+    .line 128
+    const/high16 v6, 0x40000000    # 2.0f
+
+    .line 129
+    div-float/2addr v4, v6
+
+    .line 131
+    add-float/2addr v4, v3
+
+    .line 132
+    iget-object v3, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mMiuiMultiWinAnimInfo:Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;
+
+    .line 133
+    invoke-virtual {v3}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;->getPosY()F
+
+    .line 135
+    move-result v3
+
+    .line 138
+    div-float/2addr v5, v6
+
+    .line 139
+    add-float/2addr v5, v3
+
+    .line 140
+    invoke-virtual {v1}, Landroid/graphics/RectF;->width()F
+
+    .line 141
+    move-result v3
+
+    .line 144
+    mul-float/2addr v3, v2
+
+    .line 145
+    div-float/2addr v3, v6
+
+    .line 146
+    sub-float/2addr v4, v3
+
+    .line 147
+    invoke-virtual {v1}, Landroid/graphics/RectF;->height()F
+
+    .line 148
+    move-result v3
+
+    .line 151
+    mul-float/2addr v3, v2
+
+    .line 152
+    div-float/2addr v3, v6
+
+    .line 153
+    sub-float/2addr v5, v3
+
+    .line 154
+    new-instance v3, Landroid/graphics/Rect;
+
+    .line 155
+    float-to-int v6, v4
+
+    .line 157
+    float-to-int v7, v5
+
+    .line 158
+    invoke-virtual {v1}, Landroid/graphics/RectF;->width()F
+
+    .line 159
+    move-result v8
+
     .line 162
-    add-float/2addr v3, v5
+    add-float/2addr v8, v4
 
     .line 163
-    float-to-int v3, v3
+    float-to-int v4, v8
 
     .line 164
-    invoke-direct {v2, v6, v7, v4, v3}, Landroid/graphics/Rect;-><init>(IIII)V
+    invoke-virtual {v1}, Landroid/graphics/RectF;->height()F
 
     .line 165
-    iget-object v3, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mContext:Landroid/content/Context;
+    move-result v1
 
     .line 168
-    iget-object v4, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mMiuiDisplayInfo:Lcom/android/wm/shell/miuimultiwinswitch/MiuiDisplayInfo;
+    add-float/2addr v1, v5
+
+    .line 169
+    float-to-int v1, v1
 
     .line 170
-    invoke-static {v3, v4, v2, v1}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->restrictedToValidFreeformRegion(Landroid/content/Context;Lcom/android/wm/shell/miuimultiwinswitch/MiuiDisplayInfo;Landroid/graphics/Rect;F)V
+    invoke-direct {v3, v6, v7, v4, v1}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 172
-    iget-object v3, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mPendingTaskInfo:Landroid/util/SparseArray;
+    .line 171
+    iget-object v1, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mContext:Landroid/content/Context;
 
-    .line 175
+    .line 174
+    iget-object v4, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mMiuiDisplayInfo:Lcom/android/wm/shell/miuimultiwinswitch/MiuiDisplayInfo;
+
+    .line 176
+    invoke-static {v1, v4, v3, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->restrictedToValidFreeformRegion(Landroid/content/Context;Lcom/android/wm/shell/miuimultiwinswitch/MiuiDisplayInfo;Landroid/graphics/Rect;F)V
+
+    .line 178
+    iget-object v1, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mPendingTaskInfo:Landroid/util/SparseArray;
+
+    .line 181
     iget-object v4, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
-
-    .line 177
-    invoke-virtual {v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
-
-    .line 179
-    move-result-object v4
-
-    .line 182
-    iget v4, v4, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
     .line 183
-    iget-object v5, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
-
-    .line 185
-    invoke-virtual {v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
-
-    .line 187
-    move-result-object v5
-
-    .line 190
-    invoke-virtual {v3, v4, v5}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    .line 191
-    iget-object v3, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mFreeformStartScale:Landroid/util/SparseArray;
-
-    .line 194
-    iget-object v4, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
-
-    .line 196
     invoke-virtual {v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 198
+    .line 185
     move-result-object v4
 
-    .line 201
+    .line 188
     iget v4, v4, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
+    .line 189
+    iget-object v5, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
+
+    .line 191
+    invoke-virtual {v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
+
+    .line 193
+    move-result-object v5
+
+    .line 196
+    invoke-virtual {v1, v4, v5}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    .line 197
+    iget-object v1, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mFreeformStartScale:Landroid/util/SparseArray;
+
+    .line 200
+    iget-object v4, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
+
     .line 202
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    invoke-virtual {v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
 
     .line 204
-    move-result-object v1
+    move-result-object v4
 
     .line 207
-    invoke-virtual {v3, v4, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    iget v4, v4, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
     .line 208
-    iget-object v1, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    .line 211
-    invoke-virtual {v1}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
+    .line 210
+    move-result-object v2
 
     .line 213
-    move-result-object v1
+    invoke-virtual {v1, v4, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 216
-    iget-object v1, v1, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
+    .line 214
+    iget-object v1, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
 
     .line 217
-    invoke-virtual {v0, v1, v2}, Landroid/window/WindowContainerTransaction;->setBounds(Landroid/window/WindowContainerToken;Landroid/graphics/Rect;)Landroid/window/WindowContainerTransaction;
+    invoke-virtual {v1}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
 
     .line 219
-    const/16 v1, 0xc8
+    move-result-object v1
 
     .line 222
+    iget-object v1, v1, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
+
+    .line 223
+    invoke-virtual {v0, v1, v3}, Landroid/window/WindowContainerTransaction;->setBounds(Landroid/window/WindowContainerToken;Landroid/graphics/Rect;)Landroid/window/WindowContainerTransaction;
+
+    .line 225
+    const/16 v1, 0xc8
+
+    .line 228
     invoke-direct {p0, v1, v0}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->startTransition(ILandroid/window/WindowContainerTransaction;)V
 
-    .line 224
+    .line 230
     return-void
-    .line 227
+    .line 233
 .end method
 
 .method private startFullToSingleOpen(Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotArea;)V
@@ -3040,302 +3017,314 @@
 
     .line 68
     :goto_0
-    iget-object v1, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
+    move v7, v2
 
     .line 69
+    iget-object v1, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
+
+    .line 70
     invoke-virtual {v1}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 71
+    .line 72
     move-result-object v1
-
-    .line 74
-    iget-object v1, v1, Landroid/app/ActivityManager$RunningTaskInfo;->realActivity:Landroid/content/ComponentName;
 
     .line 75
+    iget-object v1, v1, Landroid/app/ActivityManager$RunningTaskInfo;->realActivity:Landroid/content/ComponentName;
+
+    .line 76
     invoke-virtual {v1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
-    .line 77
-    move-result-object v1
-
-    .line 80
-    new-instance v3, Landroid/graphics/RectF;
+    .line 78
+    move-result-object v4
 
     .line 81
-    invoke-direct {v3}, Landroid/graphics/RectF;-><init>()V
+    new-instance v1, Landroid/graphics/RectF;
 
-    .line 83
-    iget-object v4, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mContext:Landroid/content/Context;
+    .line 82
+    invoke-direct {v1}, Landroid/graphics/RectF;-><init>()V
 
-    .line 86
-    iget-object v5, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
+    .line 84
+    iget-object v3, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mContext:Landroid/content/Context;
 
-    .line 88
-    invoke-virtual {v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
+    .line 87
+    iget-object v2, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
 
-    .line 90
+    .line 89
+    invoke-virtual {v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
+
+    .line 91
     move-result-object v5
 
-    .line 93
-    iget-object v5, v5, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityInfo:Landroid/content/pm/ActivityInfo;
-
     .line 94
-    iget v5, v5, Landroid/content/pm/ActivityInfo;->screenOrientation:I
+    iget-object v2, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
 
-    .line 96
-    invoke-static {v4, v1, v5, v2, v3}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->getFreeformBoundsAndScale(Landroid/content/Context;Ljava/lang/String;IZLandroid/graphics/RectF;)F
+    .line 95
+    invoke-virtual {v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 98
-    move-result v1
+    .line 97
+    move-result-object v2
+
+    .line 100
+    iget v6, v2, Landroid/app/ActivityManager$RunningTaskInfo;->mTopActivityOrientation:I
 
     .line 101
-    iget-object v2, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mTaskBounds:Landroid/graphics/Rect;
+    move-object v8, v1
 
-    .line 102
-    invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
+    .line 103
+    invoke-static/range {v3 .. v8}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->getFreeformBoundsAndScale(Landroid/content/Context;Ljava/lang/String;Landroid/app/TaskInfo;IZLandroid/graphics/RectF;)F
 
     .line 104
     move-result v2
 
     .line 107
-    int-to-float v2, v2
+    iget-object v3, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mTaskBounds:Landroid/graphics/Rect;
 
     .line 108
-    iget-object v4, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mMiuiMultiWinAnimInfo:Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;
+    invoke-virtual {v3}, Landroid/graphics/Rect;->width()I
 
-    .line 109
-    invoke-virtual {v4}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;->getScaleX()F
-
-    .line 111
-    move-result v4
-
-    .line 114
-    mul-float/2addr v4, v2
-
-    .line 115
-    iget-object v2, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mTaskBounds:Landroid/graphics/Rect;
-
-    .line 116
-    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
-
-    .line 118
-    move-result v2
-
-    .line 121
-    int-to-float v2, v2
-
-    .line 122
-    iget-object v5, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mMiuiMultiWinAnimInfo:Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;
-
-    .line 123
-    invoke-virtual {v5}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;->getScaleY()F
-
-    .line 125
-    move-result v5
-
-    .line 128
-    mul-float/2addr v5, v2
-
-    .line 129
-    iget-object v2, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mMiuiMultiWinAnimInfo:Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;
-
-    .line 130
-    invoke-virtual {v2}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;->getPosX()F
-
-    .line 132
-    move-result v2
-
-    .line 135
-    const/high16 v6, 0x40000000    # 2.0f
-
-    .line 136
-    div-float/2addr v4, v6
-
-    .line 138
-    add-float/2addr v4, v2
-
-    .line 139
-    iget-object v2, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mMiuiMultiWinAnimInfo:Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;
-
-    .line 140
-    invoke-virtual {v2}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;->getPosY()F
-
-    .line 142
-    move-result v2
-
-    .line 145
-    div-float/2addr v5, v6
-
-    .line 146
-    add-float/2addr v5, v2
-
-    .line 147
-    invoke-virtual {v3}, Landroid/graphics/RectF;->width()F
-
-    .line 148
-    move-result v2
-
-    .line 151
-    mul-float/2addr v2, v1
-
-    .line 152
-    div-float/2addr v2, v6
-
-    .line 153
-    sub-float/2addr v4, v2
-
-    .line 154
-    invoke-virtual {v3}, Landroid/graphics/RectF;->height()F
-
-    .line 155
-    move-result v2
-
-    .line 158
-    mul-float/2addr v2, v1
-
-    .line 159
-    div-float/2addr v2, v6
-
-    .line 160
-    sub-float/2addr v5, v2
-
-    .line 161
-    new-instance v2, Landroid/graphics/Rect;
-
-    .line 162
-    float-to-int v6, v4
-
-    .line 164
-    float-to-int v7, v5
-
-    .line 165
-    invoke-virtual {v3}, Landroid/graphics/RectF;->width()F
-
-    .line 166
-    move-result v8
-
-    .line 169
-    add-float/2addr v8, v4
-
-    .line 170
-    float-to-int v4, v8
-
-    .line 171
-    invoke-virtual {v3}, Landroid/graphics/RectF;->height()F
-
-    .line 172
+    .line 110
     move-result v3
 
+    .line 113
+    int-to-float v3, v3
+
+    .line 114
+    iget-object v4, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mMiuiMultiWinAnimInfo:Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;
+
+    .line 115
+    invoke-virtual {v4}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;->getScaleX()F
+
+    .line 117
+    move-result v4
+
+    .line 120
+    mul-float/2addr v4, v3
+
+    .line 121
+    iget-object v3, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mTaskBounds:Landroid/graphics/Rect;
+
+    .line 122
+    invoke-virtual {v3}, Landroid/graphics/Rect;->height()I
+
+    .line 124
+    move-result v3
+
+    .line 127
+    int-to-float v3, v3
+
+    .line 128
+    iget-object v5, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mMiuiMultiWinAnimInfo:Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;
+
+    .line 129
+    invoke-virtual {v5}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;->getScaleY()F
+
+    .line 131
+    move-result v5
+
+    .line 134
+    mul-float/2addr v5, v3
+
+    .line 135
+    iget-object v3, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mMiuiMultiWinAnimInfo:Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;
+
+    .line 136
+    invoke-virtual {v3}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;->getPosX()F
+
+    .line 138
+    move-result v3
+
+    .line 141
+    const/high16 v6, 0x40000000    # 2.0f
+
+    .line 142
+    div-float/2addr v4, v6
+
+    .line 144
+    add-float/2addr v4, v3
+
+    .line 145
+    iget-object v3, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mMiuiMultiWinAnimInfo:Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;
+
+    .line 146
+    invoke-virtual {v3}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;->getPosY()F
+
+    .line 148
+    move-result v3
+
+    .line 151
+    div-float/2addr v5, v6
+
+    .line 152
+    add-float/2addr v5, v3
+
+    .line 153
+    invoke-virtual {v1}, Landroid/graphics/RectF;->width()F
+
+    .line 154
+    move-result v3
+
+    .line 157
+    mul-float/2addr v3, v2
+
+    .line 158
+    div-float/2addr v3, v6
+
+    .line 159
+    sub-float/2addr v4, v3
+
+    .line 160
+    invoke-virtual {v1}, Landroid/graphics/RectF;->height()F
+
+    .line 161
+    move-result v3
+
+    .line 164
+    mul-float/2addr v3, v2
+
+    .line 165
+    div-float/2addr v3, v6
+
+    .line 166
+    sub-float/2addr v5, v3
+
+    .line 167
+    new-instance v3, Landroid/graphics/Rect;
+
+    .line 168
+    float-to-int v6, v4
+
+    .line 170
+    float-to-int v7, v5
+
+    .line 171
+    invoke-virtual {v1}, Landroid/graphics/RectF;->width()F
+
+    .line 172
+    move-result v8
+
     .line 175
-    add-float/2addr v3, v5
+    add-float/2addr v8, v4
 
     .line 176
-    float-to-int v3, v3
+    float-to-int v4, v8
 
     .line 177
-    invoke-direct {v2, v6, v7, v4, v3}, Landroid/graphics/Rect;-><init>(IIII)V
+    invoke-virtual {v1}, Landroid/graphics/RectF;->height()F
 
     .line 178
-    iget-object v3, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mContext:Landroid/content/Context;
+    move-result v1
 
     .line 181
-    iget-object v4, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mMiuiDisplayInfo:Lcom/android/wm/shell/miuimultiwinswitch/MiuiDisplayInfo;
+    add-float/2addr v1, v5
+
+    .line 182
+    float-to-int v1, v1
 
     .line 183
-    invoke-static {v3, v4, v2, v1}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->restrictedToValidFreeformRegion(Landroid/content/Context;Lcom/android/wm/shell/miuimultiwinswitch/MiuiDisplayInfo;Landroid/graphics/Rect;F)V
+    invoke-direct {v3, v6, v7, v4, v1}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 185
-    iget-object v3, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mPendingTaskInfo:Landroid/util/SparseArray;
+    .line 184
+    iget-object v1, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mContext:Landroid/content/Context;
 
-    .line 188
+    .line 187
+    iget-object v4, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mMiuiDisplayInfo:Lcom/android/wm/shell/miuimultiwinswitch/MiuiDisplayInfo;
+
+    .line 189
+    invoke-static {v1, v4, v3, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->restrictedToValidFreeformRegion(Landroid/content/Context;Lcom/android/wm/shell/miuimultiwinswitch/MiuiDisplayInfo;Landroid/graphics/Rect;F)V
+
+    .line 191
+    iget-object v1, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mPendingTaskInfo:Landroid/util/SparseArray;
+
+    .line 194
     iget-object v4, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
-
-    .line 190
-    invoke-virtual {v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
-
-    .line 192
-    move-result-object v4
-
-    .line 195
-    iget v4, v4, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
     .line 196
-    iget-object v5, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
-
-    .line 198
-    invoke-virtual {v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
-
-    .line 200
-    move-result-object v5
-
-    .line 203
-    invoke-virtual {v3, v4, v5}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    .line 204
-    iget-object v3, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mFreeformStartScale:Landroid/util/SparseArray;
-
-    .line 207
-    iget-object v4, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
-
-    .line 209
     invoke-virtual {v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 211
+    .line 198
     move-result-object v4
 
-    .line 214
+    .line 201
     iget v4, v4, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
+    .line 202
+    iget-object v5, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
+
+    .line 204
+    invoke-virtual {v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
+
+    .line 206
+    move-result-object v5
+
+    .line 209
+    invoke-virtual {v1, v4, v5}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    .line 210
+    iget-object v1, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mFreeformStartScale:Landroid/util/SparseArray;
+
+    .line 213
+    iget-object v4, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
+
     .line 215
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    invoke-virtual {v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
 
     .line 217
-    move-result-object v1
+    move-result-object v4
 
     .line 220
-    invoke-virtual {v3, v4, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    iget v4, v4, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
     .line 221
-    iget-object v1, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    .line 224
-    invoke-virtual {v1}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
+    .line 223
+    move-result-object v2
 
     .line 226
-    move-result-object v1
+    invoke-virtual {v1, v4, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 229
-    iget-object v1, v1, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
-
-    .line 230
-    invoke-virtual {v0, v1, v2}, Landroid/window/WindowContainerTransaction;->setBounds(Landroid/window/WindowContainerToken;Landroid/graphics/Rect;)Landroid/window/WindowContainerTransaction;
-
-    .line 232
+    .line 227
     iget-object v1, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
 
-    .line 235
+    .line 230
     invoke-virtual {v1}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 237
+    .line 232
     move-result-object v1
 
-    .line 240
+    .line 235
     iget-object v1, v1, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
 
+    .line 236
+    invoke-virtual {v0, v1, v3}, Landroid/window/WindowContainerTransaction;->setBounds(Landroid/window/WindowContainerToken;Landroid/graphics/Rect;)Landroid/window/WindowContainerTransaction;
+
+    .line 238
+    iget-object v1, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
+
     .line 241
-    const/4 v2, 0x5
+    invoke-virtual {v1}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
 
     .line 243
-    invoke-virtual {v0, v1, v2}, Landroid/window/WindowContainerTransaction;->setWindowingMode(Landroid/window/WindowContainerToken;I)Landroid/window/WindowContainerTransaction;
+    move-result-object v1
 
-    .line 244
-    const/16 v1, 0xcb
+    .line 246
+    iget-object v1, v1, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
 
     .line 247
-    invoke-direct {p0, v1, v0}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->startTransition(ILandroid/window/WindowContainerTransaction;)V
+    const/4 v2, 0x5
 
     .line 249
+    invoke-virtual {v0, v1, v2}, Landroid/window/WindowContainerTransaction;->setWindowingMode(Landroid/window/WindowContainerToken;I)Landroid/window/WindowContainerTransaction;
+
+    .line 250
+    const/16 v1, 0xcb
+
+    .line 253
+    invoke-direct {p0, v1, v0}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->startTransition(ILandroid/window/WindowContainerTransaction;)V
+
+    .line 255
     return-void
-    .line 252
+    .line 258
 .end method
 
 .method private startSingleOpenToFull()V
@@ -3602,7 +3591,7 @@
 .end method
 
 .method private startSplitToFreeform()V
-    .locals 9
+    .locals 14
 
     .line 1
     new-instance v6, Landroid/window/WindowContainerTransaction;
@@ -3876,337 +3865,349 @@
     if-ne v0, v7, :cond_5
 
     .line 166
-    goto :goto_2
+    move v12, v7
 
     .line 168
-    :cond_5
-    move v7, v1
+    goto :goto_2
 
     .line 169
+    :cond_5
+    move v12, v1
+
+    .line 170
     :goto_2
     iget-object v0, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
 
-    .line 170
+    .line 171
     invoke-virtual {v0}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 172
+    .line 173
     move-result-object v0
-
-    .line 175
-    iget-object v0, v0, Landroid/app/ActivityManager$RunningTaskInfo;->realActivity:Landroid/content/ComponentName;
 
     .line 176
+    iget-object v0, v0, Landroid/app/ActivityManager$RunningTaskInfo;->realActivity:Landroid/content/ComponentName;
+
+    .line 177
     invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
-    .line 178
-    move-result-object v0
-
-    .line 181
-    new-instance v1, Landroid/graphics/RectF;
+    .line 179
+    move-result-object v9
 
     .line 182
-    invoke-direct {v1}, Landroid/graphics/RectF;-><init>()V
+    new-instance v0, Landroid/graphics/RectF;
 
-    .line 184
-    iget-object v2, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mContext:Landroid/content/Context;
+    .line 183
+    invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
-    .line 187
-    iget-object v3, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
+    .line 185
+    iget-object v8, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mContext:Landroid/content/Context;
 
-    .line 189
-    invoke-virtual {v3}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
+    .line 188
+    iget-object v1, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
 
-    .line 191
-    move-result-object v3
+    .line 190
+    invoke-virtual {v1}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 194
-    iget-object v3, v3, Landroid/app/ActivityManager$RunningTaskInfo;->topActivityInfo:Landroid/content/pm/ActivityInfo;
+    .line 192
+    move-result-object v10
 
     .line 195
-    iget v3, v3, Landroid/content/pm/ActivityInfo;->screenOrientation:I
+    iget-object v1, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
 
-    .line 197
-    invoke-static {v2, v0, v3, v7, v1}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->getFreeformBoundsAndScale(Landroid/content/Context;Ljava/lang/String;IZLandroid/graphics/RectF;)F
+    .line 196
+    invoke-virtual {v1}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 199
-    move-result v0
+    .line 198
+    move-result-object v1
+
+    .line 201
+    iget v11, v1, Landroid/app/ActivityManager$RunningTaskInfo;->mTopActivityOrientation:I
 
     .line 202
-    iget-object v2, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mTaskBounds:Landroid/graphics/Rect;
+    move-object v13, v0
 
-    .line 203
-    invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
+    .line 204
+    invoke-static/range {v8 .. v13}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->getFreeformBoundsAndScale(Landroid/content/Context;Ljava/lang/String;Landroid/app/TaskInfo;IZLandroid/graphics/RectF;)F
 
     .line 205
-    move-result v2
+    move-result v1
 
     .line 208
-    int-to-float v2, v2
-
-    .line 209
-    iget-object v3, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mMiuiMultiWinAnimInfo:Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;
-
-    .line 210
-    invoke-virtual {v3}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;->getScaleX()F
-
-    .line 212
-    move-result v3
-
-    .line 215
-    mul-float/2addr v3, v2
-
-    .line 216
     iget-object v2, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mTaskBounds:Landroid/graphics/Rect;
 
-    .line 217
-    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
+    .line 209
+    invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
 
-    .line 219
+    .line 211
     move-result v2
 
-    .line 222
+    .line 214
     int-to-float v2, v2
 
+    .line 215
+    iget-object v3, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mMiuiMultiWinAnimInfo:Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;
+
+    .line 216
+    invoke-virtual {v3}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;->getScaleX()F
+
+    .line 218
+    move-result v3
+
+    .line 221
+    mul-float/2addr v3, v2
+
+    .line 222
+    iget-object v2, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mTaskBounds:Landroid/graphics/Rect;
+
     .line 223
-    iget-object v4, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mMiuiMultiWinAnimInfo:Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;
+    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
 
-    .line 224
-    invoke-virtual {v4}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;->getScaleY()F
+    .line 225
+    move-result v2
 
-    .line 226
-    move-result v4
+    .line 228
+    int-to-float v2, v2
 
     .line 229
-    mul-float/2addr v4, v2
+    iget-object v4, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mMiuiMultiWinAnimInfo:Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;
 
     .line 230
-    iget-object v2, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mMiuiMultiWinAnimInfo:Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;
+    invoke-virtual {v4}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;->getScaleY()F
 
-    .line 231
-    invoke-virtual {v2}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;->getPosX()F
+    .line 232
+    move-result v4
 
-    .line 233
-    move-result v2
+    .line 235
+    mul-float/2addr v4, v2
 
     .line 236
-    const/high16 v5, 0x40000000    # 2.0f
-
-    .line 237
-    div-float/2addr v3, v5
-
-    .line 239
-    add-float/2addr v3, v2
-
-    .line 240
     iget-object v2, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mMiuiMultiWinAnimInfo:Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;
 
-    .line 241
-    invoke-virtual {v2}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;->getPosY()F
+    .line 237
+    invoke-virtual {v2}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;->getPosX()F
 
-    .line 243
+    .line 239
     move-result v2
 
+    .line 242
+    const/high16 v5, 0x40000000    # 2.0f
+
+    .line 243
+    div-float/2addr v3, v5
+
+    .line 245
+    add-float/2addr v3, v2
+
     .line 246
-    div-float/2addr v4, v5
+    iget-object v2, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mMiuiMultiWinAnimInfo:Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;
 
     .line 247
-    add-float/2addr v4, v2
-
-    .line 248
-    invoke-virtual {v1}, Landroid/graphics/RectF;->width()F
+    invoke-virtual {v2}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;->getPosY()F
 
     .line 249
     move-result v2
 
     .line 252
-    mul-float/2addr v2, v0
+    div-float/2addr v4, v5
 
     .line 253
-    div-float/2addr v2, v5
+    add-float/2addr v4, v2
 
     .line 254
-    sub-float/2addr v3, v2
+    invoke-virtual {v0}, Landroid/graphics/RectF;->width()F
 
     .line 255
-    invoke-virtual {v1}, Landroid/graphics/RectF;->height()F
-
-    .line 256
     move-result v2
 
-    .line 259
-    mul-float/2addr v2, v0
+    .line 258
+    mul-float/2addr v2, v1
 
-    .line 260
+    .line 259
     div-float/2addr v2, v5
 
+    .line 260
+    sub-float/2addr v3, v2
+
     .line 261
-    sub-float/2addr v4, v2
+    invoke-virtual {v0}, Landroid/graphics/RectF;->height()F
 
     .line 262
-    new-instance v2, Landroid/graphics/Rect;
-
-    .line 263
-    float-to-int v5, v3
+    move-result v2
 
     .line 265
-    float-to-int v7, v4
+    mul-float/2addr v2, v1
 
     .line 266
-    invoke-virtual {v1}, Landroid/graphics/RectF;->width()F
+    div-float/2addr v2, v5
 
     .line 267
-    move-result v8
+    sub-float/2addr v4, v2
 
-    .line 270
-    add-float/2addr v8, v3
+    .line 268
+    new-instance v2, Landroid/graphics/Rect;
+
+    .line 269
+    float-to-int v5, v3
 
     .line 271
-    float-to-int v3, v8
+    float-to-int v7, v4
 
     .line 272
-    invoke-virtual {v1}, Landroid/graphics/RectF;->height()F
+    invoke-virtual {v0}, Landroid/graphics/RectF;->width()F
 
     .line 273
-    move-result v1
+    move-result v8
 
     .line 276
-    add-float/2addr v1, v4
+    add-float/2addr v8, v3
 
     .line 277
-    float-to-int v1, v1
+    float-to-int v3, v8
 
     .line 278
-    invoke-direct {v2, v5, v7, v3, v1}, Landroid/graphics/Rect;-><init>(IIII)V
+    invoke-virtual {v0}, Landroid/graphics/RectF;->height()F
 
     .line 279
-    iget-object v1, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mContext:Landroid/content/Context;
+    move-result v0
 
     .line 282
-    iget-object v3, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mMiuiDisplayInfo:Lcom/android/wm/shell/miuimultiwinswitch/MiuiDisplayInfo;
+    add-float/2addr v0, v4
+
+    .line 283
+    float-to-int v0, v0
 
     .line 284
-    invoke-static {v1, v3, v2, v0}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->restrictedToValidFreeformRegion(Landroid/content/Context;Lcom/android/wm/shell/miuimultiwinswitch/MiuiDisplayInfo;Landroid/graphics/Rect;F)V
+    invoke-direct {v2, v5, v7, v3, v0}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 286
-    iget-object v1, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
+    .line 285
+    iget-object v0, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mContext:Landroid/content/Context;
 
-    .line 289
-    invoke-virtual {v1}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
+    .line 288
+    iget-object v3, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mMiuiDisplayInfo:Lcom/android/wm/shell/miuimultiwinswitch/MiuiDisplayInfo;
 
-    .line 291
-    move-result-object v1
+    .line 290
+    invoke-static {v0, v3, v2, v1}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/HotAreaController;->restrictedToValidFreeformRegion(Landroid/content/Context;Lcom/android/wm/shell/miuimultiwinswitch/MiuiDisplayInfo;Landroid/graphics/Rect;F)V
 
-    .line 294
-    iget-object v1, v1, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
+    .line 292
+    iget-object v0, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
 
     .line 295
-    invoke-virtual {v6, v1, v2}, Landroid/window/WindowContainerTransaction;->setBounds(Landroid/window/WindowContainerToken;Landroid/graphics/Rect;)Landroid/window/WindowContainerTransaction;
+    invoke-virtual {v0}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
 
     .line 297
-    iget-object v1, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
-
-    .line 300
-    invoke-virtual {v1}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
-
-    .line 302
-    move-result-object v1
-
-    .line 305
-    iget-object v1, v1, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
-
-    .line 306
-    const/4 v3, 0x5
-
-    .line 308
-    invoke-virtual {v6, v1, v3}, Landroid/window/WindowContainerTransaction;->setWindowingMode(Landroid/window/WindowContainerToken;I)Landroid/window/WindowContainerTransaction;
-
-    .line 309
-    iget-object v1, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mPendingTaskInfo:Landroid/util/SparseArray;
-
-    .line 312
-    iget-object v3, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
-
-    .line 314
-    invoke-virtual {v3}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
-
-    .line 316
-    move-result-object v3
-
-    .line 319
-    iget v3, v3, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
-
-    .line 320
-    iget-object v4, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
-
-    .line 322
-    invoke-virtual {v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
-
-    .line 324
-    move-result-object v4
-
-    .line 327
-    invoke-virtual {v1, v3, v4}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    .line 328
-    iget-object v1, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mFreeformStartScale:Landroid/util/SparseArray;
-
-    .line 331
-    iget-object v3, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
-
-    .line 333
-    invoke-virtual {v3}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
-
-    .line 335
-    move-result-object v3
-
-    .line 338
-    iget v3, v3, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
-
-    .line 339
-    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    .line 341
     move-result-object v0
 
+    .line 300
+    iget-object v0, v0, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
+
+    .line 301
+    invoke-virtual {v6, v0, v2}, Landroid/window/WindowContainerTransaction;->setBounds(Landroid/window/WindowContainerToken;Landroid/graphics/Rect;)Landroid/window/WindowContainerTransaction;
+
+    .line 303
+    iget-object v0, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
+
+    .line 306
+    invoke-virtual {v0}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
+
+    .line 308
+    move-result-object v0
+
+    .line 311
+    iget-object v0, v0, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
+
+    .line 312
+    const/4 v3, 0x5
+
+    .line 314
+    invoke-virtual {v6, v0, v3}, Landroid/window/WindowContainerTransaction;->setWindowingMode(Landroid/window/WindowContainerToken;I)Landroid/window/WindowContainerTransaction;
+
+    .line 315
+    iget-object v0, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mPendingTaskInfo:Landroid/util/SparseArray;
+
+    .line 318
+    iget-object v3, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
+
+    .line 320
+    invoke-virtual {v3}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
+
+    .line 322
+    move-result-object v3
+
+    .line 325
+    iget v3, v3, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
+
+    .line 326
+    iget-object v4, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
+
+    .line 328
+    invoke-virtual {v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
+
+    .line 330
+    move-result-object v4
+
+    .line 333
+    invoke-virtual {v0, v3, v4}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    .line 334
+    iget-object v0, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mFreeformStartScale:Landroid/util/SparseArray;
+
+    .line 337
+    iget-object v3, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
+
+    .line 339
+    invoke-virtual {v3}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
+
+    .line 341
+    move-result-object v3
+
     .line 344
-    invoke-virtual {v1, v3, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    iget v3, v3, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
     .line 345
-    const/16 v0, 0xcd
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    .line 348
-    invoke-direct {p0, v0, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->startTransition(ILandroid/window/WindowContainerTransaction;)V
-
-    .line 350
-    new-instance v0, Landroid/window/WindowContainerTransaction;
-
-    .line 353
-    invoke-direct {v0}, Landroid/window/WindowContainerTransaction;-><init>()V
-
-    .line 355
-    iget-object v1, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
-
-    .line 358
-    invoke-virtual {v1}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
-
-    .line 360
+    .line 347
     move-result-object v1
 
-    .line 363
-    iget-object v1, v1, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
+    .line 350
+    invoke-virtual {v0, v3, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    .line 351
+    const/16 v0, 0xcd
+
+    .line 354
+    invoke-direct {p0, v0, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->startTransition(ILandroid/window/WindowContainerTransaction;)V
+
+    .line 356
+    new-instance v0, Landroid/window/WindowContainerTransaction;
+
+    .line 359
+    invoke-direct {v0}, Landroid/window/WindowContainerTransaction;-><init>()V
+
+    .line 361
+    iget-object v1, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
 
     .line 364
-    invoke-virtual {v0, v1, v2}, Landroid/window/WindowContainerTransaction;->setBounds(Landroid/window/WindowContainerToken;Landroid/graphics/Rect;)Landroid/window/WindowContainerTransaction;
+    invoke-virtual {v1}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
 
     .line 366
-    iget-object p0, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mRTDAOrganizer:Lcom/android/wm/shell/RootTaskDisplayAreaOrganizer;
+    move-result-object v1
 
     .line 369
+    iget-object v1, v1, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
+
+    .line 370
+    invoke-virtual {v0, v1, v2}, Landroid/window/WindowContainerTransaction;->setBounds(Landroid/window/WindowContainerToken;Landroid/graphics/Rect;)Landroid/window/WindowContainerTransaction;
+
+    .line 372
+    iget-object p0, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mRTDAOrganizer:Lcom/android/wm/shell/RootTaskDisplayAreaOrganizer;
+
+    .line 375
     invoke-virtual {p0, v0}, Landroid/window/DisplayAreaOrganizer;->applyTransaction(Landroid/window/WindowContainerTransaction;)V
 
-    .line 371
+    .line 377
     return-void
-    .line 374
+    .line 380
 .end method
 
 .method private startSplitToFull()V
@@ -5526,18 +5527,9 @@
     .line 6
     iget v2, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mFullScreenCornerRadius:F
 
-    .line 7
-    iget-object v4, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
-
-    invoke-virtual {v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
-
-    move-result-object v4
-
-    invoke-direct {v0, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->notifyForegroundInfoChanged(Landroid/app/ActivityManager$RunningTaskInfo;)V
-
     goto :goto_0
 
-    .line 8
+    .line 7
     :cond_1
     iget-object v2, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mDragTaskInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/DragTaskInfo;
 
@@ -5553,16 +5545,16 @@
 
     if-ne v2, v4, :cond_2
 
-    .line 9
+    .line 8
     iget v2, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mFreeformCornerRadius:F
 
     goto :goto_0
 
-    .line 10
+    .line 9
     :cond_2
     iget v2, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mSplitCornerRadius:F
 
-    .line 11
+    .line 10
     :goto_0
     new-instance v4, Lmiuix/animation/base/AnimConfig;
 
@@ -5572,28 +5564,28 @@
 
     const-string v6, "posX"
 
-    .line 12
+    .line 11
     invoke-virtual {v4, v6, v5}, Lmiuix/animation/base/AnimConfig;->setSpecial(Ljava/lang/String;Lmiuix/animation/base/AnimSpecialConfig;)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v4
 
     const-string v6, "posY"
 
-    .line 13
+    .line 12
     invoke-virtual {v4, v6, v5}, Lmiuix/animation/base/AnimConfig;->setSpecial(Ljava/lang/String;Lmiuix/animation/base/AnimSpecialConfig;)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v4
 
     const-string v6, "scaleX"
 
-    .line 14
+    .line 13
     invoke-virtual {v4, v6, v5}, Lmiuix/animation/base/AnimConfig;->setSpecial(Ljava/lang/String;Lmiuix/animation/base/AnimSpecialConfig;)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v4
 
     const-string v6, "scaleY"
 
-    .line 15
+    .line 14
     invoke-virtual {v4, v6, v5}, Lmiuix/animation/base/AnimConfig;->setSpecial(Ljava/lang/String;Lmiuix/animation/base/AnimSpecialConfig;)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v4
@@ -5602,17 +5594,17 @@
 
     invoke-direct {v5, v0}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler$3;-><init>(Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;)V
 
-    .line 16
+    .line 15
     sget-object v6, Lcom/android/wm/shell/common/performance/MiuiMultitaskingPerformanceHelper;->mBoosterHashMap:Ljava/util/HashMap;
 
-    .line 17
+    .line 16
     new-instance v6, Lcom/android/wm/shell/common/performance/MiuiMultitaskingPerformanceHelper$MiuiTransitionListenerWrapper;
 
     const-string v7, "FF_UI/MULTI_TASK_TYPE_MWS"
 
     invoke-direct {v6, v5, v7}, Lcom/android/wm/shell/common/performance/MiuiMultitaskingPerformanceHelper$MiuiTransitionListenerWrapper;-><init>(Lmiuix/animation/listener/TransitionListener;Ljava/lang/String;)V
 
-    .line 18
+    .line 17
     filled-new-array {v6}, [Lmiuix/animation/listener/TransitionListener;
 
     move-result-object v5
@@ -5621,13 +5613,13 @@
 
     move-result-object v26
 
-    .line 19
+    .line 18
     iput-boolean v3, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mBackToOriginalAnimationRunning:Z
 
-    .line 20
+    .line 19
     iput-boolean v3, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mCancelMoveAnim:Z
 
-    .line 21
+    .line 20
     invoke-static {v7}, Lcom/android/wm/shell/common/performance/MiuiMultitaskingPerformanceHelper;->beginSchedThread(Ljava/lang/String;)V
 
     const/4 v3, 0x0
@@ -5636,7 +5628,7 @@
 
     if-eqz v1, :cond_3
 
-    .line 22
+    .line 21
     iget-object v1, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mMiuiMultiWinAnimInfo:Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;
 
     filled-new-array {v1}, [Ljava/lang/Object;
@@ -5657,7 +5649,7 @@
 
     mul-float/2addr v5, v4
 
-    .line 23
+    .line 22
     invoke-static {v5}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v9
@@ -5672,42 +5664,42 @@
 
     mul-float/2addr v5, v4
 
-    .line 24
+    .line 23
     invoke-static {v5}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v11
 
     const-string v12, "scaleX"
 
-    .line 25
+    .line 24
     invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v13
 
     const-string v14, "scaleY"
 
-    .line 26
+    .line 25
     invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v15
 
     const-string v16, "leashAlpha"
 
-    .line 27
+    .line 26
     invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v17
 
     const-string v18, "coverLayerAlpha"
 
-    .line 28
+    .line 27
     invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v19
 
     const-string v20, "cornerRadius"
 
-    .line 29
+    .line 28
     invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v21
@@ -5720,7 +5712,7 @@
 
     int-to-float v2, v2
 
-    .line 30
+    .line 29
     invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v23
@@ -5733,7 +5725,7 @@
 
     int-to-float v0, v0
 
-    .line 31
+    .line 30
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v25
@@ -5742,12 +5734,12 @@
 
     move-result-object v0
 
-    .line 32
+    .line 31
     invoke-interface {v1, v0}, Lmiuix/animation/IStateStyle;->to([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     goto :goto_1
 
-    .line 33
+    .line 32
     :cond_3
     iget-object v1, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdrag/MiuiMultiWinGestureHandler;->mMiuiMultiWinAnimInfo:Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinAnimInfo;
 
@@ -5769,7 +5761,7 @@
 
     mul-float/2addr v5, v4
 
-    .line 34
+    .line 33
     invoke-static {v5}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v9
@@ -5784,42 +5776,42 @@
 
     mul-float/2addr v5, v4
 
-    .line 35
+    .line 34
     invoke-static {v5}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v11
 
     const-string v12, "scaleX"
 
-    .line 36
+    .line 35
     invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v13
 
     const-string v14, "scaleY"
 
-    .line 37
+    .line 36
     invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v15
 
     const-string v16, "leashAlpha"
 
-    .line 38
+    .line 37
     invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v17
 
     const-string v18, "coverLayerAlpha"
 
-    .line 39
+    .line 38
     invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v19
 
     const-string v20, "cornerRadius"
 
-    .line 40
+    .line 39
     invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v21
@@ -5832,7 +5824,7 @@
 
     int-to-float v2, v2
 
-    .line 41
+    .line 40
     invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v23
@@ -5845,7 +5837,7 @@
 
     int-to-float v0, v0
 
-    .line 42
+    .line 41
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v25
@@ -5854,7 +5846,7 @@
 
     move-result-object v0
 
-    .line 43
+    .line 42
     invoke-interface {v1, v0}, Lmiuix/animation/IStateStyle;->setTo([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     :goto_1

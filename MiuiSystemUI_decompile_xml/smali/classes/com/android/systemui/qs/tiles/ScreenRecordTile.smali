@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/qs/tiles/ScreenRecordTile;
 .super Lcom/android/systemui/qs/tileimpl/QSTileImpl;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lcom/android/systemui/screenrecord/RecordingController$RecordingStateChangeCallback;
@@ -149,7 +149,7 @@
     iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
 
     .line 2
-    const v0, 0x7f1309e3    # @string/quick_settings_screen_record_label 'Screen record'
+    const v0, 0x7f1309e9    # @string/quick_settings_screen_record_label 'Screen record'
 
     .line 4
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -388,7 +388,7 @@
     iget-object v3, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
 
     .line 34
-    const v4, 0x7f1309e3    # @string/quick_settings_screen_record_label 'Screen record'
+    const v4, 0x7f1309e9    # @string/quick_settings_screen_record_label 'Screen record'
 
     .line 36
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -442,7 +442,7 @@
     if-eqz v1, :cond_6
 
     .line 69
-    const p0, 0x7f1309e5    # @string/quick_settings_screen_record_stop 'Stop'
+    const p0, 0x7f1309eb    # @string/quick_settings_screen_record_stop 'Stop'
 
     .line 71
     invoke-virtual {v3, p0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -510,7 +510,7 @@
 
     .line 111
     :cond_7
-    const p0, 0x7f1309e4    # @string/quick_settings_screen_record_start 'Start'
+    const p0, 0x7f1309ea    # @string/quick_settings_screen_record_start 'Start'
 
     .line 112
     invoke-virtual {v3, p0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -606,7 +606,7 @@
     iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
 
     .line 7
-    const v1, 0x7f1309e3    # @string/quick_settings_screen_record_label 'Screen record'
+    const v1, 0x7f1309e9    # @string/quick_settings_screen_record_label 'Screen record'
 
     .line 9
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;

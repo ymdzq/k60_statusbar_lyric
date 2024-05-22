@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8' ?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
   <PreferenceCategory android:title="@string/lock_settings_profile_title"
                       android:key="security_category_profile">
     <com.android.settingslib.MiuiRestrictedSwitchPreference android:title="@string/lock_settings_profile_unification_title"

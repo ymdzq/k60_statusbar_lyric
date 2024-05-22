@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/qs/ReduceBrightColorsController$1;
 .super Landroid/database/ContentObserver;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # instance fields
@@ -76,83 +76,83 @@
     if-eqz v0, :cond_1
 
     .line 28
-    const-string v0, "reduce_bright_colors_activated"
+    const-string/jumbo v0, "reduce_bright_colors_activated"
 
     .line 30
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 32
+    .line 33
     move-result p1
 
-    .line 35
+    .line 36
     if-eqz p1, :cond_1
 
-    .line 36
+    .line 37
     iget-object p1, p0, Lcom/android/systemui/qs/ReduceBrightColorsController$1;->this$0:Lcom/android/systemui/qs/ReduceBrightColorsController;
 
-    .line 38
+    .line 39
     iget-object p1, p1, Lcom/android/systemui/qs/ReduceBrightColorsController;->mListeners:Ljava/util/ArrayList;
 
-    .line 40
+    .line 41
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    .line 42
+    .line 43
     move-result-object p1
 
-    .line 45
+    .line 46
     :goto_1
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 46
+    .line 47
     move-result v0
 
-    .line 49
+    .line 50
     if-eqz v0, :cond_1
 
-    .line 50
+    .line 51
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 52
+    .line 53
     move-result-object v0
 
-    .line 55
+    .line 56
     check-cast v0, Lcom/android/systemui/qs/ReduceBrightColorsController$Listener;
 
-    .line 56
+    .line 57
     iget-object v1, p0, Lcom/android/systemui/qs/ReduceBrightColorsController$1;->this$0:Lcom/android/systemui/qs/ReduceBrightColorsController;
 
-    .line 58
+    .line 59
     iget-object v1, v1, Lcom/android/systemui/qs/ReduceBrightColorsController;->mManager:Landroid/hardware/display/ColorDisplayManager;
 
-    .line 60
+    .line 61
     invoke-virtual {v1}, Landroid/hardware/display/ColorDisplayManager;->isReduceBrightColorsActivated()Z
 
-    .line 62
+    .line 63
     move-result v1
 
-    .line 65
+    .line 66
     invoke-interface {v0, v1}, Lcom/android/systemui/qs/ReduceBrightColorsController$Listener;->onActivated(Z)V
 
-    .line 66
+    .line 67
     goto :goto_1
 
-    .line 69
+    .line 70
     :cond_1
     monitor-exit p2
 
-    .line 70
+    .line 71
     return-void
 
-    .line 71
+    .line 72
     :catchall_0
     move-exception p0
 
-    .line 72
+    .line 73
     monitor-exit p2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 73
-    throw p0
     .line 74
+    throw p0
+    .line 75
 .end method

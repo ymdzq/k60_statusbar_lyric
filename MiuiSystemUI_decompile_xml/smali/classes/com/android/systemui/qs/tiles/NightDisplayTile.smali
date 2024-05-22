@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/qs/tiles/NightDisplayTile;
 .super Lcom/android/systemui/qs/tileimpl/QSTileImpl;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Landroid/hardware/display/NightDisplayListener$Callback;
@@ -109,7 +109,7 @@
     iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
 
     .line 2
-    const v0, 0x7f1309d0    # @string/quick_settings_night_display_label 'Night Light'
+    const v0, 0x7f1309d6    # @string/quick_settings_night_display_label 'Night Light'
 
     .line 4
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -273,7 +273,7 @@
     iget-object p2, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
 
     .line 12
-    const v0, 0x7f1309d0    # @string/quick_settings_night_display_label 'Night Light'
+    const v0, 0x7f1309d6    # @string/quick_settings_night_display_label 'Night Light'
 
     .line 14
     invoke-virtual {p2, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -394,7 +394,7 @@
     if-eqz v0, :cond_4
 
     .line 82
-    const p0, 0x7f1309d3    # @string/quick_settings_night_secondary_label_until_sunrise 'Until sunrise'
+    const p0, 0x7f1309d9    # @string/quick_settings_night_secondary_label_until_sunrise 'Until sunrise'
 
     .line 84
     invoke-virtual {p2, p0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -407,7 +407,7 @@
 
     .line 91
     :cond_4
-    const p0, 0x7f1309d2    # @string/quick_settings_night_secondary_label_on_at_sunset 'On at sunset'
+    const p0, 0x7f1309d8    # @string/quick_settings_night_secondary_label_on_at_sunset 'On at sunset'
 
     .line 92
     invoke-virtual {p2, p0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -432,7 +432,7 @@
     move-result-object p0
 
     .line 107
-    const v0, 0x7f1309ef    # @string/quick_settings_secondary_label_until 'Until %s'
+    const v0, 0x7f1309f5    # @string/quick_settings_secondary_label_until 'Until %s'
 
     .line 108
     goto :goto_3
@@ -448,7 +448,7 @@
     move-result-object p0
 
     .line 117
-    const v0, 0x7f1309d1    # @string/quick_settings_night_secondary_label_on_at 'On at %s'
+    const v0, 0x7f1309d7    # @string/quick_settings_night_secondary_label_on_at 'On at %s'
 
     .line 118
     :goto_3

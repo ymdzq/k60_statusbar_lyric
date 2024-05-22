@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/collection/coordinator/UsbNotificationCoordinator;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/notification/collection/coordinator/Coordinator;
@@ -408,7 +408,7 @@
     move-result-object v3
 
     .line 131
-    const v4, 0x11050023
+    const v4, 0x11050024
 
     .line 132
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getBoolean(I)Z

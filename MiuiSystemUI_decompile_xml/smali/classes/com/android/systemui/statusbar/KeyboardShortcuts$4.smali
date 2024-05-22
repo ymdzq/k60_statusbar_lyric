@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/KeyboardShortcuts$4;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -1182,7 +1182,7 @@
     iget-object v2, v1, Lcom/android/systemui/statusbar/KeyboardShortcuts;->mDialogCloseListener:Lcom/android/systemui/statusbar/KeyboardShortcuts$1;
 
     .line 752
-    const v3, 0x7f1309a4    # @string/quick_settings_done 'Done'
+    const v3, 0x7f1309aa    # @string/quick_settings_done 'Done'
 
     .line 754
     invoke-virtual {v0, v3, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;

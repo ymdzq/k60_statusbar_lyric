@@ -636,8 +636,6 @@
 
 .field public static final miui_sos_settings:I = 0x7f16013b # @xml/miui_sos_settings 'res/xml/miui_sos_settings.xml'
 
-.field public static final miui_status_bar_lyric_settings:I = 0x7f1622ff # @xml/miui_status_bar_lyric_settings 'res/xml/miui_status_bar_lyric_settings.xml'
-
 .field public static final miui_stylus_ota_pref:I = 0x7f16013c # @xml/miui_stylus_ota_pref 'res/xml/miui_stylus_ota_pref.xml'
 
 .field public static final miui_stylus_settings:I = 0x7f16013d # @xml/miui_stylus_settings 'res/xml/miui_stylus_settings.xml'
@@ -916,243 +914,245 @@
 
 .field public static final settings_account_ap:I = 0x7f1601c6 # @xml/settings_account_ap 'res/xml/settings_account_ap.xml'
 
-.field public static final settings_haptic_settings:I = 0x7f1601c7 # @xml/settings_haptic_settings 'res/xml/settings_haptic_settings.xml'
+.field public static final settings_account_ap_v2:I = 0x7f1601c7 # @xml/settings_account_ap_v2 'res/xml/settings_account_ap_v2.xml'
 
-.field public static final settings_headers:I = 0x7f1601c8 # @xml/settings_headers 'res/xml/settings_headers.xml'
+.field public static final settings_haptic_settings:I = 0x7f1601c8 # @xml/settings_haptic_settings 'res/xml/settings_haptic_settings.xml'
 
-.field public static final setup_security_settings_picker:I = 0x7f1601c9 # @xml/setup_security_settings_picker 'res/xml/setup_security_settings_picker.xml'
+.field public static final settings_headers:I = 0x7f1601c9 # @xml/settings_headers 'res/xml/settings_headers.xml'
 
-.field public static final shortcuts:I = 0x7f1601ca # @xml/shortcuts 'res/xml/shortcuts.xml'
+.field public static final setup_security_settings_picker:I = 0x7f1601ca # @xml/setup_security_settings_picker 'res/xml/setup_security_settings_picker.xml'
 
-.field public static final shortcuts_pad:I = 0x7f1601cb # @xml/shortcuts_pad 'res/xml/shortcuts_pad.xml'
+.field public static final shortcuts:I = 0x7f1601cb # @xml/shortcuts 'res/xml/shortcuts.xml'
 
-.field public static final shoulderkey_settings:I = 0x7f1601cc # @xml/shoulderkey_settings 'res/xml/shoulderkey_settings.xml'
+.field public static final shortcuts_pad:I = 0x7f1601cc # @xml/shortcuts_pad 'res/xml/shortcuts_pad.xml'
 
-.field public static final shoulderkey_shortcut:I = 0x7f1601cd # @xml/shoulderkey_shortcut 'res/xml/shoulderkey_shortcut.xml'
+.field public static final shoulderkey_settings:I = 0x7f1601cd # @xml/shoulderkey_settings 'res/xml/shoulderkey_settings.xml'
 
-.field public static final shoulderkey_sound:I = 0x7f1601ce # @xml/shoulderkey_sound 'res/xml/shoulderkey_sound.xml'
+.field public static final shoulderkey_shortcut:I = 0x7f1601ce # @xml/shoulderkey_shortcut 'res/xml/shoulderkey_shortcut.xml'
 
-.field public static final silent_settings:I = 0x7f1601cf # @xml/silent_settings 'res/xml/silent_settings.xml'
+.field public static final shoulderkey_sound:I = 0x7f1601cf # @xml/shoulderkey_sound 'res/xml/shoulderkey_sound.xml'
 
-.field public static final sim_lock_settings:I = 0x7f1601d0 # @xml/sim_lock_settings 'res/xml/sim_lock_settings.xml'
+.field public static final silent_settings:I = 0x7f1601d0 # @xml/silent_settings 'res/xml/silent_settings.xml'
 
-.field public static final single_choice_list_item_2:I = 0x7f1601d1 # @xml/single_choice_list_item_2 'res/xml/single_choice_list_item_2.xml'
+.field public static final sim_lock_settings:I = 0x7f1601d1 # @xml/sim_lock_settings 'res/xml/sim_lock_settings.xml'
 
-.field public static final slave_wifi_settings:I = 0x7f1601d2 # @xml/slave_wifi_settings 'res/xml/slave_wifi_settings.xml'
+.field public static final single_choice_list_item_2:I = 0x7f1601d2 # @xml/single_choice_list_item_2 'res/xml/single_choice_list_item_2.xml'
 
-.field public static final smart_battery_detail:I = 0x7f1601d3 # @xml/smart_battery_detail 'res/xml/smart_battery_detail.xml'
+.field public static final slave_wifi_settings:I = 0x7f1601d3 # @xml/slave_wifi_settings 'res/xml/slave_wifi_settings.xml'
 
-.field public static final smart_forwarding_mdn_handler:I = 0x7f1601d4 # @xml/smart_forwarding_mdn_handler 'res/xml/smart_forwarding_mdn_handler.xml'
+.field public static final smart_battery_detail:I = 0x7f1601d4 # @xml/smart_battery_detail 'res/xml/smart_battery_detail.xml'
 
-.field public static final smart_forwarding_mdn_handler_header:I = 0x7f1601d5 # @xml/smart_forwarding_mdn_handler_header 'res/xml/smart_forwarding_mdn_handler_header.xml'
+.field public static final smart_forwarding_mdn_handler:I = 0x7f1601d5 # @xml/smart_forwarding_mdn_handler 'res/xml/smart_forwarding_mdn_handler.xml'
 
-.field public static final smart_forwarding_switch:I = 0x7f1601d6 # @xml/smart_forwarding_switch 'res/xml/smart_forwarding_switch.xml'
+.field public static final smart_forwarding_mdn_handler_header:I = 0x7f1601d6 # @xml/smart_forwarding_mdn_handler_header 'res/xml/smart_forwarding_mdn_handler_header.xml'
 
-.field public static final smartcover_mode_settings:I = 0x7f1601d7 # @xml/smartcover_mode_settings 'res/xml/smartcover_mode_settings.xml'
+.field public static final smart_forwarding_switch:I = 0x7f1601d7 # @xml/smart_forwarding_switch 'res/xml/smart_forwarding_switch.xml'
 
-.field public static final sms_received_header:I = 0x7f1601d8 # @xml/sms_received_header 'res/xml/sms_received_header.xml'
+.field public static final smartcover_mode_settings:I = 0x7f1601d8 # @xml/smartcover_mode_settings 'res/xml/smartcover_mode_settings.xml'
 
-.field public static final snoop_logger_filters_settings:I = 0x7f1601d9 # @xml/snoop_logger_filters_settings 'res/xml/snoop_logger_filters_settings.xml'
+.field public static final sms_received_header:I = 0x7f1601d9 # @xml/sms_received_header 'res/xml/sms_received_header.xml'
 
-.field public static final sound_haptic_settings:I = 0x7f1601da # @xml/sound_haptic_settings 'res/xml/sound_haptic_settings.xml'
+.field public static final snoop_logger_filters_settings:I = 0x7f1601da # @xml/snoop_logger_filters_settings 'res/xml/snoop_logger_filters_settings.xml'
 
-.field public static final sound_header:I = 0x7f1601db # @xml/sound_header 'res/xml/sound_header.xml'
+.field public static final sound_haptic_settings:I = 0x7f1601db # @xml/sound_haptic_settings 'res/xml/sound_haptic_settings.xml'
 
-.field public static final sound_settings:I = 0x7f1601dc # @xml/sound_settings 'res/xml/sound_settings.xml'
+.field public static final sound_header:I = 0x7f1601dc # @xml/sound_header 'res/xml/sound_header.xml'
 
-.field public static final sound_work_settings:I = 0x7f1601dd # @xml/sound_work_settings 'res/xml/sound_work_settings.xml'
+.field public static final sound_settings:I = 0x7f1601dd # @xml/sound_settings 'res/xml/sound_settings.xml'
 
-.field public static final spatial_audio_settings:I = 0x7f1601de # @xml/spatial_audio_settings 'res/xml/spatial_audio_settings.xml'
+.field public static final sound_work_settings:I = 0x7f1601de # @xml/sound_work_settings 'res/xml/sound_work_settings.xml'
 
-.field public static final speaker_settings:I = 0x7f1601df # @xml/speaker_settings 'res/xml/speaker_settings.xml'
+.field public static final spatial_audio_settings:I = 0x7f1601df # @xml/spatial_audio_settings 'res/xml/spatial_audio_settings.xml'
 
-.field public static final special_access:I = 0x7f1601e0 # @xml/special_access 'res/xml/special_access.xml'
+.field public static final speaker_settings:I = 0x7f1601e0 # @xml/speaker_settings 'res/xml/speaker_settings.xml'
 
-.field public static final spellchecker_prefs:I = 0x7f1601e1 # @xml/spellchecker_prefs 'res/xml/spellchecker_prefs.xml'
+.field public static final special_access:I = 0x7f1601e1 # @xml/special_access 'res/xml/special_access.xml'
 
-.field public static final status_bar_settings:I = 0x7f1601e2 # @xml/status_bar_settings 'res/xml/status_bar_settings.xml'
+.field public static final spellchecker_prefs:I = 0x7f1601e2 # @xml/spellchecker_prefs 'res/xml/spellchecker_prefs.xml'
 
-.field public static final status_imei:I = 0x7f1601e3 # @xml/status_imei 'res/xml/status_imei.xml'
+.field public static final status_bar_settings:I = 0x7f1601e3 # @xml/status_bar_settings 'res/xml/status_bar_settings.xml'
 
-.field public static final status_sim:I = 0x7f1601e4 # @xml/status_sim 'res/xml/status_sim.xml'
+.field public static final status_imei:I = 0x7f1601e4 # @xml/status_imei 'res/xml/status_imei.xml'
 
-.field public static final storage_category_fragment:I = 0x7f1601e5 # @xml/storage_category_fragment 'res/xml/storage_category_fragment.xml'
+.field public static final status_sim:I = 0x7f1601e5 # @xml/status_sim 'res/xml/status_sim.xml'
 
-.field public static final storage_dashboard_fragment:I = 0x7f1601e6 # @xml/storage_dashboard_fragment 'res/xml/storage_dashboard_fragment.xml'
+.field public static final storage_category_fragment:I = 0x7f1601e6 # @xml/storage_category_fragment 'res/xml/storage_category_fragment.xml'
 
-.field public static final storage_dashboard_header_fragment:I = 0x7f1601e7 # @xml/storage_dashboard_header_fragment 'res/xml/storage_dashboard_header_fragment.xml'
+.field public static final storage_dashboard_fragment:I = 0x7f1601e7 # @xml/storage_dashboard_fragment 'res/xml/storage_dashboard_fragment.xml'
 
-.field public static final stylus_usi_details_fragment:I = 0x7f1601e8 # @xml/stylus_usi_details_fragment 'res/xml/stylus_usi_details_fragment.xml'
+.field public static final storage_dashboard_header_fragment:I = 0x7f1601e8 # @xml/storage_dashboard_header_fragment 'res/xml/storage_dashboard_header_fragment.xml'
 
-.field public static final swipe_to_notification_settings:I = 0x7f1601e9 # @xml/swipe_to_notification_settings 'res/xml/swipe_to_notification_settings.xml'
+.field public static final stylus_usi_details_fragment:I = 0x7f1601e9 # @xml/stylus_usi_details_fragment 'res/xml/stylus_usi_details_fragment.xml'
 
-.field public static final sync_header:I = 0x7f1601ea # @xml/sync_header 'res/xml/sync_header.xml'
+.field public static final swipe_to_notification_settings:I = 0x7f1601ea # @xml/swipe_to_notification_settings 'res/xml/swipe_to_notification_settings.xml'
 
-.field public static final system_app_settings:I = 0x7f1601eb # @xml/system_app_settings 'res/xml/system_app_settings.xml'
+.field public static final sync_header:I = 0x7f1601eb # @xml/sync_header 'res/xml/sync_header.xml'
 
-.field public static final system_dashboard_fragment:I = 0x7f1601ec # @xml/system_dashboard_fragment 'res/xml/system_dashboard_fragment.xml'
+.field public static final system_app_settings:I = 0x7f1601ec # @xml/system_app_settings 'res/xml/system_app_settings.xml'
 
-.field public static final system_navigation_gesture_settings:I = 0x7f1601ed # @xml/system_navigation_gesture_settings 'res/xml/system_navigation_gesture_settings.xml'
+.field public static final system_dashboard_fragment:I = 0x7f1601ed # @xml/system_dashboard_fragment 'res/xml/system_dashboard_fragment.xml'
 
-.field public static final tablet_screen_settings:I = 0x7f1601ee # @xml/tablet_screen_settings 'res/xml/tablet_screen_settings.xml'
+.field public static final system_navigation_gesture_settings:I = 0x7f1601ee # @xml/system_navigation_gesture_settings 'res/xml/system_navigation_gesture_settings.xml'
 
-.field public static final tap_screen_gesture_settings:I = 0x7f1601ef # @xml/tap_screen_gesture_settings 'res/xml/tap_screen_gesture_settings.xml'
+.field public static final tablet_screen_settings:I = 0x7f1601ef # @xml/tablet_screen_settings 'res/xml/tablet_screen_settings.xml'
 
-.field public static final testing_settings:I = 0x7f1601f0 # @xml/testing_settings 'res/xml/testing_settings.xml'
+.field public static final tap_screen_gesture_settings:I = 0x7f1601f0 # @xml/tap_screen_gesture_settings 'res/xml/tap_screen_gesture_settings.xml'
 
-.field public static final testing_wifi_settings:I = 0x7f1601f1 # @xml/testing_wifi_settings 'res/xml/testing_wifi_settings.xml'
+.field public static final testing_settings:I = 0x7f1601f1 # @xml/testing_settings 'res/xml/testing_settings.xml'
 
-.field public static final tether_header:I = 0x7f1601f2 # @xml/tether_header 'res/xml/tether_header.xml'
+.field public static final testing_wifi_settings:I = 0x7f1601f2 # @xml/testing_wifi_settings 'res/xml/testing_wifi_settings.xml'
 
-.field public static final tether_prefs:I = 0x7f1601f3 # @xml/tether_prefs 'res/xml/tether_prefs.xml'
+.field public static final tether_header:I = 0x7f1601f3 # @xml/tether_header 'res/xml/tether_header.xml'
 
-.field public static final time_zone_prefs:I = 0x7f1601f4 # @xml/time_zone_prefs 'res/xml/time_zone_prefs.xml'
+.field public static final tether_prefs:I = 0x7f1601f4 # @xml/tether_prefs 'res/xml/tether_prefs.xml'
 
-.field public static final timezones:I = 0x7f1601f5 # @xml/timezones 'res/xml/timezones.xml'
+.field public static final time_zone_prefs:I = 0x7f1601f5 # @xml/time_zone_prefs 'res/xml/time_zone_prefs.xml'
 
-.field public static final tofgesture_settings:I = 0x7f1601f6 # @xml/tofgesture_settings 'res/xml/tofgesture_settings.xml'
+.field public static final timezones:I = 0x7f1601f6 # @xml/timezones 'res/xml/timezones.xml'
 
-.field public static final top_level_settings:I = 0x7f1601f7 # @xml/top_level_settings 'res/xml/top_level_settings.xml'
+.field public static final tofgesture_settings:I = 0x7f1601f7 # @xml/tofgesture_settings 'res/xml/tofgesture_settings.xml'
 
-.field public static final trackpad_gesture_settings:I = 0x7f1601f8 # @xml/trackpad_gesture_settings 'res/xml/trackpad_gesture_settings.xml'
+.field public static final top_level_settings:I = 0x7f1601f8 # @xml/top_level_settings 'res/xml/top_level_settings.xml'
 
-.field public static final trackpad_settings:I = 0x7f1601f9 # @xml/trackpad_settings 'res/xml/trackpad_settings.xml'
+.field public static final trackpad_gesture_settings:I = 0x7f1601f9 # @xml/trackpad_gesture_settings 'res/xml/trackpad_gesture_settings.xml'
 
-.field public static final transcode_settings:I = 0x7f1601fa # @xml/transcode_settings 'res/xml/transcode_settings.xml'
+.field public static final trackpad_settings:I = 0x7f1601fa # @xml/trackpad_settings 'res/xml/trackpad_settings.xml'
 
-.field public static final trust_agent_settings:I = 0x7f1601fb # @xml/trust_agent_settings 'res/xml/trust_agent_settings.xml'
+.field public static final transcode_settings:I = 0x7f1601fb # @xml/transcode_settings 'res/xml/transcode_settings.xml'
 
-.field public static final tts_engine_picker:I = 0x7f1601fc # @xml/tts_engine_picker 'res/xml/tts_engine_picker.xml'
+.field public static final trust_agent_settings:I = 0x7f1601fc # @xml/trust_agent_settings 'res/xml/trust_agent_settings.xml'
 
-.field public static final tts_settings:I = 0x7f1601fd # @xml/tts_settings 'res/xml/tts_settings.xml'
+.field public static final tts_engine_picker:I = 0x7f1601fd # @xml/tts_engine_picker 'res/xml/tts_engine_picker.xml'
 
-.field public static final turn_screen_on_permissions_details:I = 0x7f1601fe # @xml/turn_screen_on_permissions_details 'res/xml/turn_screen_on_permissions_details.xml'
+.field public static final tts_settings:I = 0x7f1601fe # @xml/tts_settings 'res/xml/tts_settings.xml'
 
-.field public static final unlock_set_header:I = 0x7f1601ff # @xml/unlock_set_header 'res/xml/unlock_set_header.xml'
+.field public static final turn_screen_on_permissions_details:I = 0x7f1601ff # @xml/turn_screen_on_permissions_details 'res/xml/turn_screen_on_permissions_details.xml'
 
-.field public static final unrestricted_data_access_settings:I = 0x7f160200 # @xml/unrestricted_data_access_settings 'res/xml/unrestricted_data_access_settings.xml'
+.field public static final unlock_set_header:I = 0x7f160200 # @xml/unlock_set_header 'res/xml/unlock_set_header.xml'
 
-.field public static final upgraded_app_notification_settings:I = 0x7f160201 # @xml/upgraded_app_notification_settings 'res/xml/upgraded_app_notification_settings.xml'
+.field public static final unrestricted_data_access_settings:I = 0x7f160201 # @xml/unrestricted_data_access_settings 'res/xml/unrestricted_data_access_settings.xml'
 
-.field public static final uplmn_editor:I = 0x7f160202 # @xml/uplmn_editor 'res/xml/uplmn_editor.xml'
+.field public static final upgraded_app_notification_settings:I = 0x7f160202 # @xml/upgraded_app_notification_settings 'res/xml/upgraded_app_notification_settings.xml'
 
-.field public static final uplmn_settings:I = 0x7f160203 # @xml/uplmn_settings 'res/xml/uplmn_settings.xml'
+.field public static final uplmn_editor:I = 0x7f160203 # @xml/uplmn_editor 'res/xml/uplmn_editor.xml'
 
-.field public static final usage_and_diagnostics:I = 0x7f160204 # @xml/usage_and_diagnostics 'res/xml/usage_and_diagnostics.xml'
+.field public static final uplmn_settings:I = 0x7f160204 # @xml/uplmn_settings 'res/xml/uplmn_settings.xml'
 
-.field public static final usagestats_set_time:I = 0x7f160205 # @xml/usagestats_set_time 'res/xml/usagestats_set_time.xml'
+.field public static final usage_and_diagnostics:I = 0x7f160205 # @xml/usage_and_diagnostics 'res/xml/usage_and_diagnostics.xml'
 
-.field public static final usb_default_fragment:I = 0x7f160206 # @xml/usb_default_fragment 'res/xml/usb_default_fragment.xml'
+.field public static final usagestats_set_time:I = 0x7f160206 # @xml/usagestats_set_time 'res/xml/usagestats_set_time.xml'
 
-.field public static final usb_details_fragment:I = 0x7f160207 # @xml/usb_details_fragment 'res/xml/usb_details_fragment.xml'
+.field public static final usb_default_fragment:I = 0x7f160207 # @xml/usb_default_fragment 'res/xml/usb_default_fragment.xml'
 
-.field public static final usb_settings:I = 0x7f160208 # @xml/usb_settings 'res/xml/usb_settings.xml'
+.field public static final usb_details_fragment:I = 0x7f160208 # @xml/usb_details_fragment 'res/xml/usb_details_fragment.xml'
 
-.field public static final use_full_screen_intent_permissions_details:I = 0x7f160209 # @xml/use_full_screen_intent_permissions_details 'res/xml/use_full_screen_intent_permissions_details.xml'
+.field public static final usb_settings:I = 0x7f160209 # @xml/usb_settings 'res/xml/usb_settings.xml'
 
-.field public static final user_details_settings:I = 0x7f16020a # @xml/user_details_settings 'res/xml/user_details_settings.xml'
+.field public static final use_full_screen_intent_permissions_details:I = 0x7f16020a # @xml/use_full_screen_intent_permissions_details 'res/xml/use_full_screen_intent_permissions_details.xml'
 
-.field public static final user_dictionary_list_fragment:I = 0x7f16020b # @xml/user_dictionary_list_fragment 'res/xml/user_dictionary_list_fragment.xml'
+.field public static final user_details_settings:I = 0x7f16020b # @xml/user_details_settings 'res/xml/user_details_settings.xml'
 
-.field public static final user_settings:I = 0x7f16020c # @xml/user_settings 'res/xml/user_settings.xml'
+.field public static final user_dictionary_list_fragment:I = 0x7f16020c # @xml/user_dictionary_list_fragment 'res/xml/user_dictionary_list_fragment.xml'
 
-.field public static final user_timeout_to_dock_user_settings:I = 0x7f16020d # @xml/user_timeout_to_dock_user_settings 'res/xml/user_timeout_to_dock_user_settings.xml'
+.field public static final user_settings:I = 0x7f16020d # @xml/user_settings 'res/xml/user_settings.xml'
 
-.field public static final vpn_app_management:I = 0x7f16020e # @xml/vpn_app_management 'res/xml/vpn_app_management.xml'
+.field public static final user_timeout_to_dock_user_settings:I = 0x7f16020e # @xml/user_timeout_to_dock_user_settings 'res/xml/user_timeout_to_dock_user_settings.xml'
 
-.field public static final vpn_header:I = 0x7f16020f # @xml/vpn_header 'res/xml/vpn_header.xml'
+.field public static final vpn_app_management:I = 0x7f16020f # @xml/vpn_app_management 'res/xml/vpn_app_management.xml'
 
-.field public static final vpn_settings2:I = 0x7f160210 # @xml/vpn_settings2 'res/xml/vpn_settings2.xml'
+.field public static final vpn_header:I = 0x7f160210 # @xml/vpn_header 'res/xml/vpn_header.xml'
 
-.field public static final vr_display_settings:I = 0x7f160211 # @xml/vr_display_settings 'res/xml/vr_display_settings.xml'
+.field public static final vpn_settings2:I = 0x7f160211 # @xml/vpn_settings2 'res/xml/vpn_settings2.xml'
 
-.field public static final vr_listeners_settings:I = 0x7f160212 # @xml/vr_listeners_settings 'res/xml/vr_listeners_settings.xml'
+.field public static final vr_display_settings:I = 0x7f160212 # @xml/vr_display_settings 'res/xml/vr_display_settings.xml'
 
-.field public static final wakeup_xiaoai_settings:I = 0x7f160213 # @xml/wakeup_xiaoai_settings 'res/xml/wakeup_xiaoai_settings.xml'
+.field public static final vr_listeners_settings:I = 0x7f160213 # @xml/vr_listeners_settings 'res/xml/vr_listeners_settings.xml'
 
-.field public static final wallpaper_header:I = 0x7f160214 # @xml/wallpaper_header 'res/xml/wallpaper_header.xml'
+.field public static final wakeup_xiaoai_settings:I = 0x7f160214 # @xml/wakeup_xiaoai_settings 'res/xml/wakeup_xiaoai_settings.xml'
 
-.field public static final wallpaper_settings:I = 0x7f160215 # @xml/wallpaper_settings 'res/xml/wallpaper_settings.xml'
+.field public static final wallpaper_header:I = 0x7f160215 # @xml/wallpaper_header 'res/xml/wallpaper_header.xml'
 
-.field public static final webview_app_settings:I = 0x7f160216 # @xml/webview_app_settings 'res/xml/webview_app_settings.xml'
+.field public static final wallpaper_settings:I = 0x7f160216 # @xml/wallpaper_settings 'res/xml/wallpaper_settings.xml'
 
-.field public static final when_to_dream_settings:I = 0x7f160217 # @xml/when_to_dream_settings 'res/xml/when_to_dream_settings.xml'
+.field public static final webview_app_settings:I = 0x7f160217 # @xml/webview_app_settings 'res/xml/webview_app_settings.xml'
 
-.field public static final wifi_advanced_settings:I = 0x7f160218 # @xml/wifi_advanced_settings 'res/xml/wifi_advanced_settings.xml'
+.field public static final when_to_dream_settings:I = 0x7f160218 # @xml/when_to_dream_settings 'res/xml/when_to_dream_settings.xml'
 
-.field public static final wifi_assistant_options:I = 0x7f160219 # @xml/wifi_assistant_options 'res/xml/wifi_assistant_options.xml'
+.field public static final wifi_advanced_settings:I = 0x7f160219 # @xml/wifi_advanced_settings 'res/xml/wifi_advanced_settings.xml'
 
-.field public static final wifi_calling_settings:I = 0x7f16021a # @xml/wifi_calling_settings 'res/xml/wifi_calling_settings.xml'
+.field public static final wifi_assistant_options:I = 0x7f16021a # @xml/wifi_assistant_options 'res/xml/wifi_assistant_options.xml'
 
-.field public static final wifi_configure_settings:I = 0x7f16021b # @xml/wifi_configure_settings 'res/xml/wifi_configure_settings.xml'
+.field public static final wifi_calling_settings:I = 0x7f16021b # @xml/wifi_calling_settings 'res/xml/wifi_calling_settings.xml'
 
-.field public static final wifi_detail_bottom:I = 0x7f16021c # @xml/wifi_detail_bottom 'res/xml/wifi_detail_bottom.xml'
+.field public static final wifi_configure_settings:I = 0x7f16021c # @xml/wifi_configure_settings 'res/xml/wifi_configure_settings.xml'
 
-.field public static final wifi_display_saved_access_points2:I = 0x7f16021d # @xml/wifi_display_saved_access_points2 'res/xml/wifi_display_saved_access_points2.xml'
+.field public static final wifi_detail_bottom:I = 0x7f16021d # @xml/wifi_detail_bottom 'res/xml/wifi_detail_bottom.xml'
 
-.field public static final wifi_display_settings:I = 0x7f16021e # @xml/wifi_display_settings 'res/xml/wifi_display_settings.xml'
+.field public static final wifi_display_saved_access_points2:I = 0x7f16021e # @xml/wifi_display_saved_access_points2 'res/xml/wifi_display_saved_access_points2.xml'
 
-.field public static final wifi_dpp_network_list:I = 0x7f16021f # @xml/wifi_dpp_network_list 'res/xml/wifi_dpp_network_list.xml'
+.field public static final wifi_display_settings:I = 0x7f16021f # @xml/wifi_display_settings 'res/xml/wifi_display_settings.xml'
 
-.field public static final wifi_header:I = 0x7f160220 # @xml/wifi_header 'res/xml/wifi_header.xml'
+.field public static final wifi_dpp_network_list:I = 0x7f160220 # @xml/wifi_dpp_network_list 'res/xml/wifi_dpp_network_list.xml'
 
-.field public static final wifi_hotspot_security:I = 0x7f160221 # @xml/wifi_hotspot_security 'res/xml/wifi_hotspot_security.xml'
+.field public static final wifi_header:I = 0x7f160221 # @xml/wifi_header 'res/xml/wifi_header.xml'
 
-.field public static final wifi_hotspot_speed:I = 0x7f160222 # @xml/wifi_hotspot_speed 'res/xml/wifi_hotspot_speed.xml'
+.field public static final wifi_hotspot_security:I = 0x7f160222 # @xml/wifi_hotspot_security 'res/xml/wifi_hotspot_security.xml'
 
-.field public static final wifi_link_turbo_option:I = 0x7f160223 # @xml/wifi_link_turbo_option 'res/xml/wifi_link_turbo_option.xml'
+.field public static final wifi_hotspot_speed:I = 0x7f160223 # @xml/wifi_hotspot_speed 'res/xml/wifi_hotspot_speed.xml'
 
-.field public static final wifi_network_details_fragment2:I = 0x7f160224 # @xml/wifi_network_details_fragment2 'res/xml/wifi_network_details_fragment2.xml'
+.field public static final wifi_link_turbo_option:I = 0x7f160224 # @xml/wifi_link_turbo_option 'res/xml/wifi_link_turbo_option.xml'
 
-.field public static final wifi_p2p_settings:I = 0x7f160225 # @xml/wifi_p2p_settings 'res/xml/wifi_p2p_settings.xml'
+.field public static final wifi_network_details_fragment2:I = 0x7f160225 # @xml/wifi_network_details_fragment2 'res/xml/wifi_network_details_fragment2.xml'
 
-.field public static final wifi_protection_settings:I = 0x7f160226 # @xml/wifi_protection_settings 'res/xml/wifi_protection_settings.xml'
+.field public static final wifi_p2p_settings:I = 0x7f160226 # @xml/wifi_p2p_settings 'res/xml/wifi_p2p_settings.xml'
 
-.field public static final wifi_settings:I = 0x7f160227 # @xml/wifi_settings 'res/xml/wifi_settings.xml'
+.field public static final wifi_protection_settings:I = 0x7f160227 # @xml/wifi_protection_settings 'res/xml/wifi_protection_settings.xml'
 
-.field public static final wifi_settings2:I = 0x7f160228 # @xml/wifi_settings2 'res/xml/wifi_settings2.xml'
+.field public static final wifi_settings:I = 0x7f160228 # @xml/wifi_settings 'res/xml/wifi_settings.xml'
 
-.field public static final wifi_slave_p2p_settings:I = 0x7f160229 # @xml/wifi_slave_p2p_settings 'res/xml/wifi_slave_p2p_settings.xml'
+.field public static final wifi_settings2:I = 0x7f160229 # @xml/wifi_settings2 'res/xml/wifi_settings2.xml'
 
-.field public static final wifi_tether_settings:I = 0x7f16022a # @xml/wifi_tether_settings 'res/xml/wifi_tether_settings.xml'
+.field public static final wifi_slave_p2p_settings:I = 0x7f16022a # @xml/wifi_slave_p2p_settings 'res/xml/wifi_slave_p2p_settings.xml'
 
-.field public static final wireless_settings:I = 0x7f16022b # @xml/wireless_settings 'res/xml/wireless_settings.xml'
+.field public static final wifi_tether_settings:I = 0x7f16022b # @xml/wifi_tether_settings 'res/xml/wifi_tether_settings.xml'
 
-.field public static final write_system_settings_permissions_details:I = 0x7f16022c # @xml/write_system_settings_permissions_details 'res/xml/write_system_settings_permissions_details.xml'
+.field public static final wireless_settings:I = 0x7f16022c # @xml/wireless_settings 'res/xml/wireless_settings.xml'
 
-.field public static final zen_access_permission_details:I = 0x7f16022d # @xml/zen_access_permission_details 'res/xml/zen_access_permission_details.xml'
+.field public static final write_system_settings_permissions_details:I = 0x7f16022d # @xml/write_system_settings_permissions_details 'res/xml/write_system_settings_permissions_details.xml'
 
-.field public static final zen_access_settings:I = 0x7f16022e # @xml/zen_access_settings 'res/xml/zen_access_settings.xml'
+.field public static final zen_access_permission_details:I = 0x7f16022e # @xml/zen_access_permission_details 'res/xml/zen_access_permission_details.xml'
 
-.field public static final zen_mode_automation_settings:I = 0x7f16022f # @xml/zen_mode_automation_settings 'res/xml/zen_mode_automation_settings.xml'
+.field public static final zen_access_settings:I = 0x7f16022f # @xml/zen_access_settings 'res/xml/zen_access_settings.xml'
 
-.field public static final zen_mode_block_settings:I = 0x7f160230 # @xml/zen_mode_block_settings 'res/xml/zen_mode_block_settings.xml'
+.field public static final zen_mode_automation_settings:I = 0x7f160230 # @xml/zen_mode_automation_settings 'res/xml/zen_mode_automation_settings.xml'
 
-.field public static final zen_mode_bypassing_apps:I = 0x7f160231 # @xml/zen_mode_bypassing_apps 'res/xml/zen_mode_bypassing_apps.xml'
+.field public static final zen_mode_block_settings:I = 0x7f160231 # @xml/zen_mode_block_settings 'res/xml/zen_mode_block_settings.xml'
 
-.field public static final zen_mode_calls_settings:I = 0x7f160232 # @xml/zen_mode_calls_settings 'res/xml/zen_mode_calls_settings.xml'
+.field public static final zen_mode_bypassing_apps:I = 0x7f160232 # @xml/zen_mode_bypassing_apps 'res/xml/zen_mode_bypassing_apps.xml'
 
-.field public static final zen_mode_custom_rule_calls_settings:I = 0x7f160233 # @xml/zen_mode_custom_rule_calls_settings 'res/xml/zen_mode_custom_rule_calls_settings.xml'
+.field public static final zen_mode_calls_settings:I = 0x7f160233 # @xml/zen_mode_calls_settings 'res/xml/zen_mode_calls_settings.xml'
 
-.field public static final zen_mode_custom_rule_configuration:I = 0x7f160234 # @xml/zen_mode_custom_rule_configuration 'res/xml/zen_mode_custom_rule_configuration.xml'
+.field public static final zen_mode_custom_rule_calls_settings:I = 0x7f160234 # @xml/zen_mode_custom_rule_calls_settings 'res/xml/zen_mode_custom_rule_calls_settings.xml'
 
-.field public static final zen_mode_custom_rule_messages_settings:I = 0x7f160235 # @xml/zen_mode_custom_rule_messages_settings 'res/xml/zen_mode_custom_rule_messages_settings.xml'
+.field public static final zen_mode_custom_rule_configuration:I = 0x7f160235 # @xml/zen_mode_custom_rule_configuration 'res/xml/zen_mode_custom_rule_configuration.xml'
 
-.field public static final zen_mode_custom_rule_settings:I = 0x7f160236 # @xml/zen_mode_custom_rule_settings 'res/xml/zen_mode_custom_rule_settings.xml'
+.field public static final zen_mode_custom_rule_messages_settings:I = 0x7f160236 # @xml/zen_mode_custom_rule_messages_settings 'res/xml/zen_mode_custom_rule_messages_settings.xml'
 
-.field public static final zen_mode_event_rule_settings:I = 0x7f160237 # @xml/zen_mode_event_rule_settings 'res/xml/zen_mode_event_rule_settings.xml'
+.field public static final zen_mode_custom_rule_settings:I = 0x7f160237 # @xml/zen_mode_custom_rule_settings 'res/xml/zen_mode_custom_rule_settings.xml'
 
-.field public static final zen_mode_messages_settings:I = 0x7f160238 # @xml/zen_mode_messages_settings 'res/xml/zen_mode_messages_settings.xml'
+.field public static final zen_mode_event_rule_settings:I = 0x7f160238 # @xml/zen_mode_event_rule_settings 'res/xml/zen_mode_event_rule_settings.xml'
 
-.field public static final zen_mode_people_settings:I = 0x7f160239 # @xml/zen_mode_people_settings 'res/xml/zen_mode_people_settings.xml'
+.field public static final zen_mode_messages_settings:I = 0x7f160239 # @xml/zen_mode_messages_settings 'res/xml/zen_mode_messages_settings.xml'
 
-.field public static final zen_mode_restrict_notifications_settings:I = 0x7f16023a # @xml/zen_mode_restrict_notifications_settings 'res/xml/zen_mode_restrict_notifications_settings.xml'
+.field public static final zen_mode_people_settings:I = 0x7f16023a # @xml/zen_mode_people_settings 'res/xml/zen_mode_people_settings.xml'
 
-.field public static final zen_mode_schedule_rule_settings:I = 0x7f16023b # @xml/zen_mode_schedule_rule_settings 'res/xml/zen_mode_schedule_rule_settings.xml'
+.field public static final zen_mode_restrict_notifications_settings:I = 0x7f16023b # @xml/zen_mode_restrict_notifications_settings 'res/xml/zen_mode_restrict_notifications_settings.xml'
 
-.field public static final zen_mode_settings:I = 0x7f16023c # @xml/zen_mode_settings 'res/xml/zen_mode_settings.xml'
+.field public static final zen_mode_schedule_rule_settings:I = 0x7f16023c # @xml/zen_mode_schedule_rule_settings 'res/xml/zen_mode_schedule_rule_settings.xml'
 
-.field public static final zen_mode_sound_vibration_settings:I = 0x7f16023d # @xml/zen_mode_sound_vibration_settings 'res/xml/zen_mode_sound_vibration_settings.xml'
+.field public static final zen_mode_settings:I = 0x7f16023d # @xml/zen_mode_settings 'res/xml/zen_mode_settings.xml'
+
+.field public static final zen_mode_sound_vibration_settings:I = 0x7f16023e # @xml/zen_mode_sound_vibration_settings 'res/xml/zen_mode_sound_vibration_settings.xml'
 
 
 # direct methods

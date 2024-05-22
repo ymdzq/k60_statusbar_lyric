@@ -48,22 +48,22 @@
 .method private constructor <init>(Lcom/android/settings/bluetooth/WifiInfoService;)V
     .locals 0
 
-    .line 358
+    .line 366
     iput-object p1, p0, Lcom/android/settings/bluetooth/WifiInfoService$WifiScanResult;->this$0:Lcom/android/settings/bluetooth/WifiInfoService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, 0x0
 
-    .line 359
+    .line 367
     iput-boolean p1, p0, Lcom/android/settings/bluetooth/WifiInfoService$WifiScanResult;->is24G:Z
 
-    .line 360
+    .line 368
     iput-boolean p1, p0, Lcom/android/settings/bluetooth/WifiInfoService$WifiScanResult;->is5G:Z
 
     const/4 p1, -0x1
 
-    .line 361
+    .line 369
     iput p1, p0, Lcom/android/settings/bluetooth/WifiInfoService$WifiScanResult;->mFrequency:I
 
     return-void
@@ -81,7 +81,7 @@
 .method private is245G()Z
     .locals 1
 
-    .line 396
+    .line 404
     iget-boolean v0, p0, Lcom/android/settings/bluetooth/WifiInfoService$WifiScanResult;->is24G:Z
 
     if-eqz v0, :cond_0
@@ -116,7 +116,7 @@
 
     if-ge p1, v0, :cond_0
 
-    .line 370
+    .line 378
     iput-boolean v1, p0, Lcom/android/settings/bluetooth/WifiInfoService$WifiScanResult;->is24G:Z
 
     :cond_0
@@ -128,10 +128,10 @@
 
     if-ge p1, v0, :cond_1
 
-    .line 373
+    .line 381
     iput-boolean v1, p0, Lcom/android/settings/bluetooth/WifiInfoService$WifiScanResult;->is5G:Z
 
-    .line 375
+    .line 383
     :cond_1
     iput p1, p0, Lcom/android/settings/bluetooth/WifiInfoService$WifiScanResult;->mFrequency:I
 

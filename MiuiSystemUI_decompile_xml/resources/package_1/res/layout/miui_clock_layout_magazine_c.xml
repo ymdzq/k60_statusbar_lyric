@@ -1,14 +1,14 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <com.miui.clock.magazine.MiuiMagazineCClock android:layout_width="fill_parent"
-                      android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto">
+                      android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <include android:id="@id/clock_container_style1"
            android:visibility="visible"
            android:layout_width="@dimen/miui_magazine_c_clock_style1_width"
            android:layout_height="wrap_content"
            android:layout_marginTop="@dimen/miui_magazine_c_clock_style1_margin_top"
            android:layout_marginStart="@dimen/miui_magazine_c_clock_style1_margin_start"
-           systemui:r0x7f040443="0"
-           systemui:r0x7f040447="0"
+           app:r0x7f040443="0"
+           app:r0x7f040447="0"
            layout="@layout/layout_miui_clock_magazine_c_type1" />
   <androidx.constraintlayout.widget.Guideline android:orientation="horizontal"
                         android:id="@id/style1_magazine_top_line"
@@ -20,16 +20,16 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/miui_magazine_c_clock_style2_margin_top"
                         android:layoutDirection="ltr"
-                        systemui:r0x7f04042f="0"
-                        systemui:r0x7f040443="0"
-                        systemui:r0x7f040447="0">
+                        app:r0x7f04042f="0"
+                        app:r0x7f040443="0"
+                        app:r0x7f040447="0">
     <com.miui.clock.utils.BaseLineSpaceView android:id="@id/time_space_style2"
                           android:layout_width="0.0dp"
                           android:layout_height="1.0dp"
                           android:layout_marginTop="@dimen/miui_magazine_c_clock_style2_time_margin_top"
-                          systemui:r0x7f04042f="0"
-                          systemui:r0x7f040443="0"
-                          systemui:r0x7f040447="0" />
+                          app:r0x7f04042f="0"
+                          app:r0x7f040443="0"
+                          app:r0x7f040447="0" />
     <com.miui.clock.MiuiTextGlassView android:textSize="@dimen/miui_magazine_c_clock_style2_time_text_size"
                           android:gravity="end"
                           android:id="@id/current_time_hour_style2"
@@ -38,19 +38,19 @@
                           android:importantForAccessibility="no"
                           android:fontFamily="miclock-neue-matic-compressed-black"
                           android:elegantTextHeight="false"
-                          systemui:r0x7f040425="@id/time_space_style2"
-                          systemui:r0x7f040430="@id/current_time_minute_style2"
-                          systemui:r0x7f04043a="2"
-                          systemui:r0x7f040443="0" />
+                          app:r0x7f040425="@id/time_space_style2"
+                          app:r0x7f040430="@id/current_time_minute_style2"
+                          app:r0x7f04043a="2"
+                          app:r0x7f040443="0" />
     <com.miui.clock.MiuiTextGlassView android:textSize="@dimen/miui_magazine_c_clock_style2_time_text_size"
                           android:id="@id/current_time_minute_style2"
                           android:layout_width="wrap_content"
                           android:layout_height="wrap_content"
                           android:importantForAccessibility="no"
                           android:fontFamily="miclock-neue-matic-compressed-black"
-                          systemui:r0x7f040425="@id/time_space_style2"
-                          systemui:r0x7f04042f="0"
-                          systemui:r0x7f040442="@id/current_time_hour_style2" />
+                          app:r0x7f040425="@id/time_space_style2"
+                          app:r0x7f04042f="0"
+                          app:r0x7f040442="@id/current_time_hour_style2" />
     <TextView android:textSize="@dimen/miui_magazine_c_clock_style2_date_text_size"
               android:id="@id/current_date_style2"
               android:visibility="gone"
@@ -60,14 +60,14 @@
               android:fontFamily="mipro-medium"
               android:elegantTextHeight="false"
               android:letterSpacing="0.38"
-              systemui:r0x7f04042f="0"
-              systemui:r0x7f040443="0"
-              systemui:r0x7f040446="@id/time_space_style2" />
+              app:r0x7f04042f="0"
+              app:r0x7f040443="0"
+              app:r0x7f040446="@id/time_space_style2" />
   </androidx.constraintlayout.widget.ConstraintLayout>
   <FrameLayout android:id="@id/magazine_info_container"
                android:visibility="gone"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               systemui:r0x7f04042f="0"
-               systemui:r0x7f040443="0" />
+               app:r0x7f04042f="0"
+               app:r0x7f040443="0" />
 </com.miui.clock.magazine.MiuiMagazineCClock>

@@ -36,7 +36,7 @@
         }
     .end annotation
 
-    .line 2829
+    .line 2842
     iput-object p1, p0, Lcom/android/settings/wifi/MiuiWifiSettings$25;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     iput-object p2, p0, Lcom/android/settings/wifi/MiuiWifiSettings$25;->val$wifiSettings:Lcom/android/settings/wifi/MiuiWifiSettings;
@@ -55,7 +55,7 @@
 .method public run()V
     .locals 5
 
-    .line 2833
+    .line 2846
     :try_start_0
     invoke-static {}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$sfgetmEasyTetherVirtualAPPreferences()Ljava/util/Map;
 
@@ -65,7 +65,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2834
+    .line 2847
     :try_start_1
     invoke-static {}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$sfgetmEasyTetherVirtualAPPreferences()Ljava/util/Map;
 
@@ -85,7 +85,7 @@
 
     if-nez v1, :cond_0
 
-    .line 2836
+    .line 2849
     invoke-static {}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v1
@@ -112,12 +112,12 @@
 
     invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2837
+    .line 2850
     monitor-exit v0
 
     return-void
 
-    .line 2840
+    .line 2853
     :cond_0
     iget-object v2, p0, Lcom/android/settings/wifi/MiuiWifiSettings$25;->val$wifiSettings:Lcom/android/settings/wifi/MiuiWifiSettings;
 
@@ -135,14 +135,14 @@
 
     if-eqz v2, :cond_2
 
-    .line 2841
+    .line 2854
     invoke-static {}, Lcom/android/wifitrackerlib/BaseWifiTracker;->isVerboseLoggingEnabled()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 2842
+    .line 2855
     invoke-static {}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v2
@@ -170,23 +170,23 @@
     :cond_1
     const/4 v2, 0x2
 
-    .line 2844
+    .line 2857
     invoke-virtual {v1, v2}, Lcom/android/settings/wifi/MiuiVirtualWifiEntryPreference;->updateState(I)V
 
-    .line 2845
+    .line 2858
     invoke-virtual {v1}, Lcom/android/settings/wifi/MiuiVirtualWifiEntryPreference;->updateSummary()V
 
-    .line 2846
+    .line 2859
     iget-object v2, p0, Lcom/android/settings/wifi/MiuiWifiSettings$25;->val$wifiSettings:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     const/4 v3, 0x1
 
     invoke-static {v2, v3}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$fputmIsEasyTetherConnecting(Lcom/android/settings/wifi/MiuiWifiSettings;Z)V
 
-    .line 2847
+    .line 2860
     invoke-static {v1}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$sfputmEasyTetherConnectingPreference(Lcom/android/settings/wifi/MiuiVirtualWifiEntryPreference;)V
 
-    .line 2848
+    .line 2861
     iget-object v1, p0, Lcom/android/settings/wifi/MiuiWifiSettings$25;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     iget-object v2, p0, Lcom/android/settings/wifi/MiuiWifiSettings$25;->val$ap:Lcom/android/bluetooth/ble/app/EasyTetherHotspotEntry;
@@ -197,13 +197,13 @@
 
     invoke-static {v1, v2}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$fputmEasyTetherConnectingDeviceId(Lcom/android/settings/wifi/MiuiWifiSettings;Ljava/lang/String;)V
 
-    .line 2850
+    .line 2863
     :cond_2
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 2851
+    .line 2864
     :try_start_2
     invoke-static {}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$sfgetmWifiHelpWorkHandler()Lcom/android/settings/wifi/MiuiWifiSettings$MessageHandler;
 
@@ -217,7 +217,7 @@
 
     iget-object p0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$25;->val$ap:Lcom/android/bluetooth/ble/app/EasyTetherHotspotEntry;
 
-    .line 2852
+    .line 2865
     invoke-virtual {p0}, Lcom/android/bluetooth/ble/app/EasyTetherHotspotEntry;->getDeviceId()Ljava/lang/String;
 
     move-result-object p0
@@ -226,14 +226,14 @@
 
     const/4 v4, 0x0
 
-    .line 2851
+    .line 2864
     invoke-virtual {v1, v3, v2, v4, p0}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object p0
 
     invoke-virtual {v0, p0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 2853
+    .line 2866
     invoke-static {}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$sfgetmWifiHelpWorkHandler()Lcom/android/settings/wifi/MiuiWifiSettings$MessageHandler;
 
     move-result-object p0
@@ -242,7 +242,7 @@
 
     invoke-virtual {p0, v0}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 2854
+    .line 2867
     invoke-static {}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$sfgetmWifiHelpWorkHandler()Lcom/android/settings/wifi/MiuiWifiSettings$MessageHandler;
 
     move-result-object p0
@@ -258,7 +258,7 @@
     :catchall_0
     move-exception p0
 
-    .line 2850
+    .line 2863
     :try_start_3
     monitor-exit v0
     :try_end_3
@@ -272,7 +272,7 @@
     :catch_0
     move-exception p0
 
-    .line 2857
+    .line 2870
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/LockScreenActionsSettings;->setupLockScreenAllowTrivialControls()V
+    value = Lcom/android/settings/LockScreenActionsSettings;->setupLockScreenXiaomiSmartHub()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/android/settings/LockScreenActionsSettings;)V
     .locals 0
 
-    .line 128
+    .line 151
     iput-object p1, p0, Lcom/android/settings/LockScreenActionsSettings$4;->this$0:Lcom/android/settings/LockScreenActionsSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,25 +38,20 @@
 .method public onPreferenceChange(Landroidx/preference/Preference;Ljava/lang/Object;)Z
     .locals 0
 
-    .line 131
-    iget-object p1, p0, Lcom/android/settings/LockScreenActionsSettings$4;->this$0:Lcom/android/settings/LockScreenActionsSettings;
+    .line 154
+    iget-object p0, p0, Lcom/android/settings/LockScreenActionsSettings$4;->this$0:Lcom/android/settings/LockScreenActionsSettings;
 
-    invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
-    move-result-object p1
+    move-result-object p0
 
     check-cast p2, Ljava/lang/Boolean;
 
     invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
-    move-result p2
+    move-result p1
 
-    invoke-static {p1, p2}, Lcom/android/settings/utils/StatusBarUtils;->setLockScreenAllowTrivialControls(Landroid/content/Context;I)V
-
-    .line 132
-    iget-object p0, p0, Lcom/android/settings/LockScreenActionsSettings$4;->this$0:Lcom/android/settings/LockScreenActionsSettings;
-
-    invoke-static {p0}, Lcom/android/settings/LockScreenActionsSettings;->-$$Nest$mupdateLockScreenAllowTrivialControls(Lcom/android/settings/LockScreenActionsSettings;)V
+    invoke-static {p0, p1}, Lcom/android/settings/utils/StatusBarUtils;->setLockScreenXiaomiSmartHub(Landroid/content/Context;Z)V
 
     const/4 p0, 0x1
 

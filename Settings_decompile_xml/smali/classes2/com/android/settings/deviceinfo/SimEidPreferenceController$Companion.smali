@@ -18,7 +18,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 153
+    .line 160
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,23 +33,18 @@
     return-void
 .end method
 
-.method public static final synthetic access$getEidQrCode(Lcom/android/settings/deviceinfo/SimEidPreferenceController$Companion;Ljava/lang/String;)Landroid/graphics/Bitmap;
-    .locals 0
 
-    .line 153
-    invoke-direct {p0, p1}, Lcom/android/settings/deviceinfo/SimEidPreferenceController$Companion;->getEidQrCode(Ljava/lang/String;)Landroid/graphics/Bitmap;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method private final getEidQrCode(Ljava/lang/String;)Landroid/graphics/Bitmap;
+# virtual methods
+.method public final getEidQrCode(Ljava/lang/String;)Landroid/graphics/Bitmap;
     .locals 1
+
+    const-string p0, "eid"
+
+    invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 p0, 0x258
 
-    .line 163
+    .line 170
     :try_start_0
     invoke-static {p1, p0}, Lcom/android/settingslib/qrcode/QrCodeGenerator;->encodeQrCode(Ljava/lang/String;I)Landroid/graphics/Bitmap;
 
@@ -66,7 +61,7 @@
 
     const-string v0, "Error when creating QR code width 600"
 
-    .line 165
+    .line 172
     invoke-static {p1, v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x0

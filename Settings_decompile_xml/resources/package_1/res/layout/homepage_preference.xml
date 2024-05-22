@@ -5,7 +5,7 @@
               android:layout_width="fill_parent"
               android:layout_height="wrap_content"
               android:baselineAligned="false"
-              android:minHeight="@dimen/homepage_preference_min_height" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+              android:minHeight="@dimen/homepage_preference_min_height" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <LinearLayout android:gravity="center|end"
                 android:orientation="horizontal"
                 android:id="@id/icon_frame"
@@ -18,8 +18,8 @@
     <androidx.preference.internal.PreferenceImageView android:id="@android:id/icon"
                           android:layout_width="24.0dp"
                           android:layout_height="24.0dp"
-                          settings:maxHeight="48.0dp"
-                          settings:maxWidth="48.0dp" />
+                          app:maxHeight="48.0dp"
+                          app:maxWidth="48.0dp" />
   </LinearLayout>
   <RelativeLayout android:id="@id/text_frame"
                   android:paddingTop="16.0dp"

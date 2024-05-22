@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <LinearLayout android:orientation="vertical"
               android:layout_width="fill_parent"
-              android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+              android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/app_header"
                         android:background="?android:attr/selectableItemBackground"
                         android:paddingTop="20.0dp"
@@ -14,9 +14,9 @@
                android:layout_width="24.0dp"
                android:layout_height="24.0dp"
                android:scaleType="centerInside"
-               settings:layout_constraintBottom_toBottomOf="parent"
-               settings:layout_constraintStart_toStartOf="parent"
-               settings:layout_constraintTop_toTopOf="parent" />
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent" />
     <TextView android:textAppearance="@android:style/TextAppearance.DeviceDefault.Notification.Title"
               android:ellipsize="end"
               android:id="@id/label"
@@ -25,10 +25,10 @@
               android:lines="1"
               android:textDirection="locale"
               android:layout_marginStart="14.0dp"
-              settings:layout_constraintBottom_toTopOf="@id/count"
-              settings:layout_constraintEnd_toStartOf="@id/expand_button_wrapper"
-              settings:layout_constraintStart_toEndOf="@id/icon"
-              settings:layout_constraintTop_toTopOf="parent" />
+              app:layout_constraintBottom_toTopOf="@id/count"
+              app:layout_constraintEnd_toStartOf="@id/expand_button_wrapper"
+              app:layout_constraintStart_toEndOf="@id/icon"
+              app:layout_constraintTop_toTopOf="parent" />
     <TextView android:textAppearance="@android:style/TextAppearance.DeviceDefault.Notification"
               android:id="@id/count"
               android:paddingTop="4.0dp"
@@ -36,16 +36,16 @@
               android:layout_height="wrap_content"
               android:textDirection="locale"
               android:layout_marginStart="14.0dp"
-              settings:layout_constraintBottom_toBottomOf="parent"
-              settings:layout_constraintEnd_toStartOf="@id/expand_button_wrapper"
-              settings:layout_constraintStart_toEndOf="@id/icon"
-              settings:layout_constraintTop_toBottomOf="@id/label" />
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toStartOf="@id/expand_button_wrapper"
+              app:layout_constraintStart_toEndOf="@id/icon"
+              app:layout_constraintTop_toBottomOf="@id/label" />
     <FrameLayout android:id="@id/expand_button_wrapper"
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
-                 settings:layout_constraintBottom_toBottomOf="parent"
-                 settings:layout_constraintEnd_toEndOf="parent"
-                 settings:layout_constraintTop_toTopOf="parent">
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintTop_toTopOf="parent">
       <include android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                layout="@android:layout/notification_material_action" />
@@ -64,12 +64,12 @@
                           android:layout_height="wrap_content"
                           android:importantForAccessibility="yes"
                           android:clipToOutline="true"
-                          settings:layout_constrainedHeight="true"
-                          settings:layout_constraintBottom_toBottomOf="parent"
-                          settings:layout_constraintEnd_toEndOf="parent"
-                          settings:layout_constraintHeight_max="500.0dp"
-                          settings:layout_constraintHeight_min="48.0dp"
-                          settings:layout_constraintStart_toStartOf="parent"
-                          settings:layout_constraintTop_toTopOf="parent" />
+                          app:layout_constrainedHeight="true"
+                          app:layout_constraintBottom_toBottomOf="parent"
+                          app:layout_constraintEnd_toEndOf="parent"
+                          app:layout_constraintHeight_max="500.0dp"
+                          app:layout_constraintHeight_min="48.0dp"
+                          app:layout_constraintStart_toStartOf="parent"
+                          app:layout_constraintTop_toTopOf="parent" />
   </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>

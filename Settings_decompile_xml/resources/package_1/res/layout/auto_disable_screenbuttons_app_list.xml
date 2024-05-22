@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <miuix.springback.view.SpringBackLayout android:layout_width="fill_parent"
                       android:layout_height="fill_parent"
-                      settings:scrollableView="@id/id_0x7f0a08c6" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+                      app:scrollableView="@id/id_0x7f0a08c6" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <androidx.recyclerview.widget.RecyclerView android:scrollbarStyle="outsideOverlay"
                         android:id="@id/id_0x7f0a08c6"
                         android:layout_width="fill_parent"

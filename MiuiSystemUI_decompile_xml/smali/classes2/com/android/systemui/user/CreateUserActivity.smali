@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/user/CreateUserActivity;
 .super Landroid/app/Activity;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # static fields
@@ -323,7 +323,7 @@
 
     .line 79
     :cond_2
-    const p1, 0x7f130c29    # @string/user_new_user_name 'New user'
+    const p1, 0x7f130c2f    # @string/user_new_user_name 'New user'
 
     .line 81
     invoke-virtual {p0, p1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;

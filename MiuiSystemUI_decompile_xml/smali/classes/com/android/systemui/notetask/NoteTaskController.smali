@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/notetask/NoteTaskController;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # static fields
@@ -421,7 +421,7 @@
     .locals 2
 
     .line 1
-    const v0, 0x7f130ac5    # @string/set_default_notes_app_toast_content 'Set default notes app in Settings'
+    const v0, 0x7f130acb    # @string/set_default_notes_app_toast_content 'Set default notes app in Settings'
 
     .line 2
     const/4 v1, 0x0

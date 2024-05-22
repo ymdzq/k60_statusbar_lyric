@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <miuix.springback.view.SpringBackLayout android:layout_width="fill_parent"
                       android:layout_height="fill_parent"
-                      settings:scrollableView="@id/miui_lab_sv" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+                      app:scrollableView="@id/miui_lab_sv" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <miuix.core.widget.NestedScrollView android:id="@id/miui_lab_sv"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent">

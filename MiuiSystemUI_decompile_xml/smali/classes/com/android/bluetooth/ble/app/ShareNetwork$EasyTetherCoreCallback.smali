@@ -1,6 +1,6 @@
 .class public final Lcom/android/bluetooth/ble/app/ShareNetwork$EasyTetherCoreCallback;
 .super Landroid/os/Binder;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Landroid/os/IInterface;
@@ -81,7 +81,7 @@
     const-string v3, "com.android.bluetooth.ble.app.IEasyTetherCoreCallback"
 
     .line 5
-    if-eq p1, v2, :cond_6
+    if-eq p1, v2, :cond_9
 
     .line 7
     const/4 v4, 0x2
@@ -90,355 +90,450 @@
     const-string v5, "ShareNetworkControllerImpl"
 
     .line 10
-    if-eq p1, v4, :cond_4
+    if-eq p1, v4, :cond_6
 
     .line 12
     const/4 v0, 0x3
 
     .line 14
-    if-eq p1, v0, :cond_1
+    if-eq p1, v0, :cond_3
 
     .line 15
-    const v0, 0x5f4e5446
+    const/4 v0, 0x4
 
     .line 17
-    if-eq p1, v0, :cond_0
+    if-eq p1, v0, :cond_1
+
+    .line 18
+    const v0, 0x5f4e5446
 
     .line 20
+    if-eq p1, v0, :cond_0
+
+    .line 23
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 22
+    .line 25
     move-result p0
 
-    .line 25
+    .line 28
     return p0
 
-    .line 26
+    .line 29
     :cond_0
     invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 27
+    .line 30
     return v2
 
-    .line 30
+    .line 33
     :cond_1
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 31
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
-
     .line 34
-    move-result p1
+    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     .line 37
-    if-eqz p1, :cond_2
-
-    .line 38
-    sget-object p1, Lcom/android/bluetooth/ble/app/EasyTetherHotspotEntry;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    .line 40
-    invoke-interface {p1, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    .line 42
-    move-result-object p1
-
-    .line 45
-    check-cast p1, Lcom/android/bluetooth/ble/app/EasyTetherHotspotEntry;
-
-    .line 46
-    :cond_2
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
-    .line 48
+    .line 40
+    move-result p1
+
+    .line 43
     :try_start_0
-    iget-object p1, p0, Lcom/android/bluetooth/ble/app/ShareNetwork$EasyTetherCoreCallback;->mShareNetwork:Ljava/lang/ref/WeakReference;
+    iget-object p2, p0, Lcom/android/bluetooth/ble/app/ShareNetwork$EasyTetherCoreCallback;->mShareNetwork:Ljava/lang/ref/WeakReference;
+
+    .line 44
+    if-eqz p2, :cond_2
+
+    .line 46
+    invoke-virtual {p2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    .line 48
+    move-result-object p2
 
     .line 51
-    if-eqz p1, :cond_3
+    if-eqz p2, :cond_2
 
-    .line 53
-    invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    .line 52
+    iget-object p2, p0, Lcom/android/bluetooth/ble/app/ShareNetwork$EasyTetherCoreCallback;->mShareNetwork:Ljava/lang/ref/WeakReference;
 
-    .line 55
-    move-result-object p1
+    .line 54
+    invoke-virtual {p2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
-    .line 58
-    if-eqz p1, :cond_3
+    .line 56
+    move-result-object p2
 
     .line 59
-    iget-object p1, p0, Lcom/android/bluetooth/ble/app/ShareNetwork$EasyTetherCoreCallback;->mShareNetwork:Ljava/lang/ref/WeakReference;
+    check-cast p2, Lcom/android/bluetooth/ble/app/ShareNetwork;
 
-    .line 61
-    invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    .line 60
+    iget-object p2, p2, Lcom/android/bluetooth/ble/app/ShareNetwork;->mEasyTetherInterface:Lcom/android/bluetooth/ble/app/EasyTetherInterface;
 
-    .line 63
-    move-result-object p1
+    .line 62
+    if-eqz p2, :cond_2
 
-    .line 66
-    check-cast p1, Lcom/android/bluetooth/ble/app/ShareNetwork;
-
-    .line 67
-    iget-object p1, p1, Lcom/android/bluetooth/ble/app/ShareNetwork;->mEasyTetherInterface:Lcom/android/bluetooth/ble/app/EasyTetherInterface;
-
-    .line 69
-    if-eqz p1, :cond_3
-
-    .line 71
+    .line 64
     iget-object p0, p0, Lcom/android/bluetooth/ble/app/ShareNetwork$EasyTetherCoreCallback;->mShareNetwork:Ljava/lang/ref/WeakReference;
 
-    .line 73
+    .line 66
     invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
-    .line 75
+    .line 68
     move-result-object p0
 
-    .line 78
+    .line 71
     check-cast p0, Lcom/android/bluetooth/ble/app/ShareNetwork;
 
-    .line 79
+    .line 72
     iget-object p0, p0, Lcom/android/bluetooth/ble/app/ShareNetwork;->mEasyTetherInterface:Lcom/android/bluetooth/ble/app/EasyTetherInterface;
 
-    .line 81
+    .line 74
     check-cast p0, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;
 
-    .line 83
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 85
-    const-string p0, "onApSupportAutoConnect"
-
-    .line 88
-    invoke-static {v5, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    .line 76
+    invoke-virtual {p0, p1}, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->onCelluarTetherStateChanged(I)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 90
+    .line 78
     goto :goto_0
 
-    .line 93
+    .line 81
     :catch_0
     move-exception p0
 
-    .line 94
+    .line 82
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 95
-    :cond_3
+    .line 83
+    :cond_2
     :goto_0
     return v2
 
-    .line 98
-    :cond_4
+    .line 86
+    :cond_3
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 99
-    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    .line 87
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    .line 90
+    move-result p1
+
+    .line 93
+    if-eqz p1, :cond_4
+
+    .line 94
+    sget-object p1, Lcom/android/bluetooth/ble/app/EasyTetherHotspotEntry;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    .line 96
+    invoke-interface {p1, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+
+    .line 98
+    move-result-object p1
+
+    .line 101
+    check-cast p1, Lcom/android/bluetooth/ble/app/EasyTetherHotspotEntry;
 
     .line 102
+    :cond_4
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    .line 104
     :try_start_1
     iget-object p1, p0, Lcom/android/bluetooth/ble/app/ShareNetwork$EasyTetherCoreCallback;->mShareNetwork:Ljava/lang/ref/WeakReference;
 
-    .line 105
-    if-eqz p1, :cond_5
-
     .line 107
-    invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    if-eqz p1, :cond_5
 
     .line 109
-    move-result-object p1
-
-    .line 112
-    if-eqz p1, :cond_5
-
-    .line 113
-    iget-object p1, p0, Lcom/android/bluetooth/ble/app/ShareNetwork$EasyTetherCoreCallback;->mShareNetwork:Ljava/lang/ref/WeakReference;
-
-    .line 115
     invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
-    .line 117
+    .line 111
     move-result-object p1
 
-    .line 120
+    .line 114
+    if-eqz p1, :cond_5
+
+    .line 115
+    iget-object p1, p0, Lcom/android/bluetooth/ble/app/ShareNetwork$EasyTetherCoreCallback;->mShareNetwork:Ljava/lang/ref/WeakReference;
+
+    .line 117
+    invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    .line 119
+    move-result-object p1
+
+    .line 122
     check-cast p1, Lcom/android/bluetooth/ble/app/ShareNetwork;
 
-    .line 121
+    .line 123
     iget-object p1, p1, Lcom/android/bluetooth/ble/app/ShareNetwork;->mEasyTetherInterface:Lcom/android/bluetooth/ble/app/EasyTetherInterface;
 
-    .line 123
-    if-eqz p1, :cond_5
-
     .line 125
-    iget-object p0, p0, Lcom/android/bluetooth/ble/app/ShareNetwork$EasyTetherCoreCallback;->mShareNetwork:Ljava/lang/ref/WeakReference;
+    if-eqz p1, :cond_5
 
     .line 127
-    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    iget-object p0, p0, Lcom/android/bluetooth/ble/app/ShareNetwork$EasyTetherCoreCallback;->mShareNetwork:Ljava/lang/ref/WeakReference;
 
     .line 129
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    .line 131
     move-result-object p0
 
-    .line 132
+    .line 134
     check-cast p0, Lcom/android/bluetooth/ble/app/ShareNetwork;
 
-    .line 133
+    .line 135
     iget-object p0, p0, Lcom/android/bluetooth/ble/app/ShareNetwork;->mEasyTetherInterface:Lcom/android/bluetooth/ble/app/EasyTetherInterface;
 
-    .line 135
+    .line 137
     check-cast p0, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;
 
-    .line 137
+    .line 139
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 139
-    const-string p1, "onApConnectFail"
-
-    .line 142
-    invoke-static {v5, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    .line 141
+    const-string p0, "onApSupportAutoConnect"
 
     .line 144
-    iput-boolean v1, p0, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->connectingHotspot:Z
-
-    .line 147
-    iget-object p1, p0, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->callback:Lcom/android/systemui/qs/tiles/MiuiWifiTile$ShareNetworkCallback;
-
-    .line 149
-    if-eqz p1, :cond_5
-
-    .line 151
-    invoke-virtual {p0}, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->getHotspotList()Ljava/util/List;
-
-    .line 153
-    move-result-object p0
-
-    .line 156
-    invoke-virtual {p1, p0, v0}, Lcom/android/systemui/qs/tiles/MiuiWifiTile$ShareNetworkCallback;->onHotspotUpdate(Ljava/util/List;Lcom/android/systemui/controlcenter/policy/ShareNetworkController$Hotspot;)V
+    invoke-static {v5, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 157
+    .line 146
     goto :goto_1
 
-    .line 160
+    .line 149
     :catch_1
     move-exception p0
 
-    .line 161
+    .line 150
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 162
+    .line 151
     :cond_5
     :goto_1
     return v2
 
-    .line 165
+    .line 154
     :cond_6
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 166
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+    .line 155
+    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    .line 169
-    move-result p1
-
-    .line 172
-    if-gez p1, :cond_7
-
-    .line 173
-    goto :goto_2
-
-    .line 175
-    :cond_7
-    new-instance v0, Ljava/util/HashMap;
-
-    .line 176
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    .line 178
-    :goto_2
-    invoke-static {v1, p1}, Ljava/util/stream/IntStream;->range(II)Ljava/util/stream/IntStream;
-
-    .line 181
-    move-result-object p1
-
-    .line 184
-    new-instance p3, Lcom/android/bluetooth/ble/app/IEasyTetherCoreCallback$Stub$$ExternalSyntheticLambda0;
-
-    .line 185
-    invoke-direct {p3, p2, v0}, Lcom/android/bluetooth/ble/app/IEasyTetherCoreCallback$Stub$$ExternalSyntheticLambda0;-><init>(Landroid/os/Parcel;Ljava/util/Map;)V
-
-    .line 187
-    invoke-interface {p1, p3}, Ljava/util/stream/IntStream;->forEach(Ljava/util/function/IntConsumer;)V
-
-    .line 190
+    .line 158
     :try_start_2
     iget-object p1, p0, Lcom/android/bluetooth/ble/app/ShareNetwork$EasyTetherCoreCallback;->mShareNetwork:Ljava/lang/ref/WeakReference;
 
-    .line 193
+    .line 161
     if-eqz p1, :cond_8
 
-    .line 195
+    .line 163
     invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
-    .line 197
+    .line 165
     move-result-object p1
 
-    .line 200
+    .line 168
     if-eqz p1, :cond_8
 
-    .line 201
+    .line 169
     iget-object p1, p0, Lcom/android/bluetooth/ble/app/ShareNetwork$EasyTetherCoreCallback;->mShareNetwork:Ljava/lang/ref/WeakReference;
 
-    .line 203
+    .line 171
     invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
-    .line 205
+    .line 173
     move-result-object p1
 
-    .line 208
+    .line 176
     check-cast p1, Lcom/android/bluetooth/ble/app/ShareNetwork;
 
-    .line 209
+    .line 177
     iget-object p1, p1, Lcom/android/bluetooth/ble/app/ShareNetwork;->mEasyTetherInterface:Lcom/android/bluetooth/ble/app/EasyTetherInterface;
 
-    .line 211
+    .line 179
     if-eqz p1, :cond_8
 
-    .line 213
+    .line 181
     iget-object p0, p0, Lcom/android/bluetooth/ble/app/ShareNetwork$EasyTetherCoreCallback;->mShareNetwork:Ljava/lang/ref/WeakReference;
 
-    .line 215
+    .line 183
     invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
-    .line 217
+    .line 185
     move-result-object p0
 
-    .line 220
+    .line 188
     check-cast p0, Lcom/android/bluetooth/ble/app/ShareNetwork;
 
-    .line 221
+    .line 189
     iget-object p0, p0, Lcom/android/bluetooth/ble/app/ShareNetwork;->mEasyTetherInterface:Lcom/android/bluetooth/ble/app/EasyTetherInterface;
 
-    .line 223
+    .line 191
     check-cast p0, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;
 
-    .line 225
-    invoke-virtual {p0, v0}, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->onApInfoUpdate(Ljava/util/Map;)V
+    .line 193
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 195
+    sget-boolean p1, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->WIFI_ENABLED:Z
+
+    .line 198
+    if-nez p1, :cond_7
+
+    .line 200
+    goto :goto_2
+
+    .line 202
+    :cond_7
+    const-string p1, "onApConnectFail"
+
+    .line 203
+    invoke-static {v5, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 205
+    iput-boolean v1, p0, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->connectingHotspot:Z
+
+    .line 208
+    invoke-virtual {p0}, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->getHotspotList()Ljava/util/List;
+
+    .line 210
+    move-result-object p1
+
+    .line 213
+    invoke-virtual {p0, p1, v0}, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->onHotspotUpdateCallback(Ljava/util/List;Lcom/android/systemui/controlcenter/policy/ShareNetworkController$Hotspot;)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 227
-    goto :goto_3
+    .line 214
+    goto :goto_2
 
-    .line 230
+    .line 217
     :catch_2
     move-exception p0
 
-    .line 231
+    .line 218
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 232
+    .line 219
     :cond_8
-    :goto_3
+    :goto_2
     return v2
+
+    .line 222
+    :cond_9
+    invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 223
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    .line 226
+    move-result p1
+
+    .line 229
+    if-gez p1, :cond_a
+
+    .line 230
+    goto :goto_3
+
+    .line 232
+    :cond_a
+    new-instance v0, Ljava/util/HashMap;
+
+    .line 233
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
     .line 235
+    :goto_3
+    invoke-static {v1, p1}, Ljava/util/stream/IntStream;->range(II)Ljava/util/stream/IntStream;
+
+    .line 238
+    move-result-object p1
+
+    .line 241
+    new-instance p3, Lcom/android/bluetooth/ble/app/IEasyTetherCoreCallback$Stub$$ExternalSyntheticLambda0;
+
+    .line 242
+    invoke-direct {p3, p2, v0}, Lcom/android/bluetooth/ble/app/IEasyTetherCoreCallback$Stub$$ExternalSyntheticLambda0;-><init>(Landroid/os/Parcel;Ljava/util/Map;)V
+
+    .line 244
+    invoke-interface {p1, p3}, Ljava/util/stream/IntStream;->forEach(Ljava/util/function/IntConsumer;)V
+
+    .line 247
+    :try_start_3
+    iget-object p1, p0, Lcom/android/bluetooth/ble/app/ShareNetwork$EasyTetherCoreCallback;->mShareNetwork:Ljava/lang/ref/WeakReference;
+
+    .line 250
+    if-eqz p1, :cond_b
+
+    .line 252
+    invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    .line 254
+    move-result-object p1
+
+    .line 257
+    if-eqz p1, :cond_b
+
+    .line 258
+    iget-object p1, p0, Lcom/android/bluetooth/ble/app/ShareNetwork$EasyTetherCoreCallback;->mShareNetwork:Ljava/lang/ref/WeakReference;
+
+    .line 260
+    invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    .line 262
+    move-result-object p1
+
+    .line 265
+    check-cast p1, Lcom/android/bluetooth/ble/app/ShareNetwork;
+
+    .line 266
+    iget-object p1, p1, Lcom/android/bluetooth/ble/app/ShareNetwork;->mEasyTetherInterface:Lcom/android/bluetooth/ble/app/EasyTetherInterface;
+
+    .line 268
+    if-eqz p1, :cond_b
+
+    .line 270
+    iget-object p0, p0, Lcom/android/bluetooth/ble/app/ShareNetwork$EasyTetherCoreCallback;->mShareNetwork:Ljava/lang/ref/WeakReference;
+
+    .line 272
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    .line 274
+    move-result-object p0
+
+    .line 277
+    check-cast p0, Lcom/android/bluetooth/ble/app/ShareNetwork;
+
+    .line 278
+    iget-object p0, p0, Lcom/android/bluetooth/ble/app/ShareNetwork;->mEasyTetherInterface:Lcom/android/bluetooth/ble/app/EasyTetherInterface;
+
+    .line 280
+    check-cast p0, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;
+
+    .line 282
+    invoke-virtual {p0, v0}, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->onApInfoUpdate(Ljava/util/Map;)V
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_3
+
+    .line 284
+    goto :goto_4
+
+    .line 287
+    :catch_3
+    move-exception p0
+
+    .line 288
+    invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
+
+    .line 289
+    :cond_b
+    :goto_4
+    return v2
+    .line 292
 .end method

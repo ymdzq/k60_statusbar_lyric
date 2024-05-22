@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/LockScreenActionsSettings;->setupLockScreenSmartDeviceControl()V
+    value = Lcom/android/settings/LockScreenActionsSettings;->setupLockScreenDeviceControl()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/android/settings/LockScreenActionsSettings;)V
     .locals 0
 
-    .line 102
+    .line 118
     iput-object p1, p0, Lcom/android/settings/LockScreenActionsSettings$3;->this$0:Lcom/android/settings/LockScreenActionsSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onPreferenceChange(Landroidx/preference/Preference;Ljava/lang/Object;)Z
     .locals 0
 
-    .line 105
+    .line 121
     iget-object p1, p0, Lcom/android/settings/LockScreenActionsSettings$3;->this$0:Lcom/android/settings/LockScreenActionsSettings;
 
     invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
@@ -51,14 +51,9 @@
 
     move-result p2
 
-    invoke-static {p1, p2}, Lcom/android/settings/utils/StatusBarUtils;->setLockScreenSmartDeviceControl(Landroid/content/Context;I)V
+    invoke-static {p1, p2}, Lcom/android/settings/utils/StatusBarUtils;->setLockScreenDeviceControl(Landroid/content/Context;Z)V
 
-    .line 106
-    iget-object p1, p0, Lcom/android/settings/LockScreenActionsSettings$3;->this$0:Lcom/android/settings/LockScreenActionsSettings;
-
-    invoke-static {p1}, Lcom/android/settings/LockScreenActionsSettings;->-$$Nest$mupdateLockScreenSmartDeviceControl(Lcom/android/settings/LockScreenActionsSettings;)V
-
-    .line 107
+    .line 122
     iget-object p0, p0, Lcom/android/settings/LockScreenActionsSettings$3;->this$0:Lcom/android/settings/LockScreenActionsSettings;
 
     invoke-static {p0}, Lcom/android/settings/LockScreenActionsSettings;->-$$Nest$mupdateLockScreenAllowTrivialControls(Lcom/android/settings/LockScreenActionsSettings;)V

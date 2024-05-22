@@ -36,7 +36,7 @@
         }
     .end annotation
 
-    .line 1949
+    .line 1967
     iput-object p1, p0, Lcom/android/settings/wifi/MiuiWifiSettings$8;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     iput-object p2, p0, Lcom/android/settings/wifi/MiuiWifiSettings$8;->val$lp:Landroid/view/WindowManager$LayoutParams;
@@ -55,38 +55,38 @@
 .method public onDismiss(Landroid/content/DialogInterface;)V
     .locals 1
 
-    .line 1952
+    .line 1970
     iget-object p1, p0, Lcom/android/settings/wifi/MiuiWifiSettings$8;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$fputmIsShown(Lcom/android/settings/wifi/MiuiWifiSettings;Z)V
 
-    .line 1953
+    .line 1971
     iget-object p1, p0, Lcom/android/settings/wifi/MiuiWifiSettings$8;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$fputmSharedDialog(Lcom/android/settings/wifi/MiuiWifiSettings;Lmiuix/appcompat/app/AlertDialog;)V
 
-    .line 1954
+    .line 1972
     iget-object p1, p0, Lcom/android/settings/wifi/MiuiWifiSettings$8;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-static {p1, v0}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$fputmWifiConfig(Lcom/android/settings/wifi/MiuiWifiSettings;Landroid/net/wifi/WifiConfiguration;)V
 
-    .line 1955
+    .line 1973
     iget-object p1, p0, Lcom/android/settings/wifi/MiuiWifiSettings$8;->val$lp:Landroid/view/WindowManager$LayoutParams;
 
     iget v0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$8;->val$originalScreenBrightness:F
 
     iput v0, p1, Landroid/view/WindowManager$LayoutParams;->screenBrightness:F
 
-    .line 1956
+    .line 1974
     iget-object v0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$8;->val$window:Landroid/view/Window;
 
     invoke-virtual {v0, p1}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
 
-    .line 1957
+    .line 1975
     iget-object p0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$8;->val$window:Landroid/view/Window;
 
     const/16 p1, 0x80

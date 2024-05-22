@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/qs/tiles/MiuiWifiTile;
 .super Lcom/android/systemui/qs/tileimpl/QSTileImpl;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # static fields
@@ -23,6 +23,8 @@
 .field public isSltOn:Z
 
 .field public final networkController:Lcom/android/systemui/statusbar/connectivity/NetworkController;
+
+.field public final observer:Landroidx/lifecycle/LifecycleEventObserver;
 
 .field public final shareNetworkCallback:Lcom/android/systemui/qs/tiles/MiuiWifiTile$ShareNetworkCallback;
 
@@ -171,17 +173,26 @@
     iput-object p1, p0, Lcom/android/systemui/qs/tiles/MiuiWifiTile;->sltListener:Lcom/android/systemui/qs/tiles/MiuiWifiTile$sltListener$1;
 
     .line 50
-    new-instance p1, Lcom/android/systemui/qs/tiles/MiuiWifiTile$1;
+    new-instance p1, Lcom/android/systemui/qs/tiles/MiuiWifiTile$observer$1;
 
     .line 52
-    invoke-direct {p1, p0}, Lcom/android/systemui/qs/tiles/MiuiWifiTile$1;-><init>(Lcom/android/systemui/qs/tiles/MiuiWifiTile;)V
+    invoke-direct {p1, p0}, Lcom/android/systemui/qs/tiles/MiuiWifiTile$observer$1;-><init>(Lcom/android/systemui/qs/tiles/MiuiWifiTile;)V
 
     .line 54
-    invoke-virtual {p4, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    iput-object p1, p0, Lcom/android/systemui/qs/tiles/MiuiWifiTile;->observer:Landroidx/lifecycle/LifecycleEventObserver;
 
     .line 57
+    new-instance p1, Lcom/android/systemui/qs/tiles/MiuiWifiTile$1;
+
+    .line 59
+    invoke-direct {p1, p0}, Lcom/android/systemui/qs/tiles/MiuiWifiTile$1;-><init>(Lcom/android/systemui/qs/tiles/MiuiWifiTile;)V
+
+    .line 61
+    invoke-virtual {p4, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    .line 64
     return-void
-    .line 60
+    .line 67
 .end method
 
 
@@ -245,12 +256,12 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f1309c1    # @string/quick_settings_miui_wifi_label 'WLAN'
+    const v0, 0x7f1309c7    # @string/quick_settings_miui_wifi_label 'WLAN'
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f1309c3    # @string/quick_settings_miui_wlan_label 'WLAN'
+    const v0, 0x7f1309c9    # @string/quick_settings_miui_wlan_label 'WLAN'
 
     .line 4
     :goto_0
@@ -462,399 +473,14 @@
 .end method
 
 .method public final handleSetListening(Z)V
-    .locals 7
+    .locals 0
 
     .line 1
     invoke-super {p0, p1}, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->handleSetListening(Z)V
 
     .line 2
-    const-string v0, "ShareNetwork"
-
-    .line 5
-    const/4 v1, 0x0
-
-    .line 7
-    const/4 v2, 0x0
-
-    .line 8
-    const-string v3, "ShareNetworkControllerImpl"
-
-    .line 9
-    iget-object v4, p0, Lcom/android/systemui/qs/tiles/MiuiWifiTile;->shareNetworkController:Lcom/android/systemui/controlcenter/policy/ShareNetworkController;
-
-    .line 11
-    if-eqz p1, :cond_4
-
-    .line 13
-    check-cast v4, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;
-
-    .line 15
-    iget-boolean p1, v4, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->enable:Z
-
-    .line 17
-    if-nez p1, :cond_0
-
-    .line 19
-    goto :goto_1
-
-    .line 21
-    :cond_0
-    iget-boolean p1, v4, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->started:Z
-
-    .line 22
-    if-eqz p1, :cond_1
-
-    .line 24
-    goto :goto_1
-
-    .line 26
-    :cond_1
-    const-string/jumbo p1, "start"
-
-    .line 27
-    invoke-static {v3, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 30
-    const/4 p1, 0x1
-
-    .line 33
-    iput-boolean p1, v4, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->started:Z
-
-    .line 34
-    iput-object v1, v4, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->callback:Lcom/android/systemui/qs/tiles/MiuiWifiTile$ShareNetworkCallback;
-
-    .line 36
-    iput-boolean v2, v4, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->connectingHotspot:Z
-
-    .line 38
-    iget-object v1, v4, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->sharenetwork$delegate:Lkotlin/Lazy;
-
-    .line 40
-    invoke-interface {v1}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;
-
-    .line 42
-    move-result-object v1
-
-    .line 45
-    check-cast v1, Lcom/android/bluetooth/ble/app/ShareNetwork;
-
-    .line 46
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 48
-    :try_start_0
-    iget-object v2, v1, Lcom/android/bluetooth/ble/app/ShareNetwork;->mConnection:Lcom/android/bluetooth/ble/app/ShareNetwork$1;
-
-    .line 51
-    if-nez v2, :cond_2
-
-    .line 53
-    new-instance v2, Lcom/android/bluetooth/ble/app/ShareNetwork$1;
-
-    .line 55
-    invoke-direct {v2, v1}, Lcom/android/bluetooth/ble/app/ShareNetwork$1;-><init>(Lcom/android/bluetooth/ble/app/ShareNetwork;)V
-
-    .line 57
-    iput-object v2, v1, Lcom/android/bluetooth/ble/app/ShareNetwork;->mConnection:Lcom/android/bluetooth/ble/app/ShareNetwork$1;
-
-    .line 60
-    const-string/jumbo v2, "registerEasyTetherCoreService start to get the binder"
-
-    .line 62
-    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 65
-    new-instance v0, Landroid/content/Intent;
-
-    .line 68
-    const-string v2, "miui.bluetooth.mible.EasyTetherCoreService"
-
-    .line 70
-    invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    .line 72
-    const-string v2, "com.xiaomi.bluetooth"
-
-    .line 75
-    invoke-virtual {v0, v2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 77
-    iget-object v2, v1, Lcom/android/bluetooth/ble/app/ShareNetwork;->mContext:Landroid/content/Context;
-
-    .line 80
-    iget-object v1, v1, Lcom/android/bluetooth/ble/app/ShareNetwork;->mConnection:Lcom/android/bluetooth/ble/app/ShareNetwork$1;
-
-    .line 82
-    invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
-
-    .line 84
-    move-result-object v3
-
-    .line 87
-    invoke-virtual {v2, v0, v1, p1, v3}, Landroid/content/Context;->bindServiceAsUser(Landroid/content/Intent;Landroid/content/ServiceConnection;ILandroid/os/UserHandle;)Z
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 88
-    goto :goto_0
-
-    .line 91
-    :catch_0
-    move-exception p1
-
-    .line 92
-    invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
-
-    .line 93
-    :cond_2
-    :goto_0
-    new-instance p1, Landroid/content/IntentFilter;
-
-    .line 96
-    const-string v0, "android.net.wifi.WIFI_STATE_CHANGED"
-
-    .line 98
-    invoke-direct {p1, v0}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
-
-    .line 100
-    const-string v0, "android.net.wifi.STATE_CHANGE"
-
-    .line 103
-    invoke-virtual {p1, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    .line 105
-    iget-object v0, v4, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->context:Landroid/content/Context;
-
-    .line 108
-    iget-object v1, v4, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->wifiStateChangedReceiver:Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl$wifiStateChangedReceiver$1;
-
-    .line 110
-    invoke-virtual {v0, v1, p1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
-
-    .line 112
-    :goto_1
-    iget-boolean p1, v4, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->enable:Z
-
-    .line 115
-    if-nez p1, :cond_3
-
-    .line 117
-    goto/16 :goto_4
-
-    .line 119
-    :cond_3
-    iget-object p0, p0, Lcom/android/systemui/qs/tiles/MiuiWifiTile;->shareNetworkCallback:Lcom/android/systemui/qs/tiles/MiuiWifiTile$ShareNetworkCallback;
-
-    .line 121
-    iput-object p0, v4, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->callback:Lcom/android/systemui/qs/tiles/MiuiWifiTile$ShareNetworkCallback;
-
-    .line 123
-    goto/16 :goto_4
-
-    .line 125
-    :cond_4
-    check-cast v4, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;
-
-    .line 127
-    iget-boolean p0, v4, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->enable:Z
-
-    .line 129
-    if-nez p0, :cond_5
-
-    .line 131
-    goto/16 :goto_4
-
-    .line 133
-    :cond_5
-    iget-boolean p0, v4, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->started:Z
-
-    .line 135
-    if-nez p0, :cond_6
-
-    .line 137
-    goto :goto_4
-
-    .line 139
-    :cond_6
-    const-string/jumbo p0, "stop"
-
-    .line 140
-    invoke-static {v3, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 143
-    iput-boolean v2, v4, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->started:Z
-
-    .line 146
-    iput-object v1, v4, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->callback:Lcom/android/systemui/qs/tiles/MiuiWifiTile$ShareNetworkCallback;
-
-    .line 148
-    iput-boolean v2, v4, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->connectingHotspot:Z
-
-    .line 150
-    iget-object p0, v4, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->context:Landroid/content/Context;
-
-    .line 152
-    iget-object p1, v4, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->wifiStateChangedReceiver:Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl$wifiStateChangedReceiver$1;
-
-    .line 154
-    invoke-virtual {p0, p1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
-
-    .line 156
-    iget-object p0, v4, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->sharenetwork$delegate:Lkotlin/Lazy;
-
-    .line 159
-    invoke-interface {p0}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;
-
-    .line 161
-    move-result-object p0
-
-    .line 164
-    check-cast p0, Lcom/android/bluetooth/ble/app/ShareNetwork;
-
-    .line 165
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 167
-    :try_start_1
-    iget-object p1, p0, Lcom/android/bluetooth/ble/app/ShareNetwork;->mEasyTetherCoreService:Lcom/android/bluetooth/ble/app/IMiuiNearbyApiService;
-
-    .line 170
-    if-eqz p1, :cond_9
-
-    .line 172
-    iget-object v3, p0, Lcom/android/bluetooth/ble/app/ShareNetwork;->mEasyTetherCoreCallback:Lcom/android/bluetooth/ble/app/ShareNetwork$EasyTetherCoreCallback;
-
-    .line 174
-    check-cast p1, Lcom/android/bluetooth/ble/app/IMiuiNearbyApiService$Stub$Proxy;
-
-    .line 176
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    .line 178
-    move-result-object v4
-
-    .line 181
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    .line 182
-    move-result-object v5
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
-
-    .line 185
-    :try_start_2
-    const-string v6, "com.android.bluetooth.ble.app.IMiuiNearbyApiService"
-
-    .line 186
-    invoke-virtual {v4, v6}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
-
-    .line 188
-    if-eqz v3, :cond_7
-
-    .line 191
-    goto :goto_2
-
-    .line 193
-    :cond_7
-    move-object v3, v1
-
-    .line 194
-    :goto_2
-    invoke-virtual {v4, v3}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
-
-    .line 195
-    iget-object p1, p1, Lcom/android/bluetooth/ble/app/IMiuiNearbyApiService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
-
-    .line 198
-    const/16 v3, 0x13
-
-    .line 200
-    invoke-interface {p1, v3, v4, v5, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-
-    .line 202
-    move-result p1
-
-    .line 205
-    if-nez p1, :cond_8
-
-    .line 206
-    sget p1, Lcom/android/bluetooth/ble/app/IMiuiNearbyApiService$Stub;->$r8$clinit:I
-
-    .line 208
-    :cond_8
-    invoke-virtual {v5}, Landroid/os/Parcel;->readException()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    .line 210
-    :try_start_3
-    invoke-virtual {v5}, Landroid/os/Parcel;->recycle()V
-
-    .line 213
-    invoke-virtual {v4}, Landroid/os/Parcel;->recycle()V
-
-    .line 216
-    iput-object v1, p0, Lcom/android/bluetooth/ble/app/ShareNetwork;->mEasyTetherCoreCallback:Lcom/android/bluetooth/ble/app/ShareNetwork$EasyTetherCoreCallback;
-
-    .line 219
-    goto :goto_3
-
-    .line 221
-    :catchall_0
-    move-exception p0
-
-    .line 222
-    invoke-virtual {v5}, Landroid/os/Parcel;->recycle()V
-
-    .line 223
-    invoke-virtual {v4}, Landroid/os/Parcel;->recycle()V
-
-    .line 226
-    throw p0
-
-    .line 229
-    :cond_9
-    :goto_3
-    iget-object p1, p0, Lcom/android/bluetooth/ble/app/ShareNetwork;->mConnection:Lcom/android/bluetooth/ble/app/ShareNetwork$1;
-
-    .line 230
-    if-eqz p1, :cond_a
-
-    .line 232
-    iget-object v2, p0, Lcom/android/bluetooth/ble/app/ShareNetwork;->mContext:Landroid/content/Context;
-
-    .line 234
-    invoke-virtual {v2, p1}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
-
-    .line 236
-    iput-object v1, p0, Lcom/android/bluetooth/ble/app/ShareNetwork;->mConnection:Lcom/android/bluetooth/ble/app/ShareNetwork$1;
-    :try_end_3
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
-
-    .line 239
-    goto :goto_4
-
-    .line 241
-    :catch_1
-    move-exception p0
-
-    .line 242
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    .line 243
-    const-string v1, "mService.unregister error: "
-
-    .line 245
-    invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 247
-    invoke-static {p0, p1, v0}, Lcom/android/systemui/qs/tiles/MiuiWifiTile$$ExternalSyntheticOutline0;->m(Ljava/lang/Exception;Ljava/lang/StringBuilder;Ljava/lang/String;)V
-
-    .line 250
-    :cond_a
-    :goto_4
     return-void
-    .line 253
+    .line 5
 .end method
 
 .method public final handleShowStateMessage()V
@@ -915,14 +541,14 @@
     if-eqz v0, :cond_2
 
     .line 30
-    const v0, 0x7f130a14    # @string/quick_settings_wifi_state_change_message_on 'WLAN is on'
+    const v0, 0x7f130a1a    # @string/quick_settings_wifi_state_change_message_on 'WLAN is on'
 
     .line 32
     goto :goto_1
 
     .line 35
     :cond_2
-    const v0, 0x7f130a17    # @string/quick_settings_wlan_state_change_message_on 'WLAN is on'
+    const v0, 0x7f130a1d    # @string/quick_settings_wlan_state_change_message_on 'WLAN is on'
 
     .line 36
     :goto_1
@@ -965,14 +591,14 @@
     if-eqz v0, :cond_5
 
     .line 59
-    const v0, 0x7f130a13    # @string/quick_settings_wifi_state_change_message_off 'WLAN is off'
+    const v0, 0x7f130a19    # @string/quick_settings_wifi_state_change_message_off 'WLAN is off'
 
     .line 61
     goto :goto_3
 
     .line 64
     :cond_5
-    const v0, 0x7f130a16    # @string/quick_settings_wlan_state_change_message_off 'WLAN is off'
+    const v0, 0x7f130a1c    # @string/quick_settings_wlan_state_change_message_off 'WLAN is off'
 
     .line 65
     :goto_3
@@ -1493,14 +1119,14 @@
     if-eqz v7, :cond_1a
 
     .line 276
-    const v7, 0x7f130b54    # @string/switch_bar_on 'On'
+    const v7, 0x7f130b5a    # @string/switch_bar_on 'On'
 
     .line 278
     goto :goto_d
 
     .line 281
     :cond_1a
-    const v7, 0x7f130b53    # @string/switch_bar_off 'Off'
+    const v7, 0x7f130b59    # @string/switch_bar_off 'Off'
 
     .line 282
     :goto_d

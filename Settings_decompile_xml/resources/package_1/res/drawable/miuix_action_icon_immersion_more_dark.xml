@@ -3,12 +3,12 @@
           android:width="26.0dp"
           android:viewportWidth="26.0"
           android:viewportHeight="26.0"
-          settings:actionIconDisabledAlpha="0.5"
-          settings:actionIconHeight="@dimen/miuix_theme_title_button_height"
-          settings:actionIconNormalAlpha="0.8"
-          settings:actionIconPressedAlpha="0.9"
-          settings:actionIconWidth="@dimen/miuix_theme_title_button_width"
-          class="miuix.theme.ActionIconDrawable" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+          app:actionIconDisabledAlpha="0.5"
+          app:actionIconHeight="@dimen/miuix_theme_title_button_height"
+          app:actionIconNormalAlpha="0.8"
+          app:actionIconPressedAlpha="0.9"
+          app:actionIconWidth="@dimen/miuix_theme_title_button_width"
+          class="miuix.theme.ActionIconDrawable" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <path android:fillColor="#ffffff"
         android:pathData="M12.9999,14.4054C12.2237,14.4054 11.5945,13.7762 11.5945,13C11.5945,12.2238 12.2237,11.5946 12.9999,11.5946C13.7761,11.5946 14.4053,12.2238 14.4053,13C14.4053,13.7762 13.7761,14.4054 12.9999,14.4054Z"
         android:fillAlpha="1.0" />

@@ -4,9 +4,9 @@
                       android:visibility="gone"
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
-                      systemui:r0x7f040150="@id/material_clock_period_am_button"
-                      systemui:r0x7f040692="true"
-                      systemui:singleSelection="true" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto">
+                      app:r0x7f040150="@id/material_clock_period_am_button"
+                      app:r0x7f040692="true"
+                      app:singleSelection="true" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <Button android:id="@id/material_clock_period_am_button"
           android:layout_width="0.0dp"
           android:text="@string/material_timepicker_am"

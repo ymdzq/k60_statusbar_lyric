@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/tuner/TunerFragment;
 .super Landroidx/preference/PreferenceFragment;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # static fields
@@ -107,7 +107,7 @@
     const/4 p0, 0x2
 
     .line 2
-    const p2, 0x7f130a2b    # @string/remove_from_settings 'Remove from Settings'
+    const p2, 0x7f130a31    # @string/remove_from_settings 'Remove from Settings'
 
     .line 3
     const/4 v0, 0x0
@@ -435,7 +435,7 @@
     move-result-object v0
 
     .line 8
-    const v1, 0x7f130b5d    # @string/system_ui_tuner 'System UI Tuner'
+    const v1, 0x7f130b63    # @string/system_ui_tuner 'System UI Tuner'
 
     .line 9
     invoke-virtual {v0, v1}, Landroid/app/Activity;->setTitle(I)V

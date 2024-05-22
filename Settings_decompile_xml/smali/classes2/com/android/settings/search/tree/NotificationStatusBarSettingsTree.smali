@@ -42,6 +42,10 @@
     if-eqz v1, :cond_1
 
     .line 33
+    sget-boolean v1, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
+
+    if-nez v1, :cond_0
+
     invoke-static {}, Lcom/android/settings/utils/StatusBarUtils;->isUserOwner()Z
 
     move-result v1
@@ -60,7 +64,7 @@
     return v2
 
     :cond_1
-    const-string/jumbo v1, "title_quick_control_all_devices"
+    const-string/jumbo v1, "title_device_control"
 
     .line 37
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -72,7 +76,7 @@
     .line 38
     sget-boolean v1, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
-    if-nez v1, :cond_2
+    if-eqz v1, :cond_2
 
     invoke-static {}, Lcom/android/settings/utils/StatusBarUtils;->isUserOwner()Z
 
@@ -86,13 +90,19 @@
 
     move-result v1
 
-    if-nez v1, :cond_3
+    if-eqz v1, :cond_2
+
+    invoke-static {}, Lcom/android/settings/utils/StatusBarUtils;->noControlCenter()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
 
     :cond_2
     return v2
 
     :cond_3
-    const-string v1, "custom_carrier_title"
+    const-string/jumbo v1, "title_xiaomi_smart_hub"
 
     .line 42
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -102,28 +112,57 @@
     if-eqz v1, :cond_5
 
     .line 43
-    sget-boolean v1, Lcom/android/settings/utils/StatusBarUtils;->IS_MX_TELCEL:Z
+    sget-boolean v1, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
+
+    if-eqz v1, :cond_4
+
+    invoke-static {}, Lcom/android/settings/utils/StatusBarUtils;->isUserOwner()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    iget-object v1, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
+
+    invoke-static {v1}, Lcom/android/settings/utils/StatusBarUtils;->useControlCenter(Landroid/content/Context;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    .line 44
+    invoke-static {}, Lcom/android/settings/utils/StatusBarUtils;->noControlCenter()Z
+
+    move-result v1
 
     if-nez v1, :cond_4
 
-    sget-boolean v1, Lcom/android/settings/utils/StatusBarUtils;->IS_LM_CR:Z
+    iget-object v1, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
-    if-eqz v1, :cond_5
+    invoke-static {v1}, Lcom/android/settings/utils/Utils;->checkDeviceCenterAvailable(Landroid/content/Context;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
 
     :cond_4
     return v2
 
     :cond_5
-    const-string v1, "lockscreen_trivial_controls_setting_toggle"
+    const-string/jumbo v1, "title_quick_control_all_devices"
 
-    .line 47
+    .line 48
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_7
 
-    .line 48
+    .line 49
+    sget-boolean v1, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
+
+    if-nez v1, :cond_6
+
     invoke-static {}, Lcom/android/settings/utils/StatusBarUtils;->isUserOwner()Z
 
     move-result v1
@@ -142,14 +181,64 @@
     return v2
 
     :cond_7
-    const-string/jumbo v1, "notch_style_mod_title"
+    const-string v1, "custom_carrier_title"
 
-    .line 52
+    .line 53
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_8
+    if-eqz v1, :cond_9
+
+    .line 54
+    sget-boolean v1, Lcom/android/settings/utils/StatusBarUtils;->IS_MX_TELCEL:Z
+
+    if-nez v1, :cond_8
+
+    sget-boolean v1, Lcom/android/settings/utils/StatusBarUtils;->IS_LM_CR:Z
+
+    if-eqz v1, :cond_9
+
+    :cond_8
+    return v2
+
+    :cond_9
+    const-string v1, "lockscreen_trivial_controls_setting_toggle"
+
+    .line 58
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_b
+
+    .line 59
+    invoke-static {}, Lcom/android/settings/utils/StatusBarUtils;->isUserOwner()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_a
+
+    iget-object v1, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
+
+    invoke-static {v1}, Lcom/android/settings/utils/StatusBarUtils;->useControlCenter(Landroid/content/Context;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_b
+
+    :cond_a
+    return v2
+
+    :cond_b
+    const-string/jumbo v1, "notch_style_mod_title"
+
+    .line 63
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_c
 
     iget-object v1, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
@@ -161,86 +250,86 @@
 
     move-result v1
 
-    if-nez v1, :cond_8
+    if-nez v1, :cond_c
 
     return v2
 
-    :cond_8
+    :cond_c
     const-string/jumbo v1, "notch_force_black_title"
 
-    .line 55
+    .line 66
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_9
+    if-eqz v1, :cond_d
 
     invoke-static {}, Lcom/android/settings/utils/Utils;->supportNotchForceBlack()Z
 
     move-result v1
 
-    if-nez v1, :cond_9
+    if-nez v1, :cond_d
 
     return v2
 
-    :cond_9
+    :cond_d
     const-string v1, "cutout_type_title"
 
-    .line 58
+    .line 69
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_a
+    if-eqz v1, :cond_e
 
     invoke-static {}, Lcom/android/settings/utils/Utils;->supportOverlayRoundedCorner()Z
 
     move-result v1
 
-    if-nez v1, :cond_a
+    if-nez v1, :cond_e
 
     return v2
 
-    :cond_a
+    :cond_e
     const-string v1, "cutout_mode_title"
 
-    .line 61
+    .line 72
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_b
+    if-eqz v1, :cond_f
 
     invoke-static {}, Lcom/android/settings/utils/Utils;->supportCutoutMode()Z
 
     move-result v1
 
-    if-nez v1, :cond_b
+    if-nez v1, :cond_f
 
     return v2
 
-    :cond_b
+    :cond_f
     const-string/jumbo v1, "title_wordless_mode"
 
-    .line 64
+    .line 75
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_11
 
-    .line 65
+    .line 76
     invoke-static {}, Lcom/android/settings/utils/StatusBarUtils;->isUserOwner()Z
 
     move-result v0
 
-    if-eqz v0, :cond_c
+    if-eqz v0, :cond_10
 
     invoke-static {}, Lcom/android/settings/utils/StatusBarUtils;->noControlCenter()Z
 
     move-result v0
 
-    if-nez v0, :cond_c
+    if-nez v0, :cond_10
 
     iget-object v0, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
@@ -248,13 +337,13 @@
 
     move-result v0
 
-    if-nez v0, :cond_d
+    if-nez v0, :cond_11
 
-    :cond_c
+    :cond_10
     return v2
 
-    .line 69
-    :cond_d
+    .line 80
+    :cond_11
     invoke-super {p0}, Lcom/android/settingslib/search/SettingsTree;->getStatus()I
 
     move-result p0

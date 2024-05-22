@@ -1,6 +1,6 @@
 .class public Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeSurfaceTransactionHelper;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # static fields
@@ -371,25 +371,25 @@
     shl-int/lit8 v4, v1, 0x18
 
     .line 19
-    const/high16 v1, 0x42f00000    # 120.0f
-
-    .line 21
     if-eqz p4, :cond_0
 
-    .line 23
+    .line 21
     invoke-static {v0, v2}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeUtils;->applyDip2Px(Landroid/content/Context;F)F
 
-    .line 25
+    .line 23
     move-result v5
 
-    .line 28
+    .line 26
+    const/high16 v1, 0x41c80000    # 25.0f
+
+    .line 27
     invoke-static {v0, v1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeUtils;->applyDip2Px(Landroid/content/Context;F)F
 
     .line 29
     move-result v6
 
     .line 32
-    const/high16 v1, 0x43480000    # 200.0f
+    const/high16 v1, 0x42a00000    # 80.0f
 
     .line 33
     invoke-static {v0, v1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeUtils;->applyDip2Px(Landroid/content/Context;F)F
@@ -423,164 +423,167 @@
     move-result v5
 
     .line 51
-    const/high16 v2, 0x42200000    # 40.0f
+    const/high16 v1, 0x42200000    # 40.0f
 
     .line 52
-    invoke-static {v0, v2}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeUtils;->applyDip2Px(Landroid/content/Context;F)F
+    invoke-static {v0, v1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeUtils;->applyDip2Px(Landroid/content/Context;F)F
 
     .line 54
     move-result v6
 
     .line 57
-    invoke-static {v0, v1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeUtils;->applyDip2Px(Landroid/content/Context;F)F
+    const/high16 v1, 0x42700000    # 60.0f
 
     .line 58
+    invoke-static {v0, v1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeUtils;->applyDip2Px(Landroid/content/Context;F)F
+
+    .line 60
     move-result v7
 
-    .line 61
+    .line 63
     const/high16 v8, 0x3f800000    # 1.0f
 
-    .line 62
+    .line 64
     const/4 v10, 0x0
 
-    .line 64
+    .line 66
     move-object v3, p2
 
-    .line 65
+    .line 67
     move-object v9, p1
 
-    .line 66
+    .line 68
     invoke-static/range {v3 .. v10}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeShadowHelper;->setMiShadow(Landroid/view/SurfaceControl;IFFFFLandroid/view/SurfaceControl$Transaction;Z)V
 
-    .line 67
+    .line 69
     goto :goto_0
 
-    .line 70
+    .line 72
     :cond_1
     invoke-static {}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeUtils;->isSupportMiuiShadow()Z
 
-    .line 71
+    .line 73
     move-result v0
 
-    .line 74
+    .line 76
     if-eqz v0, :cond_2
 
-    .line 75
+    .line 77
     const/4 v0, 0x4
 
-    .line 77
+    .line 79
     new-array v5, v0, [F
 
-    .line 78
+    .line 80
     const/4 v0, 0x0
 
-    .line 80
+    .line 82
     aput v2, v5, v0
 
-    .line 81
+    .line 83
     const/4 v1, 0x1
 
-    .line 83
+    .line 85
     aput v2, v5, v1
 
-    .line 84
+    .line 86
     const/4 v3, 0x2
 
-    .line 86
+    .line 88
     aput v2, v5, v3
 
-    .line 87
+    .line 89
     const/4 v2, 0x3
 
-    .line 89
+    .line 91
     aput p3, v5, v2
 
-    .line 90
+    .line 92
     const-class v6, Landroid/view/SurfaceControl;
 
-    .line 92
+    .line 94
     sget-object v11, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
 
-    .line 94
+    .line 96
     const-class v8, [F
 
-    .line 96
+    .line 98
     sget-object v12, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    .line 98
+    .line 100
     move-object v7, v11
 
-    .line 100
+    .line 102
     move-object v9, v11
 
-    .line 101
+    .line 103
     move-object v10, v11
 
-    .line 102
+    .line 104
     filled-new-array/range {v6 .. v12}, [Ljava/lang/Class;
 
-    .line 103
+    .line 105
     move-result-object v2
 
-    .line 106
+    .line 108
     const/high16 v3, 0x43c80000    # 400.0f
 
-    .line 107
+    .line 109
     invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    .line 109
+    .line 111
     move-result-object v4
 
-    .line 112
+    .line 114
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 113
+    .line 115
     move-result-object v6
 
-    .line 116
+    .line 118
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 117
+    .line 119
     move-result-object v7
 
-    .line 120
+    .line 122
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 121
+    .line 123
     move-result-object v8
 
-    .line 124
+    .line 126
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 125
+    .line 127
     move-result-object v9
 
-    .line 128
+    .line 130
     move-object v3, p2
 
-    .line 129
+    .line 131
     filled-new-array/range {v3 .. v9}, [Ljava/lang/Object;
 
-    .line 130
+    .line 132
     move-result-object v0
 
-    .line 133
+    .line 135
     const-class v1, Landroid/view/SurfaceControl$Transaction;
 
-    .line 134
+    .line 136
     const-string/jumbo v3, "setShadowSettings"
 
-    .line 136
+    .line 138
     move-object v4, p1
 
-    .line 139
+    .line 141
     invoke-static {p1, v1, v3, v2, v0}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeUtils;->callObjectMethod(Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 140
+    .line 142
     :cond_2
     :goto_0
     return-object p0
-    .line 143
+    .line 145
 .end method
 
 .method public setStrokeThickness(Landroid/view/SurfaceControl$Transaction;Landroid/view/SurfaceControl;F[FF)Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeSurfaceTransactionHelper;

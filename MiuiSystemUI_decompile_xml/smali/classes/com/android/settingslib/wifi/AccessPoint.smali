@@ -1,6 +1,6 @@
 .class public final Lcom/android/settingslib/wifi/AccessPoint;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Ljava/lang/Comparable;
@@ -1700,7 +1700,7 @@
 
     .line 20
     :cond_0
-    const p1, 0x7f130b0d    # @string/speed_label_very_fast 'Very Fast'
+    const p1, 0x7f130b13    # @string/speed_label_very_fast 'Very Fast'
 
     .line 21
     invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1713,7 +1713,7 @@
 
     .line 28
     :cond_1
-    const p1, 0x7f130b0a    # @string/speed_label_fast 'Fast'
+    const p1, 0x7f130b10    # @string/speed_label_fast 'Fast'
 
     .line 29
     invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1726,7 +1726,7 @@
 
     .line 36
     :cond_2
-    const p1, 0x7f130b0b    # @string/speed_label_okay 'OK'
+    const p1, 0x7f130b11    # @string/speed_label_okay 'OK'
 
     .line 37
     invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1739,7 +1739,7 @@
 
     .line 44
     :cond_3
-    const p1, 0x7f130b0c    # @string/speed_label_slow 'Slow'
+    const p1, 0x7f130b12    # @string/speed_label_slow 'Slow'
 
     .line 45
     invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;

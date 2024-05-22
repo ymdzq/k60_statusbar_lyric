@@ -35,7 +35,7 @@
 .method constructor <init>(Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController;)V
     .locals 0
 
-    .line 589
+    .line 596
     iput-object p1, p0, Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController$1;->this$0:Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -48,7 +48,7 @@
 .method public onError(Landroid/credentials/SetEnabledProvidersException;)V
     .locals 1
 
-    .line 598
+    .line 605
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -77,7 +77,7 @@
 .method public bridge synthetic onError(Ljava/lang/Throwable;)V
     .locals 0
 
-    .line 589
+    .line 596
     check-cast p1, Landroid/credentials/SetEnabledProvidersException;
 
     invoke-virtual {p0, p1}, Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController$1;->onError(Landroid/credentials/SetEnabledProvidersException;)V
@@ -88,7 +88,7 @@
 .method public bridge synthetic onResult(Ljava/lang/Object;)V
     .locals 0
 
-    .line 589
+    .line 596
     check-cast p1, Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController$1;->onResult(Ljava/lang/Void;)V
@@ -103,10 +103,10 @@
 
     const-string/jumbo v0, "setEnabledProviders success"
 
-    .line 592
+    .line 599
     invoke-static {p1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 593
+    .line 600
     iget-object p0, p0, Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController$1;->this$0:Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController;
 
     invoke-static {p0}, Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController;->-$$Nest$mupdateFromExternal(Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController;)V

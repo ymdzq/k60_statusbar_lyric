@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <PreferenceScreen android:layout_width="fill_parent"
-                  android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+                  android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
   <com.android.settings.widget.ImagePreference android:title="@string/screen_projection_example_document_title"
                         android:key="pref_key_screen_projection_example_document"
                         android:summary="@string/screen_projection_example_document_summary"

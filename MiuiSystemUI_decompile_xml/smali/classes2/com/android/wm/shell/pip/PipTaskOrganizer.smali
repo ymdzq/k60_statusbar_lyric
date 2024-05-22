@@ -1,6 +1,6 @@
 .class public Lcom/android/wm/shell/pip/PipTaskOrganizer;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lcom/android/wm/shell/ShellTaskOrganizer$TaskListener;
@@ -1923,7 +1923,7 @@
     move-result v2
 
     .line 9
-    if-eqz v2, :cond_1b
+    if-eqz v2, :cond_1a
 
     .line 10
     iget v2, v1, Lcom/android/wm/shell/pip/PipTransitionState;->mState:I
@@ -1932,7 +1932,7 @@
     const/4 v4, 0x5
 
     .line 14
-    if-eq v2, v4, :cond_1b
+    if-eq v2, v4, :cond_1a
 
     .line 15
     iget-object v2, v0, Lcom/android/wm/shell/pip/PipTaskOrganizer;->mToken:Landroid/window/WindowContainerToken;
@@ -1941,7 +1941,7 @@
     if-nez v2, :cond_0
 
     .line 19
-    goto/16 :goto_e
+    goto/16 :goto_d
 
     .line 21
     :cond_0
@@ -2090,7 +2090,7 @@
     iget-object v13, v0, Lcom/android/wm/shell/pip/PipTaskOrganizer;->mSplitScreenOptional:Ljava/util/Optional;
 
     .line 114
-    if-eqz v10, :cond_a
+    if-eqz v10, :cond_8
 
     .line 116
     invoke-virtual {v15}, Ljava/util/Optional;->isEmpty()Z
@@ -2102,7 +2102,7 @@
     if-eqz v10, :cond_4
 
     .line 122
-    goto/16 :goto_8
+    goto/16 :goto_7
 
     .line 124
     :cond_4
@@ -2144,26 +2144,26 @@
     if-nez p2, :cond_6
 
     .line 146
-    goto/16 :goto_8
+    goto/16 :goto_7
 
     .line 148
     :cond_6
-    new-instance v12, Landroid/graphics/Rect;
+    new-instance v11, Landroid/graphics/Rect;
 
     .line 150
-    invoke-direct {v12}, Landroid/graphics/Rect;-><init>()V
+    invoke-direct {v11}, Landroid/graphics/Rect;-><init>()V
 
     .line 152
-    new-instance v3, Landroid/graphics/Rect;
+    new-instance v12, Landroid/graphics/Rect;
 
     .line 155
-    invoke-direct {v3}, Landroid/graphics/Rect;-><init>()V
+    invoke-direct {v12}, Landroid/graphics/Rect;-><init>()V
 
     .line 157
-    invoke-virtual {v10, v12, v3}, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->getStageBounds(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
+    invoke-virtual {v10, v11, v12}, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->getStageBounds(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
 
     .line 160
-    if-eqz p2, :cond_8
+    if-eqz p2, :cond_f
 
     .line 163
     invoke-virtual/range {p0 .. p0}, Lcom/android/wm/shell/pip/PipTaskOrganizer;->isPipToTopLeft()Z
@@ -2179,741 +2179,724 @@
 
     .line 171
     :cond_7
-    move-object v12, v3
+    move-object v11, v12
 
     .line 172
     :goto_2
-    invoke-virtual {v6, v12}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    invoke-virtual {v6, v11}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     .line 173
-    goto :goto_6
+    goto :goto_5
 
     .line 176
     :cond_8
-    if-nez v11, :cond_9
-
-    .line 177
-    goto :goto_3
-
-    .line 179
-    :cond_9
-    move-object v12, v3
-
-    .line 180
-    :goto_3
-    invoke-virtual {v6, v12}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
-
-    .line 181
-    goto :goto_8
-
-    .line 184
-    :cond_a
     invoke-virtual {v13}, Ljava/util/Optional;->isEmpty()Z
 
-    .line 185
-    move-result v3
-
-    .line 188
-    if-eqz v3, :cond_b
-
-    .line 189
-    goto :goto_8
-
-    .line 191
-    :cond_b
-    invoke-virtual {v13}, Ljava/util/Optional;->get()Ljava/lang/Object;
-
-    .line 192
-    move-result-object v3
-
-    .line 195
-    check-cast v3, Lcom/android/wm/shell/splitscreen/SplitScreenController;
-
-    .line 196
-    iget-object v10, v0, Lcom/android/wm/shell/pip/PipTaskOrganizer;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
-
-    .line 198
-    iget v10, v10, Landroid/app/ActivityManager$RunningTaskInfo;->lastParentTaskIdBeforePip:I
-
-    .line 200
-    if-lez v10, :cond_c
-
-    .line 202
-    invoke-virtual {v3, v10}, Lcom/android/wm/shell/splitscreen/SplitScreenController;->getSplitPosition(I)I
-
-    .line 204
+    .line 177
     move-result v10
 
-    .line 207
-    goto :goto_4
+    .line 180
+    if-eqz v10, :cond_9
 
-    .line 208
-    :cond_c
-    move v10, v14
+    .line 181
+    goto :goto_7
 
-    .line 209
-    :goto_4
-    if-ne v10, v14, :cond_d
+    .line 183
+    :cond_9
+    invoke-virtual {v13}, Ljava/util/Optional;->get()Ljava/lang/Object;
 
-    .line 210
-    if-nez p2, :cond_d
+    .line 184
+    move-result-object v10
 
-    .line 212
-    goto :goto_8
+    .line 187
+    check-cast v10, Lcom/android/wm/shell/splitscreen/SplitScreenController;
 
-    .line 214
-    :cond_d
-    new-instance v11, Landroid/graphics/Rect;
+    .line 188
+    iget-object v11, v0, Lcom/android/wm/shell/pip/PipTaskOrganizer;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 215
-    invoke-direct {v11}, Landroid/graphics/Rect;-><init>()V
+    .line 190
+    iget v11, v11, Landroid/app/ActivityManager$RunningTaskInfo;->lastParentTaskIdBeforePip:I
 
-    .line 217
+    .line 192
+    if-lez v11, :cond_a
+
+    .line 194
+    invoke-virtual {v10, v11}, Lcom/android/wm/shell/splitscreen/SplitScreenController;->getSplitPosition(I)I
+
+    .line 196
+    move-result v11
+
+    .line 199
+    goto :goto_3
+
+    .line 200
+    :cond_a
+    move v11, v14
+
+    .line 201
+    :goto_3
+    if-ne v11, v14, :cond_b
+
+    .line 202
+    if-nez p2, :cond_b
+
+    .line 204
+    goto :goto_7
+
+    .line 206
+    :cond_b
     new-instance v12, Landroid/graphics/Rect;
 
-    .line 220
+    .line 207
     invoke-direct {v12}, Landroid/graphics/Rect;-><init>()V
 
-    .line 222
-    invoke-virtual {v3, v11, v12}, Lcom/android/wm/shell/splitscreen/SplitScreenController;->getStageBounds(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
+    .line 209
+    new-instance v3, Landroid/graphics/Rect;
 
-    .line 225
-    if-eqz p2, :cond_f
+    .line 212
+    invoke-direct {v3}, Landroid/graphics/Rect;-><init>()V
 
-    .line 228
+    .line 214
+    invoke-virtual {v10, v12, v3}, Lcom/android/wm/shell/splitscreen/SplitScreenController;->getStageBounds(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
+
+    .line 217
+    if-eqz p2, :cond_d
+
+    .line 220
     invoke-virtual/range {p0 .. p0}, Lcom/android/wm/shell/pip/PipTaskOrganizer;->isPipToTopLeft()Z
 
+    .line 222
+    move-result v10
+
+    .line 225
+    if-eqz v10, :cond_c
+
+    .line 226
+    goto :goto_4
+
+    .line 228
+    :cond_c
+    move-object v12, v3
+
+    .line 229
+    :goto_4
+    invoke-virtual {v6, v12}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+
     .line 230
-    move-result v3
+    :goto_5
+    move v3, v7
 
     .line 233
-    if-eqz v3, :cond_e
+    goto :goto_8
 
     .line 234
-    goto :goto_5
+    :cond_d
+    if-nez v11, :cond_e
 
-    .line 236
-    :cond_e
-    move-object v11, v12
+    .line 235
+    goto :goto_6
 
     .line 237
-    :goto_5
-    invoke-virtual {v6, v11}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    :cond_e
+    move-object v12, v3
 
     .line 238
     :goto_6
-    move v3, v7
+    invoke-virtual {v6, v12}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 241
-    goto :goto_9
-
-    .line 242
+    .line 239
     :cond_f
-    if-nez v10, :cond_10
-
-    .line 243
-    goto :goto_7
-
-    .line 245
-    :cond_10
-    move-object v11, v12
-
-    .line 246
     :goto_7
-    invoke-virtual {v6, v11}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
-
-    .line 247
-    :goto_8
     move v3, v5
 
-    .line 250
-    :goto_9
-    if-eqz v3, :cond_11
+    .line 242
+    :goto_8
+    if-eqz v3, :cond_10
 
-    .line 251
+    .line 243
     const/4 v3, 0x4
 
-    .line 253
-    goto :goto_a
+    .line 245
+    goto :goto_9
 
-    .line 254
-    :cond_11
+    .line 246
+    :cond_10
     const/4 v3, 0x3
 
-    .line 255
-    :goto_a
+    .line 247
+    :goto_9
     sget-boolean v10, Lcom/android/wm/shell/transition/Transitions;->SHELL_TRANSITIONS_ROTATION:Z
 
-    .line 256
-    if-eqz v10, :cond_12
+    .line 248
+    if-eqz v10, :cond_11
 
-    .line 258
+    .line 250
     iget-object v9, v0, Lcom/android/wm/shell/pip/PipTaskOrganizer;->mToken:Landroid/window/WindowContainerToken;
 
-    .line 260
+    .line 252
     invoke-virtual {v2, v9, v5}, Landroid/window/WindowContainerTransaction;->setWindowingMode(Landroid/window/WindowContainerToken;I)Landroid/window/WindowContainerTransaction;
 
-    .line 262
+    .line 254
     iget-object v9, v0, Lcom/android/wm/shell/pip/PipTaskOrganizer;->mToken:Landroid/window/WindowContainerToken;
 
-    .line 265
+    .line 257
     invoke-virtual {v2, v9, v8}, Landroid/window/WindowContainerTransaction;->setBounds(Landroid/window/WindowContainerToken;Landroid/graphics/Rect;)Landroid/window/WindowContainerTransaction;
 
-    .line 267
+    .line 259
     move-object/from16 v18, v13
 
-    .line 270
-    goto :goto_b
+    .line 262
+    goto :goto_a
 
-    .line 272
-    :cond_12
+    .line 264
+    :cond_11
     sget-boolean v8, Lcom/android/wm/shell/protolog/ShellProtoLogCache;->WM_SHELL_PICTURE_IN_PICTURE_enabled:Z
 
-    .line 273
-    if-eqz v8, :cond_13
+    .line 265
+    if-eqz v8, :cond_12
 
-    .line 275
+    .line 267
     iget-object v8, v0, Lcom/android/wm/shell/pip/PipTaskOrganizer;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 277
+    .line 269
     iget-object v8, v8, Landroid/app/ActivityManager$RunningTaskInfo;->topActivity:Landroid/content/ComponentName;
 
-    .line 279
+    .line 271
     invoke-static {v8}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    .line 281
+    .line 273
     move-result-object v8
 
-    .line 284
+    .line 276
     invoke-static {v6}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    .line 285
+    .line 277
     move-result-object v10
 
-    .line 288
+    .line 280
     sget-object v11, Lcom/android/wm/shell/protolog/ShellProtoLogGroup;->WM_SHELL_PICTURE_IN_PICTURE:Lcom/android/wm/shell/protolog/ShellProtoLogGroup;
 
-    .line 289
+    .line 281
     filled-new-array {v8, v10}, [Ljava/lang/Object;
 
-    .line 291
+    .line 283
     move-result-object v8
 
-    .line 294
+    .line 286
     const v10, -0x654e4293
 
-    .line 295
+    .line 287
     const-string v12, "exitPip: %s, dest=%s"
 
-    .line 298
+    .line 290
     invoke-static {v11, v10, v5, v12, v8}, Lcom/android/wm/shell/protolog/ShellProtoLogImpl;->d(Lcom/android/wm/shell/protolog/ShellProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 300
-    :cond_13
+    .line 292
+    :cond_12
     iget-object v8, v0, Lcom/android/wm/shell/pip/PipTaskOrganizer;->mSurfaceControlTransactionFactory:Lcom/android/wm/shell/pip/PipSurfaceTransactionHelper$SurfaceControlTransactionFactory;
 
-    .line 303
+    .line 295
     check-cast v8, Lcom/android/wm/shell/pip/PipSurfaceTransactionHelper$VsyncSurfaceControlTransactionFactory;
 
-    .line 305
+    .line 297
     invoke-virtual {v8}, Lcom/android/wm/shell/pip/PipSurfaceTransactionHelper$VsyncSurfaceControlTransactionFactory;->getTransaction()Landroid/view/SurfaceControl$Transaction;
 
-    .line 307
+    .line 299
     move-result-object v12
 
-    .line 310
+    .line 302
     iget-object v11, v0, Lcom/android/wm/shell/pip/PipTaskOrganizer;->mLeash:Landroid/view/SurfaceControl;
 
-    .line 311
+    .line 303
     invoke-virtual {v9}, Lcom/android/wm/shell/pip/PipBoundsState;->getBounds()Landroid/graphics/Rect;
 
-    .line 313
+    .line 305
     move-result-object v16
 
-    .line 316
+    .line 308
     iget-object v8, v0, Lcom/android/wm/shell/pip/PipTaskOrganizer;->mSurfaceTransactionHelper:Lcom/android/wm/shell/pip/PipSurfaceTransactionHelper;
 
-    .line 317
+    .line 309
     const/4 v9, 0x0
 
-    .line 319
+    .line 311
     move-object v10, v6
 
-    .line 320
+    .line 312
     move-object/from16 v17, v11
 
-    .line 321
+    .line 313
     move-object/from16 v11, v16
 
-    .line 323
+    .line 315
     move-object/from16 v16, v12
 
-    .line 325
+    .line 317
     move-object/from16 v18, v13
 
-    .line 327
+    .line 319
     move-object/from16 v13, v17
 
-    .line 329
+    .line 321
     invoke-virtual/range {v8 .. v13}, Lcom/android/wm/shell/pip/PipSurfaceTransactionHelper;->scale(FLandroid/graphics/Rect;Landroid/graphics/Rect;Landroid/view/SurfaceControl$Transaction;Landroid/view/SurfaceControl;)V
 
-    .line 331
+    .line 323
     iget-object v8, v0, Lcom/android/wm/shell/pip/PipTaskOrganizer;->mLeash:Landroid/view/SurfaceControl;
 
-    .line 334
+    .line 326
     invoke-virtual {v6}, Landroid/graphics/Rect;->width()I
 
-    .line 336
+    .line 328
     move-result v9
 
-    .line 339
+    .line 331
     invoke-virtual {v6}, Landroid/graphics/Rect;->height()I
 
-    .line 340
+    .line 332
     move-result v10
 
-    .line 343
+    .line 335
     move-object/from16 v11, v16
 
-    .line 344
+    .line 336
     invoke-virtual {v11, v8, v9, v10}, Landroid/view/SurfaceControl$Transaction;->setWindowCrop(Landroid/view/SurfaceControl;II)Landroid/view/SurfaceControl$Transaction;
 
-    .line 346
+    .line 338
     iget-object v8, v0, Lcom/android/wm/shell/pip/PipTaskOrganizer;->mToken:Landroid/window/WindowContainerToken;
 
-    .line 349
+    .line 341
     invoke-virtual {v2, v8, v7}, Landroid/window/WindowContainerTransaction;->setActivityWindowingMode(Landroid/window/WindowContainerToken;I)Landroid/window/WindowContainerTransaction;
 
-    .line 351
+    .line 343
     iget-object v8, v0, Lcom/android/wm/shell/pip/PipTaskOrganizer;->mToken:Landroid/window/WindowContainerToken;
 
-    .line 354
+    .line 346
     invoke-virtual {v2, v8, v6}, Landroid/window/WindowContainerTransaction;->setBounds(Landroid/window/WindowContainerToken;Landroid/graphics/Rect;)Landroid/window/WindowContainerTransaction;
 
-    .line 356
+    .line 348
     iget-object v8, v0, Lcom/android/wm/shell/pip/PipTaskOrganizer;->mToken:Landroid/window/WindowContainerToken;
 
-    .line 359
+    .line 351
     invoke-virtual {v2, v8, v11}, Landroid/window/WindowContainerTransaction;->setBoundsChangeTransaction(Landroid/window/WindowContainerToken;Landroid/view/SurfaceControl$Transaction;)Landroid/window/WindowContainerTransaction;
 
-    .line 361
-    :goto_b
+    .line 353
+    :goto_a
     invoke-virtual {v1, v4}, Lcom/android/wm/shell/pip/PipTransitionState;->setTransitionState(I)V
 
-    .line 364
+    .line 356
     sget-boolean v1, Lcom/android/wm/shell/transition/Transitions;->ENABLE_SHELL_TRANSITIONS:Z
 
-    .line 367
-    if-eqz v1, :cond_18
+    .line 359
+    if-eqz v1, :cond_17
 
-    .line 369
+    .line 361
     invoke-static {}, Lcom/android/wm/shell/sosc/SoScUtils;->getInstance()Lcom/android/wm/shell/sosc/SoScUtils;
 
-    .line 371
+    .line 363
     move-result-object v1
 
-    .line 374
+    .line 366
     invoke-virtual {v1}, Lcom/android/wm/shell/sosc/SoScUtils;->isSoScSupported()Z
 
-    .line 375
+    .line 367
     move-result v1
 
-    .line 378
+    .line 370
     const/16 v3, 0x3ea
 
-    .line 379
+    .line 371
     iget-object v4, v0, Lcom/android/wm/shell/pip/PipTaskOrganizer;->mPipTransitionController:Lcom/android/wm/shell/pip/PipTransitionController;
 
-    .line 381
-    if-eqz v1, :cond_14
+    .line 373
+    if-eqz v1, :cond_13
+
+    .line 375
+    if-eqz p2, :cond_14
+
+    .line 377
+    invoke-virtual {v15}, Ljava/util/Optional;->isPresent()Z
+
+    .line 379
+    move-result v8
+
+    .line 382
+    if-eqz v8, :cond_14
 
     .line 383
-    if-eqz p2, :cond_15
+    iget-object v1, v0, Lcom/android/wm/shell/pip/PipTaskOrganizer;->mToken:Landroid/window/WindowContainerToken;
 
     .line 385
-    invoke-virtual {v15}, Ljava/util/Optional;->isPresent()Z
+    invoke-virtual {v2, v1, v5}, Landroid/window/WindowContainerTransaction;->setWindowingMode(Landroid/window/WindowContainerToken;I)Landroid/window/WindowContainerTransaction;
 
     .line 387
-    move-result v8
+    invoke-virtual {v15}, Ljava/util/Optional;->get()Ljava/lang/Object;
 
     .line 390
-    if-eqz v8, :cond_15
-
-    .line 391
-    iget-object v1, v0, Lcom/android/wm/shell/pip/PipTaskOrganizer;->mToken:Landroid/window/WindowContainerToken;
+    move-result-object v1
 
     .line 393
-    invoke-virtual {v2, v1, v5}, Landroid/window/WindowContainerTransaction;->setWindowingMode(Landroid/window/WindowContainerToken;I)Landroid/window/WindowContainerTransaction;
+    check-cast v1, Lcom/android/wm/shell/sosc/SoScSplitScreenController;
 
-    .line 395
-    invoke-virtual {v15}, Ljava/util/Optional;->get()Ljava/lang/Object;
+    .line 394
+    iget-object v5, v0, Lcom/android/wm/shell/pip/PipTaskOrganizer;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
+
+    .line 396
+    invoke-virtual/range {p0 .. p0}, Lcom/android/wm/shell/pip/PipTaskOrganizer;->isPipToTopLeft()Z
 
     .line 398
-    move-result-object v1
+    move-result v0
 
     .line 401
-    check-cast v1, Lcom/android/wm/shell/sosc/SoScSplitScreenController;
+    xor-int/2addr v0, v7
 
     .line 402
-    iget-object v5, v0, Lcom/android/wm/shell/pip/PipTaskOrganizer;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
-
-    .line 404
-    invoke-virtual/range {p0 .. p0}, Lcom/android/wm/shell/pip/PipTaskOrganizer;->isPipToTopLeft()Z
-
-    .line 406
-    move-result v0
-
-    .line 409
-    xor-int/2addr v0, v7
-
-    .line 410
     invoke-virtual {v1, v2, v5, v0}, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->prepareEnterSplitScreen(Landroid/window/WindowContainerTransaction;Landroid/app/ActivityManager$RunningTaskInfo;I)V
 
-    .line 411
+    .line 403
     invoke-virtual {v4, v3, v2, v6}, Lcom/android/wm/shell/pip/PipTransitionController;->startExitTransition(ILandroid/window/WindowContainerTransaction;Landroid/graphics/Rect;)V
 
-    .line 414
+    .line 406
     return-void
 
-    .line 417
-    :cond_14
-    if-eqz p2, :cond_15
+    .line 409
+    :cond_13
+    if-eqz p2, :cond_14
 
-    .line 418
+    .line 410
     invoke-virtual/range {v18 .. v18}, Ljava/util/Optional;->isPresent()Z
 
-    .line 420
+    .line 412
     move-result v8
 
-    .line 423
-    if-eqz v8, :cond_15
+    .line 415
+    if-eqz v8, :cond_14
 
-    .line 424
+    .line 416
     iget-object v1, v0, Lcom/android/wm/shell/pip/PipTaskOrganizer;->mToken:Landroid/window/WindowContainerToken;
 
-    .line 426
+    .line 418
     invoke-virtual {v2, v1, v5}, Landroid/window/WindowContainerTransaction;->setWindowingMode(Landroid/window/WindowContainerToken;I)Landroid/window/WindowContainerTransaction;
 
-    .line 428
+    .line 420
     invoke-virtual/range {v18 .. v18}, Ljava/util/Optional;->get()Ljava/lang/Object;
 
-    .line 431
+    .line 423
     move-result-object v1
 
-    .line 434
+    .line 426
     check-cast v1, Lcom/android/wm/shell/splitscreen/SplitScreenController;
 
-    .line 435
+    .line 427
     iget-object v5, v0, Lcom/android/wm/shell/pip/PipTaskOrganizer;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 437
+    .line 429
     invoke-virtual/range {p0 .. p0}, Lcom/android/wm/shell/pip/PipTaskOrganizer;->isPipToTopLeft()Z
 
-    .line 439
+    .line 431
     move-result v0
 
-    .line 442
+    .line 434
     xor-int/2addr v0, v7
 
-    .line 443
+    .line 435
     invoke-virtual {v1, v2, v5, v0}, Lcom/android/wm/shell/splitscreen/SplitScreenController;->prepareEnterSplitScreen(Landroid/window/WindowContainerTransaction;Landroid/app/ActivityManager$RunningTaskInfo;I)V
 
-    .line 444
+    .line 436
     invoke-virtual {v4, v3, v2, v6}, Lcom/android/wm/shell/pip/PipTransitionController;->startExitTransition(ILandroid/window/WindowContainerTransaction;Landroid/graphics/Rect;)V
 
-    .line 447
+    .line 439
     return-void
 
-    .line 450
-    :cond_15
-    if-eqz v1, :cond_16
+    .line 442
+    :cond_14
+    if-eqz v1, :cond_15
 
-    .line 451
+    .line 443
     invoke-virtual {v15}, Ljava/util/Optional;->isPresent()Z
 
-    .line 453
+    .line 445
     move-result v1
 
-    .line 456
-    if-eqz v1, :cond_17
+    .line 448
+    if-eqz v1, :cond_16
 
-    .line 457
+    .line 449
     invoke-virtual {v15}, Ljava/util/Optional;->get()Ljava/lang/Object;
 
-    .line 459
+    .line 451
     move-result-object v1
 
-    .line 462
+    .line 454
     check-cast v1, Lcom/android/wm/shell/sosc/SoScSplitScreenController;
 
-    .line 463
+    .line 455
     iget-object v3, v0, Lcom/android/wm/shell/pip/PipTaskOrganizer;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 465
+    .line 457
     iget v3, v3, Landroid/app/ActivityManager$RunningTaskInfo;->lastParentTaskIdBeforePip:I
 
-    .line 467
+    .line 459
     invoke-virtual {v1, v3}, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->isTaskInSplitScreen(I)Z
 
-    .line 469
+    .line 461
     move-result v3
 
-    .line 472
-    if-eqz v3, :cond_17
+    .line 464
+    if-eqz v3, :cond_16
 
-    .line 473
+    .line 465
     iget-object v0, v0, Lcom/android/wm/shell/pip/PipTaskOrganizer;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 475
+    .line 467
     iget v0, v0, Landroid/app/ActivityManager$RunningTaskInfo;->lastParentTaskIdBeforePip:I
 
-    .line 477
+    .line 469
     invoke-virtual {v1, v0}, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->getStageOfTask(I)I
 
-    .line 479
+    .line 471
     move-result v0
 
-    .line 482
+    .line 474
     invoke-virtual {v1, v2, v0}, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->prepareExitSplitScreen(Landroid/window/WindowContainerTransaction;I)V
 
-    .line 483
-    goto :goto_c
+    .line 475
+    goto :goto_b
 
-    .line 486
-    :cond_16
+    .line 478
+    :cond_15
     invoke-virtual/range {v18 .. v18}, Ljava/util/Optional;->isPresent()Z
 
-    .line 487
+    .line 479
     move-result v1
 
-    .line 490
-    if-eqz v1, :cond_17
+    .line 482
+    if-eqz v1, :cond_16
 
-    .line 491
+    .line 483
     invoke-virtual/range {v18 .. v18}, Ljava/util/Optional;->get()Ljava/lang/Object;
 
-    .line 493
+    .line 485
     move-result-object v1
 
-    .line 496
+    .line 488
     check-cast v1, Lcom/android/wm/shell/splitscreen/SplitScreenController;
 
-    .line 497
+    .line 489
     iget-object v3, v0, Lcom/android/wm/shell/pip/PipTaskOrganizer;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 499
+    .line 491
     iget v3, v3, Landroid/app/ActivityManager$RunningTaskInfo;->lastParentTaskIdBeforePip:I
 
-    .line 501
+    .line 493
     invoke-virtual {v1, v3}, Lcom/android/wm/shell/splitscreen/SplitScreenController;->isTaskInSplitScreen(I)Z
 
-    .line 503
+    .line 495
     move-result v3
 
-    .line 506
-    if-eqz v3, :cond_17
+    .line 498
+    if-eqz v3, :cond_16
 
-    .line 507
+    .line 499
     iget-object v0, v0, Lcom/android/wm/shell/pip/PipTaskOrganizer;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 509
+    .line 501
     iget v0, v0, Landroid/app/ActivityManager$RunningTaskInfo;->lastParentTaskIdBeforePip:I
 
-    .line 511
+    .line 503
     invoke-virtual {v1, v0}, Lcom/android/wm/shell/splitscreen/SplitScreenController;->getStageOfTask(I)I
 
-    .line 513
+    .line 505
     move-result v0
 
-    .line 516
+    .line 508
     invoke-virtual {v1, v2, v0}, Lcom/android/wm/shell/splitscreen/SplitScreenController;->prepareExitSplitScreen(Landroid/window/WindowContainerTransaction;I)V
+
+    .line 509
+    :cond_16
+    :goto_b
+    const/16 v0, 0x3e9
+
+    .line 512
+    invoke-virtual {v4, v0, v2, v6}, Lcom/android/wm/shell/pip/PipTransitionController;->startExitTransition(ILandroid/window/WindowContainerTransaction;Landroid/graphics/Rect;)V
+
+    .line 514
+    return-void
 
     .line 517
     :cond_17
-    :goto_c
-    const/16 v0, 0x3e9
-
-    .line 520
-    invoke-virtual {v4, v0, v2, v6}, Lcom/android/wm/shell/pip/PipTransitionController;->startExitTransition(ILandroid/window/WindowContainerTransaction;Landroid/graphics/Rect;)V
-
-    .line 522
-    return-void
-
-    .line 525
-    :cond_18
     invoke-static {}, Lcom/android/wm/shell/sosc/SoScUtils;->getInstance()Lcom/android/wm/shell/sosc/SoScUtils;
 
-    .line 526
+    .line 518
     move-result-object v1
 
-    .line 529
+    .line 521
     invoke-virtual {v1}, Lcom/android/wm/shell/sosc/SoScUtils;->isSoScSupported()Z
 
-    .line 530
+    .line 522
     move-result v1
 
-    .line 533
+    .line 525
     const/4 v4, 0x2
 
-    .line 534
-    if-eqz v1, :cond_19
+    .line 526
+    if-eqz v1, :cond_18
 
-    .line 535
+    .line 527
     invoke-virtual {v15}, Ljava/util/Optional;->isPresent()Z
 
-    .line 537
+    .line 529
     move-result v1
 
-    .line 540
-    if-eqz v1, :cond_1a
+    .line 532
+    if-eqz v1, :cond_19
 
-    .line 541
+    .line 533
     invoke-virtual {v15}, Ljava/util/Optional;->get()Ljava/lang/Object;
 
-    .line 543
+    .line 535
     move-result-object v1
 
-    .line 546
+    .line 538
     check-cast v1, Lcom/android/wm/shell/sosc/SoScSplitScreenController;
 
-    .line 547
+    .line 539
     iget-object v5, v0, Lcom/android/wm/shell/pip/PipTaskOrganizer;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 549
+    .line 541
     iget v5, v5, Landroid/app/ActivityManager$RunningTaskInfo;->lastParentTaskIdBeforePip:I
 
-    .line 551
+    .line 543
     invoke-virtual {v1, v5}, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->isTaskInSplitScreen(I)Z
 
-    .line 553
+    .line 545
     move-result v5
 
-    .line 556
-    if-eqz v5, :cond_1a
+    .line 548
+    if-eqz v5, :cond_19
 
-    .line 557
+    .line 549
     invoke-virtual {v1, v14, v4}, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->exitSplitScreen(II)V
 
-    .line 559
-    goto :goto_d
+    .line 551
+    goto :goto_c
 
-    .line 562
-    :cond_19
+    .line 554
+    :cond_18
     invoke-virtual/range {v18 .. v18}, Ljava/util/Optional;->isPresent()Z
 
-    .line 563
+    .line 555
     move-result v1
 
-    .line 566
-    if-eqz v1, :cond_1a
+    .line 558
+    if-eqz v1, :cond_19
 
-    .line 567
+    .line 559
     invoke-virtual/range {v18 .. v18}, Ljava/util/Optional;->get()Ljava/lang/Object;
 
-    .line 569
+    .line 561
     move-result-object v1
 
-    .line 572
+    .line 564
     check-cast v1, Lcom/android/wm/shell/splitscreen/SplitScreenController;
 
-    .line 573
+    .line 565
     iget-object v5, v0, Lcom/android/wm/shell/pip/PipTaskOrganizer;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 575
+    .line 567
     iget v5, v5, Landroid/app/ActivityManager$RunningTaskInfo;->lastParentTaskIdBeforePip:I
 
-    .line 577
+    .line 569
     invoke-virtual {v1, v5}, Lcom/android/wm/shell/splitscreen/SplitScreenController;->isTaskInSplitScreen(I)Z
 
-    .line 579
+    .line 571
     move-result v5
 
-    .line 582
-    if-eqz v5, :cond_1a
+    .line 574
+    if-eqz v5, :cond_19
 
-    .line 583
+    .line 575
     invoke-virtual {v1, v14, v4}, Lcom/android/wm/shell/splitscreen/SplitScreenController;->exitSplitScreen(II)V
 
-    .line 585
-    :cond_1a
-    :goto_d
+    .line 577
+    :cond_19
+    :goto_c
     iget-object v1, v0, Lcom/android/wm/shell/pip/PipTaskOrganizer;->mSyncTransactionQueue:Lcom/android/wm/shell/common/SyncTransactionQueue;
 
-    .line 588
+    .line 580
     invoke-virtual {v1, v2}, Lcom/android/wm/shell/common/SyncTransactionQueue;->queue(Landroid/window/WindowContainerTransaction;)V
 
-    .line 590
+    .line 582
     new-instance v2, Lcom/android/wm/shell/pip/PipTaskOrganizer$$ExternalSyntheticLambda7;
 
-    .line 593
+    .line 585
     move/from16 v4, p1
 
-    .line 595
+    .line 587
     invoke-direct {v2, v0, v6, v3, v4}, Lcom/android/wm/shell/pip/PipTaskOrganizer$$ExternalSyntheticLambda7;-><init>(Lcom/android/wm/shell/pip/PipTaskOrganizer;Landroid/graphics/Rect;II)V
 
-    .line 597
+    .line 589
     invoke-virtual {v1, v2}, Lcom/android/wm/shell/common/SyncTransactionQueue;->runInSync(Lcom/android/wm/shell/common/SyncTransactionQueue$TransactionRunnable;)V
 
-    .line 600
+    .line 592
     return-void
 
-    .line 603
-    :cond_1b
-    :goto_e
+    .line 595
+    :cond_1a
+    :goto_d
     sget-boolean v2, Lcom/android/wm/shell/protolog/ShellProtoLogCache;->WM_SHELL_PICTURE_IN_PICTURE_enabled:Z
 
-    .line 604
-    if-eqz v2, :cond_1c
+    .line 596
+    if-eqz v2, :cond_1b
 
-    .line 606
+    .line 598
     iget v1, v1, Lcom/android/wm/shell/pip/PipTransitionState;->mState:I
 
-    .line 608
+    .line 600
     int-to-long v1, v1
 
-    .line 610
+    .line 602
     iget-object v0, v0, Lcom/android/wm/shell/pip/PipTaskOrganizer;->mToken:Landroid/window/WindowContainerToken;
 
-    .line 611
+    .line 603
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    .line 613
+    .line 605
     move-result-object v0
 
-    .line 616
+    .line 608
     sget-object v3, Lcom/android/wm/shell/protolog/ShellProtoLogGroup;->WM_SHELL_PICTURE_IN_PICTURE:Lcom/android/wm/shell/protolog/ShellProtoLogGroup;
 
-    .line 617
+    .line 609
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    .line 619
+    .line 611
     move-result-object v1
 
-    .line 622
+    .line 614
     const-string v2, "PipTaskOrganizer"
 
-    .line 623
+    .line 615
     filled-new-array {v2, v1, v0}, [Ljava/lang/Object;
 
-    .line 625
+    .line 617
     move-result-object v0
 
-    .line 628
+    .line 620
     const v1, -0x5ea72dce
 
-    .line 629
+    .line 621
     const-string v2, "%s: Not allowed to exitPip in current state mState=%d mToken=%s"
 
-    .line 632
+    .line 624
     const/4 v4, 0x4
 
-    .line 634
+    .line 626
     invoke-static {v3, v1, v4, v2, v0}, Lcom/android/wm/shell/protolog/ShellProtoLogImpl;->wtf(Lcom/android/wm/shell/protolog/ShellProtoLogGroup;IILjava/lang/String;[Ljava/lang/Object;)V
 
-    .line 635
-    :cond_1c
+    .line 627
+    :cond_1b
     return-void
-    .line 638
+    .line 630
 .end method
 
 .method public final fadeExistingPip(Z)V

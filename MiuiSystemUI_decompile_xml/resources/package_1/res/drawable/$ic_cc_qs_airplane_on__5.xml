@@ -1,27 +1,27 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <set android:ordering="together" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f08017f"
+  <objectAnimator android:interpolator="@drawable/$$ic_cc_qs_airplane_on__5__0"
                   android:duration="933"
                   android:startOffset="0"
                   android:propertyName="translateXY"
                   android:pathData="M 0,0C 0,0 0,0 0,0"
                   android:propertyXName="translateX"
                   android:propertyYName="translateY" />
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f080180"
+  <objectAnimator android:interpolator="@drawable/$$ic_cc_qs_airplane_on__5__1"
                   android:duration="900"
                   android:startOffset="933"
                   android:propertyName="translateXY"
                   android:pathData="M 0,0C 0,0 -3,-2 -3,-2"
                   android:propertyXName="translateX"
                   android:propertyYName="translateY" />
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f080181"
+  <objectAnimator android:interpolator="@drawable/$$ic_cc_qs_airplane_on__5__2"
                   android:duration="917"
                   android:startOffset="1833"
                   android:propertyName="translateXY"
                   android:pathData="M -3,-2C -3,-2 2,1 2,1"
                   android:propertyXName="translateX"
                   android:propertyYName="translateY" />
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f080182"
+  <objectAnimator android:interpolator="@drawable/$$ic_cc_qs_airplane_on__5__3"
                   android:duration="750"
                   android:startOffset="2750"
                   android:propertyName="translateXY"

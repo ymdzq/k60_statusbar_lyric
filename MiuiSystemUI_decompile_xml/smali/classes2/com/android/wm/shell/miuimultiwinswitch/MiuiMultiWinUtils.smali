@@ -1,6 +1,6 @@
 .class public Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # static fields
@@ -3811,7 +3811,7 @@
     .line 50
 .end method
 
-.method public static getFreeformBoundsAndScale(Landroid/content/Context;Ljava/lang/String;IZLandroid/graphics/RectF;)F
+.method public static getFreeformBoundsAndScale(Landroid/content/Context;Ljava/lang/String;Landroid/app/TaskInfo;IZLandroid/graphics/RectF;)F
     .locals 7
 
     .line 1
@@ -3821,10 +3821,10 @@
     move-result-object v0
 
     .line 5
-    invoke-virtual {v0, p2, p1}, Lcom/xiaomi/freeform/MiuiFreeformStub;->isOrientationLandscape(ILjava/lang/String;)Z
+    invoke-virtual {v0, p3, p1}, Lcom/xiaomi/freeform/MiuiFreeformStub;->isOrientationLandscape(ILjava/lang/String;)Z
 
     .line 6
-    move-result p2
+    move-result p3
 
     .line 9
     invoke-static {}, Lcom/xiaomi/freeform/MiuiFreeformStub;->getInstance()Lcom/xiaomi/freeform/MiuiFreeformStub;
@@ -3833,10 +3833,10 @@
     move-result-object v0
 
     .line 13
-    invoke-virtual {v0, p0, p1}, Lcom/xiaomi/freeform/MiuiFreeformStub;->isNormalFreeForm(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-virtual {v0, p0, p1, p2}, Lcom/xiaomi/freeform/MiuiFreeformStub;->isNormalFreeForm(Landroid/content/Context;Ljava/lang/String;Landroid/app/TaskInfo;)Z
 
     .line 14
-    move-result v0
+    move-result p2
 
     .line 17
     invoke-static {}, Lcom/xiaomi/freeform/MiuiFreeformStub;->getInstance()Lcom/xiaomi/freeform/MiuiFreeformStub;
@@ -3848,34 +3848,34 @@
     move-object v2, p0
 
     .line 22
-    move v3, p3
+    move v3, p4
 
     .line 23
-    move v4, p2
+    move v4, p3
 
     .line 24
     move-object v5, p1
 
     .line 25
-    move v6, v0
+    move v6, p2
 
     .line 26
     invoke-virtual/range {v1 .. v6}, Lcom/xiaomi/freeform/MiuiFreeformStub;->getPossibleBounds(Landroid/content/Context;ZZLjava/lang/String;Z)Landroid/graphics/RectF;
 
     .line 27
-    move-result-object p3
+    move-result-object p4
 
     .line 30
-    invoke-virtual {p4, p3}, Landroid/graphics/RectF;->set(Landroid/graphics/RectF;)V
+    invoke-virtual {p5, p4}, Landroid/graphics/RectF;->set(Landroid/graphics/RectF;)V
 
     .line 31
     invoke-static {}, Lcom/xiaomi/freeform/MiuiFreeformStub;->getInstance()Lcom/xiaomi/freeform/MiuiFreeformStub;
 
     .line 34
-    move-result-object p3
+    move-result-object p4
 
     .line 37
-    invoke-virtual {p3, p0, p2, v0, p1}, Lcom/xiaomi/freeform/MiuiFreeformStub;->getOriFreeformScale(Landroid/content/Context;ZZLjava/lang/String;)F
+    invoke-virtual {p4, p0, p3, p2, p1}, Lcom/xiaomi/freeform/MiuiFreeformStub;->getOriFreeformScale(Landroid/content/Context;ZZLjava/lang/String;)F
 
     .line 38
     move-result p0

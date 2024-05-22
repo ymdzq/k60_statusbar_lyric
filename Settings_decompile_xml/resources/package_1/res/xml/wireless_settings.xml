@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8' ?>
-<PreferenceScreen android:title="@string/more_connection" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+<PreferenceScreen android:title="@string/more_connection" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
   <com.android.settingslib.RestrictedPreference android:title="@string/wifi_tether_settings_title"
                         android:key="wifi_tether_settings">
     <intent android:targetPackage="com.android.settings"

@@ -1,6 +1,6 @@
 .class Lcom/android/wm/shell/compatui/CompatUILayout;
 .super Landroid/widget/LinearLayout;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # static fields
@@ -231,7 +231,7 @@
     check-cast v1, Landroid/widget/TextView;
 
     .line 136
-    const v2, 0x7f130a30    # @string/restart_button_description 'Tap to restart this app for a better view.'
+    const v2, 0x7f130a36    # @string/restart_button_description 'Tap to restart this app for a better view.'
 
     .line 138
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V

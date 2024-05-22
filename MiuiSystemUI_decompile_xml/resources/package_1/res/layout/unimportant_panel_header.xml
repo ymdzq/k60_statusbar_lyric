@@ -9,7 +9,7 @@
                       android:layout_height="@dimen/fold_miui_header_height"
                       android:importantForAccessibility="no"
                       android:layout_marginStart="@dimen/fold_miui_header_margin"
-                      android:layout_marginEnd="@dimen/fold_miui_header_margin" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto">
+                      android:layout_marginEnd="@dimen/fold_miui_header_margin" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <ImageView android:id="@id/unimportant_back"
              android:paddingTop="@dimen/fold_header_icon_back_padding_top"
              android:paddingBottom="@dimen/fold_header_icon_back_padding_bottom"
@@ -21,9 +21,9 @@
              android:fontFamily="@android:string/config_wearMediaControlsPackage"
              android:paddingStart="@dimen/fold_header_icon_back_padding_horizontal"
              android:paddingEnd="@dimen/fold_header_icon_back_padding_horizontal"
-             systemui:r0x7f040430="@id/unimportant_title"
-             systemui:r0x7f040443="0"
-             systemui:r0x7f040447="0" />
+             app:r0x7f040430="@id/unimportant_title"
+             app:r0x7f040443="0"
+             app:r0x7f040447="0" />
   <TextView android:textSize="@dimen/fold_header_title"
             android:textColor="@color/status_bar_clock_color"
             android:gravity="center"
@@ -32,18 +32,18 @@
             android:layout_height="wrap_content"
             android:text="@string/miui_unimportant_notifications"
             android:fontFamily="@android:string/config_wearMediaControlsPackage"
-            systemui:r0x7f040429="@id/unimportant_back"
-            systemui:r0x7f040430="@id/unimportant_icon"
-            systemui:r0x7f040442="@id/unimportant_back"
-            systemui:r0x7f040447="@id/unimportant_back" />
+            app:r0x7f040429="@id/unimportant_back"
+            app:r0x7f040430="@id/unimportant_icon"
+            app:r0x7f040442="@id/unimportant_back"
+            app:r0x7f040447="@id/unimportant_back" />
   <ImageView android:id="@id/unimportant_icon"
              android:visibility="invisible"
              android:layout_width="@dimen/fold_header_icon_settings_width"
              android:layout_height="@dimen/fold_header_icon_settings_width"
              android:src="@drawable/notification_panel_manage_unimportant_icon"
              android:tint="@color/status_bar_clock_color"
-             systemui:r0x7f040429="@id/unimportant_back"
-             systemui:r0x7f04042f="0"
-             systemui:r0x7f040442="@id/unimportant_title"
-             systemui:r0x7f040447="@id/unimportant_back" />
+             app:r0x7f040429="@id/unimportant_back"
+             app:r0x7f04042f="0"
+             app:r0x7f040442="@id/unimportant_title"
+             app:r0x7f040447="@id/unimportant_back" />
 </com.android.systemui.statusbar.notification.unimportant.FoldPanelHeader>

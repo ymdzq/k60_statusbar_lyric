@@ -1,6 +1,6 @@
 .class public Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeController;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskRepository$ActiveTaskListener;
@@ -2714,39 +2714,39 @@
 
     .line 37
     :cond_1
-    iget-object p1, p1, Landroid/app/ActivityManager$RunningTaskInfo;->realActivity:Landroid/content/ComponentName;
+    iget-object v0, p1, Landroid/app/ActivityManager$RunningTaskInfo;->realActivity:Landroid/content/ComponentName;
 
     .line 38
-    if-nez p1, :cond_2
+    if-nez v0, :cond_2
 
     .line 40
-    const-string p1, ""
+    const-string v0, ""
 
     .line 42
     goto :goto_1
 
     .line 44
     :cond_2
-    invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     .line 45
-    move-result-object p1
+    move-result-object v0
 
     .line 48
     :goto_1
-    move-object v7, p1
+    move-object v7, v0
 
     .line 49
     invoke-static {}, Lcom/xiaomi/freeform/MiuiFreeformStub;->getInstance()Lcom/xiaomi/freeform/MiuiFreeformStub;
 
     .line 50
-    move-result-object p1
+    move-result-object v0
 
     .line 53
-    iget-object v0, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeController;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeController;->mContext:Landroid/content/Context;
 
     .line 54
-    invoke-virtual {p1, v0, v7}, Lcom/xiaomi/freeform/MiuiFreeformStub;->isNormalFreeForm(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-virtual {v0, v2, v7, p1}, Lcom/xiaomi/freeform/MiuiFreeformStub;->isNormalFreeForm(Landroid/content/Context;Ljava/lang/String;Landroid/app/TaskInfo;)Z
 
     .line 56
     move-result p1

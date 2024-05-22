@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <miuix.springback.view.SpringBackLayout android:layout_width="fill_parent"
                       android:layout_height="fill_parent"
-                      settings:scrollableView="@id/id_0x7f0a093b" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+                      app:scrollableView="@id/id_0x7f0a093b" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <miuix.core.widget.NestedScrollView android:id="@id/id_0x7f0a093b"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent">
@@ -27,7 +27,7 @@
                               android:inputType="textNoSuggestions"
                               android:imeOptions="actionDone"
                               android:textAlignment="viewEnd"
-                              settings:miuixAppcompatLabel="@string/wifi_ssid"
+                              app:miuixAppcompatLabel="@string/wifi_ssid"
                               style="@style/input_capsule_horizontal" />
       </LinearLayout>
       <LinearLayout android:id="@id/fields"
@@ -49,8 +49,8 @@
                                 android:inputType="textPassword"
                                 android:imeOptions="actionDone"
                                 android:textAlignment="viewEnd"
-                                settings:miuixAppcompatLabel="@string/wifi_password"
-                                settings:miuixAppcompatWidgetManager="miuix.androidbasewidget.widget.PasswordWidgetManager"
+                                app:miuixAppcompatLabel="@string/wifi_password"
+                                app:miuixAppcompatWidgetManager="miuix.androidbasewidget.widget.PasswordWidgetManager"
                                 style="@style/input_capsule_horizontal" />
         </LinearLayout>
       </LinearLayout>

@@ -4,7 +4,7 @@
               android:layout_width="fill_parent"
               android:layout_height="wrap_content"
               android:minHeight="?android:attr/listPreferredItemHeightSmall"
-              android:paddingEnd="?android:attr/listPreferredItemPaddingEnd" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto">
+              android:paddingEnd="?android:attr/listPreferredItemPaddingEnd" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
   <LinearLayout android:gravity="center"
                 android:orientation="vertical"
                 android:id="@android:id/widget_frame"
@@ -24,8 +24,8 @@
     <androidx.preference.internal.PreferenceImageView android:id="@android:id/icon"
                           android:layout_width="wrap_content"
                           android:layout_height="wrap_content"
-                          systemui:r0x7f0404de="@dimen/secondary_app_icon_size"
-                          systemui:r0x7f0404e5="@dimen/secondary_app_icon_size" />
+                          settings:r0x7f0404de="@dimen/secondary_app_icon_size"
+                          settings:r0x7f0404e5="@dimen/secondary_app_icon_size" />
   </LinearLayout>
   <LinearLayout android:orientation="vertical"
                 android:paddingTop="16.0dp"

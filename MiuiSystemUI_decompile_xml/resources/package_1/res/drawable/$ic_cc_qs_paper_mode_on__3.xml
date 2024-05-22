@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <set android:ordering="together" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f08028d"
+  <objectAnimator android:interpolator="@drawable/$$ic_cc_qs_paper_mode_on__3__0"
                   android:duration="167"
                   android:startOffset="0"
                   android:valueFrom="M-0.3 -24.75 C18.79,-24.54 35.21,-9.1 38.36,0.5 C38.65,1.4 38.67,3.68 38.32,4.63 C34.84,14.09 20.46,30.17 -0.25,30.17 C-20.83,30.17 -34.54,14.71 -38.75,4.63 C-39.48,2.88 -39.35,1.27 -38.75,-0.17 C-34.39,-10.58 -18.58,-24.95 -0.3,-24.75c "
                   android:valueTo="M-1.05 2.14 C13.09,2.15 28.37,2.05 38.36,2.13 C38.52,2.52 38.59,2.77 38.32,3.13 C29.12,3.24 12.52,3.21 -1.06,3.17 C-15.23,3.13 -28.1,3.24 -38.56,3.07 C-39.04,2.9 -38.98,2.34 -38.62,2.15 C-29.38,2.09 -14.91,2.14 -1.05,2.14c "
                   android:valueType="pathType"
                   android:propertyName="pathData" />
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f08028e"
+  <objectAnimator android:interpolator="@drawable/$$ic_cc_qs_paper_mode_on__3__1"
                   android:duration="383"
                   android:startOffset="167"
                   android:valueFrom="M-1.05 2.14 C13.09,2.15 28.37,2.05 38.36,2.13 C38.52,2.52 38.59,2.77 38.32,3.13 C29.12,3.24 12.52,3.21 -1.06,3.17 C-15.23,3.13 -28.1,3.24 -38.56,3.07 C-39.04,2.9 -38.98,2.34 -38.62,2.15 C-29.38,2.09 -14.91,2.14 -1.05,2.14c "

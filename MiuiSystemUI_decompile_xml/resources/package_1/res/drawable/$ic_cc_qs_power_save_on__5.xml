@@ -1,20 +1,20 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <set android:ordering="together" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f08029b"
+  <objectAnimator android:interpolator="@drawable/$$ic_cc_qs_power_save_on__5__0"
                   android:duration="67"
                   android:startOffset="0"
                   android:valueFrom="M118.87 -35 C118.87,-35 12.73,-35 12.73,-35 C12.73,-35 12.73,35.33 12.73,35.33 C12.73,35.33 118.87,35.33 118.87,35.33 C118.87,35.33 118.87,-35 118.87,-35c "
                   android:valueTo="M118.87 -35 C118.87,-35 12.73,-35 12.73,-35 C12.73,-35 12.73,35.33 12.73,35.33 C12.73,35.33 118.87,35.33 118.87,35.33 C118.87,35.33 118.87,-35 118.87,-35c "
                   android:valueType="pathType"
                   android:propertyName="pathData" />
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f08029c"
+  <objectAnimator android:interpolator="@drawable/$$ic_cc_qs_power_save_on__5__1"
                   android:duration="167"
                   android:startOffset="67"
                   android:valueFrom="M118.87 -35 C118.87,-35 12.73,-35 12.73,-35 C12.73,-35 12.73,35.33 12.73,35.33 C12.73,35.33 118.87,35.33 118.87,35.33 C118.87,35.33 118.87,-35 118.87,-35c "
                   android:valueTo="M41.12 -35 C41.12,-35 -65.02,-35 -65.02,-35 C-65.02,-35 -65.02,35.34 -65.02,35.34 C-65.02,35.34 41.12,35.34 41.12,35.34 C41.12,35.34 41.12,-35 41.12,-35c "
                   android:valueType="pathType"
                   android:propertyName="pathData" />
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f08029d"
+  <objectAnimator android:interpolator="@drawable/$$ic_cc_qs_power_save_on__5__2"
                   android:duration="450"
                   android:startOffset="233"
                   android:valueFrom="M41.12 -35 C41.12,-35 -65.02,-35 -65.02,-35 C-65.02,-35 -65.02,35.34 -65.02,35.34 C-65.02,35.34 41.12,35.34 41.12,35.34 C41.12,35.34 41.12,-35 41.12,-35c "

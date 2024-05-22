@@ -4203,7 +4203,7 @@
       <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED"
                  android:value="true" />
     </activity>
-    <activity-alias android:label="@string/string_0x7f132303"
+    <activity-alias android:label="@string/string_0x7f13230b"
                     android:name="com.android.settings.SoundSettings"
                     android:exported="true"
                     android:targetActivity="com.android.settings.MiuiSoundSettingsActivity">
@@ -6298,12 +6298,14 @@
       </intent-filter>
     </receiver>
     <activity android:theme="@style/AccountAp.Settings"
+              android:label="@string/lyra_account_ap_title"
               android:icon="@drawable/smarthub_icon"
               android:name="com.android.settings.wifi.tether.AccountApSettingsActivity"
               android:permission="miui.permission.USE_INTERNAL_GENERAL_API"
               android:exported="true"
               android:excludeFromRecents="true"
-              android:launchMode="singleTop">
+              android:launchMode="singleTop"
+              android:screenOrientation="portrait">
       <intent-filter>
         <action android:name="miui.intent.action.ACCOUNT_AP_SETTINGS" />
         <category android:name="android.intent.category.DEFAULT" />

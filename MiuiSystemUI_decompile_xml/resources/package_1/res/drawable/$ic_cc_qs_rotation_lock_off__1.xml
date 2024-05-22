@@ -1,27 +1,27 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <set android:ordering="together" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f0802b9"
+  <objectAnimator android:interpolator="@drawable/$$ic_cc_qs_rotation_lock_off__1__0"
                   android:duration="183"
                   android:startOffset="0"
                   android:valueFrom="0"
                   android:valueTo="15"
                   android:valueType="floatType"
                   android:propertyName="rotation" />
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f0802ba"
+  <objectAnimator android:interpolator="@drawable/$$ic_cc_qs_rotation_lock_off__1__1"
                   android:duration="200"
                   android:startOffset="183"
                   android:valueFrom="15"
                   android:valueTo="-3"
                   android:valueType="floatType"
                   android:propertyName="rotation" />
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f0802bb"
+  <objectAnimator android:interpolator="@drawable/$$ic_cc_qs_rotation_lock_off__1__2"
                   android:duration="167"
                   android:startOffset="383"
                   android:valueFrom="-3"
                   android:valueTo="0.5"
                   android:valueType="floatType"
                   android:propertyName="rotation" />
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f0802bc"
+  <objectAnimator android:interpolator="@drawable/$$ic_cc_qs_rotation_lock_off__1__3"
                   android:duration="100"
                   android:startOffset="550"
                   android:valueFrom="0.5"

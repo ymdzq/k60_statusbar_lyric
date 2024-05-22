@@ -1,25 +1,25 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <PreferenceScreen android:title="@string/full_screen_keyboard_optimization"
-                  android:key="full_screen_keyboard_optimization" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+                  android:key="full_screen_keyboard_optimization" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <com.android.settings.inputmethod.FullScreenInputMethodPreference android:key="full_screen_keyboard_optimization_image" />
   <PreferenceCategory android:title="@string/bottom_function_settings"
                       android:key="bottom_function_settings">
     <miuix.preference.DropDownPreference android:title="@string/left_function_key"
                           android:key="left_function_key"
-                          settings:entries="@array/input_method_function_title"
-                          settings:entryIcons="@array/input_method_function_icons"
-                          settings:entrySummaries="@array/input_method_function_des"
-                          settings:entryValues="@array/input_method_function_title" />
+                          app:entries="@array/input_method_function_title"
+                          app:entryIcons="@array/input_method_function_icons"
+                          app:entrySummaries="@array/input_method_function_des"
+                          app:entryValues="@array/input_method_function_title" />
     <miuix.preference.DropDownPreference android:title="@string/right_function_key"
                           android:key="right_function_key"
-                          settings:entries="@array/input_method_function_title"
-                          settings:entryIcons="@array/input_method_function_icons"
-                          settings:entrySummaries="@array/input_method_function_des"
-                          settings:entryValues="@array/input_method_function_title" />
+                          app:entries="@array/input_method_function_title"
+                          app:entryIcons="@array/input_method_function_icons"
+                          app:entrySummaries="@array/input_method_function_des"
+                          app:entryValues="@array/input_method_function_title" />
     <miuix.preference.DropDownPreference android:title="@string/middle_function_key"
                           android:key="middle_function_key"
-                          settings:entries="@array/input_method_middle_function_title"
-                          settings:entrySummaries="@array/input_method_middle_function_des"
-                          settings:entryValues="@array/input_method_middle_function_title" />
+                          app:entries="@array/input_method_middle_function_title"
+                          app:entrySummaries="@array/input_method_middle_function_des"
+                          app:entryValues="@array/input_method_middle_function_title" />
   </PreferenceCategory>
 </PreferenceScreen>

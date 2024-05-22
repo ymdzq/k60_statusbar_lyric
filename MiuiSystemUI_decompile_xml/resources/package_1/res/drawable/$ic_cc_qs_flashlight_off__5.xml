@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <set android:ordering="together" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f0801e8"
+  <objectAnimator android:interpolator="@drawable/$$ic_cc_qs_flashlight_off__5__0"
                   android:duration="183"
                   android:startOffset="0"
                   android:valueFrom="M0.73 3.25 C0.59,3.32 0.4,3.32 0.02,3.32 C-0.36,3.32 -0.55,3.32 -0.69,3.25 C-0.83,3.18 -0.93,3.07 -1,2.93 C-1.07,2.79 -1.07,2.6 -1.07,2.22 C-1.07,2.22 -1.07,-2.22 -1.07,-2.22 C-1.07,-2.6 -1.07,-2.79 -1,-2.93 C-0.93,-3.07 -0.83,-3.18 -0.69,-3.24 C-0.55,-3.32 -0.36,-3.32 0.02,-3.32 C0.4,-3.32 0.59,-3.32 0.73,-3.24 C0.87,-3.18 0.98,-3.07 1.04,-2.93 C1.12,-2.79 1.12,-2.6 1.12,-2.22 C1.12,-2.22 1.12,2.22 1.12,2.22 C1.12,2.6 1.12,2.79 1.04,2.93 C0.98,3.07 0.87,3.18 0.73,3.25c "

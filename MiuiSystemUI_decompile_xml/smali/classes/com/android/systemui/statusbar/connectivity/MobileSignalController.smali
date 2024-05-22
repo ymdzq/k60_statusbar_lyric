@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/connectivity/MobileSignalController;
 .super Lcom/android/systemui/statusbar/connectivity/SignalController;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lcom/android/systemui/MiuiOperatorCustomizedPolicy$MiuiOperatorConfigChangeListener;
@@ -28,6 +28,8 @@
 .field public mDelayUpdateTelephony:Z
 
 .field public mEnableVolteForSlot:Z
+
+.field public final mFeatureRelayData:Z
 
 .field public mFiveGConnected:Z
 
@@ -158,7 +160,7 @@
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Lcom/android/systemui/statusbar/mobile/MobileMappings$Config;ZLandroid/telephony/TelephonyManager;Lcom/android/systemui/statusbar/connectivity/CallbackHandler;Lcom/android/systemui/statusbar/connectivity/NetworkControllerImpl;Landroid/telephony/SubscriptionInfo;Lcom/android/systemui/statusbar/mobile/MobileStatusTracker$SubscriptionDefaults;Landroid/os/Looper;Lcom/android/systemui/util/CallStateControllerImpl;Lcom/android/systemui/MiuiOperatorCustomizedPolicy;)V
-    .locals 11
+    .locals 12
 
     .line 1
     move-object v6, p0
@@ -167,754 +169,784 @@
     move v7, p3
 
     .line 3
-    move-object v8, p4
+    move-object/from16 v8, p4
 
     .line 4
     move-object/from16 v9, p11
 
-    .line 5
+    .line 6
     new-instance v0, Ljava/lang/StringBuilder;
 
-    .line 7
+    .line 8
     const-string v1, "MobileSignalController("
 
-    .line 9
+    .line 10
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 11
+    .line 12
     invoke-virtual/range {p7 .. p7}, Landroid/telephony/SubscriptionInfo;->getSubscriptionId()I
 
-    .line 14
+    .line 15
     move-result v1
-
-    .line 17
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     .line 18
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 19
     const-string v1, ")"
 
-    .line 21
+    .line 22
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 23
+    .line 24
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 26
+    .line 27
     move-result-object v1
-
-    .line 29
-    const/4 v3, 0x0
 
     .line 30
-    move-object v0, p0
+    const/4 v3, 0x0
 
     .line 31
-    move-object v2, p1
+    move-object v0, p0
 
     .line 32
-    move-object/from16 v4, p5
+    move-object v2, p1
 
     .line 33
+    move-object/from16 v4, p5
+
+    .line 34
     move-object/from16 v5, p6
 
-    .line 35
+    .line 36
     invoke-direct/range {v0 .. v5}, Lcom/android/systemui/statusbar/connectivity/SignalController;-><init>(Ljava/lang/String;Landroid/content/Context;ILcom/android/systemui/statusbar/connectivity/CallbackHandler;Lcom/android/systemui/statusbar/connectivity/NetworkControllerImpl;)V
 
-    .line 37
+    .line 38
     const/4 v0, 0x0
 
-    .line 40
+    .line 41
     iput-boolean v0, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mInflateSignalStrengths:Z
 
-    .line 41
+    .line 42
     const/16 v1, 0x40
 
-    .line 43
+    .line 44
     new-array v1, v1, [Ljava/lang/String;
 
-    .line 45
+    .line 46
     iput-object v1, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mMobileStatusHistory:[Ljava/lang/String;
 
-    .line 47
+    .line 48
     iput-boolean v0, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mIsConnectedStatusChanged:Z
 
-    .line 49
+    .line 50
     iput-boolean v0, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mIsLast5GConnected:Z
 
-    .line 51
+    .line 52
     iput-boolean v0, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mIsLastSaConnected:Z
 
-    .line 53
+    .line 54
     iput-boolean v0, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mIsLastNsaConnected:Z
 
-    .line 55
+    .line 56
     iput-boolean v0, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mListening:Z
 
-    .line 57
+    .line 58
     iput-boolean v0, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mSupportSignalOptimization:Z
 
-    .line 59
+    .line 60
     iput-boolean v0, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mShowVoNR:Z
 
-    .line 61
+    .line 62
     iput-boolean v0, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mSupportVoiceCapable:Z
 
-    .line 63
+    .line 64
     new-instance v1, Landroid/os/Handler;
 
-    .line 65
+    .line 66
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    .line 67
+    .line 68
     move-result-object v2
-
-    .line 70
-    invoke-direct {v1, v2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     .line 71
+    invoke-direct {v1, v2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    .line 72
     iput-object v1, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mMainHandler:Landroid/os/Handler;
 
-    .line 74
+    .line 75
     new-instance v1, Lcom/android/systemui/statusbar/connectivity/MobileSignalController$$ExternalSyntheticLambda0;
 
-    .line 76
+    .line 77
     invoke-direct {v1, p0}, Lcom/android/systemui/statusbar/connectivity/MobileSignalController$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/statusbar/connectivity/MobileSignalController;)V
 
-    .line 78
+    .line 79
     iput-object v1, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mUpdateTelephony:Lcom/android/systemui/statusbar/connectivity/MobileSignalController$$ExternalSyntheticLambda0;
 
-    .line 81
+    .line 82
     iput v0, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mLastMobileCallState:I
 
-    .line 83
+    .line 84
     new-instance v1, Lcom/android/systemui/statusbar/connectivity/MobileSignalController$2;
 
-    .line 85
+    .line 86
     invoke-direct {v1, p0}, Lcom/android/systemui/statusbar/connectivity/MobileSignalController$2;-><init>(Lcom/android/systemui/statusbar/connectivity/MobileSignalController;)V
 
-    .line 87
+    .line 88
     iput-object v1, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mUpdate1XVoiceCap:Lcom/android/systemui/statusbar/connectivity/MobileSignalController$2;
 
-    .line 90
+    .line 91
     move-object v1, p2
 
-    .line 92
+    .line 93
     iput-object v1, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mConfig:Lcom/android/systemui/statusbar/mobile/MobileMappings$Config;
 
-    .line 93
+    .line 94
     iput-object v8, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mPhone:Landroid/telephony/TelephonyManager;
 
-    .line 95
-    invoke-virtual {p4}, Landroid/telephony/TelephonyManager;->getActiveModemCount()I
+    .line 96
+    invoke-virtual/range {p4 .. p4}, Landroid/telephony/TelephonyManager;->getActiveModemCount()I
 
-    .line 97
+    .line 98
     move-result v1
-
-    .line 100
-    iput v1, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mPhoneCount:I
 
     .line 101
+    iput v1, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mPhoneCount:I
+
+    .line 102
     invoke-static {}, Lmiui/telephony/TelephonyManager;->getDefault()Lmiui/telephony/TelephonyManager;
 
-    .line 103
+    .line 104
     move-result-object v1
 
-    .line 106
+    .line 107
     iput-object v1, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mMiuiTelephonyManager:Lmiui/telephony/TelephonyManager;
 
-    .line 107
+    .line 108
     const-class v2, Lcom/android/systemui/statusbar/policy/FiveGControllerImpl;
 
-    .line 109
+    .line 110
     invoke-static {v2}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
-    .line 111
+    .line 112
     move-result-object v2
-
-    .line 114
-    check-cast v2, Lcom/android/systemui/statusbar/policy/FiveGControllerImpl;
 
     .line 115
+    check-cast v2, Lcom/android/systemui/statusbar/policy/FiveGControllerImpl;
+
+    .line 116
     iput-object v2, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mFiveGController:Lcom/android/systemui/statusbar/policy/FiveGControllerImpl;
 
-    .line 117
+    .line 118
     invoke-virtual {v1}, Lmiui/telephony/TelephonyManager;->isDualVolteSupported()Z
 
-    .line 119
+    .line 120
     move-result v2
-
-    .line 122
-    iput-boolean v2, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mSupportDualVolte:Z
 
     .line 123
+    iput-boolean v2, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mSupportDualVolte:Z
+
+    .line 124
     invoke-virtual {v1}, Lmiui/telephony/TelephonyManager;->isVoiceCapable()Z
 
-    .line 125
-    move-result v1
-
-    .line 128
-    iput-boolean v1, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mSupportVoiceCapable:Z
+    .line 126
+    move-result v2
 
     .line 129
+    iput-boolean v2, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mSupportVoiceCapable:Z
+
+    .line 130
     move-object/from16 v3, p7
 
-    .line 131
+    .line 132
     iput-object v3, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mSubscriptionInfo:Landroid/telephony/SubscriptionInfo;
 
-    .line 133
+    .line 134
     invoke-virtual/range {p7 .. p7}, Landroid/telephony/SubscriptionInfo;->getSimSlotIndex()I
 
-    .line 135
-    move-result v1
-
-    .line 138
-    iput v1, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mSlotId:I
+    .line 136
+    move-result v2
 
     .line 139
+    iput v2, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mSlotId:I
+
+    .line 140
     iput-object v9, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mMiuiOperatorCustomizedPolicy:Lcom/android/systemui/MiuiOperatorCustomizedPolicy;
 
-    .line 141
-    invoke-virtual {v9, v1}, Lcom/android/systemui/MiuiOperatorCustomizedPolicy;->getMiuiOperatorConfig(I)Lcom/android/systemui/MiuiOperatorCustomizedPolicy$MiuiOperatorConfig;
+    .line 142
+    invoke-virtual {v9, v2}, Lcom/android/systemui/MiuiOperatorCustomizedPolicy;->getMiuiOperatorConfig(I)Lcom/android/systemui/MiuiOperatorCustomizedPolicy$MiuiOperatorConfig;
 
-    .line 143
-    move-result-object v2
-
-    .line 146
-    iput-object v2, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mMiuiOperatorConfig:Lcom/android/systemui/MiuiOperatorCustomizedPolicy$MiuiOperatorConfig;
+    .line 144
+    move-result-object v4
 
     .line 147
-    const v2, 0x7f130b21    # @string/status_bar_network_name_separator '-'
+    iput-object v4, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mMiuiOperatorConfig:Lcom/android/systemui/MiuiOperatorCustomizedPolicy$MiuiOperatorConfig;
 
-    .line 149
-    invoke-virtual {p0, v2}, Lcom/android/systemui/statusbar/connectivity/SignalController;->getTextIfExists(I)Ljava/lang/CharSequence;
+    .line 148
+    const v4, 0x7f130b27    # @string/status_bar_network_name_separator '-'
 
-    .line 152
-    move-result-object v2
+    .line 150
+    invoke-virtual {p0, v4}, Lcom/android/systemui/statusbar/connectivity/SignalController;->getTextIfExists(I)Ljava/lang/CharSequence;
 
-    .line 155
-    invoke-interface {v2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    .line 153
+    move-result-object v4
 
     .line 156
-    const v2, 0x104055e    # @android:string/mediasize_japanese_jis_b4
+    invoke-interface {v4}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
-    .line 159
-    invoke-virtual {p0, v2}, Lcom/android/systemui/statusbar/connectivity/SignalController;->getTextIfExists(I)Ljava/lang/CharSequence;
+    .line 157
+    const v4, 0x104055e    # @android:string/mediasize_japanese_jis_b4
 
-    .line 162
-    move-result-object v2
+    .line 160
+    invoke-virtual {p0, v4}, Lcom/android/systemui/statusbar/connectivity/SignalController;->getTextIfExists(I)Ljava/lang/CharSequence;
 
-    .line 165
-    invoke-interface {v2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    .line 163
+    move-result-object v4
 
     .line 166
-    move-result-object v2
+    invoke-interface {v4}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
-    .line 169
-    new-instance v4, Landroid/os/Handler;
+    .line 167
+    move-result-object v4
 
     .line 170
-    move-object/from16 v5, p9
+    new-instance v5, Landroid/os/Handler;
 
-    .line 172
-    invoke-direct {v4, v5}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    .line 171
+    move-object/from16 v9, p9
 
-    .line 174
-    iput-object v4, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mReceiverHandler:Landroid/os/Handler;
+    .line 173
+    invoke-direct {v5, v9}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 177
-    move-object/from16 v4, p10
+    .line 175
+    iput-object v5, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mReceiverHandler:Landroid/os/Handler;
 
-    .line 179
-    iput-object v4, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mCallStateControllerImpl:Lcom/android/systemui/util/CallStateControllerImpl;
+    .line 178
+    move-object/from16 v5, p10
 
-    .line 181
-    iget-object v4, v6, Lcom/android/systemui/statusbar/connectivity/SignalController;->mContext:Landroid/content/Context;
+    .line 180
+    iput-object v5, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mCallStateControllerImpl:Lcom/android/systemui/util/CallStateControllerImpl;
 
-    .line 183
-    invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    .line 182
+    iget-object v5, v6, Lcom/android/systemui/statusbar/connectivity/SignalController;->mContext:Landroid/content/Context;
 
-    .line 185
-    move-result-object v4
+    .line 184
+    invoke-virtual {v5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    .line 188
-    const v9, 0x7f050010    # @bool/config_SupportSignalOptimization 'true'
+    .line 186
+    move-result-object v5
 
     .line 189
-    invoke-virtual {v4, v9}, Landroid/content/res/Resources;->getBoolean(I)Z
+    const v10, 0x7f050010    # @bool/config_SupportSignalOptimization 'true'
 
-    .line 192
-    move-result v4
+    .line 190
+    invoke-virtual {v5, v10}, Landroid/content/res/Resources;->getBoolean(I)Z
 
-    .line 195
-    const/4 v9, 0x1
+    .line 193
+    move-result v5
 
     .line 196
-    if-eqz v4, :cond_0
+    const/4 v10, 0x1
 
     .line 197
-    sget-boolean v4, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
+    if-eqz v5, :cond_0
 
-    .line 199
-    if-nez v4, :cond_0
+    .line 198
+    sget-boolean v5, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
-    .line 201
-    sget-boolean v4, Lcom/miui/utils/configs/MiuiConfigs;->CN_CUSTOMIZATION_TEST:Z
+    .line 200
+    if-nez v5, :cond_0
 
-    .line 203
-    if-nez v4, :cond_0
+    .line 202
+    sget-boolean v5, Lcom/miui/utils/configs/MiuiConfigs;->CN_CUSTOMIZATION_TEST:Z
 
-    .line 205
-    move v4, v9
+    .line 204
+    if-nez v5, :cond_0
 
-    .line 207
-    goto :goto_0
+    .line 206
+    move v5, v10
 
     .line 208
-    :cond_0
-    move v4, v0
+    goto :goto_0
 
     .line 209
-    :goto_0
-    iput-boolean v4, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mSupportSignalOptimization:Z
+    :cond_0
+    move v5, v0
 
     .line 210
+    :goto_0
+    iput-boolean v5, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mSupportSignalOptimization:Z
+
+    .line 211
     invoke-static {}, Lcom/android/systemui/statusbar/mobile/MobileMappings;->mapIconSets()Ljava/util/Map;
 
-    .line 212
-    move-result-object v4
-
-    .line 215
-    iput-object v4, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mNetworkToIconLookup:Ljava/util/Map;
+    .line 213
+    move-result-object v5
 
     .line 216
-    sget-object v4, Lcom/android/systemui/statusbar/mobile/TelephonyIcons;->G:Lcom/android/systemui/statusbar/SignalIcon$MobileIconGroup;
+    iput-object v5, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mNetworkToIconLookup:Ljava/util/Map;
 
-    .line 218
-    iput-object v4, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mDefaultIcons:Lcom/android/systemui/statusbar/SignalIcon$MobileIconGroup;
+    .line 217
+    sget-object v5, Lcom/android/systemui/statusbar/mobile/TelephonyIcons;->G:Lcom/android/systemui/statusbar/SignalIcon$MobileIconGroup;
 
-    .line 220
+    .line 219
+    iput-object v5, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mDefaultIcons:Lcom/android/systemui/statusbar/SignalIcon$MobileIconGroup;
+
+    .line 221
     invoke-virtual/range {p7 .. p7}, Landroid/telephony/SubscriptionInfo;->getCarrierName()Ljava/lang/CharSequence;
 
-    .line 222
-    move-result-object v4
-
-    .line 225
-    if-eqz v4, :cond_1
+    .line 223
+    move-result-object v5
 
     .line 226
+    if-eqz v5, :cond_1
+
+    .line 227
     invoke-virtual/range {p7 .. p7}, Landroid/telephony/SubscriptionInfo;->getCarrierName()Ljava/lang/CharSequence;
 
-    .line 228
-    move-result-object v2
-
-    .line 231
-    invoke-interface {v2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
-
-    .line 232
-    move-result-object v2
-
-    .line 235
-    :cond_1
-    iget-object v4, v6, Lcom/android/systemui/statusbar/connectivity/SignalController;->mLastState:Lcom/android/systemui/statusbar/SignalIcon$State;
-
-    .line 236
-    check-cast v4, Lcom/android/systemui/statusbar/SignalIcon$MobileState;
-
-    .line 238
-    iget-object v10, v6, Lcom/android/systemui/statusbar/connectivity/SignalController;->mCurrentState:Lcom/android/systemui/statusbar/SignalIcon$State;
-
-    .line 240
-    check-cast v10, Lcom/android/systemui/statusbar/SignalIcon$MobileState;
-
-    .line 242
-    iput-object v2, v10, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->networkName:Ljava/lang/String;
-
-    .line 244
-    iput-object v2, v4, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->networkName:Ljava/lang/String;
-
-    .line 246
-    iput-object v2, v10, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->networkNameData:Ljava/lang/String;
-
-    .line 248
-    iput-object v2, v4, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->networkNameData:Ljava/lang/String;
-
-    .line 250
-    iput-boolean v7, v10, Lcom/android/systemui/statusbar/SignalIcon$State;->enabled:Z
-
-    .line 252
-    iput-boolean v7, v4, Lcom/android/systemui/statusbar/SignalIcon$State;->enabled:Z
-
-    .line 254
-    iget-object v2, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mDefaultIcons:Lcom/android/systemui/statusbar/SignalIcon$MobileIconGroup;
-
-    .line 256
-    iput-object v2, v10, Lcom/android/systemui/statusbar/SignalIcon$State;->iconGroup:Lcom/android/systemui/statusbar/SignalIcon$IconGroup;
-
-    .line 258
-    iput-object v2, v4, Lcom/android/systemui/statusbar/SignalIcon$State;->iconGroup:Lcom/android/systemui/statusbar/SignalIcon$IconGroup;
-
-    .line 260
-    iget-object v2, v6, Lcom/android/systemui/statusbar/connectivity/SignalController;->mNetworkController:Lcom/android/systemui/statusbar/connectivity/NetworkControllerImpl;
-
-    .line 262
-    if-ltz v1, :cond_2
-
-    .line 264
-    iget-object v2, v2, Lcom/android/systemui/statusbar/connectivity/NetworkControllerImpl;->mVolte:[Z
-
-    .line 266
-    array-length v4, v2
-
-    .line 268
-    if-ge v1, v4, :cond_3
-
-    .line 269
-    aget-boolean v2, v2, v1
-
-    .line 271
-    if-eqz v2, :cond_3
-
-    .line 273
-    move v2, v9
-
-    .line 275
-    goto :goto_1
-
-    .line 276
-    :cond_2
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 277
-    :cond_3
-    move v2, v0
-
-    .line 280
-    :goto_1
-    iput-boolean v2, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mVolte:Z
-
-    .line 281
-    iget-object v2, v6, Lcom/android/systemui/statusbar/connectivity/SignalController;->mNetworkController:Lcom/android/systemui/statusbar/connectivity/NetworkControllerImpl;
-
-    .line 283
-    if-ltz v1, :cond_4
-
-    .line 285
-    iget-object v2, v2, Lcom/android/systemui/statusbar/connectivity/NetworkControllerImpl;->mVowifi:[Z
-
-    .line 287
-    array-length v4, v2
-
-    .line 289
-    if-ge v1, v4, :cond_5
-
-    .line 290
-    aget-boolean v2, v2, v1
-
-    .line 292
-    if-eqz v2, :cond_5
-
-    .line 294
-    move v2, v9
-
-    .line 296
-    goto :goto_2
-
-    .line 297
-    :cond_4
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 298
-    :cond_5
-    move v2, v0
-
-    .line 301
-    :goto_2
-    iput-boolean v2, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mVowifi:Z
-
-    .line 302
-    invoke-virtual/range {p7 .. p7}, Landroid/telephony/SubscriptionInfo;->getSubscriptionId()I
-
-    .line 304
-    move-result v2
-
-    .line 307
-    sget-boolean v4, Lcom/android/systemui/util/PhoneUtils;->MIUI_LPA:Z
-
-    .line 308
-    invoke-static {}, Lmiui/telephony/TelephonyManagerEx;->getDefault()Lmiui/telephony/TelephonyManagerEx;
-
-    .line 310
+    .line 229
     move-result-object v4
 
-    .line 313
-    invoke-virtual {v4, v2}, Lmiui/telephony/TelephonyManagerEx;->isVoNREnabled(I)Z
+    .line 232
+    invoke-interface {v4}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
-    .line 314
-    move-result v2
+    .line 233
+    move-result-object v4
 
-    .line 317
-    iput-boolean v2, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mVonr:Z
+    .line 236
+    :cond_1
+    iget-object v5, v6, Lcom/android/systemui/statusbar/connectivity/SignalController;->mLastState:Lcom/android/systemui/statusbar/SignalIcon$State;
 
-    .line 318
-    iget-object v2, v6, Lcom/android/systemui/statusbar/connectivity/SignalController;->mNetworkController:Lcom/android/systemui/statusbar/connectivity/NetworkControllerImpl;
+    .line 237
+    check-cast v5, Lcom/android/systemui/statusbar/SignalIcon$MobileState;
 
-    .line 320
-    if-ltz v1, :cond_6
+    .line 239
+    iget-object v11, v6, Lcom/android/systemui/statusbar/connectivity/SignalController;->mCurrentState:Lcom/android/systemui/statusbar/SignalIcon$State;
 
-    .line 322
-    iget-object v2, v2, Lcom/android/systemui/statusbar/connectivity/NetworkControllerImpl;->mSpeechHd:[Z
+    .line 241
+    check-cast v11, Lcom/android/systemui/statusbar/SignalIcon$MobileState;
 
-    .line 324
-    array-length v4, v2
+    .line 243
+    iput-object v4, v11, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->networkName:Ljava/lang/String;
 
-    .line 326
-    if-ge v1, v4, :cond_7
+    .line 245
+    iput-object v4, v5, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->networkName:Ljava/lang/String;
 
-    .line 327
-    aget-boolean v2, v2, v1
+    .line 247
+    iput-object v4, v11, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->networkNameData:Ljava/lang/String;
 
-    .line 329
-    if-eqz v2, :cond_7
+    .line 249
+    iput-object v4, v5, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->networkNameData:Ljava/lang/String;
 
-    .line 331
-    move v2, v9
+    .line 251
+    sget-object v4, Lmiui/telephony/FeatureConfiguration$FeatureType;->FEATURE_RELAY_NETWORK:Lmiui/telephony/FeatureConfiguration$FeatureType;
 
-    .line 333
-    goto :goto_3
+    .line 253
+    invoke-virtual {v1, v4}, Lmiui/telephony/TelephonyManager;->isFeatureSupported(Lmiui/telephony/FeatureConfiguration$FeatureType;)Z
 
-    .line 334
-    :cond_6
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 255
+    move-result v1
 
-    .line 335
-    :cond_7
-    move v2, v0
+    .line 258
+    iput-boolean v1, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mFeatureRelayData:Z
 
-    .line 338
-    :goto_3
-    iput-boolean v2, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mSpeechHd:Z
+    .line 259
+    iget-object v4, v6, Lcom/android/systemui/statusbar/connectivity/SignalController;->mTag:Ljava/lang/String;
 
-    .line 339
-    iget-object v2, v6, Lcom/android/systemui/statusbar/connectivity/SignalController;->mLastState:Lcom/android/systemui/statusbar/SignalIcon$State;
+    .line 261
+    const-string v5, "init: mFeatureRelayData="
 
-    .line 341
-    check-cast v2, Lcom/android/systemui/statusbar/SignalIcon$MobileState;
+    .line 263
+    invoke-static {v5, v1, v4}, Lcom/android/keyguard/KeyguardEditorHelper$$ExternalSyntheticOutline0;->m(Ljava/lang/String;ZLjava/lang/String;)V
 
-    .line 343
+    .line 265
+    iget-object v1, v6, Lcom/android/systemui/statusbar/connectivity/SignalController;->mLastState:Lcom/android/systemui/statusbar/SignalIcon$State;
+
+    .line 268
+    check-cast v1, Lcom/android/systemui/statusbar/SignalIcon$MobileState;
+
+    .line 270
     iget-object v4, v6, Lcom/android/systemui/statusbar/connectivity/SignalController;->mCurrentState:Lcom/android/systemui/statusbar/SignalIcon$State;
 
-    .line 345
+    .line 272
     check-cast v4, Lcom/android/systemui/statusbar/SignalIcon$MobileState;
 
-    .line 347
-    iget-boolean v7, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mVolte:Z
+    .line 274
+    iput-boolean v7, v4, Lcom/android/systemui/statusbar/SignalIcon$State;->enabled:Z
 
-    .line 349
-    iput-boolean v7, v4, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->volte:Z
+    .line 276
+    iput-boolean v7, v1, Lcom/android/systemui/statusbar/SignalIcon$State;->enabled:Z
+
+    .line 278
+    iget-object v5, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mDefaultIcons:Lcom/android/systemui/statusbar/SignalIcon$MobileIconGroup;
+
+    .line 280
+    iput-object v5, v4, Lcom/android/systemui/statusbar/SignalIcon$State;->iconGroup:Lcom/android/systemui/statusbar/SignalIcon$IconGroup;
+
+    .line 282
+    iput-object v5, v1, Lcom/android/systemui/statusbar/SignalIcon$State;->iconGroup:Lcom/android/systemui/statusbar/SignalIcon$IconGroup;
+
+    .line 284
+    iget-object v1, v6, Lcom/android/systemui/statusbar/connectivity/SignalController;->mNetworkController:Lcom/android/systemui/statusbar/connectivity/NetworkControllerImpl;
+
+    .line 286
+    if-ltz v2, :cond_2
+
+    .line 288
+    iget-object v1, v1, Lcom/android/systemui/statusbar/connectivity/NetworkControllerImpl;->mVolte:[Z
+
+    .line 290
+    array-length v4, v1
+
+    .line 292
+    if-ge v2, v4, :cond_3
+
+    .line 293
+    aget-boolean v1, v1, v2
+
+    .line 295
+    if-eqz v1, :cond_3
+
+    .line 297
+    move v1, v10
+
+    .line 299
+    goto :goto_1
+
+    .line 300
+    :cond_2
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 301
+    :cond_3
+    move v1, v0
+
+    .line 304
+    :goto_1
+    iput-boolean v1, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mVolte:Z
+
+    .line 305
+    iget-object v1, v6, Lcom/android/systemui/statusbar/connectivity/SignalController;->mNetworkController:Lcom/android/systemui/statusbar/connectivity/NetworkControllerImpl;
+
+    .line 307
+    if-ltz v2, :cond_4
+
+    .line 309
+    iget-object v1, v1, Lcom/android/systemui/statusbar/connectivity/NetworkControllerImpl;->mVowifi:[Z
+
+    .line 311
+    array-length v4, v1
+
+    .line 313
+    if-ge v2, v4, :cond_5
+
+    .line 314
+    aget-boolean v1, v1, v2
+
+    .line 316
+    if-eqz v1, :cond_5
+
+    .line 318
+    move v1, v10
+
+    .line 320
+    goto :goto_2
+
+    .line 321
+    :cond_4
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 322
+    :cond_5
+    move v1, v0
+
+    .line 325
+    :goto_2
+    iput-boolean v1, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mVowifi:Z
+
+    .line 326
+    invoke-virtual/range {p7 .. p7}, Landroid/telephony/SubscriptionInfo;->getSubscriptionId()I
+
+    .line 328
+    move-result v1
+
+    .line 331
+    sget-boolean v4, Lcom/android/systemui/util/PhoneUtils;->MIUI_LPA:Z
+
+    .line 332
+    invoke-static {}, Lmiui/telephony/TelephonyManagerEx;->getDefault()Lmiui/telephony/TelephonyManagerEx;
+
+    .line 334
+    move-result-object v4
+
+    .line 337
+    invoke-virtual {v4, v1}, Lmiui/telephony/TelephonyManagerEx;->isVoNREnabled(I)Z
+
+    .line 338
+    move-result v1
+
+    .line 341
+    iput-boolean v1, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mVonr:Z
+
+    .line 342
+    iget-object v1, v6, Lcom/android/systemui/statusbar/connectivity/SignalController;->mNetworkController:Lcom/android/systemui/statusbar/connectivity/NetworkControllerImpl;
+
+    .line 344
+    if-ltz v2, :cond_6
+
+    .line 346
+    iget-object v1, v1, Lcom/android/systemui/statusbar/connectivity/NetworkControllerImpl;->mSpeechHd:[Z
+
+    .line 348
+    array-length v4, v1
+
+    .line 350
+    if-ge v2, v4, :cond_7
 
     .line 351
-    iput-boolean v7, v2, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->volte:Z
+    aget-boolean v1, v1, v2
 
     .line 353
-    iget-boolean v7, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mVowifi:Z
+    if-eqz v1, :cond_7
 
     .line 355
-    iput-boolean v7, v4, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->vowifi:Z
+    move v1, v10
 
     .line 357
-    iput-boolean v7, v2, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->vowifi:Z
+    goto :goto_3
+
+    .line 358
+    :cond_6
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 359
-    iget-boolean v7, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mVonr:Z
+    :cond_7
+    move v1, v0
 
-    .line 361
-    iput-boolean v7, v4, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->vonr:Z
+    .line 362
+    :goto_3
+    iput-boolean v1, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mSpeechHd:Z
 
     .line 363
-    iput-boolean v7, v2, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->vonr:Z
+    iget-object v1, v6, Lcom/android/systemui/statusbar/connectivity/SignalController;->mLastState:Lcom/android/systemui/statusbar/SignalIcon$State;
 
     .line 365
-    iget-object v7, v6, Lcom/android/systemui/statusbar/connectivity/SignalController;->mNetworkController:Lcom/android/systemui/statusbar/connectivity/NetworkControllerImpl;
+    check-cast v1, Lcom/android/systemui/statusbar/SignalIcon$MobileState;
 
     .line 367
-    if-ltz v1, :cond_8
+    iget-object v4, v6, Lcom/android/systemui/statusbar/connectivity/SignalController;->mCurrentState:Lcom/android/systemui/statusbar/SignalIcon$State;
 
     .line 369
-    iget-object v7, v7, Lcom/android/systemui/statusbar/connectivity/NetworkControllerImpl;->mSpeechHd:[Z
+    check-cast v4, Lcom/android/systemui/statusbar/SignalIcon$MobileState;
 
     .line 371
-    array-length v10, v7
+    iget-boolean v5, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mVolte:Z
 
     .line 373
-    if-ge v1, v10, :cond_9
+    iput-boolean v5, v4, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->volte:Z
 
-    .line 374
-    aget-boolean v7, v7, v1
+    .line 375
+    iput-boolean v5, v1, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->volte:Z
 
-    .line 376
-    if-eqz v7, :cond_9
+    .line 377
+    iget-boolean v5, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mVowifi:Z
 
-    .line 378
-    move v0, v9
-
-    .line 380
-    goto :goto_4
+    .line 379
+    iput-boolean v5, v4, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->vowifi:Z
 
     .line 381
-    :cond_8
-    invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-boolean v5, v1, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->vowifi:Z
 
-    .line 382
+    .line 383
+    iget-boolean v5, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mVonr:Z
+
+    .line 385
+    iput-boolean v5, v4, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->vonr:Z
+
+    .line 387
+    iput-boolean v5, v1, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->vonr:Z
+
+    .line 389
+    iget-object v5, v6, Lcom/android/systemui/statusbar/connectivity/SignalController;->mNetworkController:Lcom/android/systemui/statusbar/connectivity/NetworkControllerImpl;
+
+    .line 391
+    if-ltz v2, :cond_8
+
+    .line 393
+    iget-object v5, v5, Lcom/android/systemui/statusbar/connectivity/NetworkControllerImpl;->mSpeechHd:[Z
+
+    .line 395
+    array-length v7, v5
+
+    .line 397
+    if-ge v2, v7, :cond_9
+
+    .line 398
+    aget-boolean v5, v5, v2
+
+    .line 400
+    if-eqz v5, :cond_9
+
+    .line 402
+    move v0, v10
+
+    .line 404
+    goto :goto_4
+
+    .line 405
+    :cond_8
+    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 406
     :cond_9
     :goto_4
     iput-boolean v0, v4, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->speedHd:Z
 
-    .line 385
-    iput-boolean v0, v2, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->speedHd:Z
-
-    .line 387
-    invoke-virtual {p4}, Landroid/telephony/TelephonyManager;->getPhoneType()I
-
-    .line 389
-    move-result v0
-
-    .line 392
-    iput v0, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mPhoneType:I
-
-    .line 393
-    invoke-virtual/range {p7 .. p7}, Landroid/telephony/SubscriptionInfo;->getMccString()Ljava/lang/String;
-
-    .line 395
-    move-result-object v0
-
-    .line 398
-    if-eqz v0, :cond_a
-
-    .line 399
-    invoke-virtual/range {p7 .. p7}, Landroid/telephony/SubscriptionInfo;->getMccString()Ljava/lang/String;
-
-    .line 401
-    move-result-object v0
-
-    .line 404
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    .line 405
-    move-result v0
-
-    .line 408
-    const/4 v2, 0x3
-
     .line 409
-    if-ne v0, v2, :cond_a
+    iput-boolean v0, v1, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->speedHd:Z
 
-    .line 410
-    invoke-virtual/range {p7 .. p7}, Landroid/telephony/SubscriptionInfo;->getMncString()Ljava/lang/String;
+    .line 411
+    invoke-virtual/range {p4 .. p4}, Landroid/telephony/TelephonyManager;->getPhoneType()I
 
-    .line 412
-    move-result-object v0
-
-    .line 415
-    if-eqz v0, :cond_a
+    .line 413
+    move-result v0
 
     .line 416
-    new-instance v0, Ljava/lang/StringBuilder;
+    iput v0, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mPhoneType:I
 
-    .line 418
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    .line 420
+    .line 417
     invoke-virtual/range {p7 .. p7}, Landroid/telephony/SubscriptionInfo;->getMccString()Ljava/lang/String;
 
+    .line 419
+    move-result-object v0
+
+    .line 422
+    if-eqz v0, :cond_a
+
     .line 423
-    move-result-object v1
+    invoke-virtual/range {p7 .. p7}, Landroid/telephony/SubscriptionInfo;->getMccString()Ljava/lang/String;
 
-    .line 426
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 425
+    move-result-object v0
 
-    .line 427
-    invoke-virtual/range {p7 .. p7}, Landroid/telephony/SubscriptionInfo;->getMncString()Ljava/lang/String;
+    .line 428
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
 
-    .line 430
-    move-result-object v1
+    .line 429
+    move-result v0
+
+    .line 432
+    const/4 v1, 0x3
 
     .line 433
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-ne v0, v1, :cond_a
 
     .line 434
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual/range {p7 .. p7}, Landroid/telephony/SubscriptionInfo;->getMncString()Ljava/lang/String;
 
-    .line 437
+    .line 436
     move-result-object v0
+
+    .line 439
+    if-eqz v0, :cond_a
 
     .line 440
-    goto :goto_5
-
-    .line 441
-    :cond_a
-    invoke-virtual {p4, v1}, Landroid/telephony/TelephonyManager;->getSimOperatorNumericForPhone(I)Ljava/lang/String;
+    new-instance v0, Ljava/lang/StringBuilder;
 
     .line 442
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    .line 444
+    invoke-virtual/range {p7 .. p7}, Landroid/telephony/SubscriptionInfo;->getMccString()Ljava/lang/String;
+
+    .line 447
+    move-result-object v1
+
+    .line 450
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 451
+    invoke-virtual/range {p7 .. p7}, Landroid/telephony/SubscriptionInfo;->getMncString()Ljava/lang/String;
+
+    .line 454
+    move-result-object v1
+
+    .line 457
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 458
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 461
     move-result-object v0
 
-    .line 445
+    .line 464
+    goto :goto_5
+
+    .line 465
+    :cond_a
+    invoke-virtual {v8, v2}, Landroid/telephony/TelephonyManager;->getSimOperatorNumericForPhone(I)Ljava/lang/String;
+
+    .line 466
+    move-result-object v0
+
+    .line 469
     :goto_5
     const-string/jumbo v1, "updateOperator: "
 
-    .line 446
+    .line 470
     invoke-static {v1, v0}, Landroidx/constraintlayout/motion/widget/KeyAttributes$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 449
+    .line 473
     move-result-object v1
 
-    .line 452
+    .line 476
     iget-object v2, v6, Lcom/android/systemui/statusbar/connectivity/SignalController;->mTag:Ljava/lang/String;
 
-    .line 453
+    .line 477
     invoke-static {v2, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 455
+    .line 479
     iput-object v0, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mOperator:Ljava/lang/String;
 
-    .line 458
-    invoke-virtual {p0, v9}, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->updateCarrierConfig(Z)V
+    .line 482
+    invoke-virtual {p0, v10}, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->updateCarrierConfig(Z)V
 
-    .line 460
-    new-instance v7, Lcom/android/systemui/statusbar/connectivity/MobileSignalController$1;
+    .line 484
+    new-instance v5, Lcom/android/systemui/statusbar/connectivity/MobileSignalController$1;
 
-    .line 463
-    invoke-direct {v7, p0}, Lcom/android/systemui/statusbar/connectivity/MobileSignalController$1;-><init>(Lcom/android/systemui/statusbar/connectivity/MobileSignalController;)V
+    .line 487
+    invoke-direct {v5, p0}, Lcom/android/systemui/statusbar/connectivity/MobileSignalController$1;-><init>(Lcom/android/systemui/statusbar/connectivity/MobileSignalController;)V
 
-    .line 465
-    new-instance v9, Lcom/android/systemui/statusbar/mobile/MobileStatusTracker;
+    .line 489
+    new-instance v7, Lcom/android/systemui/statusbar/mobile/MobileStatusTracker;
 
-    .line 468
-    move-object v0, v9
+    .line 492
+    move-object v0, v7
 
-    .line 470
-    move-object v1, p4
+    .line 494
+    move-object/from16 v1, p4
 
-    .line 471
+    .line 495
     move-object/from16 v2, p9
 
-    .line 472
+    .line 497
     move-object/from16 v3, p7
 
-    .line 474
+    .line 499
     move-object/from16 v4, p8
 
-    .line 476
-    move-object v5, v7
-
-    .line 478
+    .line 501
     invoke-direct/range {v0 .. v5}, Lcom/android/systemui/statusbar/mobile/MobileStatusTracker;-><init>(Landroid/telephony/TelephonyManager;Landroid/os/Looper;Landroid/telephony/SubscriptionInfo;Lcom/android/systemui/statusbar/mobile/MobileStatusTracker$SubscriptionDefaults;Lcom/android/systemui/statusbar/connectivity/MobileSignalController$1;)V
 
-    .line 479
-    iput-object v9, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mMobileStatusTracker:Lcom/android/systemui/statusbar/mobile/MobileStatusTracker;
+    .line 503
+    iput-object v7, v6, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mMobileStatusTracker:Lcom/android/systemui/statusbar/mobile/MobileStatusTracker;
 
-    .line 482
+    .line 506
     return-void
-    .line 484
+    .line 508
 .end method
 
 
@@ -1973,431 +2005,468 @@
     move-result-object v13
 
     .line 31
-    new-instance v5, Lcom/android/systemui/statusbar/connectivity/IconState;
+    new-instance v2, Ljava/lang/StringBuilder;
 
     .line 32
-    check-cast v1, Lcom/android/systemui/statusbar/SignalIcon$MobileState;
+    const-string v4, "notifyListeners: mFeatureRelayData="
 
     .line 34
-    iget-boolean v2, v1, Lcom/android/systemui/statusbar/SignalIcon$State;->enabled:Z
+    invoke-direct {v2, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 36
-    if-eqz v2, :cond_1
+    iget-boolean v4, v0, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mFeatureRelayData:Z
 
-    .line 38
-    iget-boolean v2, v1, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->airplaneMode:Z
+    .line 39
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 40
-    if-nez v2, :cond_1
-
-    .line 42
-    const/4 v2, 0x1
+    .line 41
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     .line 44
-    goto :goto_1
-
-    .line 45
-    :cond_1
-    const/4 v2, 0x0
-
-    .line 46
-    :goto_1
-    invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->getCurrentIconId()I
+    move-result-object v2
 
     .line 47
-    move-result v7
+    iget-object v5, v0, Lcom/android/systemui/statusbar/connectivity/SignalController;->mTag:Ljava/lang/String;
+
+    .line 48
+    invoke-static {v5, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 50
-    invoke-direct {v5, v2, v7, v13}, Lcom/android/systemui/statusbar/connectivity/IconState;-><init>(ZILjava/lang/String;)V
+    new-instance v5, Lcom/android/systemui/statusbar/connectivity/IconState;
 
-    .line 51
-    iget-object v2, v0, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mConfig:Lcom/android/systemui/statusbar/mobile/MobileMappings$Config;
+    .line 53
+    check-cast v1, Lcom/android/systemui/statusbar/SignalIcon$MobileState;
 
-    .line 54
-    iget v2, v2, Lcom/android/systemui/statusbar/mobile/MobileMappings$Config;->defaultDataSlotId:I
+    .line 55
+    iget-boolean v2, v1, Lcom/android/systemui/statusbar/SignalIcon$State;->enabled:Z
 
-    .line 56
-    iget-object v7, v0, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mSubscriptionInfo:Landroid/telephony/SubscriptionInfo;
+    .line 57
+    if-nez v2, :cond_1
 
-    .line 58
-    invoke-virtual {v7}, Landroid/telephony/SubscriptionInfo;->getSimSlotIndex()I
+    .line 59
+    sget-boolean v2, Lcom/miui/utils/configs/MiuiConfigs;->IS_PAD:Z
 
-    .line 60
-    move-result v8
+    .line 61
+    if-eqz v2, :cond_2
 
     .line 63
-    if-ne v2, v8, :cond_2
+    if-eqz v4, :cond_2
 
-    .line 64
-    iget v2, v3, Lcom/android/systemui/statusbar/SignalIcon$MobileIconGroup;->qsDataType:I
+    .line 65
+    :cond_1
+    iget-boolean v2, v1, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->airplaneMode:Z
 
-    .line 66
-    new-instance v8, Lcom/android/systemui/statusbar/connectivity/IconState;
+    .line 67
+    if-nez v2, :cond_2
 
-    .line 68
-    iget-boolean v9, v1, Lcom/android/systemui/statusbar/SignalIcon$State;->enabled:Z
+    .line 69
+    const/4 v2, 0x1
 
-    .line 70
-    invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->getCurrentIconId()I
+    .line 71
+    goto :goto_1
 
     .line 72
-    move-result v10
-
-    .line 75
-    invoke-direct {v8, v9, v10, v13}, Lcom/android/systemui/statusbar/connectivity/IconState;-><init>(ZILjava/lang/String;)V
-
-    .line 76
-    move-object/from16 v39, v8
-
-    .line 79
-    move v8, v2
-
-    .line 81
-    move-object/from16 v2, v39
-
-    .line 82
-    goto :goto_2
-
-    .line 84
     :cond_2
     const/4 v2, 0x0
 
+    .line 73
+    :goto_1
+    invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->getCurrentIconId()I
+
+    .line 74
+    move-result v4
+
+    .line 77
+    invoke-direct {v5, v2, v4, v13}, Lcom/android/systemui/statusbar/connectivity/IconState;-><init>(ZILjava/lang/String;)V
+
+    .line 78
+    iget-object v2, v0, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mConfig:Lcom/android/systemui/statusbar/mobile/MobileMappings$Config;
+
+    .line 81
+    iget v2, v2, Lcom/android/systemui/statusbar/mobile/MobileMappings$Config;->defaultDataSlotId:I
+
+    .line 83
+    iget-object v4, v0, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mSubscriptionInfo:Landroid/telephony/SubscriptionInfo;
+
     .line 85
+    invoke-virtual {v4}, Landroid/telephony/SubscriptionInfo;->getSimSlotIndex()I
+
+    .line 87
+    move-result v8
+
+    .line 90
+    if-ne v2, v8, :cond_3
+
+    .line 91
+    iget v2, v3, Lcom/android/systemui/statusbar/SignalIcon$MobileIconGroup;->qsDataType:I
+
+    .line 93
+    new-instance v8, Lcom/android/systemui/statusbar/connectivity/IconState;
+
+    .line 95
+    iget-boolean v9, v1, Lcom/android/systemui/statusbar/SignalIcon$State;->enabled:Z
+
+    .line 97
+    invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->getCurrentIconId()I
+
+    .line 99
+    move-result v10
+
+    .line 102
+    invoke-direct {v8, v9, v10, v13}, Lcom/android/systemui/statusbar/connectivity/IconState;-><init>(ZILjava/lang/String;)V
+
+    .line 103
+    move-object/from16 v39, v8
+
+    .line 106
+    move v8, v2
+
+    .line 108
+    move-object/from16 v2, v39
+
+    .line 109
+    goto :goto_2
+
+    .line 111
+    :cond_3
+    const/4 v2, 0x0
+
+    .line 112
     const/4 v8, 0x0
 
-    .line 86
+    .line 113
     :goto_2
     invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->getServiceState()Landroid/telephony/ServiceState;
 
-    .line 87
+    .line 114
     move-result-object v9
 
-    .line 90
+    .line 117
     invoke-static {v9}, Lcom/android/systemui/statusbar/mobile/MobileUtils;->isInService(Landroid/telephony/ServiceState;)Z
 
-    .line 91
+    .line 118
     move-result v37
 
-    .line 94
+    .line 121
     new-instance v15, Lcom/android/systemui/statusbar/connectivity/MobileDataIndicators;
 
-    .line 95
+    .line 122
     iget v3, v3, Lcom/android/systemui/statusbar/SignalIcon$MobileIconGroup;->miuiDataType:I
 
-    .line 97
+    .line 124
     iget-boolean v9, v1, Lcom/android/systemui/statusbar/SignalIcon$State;->activityIn:Z
 
-    .line 99
+    .line 126
     iget-boolean v10, v1, Lcom/android/systemui/statusbar/SignalIcon$State;->activityOut:Z
 
-    .line 101
-    invoke-virtual {v7}, Landroid/telephony/SubscriptionInfo;->getSubscriptionId()I
+    .line 128
+    invoke-virtual {v4}, Landroid/telephony/SubscriptionInfo;->getSubscriptionId()I
 
-    .line 103
+    .line 130
     move-result v14
 
-    .line 106
+    .line 133
     iget-boolean v12, v1, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->roaming:Z
 
-    .line 107
+    .line 134
     iget v11, v0, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mSlotId:I
 
-    .line 109
-    iget-boolean v7, v1, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->airplaneMode:Z
+    .line 136
+    iget-boolean v4, v1, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->airplaneMode:Z
 
-    .line 111
+    .line 138
     move/from16 v16, v14
 
-    .line 113
+    .line 140
     iget-boolean v14, v1, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->dataConnected:Z
 
-    .line 115
+    .line 142
     move/from16 v17, v14
 
-    .line 117
+    .line 144
     iget-boolean v14, v1, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->volte:Z
 
-    .line 119
-    iget-object v4, v0, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mMiuiOperatorConfig:Lcom/android/systemui/MiuiOperatorCustomizedPolicy$MiuiOperatorConfig;
+    .line 146
+    iget-object v6, v0, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mMiuiOperatorConfig:Lcom/android/systemui/MiuiOperatorCustomizedPolicy$MiuiOperatorConfig;
 
-    .line 121
+    .line 148
     move/from16 v19, v14
 
-    .line 123
-    iget v14, v4, Lcom/android/systemui/MiuiOperatorCustomizedPolicy$MiuiOperatorConfig;->volteResId:I
+    .line 150
+    iget v14, v6, Lcom/android/systemui/MiuiOperatorCustomizedPolicy$MiuiOperatorConfig;->volteResId:I
 
-    .line 125
+    .line 152
     move/from16 v20, v14
 
-    .line 127
-    iget-boolean v14, v4, Lcom/android/systemui/MiuiOperatorCustomizedPolicy$MiuiOperatorConfig;->hideVolte:Z
+    .line 154
+    iget-boolean v14, v6, Lcom/android/systemui/MiuiOperatorCustomizedPolicy$MiuiOperatorConfig;->hideVolte:Z
 
-    .line 129
+    .line 156
     move/from16 v21, v14
 
-    .line 131
+    .line 158
     iget-boolean v14, v1, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->vowifi:Z
 
-    .line 133
+    .line 160
     move/from16 v22, v14
 
-    .line 135
-    iget v14, v4, Lcom/android/systemui/MiuiOperatorCustomizedPolicy$MiuiOperatorConfig;->vowifiResId:I
+    .line 162
+    iget v14, v6, Lcom/android/systemui/MiuiOperatorCustomizedPolicy$MiuiOperatorConfig;->vowifiResId:I
 
-    .line 137
+    .line 164
     move/from16 v23, v14
 
-    .line 139
-    iget-boolean v14, v4, Lcom/android/systemui/MiuiOperatorCustomizedPolicy$MiuiOperatorConfig;->hideVowifi:Z
+    .line 166
+    iget-boolean v14, v6, Lcom/android/systemui/MiuiOperatorCustomizedPolicy$MiuiOperatorConfig;->hideVowifi:Z
 
-    .line 141
+    .line 168
     move/from16 v24, v14
 
-    .line 143
+    .line 170
     iget-boolean v14, v0, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mFiveGConnected:Z
 
-    .line 145
+    .line 172
     move/from16 v25, v14
 
-    .line 147
-    iget v14, v4, Lcom/android/systemui/MiuiOperatorCustomizedPolicy$MiuiOperatorConfig;->vonrResId:I
+    .line 174
+    iget v14, v6, Lcom/android/systemui/MiuiOperatorCustomizedPolicy$MiuiOperatorConfig;->vonrResId:I
 
-    .line 149
-    iget-boolean v6, v0, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mShowVoNR:Z
+    .line 176
+    iget-boolean v7, v0, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mShowVoNR:Z
 
-    .line 151
-    if-eqz v6, :cond_3
+    .line 178
+    if-eqz v7, :cond_4
 
-    .line 153
-    iget v6, v1, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->showType:I
+    .line 180
+    iget v7, v1, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->showType:I
 
-    .line 155
-    move/from16 v27, v7
+    .line 182
+    move/from16 v27, v4
 
-    .line 157
-    const/16 v7, 0xb
+    .line 184
+    const/16 v4, 0xb
 
-    .line 159
-    if-lt v6, v7, :cond_4
+    .line 186
+    if-lt v7, v4, :cond_5
 
-    .line 161
-    iget-boolean v6, v0, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mVonr:Z
+    .line 188
+    iget-boolean v4, v0, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mVonr:Z
 
-    .line 163
-    if-eqz v6, :cond_4
+    .line 190
+    if-eqz v4, :cond_5
 
-    .line 165
+    .line 192
     const/16 v28, 0x1
 
-    .line 167
+    .line 194
     goto :goto_3
 
-    .line 169
-    :cond_3
-    move/from16 v27, v7
-
-    .line 170
+    .line 196
     :cond_4
+    move/from16 v27, v4
+
+    .line 197
+    :cond_5
     const/16 v28, 0x0
 
-    .line 172
+    .line 199
     :goto_3
     iget-boolean v7, v1, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->speedHd:Z
 
-    .line 174
-    iget-boolean v6, v1, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->volteNoService:Z
-
-    .line 176
-    move/from16 v29, v14
-
-    .line 178
-    iget-boolean v14, v4, Lcom/android/systemui/MiuiOperatorCustomizedPolicy$MiuiOperatorConfig;->showDataTypeDataDisconnected:Z
-
-    .line 180
-    move/from16 v30, v6
-
-    .line 182
-    iget-boolean v6, v4, Lcom/android/systemui/MiuiOperatorCustomizedPolicy$MiuiOperatorConfig;->showMobileDataTypeInMMS:Z
-
-    .line 184
-    if-eqz v6, :cond_5
-
-    .line 186
-    iget-object v0, v0, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mMmsDataState:Lcom/android/internal/telephony/PhoneConstants$DataState;
-
-    .line 188
-    sget-object v6, Lcom/android/internal/telephony/PhoneConstants$DataState;->CONNECTED:Lcom/android/internal/telephony/PhoneConstants$DataState;
-
-    .line 190
-    if-ne v0, v6, :cond_5
-
-    .line 192
-    const/16 v31, 0x1
-
-    .line 194
-    goto :goto_4
-
-    .line 196
-    :cond_5
-    const/16 v31, 0x0
-
-    .line 197
-    :goto_4
-    iget-boolean v0, v4, Lcom/android/systemui/MiuiOperatorCustomizedPolicy$MiuiOperatorConfig;->showMobileDataTypeSingle:Z
-
-    .line 199
-    move/from16 v32, v0
-
     .line 201
-    iget-object v0, v1, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->showName:Ljava/lang/String;
+    iget-boolean v4, v1, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->volteNoService:Z
 
     .line 203
-    move-object/from16 v33, v0
+    move/from16 v29, v14
 
     .line 205
-    iget-boolean v0, v1, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->inSignalOptimizationState:Z
+    iget-boolean v14, v6, Lcom/android/systemui/MiuiOperatorCustomizedPolicy$MiuiOperatorConfig;->showDataTypeDataDisconnected:Z
 
     .line 207
-    move/from16 v34, v0
+    move/from16 v30, v4
 
     .line 209
-    iget-boolean v0, v4, Lcom/android/systemui/MiuiOperatorCustomizedPolicy$MiuiOperatorConfig;->separateDataAndVoice:Z
+    iget-boolean v4, v6, Lcom/android/systemui/MiuiOperatorCustomizedPolicy$MiuiOperatorConfig;->showMobileDataTypeInMMS:Z
 
     .line 211
-    move/from16 v35, v0
+    if-eqz v4, :cond_6
 
     .line 213
-    iget-boolean v0, v1, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->sltEnabled:Z
+    iget-object v0, v0, Lcom/android/systemui/statusbar/connectivity/MobileSignalController;->mMmsDataState:Lcom/android/internal/telephony/PhoneConstants$DataState;
 
     .line 215
-    move/from16 v36, v0
+    sget-object v4, Lcom/android/internal/telephony/PhoneConstants$DataState;->CONNECTED:Lcom/android/internal/telephony/PhoneConstants$DataState;
 
     .line 217
-    move-object v4, v15
+    if-ne v0, v4, :cond_6
 
     .line 219
-    move/from16 v0, v30
+    const/16 v31, 0x1
 
-    .line 220
-    move-object v6, v2
-
-    .line 222
-    move v2, v7
+    .line 221
+    goto :goto_4
 
     .line 223
-    move/from16 v1, v27
+    :cond_6
+    const/16 v31, 0x0
 
     .line 224
-    move v7, v3
+    :goto_4
+    iget-boolean v0, v6, Lcom/android/systemui/MiuiOperatorCustomizedPolicy$MiuiOperatorConfig;->showMobileDataTypeSingle:Z
 
     .line 226
-    move v3, v11
-
-    .line 227
-    move-object v11, v13
+    move/from16 v32, v0
 
     .line 228
-    move/from16 v18, v12
+    iget-object v0, v1, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->showName:Ljava/lang/String;
 
-    .line 229
-    move-object v12, v13
-
-    .line 231
-    move/from16 v30, v14
+    .line 230
+    move-object/from16 v33, v0
 
     .line 232
-    move/from16 v26, v25
+    iget-boolean v0, v1, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->inSignalOptimizationState:Z
 
     .line 234
-    move/from16 v27, v29
+    move/from16 v34, v0
 
     .line 236
-    move/from16 v25, v24
+    iget-boolean v0, v6, Lcom/android/systemui/MiuiOperatorCustomizedPolicy$MiuiOperatorConfig;->separateDataAndVoice:Z
 
     .line 238
-    move/from16 v24, v23
+    move/from16 v35, v0
 
     .line 240
-    move/from16 v23, v22
+    iget-boolean v0, v1, Lcom/android/systemui/statusbar/SignalIcon$MobileState;->sltEnabled:Z
 
     .line 242
-    move/from16 v22, v21
+    move/from16 v36, v0
 
     .line 244
-    move/from16 v21, v20
+    move/from16 v0, v27
 
     .line 246
-    move/from16 v20, v19
+    move/from16 v1, v30
 
     .line 248
-    move/from16 v19, v17
+    move-object v4, v15
 
     .line 250
-    move/from16 v14, v16
+    move-object v6, v2
+
+    .line 251
+    move v2, v7
 
     .line 252
-    move-object/from16 v38, v15
+    move v7, v3
+
+    .line 253
+    move v3, v11
 
     .line 254
-    move/from16 v15, v18
+    move-object v11, v13
+
+    .line 255
+    move/from16 v18, v12
 
     .line 256
-    move/from16 v16, v3
+    move-object v12, v13
 
     .line 258
-    move/from16 v17, v1
+    move/from16 v30, v14
 
-    .line 260
+    .line 259
+    move/from16 v26, v25
+
+    .line 261
+    move/from16 v27, v29
+
+    .line 263
+    move/from16 v25, v24
+
+    .line 265
+    move/from16 v24, v23
+
+    .line 267
+    move/from16 v23, v22
+
+    .line 269
+    move/from16 v22, v21
+
+    .line 271
+    move/from16 v21, v20
+
+    .line 273
+    move/from16 v20, v19
+
+    .line 275
+    move/from16 v19, v17
+
+    .line 277
+    move/from16 v14, v16
+
+    .line 279
+    move-object/from16 v38, v15
+
+    .line 281
+    move/from16 v15, v18
+
+    .line 283
+    move/from16 v16, v3
+
+    .line 285
+    move/from16 v17, v0
+
+    .line 287
     move/from16 v18, v19
 
-    .line 262
+    .line 289
     move/from16 v19, v20
 
-    .line 264
+    .line 291
     move/from16 v20, v21
 
-    .line 266
+    .line 293
     move/from16 v21, v22
 
-    .line 268
+    .line 295
     move/from16 v22, v23
 
-    .line 270
+    .line 297
     move/from16 v23, v24
 
-    .line 272
+    .line 299
     move/from16 v24, v25
 
-    .line 274
+    .line 301
     move/from16 v25, v26
 
-    .line 276
+    .line 303
     move/from16 v26, v27
 
-    .line 278
+    .line 305
     move/from16 v27, v28
 
-    .line 280
+    .line 307
     move/from16 v28, v2
 
-    .line 282
-    move/from16 v29, v0
+    .line 309
+    move/from16 v29, v1
 
-    .line 284
+    .line 311
     invoke-direct/range {v4 .. v37}, Lcom/android/systemui/statusbar/connectivity/MobileDataIndicators;-><init>(Lcom/android/systemui/statusbar/connectivity/IconState;Lcom/android/systemui/statusbar/connectivity/IconState;IIZZLjava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;IZIZZZIZZIZZIZZZZZZLjava/lang/String;ZZZZ)V
 
-    .line 286
+    .line 313
     move-object/from16 v0, p1
 
-    .line 289
+    .line 316
     move-object/from16 v1, v38
 
-    .line 291
+    .line 318
     invoke-interface {v0, v1}, Lcom/android/systemui/statusbar/connectivity/SignalCallback;->setMobileDataIndicators(Lcom/android/systemui/statusbar/connectivity/MobileDataIndicators;)V
 
-    .line 293
+    .line 320
     return-void
-    .line 296
+    .line 323
 .end method
 
 .method public final registerListener()V

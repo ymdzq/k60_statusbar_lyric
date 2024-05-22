@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/biometrics/AuthBiometricFingerprintIconController;
 .super Lcom/android/systemui/biometrics/AuthIconController;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # instance fields
@@ -478,7 +478,7 @@
     if-eqz p1, :cond_0
 
     .line 18
-    const p1, 0x7f130a98    # @string/security_settings_sfps_enroll_find_sensor_message 'The fingerprint sensor is on the power button. It’s the flat button next to the raised volume button ...'
+    const p1, 0x7f130a9e    # @string/security_settings_sfps_enroll_find_sensor_message 'The fingerprint sensor is on the power button. It’s the flat button next to the raised volume button ...'
 
     .line 20
     goto :goto_0

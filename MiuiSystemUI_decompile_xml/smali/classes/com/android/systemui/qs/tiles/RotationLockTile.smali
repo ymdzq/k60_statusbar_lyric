@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/qs/tiles/RotationLockTile;
 .super Lcom/android/systemui/qs/tileimpl/QSTileImpl;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/policy/BatteryController$BatteryStateChangeCallback;
@@ -426,7 +426,7 @@
     iput-boolean p2, p1, Lcom/android/systemui/plugins/qs/QSTile$BooleanState;->value:Z
 
     .line 82
-    const p2, 0x7f1309e1    # @string/quick_settings_rotation_unlocked_label 'Auto-rotate'
+    const p2, 0x7f1309e7    # @string/quick_settings_rotation_unlocked_label 'Auto-rotate'
 
     .line 84
     invoke-virtual {p0, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -477,7 +477,7 @@
     move-result-object p0
 
     .line 120
-    const p2, 0x7f130a38    # @string/rotation_lock_camera_rotation_on 'On - Face-based'
+    const p2, 0x7f130a3e    # @string/rotation_lock_camera_rotation_on 'On - Face-based'
 
     .line 121
     invoke-virtual {p0, p2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;

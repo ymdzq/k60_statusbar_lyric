@@ -140,45 +140,119 @@
 .end method
 
 .method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    .locals 3
 
     invoke-static {}, Lkotlin/coroutines/intrinsics/IntrinsicsKt;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
 
-    .line 116
+    .line 120
     iget v0, p0, Lcom/android/settings/deviceinfo/SimEidPreferenceController$getEid$2;->label:I
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_4
 
     invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
 
-    .line 117
+    const-string/jumbo p1, "ro.vendor.miui.support_esim"
+
+    const/4 v0, 0x0
+
+    .line 121
+    invoke-static {p1, v0}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result p1
+
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_0
+
+    const-string/jumbo p0, "miui.telephony.TelephonyManagerEx"
+
+    .line 122
+    invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object p0
+
+    const-string p1, "getDefault"
+
+    new-array v2, v0, [Ljava/lang/Class;
+
+    .line 123
+    invoke-virtual {p0, p1, v2}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object p1
+
+    new-array v2, v0, [Ljava/lang/Object;
+
+    invoke-virtual {p1, v1, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    const-string v1, "getProductEid"
+
+    new-array v2, v0, [Ljava/lang/Class;
+
+    .line 124
+    invoke-virtual {p0, v1, v2}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object p0
+
+    new-array v0, v0, [Ljava/lang/Object;
+
+    invoke-virtual {p0, p1, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    const-string/jumbo p1, "null cannot be cast to non-null type kotlin.String"
+
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast p0, Ljava/lang/String;
+
+    goto :goto_1
+
+    :cond_0
+    const-string/jumbo p1, "ro.vendor.miui.use_google_lpa"
+
+    .line 125
+    invoke-static {p1, v0}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result p1
+
+    const-string v0, ""
+
+    if-eqz p1, :cond_3
+
+    .line 126
     iget-object p0, p0, Lcom/android/settings/deviceinfo/SimEidPreferenceController$getEid$2;->this$0:Lcom/android/settings/deviceinfo/SimEidPreferenceController;
 
     invoke-static {p0}, Lcom/android/settings/deviceinfo/SimEidPreferenceController;->access$getEidStatus$p(Lcom/android/settings/deviceinfo/SimEidPreferenceController;)Lcom/android/settings/deviceinfo/simstatus/EidStatus;
 
     move-result-object p0
 
-    if-eqz p0, :cond_0
+    if-eqz p0, :cond_1
 
     invoke-virtual {p0}, Lcom/android/settings/deviceinfo/simstatus/EidStatus;->getEid()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v1
+
+    :cond_1
+    if-nez v1, :cond_2
 
     goto :goto_0
 
-    :cond_0
-    const/4 p0, 0x0
+    :cond_2
+    move-object p0, v1
 
+    goto :goto_1
+
+    :cond_3
     :goto_0
-    if-nez p0, :cond_1
+    move-object p0, v0
 
-    const-string p0, ""
-
-    :cond_1
+    :goto_1
     return-object p0
 
-    .line 116
-    :cond_2
+    .line 120
+    :cond_4
     new-instance p0, Ljava/lang/IllegalStateException;
 
     const-string p1, "call to \'resume\' before \'invoke\' with coroutine"

@@ -1481,7 +1481,7 @@
 .method private notifyPatternCleared()V
     .locals 1
 
-    const v0, 0x110f0271
+    const v0, 0x110f0273
 
     .line 377
     invoke-direct {p0, v0}, Lcom/android/settings/LockPatternView;->sendAccessEvent(I)V
@@ -1501,7 +1501,7 @@
 .method private notifyPatternDetected()V
     .locals 1
 
-    const v0, 0x110f0272
+    const v0, 0x110f0274
 
     .line 370
     invoke-direct {p0, v0}, Lcom/android/settings/LockPatternView;->sendAccessEvent(I)V
@@ -1523,7 +1523,7 @@
 .method private notifyPatternStarted()V
     .locals 1
 
-    const v0, 0x110f0273
+    const v0, 0x110f0275
 
     .line 363
     invoke-direct {p0, v0}, Lcom/android/settings/LockPatternView;->sendAccessEvent(I)V

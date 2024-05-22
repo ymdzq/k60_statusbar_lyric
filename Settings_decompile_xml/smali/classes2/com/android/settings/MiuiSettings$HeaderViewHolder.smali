@@ -32,13 +32,13 @@
 .method constructor <init>(Lcom/android/settings/MiuiSettings;Landroid/view/View;)V
     .locals 4
 
-    .line 1020
+    .line 1023
     iput-object p1, p0, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->this$0:Lcom/android/settings/MiuiSettings;
 
-    .line 1021
+    .line 1024
     invoke-direct {p0, p2}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
 
-    .line 1022
+    .line 1025
     invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -75,7 +75,7 @@
 
     if-eq v0, v2, :cond_0
 
-    .line 1054
+    .line 1057
     sget v0, Lcom/android/settings/R$id;->arrow_right:I
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -88,21 +88,21 @@
 
     if-eqz p2, :cond_4
 
-    .line 1055
+    .line 1058
     invoke-static {p1}, Lcom/android/settings/utils/SettingsFeatures;->isSplitTablet(Landroid/content/Context;)Z
 
     move-result p1
 
     if-eqz p1, :cond_4
 
-    .line 1056
+    .line 1059
     iget-object p0, p0, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->arrowRight:Landroid/widget/ImageView;
 
     invoke-virtual {p0, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
     goto/16 :goto_1
 
-    .line 1032
+    .line 1035
     :cond_0
     sget v0, Lcom/android/settings/R$id;->arrow_right:I
 
@@ -118,21 +118,21 @@
 
     if-eqz v0, :cond_2
 
-    .line 1034
+    .line 1037
     invoke-static {p1}, Lcom/android/settings/utils/SettingsFeatures;->isSplitTablet(Landroid/content/Context;)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 1035
+    .line 1038
     iget-object p1, p0, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->arrowRight:Landroid/widget/ImageView;
 
     invoke-virtual {p1, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
     goto :goto_0
 
-    .line 1037
+    .line 1040
     :cond_1
     iget-object p1, p0, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->arrowRight:Landroid/widget/ImageView;
 
@@ -142,7 +142,7 @@
     :goto_0
     const p1, 0x1020006    # @android:id/icon
 
-    .line 1040
+    .line 1043
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -151,7 +151,7 @@
 
     iput-object p1, p0, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->icon:Landroid/widget/ImageView;
 
-    .line 1041
+    .line 1044
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -162,7 +162,7 @@
 
     const p1, 0x1020010    # @android:id/summary
 
-    .line 1042
+    .line 1045
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -171,7 +171,7 @@
 
     iput-object p1, p0, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->summary:Landroid/widget/TextView;
 
-    .line 1043
+    .line 1046
     sget p1, Lcom/android/settings/R$id;->text_right:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -182,7 +182,7 @@
 
     iput-object p1, p0, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->value:Landroid/widget/TextView;
 
-    .line 1045
+    .line 1048
     iget-object p1, p0, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->icon:Landroid/widget/ImageView;
 
     if-eqz p1, :cond_4
@@ -193,7 +193,7 @@
 
     if-eqz p1, :cond_4
 
-    .line 1046
+    .line 1049
     iget-object p1, p0, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->icon:Landroid/widget/ImageView;
 
     invoke-virtual {p1}, Landroid/widget/ImageView;->getParent()Landroid/view/ViewParent;
@@ -202,7 +202,7 @@
 
     check-cast p1, Landroid/widget/LinearLayout;
 
-    .line 1047
+    .line 1050
     iget-object p2, p0, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->icon:Landroid/widget/ImageView;
 
     invoke-virtual {p2}, Landroid/widget/ImageView;->getContext()Landroid/content/Context;
@@ -221,10 +221,10 @@
 
     invoke-virtual {p2, v0}, Landroid/widget/ImageView;->setMinimumWidth(I)V
 
-    .line 1048
+    .line 1051
     invoke-virtual {p1, v2}, Landroid/widget/LinearLayout;->setMinimumWidth(I)V
 
-    .line 1049
+    .line 1052
     iget-object p0, p0, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->icon:Landroid/widget/ImageView;
 
     invoke-virtual {p0}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -235,7 +235,7 @@
 
     invoke-virtual {p0, v2}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginEnd(I)V
 
-    .line 1050
+    .line 1053
     invoke-virtual {p1}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p0
@@ -246,7 +246,7 @@
 
     goto :goto_1
 
-    .line 1025
+    .line 1028
     :cond_3
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

@@ -1,6 +1,6 @@
 .class public Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTouchState;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # static fields
@@ -425,282 +425,291 @@
     if-lez p3, :cond_2
 
     .line 75
-    iput-boolean v8, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTouchState;->mIsDragging:Z
+    invoke-virtual {p0}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTouchState;->isInMultiTouch()Z
 
     .line 77
+    move-result p3
+
+    .line 80
+    if-nez p3, :cond_2
+
+    .line 81
+    iput-boolean v8, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTouchState;->mIsDragging:Z
+
+    .line 83
     invoke-virtual {p2}, Landroid/view/InputMonitor;->pilferPointers()V
 
-    .line 79
+    .line 85
     :cond_2
     iget-object p0, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTouchState;->mVelocityMonitor:Lcom/android/wm/shell/miuifreeform/VelocityMonitor;
 
-    .line 82
+    .line 88
     new-array p2, v6, [F
 
-    .line 84
+    .line 90
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
-    .line 86
+    .line 92
     move-result p3
 
-    .line 89
+    .line 95
     aput p3, p2, v7
 
-    .line 90
+    .line 96
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
 
-    .line 92
+    .line 98
     move-result p1
 
-    .line 95
+    .line 101
     aput p1, p2, v8
 
-    .line 96
+    .line 102
     invoke-virtual {p0, p2}, Lcom/android/wm/shell/miuifreeform/VelocityMonitor;->update([F)V
 
-    .line 98
+    .line 104
     goto/16 :goto_2
 
-    .line 101
+    .line 107
     :cond_3
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getEventTime()J
 
-    .line 103
+    .line 109
     move-result-wide p2
 
-    .line 106
+    .line 112
     iput-wide p2, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTouchState;->mUpTouchTime:J
 
-    .line 107
+    .line 113
     iget-boolean v0, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTouchState;->mIsDragging:Z
 
-    .line 109
+    .line 115
     iput-boolean v0, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTouchState;->mPreviouslyDragging:Z
 
-    .line 111
+    .line 117
     iget-boolean v1, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTouchState;->mIsDoubleTap:Z
 
-    .line 113
+    .line 119
     if-nez v1, :cond_4
 
-    .line 115
+    .line 121
     if-nez v0, :cond_4
 
-    .line 117
+    .line 123
     iget-wide v0, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTouchState;->mDownTouchTime:J
 
-    .line 119
+    .line 125
     sub-long/2addr p2, v0
 
-    .line 121
+    .line 127
     cmp-long p2, p2, v3
 
-    .line 122
+    .line 128
     if-gez p2, :cond_4
 
-    .line 124
+    .line 130
     move p2, v8
 
-    .line 126
+    .line 132
     goto :goto_0
 
-    .line 127
+    .line 133
     :cond_4
     move p2, v7
 
-    .line 128
+    .line 134
     :goto_0
     iput-boolean p2, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTouchState;->mIsWaitingForDoubleTap:Z
 
-    .line 129
+    .line 135
     iget-object p2, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTouchState;->mVelocityMonitor:Lcom/android/wm/shell/miuifreeform/VelocityMonitor;
 
-    .line 131
+    .line 137
     new-array p3, v6, [F
 
-    .line 133
+    .line 139
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
-    .line 135
+    .line 141
     move-result v0
 
-    .line 138
+    .line 144
     aput v0, p3, v7
 
-    .line 139
+    .line 145
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
 
-    .line 141
+    .line 147
     move-result p1
 
-    .line 144
+    .line 150
     aput p1, p3, v8
 
-    .line 145
+    .line 151
     invoke-virtual {p2, p3}, Lcom/android/wm/shell/miuifreeform/VelocityMonitor;->update([F)V
 
-    .line 147
+    .line 153
     iput-object v5, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTouchState;->mActiveMiuiFreeformTask:Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;
 
-    .line 150
+    .line 156
     goto :goto_2
 
-    .line 152
+    .line 158
     :cond_5
     iput-object p3, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTouchState;->mActiveMiuiFreeformTask:Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;
 
-    .line 153
+    .line 159
     iput-boolean v8, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTouchState;->mAllowGesture:Z
 
-    .line 155
+    .line 161
     invoke-virtual {p0, v7}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTouchState;->setInMultiTouch(Z)V
 
-    .line 157
+    .line 163
     iget-object p2, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTouchState;->mDownPoint:Landroid/graphics/PointF;
 
-    .line 160
+    .line 166
     invoke-virtual {p2, v0, v1}, Landroid/graphics/PointF;->set(FF)V
 
-    .line 162
+    .line 168
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getEventTime()J
 
-    .line 165
+    .line 171
     move-result-wide v0
 
-    .line 168
+    .line 174
     iput-wide v0, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTouchState;->mDownTouchTime:J
 
-    .line 169
+    .line 175
     iput-boolean v7, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTouchState;->mIsWaitingForDoubleTap:Z
 
-    .line 171
+    .line 177
     iput-boolean v7, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTouchState;->mIsDragging:Z
 
-    .line 173
+    .line 179
     iget-object p2, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTouchState;->mLastMotionEvent:Landroid/view/MotionEvent;
 
-    .line 175
+    .line 181
     if-eqz p2, :cond_6
 
-    .line 177
+    .line 183
     invoke-virtual {p2}, Landroid/view/MotionEvent;->recycle()V
 
-    .line 179
+    .line 185
     iput-object v5, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTouchState;->mLastMotionEvent:Landroid/view/MotionEvent;
 
-    .line 182
+    .line 188
     :cond_6
     iget-object p2, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTouchState;->mHandler:Landroid/os/Handler;
 
-    .line 184
+    .line 190
     invoke-virtual {p2, v8, p3}, Landroid/os/Handler;->hasMessages(ILjava/lang/Object;)Z
 
-    .line 186
+    .line 192
     move-result p2
 
-    .line 189
+    .line 195
     if-eqz p2, :cond_7
 
-    .line 190
+    .line 196
     iget-object p2, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTouchState;->mHandler:Landroid/os/Handler;
 
-    .line 192
+    .line 198
     invoke-virtual {p2, v8, p3}, Landroid/os/Handler;->removeMessages(ILjava/lang/Object;)V
 
-    .line 194
+    .line 200
     :cond_7
     iget-boolean p2, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTouchState;->mPreviouslyDragging:Z
 
-    .line 197
+    .line 203
     if-nez p2, :cond_8
 
-    .line 199
+    .line 205
     iget-wide p2, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTouchState;->mDownTouchTime:J
 
-    .line 201
+    .line 207
     iget-wide v0, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTouchState;->mLastDownTouchTime:J
 
-    .line 203
+    .line 209
     sub-long/2addr p2, v0
 
-    .line 205
+    .line 211
     cmp-long p2, p2, v3
 
-    .line 206
+    .line 212
     if-gez p2, :cond_8
 
-    .line 208
+    .line 214
     iget-object p2, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTouchState;->mActiveMiuiFreeformTask:Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;
 
-    .line 210
+    .line 216
     iget-object p3, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTouchState;->mLastActiveMiuiFreeformTask:Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;
 
-    .line 212
+    .line 218
     if-ne p2, p3, :cond_8
 
-    .line 214
+    .line 220
     move p2, v8
 
-    .line 216
+    .line 222
     goto :goto_1
 
-    .line 217
+    .line 223
     :cond_8
     move p2, v7
 
-    .line 218
+    .line 224
     :goto_1
     iput-boolean p2, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTouchState;->mIsDoubleTap:Z
 
-    .line 219
+    .line 225
     iget-wide p2, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTouchState;->mDownTouchTime:J
 
-    .line 221
+    .line 227
     iput-wide p2, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTouchState;->mLastDownTouchTime:J
 
-    .line 223
+    .line 229
     iget-object p2, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTouchState;->mActiveMiuiFreeformTask:Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;
 
-    .line 225
+    .line 231
     iput-object p2, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTouchState;->mLastActiveMiuiFreeformTask:Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;
 
-    .line 227
+    .line 233
     iget-object p2, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTouchState;->mVelocityMonitor:Lcom/android/wm/shell/miuifreeform/VelocityMonitor;
 
-    .line 229
+    .line 235
     invoke-virtual {p2}, Lcom/android/wm/shell/miuifreeform/VelocityMonitor;->clear()V
 
-    .line 231
+    .line 237
     iget-object p0, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTouchState;->mVelocityMonitor:Lcom/android/wm/shell/miuifreeform/VelocityMonitor;
 
-    .line 234
+    .line 240
     new-array p2, v6, [F
 
-    .line 236
+    .line 242
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
-    .line 238
+    .line 244
     move-result p3
 
-    .line 241
+    .line 247
     aput p3, p2, v7
 
-    .line 242
+    .line 248
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
 
-    .line 244
+    .line 250
     move-result p1
 
-    .line 247
+    .line 253
     aput p1, p2, v8
 
-    .line 248
+    .line 254
     invoke-virtual {p0, p2}, Lcom/android/wm/shell/miuifreeform/VelocityMonitor;->update([F)V
 
-    .line 250
+    .line 256
     :goto_2
     return-void
-    .line 253
+    .line 259
 .end method
 
 .method public isAllowGesture()Z

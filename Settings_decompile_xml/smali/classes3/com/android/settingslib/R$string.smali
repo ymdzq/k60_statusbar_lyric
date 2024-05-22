@@ -346,272 +346,272 @@
 
 .field public static final ims_reg_status_registered:I = 0x7f1311fb # @string/ims_reg_status_registered 'Registered'
 
-.field public static final loading_injected_setting_summary:I = 0x7f1313e4 # @string/loading_injected_setting_summary 'Just a sec…'
+.field public static final loading_injected_setting_summary:I = 0x7f1313e8 # @string/loading_injected_setting_summary 'Just a sec…'
 
-.field public static final managed_user_title:I = 0x7f1315b7 # @string/managed_user_title 'All work apps'
+.field public static final managed_user_title:I = 0x7f1315bf # @string/managed_user_title 'All work apps'
 
-.field public static final media_transfer_default_device_name:I = 0x7f131615 # @string/media_transfer_default_device_name 'Connected device'
+.field public static final media_transfer_default_device_name:I = 0x7f13161d # @string/media_transfer_default_device_name 'Connected device'
 
-.field public static final media_transfer_dock_speaker_device_name:I = 0x7f131616 # @string/media_transfer_dock_speaker_device_name 'Dock speaker'
+.field public static final media_transfer_dock_speaker_device_name:I = 0x7f13161e # @string/media_transfer_dock_speaker_device_name 'Dock speaker'
 
-.field public static final media_transfer_external_device_name:I = 0x7f131617 # @string/media_transfer_external_device_name 'External Device'
+.field public static final media_transfer_external_device_name:I = 0x7f13161f # @string/media_transfer_external_device_name 'External Device'
 
-.field public static final media_transfer_this_device_name:I = 0x7f131618 # @string/media_transfer_this_device_name 'This device'
+.field public static final media_transfer_this_device_name:I = 0x7f131620 # @string/media_transfer_this_device_name 'This device'
 
-.field public static final media_transfer_wired_usb_device_name:I = 0x7f13161b # @string/media_transfer_wired_usb_device_name 'Wired headphone'
+.field public static final media_transfer_wired_usb_device_name:I = 0x7f131623 # @string/media_transfer_wired_usb_device_name 'Wired headphone'
 
-.field public static final next:I = 0x7f131972 # @string/next 'Next'
+.field public static final next:I = 0x7f13197a # @string/next 'Next'
 
-.field public static final not_default_data_content_description:I = 0x7f131a05 # @string/not_default_data_content_description 'Not set to use data'
+.field public static final not_default_data_content_description:I = 0x7f131a0d # @string/not_default_data_content_description 'Not set to use data'
 
-.field public static final notice_header:I = 0x7f131a17 # @string/notice_header ''
+.field public static final notice_header:I = 0x7f131a1f # @string/notice_header ''
 
-.field public static final oem_preferred_feedback_reporter:I = 0x7f131abf # @string/oem_preferred_feedback_reporter ''
+.field public static final oem_preferred_feedback_reporter:I = 0x7f131ac7 # @string/oem_preferred_feedback_reporter ''
 
-.field public static final okay:I = 0x7f131ac8 # @string/okay 'OK'
+.field public static final okay:I = 0x7f131ad0 # @string/okay 'OK'
 
-.field public static final osu_completing_sign_up:I = 0x7f131af8 # @string/osu_completing_sign_up 'Completing sign-up…'
+.field public static final osu_completing_sign_up:I = 0x7f131b00 # @string/osu_completing_sign_up 'Completing sign-up…'
 
-.field public static final osu_connect_failed:I = 0x7f131af9 # @string/osu_connect_failed 'Couldn't connect'
+.field public static final osu_connect_failed:I = 0x7f131b01 # @string/osu_connect_failed 'Couldn't connect'
 
-.field public static final osu_opening_provider:I = 0x7f131afa # @string/osu_opening_provider 'Opening %1$s'
+.field public static final osu_opening_provider:I = 0x7f131b02 # @string/osu_opening_provider 'Opening %1$s'
 
-.field public static final osu_sign_up_complete:I = 0x7f131afb # @string/osu_sign_up_complete 'Sign-up complete. Connecting…'
+.field public static final osu_sign_up_complete:I = 0x7f131b03 # @string/osu_sign_up_complete 'Sign-up complete. Connecting…'
 
-.field public static final osu_sign_up_failed:I = 0x7f131afc # @string/osu_sign_up_failed 'Couldn't complete sign-up. Tap to try again.'
+.field public static final osu_sign_up_failed:I = 0x7f131b04 # @string/osu_sign_up_failed 'Couldn't complete sign-up. Tap to try again.'
 
-.field public static final power_discharge_by_only_short:I = 0x7f131bea # @string/power_discharge_by_only_short 'Until %1$s'
+.field public static final power_discharge_by_only_short:I = 0x7f131bf2 # @string/power_discharge_by_only_short 'Until %1$s'
 
-.field public static final power_remaining_duration_only_short:I = 0x7f131c11 # @string/power_remaining_duration_only_short '%1$s'
+.field public static final power_remaining_duration_only_short:I = 0x7f131c19 # @string/power_remaining_duration_only_short '%1$s'
 
-.field public static final power_remaining_only_more_than_subtext:I = 0x7f131c17 # @string/power_remaining_only_more_than_subtext 'More than %1$s left'
+.field public static final power_remaining_only_more_than_subtext:I = 0x7f131c1f # @string/power_remaining_only_more_than_subtext 'More than %1$s left'
 
-.field public static final power_suggestion_battery_run_out:I = 0x7f131c1b # @string/power_suggestion_battery_run_out 'Battery may run out by %1$s'
+.field public static final power_suggestion_battery_run_out:I = 0x7f131c23 # @string/power_suggestion_battery_run_out 'Battery may run out by %1$s'
 
-.field public static final preference_summary_default_combination:I = 0x7f131c4d # @string/preference_summary_default_combination '%1$s / %2$s'
+.field public static final preference_summary_default_combination:I = 0x7f131c55 # @string/preference_summary_default_combination '%1$s / %2$s'
 
-.field public static final private_dns_broken:I = 0x7f131d17 # @string/private_dns_broken 'Private DNS server cannot be accessed'
+.field public static final private_dns_broken:I = 0x7f131d1f # @string/private_dns_broken 'Private DNS server cannot be accessed'
 
-.field public static final process_kernel_label:I = 0x7f131d2f # @string/process_kernel_label 'Android OS'
+.field public static final process_kernel_label:I = 0x7f131d37 # @string/process_kernel_label 'Android OS'
 
-.field public static final profile_info_settings_title:I = 0x7f131d46 # @string/profile_info_settings_title 'Profile info'
+.field public static final profile_info_settings_title:I = 0x7f131d4e # @string/profile_info_settings_title 'Profile info'
 
-.field public static final running_process_item_user_label:I = 0x7f131e5e # @string/running_process_item_user_label 'User: %1$s'
+.field public static final running_process_item_user_label:I = 0x7f131e66 # @string/running_process_item_user_label 'User: %1$s'
 
-.field public static final saved_network:I = 0x7f131e85 # @string/saved_network 'Saved by %1$s'
+.field public static final saved_network:I = 0x7f131e8d # @string/saved_network 'Saved by %1$s'
 
-.field public static final screen_resolution_dialog_title:I = 0x7f131f25 # @string/screen_resolution_dialog_title 'Switch resolution'
+.field public static final screen_resolution_dialog_title:I = 0x7f131f2d # @string/screen_resolution_dialog_title 'Switch resolution'
 
-.field public static final screen_zoom_summary_custom:I = 0x7f131f41 # @string/screen_zoom_summary_custom 'Custom (%d)'
+.field public static final screen_zoom_summary_custom:I = 0x7f131f49 # @string/screen_zoom_summary_custom 'Custom (%d)'
 
-.field public static final screen_zoom_summary_default:I = 0x7f131f42 # @string/screen_zoom_summary_default 'Default'
+.field public static final screen_zoom_summary_default:I = 0x7f131f4a # @string/screen_zoom_summary_default 'Default'
 
-.field public static final screen_zoom_summary_extremely_large:I = 0x7f131f43 # @string/screen_zoom_summary_extremely_large 'Largest'
+.field public static final screen_zoom_summary_extremely_large:I = 0x7f131f4b # @string/screen_zoom_summary_extremely_large 'Largest'
 
-.field public static final screen_zoom_summary_large:I = 0x7f131f44 # @string/screen_zoom_summary_large 'Large'
+.field public static final screen_zoom_summary_large:I = 0x7f131f4c # @string/screen_zoom_summary_large 'Large'
 
-.field public static final screen_zoom_summary_small:I = 0x7f131f45 # @string/screen_zoom_summary_small 'Small'
+.field public static final screen_zoom_summary_small:I = 0x7f131f4d # @string/screen_zoom_summary_small 'Small'
 
-.field public static final screen_zoom_summary_very_large:I = 0x7f131f46 # @string/screen_zoom_summary_very_large 'Larger'
+.field public static final screen_zoom_summary_very_large:I = 0x7f131f4e # @string/screen_zoom_summary_very_large 'Larger'
 
-.field public static final settings_package:I = 0x7f13217f # @string/settings_package 'com.android.settings'
+.field public static final settings_package:I = 0x7f132187 # @string/settings_package 'com.android.settings'
 
-.field public static final speed_label_fast:I = 0x7f13231b # @string/speed_label_fast 'Fast'
+.field public static final speed_label_fast:I = 0x7f132323 # @string/speed_label_fast 'Fast'
 
-.field public static final speed_label_okay:I = 0x7f13231c # @string/speed_label_okay 'OK'
+.field public static final speed_label_okay:I = 0x7f132324 # @string/speed_label_okay 'OK'
 
-.field public static final speed_label_slow:I = 0x7f13231d # @string/speed_label_slow 'Slow'
+.field public static final speed_label_slow:I = 0x7f132325 # @string/speed_label_slow 'Slow'
 
-.field public static final speed_label_very_fast:I = 0x7f13231e # @string/speed_label_very_fast 'Very fast'
+.field public static final speed_label_very_fast:I = 0x7f132326 # @string/speed_label_very_fast 'Very fast'
 
-.field public static final status_unavailable:I = 0x7f132365 # @string/status_unavailable 'Not available'
+.field public static final status_unavailable:I = 0x7f13236d # @string/status_unavailable 'Not available'
 
-.field public static final string_KB:I = 0x7f1323d2 # @string/string_KB '%d KB'
+.field public static final string_KB:I = 0x7f1323da # @string/string_KB '%d KB'
 
-.field public static final string_KB_per_log_buffer:I = 0x7f1323d3 # @string/string_KB_per_log_buffer '%d KB per log buffer'
+.field public static final string_KB_per_log_buffer:I = 0x7f1323db # @string/string_KB_per_log_buffer '%d KB per log buffer'
 
-.field public static final string_MB:I = 0x7f1323d4 # @string/string_MB '%d MB'
+.field public static final string_MB:I = 0x7f1323dc # @string/string_MB '%d MB'
 
-.field public static final string_MB_per_log_buffer:I = 0x7f1323d5 # @string/string_MB_per_log_buffer '%d MB per log buffer'
+.field public static final string_MB_per_log_buffer:I = 0x7f1323dd # @string/string_MB_per_log_buffer '%d MB per log buffer'
 
-.field public static final string_off:I = 0x7f1323e8 # @string/string_off 'Off'
+.field public static final string_off:I = 0x7f1323f0 # @string/string_off 'Off'
 
-.field public static final string_offed:I = 0x7f1323e9 # @string/string_offed 'Off'
+.field public static final string_offed:I = 0x7f1323f1 # @string/string_offed 'Off'
 
-.field public static final summary_empty:I = 0x7f13246f # @string/summary_empty ''
+.field public static final summary_empty:I = 0x7f132477 # @string/summary_empty ''
 
-.field public static final summary_placeholder:I = 0x7f132471 # @string/summary_placeholder ' '
+.field public static final summary_placeholder:I = 0x7f132479 # @string/summary_placeholder ' '
 
-.field public static final tap_to_sign_up:I = 0x7f1324d5 # @string/tap_to_sign_up 'Tap to sign up'
+.field public static final tap_to_sign_up:I = 0x7f1324dd # @string/tap_to_sign_up 'Tap to sign up'
 
-.field public static final tether_settings_title_all:I = 0x7f13253c # @string/tether_settings_title_all 'Tethering & portable hotspot'
+.field public static final tether_settings_title_all:I = 0x7f132544 # @string/tether_settings_title_all 'Tethering & portable hotspot'
 
-.field public static final tether_settings_title_bluetooth:I = 0x7f13253d # @string/tether_settings_title_bluetooth 'Bluetooth tethering'
+.field public static final tether_settings_title_bluetooth:I = 0x7f132545 # @string/tether_settings_title_bluetooth 'Bluetooth tethering'
 
-.field public static final tether_settings_title_usb:I = 0x7f13253e # @string/tether_settings_title_usb 'USB tethering'
+.field public static final tether_settings_title_usb:I = 0x7f132546 # @string/tether_settings_title_usb 'USB tethering'
 
-.field public static final tether_settings_title_usb_bluetooth:I = 0x7f13253f # @string/tether_settings_title_usb_bluetooth 'Tethering'
+.field public static final tether_settings_title_usb_bluetooth:I = 0x7f132547 # @string/tether_settings_title_usb_bluetooth 'Tethering'
 
-.field public static final tether_settings_title_wifi:I = 0x7f132540 # @string/tether_settings_title_wifi 'Portable hotspot'
+.field public static final tether_settings_title_wifi:I = 0x7f132548 # @string/tether_settings_title_wifi 'Portable hotspot'
 
-.field public static final time_unit_just_now:I = 0x7f132593 # @string/time_unit_just_now 'Just now'
+.field public static final time_unit_just_now:I = 0x7f13259b # @string/time_unit_just_now 'Just now'
 
-.field public static final use_system_language_to_select_input_method_subtypes:I = 0x7f132766 # @string/use_system_language_to_select_input_method_subtypes 'Use system languages'
+.field public static final use_system_language_to_select_input_method_subtypes:I = 0x7f132770 # @string/use_system_language_to_select_input_method_subtypes 'Use system languages'
 
-.field public static final user_add_profile_item_summary:I = 0x7f13276e # @string/user_add_profile_item_summary 'You can restrict access to apps and content from your account'
+.field public static final user_add_profile_item_summary:I = 0x7f132778 # @string/user_add_profile_item_summary 'You can restrict access to apps and content from your account'
 
-.field public static final user_add_profile_item_title:I = 0x7f13276f # @string/user_add_profile_item_title 'Restricted profile'
+.field public static final user_add_profile_item_title:I = 0x7f132779 # @string/user_add_profile_item_title 'Restricted profile'
 
-.field public static final user_add_user:I = 0x7f132770 # @string/user_add_user 'Add user'
+.field public static final user_add_user:I = 0x7f13277a # @string/user_add_user 'Add user'
 
-.field public static final user_add_user_item_summary:I = 0x7f132771 # @string/user_add_user_item_summary 'Users have their own apps and content'
+.field public static final user_add_user_item_summary:I = 0x7f13277b # @string/user_add_user_item_summary 'Users have their own apps and content'
 
-.field public static final user_add_user_item_title:I = 0x7f132772 # @string/user_add_user_item_title 'User'
+.field public static final user_add_user_item_title:I = 0x7f13277c # @string/user_add_user_item_title 'User'
 
-.field public static final user_add_user_message_long:I = 0x7f132773 # @string/user_add_user_message_long 'You can share this device with other people by creating additional users. Each user has their own sp ...'
+.field public static final user_add_user_message_long:I = 0x7f13277d # @string/user_add_user_message_long 'You can share this device with other people by creating additional users. Each user has their own sp ...'
 
-.field public static final user_add_user_message_short:I = 0x7f132774 # @string/user_add_user_message_short 'When you add a new user, that person needs to set up their space.\n\nAny user can update apps for all  ...'
+.field public static final user_add_user_message_short:I = 0x7f13277e # @string/user_add_user_message_short 'When you add a new user, that person needs to set up their space.\n\nAny user can update apps for all  ...'
 
-.field public static final user_add_user_title:I = 0x7f132776 # @string/user_add_user_title 'Add new user?'
+.field public static final user_add_user_title:I = 0x7f132780 # @string/user_add_user_title 'Add new user?'
 
-.field public static final user_add_user_type_title:I = 0x7f132777 # @string/user_add_user_type_title 'Add'
+.field public static final user_add_user_type_title:I = 0x7f132781 # @string/user_add_user_type_title 'Add'
 
-.field public static final user_grant_admin_button:I = 0x7f1327aa # @string/user_grant_admin_button 'Make admin'
+.field public static final user_grant_admin_button:I = 0x7f1327b4 # @string/user_grant_admin_button 'Make admin'
 
-.field public static final user_grant_admin_message:I = 0x7f1327ab # @string/user_grant_admin_message 'Admins have special privileges that other users don't. An admin can manage all users, update or rese ...'
+.field public static final user_grant_admin_message:I = 0x7f1327b5 # @string/user_grant_admin_message 'Admins have special privileges that other users don't. An admin can manage all users, update or rese ...'
 
-.field public static final user_grant_admin_title:I = 0x7f1327ac # @string/user_grant_admin_title 'Make this user an admin?'
+.field public static final user_grant_admin_title:I = 0x7f1327b6 # @string/user_grant_admin_title 'Make this user an admin?'
 
-.field public static final user_image_choose_photo:I = 0x7f1327ad # @string/user_image_choose_photo 'Gallery'
+.field public static final user_image_choose_photo:I = 0x7f1327b7 # @string/user_image_choose_photo 'Gallery'
 
-.field public static final user_image_take_photo:I = 0x7f1327af # @string/user_image_take_photo 'Camera'
+.field public static final user_image_take_photo:I = 0x7f1327b9 # @string/user_image_take_photo 'Camera'
 
-.field public static final user_need_lock_message:I = 0x7f1327b4 # @string/user_need_lock_message 'Before you can create a restricted profile, you'll need to set up a screen lock to protect your apps ...'
+.field public static final user_need_lock_message:I = 0x7f1327be # @string/user_need_lock_message 'Before you can create a restricted profile, you'll need to set up a screen lock to protect your apps ...'
 
-.field public static final user_new_profile_name:I = 0x7f1327b5 # @string/user_new_profile_name 'New profile'
+.field public static final user_new_profile_name:I = 0x7f1327bf # @string/user_new_profile_name 'New profile'
 
-.field public static final user_new_user_name:I = 0x7f1327b6 # @string/user_new_user_name 'New user'
+.field public static final user_new_user_name:I = 0x7f1327c0 # @string/user_new_user_name 'New user'
 
-.field public static final user_set_lock_button:I = 0x7f1327c2 # @string/user_set_lock_button 'Set lock'
+.field public static final user_set_lock_button:I = 0x7f1327cc # @string/user_set_lock_button 'Set lock'
 
-.field public static final user_setup_button_setup_later:I = 0x7f1327c6 # @string/user_setup_button_setup_later 'Not now'
+.field public static final user_setup_button_setup_later:I = 0x7f1327d0 # @string/user_setup_button_setup_later 'Not now'
 
-.field public static final user_setup_button_setup_now:I = 0x7f1327c7 # @string/user_setup_button_setup_now 'Set up now'
+.field public static final user_setup_button_setup_now:I = 0x7f1327d1 # @string/user_setup_button_setup_now 'Set up now'
 
-.field public static final user_setup_dialog_message:I = 0x7f1327c8 # @string/user_setup_dialog_message 'Make sure the person is available to take the device and set up their space'
+.field public static final user_setup_dialog_message:I = 0x7f1327d2 # @string/user_setup_dialog_message 'Make sure the person is available to take the device and set up their space'
 
-.field public static final user_setup_dialog_title:I = 0x7f1327c9 # @string/user_setup_dialog_title 'Set up user now?'
+.field public static final user_setup_dialog_title:I = 0x7f1327d3 # @string/user_setup_dialog_title 'Set up user now?'
 
-.field public static final user_switch_to_user:I = 0x7f1327cf # @string/user_switch_to_user 'Switch to %s'
+.field public static final user_switch_to_user:I = 0x7f1327d9 # @string/user_switch_to_user 'Switch to %s'
 
-.field public static final wifi_ap_unable_to_handle_new_sta:I = 0x7f13290d # @string/wifi_ap_unable_to_handle_new_sta 'Access point temporarily full'
+.field public static final wifi_ap_unable_to_handle_new_sta:I = 0x7f132917 # @string/wifi_ap_unable_to_handle_new_sta 'Access point temporarily full'
 
-.field public static final wifi_check_password_try_again:I = 0x7f13294b # @string/wifi_check_password_try_again 'Check password and try again'
+.field public static final wifi_check_password_try_again:I = 0x7f132955 # @string/wifi_check_password_try_again 'Check password and try again'
 
-.field public static final wifi_connected_low_quality:I = 0x7f13295c # @string/wifi_connected_low_quality 'Low quality'
+.field public static final wifi_connected_low_quality:I = 0x7f132966 # @string/wifi_connected_low_quality 'Low quality'
 
-.field public static final wifi_connected_no_internet:I = 0x7f13295d # @string/wifi_connected_no_internet 'No internet'
+.field public static final wifi_connected_no_internet:I = 0x7f132967 # @string/wifi_connected_no_internet 'No internet'
 
-.field public static final wifi_disabled_generic:I = 0x7f132972 # @string/wifi_disabled_generic 'Disabled'
+.field public static final wifi_disabled_generic:I = 0x7f13297c # @string/wifi_disabled_generic 'Disabled'
 
-.field public static final wifi_disabled_network_failure:I = 0x7f132974 # @string/wifi_disabled_network_failure 'Couldn't configure IP'
+.field public static final wifi_disabled_network_failure:I = 0x7f13297e # @string/wifi_disabled_network_failure 'Couldn't configure IP'
 
-.field public static final wifi_disabled_password_failure:I = 0x7f132975 # @string/wifi_disabled_password_failure 'Authentication problem'
+.field public static final wifi_disabled_password_failure:I = 0x7f13297f # @string/wifi_disabled_password_failure 'Authentication problem'
 
-.field public static final wifi_disconnected:I = 0x7f132977 # @string/wifi_disconnected 'Disconnected'
+.field public static final wifi_disconnected:I = 0x7f132981 # @string/wifi_disconnected 'Disconnected'
 
-.field public static final wifi_fail_to_scan:I = 0x7f1329cf # @string/wifi_fail_to_scan 'Can't scan for networks'
+.field public static final wifi_fail_to_scan:I = 0x7f1329d9 # @string/wifi_fail_to_scan 'Can't scan for networks'
 
-.field public static final wifi_limited_connection:I = 0x7f132a0a # @string/wifi_limited_connection 'Limited connection'
+.field public static final wifi_limited_connection:I = 0x7f132a14 # @string/wifi_limited_connection 'Limited connection'
 
-.field public static final wifi_metered_label:I = 0x7f132a1d # @string/wifi_metered_label 'Metered'
+.field public static final wifi_metered_label:I = 0x7f132a27 # @string/wifi_metered_label 'Metered'
 
-.field public static final wifi_no_internet:I = 0x7f132a28 # @string/wifi_no_internet 'No internet access'
+.field public static final wifi_no_internet:I = 0x7f132a32 # @string/wifi_no_internet 'No internet access'
 
-.field public static final wifi_no_internet_no_reconnect:I = 0x7f132a29 # @string/wifi_no_internet_no_reconnect 'Won't automatically connect'
+.field public static final wifi_no_internet_no_reconnect:I = 0x7f132a33 # @string/wifi_no_internet_no_reconnect 'Won't automatically connect'
 
-.field public static final wifi_not_in_range:I = 0x7f132a2f # @string/wifi_not_in_range 'Not in range'
+.field public static final wifi_not_in_range:I = 0x7f132a39 # @string/wifi_not_in_range 'Not in range'
 
-.field public static final wifi_passpoint_expired:I = 0x7f132a4b # @string/wifi_passpoint_expired 'Expired'
+.field public static final wifi_passpoint_expired:I = 0x7f132a55 # @string/wifi_passpoint_expired 'Expired'
 
-.field public static final wifi_remembered:I = 0x7f132a5e # @string/wifi_remembered 'Saved'
+.field public static final wifi_remembered:I = 0x7f132a68 # @string/wifi_remembered 'Saved'
 
-.field public static final wifi_security_dpp:I = 0x7f132a84 # @string/wifi_security_dpp 'DPP'
+.field public static final wifi_security_dpp:I = 0x7f132a8e # @string/wifi_security_dpp 'DPP'
 
-.field public static final wifi_security_eap:I = 0x7f132a85 # @string/wifi_security_eap 'WPA/WPA2/WPA3-Enterprise'
+.field public static final wifi_security_eap:I = 0x7f132a8f # @string/wifi_security_eap 'WPA/WPA2/WPA3-Enterprise'
 
-.field public static final wifi_security_eap_suiteb:I = 0x7f132a86 # @string/wifi_security_eap_suiteb 'WPA3-Enterprise 192-bit'
+.field public static final wifi_security_eap_suiteb:I = 0x7f132a90 # @string/wifi_security_eap_suiteb 'WPA3-Enterprise 192-bit'
 
-.field public static final wifi_security_eap_wpa:I = 0x7f132a87 # @string/wifi_security_eap_wpa 'WPA-Enterprise'
+.field public static final wifi_security_eap_wpa:I = 0x7f132a91 # @string/wifi_security_eap_wpa 'WPA-Enterprise'
 
-.field public static final wifi_security_eap_wpa2_wpa3:I = 0x7f132a88 # @string/wifi_security_eap_wpa2_wpa3 'WPA2/WPA3-Enterprise'
+.field public static final wifi_security_eap_wpa2_wpa3:I = 0x7f132a92 # @string/wifi_security_eap_wpa2_wpa3 'WPA2/WPA3-Enterprise'
 
-.field public static final wifi_security_none:I = 0x7f132a8b # @string/wifi_security_none 'None'
+.field public static final wifi_security_none:I = 0x7f132a95 # @string/wifi_security_none 'None'
 
-.field public static final wifi_security_none_owe:I = 0x7f132a8c # @string/wifi_security_none_owe 'None/Enhanced Open'
+.field public static final wifi_security_none_owe:I = 0x7f132a96 # @string/wifi_security_none_owe 'None/Enhanced Open'
 
-.field public static final wifi_security_owe:I = 0x7f132a8d # @string/wifi_security_owe 'Enhanced Open'
+.field public static final wifi_security_owe:I = 0x7f132a97 # @string/wifi_security_owe 'Enhanced Open'
 
-.field public static final wifi_security_psk_generic:I = 0x7f132a8f # @string/wifi_security_psk_generic '@string/wifi_security_wpa_wpa2'
+.field public static final wifi_security_psk_generic:I = 0x7f132a99 # @string/wifi_security_psk_generic '@string/wifi_security_wpa_wpa2'
 
-.field public static final wifi_security_psk_sae:I = 0x7f132a90 # @string/wifi_security_psk_sae 'WPA2/WPA3-Personal'
+.field public static final wifi_security_psk_sae:I = 0x7f132a9a # @string/wifi_security_psk_sae 'WPA2/WPA3-Personal'
 
-.field public static final wifi_security_sae:I = 0x7f132a91 # @string/wifi_security_sae 'WPA3-Personal'
+.field public static final wifi_security_sae:I = 0x7f132a9b # @string/wifi_security_sae 'WPA3-Personal'
 
-.field public static final wifi_security_short_dpp:I = 0x7f132a94 # @string/wifi_security_short_dpp 'DPP'
+.field public static final wifi_security_short_dpp:I = 0x7f132a9e # @string/wifi_security_short_dpp 'DPP'
 
-.field public static final wifi_security_short_eap:I = 0x7f132a95 # @string/wifi_security_short_eap '802.1x'
+.field public static final wifi_security_short_eap:I = 0x7f132a9f # @string/wifi_security_short_eap '802.1x'
 
-.field public static final wifi_security_short_eap_suiteb:I = 0x7f132a96 # @string/wifi_security_short_eap_suiteb 'Suite-B-192'
+.field public static final wifi_security_short_eap_suiteb:I = 0x7f132aa0 # @string/wifi_security_short_eap_suiteb 'Suite-B-192'
 
-.field public static final wifi_security_short_eap_wpa:I = 0x7f132a97 # @string/wifi_security_short_eap_wpa 'WPA-EAP'
+.field public static final wifi_security_short_eap_wpa:I = 0x7f132aa1 # @string/wifi_security_short_eap_wpa 'WPA-EAP'
 
-.field public static final wifi_security_short_eap_wpa2_wpa3:I = 0x7f132a98 # @string/wifi_security_short_eap_wpa2_wpa3 'RSN-EAP'
+.field public static final wifi_security_short_eap_wpa2_wpa3:I = 0x7f132aa2 # @string/wifi_security_short_eap_wpa2_wpa3 'RSN-EAP'
 
-.field public static final wifi_security_short_none_owe:I = 0x7f132a99 # @string/wifi_security_short_none_owe 'None/OWE'
+.field public static final wifi_security_short_none_owe:I = 0x7f132aa3 # @string/wifi_security_short_none_owe 'None/OWE'
 
-.field public static final wifi_security_short_owe:I = 0x7f132a9a # @string/wifi_security_short_owe 'OWE'
+.field public static final wifi_security_short_owe:I = 0x7f132aa4 # @string/wifi_security_short_owe 'OWE'
 
-.field public static final wifi_security_short_psk_generic:I = 0x7f132a9b # @string/wifi_security_short_psk_generic '@string/wifi_security_short_wpa_wpa2'
+.field public static final wifi_security_short_psk_generic:I = 0x7f132aa5 # @string/wifi_security_short_psk_generic '@string/wifi_security_short_wpa_wpa2'
 
-.field public static final wifi_security_short_psk_sae:I = 0x7f132a9c # @string/wifi_security_short_psk_sae 'WPA2/WPA3'
+.field public static final wifi_security_short_psk_sae:I = 0x7f132aa6 # @string/wifi_security_short_psk_sae 'WPA2/WPA3'
 
-.field public static final wifi_security_short_sae:I = 0x7f132a9d # @string/wifi_security_short_sae 'WPA3'
+.field public static final wifi_security_short_sae:I = 0x7f132aa7 # @string/wifi_security_short_sae 'WPA3'
 
-.field public static final wifi_security_short_wep:I = 0x7f132a9e # @string/wifi_security_short_wep 'WEP'
+.field public static final wifi_security_short_wep:I = 0x7f132aa8 # @string/wifi_security_short_wep 'WEP'
 
-.field public static final wifi_security_short_wpa:I = 0x7f132a9f # @string/wifi_security_short_wpa 'WPA'
+.field public static final wifi_security_short_wpa:I = 0x7f132aa9 # @string/wifi_security_short_wpa 'WPA'
 
-.field public static final wifi_security_short_wpa2:I = 0x7f132aa0 # @string/wifi_security_short_wpa2 'WPA2'
+.field public static final wifi_security_short_wpa2:I = 0x7f132aaa # @string/wifi_security_short_wpa2 'WPA2'
 
-.field public static final wifi_security_short_wpa_wpa2:I = 0x7f132aa1 # @string/wifi_security_short_wpa_wpa2 'WPA/WPA2'
+.field public static final wifi_security_short_wpa_wpa2:I = 0x7f132aab # @string/wifi_security_short_wpa_wpa2 'WPA/WPA2'
 
-.field public static final wifi_security_wep:I = 0x7f132aa4 # @string/wifi_security_wep 'WEP'
+.field public static final wifi_security_wep:I = 0x7f132aae # @string/wifi_security_wep 'WEP'
 
-.field public static final wifi_security_wpa:I = 0x7f132aa5 # @string/wifi_security_wpa 'WPA-Personal'
+.field public static final wifi_security_wpa:I = 0x7f132aaf # @string/wifi_security_wpa 'WPA-Personal'
 
-.field public static final wifi_security_wpa2:I = 0x7f132aa6 # @string/wifi_security_wpa2 'WPA2-Personal'
+.field public static final wifi_security_wpa2:I = 0x7f132ab0 # @string/wifi_security_wpa2 'WPA2-Personal'
 
-.field public static final wifi_security_wpa_wpa2:I = 0x7f132aa7 # @string/wifi_security_wpa_wpa2 'WPA/WPA2-Personal'
+.field public static final wifi_security_wpa_wpa2:I = 0x7f132ab1 # @string/wifi_security_wpa_wpa2 'WPA/WPA2-Personal'
 
-.field public static final wifi_status_no_internet:I = 0x7f132aef # @string/wifi_status_no_internet 'No internet'
+.field public static final wifi_status_no_internet:I = 0x7f132af9 # @string/wifi_status_no_internet 'No internet'
 
-.field public static final wifi_status_sign_in_required:I = 0x7f132af0 # @string/wifi_status_sign_in_required 'Sign in required'
+.field public static final wifi_status_sign_in_required:I = 0x7f132afa # @string/wifi_status_sign_in_required 'Sign in required'
 
-.field public static final wifi_unmetered_label:I = 0x7f132b1f # @string/wifi_unmetered_label 'Unmetered'
+.field public static final wifi_unmetered_label:I = 0x7f132b29 # @string/wifi_unmetered_label 'Unmetered'
 
-.field public static final wifitrackerlib_wifi_connected_cannot_provide_internet:I = 0x7f132b69 # @string/wifitrackerlib_wifi_connected_cannot_provide_internet 'Connected to device. Can't provide internet.'
+.field public static final wifitrackerlib_wifi_connected_cannot_provide_internet:I = 0x7f132b73 # @string/wifitrackerlib_wifi_connected_cannot_provide_internet 'Connected to device. Can't provide internet.'
 
-.field public static final zen_alarm_warning:I = 0x7f132be9 # @string/zen_alarm_warning 'You won't hear your next alarm %1$s'
+.field public static final zen_alarm_warning:I = 0x7f132bf3 # @string/zen_alarm_warning 'You won't hear your next alarm %1$s'
 
-.field public static final zen_alarm_warning_indef:I = 0x7f132bea # @string/zen_alarm_warning_indef 'You won't hear your next alarm %1$s unless you turn this off before then'
+.field public static final zen_alarm_warning_indef:I = 0x7f132bf4 # @string/zen_alarm_warning_indef 'You won't hear your next alarm %1$s unless you turn this off before then'
 
-.field public static final zen_mode_duration_always_prompt_title:I = 0x7f132c43 # @string/zen_mode_duration_always_prompt_title 'Ask every time'
+.field public static final zen_mode_duration_always_prompt_title:I = 0x7f132c4d # @string/zen_mode_duration_always_prompt_title 'Ask every time'
 
-.field public static final zen_mode_duration_settings_title:I = 0x7f132c44 # @string/zen_mode_duration_settings_title 'Duration'
+.field public static final zen_mode_duration_settings_title:I = 0x7f132c4e # @string/zen_mode_duration_settings_title 'Duration'
 
-.field public static final zen_mode_enable_dialog_turn_on:I = 0x7f132c4a # @string/zen_mode_enable_dialog_turn_on 'Turn on'
+.field public static final zen_mode_enable_dialog_turn_on:I = 0x7f132c54 # @string/zen_mode_enable_dialog_turn_on 'Turn on'
 
-.field public static final zen_mode_forever:I = 0x7f132c57 # @string/zen_mode_forever 'Until you turn off'
+.field public static final zen_mode_forever:I = 0x7f132c61 # @string/zen_mode_forever 'Until you turn off'
 
-.field public static final zen_mode_settings_turn_on_dialog_title:I = 0x7f132cac # @string/zen_mode_settings_turn_on_dialog_title 'Turn on Do Not Disturb'
+.field public static final zen_mode_settings_turn_on_dialog_title:I = 0x7f132cb6 # @string/zen_mode_settings_turn_on_dialog_title 'Turn on Do Not Disturb'

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/qs/tiles/QuickAccessWalletTile;
 .super Lcom/android/systemui/qs/tileimpl/QSTileImpl;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # instance fields
@@ -32,7 +32,7 @@
     iget-object p1, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
 
     .line 5
-    const p2, 0x7f130c62    # @string/wallet_title 'Wallet'
+    const p2, 0x7f130c68    # @string/wallet_title 'Wallet'
 
     .line 7
     invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -426,14 +426,14 @@
     if-eqz p2, :cond_4
 
     .line 92
-    const p2, 0x7f130c61    # @string/wallet_secondary_label_updating 'Updating'
+    const p2, 0x7f130c67    # @string/wallet_secondary_label_updating 'Updating'
 
     .line 94
     goto :goto_2
 
     .line 97
     :cond_4
-    const p2, 0x7f130c60    # @string/wallet_secondary_label_no_card 'Tap to open'
+    const p2, 0x7f130c66    # @string/wallet_secondary_label_no_card 'Tap to open'
 
     .line 98
     :goto_2

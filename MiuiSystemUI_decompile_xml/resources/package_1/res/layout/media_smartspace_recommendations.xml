@@ -6,7 +6,7 @@
                       android:clipToPadding="false"
                       android:layout_width="fill_parent"
                       android:layout_height="wrap_content"
-                      android:forceHasOverlappingRendering="false" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto">
+                      android:forceHasOverlappingRendering="false" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <View android:id="@id/sizing_view"
         android:layout_width="fill_parent"
         android:layout_height="@dimen/qs_media_session_height_expanded" />
@@ -17,8 +17,8 @@
                         android:minWidth="@dimen/qs_media_app_icon_size"
                         android:minHeight="@dimen/qs_media_app_icon_size"
                         android:layout_marginStart="@dimen/qs_media_padding"
-                        systemui:r0x7f040443="0"
-                        systemui:r0x7f040447="0" />
+                        app:r0x7f040443="0"
+                        app:r0x7f040447="0" />
   <FrameLayout android:id="@id/media_cover1_container"
                style="@style/MediaPlayer.Recommendation.AlbumContainer">
     <ImageView android:id="@id/media_cover1"
@@ -30,8 +30,8 @@
                android:minWidth="@dimen/qs_media_rec_album_size"
                android:minHeight="@dimen/qs_media_rec_album_size"
                android:clipToOutline="true"
-               systemui:r0x7f040429="0"
-               systemui:r0x7f040447="0"
+               app:r0x7f040429="0"
+               app:r0x7f040447="0"
                style="@style/MediaPlayer.Recommendation.Album" />
   </FrameLayout>
   <TextView android:id="@id/media_title1"

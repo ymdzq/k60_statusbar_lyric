@@ -3,11 +3,11 @@
                       android:id="@id/setup_new_fingerprint_view"
                       android:background="@android:color/black"
                       android:layout_width="fill_parent"
-                      android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+                      android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <LinearLayout android:id="@id/new_fingerprint_cancel"
                 android:layout_width="@dimen/add_fingerprint_page_back_width"
                 android:layout_height="@dimen/add_fingerprint_page_back_height"
-                settings:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toTopOf="parent">
     <ImageView android:layout_gravity="center_vertical"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
@@ -24,8 +24,8 @@
             android:maxLines="2"
             android:fontFamily="mipro-light"
             android:layout_marginStart="@dimen/setup_title_start_margin"
-            settings:layout_constraintStart_toStartOf="parent"
-            settings:layout_constraintTop_toBottomOf="@id/new_fingerprint_cancel" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/new_fingerprint_cancel" />
   <TextView android:textSize="@dimen/setup_choose_password_msg_size"
             android:textColor="@color/fingerprint_top_text_color"
             android:id="@id/setup_new_fingerprint_top_text"
@@ -35,12 +35,12 @@
             android:text="@string/add_back_fingerprint_instruction_msg"
             android:maxLines="2"
             android:layout_marginStart="@dimen/setup_title_start_margin"
-            settings:layout_constraintStart_toStartOf="parent"
-            settings:layout_constraintTop_toBottomOf="@id/setup_new_fingerprint_top_title" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/setup_new_fingerprint_top_title" />
   <FrameLayout android:layout_width="fill_parent"
                android:layout_height="wrap_content"
                android:layout_marginTop="76.0dp"
-               settings:layout_constraintTop_toBottomOf="@id/setup_new_fingerprint_top_text">
+               app:layout_constraintTop_toBottomOf="@id/setup_new_fingerprint_top_text">
     <ImageView android:layout_gravity="center"
                android:id="@id/setup_new_fingerprint_instruction_img"
                android:visibility="visible"
@@ -66,7 +66,7 @@
             android:text="@string/add_fingerprint_finished_button_text"
             android:fontFamily="sans-serif-medium"
             android:layout_marginEnd="@dimen/setup_footer_start_margin"
-            settings:layout_constraintBottom_toBottomOf="parent"
-            settings:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             style="@style/ProvisionStepTextStyle" />
 </androidx.constraintlayout.widget.ConstraintLayout>

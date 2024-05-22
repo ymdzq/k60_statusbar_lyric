@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='utf-8' ?>
-<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <com.android.settings.view.CornerVideoView android:id="@id/video_view"
                         android:layout_width="@dimen/control_center_preference_checkbox_content_width"
                         android:layout_height="@dimen/control_center_preference_checkbox_content_height"
                         android:contentDescription="@string/modern_control_center_desc"
                         android:importantForAccessibility="yes"
-                        settings:cornerRadius="@dimen/control_center_preference_checkbox_corner_radius" />
+                        app:cornerRadius="@dimen/control_center_preference_checkbox_corner_radius" />
 </merge>

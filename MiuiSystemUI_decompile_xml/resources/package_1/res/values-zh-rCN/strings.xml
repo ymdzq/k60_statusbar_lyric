@@ -1493,9 +1493,15 @@ mm</string>
   <string name="qs_alarm_tile_no_alarm">未设置闹钟</string>
   <string name="qs_bill_message_balance">余额%1$s%2$s</string>
   <string name="qs_bill_message_unit_cny">元</string>
+  <string name="qs_control_big_tile_click_cellular_tether_tip">请退出分身空间后再试</string>
+  <string name="qs_control_big_tile_connect_share_network_fail">移动数据连接失败，请稍后再试</string>
+  <string name="qs_control_big_tile_state_closed">已关闭</string>
   <string name="qs_control_big_tile_state_connected">已连接</string>
   <string name="qs_control_big_tile_state_connecting">正在连接...</string>
   <string name="qs_control_big_tile_state_opening">正在打开...</string>
+  <string name="qs_control_big_tile_state_tethered_wifi">正在使用手机连接的WLAN信号</string>
+  <string name="qs_control_big_tile_state_tethered_wlan">正在使用手机连接的WLAN信号</string>
+  <string name="qs_control_big_tile_state_unavailable">不可用</string>
   <string name="qs_customize_title">编辑开关</string>
   <string name="qs_edit">编辑</string>
   <string name="qs_open_night_mode_alert_summary">深色模式下，部分屏幕显示功能会受到影响，关闭深色模式后即可恢复正常。</string>
@@ -1542,6 +1548,8 @@ mm</string>
   <string name="quick_settings_cellular_detail_dialog_positive_button_turnoff">关闭</string>
   <string name="quick_settings_cellular_detail_title">移动数据</string>
   <string name="quick_settings_cellular_detail_unable_change">正在通话中，无法设置</string>
+  <string name="quick_settings_cellular_state_change_message_connected">移动数据已连接</string>
+  <string name="quick_settings_cellular_state_change_message_disconnected">移动数据已断开</string>
   <string name="quick_settings_cellular_state_change_message_off">移动数据已关闭</string>
   <string name="quick_settings_cellular_state_change_message_on">移动数据已开启</string>
   <string name="quick_settings_color_correction_label">色彩校正</string>

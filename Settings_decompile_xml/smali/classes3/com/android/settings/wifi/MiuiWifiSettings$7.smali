@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/android/settings/wifi/MiuiWifiSettings;)V
     .locals 0
 
-    .line 1427
+    .line 1445
     iput-object p1, p0, Lcom/android/settings/wifi/MiuiWifiSettings$7;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onPreferenceClick(Landroidx/preference/Preference;)Z
     .locals 2
 
-    .line 1430
+    .line 1448
     new-instance p1, Landroid/content/Intent;
 
     invoke-direct {p1}, Landroid/content/Intent;-><init>()V
@@ -47,17 +47,17 @@
 
     const-string v1, "MIUI_WIFI_CONNECT_HELP"
 
-    .line 1431
+    .line 1449
     invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v0, "com.android.settings"
 
     const-string v1, "com.android.settings.bluetooth.MiuiHeadsetActivityPlugin"
 
-    .line 1432
+    .line 1450
     invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1434
+    .line 1452
     invoke-static {}, Lcom/android/settings/bluetooth/FitSplitUtils;->isFitSplit()Z
 
     move-result v0
@@ -66,16 +66,16 @@
 
     const/16 v0, 0x10
 
-    .line 1435
+    .line 1453
     invoke-virtual {p1, v0}, Landroid/content/Intent;->addMiuiFlags(I)Landroid/content/Intent;
 
-    .line 1437
+    .line 1455
     :cond_0
     iget-object v0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$7;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-virtual {v0, p1}, Landroidx/fragment/app/Fragment;->startActivity(Landroid/content/Intent;)V
 
-    .line 1438
+    .line 1456
     iget-object p0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$7;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;

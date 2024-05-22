@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/qs/customize/MiuiQSCustomizer;
 .super Landroid/widget/LinearLayout;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # instance fields
@@ -397,7 +397,7 @@
     move-result-object v0
 
     .line 87
-    const v1, 0x7f130a2f    # @string/reset 'Reset'
+    const v1, 0x7f130a35    # @string/reset 'Reset'
 
     .line 88
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
@@ -424,7 +424,7 @@
     move-result-object v0
 
     .line 109
-    const v1, 0x7f1309a4    # @string/quick_settings_done 'Done'
+    const v1, 0x7f1309aa    # @string/quick_settings_done 'Done'
 
     .line 110
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
@@ -793,7 +793,7 @@
 
     .line 7
     :cond_0
-    const v2, 0x7f130945    # @string/qs_customize_title 'Edit'
+    const v2, 0x7f130949    # @string/qs_customize_title 'Edit'
 
     .line 8
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(I)V
@@ -821,7 +821,7 @@
     move-result-object v0
 
     .line 28
-    const v2, 0x7f130a2f    # @string/reset 'Reset'
+    const v2, 0x7f130a35    # @string/reset 'Reset'
 
     .line 29
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(I)V
@@ -833,7 +833,7 @@
     move-result-object v0
 
     .line 38
-    const v2, 0x7f1309a4    # @string/quick_settings_done 'Done'
+    const v2, 0x7f1309aa    # @string/quick_settings_done 'Done'
 
     .line 39
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(I)V

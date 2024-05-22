@@ -5,7 +5,7 @@
   <string name="UVI_level_2">كۈچلۈك</string>
   <string name="UVI_level_3">بەك كۈچلۈك</string>
   <string name="UVI_level_4">ئالاھىدە كۈچلۈك</string>
-  <string name="accessibility_airplane_mode">ئايرۇپىلان ھالىتى.</string>
+  <string name="accessibility_airplane_mode">ئايروپىلان ھالىتى</string>
   <string name="accessibility_back">قايتىش</string>
   <string name="accessibility_detail_switch">ئۈزچاتنى ئالماشتۇرۇش</string>
   <string name="accessibility_enter_lock_setting">چېكىپ قۇلۇپ مۇقاۋىسى تەڭشىكىگە كىرىڭ</string>
@@ -25,7 +25,7 @@
   <string name="accessibility_qs_edit_tile_added">%1$s نى %2$d گە قاچىلىدۇ</string>
   <string name="accessibility_qs_edit_tile_removed">%1$s چىقىرىۋېتىلدى</string>
   <string name="accessibility_quick_settings_bluetooth_handsfree_battery_level">كۆكچىش ئۈسكۈنىسى توك مىقدارى %d پىرسەنت</string>
-  <string name="accessibility_settings">بەلگىلەش</string>
+  <string name="accessibility_settings">تەڭشەك</string>
   <string name="actionbar_button_up_description">قايتىش</string>
   <string name="activate_usb_message">ئۈچۈنچى تەرەپ ۋىرۇسلىرىنىڭ كىرىۋېلىشىدىن ساقلىنىش ئۈچۈن SIM كارتا سېلىپ USB ئىقتىدارنى ئاكتىپلاڭ</string>
   <string name="activate_usb_title">USB ئاكتىپلاش</string>
@@ -433,7 +433,7 @@ mm</string>
   <string name="month_september_shortest">سېنتەبىر</string>
   <string name="more">باشقىلىرى</string>
   <string name="morning">چ ب</string>
-  <string name="msim_set_sub_not_supported_phone_in_call">تېلېفونلىشىۋاتقاندا تەڭشگىلى بولمايدۇ</string>
+  <string name="msim_set_sub_not_supported_phone_in_call">سۆزلىشىۋاتقاندا تەڭشگىلى بولمايدۇ</string>
   <string name="multiwin_closewindow">كۆزنەكنى تاقاش</string>
   <string name="multiwin_newwindow">يېڭى كۆزنەك قۇرۇش</string>
   <string name="multiwin_windowcontrol">كۆزنەك باشقۇرغۇچ</string>
@@ -467,9 +467,15 @@ mm</string>
   <string name="privacy_using_title">ئىشلىتىلىۋاتىدۇ</string>
   <string name="qs_bill_message_balance">قالدۇق سومما%1$s%2$s</string>
   <string name="qs_bill_message_unit_cny">يۈەن</string>
+  <string name="qs_control_big_tile_click_cellular_tether_tip">كلونلىغان بوشلۇقتىن چېكىنىپ ئاندىن سىناڭ</string>
+  <string name="qs_control_big_tile_connect_share_network_fail">كۆچمە تورغا ئۇلاش مەغلۇپ بولدى، سەل تۇرۇپ سىناڭ</string>
+  <string name="qs_control_big_tile_state_closed">تاقالغان</string>
   <string name="qs_control_big_tile_state_connected">ئۇلاندى</string>
   <string name="qs_control_big_tile_state_connecting">ئۇلىنىۋاتىدۇ...</string>
   <string name="qs_control_big_tile_state_opening">ئېچىلىۋاتىدۇ...</string>
+  <string name="qs_control_big_tile_state_tethered_wifi">يانفون ئۇلانغان WLAN سىگنالىنى ئىشلىتىۋاتىدۇ</string>
+  <string name="qs_control_big_tile_state_tethered_wlan">يانفوندا ئۇلانغان WLAN سىگنالىنى ئىشلىتىۋاتىدۇ</string>
+  <string name="qs_control_big_tile_state_unavailable">ئىشلەتكىلى بولمايدۇ</string>
   <string name="qs_customize_title">تەھرىرلەش ئۈزچاتى</string>
   <string name="qs_open_night_mode_alert_summary">قېنىق رەڭ ھالىتىدە، قىسمەن ئېكران كۆرسىتىش ئىقتىدارى تەسىرگە ئۇچرايدۇ،قېنىق رەڭ ھالىتىنى تاقىغاندىن كېيىن نورمال ئەسلىگە قايتىدۇ.</string>
   <string name="qs_traffic_message_type_exceed">%1$s%2$sدىن ئاشقان</string>
@@ -496,6 +502,8 @@ mm</string>
   <string name="quick_settings_cellular_detail_dialog_positive_button_turnoff">‏‏تاقاش</string>
   <string name="quick_settings_cellular_detail_title">كۆچمە تور</string>
   <string name="quick_settings_cellular_detail_unable_change">تېلېفونلىشىۋاتقاندا تەڭشگىلى بولمايدۇ</string>
+  <string name="quick_settings_cellular_state_change_message_connected">كۆچمە تورغا ئۇلاندى</string>
+  <string name="quick_settings_cellular_state_change_message_disconnected">كۆچمە تور ئۈزۈلدى</string>
   <string name="quick_settings_cellular_state_change_message_off">كۆچمە تور تاقالدى</string>
   <string name="quick_settings_cellular_state_change_message_on">كۆچمە تور ئېچىلدى</string>
   <string name="quick_settings_dnd_state_change_message_off">دەخلىسىز تاقالدى</string>

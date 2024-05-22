@@ -5,28 +5,28 @@
                       android:layout_height="@dimen/dream_overlay_status_bar_height"
                       android:paddingStart="@dimen/dream_overlay_status_bar_margin"
                       android:paddingEnd="@dimen/dream_overlay_status_bar_margin"
-                      systemui:r0x7f040447="0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto">
+                      app:r0x7f040447="0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <com.android.systemui.dreams.DreamOverlayDotImageView android:id="@id/dream_overlay_notification_indicator"
                         android:visibility="gone"
                         android:layout_width="@dimen/dream_overlay_notification_indicator_size"
                         android:layout_height="@dimen/dream_overlay_notification_indicator_size"
-                        systemui:r0x7f040265="@android:color/white"
-                        systemui:r0x7f040429="0"
-                        systemui:r0x7f040443="0"
-                        systemui:r0x7f040447="0" />
+                        app:r0x7f040265="@android:color/white"
+                        app:r0x7f040429="0"
+                        app:r0x7f040443="0"
+                        app:r0x7f040447="0" />
   <LinearLayout android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:id="@id/dream_overlay_extra_items"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
-                systemui:r0x7f040430="@id/dream_overlay_system_status" />
+                app:r0x7f040430="@id/dream_overlay_system_status" />
   <LinearLayout android:orientation="horizontal"
                 android:id="@id/dream_overlay_system_status"
                 android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:paddingStart="@dimen/dream_overlay_status_bar_extra_margin"
-                systemui:r0x7f04042f="0">
+                app:r0x7f04042f="0">
     <com.android.systemui.statusbar.AlphaOptimizedImageView android:id="@id/dream_overlay_alarm_set"
                           android:visibility="gone"
                           android:layout_width="@dimen/dream_overlay_status_bar_icon_size"

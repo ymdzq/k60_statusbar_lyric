@@ -1,6 +1,6 @@
 .class public Lcom/android/wm/shell/miuifreeform/infinitymode/policy/MiuiInfinityModeRatioPolicy;
 .super Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeSizesPolicy;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # static fields
@@ -1436,25 +1436,25 @@
 .end method
 
 .method private isNormalFreeform(Landroid/app/ActivityManager$RunningTaskInfo;Ljava/lang/String;)Z
-    .locals 1
+    .locals 2
 
     .line 1
     iget-object v0, p0, Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeSizesPolicy;->mMiuiInfinityModeTaskRepository:Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeTaskRepository;
 
     .line 2
-    iget p1, p1, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
+    iget v1, p1, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
     .line 4
-    invoke-virtual {v0, p1}, Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeTaskRepository;->findMiuiFreeformTaskByTaskId(I)Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;
+    invoke-virtual {v0, v1}, Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeTaskRepository;->findMiuiFreeformTaskByTaskId(I)Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;
 
     .line 6
-    move-result-object p1
+    move-result-object v0
 
     .line 9
-    if-eqz p1, :cond_0
+    if-eqz v0, :cond_0
 
     .line 10
-    invoke-virtual {p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->isNormalFreeForm()Z
+    invoke-virtual {v0}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->isNormalFreeForm()Z
 
     .line 12
     move-result p0
@@ -1467,7 +1467,7 @@
     invoke-static {}, Lcom/xiaomi/freeform/MiuiFreeformStub;->getInstance()Lcom/xiaomi/freeform/MiuiFreeformStub;
 
     .line 17
-    move-result-object p1
+    move-result-object v0
 
     .line 20
     iget-object p0, p0, Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeSizesPolicy;->mMiuiInfinityModeController:Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeController;
@@ -1479,7 +1479,7 @@
     move-result-object p0
 
     .line 26
-    invoke-virtual {p1, p0, p2}, Lcom/xiaomi/freeform/MiuiFreeformStub;->isNormalFreeForm(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-virtual {v0, p0, p2, p1}, Lcom/xiaomi/freeform/MiuiFreeformStub;->isNormalFreeForm(Landroid/content/Context;Ljava/lang/String;Landroid/app/TaskInfo;)Z
 
     .line 27
     move-result p0

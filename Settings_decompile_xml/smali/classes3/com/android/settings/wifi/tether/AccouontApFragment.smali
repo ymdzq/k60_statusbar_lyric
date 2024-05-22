@@ -37,21 +37,83 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 21
+    .line 22
     invoke-direct {p0}, Lmiuix/preference/PreferenceFragment;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 33
+    .line 34
     iput-object v0, p0, Lcom/android/settings/wifi/tether/AccouontApFragment;->mReceiver:Landroid/content/BroadcastReceiver;
 
     return-void
 .end method
 
+.method private checkIsSupportCelluarShared()Z
+    .locals 4
+
+    .line 128
+    :try_start_0
+    iget-object v0, p0, Lcom/android/settings/wifi/tether/AccouontApFragment;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    iget-object p0, p0, Lcom/android/settings/wifi/tether/AccouontApFragment;->mContext:Landroid/content/Context;
+
+    .line 129
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    const-string v1, "config_celluar_shared_support"
+
+    const-string v2, "bool"
+
+    const-string v3, "android.miui"
+
+    invoke-virtual {p0, v1, v2, v3}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result p0
+
+    .line 128
+    invoke-virtual {v0, p0}, Landroid/content/res/Resources;->getBoolean(I)Z
+
+    move-result p0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 134
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "config_celluar_shared_support: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "AccountApSettingsActivity"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return p0
+
+    :catch_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
 .method private updateView()V
     .locals 5
 
-    .line 114
+    .line 142
     :try_start_0
     iget-object v0, p0, Lcom/android/settings/wifi/tether/AccouontApFragment;->mContext:Landroid/content/Context;
 
@@ -78,7 +140,7 @@
     :cond_0
     move v0, v1
 
-    .line 120
+    .line 148
     :goto_0
     iget-object v3, p0, Lcom/android/settings/wifi/tether/AccouontApFragment;->mContext:Landroid/content/Context;
 
@@ -104,35 +166,35 @@
     :goto_1
     if-eqz v0, :cond_2
 
-    .line 127
+    .line 155
     iget-object v0, p0, Lcom/android/settings/wifi/tether/AccouontApFragment;->mPreferenceAccountAp:Landroidx/preference/CheckBoxPreference;
 
     invoke-virtual {v0, v2}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
 
-    .line 128
+    .line 156
     iget-object v0, p0, Lcom/android/settings/wifi/tether/AccouontApFragment;->mPreferenceAutoOpenSoftap:Landroidx/preference/CheckBoxPreference;
 
     invoke-virtual {v0, v2}, Landroidx/preference/Preference;->setEnabled(Z)V
 
-    .line 129
+    .line 157
     iget-object p0, p0, Lcom/android/settings/wifi/tether/AccouontApFragment;->mPreferenceAutoOpenSoftap:Landroidx/preference/CheckBoxPreference;
 
     invoke-virtual {p0, v3}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
 
     goto :goto_2
 
-    .line 131
+    .line 159
     :cond_2
     iget-object v0, p0, Lcom/android/settings/wifi/tether/AccouontApFragment;->mPreferenceAccountAp:Landroidx/preference/CheckBoxPreference;
 
     invoke-virtual {v0, v1}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
 
-    .line 132
+    .line 160
     iget-object v0, p0, Lcom/android/settings/wifi/tether/AccouontApFragment;->mPreferenceAutoOpenSoftap:Landroidx/preference/CheckBoxPreference;
 
     invoke-virtual {v0, v1}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
 
-    .line 133
+    .line 161
     iget-object p0, p0, Lcom/android/settings/wifi/tether/AccouontApFragment;->mPreferenceAutoOpenSoftap:Landroidx/preference/CheckBoxPreference;
 
     invoke-virtual {p0, v1}, Landroidx/preference/Preference;->setEnabled(Z)V
@@ -144,7 +206,7 @@
     :catch_0
     move-exception p0
 
-    .line 136
+    .line 164
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_2
@@ -154,17 +216,60 @@
 
 # virtual methods
 .method public onCreatePreferences(Landroid/os/Bundle;Ljava/lang/String;)V
-    .locals 2
+    .locals 3
 
-    .line 40
+    .line 41
     :try_start_0
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/android/settings/wifi/tether/AccouontApFragment;->mContext:Landroid/content/Context;
+
+    .line 42
+    invoke-direct {p0}, Lcom/android/settings/wifi/tether/AccouontApFragment;->checkIsSupportCelluarShared()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    .line 44
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/android/settings/wifi/tether/AccouontApFragment;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    sget v2, Lcom/android/settings/R$string;->lyra_account_ap_title_v2:I
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/app/Activity;->setTitle(Ljava/lang/CharSequence;)V
+
+    :cond_0
+    if-eqz p1, :cond_1
+
+    .line 48
+    sget p1, Lcom/android/settings/R$xml;->settings_account_ap_v2:I
+
+    goto :goto_0
+
+    :cond_1
     sget p1, Lcom/android/settings/R$xml;->settings_account_ap:I
 
+    .line 47
+    :goto_0
     invoke-virtual {p0, p1, p2}, Landroidx/preference/PreferenceFragmentCompat;->setPreferencesFromResource(ILjava/lang/String;)V
 
     const-string p1, "pref_key_account_ap"
 
-    .line 42
+    .line 50
     invoke-virtual {p0, p1}, Landroidx/preference/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object p1
@@ -173,15 +278,51 @@
 
     iput-object p1, p0, Lcom/android/settings/wifi/tether/AccouontApFragment;->mPreferenceAccountAp:Landroidx/preference/CheckBoxPreference;
 
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_3
 
-    .line 44
+    .line 52
+    sget-boolean p2, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
+
+    if-eqz p2, :cond_2
+
+    .line 53
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object p2
+
+    sget v0, Lcom/android/settings/R$string;->international_lyra_account_ap_title:I
+
+    invoke-virtual {p2, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroidx/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
+
+    .line 54
+    iget-object p1, p0, Lcom/android/settings/wifi/tether/AccouontApFragment;->mPreferenceAccountAp:Landroidx/preference/CheckBoxPreference;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object p2
+
+    sget v0, Lcom/android/settings/R$string;->international_lyra_account_ap_summary:I
+
+    invoke-virtual {p2, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
+
+    .line 56
+    :cond_2
+    iget-object p1, p0, Lcom/android/settings/wifi/tether/AccouontApFragment;->mPreferenceAccountAp:Landroidx/preference/CheckBoxPreference;
+
     invoke-virtual {p1, p0}, Landroidx/preference/Preference;->setOnPreferenceChangeListener(Landroidx/preference/Preference$OnPreferenceChangeListener;)V
 
-    :cond_0
+    :cond_3
     const-string p1, "pref_key_auto_open_softap"
 
-    .line 46
+    .line 58
     invoke-virtual {p0, p1}, Landroidx/preference/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object p1
@@ -190,42 +331,71 @@
 
     iput-object p1, p0, Lcom/android/settings/wifi/tether/AccouontApFragment;->mPreferenceAutoOpenSoftap:Landroidx/preference/CheckBoxPreference;
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_5
 
-    .line 48
-    invoke-virtual {p1, p0}, Landroidx/preference/Preference;->setOnPreferenceChangeListener(Landroidx/preference/Preference$OnPreferenceChangeListener;)V
+    .line 60
+    sget-boolean p2, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
-    .line 50
-    :cond_1
+    if-eqz p2, :cond_4
+
+    .line 61
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
-    move-result-object p1
+    move-result-object p2
 
-    iput-object p1, p0, Lcom/android/settings/wifi/tether/AccouontApFragment;->mContext:Landroid/content/Context;
+    sget v0, Lcom/android/settings/R$string;->international_lyra_auto_connect_title:I
 
-    .line 52
+    invoke-virtual {p2, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroidx/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
+
+    .line 62
+    iget-object p1, p0, Lcom/android/settings/wifi/tether/AccouontApFragment;->mPreferenceAutoOpenSoftap:Landroidx/preference/CheckBoxPreference;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object p2
+
+    sget v0, Lcom/android/settings/R$string;->international_lyra_auto_connect_summary:I
+
+    invoke-virtual {p2, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
+
+    .line 64
+    :cond_4
+    iget-object p1, p0, Lcom/android/settings/wifi/tether/AccouontApFragment;->mPreferenceAutoOpenSoftap:Landroidx/preference/CheckBoxPreference;
+
+    invoke-virtual {p1, p0}, Landroidx/preference/Preference;->setOnPreferenceChangeListener(Landroidx/preference/Preference$OnPreferenceChangeListener;)V
+
+    .line 67
+    :cond_5
     iget-object p1, p0, Lcom/android/settings/wifi/tether/AccouontApFragment;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    if-nez p1, :cond_2
+    if-nez p1, :cond_6
 
-    .line 53
+    .line 68
     new-instance p1, Lcom/android/settings/wifi/tether/AccouontApFragment$AutoSoftapStateReceiver;
 
     invoke-direct {p1, p0}, Lcom/android/settings/wifi/tether/AccouontApFragment$AutoSoftapStateReceiver;-><init>(Lcom/android/settings/wifi/tether/AccouontApFragment;)V
 
     iput-object p1, p0, Lcom/android/settings/wifi/tether/AccouontApFragment;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 54
+    .line 69
     new-instance p1, Landroid/content/IntentFilter;
 
     invoke-direct {p1}, Landroid/content/IntentFilter;-><init>()V
 
     const-string p2, "broadcast_easy_tether_auto_connect_state"
 
-    .line 55
+    .line 70
     invoke-virtual {p1, p2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 56
+    .line 71
     iget-object p2, p0, Lcom/android/settings/wifi/tether/AccouontApFragment;->mContext:Landroid/content/Context;
 
     iget-object v0, p0, Lcom/android/settings/wifi/tether/AccouontApFragment;->mReceiver:Landroid/content/BroadcastReceiver;
@@ -234,12 +404,12 @@
 
     invoke-virtual {p2, v0, p1, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;I)Landroid/content/Intent;
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_2
+    :cond_6
     const-string p1, "AccountApSettingsActivity"
 
-    .line 58
+    .line 73
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -258,36 +428,36 @@
 
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 60
-    :goto_0
+    .line 75
+    :goto_1
     invoke-direct {p0}, Lcom/android/settings/wifi/tether/AccouontApFragment;->updateView()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_1
+    goto :goto_2
 
     :catch_0
     move-exception p0
 
-    .line 62
+    .line 77
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
-    :goto_1
+    :goto_2
     return-void
 .end method
 
 .method public onDestroy()V
     .locals 1
 
-    .line 74
+    .line 89
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onDestroy()V
 
-    .line 76
+    .line 91
     iget-object v0, p0, Lcom/android/settings/wifi/tether/AccouontApFragment;->mReceiver:Landroid/content/BroadcastReceiver;
 
     if-eqz v0, :cond_0
 
-    .line 77
+    .line 92
     iget-object p0, p0, Lcom/android/settings/wifi/tether/AccouontApFragment;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
@@ -299,7 +469,7 @@
 .method public onPreferenceChange(Landroidx/preference/Preference;Ljava/lang/Object;)Z
     .locals 3
 
-    .line 83
+    .line 98
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object p1
@@ -312,7 +482,7 @@
 
     goto :goto_1
 
-    .line 88
+    .line 103
     :cond_0
     instance-of v1, p2, Ljava/lang/Boolean;
 
@@ -320,7 +490,7 @@
 
     return v0
 
-    .line 91
+    .line 106
     :cond_1
     check-cast p2, Ljava/lang/Boolean;
 
@@ -328,7 +498,7 @@
 
     move-result p2
 
-    .line 92
+    .line 107
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     const-string v1, "pref_key_auto_open_softap"
@@ -351,7 +521,7 @@
 
     goto :goto_0
 
-    .line 94
+    .line 109
     :cond_2
     iget-object p1, p0, Lcom/android/settings/wifi/tether/AccouontApFragment;->mContext:Landroid/content/Context;
 
@@ -365,7 +535,7 @@
 
     if-nez p2, :cond_4
 
-    .line 96
+    .line 111
     iget-object p1, p0, Lcom/android/settings/wifi/tether/AccouontApFragment;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -378,7 +548,7 @@
 
     goto :goto_0
 
-    .line 100
+    .line 115
     :cond_3
     iget-object p1, p0, Lcom/android/settings/wifi/tether/AccouontApFragment;->mContext:Landroid/content/Context;
 
@@ -388,7 +558,7 @@
 
     invoke-static {p1, v2, p2}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 106
+    .line 121
     :cond_4
     :goto_0
     invoke-direct {p0}, Lcom/android/settings/wifi/tether/AccouontApFragment;->updateView()V
@@ -401,10 +571,10 @@
 .method public onResume()V
     .locals 0
 
-    .line 68
+    .line 83
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onResume()V
 
-    .line 69
+    .line 84
     invoke-direct {p0}, Lcom/android/settings/wifi/tether/AccouontApFragment;->updateView()V
 
     return-void

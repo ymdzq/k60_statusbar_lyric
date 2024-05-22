@@ -4,7 +4,7 @@
               android:background="?attr/preferenceItemBackground"
               android:layout_width="fill_parent"
               android:layout_height="wrap_content"
-              android:minHeight="@dimen/valuepreference_row_height" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+              android:minHeight="@dimen/valuepreference_row_height" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <LinearLayout android:gravity="center"
                 android:orientation="horizontal"
                 android:paddingTop="@dimen/valuepreference_icon_padding"
@@ -66,5 +66,5 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/miuix_preference_item_padding_inner"
-                        settings:srcCompat="@drawable/miuix_appcompat_arrow_right" />
+                        app:srcCompat="@drawable/miuix_appcompat_arrow_right" />
 </LinearLayout>

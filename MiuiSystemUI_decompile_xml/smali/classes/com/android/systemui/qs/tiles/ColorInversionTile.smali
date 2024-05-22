@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/qs/tiles/ColorInversionTile;
 .super Lcom/android/systemui/qs/tileimpl/QSTileImpl;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # instance fields
@@ -77,7 +77,7 @@
     iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
 
     .line 2
-    const v0, 0x7f1309b9    # @string/quick_settings_inversion_label 'Color inversion'
+    const v0, 0x7f1309bf    # @string/quick_settings_inversion_label 'Color inversion'
 
     .line 4
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -231,7 +231,7 @@
     iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
 
     .line 34
-    const p2, 0x7f1309b9    # @string/quick_settings_inversion_label 'Color inversion'
+    const p2, 0x7f1309bf    # @string/quick_settings_inversion_label 'Color inversion'
 
     .line 36
     invoke-virtual {p0, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;

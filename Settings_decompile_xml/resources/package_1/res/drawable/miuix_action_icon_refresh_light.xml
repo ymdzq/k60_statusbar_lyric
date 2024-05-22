@@ -3,10 +3,10 @@
           android:width="26.0dp"
           android:viewportWidth="26.0"
           android:viewportHeight="26.0"
-          settings:actionIconDisabledAlpha="0.3"
-          settings:actionIconNormalAlpha="0.8"
-          settings:actionIconPressedAlpha="0.5"
-          class="miuix.theme.ActionIconDrawable" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+          app:actionIconDisabledAlpha="0.3"
+          app:actionIconNormalAlpha="0.8"
+          app:actionIconPressedAlpha="0.5"
+          class="miuix.theme.ActionIconDrawable" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <path android:fillColor="#000000"
         android:pathData="M18.5338,20.443C18.3903,20.2995 18.3185,20.2277 18.2451,20.1884C18.1128,20.1177 17.9841,20.1023 17.8388,20.1399C17.7582,20.1608 17.6616,20.2198 17.4683,20.3377C14.1617,22.3549 9.7865,21.9335 6.9265,19.0735C4.5173,16.6643 3.8385,13.18 4.8901,10.1649L6.5288,10.4817C7.2889,10.6287 7.6689,10.7022 7.835,10.595C7.9785,10.5024 8.0636,10.342 8.06,10.1713C8.0558,9.9736 7.7821,9.6999 7.2347,9.1525L5.7532,7.671C5.7099,7.6191 5.6478,7.557 5.557,7.4662C5.4376,7.3468 5.3583,7.2675 5.2875,7.2154C5.2102,7.1495 5.1463,7.1102 5.076,7.0925C4.9663,7.0649 4.833,7.08 4.7322,7.1315C4.6112,7.1933 4.5353,7.3146 4.3835,7.5571L4.3636,7.5891C1.8933,11.5242 2.3705,16.7802 5.7951,20.2048C9.2251,23.6348 14.492,24.1082 18.429,21.625C18.6218,21.5034 18.7182,21.4426 18.783,21.3504C18.8874,21.2017 18.912,20.9817 18.843,20.8136C18.8002,20.7094 18.7114,20.6206 18.5338,20.443Z"
         android:fillAlpha="1.0" />

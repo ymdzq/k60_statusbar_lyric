@@ -12,10 +12,10 @@
               android:layout_weight="0.0"
               android:paddingStart="20.0dp"
               android:paddingEnd="20.0dp"
-              systemui:r0x7f040429="0"
-              systemui:r0x7f04042f="0"
-              systemui:r0x7f040443="0"
-              systemui:layout_constraintWidth_max="382.0dp" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto">
+              app:r0x7f040429="0"
+              app:r0x7f04042f="0"
+              app:r0x7f040443="0"
+              app:layout_constraintWidth_max="382.0dp" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <TextView android:textSize="14.0sp"
             android:textColor="?android:attr/textColorSecondary"
             android:layout_width="0.0dp"

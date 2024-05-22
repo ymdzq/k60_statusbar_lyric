@@ -1,6 +1,6 @@
 .class final Lcom/android/keyguard/logging/KeyguardLogger$logRefreshBatteryInfo$2;
 .super Lkotlin/jvm/internal/Lambda;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -75,39 +75,39 @@
     move-result p1
 
     .line 19
-    const-string v2, "refreshBatteryInfo isChargingOrFull:"
+    const-string/jumbo v2, "refreshBatteryInfo isChargingOrFull:"
 
     .line 20
     const-string v3, " powerPluggedIn:"
 
-    .line 22
+    .line 23
     const-string v4, " batteryOverheated:"
 
-    .line 24
+    .line 25
     invoke-static {v2, p0, v3, v0, v4}, Lcom/android/keyguard/MiuiLockPatternChecker$1$$ExternalSyntheticOutline0;->m(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 26
+    .line 27
     move-result-object p0
-
-    .line 29
-    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     .line 30
+    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    .line 31
     const-string v0, " batteryLevel:"
 
-    .line 33
+    .line 34
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 35
+    .line 36
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 38
+    .line 39
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 41
+    .line 42
     move-result-object p0
 
-    .line 44
-    return-object p0
     .line 45
+    return-object p0
+    .line 46
 .end method

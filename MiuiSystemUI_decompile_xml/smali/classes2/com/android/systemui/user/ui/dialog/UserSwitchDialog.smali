@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/user/ui/dialog/UserSwitchDialog;
 .super Lcom/android/systemui/statusbar/phone/SystemUIDialog;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # static fields
@@ -44,7 +44,7 @@
     invoke-virtual {p0, p1}, Landroid/app/AlertDialog;->setCanceledOnTouchOutside(Z)V
 
     .line 9
-    const p1, 0x7f130951    # @string/qs_user_switch_dialog_title 'Select user'
+    const p1, 0x7f130955    # @string/qs_user_switch_dialog_title 'Select user'
 
     .line 12
     invoke-virtual {p0, p1}, Landroid/app/AlertDialog;->setTitle(I)V
@@ -56,7 +56,7 @@
     invoke-direct {p1, p3}, Lcom/android/systemui/user/ui/dialog/UserSwitchDialog$1;-><init>(Lcom/android/internal/logging/UiEventLogger;)V
 
     .line 20
-    const v0, 0x7f1309a4    # @string/quick_settings_done 'Done'
+    const v0, 0x7f1309aa    # @string/quick_settings_done 'Done'
 
     .line 23
     invoke-virtual {p0, v0, p1}, Lcom/android/systemui/statusbar/phone/SystemUIDialog;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)V
@@ -86,7 +86,7 @@
     invoke-direct/range {v1 .. v6}, Lcom/android/systemui/user/ui/dialog/UserSwitchDialog$2;-><init>(Lcom/android/systemui/plugins/FalsingManager;Lcom/android/internal/logging/UiEventLogger;Lcom/android/systemui/animation/DialogLaunchAnimator;Lcom/android/systemui/user/ui/dialog/UserSwitchDialog;Lcom/android/systemui/plugins/ActivityStarter;)V
 
     .line 37
-    const p3, 0x7f1309c5    # @string/quick_settings_more_user_settings 'Manage users'
+    const p3, 0x7f1309cb    # @string/quick_settings_more_user_settings 'Manage users'
 
     .line 40
     const/4 p4, 0x0

@@ -10,7 +10,7 @@
       android:divider="?attr/listDividerAlertDialog"
       android:overScrollMode="ifContentScrolls"
       android:textAlignment="viewStart"
-      systemui:r0x7f04059c="@dimen/abc_dialog_list_padding_bottom_no_buttons"
-      systemui:r0x7f0405a2="@dimen/abc_dialog_list_padding_top_no_title"
+      app:r0x7f04059c="@dimen/abc_dialog_list_padding_bottom_no_buttons"
+      app:r0x7f0405a2="@dimen/abc_dialog_list_padding_top_no_title"
       class="androidx.appcompat.app.AlertController$RecycleListView"
-      style="@style/Widget.AppCompat.ListView" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto" />
+      style="@style/Widget.AppCompat.ListView" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

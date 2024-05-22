@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <FrameLayout android:layout_width="fill_parent"
-             android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+             android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <androidx.cardview.widget.CardView android:id="@id/water_box_view"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
-                        settings:cardBackgroundColor="@color/progress_card_view_background_color"
-                        settings:cardCornerRadius="17.45dp"
-                        settings:cardElevation="0.0dp"
-                        settings:cardMaxElevation="0.0dp">
+                        app:cardBackgroundColor="@color/progress_card_view_background_color"
+                        app:cardCornerRadius="17.45dp"
+                        app:cardElevation="0.0dp"
+                        app:cardMaxElevation="0.0dp">
     <FrameLayout android:id="@id/storage_size_bg"
                  android:layout_width="fill_parent"
                  android:layout_height="fill_parent" />

@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/controlcenter/policy/MiuiFlashlightControllerImpl$$ExternalSyntheticLambda1;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -296,7 +296,7 @@
     move-result-object v0
 
     .line 155
-    const v1, 0x7f130ba8    # @string/torch_high_temperature_warning 'Your device is overheated. Can't use flashlight now.'
+    const v1, 0x7f130bae    # @string/torch_high_temperature_warning 'Your device is overheated. Can't use flashlight now.'
 
     .line 156
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;

@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/qs/MiuiQSDetail;
 .super Landroid/widget/LinearLayout;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # static fields
@@ -388,7 +388,7 @@
     iget-object v0, p0, Lcom/android/systemui/qs/MiuiQSDetail;->mDetailDoneButton:Landroid/widget/TextView;
 
     .line 89
-    const v1, 0x7f1309a4    # @string/quick_settings_done 'Done'
+    const v1, 0x7f1309aa    # @string/quick_settings_done 'Done'
 
     .line 91
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
@@ -397,7 +397,7 @@
     iget-object v0, p0, Lcom/android/systemui/qs/MiuiQSDetail;->mDetailSettingsButton:Landroid/widget/TextView;
 
     .line 97
-    const v1, 0x7f1309c4    # @string/quick_settings_more_settings 'More settings'
+    const v1, 0x7f1309ca    # @string/quick_settings_more_settings 'More settings'
 
     .line 99
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V

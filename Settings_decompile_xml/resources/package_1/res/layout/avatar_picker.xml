@@ -3,8 +3,8 @@
                       android:id="@id/glif_layout"
                       android:layout_width="fill_parent"
                       android:layout_height="fill_parent"
-                      settings:sucHeaderText="@string/avatar_picker_title"
-                      settings:sucUsePartnerResource="true" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+                      app:sucHeaderText="@string/avatar_picker_title"
+                      app:sucUsePartnerResource="true" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <LinearLayout android:gravity="center_horizontal"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"

@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController;)V
     .locals 0
 
-    .line 662
+    .line 669
     iput-object p1, p0, Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController$3;->this$0:Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

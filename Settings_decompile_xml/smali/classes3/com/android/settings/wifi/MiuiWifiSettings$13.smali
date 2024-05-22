@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/android/settings/wifi/MiuiWifiSettings;)V
     .locals 0
 
-    .line 2264
+    .line 2282
     iput-object p1, p0, Lcom/android/settings/wifi/MiuiWifiSettings$13;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 3
 
-    .line 2267
+    .line 2285
     iget-object v0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$13;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -47,7 +47,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 2268
+    .line 2286
     iget-object v0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$13;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-static {}, Lcom/xiaomi/mirror/synergy/MiuiSynergySdk;->getInstance()Lcom/xiaomi/mirror/synergy/MiuiSynergySdk;
@@ -70,7 +70,7 @@
 
     invoke-static {v0, v1}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$fputmSameAccountAccessPoint(Lcom/android/settings/wifi/MiuiWifiSettings;Lcom/xiaomi/mirror/synergy/MiuiSynergySdk$SameAccountAccessPoint;)V
 
-    .line 2269
+    .line 2287
     iget-object p0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$13;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-static {p0}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$fgetmSameAccountAccessPoint(Lcom/android/settings/wifi/MiuiWifiSettings;)Lcom/xiaomi/mirror/synergy/MiuiSynergySdk$SameAccountAccessPoint;

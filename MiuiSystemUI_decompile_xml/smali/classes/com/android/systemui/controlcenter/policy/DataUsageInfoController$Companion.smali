@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/systemui/controlcenter/policy/DataUsageInfoController$Companion;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # direct methods
@@ -81,7 +81,7 @@
 
     .line 38
     :cond_3
-    const v3, 0x7f130bac    # @string/traffic_unit_gigabyte 'GB'
+    const v3, 0x7f130bb2    # @string/traffic_unit_gigabyte 'GB'
 
     .line 39
     invoke-virtual {p2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -94,7 +94,7 @@
 
     .line 46
     :cond_4
-    const v3, 0x7f130bae    # @string/traffic_unit_megabyte 'MB'
+    const v3, 0x7f130bb4    # @string/traffic_unit_megabyte 'MB'
 
     .line 47
     invoke-virtual {p2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -107,7 +107,7 @@
 
     .line 54
     :cond_5
-    const v3, 0x7f130bad    # @string/traffic_unit_kilobyte 'KB'
+    const v3, 0x7f130bb3    # @string/traffic_unit_kilobyte 'KB'
 
     .line 55
     invoke-virtual {p2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -120,7 +120,7 @@
 
     .line 62
     :cond_6
-    const v3, 0x7f130bab    # @string/traffic_unit_byte 'B'
+    const v3, 0x7f130bb1    # @string/traffic_unit_byte 'B'
 
     .line 63
     invoke-virtual {p2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -165,7 +165,7 @@
     move-result-object p1
 
     .line 89
-    const p2, 0x7f130950    # @string/qs_traffic_message_type_used 'Used %1$s %2$s'
+    const p2, 0x7f130954    # @string/qs_traffic_message_type_used 'Used %1$s %2$s'
 
     .line 90
     invoke-virtual {p0, p2, p1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -190,7 +190,7 @@
     move-result-object p1
 
     .line 105
-    const p2, 0x7f13094f    # @string/qs_traffic_message_type_remain '%1$s %2$s remaining'
+    const p2, 0x7f130953    # @string/qs_traffic_message_type_remain '%1$s %2$s remaining'
 
     .line 106
     invoke-virtual {p0, p2, p1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -215,7 +215,7 @@
     move-result-object p1
 
     .line 121
-    const p2, 0x7f13094e    # @string/qs_traffic_message_type_exceed '%1$s %2$s over limit'
+    const p2, 0x7f130952    # @string/qs_traffic_message_type_exceed '%1$s %2$s over limit'
 
     .line 122
     invoke-virtual {p0, p2, p1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;

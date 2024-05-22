@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/android/settings/wifi/MiuiWifiSettings;)V
     .locals 0
 
-    .line 2323
+    .line 2341
     iput-object p1, p0, Lcom/android/settings/wifi/MiuiWifiSettings$15;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 2
 
-    .line 2326
+    .line 2344
     iget-object v0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$15;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-static {v0}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$fgetmSameAccountAccessPoint(Lcom/android/settings/wifi/MiuiWifiSettings;)Lcom/xiaomi/mirror/synergy/MiuiSynergySdk$SameAccountAccessPoint;
@@ -57,14 +57,14 @@
 
     iget-object v0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$15;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
-    .line 2327
+    .line 2345
     invoke-static {v0}, Lcom/android/settings/wifi/MiuiWifiSettings;->access$400(Lcom/android/settings/wifi/MiuiWifiSettings;)Landroidx/preference/PreferenceCategory;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 2328
+    .line 2346
     iget-object v0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$15;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-static {v0}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$fgetmVirtualAPPreference(Lcom/android/settings/wifi/MiuiWifiSettings;)Lcom/android/settings/wifi/MiuiVirtualWifiEntryPreference;
@@ -75,7 +75,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/settings/wifi/MiuiVirtualWifiEntryPreference;->updateState(I)V
 
-    .line 2329
+    .line 2347
     iget-object v0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$15;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-static {v0}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$fgetmVirtualAPPreference(Lcom/android/settings/wifi/MiuiWifiSettings;)Lcom/android/settings/wifi/MiuiVirtualWifiEntryPreference;
@@ -84,7 +84,7 @@
 
     invoke-virtual {v0}, Lcom/android/settings/wifi/MiuiVirtualWifiEntryPreference;->updateSummary()V
 
-    .line 2330
+    .line 2348
     iget-object v0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$15;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-static {v0}, Lcom/android/settings/wifi/MiuiWifiSettings;->access$500(Lcom/android/settings/wifi/MiuiWifiSettings;)Landroidx/preference/PreferenceCategory;

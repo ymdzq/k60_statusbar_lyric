@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8' ?>
-<miuix.appcompat.app.AdaptRoundButtonDrawable systemui:r0x7f04010a="@dimen/miuix_appcompat_capsule_button_bg_corner_radius"
-                      systemui:r0x7f040115="@dimen/miuix_appcompat_button_bg_corner_radius"
-                      systemui:r0x7f040533="true" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto">
+<miuix.appcompat.app.AdaptRoundButtonDrawable app:r0x7f04010a="@dimen/miuix_appcompat_capsule_button_bg_corner_radius"
+                      app:r0x7f040115="@dimen/miuix_appcompat_button_bg_corner_radius"
+                      app:r0x7f040533="true" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <child>
     <shape android:shape="rectangle">
       <solid android:color="@color/miuix_appcompat_btn_bg_color_light" />

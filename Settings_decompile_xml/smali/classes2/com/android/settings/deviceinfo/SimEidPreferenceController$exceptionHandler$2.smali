@@ -26,35 +26,24 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nSimEidPreferenceController.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SimEidPreferenceController.kt\ncom/android/settings/deviceinfo/SimEidPreferenceController$exceptionHandler$2\n+ 2 CoroutineExceptionHandler.kt\nkotlinx/coroutines/CoroutineExceptionHandlerKt\n*L\n1#1,178:1\n49#2,4:179\n*S KotlinDebug\n*F\n+ 1 SimEidPreferenceController.kt\ncom/android/settings/deviceinfo/SimEidPreferenceController$exceptionHandler$2\n*L\n45#1:179,4\n*E\n"
+    value = "SMAP\nSimEidPreferenceController.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SimEidPreferenceController.kt\ncom/android/settings/deviceinfo/SimEidPreferenceController$exceptionHandler$2\n+ 2 CoroutineExceptionHandler.kt\nkotlinx/coroutines/CoroutineExceptionHandlerKt\n*L\n1#1,199:1\n49#2,4:200\n*S KotlinDebug\n*F\n+ 1 SimEidPreferenceController.kt\ncom/android/settings/deviceinfo/SimEidPreferenceController$exceptionHandler$2\n*L\n45#1:200,4\n*E\n"
 .end annotation
 
 
-# static fields
-.field public static final INSTANCE:Lcom/android/settings/deviceinfo/SimEidPreferenceController$exceptionHandler$2;
+# instance fields
+.field final synthetic this$0:Lcom/android/settings/deviceinfo/SimEidPreferenceController;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method constructor <init>(Lcom/android/settings/deviceinfo/SimEidPreferenceController;)V
+    .locals 0
 
     .line 0
-    new-instance v0, Lcom/android/settings/deviceinfo/SimEidPreferenceController$exceptionHandler$2;
+    iput-object p1, p0, Lcom/android/settings/deviceinfo/SimEidPreferenceController$exceptionHandler$2;->this$0:Lcom/android/settings/deviceinfo/SimEidPreferenceController;
 
-    invoke-direct {v0}, Lcom/android/settings/deviceinfo/SimEidPreferenceController$exceptionHandler$2;-><init>()V
+    const/4 p1, 0x0
 
-    sput-object v0, Lcom/android/settings/deviceinfo/SimEidPreferenceController$exceptionHandler$2;->INSTANCE:Lcom/android/settings/deviceinfo/SimEidPreferenceController$exceptionHandler$2;
-
-    return-void
-.end method
-
-.method constructor <init>()V
-    .locals 1
-
-    .line 0
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lkotlin/jvm/internal/Lambda;-><init>(I)V
+    invoke-direct {p0, p1}, Lkotlin/jvm/internal/Lambda;-><init>(I)V
 
     return-void
 .end method
@@ -73,14 +62,17 @@
 .end method
 
 .method public final invoke()Lkotlinx/coroutines/CoroutineExceptionHandler;
-    .locals 1
+    .locals 2
+
+    .line 45
+    iget-object p0, p0, Lcom/android/settings/deviceinfo/SimEidPreferenceController$exceptionHandler$2;->this$0:Lcom/android/settings/deviceinfo/SimEidPreferenceController;
 
     .line 49
-    sget-object p0, Lkotlinx/coroutines/CoroutineExceptionHandler;->Key:Lkotlinx/coroutines/CoroutineExceptionHandler$Key;
+    sget-object v0, Lkotlinx/coroutines/CoroutineExceptionHandler;->Key:Lkotlinx/coroutines/CoroutineExceptionHandler$Key;
 
-    new-instance v0, Lcom/android/settings/deviceinfo/SimEidPreferenceController$exceptionHandler$2$invoke$$inlined$CoroutineExceptionHandler$1;
+    new-instance v1, Lcom/android/settings/deviceinfo/SimEidPreferenceController$exceptionHandler$2$invoke$$inlined$CoroutineExceptionHandler$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/deviceinfo/SimEidPreferenceController$exceptionHandler$2$invoke$$inlined$CoroutineExceptionHandler$1;-><init>(Lkotlinx/coroutines/CoroutineExceptionHandler$Key;)V
+    invoke-direct {v1, v0, p0}, Lcom/android/settings/deviceinfo/SimEidPreferenceController$exceptionHandler$2$invoke$$inlined$CoroutineExceptionHandler$1;-><init>(Lkotlinx/coroutines/CoroutineExceptionHandler$Key;Lcom/android/settings/deviceinfo/SimEidPreferenceController;)V
 
-    return-object v0
+    return-object v1
 .end method

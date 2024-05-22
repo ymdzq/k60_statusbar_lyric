@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <RelativeLayout android:gravity="center"
                 android:layout_width="@dimen/video_checkbox_width"
-                android:layout_height="@dimen/video_checkbox_height" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+                android:layout_height="@dimen/video_checkbox_height" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <com.airbnb.lottie.LottieAnimationView android:id="@id/lottie_video"
                         android:layout_width="@dimen/video_checkbox_width"
                         android:layout_height="@dimen/video_checkbox_height"
-                        settings:lottie_autoPlay="true"
-                        settings:lottie_loop="true"
-                        settings:lottie_rawRes="@raw/double_click_power_key" />
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/double_click_power_key" />
 </RelativeLayout>

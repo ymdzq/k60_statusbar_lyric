@@ -1,6 +1,6 @@
 .class public Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeAnimatorSupervisor$AnimatorStateCallback;
@@ -24,6 +24,8 @@
 .field private static final EVENT_SEND_TO_HANDWRITING:I = 0x8000000
 
 .field private static final FORCE_FSG_NAV_BAR:Ljava/lang/String; = "force_fsg_nav_bar"
+
+.field private static final MAX_TOUCH_RADIUS_DP:I = 0x34
 
 .field private static final MSG_CHECK_GESTURE_STUB_TOUCHABLE_TIMEOUT:I = 0x15e
 
@@ -57,6 +59,12 @@
 
 .field private mCurrentY:F
 
+.field private mDeltaHotAreaRadius:I
+
+.field private mDisplayHeight:I
+
+.field private mDisplayWidth:I
+
 .field private mDownPoints:Ljava/util/HashMap;
 
 .field private mDownTime:J
@@ -75,15 +83,11 @@
 
 .field private mIsKeyguardLocked:Z
 
-.field private mLeftBottomCornerBounds:Landroid/graphics/Rect;
-
 .field private final mMiuiInfinityModeController:Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeController;
 
 .field private final mMiuiInfinityModeSizesPolicy:Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeLevelPolicyCompat;
 
 .field private final mMiuiInfinityModeTaskRepository:Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeTaskRepository;
-
-.field private mRightBottomCornerBounds:Landroid/graphics/Rect;
 
 .field private mStartGesture:Z
 
@@ -115,50 +119,32 @@
     iput-object v0, p0, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;->mDownPoints:Ljava/util/HashMap;
 
     .line 10
-    new-instance v0, Landroid/graphics/Rect;
-
-    .line 12
-    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
-
-    .line 14
-    iput-object v0, p0, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;->mLeftBottomCornerBounds:Landroid/graphics/Rect;
-
-    .line 17
-    new-instance v0, Landroid/graphics/Rect;
-
-    .line 19
-    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
-
-    .line 21
-    iput-object v0, p0, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;->mRightBottomCornerBounds:Landroid/graphics/Rect;
-
-    .line 24
     const/4 v0, 0x0
 
-    .line 26
+    .line 12
     iput v0, p0, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;->mCtrlType:I
 
-    .line 27
+    .line 13
     const/4 v0, 0x2
 
-    .line 29
+    .line 15
     iput v0, p0, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;->mTransitionState:I
 
-    .line 30
+    .line 16
     iput-object p1, p0, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;->mMiuiInfinityModeTaskRepository:Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeTaskRepository;
 
-    .line 32
+    .line 18
     iput-object p2, p0, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;->mMiuiInfinityModeSizesPolicy:Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeLevelPolicyCompat;
 
-    .line 34
+    .line 20
     iput-object p3, p0, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;->mTouchCallback:Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea$GestureDragCallback;
 
-    .line 36
+    .line 22
     iput-object p4, p0, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;->mMiuiInfinityModeController:Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeController;
 
-    .line 38
+    .line 24
     return-void
-    .line 40
+    .line 26
 .end method
 
 .method public static calcDistance(FF)I
@@ -374,156 +360,150 @@
 
     .line 107
     :cond_6
-    iget-object p1, p0, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;->mLeftBottomCornerBounds:Landroid/graphics/Rect;
+    invoke-direct {p0, v0, v1}, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;->leftBottomCornerContains(II)Z
 
     .line 108
-    invoke-virtual {p1, v0, v1}, Landroid/graphics/Rect;->contains(II)Z
-
-    .line 110
     move-result p1
 
-    .line 113
+    .line 111
     if-eqz p1, :cond_8
 
-    .line 114
+    .line 112
     iget-object p1, p0, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;->mMiuiInfinityModeTaskRepository:Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeTaskRepository;
 
-    .line 116
+    .line 114
     invoke-virtual {p1}, Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeTaskRepository;->findTopDraggableFullscreenTaskInfo()Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeTaskWrapperInfo;
 
-    .line 118
+    .line 116
     move-result-object p1
 
-    .line 121
+    .line 119
     if-nez p1, :cond_7
 
-    .line 122
+    .line 120
     new-instance p1, Landroid/util/Pair;
 
-    .line 124
+    .line 122
     new-instance p2, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea$TriggerResult;
 
-    .line 126
+    .line 124
     invoke-direct {p2, p0}, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea$TriggerResult;-><init>(Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;)V
 
-    .line 128
+    .line 126
     invoke-direct {p1, v5, p2}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 131
+    .line 129
     return-object p1
 
-    .line 134
+    .line 132
     :cond_7
     new-instance p2, Landroid/util/Pair;
 
-    .line 135
+    .line 133
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 137
+    .line 135
     move-result-object p3
 
-    .line 140
+    .line 138
     new-instance v0, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea$TriggerResult;
 
-    .line 141
+    .line 139
     invoke-virtual {p1}, Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeTaskWrapperInfo;->getTaskId()I
 
-    .line 143
+    .line 141
     move-result v1
 
-    .line 146
+    .line 144
     invoke-direct {v0, p0, v1, p1}, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea$TriggerResult;-><init>(Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;ILcom/android/wm/shell/miuifreeform/MiuiInfinityModeTaskWrapperInfo;)V
 
-    .line 147
+    .line 145
     invoke-direct {p2, p3, v0}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 150
+    .line 148
     return-object p2
 
-    .line 153
+    .line 151
     :cond_8
-    iget-object p1, p0, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;->mRightBottomCornerBounds:Landroid/graphics/Rect;
+    invoke-direct {p0, v0, v1}, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;->rightBottomCornerContains(II)Z
 
-    .line 154
-    invoke-virtual {p1, v0, v1}, Landroid/graphics/Rect;->contains(II)Z
-
-    .line 156
+    .line 152
     move-result p1
 
-    .line 159
+    .line 155
     if-eqz p1, :cond_a
 
-    .line 160
+    .line 156
     iget-object p1, p0, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;->mMiuiInfinityModeTaskRepository:Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeTaskRepository;
 
-    .line 162
+    .line 158
     invoke-virtual {p1}, Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeTaskRepository;->findTopDraggableFullscreenTaskInfo()Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeTaskWrapperInfo;
 
-    .line 164
+    .line 160
     move-result-object p1
 
-    .line 167
+    .line 163
     if-nez p1, :cond_9
 
-    .line 168
+    .line 164
     new-instance p1, Landroid/util/Pair;
 
-    .line 170
+    .line 166
     new-instance p2, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea$TriggerResult;
 
-    .line 172
+    .line 168
     invoke-direct {p2, p0}, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea$TriggerResult;-><init>(Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;)V
 
-    .line 174
+    .line 170
     invoke-direct {p1, v5, p2}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 177
+    .line 173
     return-object p1
 
-    .line 180
+    .line 176
     :cond_9
     new-instance p2, Landroid/util/Pair;
 
-    .line 181
+    .line 177
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 183
+    .line 179
     move-result-object p3
 
-    .line 186
+    .line 182
     new-instance v0, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea$TriggerResult;
 
-    .line 187
+    .line 183
     invoke-virtual {p1}, Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeTaskWrapperInfo;->getTaskId()I
 
-    .line 189
+    .line 185
     move-result v1
 
-    .line 192
+    .line 188
     invoke-direct {v0, p0, v1, p1}, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea$TriggerResult;-><init>(Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;ILcom/android/wm/shell/miuifreeform/MiuiInfinityModeTaskWrapperInfo;)V
 
-    .line 193
+    .line 189
     invoke-direct {p2, p3, v0}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 196
+    .line 192
     return-object p2
 
-    .line 199
+    .line 195
     :cond_a
     new-instance p1, Landroid/util/Pair;
 
-    .line 200
+    .line 196
     new-instance p2, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea$TriggerResult;
 
-    .line 202
+    .line 198
     invoke-direct {p2, p0}, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea$TriggerResult;-><init>(Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;)V
 
-    .line 204
+    .line 200
     invoke-direct {p1, v5, p2}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 207
+    .line 203
     return-object p1
-    .line 210
+    .line 206
 .end method
 
 .method private dropTouchEvent()Z
@@ -761,52 +741,47 @@
     move-result p1
 
     .line 9
-    iget-object v1, p0, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;->mLeftBottomCornerBounds:Landroid/graphics/Rect;
-
-    .line 10
     float-to-int v0, v0
 
-    .line 12
+    .line 10
     float-to-int p1, p1
 
-    .line 13
-    invoke-virtual {v1, v0, p1}, Landroid/graphics/Rect;->contains(II)Z
+    .line 11
+    invoke-direct {p0, v0, p1}, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;->leftBottomCornerContains(II)Z
 
-    .line 14
+    .line 12
     move-result v1
 
-    .line 17
+    .line 15
     if-nez v1, :cond_1
 
+    .line 16
+    invoke-direct {p0, v0, p1}, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;->rightBottomCornerContains(II)Z
+
     .line 18
-    iget-object p0, p0, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;->mRightBottomCornerBounds:Landroid/graphics/Rect;
-
-    .line 20
-    invoke-virtual {p0, v0, p1}, Landroid/graphics/Rect;->contains(II)Z
-
-    .line 22
     move-result p0
 
-    .line 25
+    .line 21
     if-eqz p0, :cond_0
 
-    .line 26
+    .line 22
     goto :goto_0
 
-    .line 28
+    .line 24
     :cond_0
     const/4 p0, 0x0
 
-    .line 29
+    .line 25
     return p0
 
-    .line 30
+    .line 26
     :cond_1
     :goto_0
     const/4 p0, 0x1
 
-    .line 31
+    .line 27
     return p0
+    .line 28
 .end method
 
 .method private inFreeformCtrlType()Z
@@ -1241,6 +1216,73 @@
     .line 11
 .end method
 
+.method private leftBottomCornerContains(II)Z
+    .locals 4
+
+    .line 1
+    int-to-double v0, p1
+
+    .line 2
+    const-wide/high16 v2, 0x4000000000000000L    # 2.0
+
+    .line 3
+    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->pow(DD)D
+
+    .line 5
+    move-result-wide v0
+
+    .line 8
+    iget p1, p0, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;->mDisplayHeight:I
+
+    .line 9
+    sub-int/2addr p1, p2
+
+    .line 11
+    int-to-double p1, p1
+
+    .line 12
+    invoke-static {p1, p2, v2, v3}, Ljava/lang/Math;->pow(DD)D
+
+    .line 13
+    move-result-wide p1
+
+    .line 16
+    add-double/2addr p1, v0
+
+    .line 17
+    invoke-static {p1, p2}, Ljava/lang/Math;->sqrt(D)D
+
+    .line 18
+    move-result-wide p1
+
+    .line 21
+    iget p0, p0, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;->mDeltaHotAreaRadius:I
+
+    .line 22
+    int-to-double v0, p0
+
+    .line 24
+    cmpg-double p0, p1, v0
+
+    .line 25
+    if-gez p0, :cond_0
+
+    .line 27
+    const/4 p0, 0x1
+
+    .line 29
+    goto :goto_0
+
+    .line 30
+    :cond_0
+    const/4 p0, 0x0
+
+    .line 31
+    :goto_0
+    return p0
+    .line 32
+.end method
+
 .method private notifyTriggerGestureFailed()V
     .locals 2
 
@@ -1288,6 +1330,79 @@
     .line 7
     return-void
     .line 9
+.end method
+
+.method private rightBottomCornerContains(II)Z
+    .locals 4
+
+    .line 1
+    iget v0, p0, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;->mDisplayWidth:I
+
+    .line 2
+    sub-int/2addr v0, p1
+
+    .line 4
+    int-to-double v0, v0
+
+    .line 5
+    const-wide/high16 v2, 0x4000000000000000L    # 2.0
+
+    .line 6
+    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->pow(DD)D
+
+    .line 8
+    move-result-wide v0
+
+    .line 11
+    iget p1, p0, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;->mDisplayHeight:I
+
+    .line 12
+    sub-int/2addr p1, p2
+
+    .line 14
+    int-to-double p1, p1
+
+    .line 15
+    invoke-static {p1, p2, v2, v3}, Ljava/lang/Math;->pow(DD)D
+
+    .line 16
+    move-result-wide p1
+
+    .line 19
+    add-double/2addr p1, v0
+
+    .line 20
+    invoke-static {p1, p2}, Ljava/lang/Math;->sqrt(D)D
+
+    .line 21
+    move-result-wide p1
+
+    .line 24
+    iget p0, p0, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;->mDeltaHotAreaRadius:I
+
+    .line 25
+    int-to-double v0, p0
+
+    .line 27
+    cmpg-double p0, p1, v0
+
+    .line 28
+    if-gez p0, :cond_0
+
+    .line 30
+    const/4 p0, 0x1
+
+    .line 32
+    goto :goto_0
+
+    .line 33
+    :cond_0
+    const/4 p0, 0x0
+
+    .line 34
+    :goto_0
+    return p0
+    .line 35
 .end method
 
 .method private triggerFreeformGesture(Landroid/view/InputMonitor;)Z
@@ -1869,78 +1984,72 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;->mLeftBottomCornerBounds:Landroid/graphics/Rect;
+    invoke-direct {p0, p1, p2}, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;->leftBottomCornerContains(II)Z
 
     .line 2
-    invoke-virtual {v0, p1, p2}, Landroid/graphics/Rect;->contains(II)Z
-
-    .line 4
     move-result v0
 
-    .line 7
+    .line 5
     const/4 v1, 0x1
 
-    .line 8
+    .line 6
     const/4 v2, 0x0
 
-    .line 9
+    .line 7
     if-eqz v0, :cond_1
 
-    .line 10
+    .line 8
     iget-object p0, p0, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;->mMiuiInfinityModeTaskRepository:Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeTaskRepository;
 
-    .line 12
+    .line 10
     invoke-virtual {p0}, Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeTaskRepository;->findTopDraggableFullscreenTaskInfo()Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeTaskWrapperInfo;
 
-    .line 14
+    .line 12
     move-result-object p0
 
-    .line 17
+    .line 15
     if-nez p0, :cond_0
 
-    .line 18
+    .line 16
     return v2
 
-    .line 20
+    .line 18
     :cond_0
     return v1
 
-    .line 21
+    .line 19
     :cond_1
-    iget-object v0, p0, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;->mRightBottomCornerBounds:Landroid/graphics/Rect;
+    invoke-direct {p0, p1, p2}, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;->rightBottomCornerContains(II)Z
 
-    .line 22
-    invoke-virtual {v0, p1, p2}, Landroid/graphics/Rect;->contains(II)Z
-
-    .line 24
+    .line 20
     move-result p1
 
-    .line 27
+    .line 23
     if-eqz p1, :cond_3
 
-    .line 28
+    .line 24
     iget-object p0, p0, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;->mMiuiInfinityModeTaskRepository:Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeTaskRepository;
 
-    .line 30
+    .line 26
     invoke-virtual {p0}, Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeTaskRepository;->findTopDraggableFullscreenTaskInfo()Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeTaskWrapperInfo;
 
-    .line 32
+    .line 28
     move-result-object p0
 
-    .line 35
+    .line 31
     if-nez p0, :cond_2
 
-    .line 36
+    .line 32
     return v2
 
-    .line 38
+    .line 34
     :cond_2
     return v1
 
-    .line 39
+    .line 35
     :cond_3
     return v2
-    .line 40
+    .line 36
 .end method
 
 .method public onAnimatorFinishEnd(Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeTaskWrapperInfo;Landroid/view/SurfaceControl$Transaction;Ljava/lang/String;)V
@@ -2501,6 +2610,77 @@
     .line 10
 .end method
 
+.method public setDisplayArea(II)V
+    .locals 1
+
+    .line 1
+    iput p1, p0, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;->mDisplayHeight:I
+
+    .line 2
+    iput p2, p0, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;->mDisplayWidth:I
+
+    .line 4
+    const v0, 0x3d8f5c29    # 0.07f
+
+    .line 6
+    if-le p2, p1, :cond_0
+
+    .line 9
+    int-to-float p1, p1
+
+    .line 11
+    goto :goto_0
+
+    .line 12
+    :cond_0
+    int-to-float p1, p2
+
+    .line 13
+    :goto_0
+    mul-float/2addr p1, v0
+
+    .line 14
+    float-to-int p1, p1
+
+    .line 15
+    iput p1, p0, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;->mDeltaHotAreaRadius:I
+
+    .line 16
+    iget-object p1, p0, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;->mMiuiInfinityModeController:Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeController;
+
+    .line 18
+    invoke-virtual {p1}, Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeController;->getContext()Landroid/content/Context;
+
+    .line 20
+    move-result-object p1
+
+    .line 23
+    const/high16 p2, 0x42500000    # 52.0f
+
+    .line 24
+    invoke-static {p1, p2}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeUtils;->applyDip2Px(Landroid/content/Context;F)F
+
+    .line 26
+    move-result p1
+
+    .line 29
+    float-to-int p1, p1
+
+    .line 30
+    iget p2, p0, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;->mDeltaHotAreaRadius:I
+
+    .line 31
+    if-le p2, p1, :cond_1
+
+    .line 33
+    iput p1, p0, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;->mDeltaHotAreaRadius:I
+
+    .line 35
+    :cond_1
+    return-void
+    .line 37
+.end method
+
 .method public setForceFsgNavBar(Z)V
     .locals 0
 
@@ -2510,83 +2690,6 @@
     .line 2
     return-void
     .line 4
-.end method
-
-.method public setGlobalThermalArea(Landroid/graphics/Rect;)V
-    .locals 7
-
-    .line 1
-    invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
-
-    .line 2
-    move-result v0
-
-    .line 5
-    int-to-float v0, v0
-
-    .line 6
-    const v1, 0x3d8f5c29    # 0.07f
-
-    .line 7
-    mul-float/2addr v0, v1
-
-    .line 10
-    float-to-int v0, v0
-
-    .line 11
-    invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
-
-    .line 12
-    move-result v2
-
-    .line 15
-    int-to-float v2, v2
-
-    .line 16
-    mul-float/2addr v2, v1
-
-    .line 17
-    float-to-int v1, v2
-
-    .line 18
-    iget-object v2, p0, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;->mLeftBottomCornerBounds:Landroid/graphics/Rect;
-
-    .line 19
-    iget v3, p1, Landroid/graphics/Rect;->left:I
-
-    .line 21
-    iget v4, p1, Landroid/graphics/Rect;->bottom:I
-
-    .line 23
-    sub-int v5, v4, v1
-
-    .line 25
-    add-int v6, v3, v0
-
-    .line 27
-    invoke-virtual {v2, v3, v5, v6, v4}, Landroid/graphics/Rect;->set(IIII)V
-
-    .line 29
-    iget-object p0, p0, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;->mRightBottomCornerBounds:Landroid/graphics/Rect;
-
-    .line 32
-    iget v2, p1, Landroid/graphics/Rect;->right:I
-
-    .line 34
-    sub-int v0, v2, v0
-
-    .line 36
-    iget p1, p1, Landroid/graphics/Rect;->bottom:I
-
-    .line 38
-    sub-int v1, p1, v1
-
-    .line 40
-    invoke-virtual {p0, v0, v1, v2, p1}, Landroid/graphics/Rect;->set(IIII)V
-
-    .line 42
-    return-void
-    .line 45
 .end method
 
 .method public setTransitionState(I)V

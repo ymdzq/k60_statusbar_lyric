@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8' ?>
-<PreferenceScreen android:title="@string/shoulder_key_settings_title" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+<PreferenceScreen android:title="@string/shoulder_key_settings_title" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
   <PreferenceCategory android:key="shoulder_key_guide">
     <com.android.settingslib.miuisettings.preference.Preference android:enabled="false"
                           android:layout="@layout/shoulderkey_guide" />

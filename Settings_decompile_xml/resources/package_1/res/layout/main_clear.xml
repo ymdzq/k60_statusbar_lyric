@@ -4,7 +4,7 @@
                       android:id="@id/setup_wizard_layout"
                       android:layout_width="fill_parent"
                       android:layout_height="fill_parent"
-                      settings:sucHeaderText="@string/main_clear_title" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+                      app:sucHeaderText="@string/main_clear_title" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <ScrollView android:id="@id/main_clear_scrollview"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent">

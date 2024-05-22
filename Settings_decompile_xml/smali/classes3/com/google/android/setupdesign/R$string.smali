@@ -4,4 +4,4 @@
 
 
 # static fields
-.field public static final sud_default_device_name:I = 0x7f13245e # @string/sud_default_device_name 'device'
+.field public static final sud_default_device_name:I = 0x7f132466 # @string/sud_default_device_name 'device'

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/people/PeopleTileViewHelper;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # static fields
@@ -1586,7 +1586,7 @@
     const v8, 0x7f130153    # @string/audio_status 'Listening'
 
     .line 46
-    const v9, 0x7f130c3f    # @string/video_status 'Watching'
+    const v9, 0x7f130c45    # @string/video_status 'Watching'
 
     .line 49
     const-string v10, ""
@@ -1614,7 +1614,7 @@
 
     .line 67
     :pswitch_0
-    const v3, 0x7f130bfa    # @string/upcoming_birthday_status 'Birthday soon'
+    const v3, 0x7f130c00    # @string/upcoming_birthday_status 'Birthday soon'
 
     .line 68
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1955,7 +1955,7 @@
 
     .line 299
     :pswitch_10
-    const v10, 0x7f130bfb    # @string/upcoming_birthday_status_content_description 'It's %1$s’s birthday soon'
+    const v10, 0x7f130c01    # @string/upcoming_birthday_status_content_description 'It's %1$s’s birthday soon'
 
     .line 300
     filled-new-array {v3}, [Ljava/lang/Object;
@@ -2003,7 +2003,7 @@
 
     .line 328
     :pswitch_13
-    const v3, 0x7f130c3f    # @string/video_status 'Watching'
+    const v3, 0x7f130c45    # @string/video_status 'Watching'
 
     .line 329
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -4333,7 +4333,7 @@
     if-nez v7, :cond_23
 
     .line 877
-    const v7, 0x7f130bef    # @string/two_weeks_timestamp '2 weeks ago'
+    const v7, 0x7f130bf5    # @string/two_weeks_timestamp '2 weeks ago'
 
     .line 879
     invoke-virtual {v6, v7}, Landroid/content/Context;->getString(I)Ljava/lang/String;

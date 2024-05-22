@@ -1,6 +1,6 @@
 .class public Lcom/miui/clock/classic/SunMoveView;
 .super Landroid/view/View;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # instance fields
@@ -714,7 +714,7 @@
     move-result-object p1
 
     .line 249
-    const p2, 0x7f130c64    # @string/weather_no_data 'No weather data'
+    const p2, 0x7f130c6a    # @string/weather_no_data 'No weather data'
 
     .line 250
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -807,7 +807,7 @@
     move-result-object p2
 
     .line 313
-    const p3, 0x7f130b4f    # @string/sunrise_time_format_desc 'Sunrise time: %s'
+    const p3, 0x7f130b55    # @string/sunrise_time_format_desc 'Sunrise time: %s'
 
     .line 314
     invoke-virtual {p1, p3, p2}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -874,7 +874,7 @@
     move-result-object p2
 
     .line 361
-    const p3, 0x7f130b50    # @string/sunrise_time_format_tomorrow_desc 'Tomorrow's sunrise: %s'
+    const p3, 0x7f130b56    # @string/sunrise_time_format_tomorrow_desc 'Tomorrow's sunrise: %s'
 
     .line 362
     invoke-virtual {p1, p3, p2}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -1025,7 +1025,7 @@
     move-result-object p2
 
     .line 468
-    const p3, 0x7f130b52    # @string/sunset_time_format_desc 'Sunset time: %s'
+    const p3, 0x7f130b58    # @string/sunset_time_format_desc 'Sunset time: %s'
 
     .line 469
     invoke-virtual {p1, p3, p2}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;

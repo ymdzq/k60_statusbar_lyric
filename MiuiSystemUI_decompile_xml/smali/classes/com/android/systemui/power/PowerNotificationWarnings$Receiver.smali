@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/power/PowerNotificationWarnings$Receiver;
 .super Landroid/content/BroadcastReceiver;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # instance fields
@@ -889,7 +889,7 @@
     invoke-virtual {v1, v4}, Landroid/app/AlertDialog;->setIconAttribute(I)V
 
     .line 606
-    const v4, 0x7f130b99    # @string/thermal_shutdown_title 'Phone turned off due to heat'
+    const v4, 0x7f130b9f    # @string/thermal_shutdown_title 'Phone turned off due to heat'
 
     .line 609
     invoke-virtual {v1, v4}, Landroid/app/AlertDialog;->setTitle(I)V
@@ -898,7 +898,7 @@
     iget-object v4, v1, Lcom/android/systemui/statusbar/phone/SystemUIDialog;->mContext:Landroid/content/Context;
 
     .line 615
-    const v5, 0x7f130b97    # @string/thermal_shutdown_dialog_message 'Your phone was too hot, so it turned off to cool down. Your phone is now running normally.\n\nYour pho ...'
+    const v5, 0x7f130b9d    # @string/thermal_shutdown_dialog_message 'Your phone was too hot, so it turned off to cool down. Your phone is now running normally.\n\nYour pho ...'
 
     .line 617
     invoke-virtual {v4, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -931,7 +931,7 @@
     invoke-virtual {v1, v3}, Landroid/app/AlertDialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
     .line 640
-    const v3, 0x7f130b96    # @string/thermal_shutdown_dialog_help_url ''
+    const v3, 0x7f130b9c    # @string/thermal_shutdown_dialog_help_url ''
 
     .line 643
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -955,7 +955,7 @@
     invoke-direct {v3, v0, v2, v4}, Lcom/android/systemui/power/PowerNotificationWarnings$1;-><init>(Lcom/android/systemui/power/PowerNotificationWarnings;Ljava/lang/String;I)V
 
     .line 658
-    const v2, 0x7f130b95    # @string/thermal_shutdown_dialog_help_text 'See care steps'
+    const v2, 0x7f130b9b    # @string/thermal_shutdown_dialog_help_text 'See care steps'
 
     .line 661
     invoke-virtual {v1, v2, v3}, Lcom/android/systemui/statusbar/phone/SystemUIDialog;->setNeutralButton(ILandroid/content/DialogInterface$OnClickListener;)V

@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/statusbar/notification/row/FooterView;
 .super Lcom/android/systemui/statusbar/notification/row/StackScrollerDecorView;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # static fields
@@ -664,7 +664,7 @@
     move-result-object v1
 
     .line 42
-    const v2, 0x7f130bf4    # @string/unlock_to_see_notif_text 'Unlock to see older notifications'
+    const v2, 0x7f130bfa    # @string/unlock_to_see_notif_text 'Unlock to see older notifications'
 
     .line 43
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;

@@ -100,6 +100,8 @@
 
 .field private static final VPN_SETTINGS:Ljava/lang/String; = "vpn_settings_title"
 
+.field private static final WALLPAPER_SETTINGS_TITLE:Ljava/lang/String; = "wallpaper_settings_title"
+
 .field private static final WIFI_TETHER_SETTINGS:Ljava/lang/String; = "wifi_tether_settings_title"
 
 .field private static final XIAOMI_ACCOUNT:Ljava/lang/String; = "xiaomi_account"
@@ -170,7 +172,7 @@
         }
     .end annotation
 
-    .line 126
+    .line 127
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/settingslib/search/SettingsTree;-><init>(Landroid/content/Context;Lorg/json/JSONObject;Lcom/android/settingslib/search/SettingsTree;Z)V
 
     return-void
@@ -179,7 +181,7 @@
 .method private addMoreSecurityPrivacySon()V
     .locals 4
 
-    .line 591
+    .line 595
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
@@ -189,19 +191,19 @@
 
     const-string/jumbo v2, "more_security_privacy"
 
-    .line 593
+    .line 597
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string/jumbo v1, "temporary"
 
     const/4 v2, 0x1
 
-    .line 594
+    .line 598
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
     const-string/jumbo v1, "title"
 
-    .line 595
+    .line 599
     iget-object v2, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
     sget v3, Lcom/android/settings/R$string;->more_security_privacy_settings:I
@@ -214,7 +216,7 @@
 
     const-string v1, "fragment"
 
-    .line 596
+    .line 600
     const-class v2, Lcom/android/settings/safetycenter/MoreSecurityPrivacyFragment;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
@@ -227,10 +229,10 @@
 
     const-string v2, "com.android.settings"
 
-    .line 597
+    .line 601
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 598
+    .line 602
     iget-object v1, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
     invoke-static {v1, v0, p0}, Lcom/android/settingslib/search/SettingsTree;->newInstance(Landroid/content/Context;Lorg/json/JSONObject;Lcom/android/settingslib/search/SettingsTree;)Lcom/android/settingslib/search/SettingsTree;
@@ -246,7 +248,7 @@
     :catch_0
     move-exception p0
 
-    .line 600
+    .line 604
     invoke-virtual {p0}, Lorg/json/JSONException;->printStackTrace()V
 
     :goto_0
@@ -256,10 +258,10 @@
 .method private addPrivacyDashboardSubItems()V
     .locals 8
 
-    .line 674
+    .line 678
     iget-object v0, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
-    .line 675
+    .line 679
     invoke-static {v0}, Lcom/android/settings/overlay/FeatureFactory;->getFactory(Landroid/content/Context;)Lcom/android/settings/overlay/FeatureFactory;
 
     move-result-object v0
@@ -272,19 +274,19 @@
 
     const-string v1, "com.android.settings.category.ia.privacy"
 
-    .line 676
+    .line 680
     invoke-interface {v0, v1}, Lcom/android/settings/dashboard/DashboardFeatureProvider;->getTilesForCategory(Ljava/lang/String;)Lcom/android/settingslib/drawer/DashboardCategory;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 678
+    .line 682
     invoke-virtual {v1}, Lcom/android/settingslib/drawer/DashboardCategory;->getTiles()Ljava/util/List;
 
     move-result-object v1
 
-    .line 679
+    .line 683
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -303,7 +305,7 @@
 
     check-cast v2, Lcom/android/settingslib/drawer/Tile;
 
-    .line 680
+    .line 684
     iget-object v3, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2, v3}, Lcom/android/settingslib/drawer/Tile;->getTitle(Landroid/content/Context;)Ljava/lang/CharSequence;
@@ -314,7 +316,7 @@
 
     move-result-object v3
 
-    .line 681
+    .line 685
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -339,12 +341,12 @@
 
     move-result-object v4
 
-    .line 682
+    .line 686
     invoke-interface {v0, v2}, Lcom/android/settings/dashboard/DashboardFeatureProvider;->getDashboardKeyForTile(Lcom/android/settingslib/drawer/Tile;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 683
+    .line 687
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -369,12 +371,12 @@
 
     invoke-static {v6, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 684
+    .line 688
     sget-object v5, Lcom/android/settings/search/tree/MiuiSettingsTree;->sTileMapCache:Ljava/util/HashMap;
 
     invoke-virtual {v5, v4, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 685
+    .line 689
     new-instance v5, Lorg/json/JSONObject;
 
     invoke-direct {v5}, Lorg/json/JSONObject;-><init>()V
@@ -384,25 +386,25 @@
 
     const/4 v7, 0x1
 
-    .line 687
+    .line 691
     invoke-virtual {v5, v6, v7}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
     const-string/jumbo v6, "title"
 
-    .line 688
+    .line 692
     invoke-virtual {v5, v6, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string/jumbo v3, "resource"
 
-    .line 689
+    .line 693
     invoke-virtual {v5, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string/jumbo v3, "preference_key"
 
-    .line 690
+    .line 694
     invoke-virtual {v5, v3, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 691
+    .line 695
     iget-object v2, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
     invoke-static {v2, v5, p0}, Lcom/android/settingslib/search/SettingsTree;->newInstance(Landroid/content/Context;Lorg/json/JSONObject;Lcom/android/settingslib/search/SettingsTree;)Lcom/android/settingslib/search/SettingsTree;
@@ -422,7 +424,7 @@
 .method private addPrivacySubTtems(Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
-    .line 700
+    .line 704
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
@@ -432,34 +434,34 @@
 
     const/4 v2, 0x1
 
-    .line 702
+    .line 706
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
     const-string/jumbo v1, "resource"
 
-    .line 703
+    .line 707
     invoke-virtual {v0, v1, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string/jumbo p1, "preference_key"
 
-    .line 704
+    .line 708
     invoke-virtual {v0, p1, p2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string p1, "intent"
 
     const-string p2, "android.settings.PRIVACY_SETTINGS"
 
-    .line 705
+    .line 709
     invoke-virtual {v0, p1, p2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string/jumbo p1, "package"
 
     const-string p2, "com.android.settings"
 
-    .line 706
+    .line 710
     invoke-virtual {v0, p1, p2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 707
+    .line 711
     iget-object p1, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
     invoke-static {p1, v0, p0}, Lcom/android/settingslib/search/SettingsTree;->newInstance(Landroid/content/Context;Lorg/json/JSONObject;Lcom/android/settingslib/search/SettingsTree;)Lcom/android/settingslib/search/SettingsTree;
@@ -477,12 +479,12 @@
 .method private ensureAddAlexaSearch()V
     .locals 4
 
-    .line 609
+    .line 613
     invoke-static {}, Lcom/android/settings/utils/HomeListUtils;->getAmazonAlexIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 610
+    .line 614
     iget-object v1, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
     invoke-static {v1, v0}, Lcom/android/settings/utils/HomeListUtils;->shouldAddAmazonAlex(Landroid/content/Context;Landroid/content/Intent;)Z
@@ -491,7 +493,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 611
+    .line 615
     new-instance v1, Lorg/json/JSONObject;
 
     invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
@@ -501,12 +503,12 @@
 
     const/4 v3, 0x1
 
-    .line 613
+    .line 617
     invoke-virtual {v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
     const-string/jumbo v2, "title"
 
-    .line 614
+    .line 618
     iget-object v3, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
     invoke-static {v3}, Lcom/android/settings/utils/HomeListUtils;->getAlexaAppName(Landroid/content/Context;)Ljava/lang/String;
@@ -519,12 +521,12 @@
 
     const-string v3, "ic_alexa_widget_icon"
 
-    .line 615
+    .line 619
     invoke-virtual {v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string v2, "intent"
 
-    .line 616
+    .line 620
     new-instance v3, Lcom/android/settingslib/search/TinyIntent;
 
     invoke-direct {v3, v0}, Lcom/android/settingslib/search/TinyIntent;-><init>(Landroid/content/Intent;)V
@@ -537,7 +539,7 @@
 
     const-string v0, "class"
 
-    .line 617
+    .line 621
     const-class v2, Lcom/android/settings/search/tree/GeneratorTitleSettingsTree;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -546,7 +548,7 @@
 
     invoke-virtual {v1, v0, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 618
+    .line 622
     iget-object v0, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
     invoke-static {v0, v1, p0}, Lcom/android/settingslib/search/SettingsTree;->newInstance(Landroid/content/Context;Lorg/json/JSONObject;Lcom/android/settingslib/search/SettingsTree;)Lcom/android/settingslib/search/SettingsTree;
@@ -573,19 +575,19 @@
         }
     .end annotation
 
-    .line 625
+    .line 629
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-eqz v0, :cond_0
 
-    .line 626
+    .line 630
     iget-object v0, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/settings/utils/HomeListUtils;->getWellbeingIntent(Landroid/content/Context;)Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 627
+    .line 631
     invoke-static {}, Lcom/android/settings/MiuiUtils;->getInstance()Lcom/android/settings/MiuiUtils;
 
     move-result-object v1
@@ -598,7 +600,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 628
+    .line 632
     new-instance v1, Lorg/json/JSONObject;
 
     invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
@@ -608,12 +610,12 @@
 
     const/4 v3, 0x1
 
-    .line 630
+    .line 634
     invoke-virtual {v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
     const-string/jumbo v2, "title"
 
-    .line 631
+    .line 635
     iget-object v3, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -632,12 +634,12 @@
 
     const-string v3, "ic_google_wellbeing"
 
-    .line 632
+    .line 636
     invoke-virtual {v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string v2, "intent"
 
-    .line 633
+    .line 637
     new-instance v3, Lcom/android/settingslib/search/TinyIntent;
 
     invoke-direct {v3, v0}, Lcom/android/settingslib/search/TinyIntent;-><init>(Landroid/content/Intent;)V
@@ -650,7 +652,7 @@
 
     const-string v0, "class"
 
-    .line 634
+    .line 638
     const-class v2, Lcom/android/settings/search/tree/GeneratorTitleSettingsTree;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -661,7 +663,7 @@
 
     const-string/jumbo v0, "summary"
 
-    .line 635
+    .line 639
     iget-object v2, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
     const-string v3, "com.google.android.apps.wellbeing"
@@ -672,7 +674,7 @@
 
     invoke-virtual {v1, v0, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 636
+    .line 640
     iget-object v0, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
     invoke-static {v0, v1, p0}, Lcom/android/settingslib/search/SettingsTree;->newInstance(Landroid/content/Context;Lorg/json/JSONObject;Lcom/android/settingslib/search/SettingsTree;)Lcom/android/settingslib/search/SettingsTree;
@@ -691,14 +693,14 @@
 .method private getAdapterSercurityPravacy(Ljava/lang/String;)Ljava/lang/String;
     .locals 4
 
-    .line 351
+    .line 352
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     const-string v1, "/"
 
-    .line 352
+    .line 353
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->lastIndexOf(Ljava/lang/String;)I
 
     move-result v2
@@ -712,7 +714,7 @@
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
-    .line 358
+    .line 359
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -733,7 +735,7 @@
 
     invoke-virtual {v0, v2, p0}, Ljava/lang/StringBuilder;->insert(ILjava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 359
+    .line 360
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -754,7 +756,7 @@
 
     const/4 p0, 0x0
 
-    .line 662
+    .line 666
     :goto_0
     invoke-virtual {p1}, Ljava/util/LinkedList;->size()I
 
@@ -762,7 +764,7 @@
 
     if-ge p0, v0, :cond_1
 
-    .line 663
+    .line 667
     invoke-virtual {p1, p0}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -771,7 +773,7 @@
 
     const-string/jumbo v1, "resource"
 
-    .line 664
+    .line 668
     invoke-virtual {v0, v1}, Lcom/android/settingslib/search/SettingsTree;->getColumnValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -803,7 +805,7 @@
 
     const-string p0, "com.google.android.gms"
 
-    .line 486
+    .line 490
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -812,13 +814,13 @@
 
     const/4 v0, 0x0
 
-    .line 488
+    .line 492
     :try_start_0
     invoke-virtual {p1, p0, v0}, Landroid/content/Context;->createPackageContext(Ljava/lang/String;I)Landroid/content/Context;
 
     move-result-object p1
 
-    .line 489
+    .line 493
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -827,14 +829,14 @@
 
     const-string v0, "LEMON_transformed_from_string"
 
-    .line 491
+    .line 495
     invoke-virtual {p1, p2, v0, p0}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    .line 493
+    .line 497
     invoke-virtual {p1, p0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -846,7 +848,7 @@
     :catch_0
     move-exception p0
 
-    .line 497
+    .line 501
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_0
@@ -858,14 +860,14 @@
 .method private isAboutSercurityPravacy(Ljava/lang/String;)Z
     .locals 0
 
-    .line 363
+    .line 364
     sget-object p0, Lcom/android/settings/search/tree/MiuiSettingsTree;->sTileMapCache:Ljava/util/HashMap;
 
     invoke-virtual {p0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
     move-result-object p0
 
-    .line 364
+    .line 365
     invoke-interface {p0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result p0
@@ -876,7 +878,7 @@
 .method public static isSupportAod(Landroid/content/Context;)Z
     .locals 4
 
-    .line 298
+    .line 299
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -893,7 +895,7 @@
 
     if-lez v0, :cond_0
 
-    .line 300
+    .line 301
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -913,7 +915,7 @@
 .method private isVpnInvisibleOnHomePage()Z
     .locals 5
 
-    .line 313
+    .line 314
     new-instance v0, Lcom/android/settings/vpn2/VpnManager;
 
     iget-object v1, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
@@ -924,7 +926,7 @@
 
     move-result v0
 
-    .line 315
+    .line 316
     iget-object v1, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
     const-string v2, "disallow_vpn"
@@ -939,7 +941,7 @@
 
     if-nez v1, :cond_1
 
-    .line 317
+    .line 318
     invoke-static {}, Lmiui/enterprise/RestrictionsHelperStub;->getInstance()Lmiui/enterprise/IRestrictionsHelper;
 
     move-result-object v1
@@ -966,7 +968,7 @@
 
     if-nez v1, :cond_2
 
-    .line 319
+    .line 320
     iget-object p0, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
     invoke-static {p0}, Lcom/android/settings/utils/SettingsFeatures;->isSplitTablet(Landroid/content/Context;)Z
@@ -985,7 +987,7 @@
 .method private isWifiTetherInvisibleOnHomePage()Z
     .locals 2
 
-    .line 306
+    .line 307
     iget-object v0, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
     const-string/jumbo v1, "tethering"
@@ -996,7 +998,7 @@
 
     check-cast v0, Landroid/net/TetheringManager;
 
-    .line 307
+    .line 308
     iget-object p0, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
     invoke-static {p0}, Lcom/android/settings/utils/SettingsFeatures;->getWifiTetherPlacement(Landroid/content/Context;)I
@@ -1007,7 +1009,7 @@
 
     if-ne p0, v1, :cond_1
 
-    .line 308
+    .line 309
     invoke-virtual {v0}, Landroid/net/TetheringManager;->getTetherableWifiRegexs()[Ljava/lang/String;
 
     move-result-object p0
@@ -1016,7 +1018,7 @@
 
     if-eqz p0, :cond_1
 
-    .line 309
+    .line 310
     invoke-static {}, Lcom/android/settings/Utils;->isMonkeyRunning()Z
 
     move-result p0
@@ -1036,7 +1038,7 @@
 .method private synthetic lambda$getSons$0(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 517
+    .line 521
     invoke-direct {p0, p1, p2}, Lcom/android/settings/search/tree/MiuiSettingsTree;->addPrivacySubTtems(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -1055,7 +1057,7 @@
         }
     .end annotation
 
-    .line 644
+    .line 648
     invoke-direct {p0, p1}, Lcom/android/settings/search/tree/MiuiSettingsTree;->getSpecialFeatureIndex(Ljava/util/LinkedList;)I
 
     move-result p1
@@ -1064,7 +1066,7 @@
 
     add-int/lit8 p1, p1, -0x1
 
-    .line 647
+    .line 651
     invoke-virtual {p0, p1, p2}, Lcom/android/settingslib/search/SettingsTree;->addSon(ILcom/android/settingslib/search/IndexTree;)V
 
     goto :goto_0
@@ -1074,12 +1076,12 @@
 
     const/4 p1, 0x0
 
-    .line 649
+    .line 653
     invoke-virtual {p0, p1, p2}, Lcom/android/settingslib/search/SettingsTree;->addSon(ILcom/android/settingslib/search/IndexTree;)V
 
     goto :goto_0
 
-    .line 651
+    .line 655
     :cond_1
     invoke-virtual {p0, p2}, Lcom/android/settingslib/search/SettingsTree;->addSon(Lcom/android/settingslib/search/IndexTree;)V
 
@@ -1094,19 +1096,19 @@
 
     const-string/jumbo v0, "resource"
 
-    .line 438
+    .line 439
     invoke-virtual {p0, v0}, Lcom/android/settingslib/search/SettingsTree;->getColumnValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 439
+    .line 440
     sget-boolean v2, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-nez v2, :cond_0
 
     const-string/jumbo v2, "unlogin_account_title"
 
-    .line 440
+    .line 441
     invoke-virtual {p0, v0}, Lcom/android/settingslib/search/SettingsTree;->getColumnValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -1124,7 +1126,7 @@
     :cond_0
     const-string/jumbo v0, "privacy_and_security"
 
-    .line 443
+    .line 444
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -1146,14 +1148,14 @@
     :cond_1
     const-string/jumbo v0, "privacy_dashboard_title"
 
-    .line 446
+    .line 447
     invoke-static {v1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 447
+    .line 448
     iget-object p0, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
     invoke-static {p0}, Lcom/android/settings/MiuiUtils;->isInternationalM2M3AndIsSafetyCenterEnabled(Landroid/content/Context;)Z
@@ -1169,7 +1171,7 @@
 
     return-object p0
 
-    .line 453
+    .line 454
     :cond_3
     invoke-super {p0}, Lcom/android/settingslib/search/SettingsTree;->getIcon()Ljava/lang/String;
 
@@ -1187,21 +1189,21 @@
 
     const-string/jumbo v0, "resource"
 
-    .line 369
+    .line 370
     invoke-virtual {p0, v0}, Lcom/android/settingslib/search/SettingsTree;->getColumnValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "home_title"
 
-    .line 370
+    .line 371
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 371
+    .line 372
     invoke-static {}, Lcom/android/settings/MiuiUtils;->buildLauncherSettingsIntent()Landroid/content/Intent;
 
     move-result-object p0
@@ -1211,19 +1213,19 @@
     :cond_0
     const-string/jumbo v1, "usage_state_app_timer"
 
-    .line 372
+    .line 373
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 373
+    .line 374
     invoke-static {}, Lcom/android/settings/usagestats/utils/CommonUtils;->getIntentTimerIntent()Landroid/content/Intent;
 
     move-result-object v1
 
-    .line 374
+    .line 375
     iget-object v2, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
     invoke-static {v2, v1}, Lcom/android/settings/usagestats/utils/CommonUtils;->hasIndependentTimer(Landroid/content/Context;Landroid/content/Intent;)Z
@@ -1237,7 +1239,7 @@
     :cond_1
     const-string/jumbo v1, "wallpaper_settings_title"
 
-    .line 377
+    .line 378
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -1248,12 +1250,12 @@
 
     if-eqz v1, :cond_2
 
-    .line 378
+    .line 379
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 379
+    .line 380
     new-instance v2, Landroid/content/ComponentName;
 
     const-string v3, "com.android.thememanager"
@@ -1264,7 +1266,7 @@
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 380
+    .line 381
     invoke-static {}, Lcom/android/settings/MiuiUtils;->getInstance()Lcom/android/settings/MiuiUtils;
 
     move-result-object v2
@@ -1282,19 +1284,19 @@
     :cond_2
     const-string/jumbo v1, "personalize_title"
 
-    .line 383
+    .line 384
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 384
+    .line 385
     invoke-static {}, Lcom/android/settings/utils/HomeListUtils;->generatePersonalizeIntent()Landroid/content/Intent;
 
     move-result-object v1
 
-    .line 385
+    .line 386
     invoke-static {}, Lcom/android/settings/MiuiUtils;->getInstance()Lcom/android/settings/MiuiUtils;
 
     move-result-object v2
@@ -1312,14 +1314,14 @@
     :cond_3
     const-string/jumbo v1, "safe_install_mode_settings"
 
-    .line 388
+    .line 389
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
-    .line 389
+    .line 390
     new-instance p0, Landroid/content/Intent;
 
     invoke-direct {p0}, Landroid/content/Intent;-><init>()V
@@ -1328,26 +1330,26 @@
 
     const-string v1, "com.miui.packageInstaller.ui.secure.SecureModeActivity"
 
-    .line 390
+    .line 391
     invoke-virtual {p0, v0, v1}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string/jumbo v0, "safe_mode_ref"
 
     const-string/jumbo v1, "setting_entry"
 
-    .line 391
+    .line 392
     invoke-virtual {p0, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string/jumbo v0, "safe_mode_type"
 
     const-string/jumbo v1, "setting"
 
-    .line 392
+    .line 393
     invoke-virtual {p0, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     return-object p0
 
-    .line 395
+    .line 396
     :cond_4
     invoke-direct {p0, v0}, Lcom/android/settings/search/tree/MiuiSettingsTree;->isAboutSercurityPravacy(Ljava/lang/String;)Z
 
@@ -1375,25 +1377,25 @@
 
     if-eqz v1, :cond_5
 
-    .line 396
+    .line 397
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0, v7}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 397
+    .line 398
     invoke-virtual {v0, v6}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v1, "android.intent.category.DEFAULT"
 
-    .line 398
+    .line 399
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v1, "com.android.settings.privacy.PrivacyDashboardFragment"
 
-    .line 399
+    .line 400
     invoke-virtual {v0, v5, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 400
+    .line 401
     iget-object p0, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
     invoke-static {p0}, Lcom/android/settings/MiuiUtils;->getMorePrivacyStr(Landroid/content/Context;)Ljava/lang/String;
@@ -1402,7 +1404,7 @@
 
     invoke-virtual {v0, v4, p0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 401
+    .line 402
     invoke-virtual {v0, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     return-object v0
@@ -1410,7 +1412,7 @@
     :cond_5
     const-string/jumbo v1, "special_access"
 
-    .line 404
+    .line 405
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v8
@@ -1425,7 +1427,7 @@
 
     if-eqz v8, :cond_6
 
-    .line 405
+    .line 406
     new-instance v0, Landroid/content/Intent;
 
     iget-object v2, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
@@ -1434,7 +1436,7 @@
 
     invoke-direct {v0, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 406
+    .line 407
     const-class v2, Lcom/android/settings/safetycenter/MoreSecurityPrivacyFragment;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
@@ -1443,7 +1445,7 @@
 
     invoke-virtual {v0, v5, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 407
+    .line 408
     iget-object p0, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
     sget v2, Lcom/android/settings/R$string;->more_security_privacy_settings:I
@@ -1456,12 +1458,12 @@
 
     const-string p0, ":settings:fragment_args_key"
 
-    .line 408
+    .line 409
     invoke-virtual {v0, p0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     return-object v0
 
-    .line 411
+    .line 412
     :cond_6
     iget-object v1, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
@@ -1479,12 +1481,12 @@
 
     if-eqz v1, :cond_7
 
-    .line 412
+    .line 413
     invoke-super {p0}, Lcom/android/settingslib/search/SettingsTree;->getIntent()Landroid/content/Intent;
 
     move-result-object p0
 
-    .line 413
+    .line 414
     invoke-virtual {p0, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     return-object p0
@@ -1492,19 +1494,19 @@
     :cond_7
     const-string/jumbo v1, "privacy_and_security"
 
-    .line 416
+    .line 417
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_8
 
-    .line 417
+    .line 418
     new-instance p0, Landroid/content/Intent;
 
     invoke-direct {p0, v7}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 418
+    .line 419
     invoke-virtual {p0, v6}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     return-object p0
@@ -1512,14 +1514,14 @@
     :cond_8
     const-string v1, "bug_report_settings"
 
-    .line 421
+    .line 422
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_9
 
-    .line 422
+    .line 423
     iget-object v1, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
     invoke-static {v1}, Lcom/android/settings/utils/SettingsFeatures;->getFeedbackIntent(Landroid/content/Context;)Landroid/content/Intent;
@@ -1533,7 +1535,7 @@
     :cond_9
     const-string v1, "applications_settings_title"
 
-    .line 427
+    .line 428
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -1548,7 +1550,7 @@
 
     if-eqz v0, :cond_a
 
-    .line 428
+    .line 429
     iget-object v0, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/settings/MiuiUtils;->getAppManagerMainIntent(Landroid/content/Context;)Landroid/content/Intent;
@@ -1559,7 +1561,7 @@
 
     return-object v0
 
-    .line 433
+    .line 434
     :cond_a
     invoke-super {p0}, Lcom/android/settingslib/search/SettingsTree;->getIntent()Landroid/content/Intent;
 
@@ -1571,7 +1573,7 @@
 .method protected getPath(ZZ)Ljava/lang/String;
     .locals 3
 
-    .line 325
+    .line 326
     invoke-virtual {p0}, Lcom/android/settingslib/search/SettingsTree;->getParent()Lcom/android/settingslib/search/SettingsTree;
 
     move-result-object v0
@@ -1582,7 +1584,7 @@
 
     return-object p0
 
-    .line 328
+    .line 329
     :cond_0
     invoke-super {p0, p1, p2}, Lcom/android/settingslib/search/SettingsTree;->getPath(ZZ)Ljava/lang/String;
 
@@ -1590,14 +1592,14 @@
 
     const-string/jumbo p2, "resource"
 
-    .line 329
+    .line 330
     invoke-virtual {p0, p2}, Lcom/android/settingslib/search/SettingsTree;->getColumnValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
     const-string/jumbo v0, "privacy_dashboard_title"
 
-    .line 335
+    .line 336
     invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -1616,7 +1618,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 336
+    .line 337
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1644,14 +1646,14 @@
     :cond_1
     const-string/jumbo v0, "privacy_and_security"
 
-    .line 338
+    .line 339
     invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 339
+    .line 340
     invoke-virtual {p0, v2}, Lcom/android/settings/search/tree/MiuiSettingsTree;->getTitle(Z)Ljava/lang/String;
 
     move-result-object p0
@@ -1661,14 +1663,14 @@
     :cond_2
     const-string/jumbo v0, "more_security_privacy"
 
-    .line 341
+    .line 342
     invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 342
+    .line 343
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1696,7 +1698,7 @@
     :cond_3
     const-string/jumbo v0, "special_access"
 
-    .line 344
+    .line 345
     invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -1711,7 +1713,7 @@
 
     if-eqz p2, :cond_4
 
-    .line 345
+    .line 346
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1759,7 +1761,7 @@
 
     const-string v1, "com.android.settings.category"
 
-    .line 505
+    .line 509
     invoke-virtual/range {p0 .. p0}, Lcom/android/settingslib/search/SettingsTree;->getParent()Lcom/android/settingslib/search/SettingsTree;
 
     move-result-object v2
@@ -1772,12 +1774,12 @@
 
     if-nez v2, :cond_c
 
-    .line 506
+    .line 510
     invoke-super/range {p0 .. p0}, Lcom/android/settingslib/search/SettingsTree;->getSons()Ljava/util/LinkedList;
 
     move-result-object v2
 
-    .line 507
+    .line 511
     invoke-virtual {v2}, Ljava/util/LinkedList;->size()I
 
     move-result v6
@@ -1787,14 +1789,14 @@
     :goto_0
     if-ltz v6, :cond_1
 
-    .line 508
+    .line 512
     invoke-virtual {v2, v6}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
 
     move-result-object v7
 
     check-cast v7, Lcom/android/settingslib/search/SettingsTree;
 
-    .line 509
+    .line 513
     invoke-virtual {v7, v3}, Lcom/android/settingslib/search/SettingsTree;->getColumnValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
@@ -1805,7 +1807,7 @@
 
     if-eqz v8, :cond_0
 
-    .line 510
+    .line 514
     invoke-virtual {v7}, Lcom/android/settingslib/search/SettingsTree;->removeSelf()V
 
     :cond_0
@@ -1816,7 +1818,7 @@
     :cond_1
     const-string/jumbo v6, "settings_label"
 
-    .line 513
+    .line 517
     invoke-virtual {v0, v4}, Lcom/android/settingslib/search/SettingsTree;->getColumnValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
@@ -1837,13 +1839,13 @@
 
     const-string/jumbo v6, "privacy_and_security"
 
-    .line 514
+    .line 518
     invoke-direct {v0, v6, v6}, Lcom/android/settings/search/tree/MiuiSettingsTree;->addPrivacySubTtems(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 515
+    .line 519
     invoke-direct/range {p0 .. p0}, Lcom/android/settings/search/tree/MiuiSettingsTree;->addMoreSecurityPrivacySon()V
 
-    .line 517
+    .line 521
     sget-object v6, Lcom/android/settings/search/tree/MiuiSettingsTree;->PRAVACY_PROTECT_MAP:Ljava/util/Map;
 
     new-instance v7, Lcom/android/settings/search/tree/MiuiSettingsTree$$ExternalSyntheticLambda0;
@@ -1852,13 +1854,13 @@
 
     invoke-interface {v6, v7}, Ljava/util/Map;->forEach(Ljava/util/function/BiConsumer;)V
 
-    .line 519
+    .line 523
     :cond_2
     sget-boolean v6, Lmiui/os/Build;->IS_GLOBAL_BUILD:Z
 
     if-eqz v6, :cond_b
 
-    .line 521
+    .line 525
     invoke-virtual {v2}, Ljava/util/LinkedList;->size()I
 
     move-result v6
@@ -1868,7 +1870,7 @@
     :goto_1
     if-ltz v6, :cond_4
 
-    .line 522
+    .line 526
     invoke-virtual {v2, v6}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
 
     move-result-object v7
@@ -1877,7 +1879,7 @@
 
     const-string/jumbo v8, "other_advanced_settings"
 
-    .line 523
+    .line 527
     invoke-virtual {v7, v4}, Lcom/android/settingslib/search/SettingsTree;->getColumnValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
@@ -1898,7 +1900,7 @@
     :cond_4
     const/4 v6, 0x0
 
-    .line 528
+    .line 532
     :goto_2
     iget-object v7, v0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
@@ -1906,32 +1908,32 @@
 
     move-result-object v7
 
-    .line 529
+    .line 533
     iget-object v8, v0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
     invoke-virtual {v8}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v8
 
-    .line 530
+    .line 534
     new-instance v9, Landroid/content/Intent;
 
     const-string v10, "com.android.settings.action.EXTRA_SETTINGS"
 
     invoke-direct {v9, v10}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 531
+    .line 535
     new-instance v10, Lorg/json/JSONObject;
 
     invoke-direct {v10}, Lorg/json/JSONObject;-><init>()V
 
-    .line 533
+    .line 537
     :try_start_0
     invoke-virtual {v10, v3, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
     const-string v11, "class"
 
-    .line 534
+    .line 538
     const-class v12, Lcom/android/settings/search/tree/GoogleSettingsTree;
 
     invoke-virtual {v12}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -1940,7 +1942,7 @@
 
     invoke-virtual {v10, v11, v12}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 535
+    .line 539
     invoke-virtual {v7}, Landroid/os/UserManager;->getUserProfiles()Ljava/util/List;
 
     move-result-object v7
@@ -1963,7 +1965,7 @@
 
     check-cast v11, Landroid/os/UserHandle;
 
-    .line 537
+    .line 541
     invoke-virtual {v11}, Landroid/os/UserHandle;->getIdentifier()I
 
     move-result v12
@@ -1974,7 +1976,7 @@
 
     goto :goto_3
 
-    .line 542
+    .line 546
     :cond_6
     invoke-virtual {v11}, Landroid/os/UserHandle;->getIdentifier()I
 
@@ -1982,12 +1984,12 @@
 
     const/16 v12, 0x80
 
-    .line 541
+    .line 545
     invoke-virtual {v8, v9, v12, v11}, Landroid/content/pm/PackageManager;->queryIntentActivitiesAsUser(Landroid/content/Intent;II)Ljava/util/List;
 
     move-result-object v11
 
-    .line 543
+    .line 547
     invoke-interface {v11}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v11
@@ -2005,23 +2007,23 @@
 
     check-cast v12, Landroid/content/pm/ResolveInfo;
 
-    .line 544
+    .line 548
     iget-boolean v13, v12, Landroid/content/pm/ResolveInfo;->system:Z
 
     if-nez v13, :cond_7
 
     goto :goto_5
 
-    .line 550
+    .line 554
     :cond_7
     iget-object v13, v12, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    .line 551
+    .line 555
     iget-object v14, v13, Landroid/content/pm/ActivityInfo;->metaData:Landroid/os/Bundle;
 
     if-eqz v14, :cond_a
 
-    .line 552
+    .line 556
     invoke-virtual {v14, v1}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
     move-result v15
@@ -2030,13 +2032,13 @@
 
     goto :goto_5
 
-    .line 555
+    .line 559
     :cond_8
     invoke-virtual {v14, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v14
 
-    .line 556
+    .line 560
     sget-object v15, Lcom/android/settings/search/tree/MiuiSettingsTree;->CATEGORY_MAP:Ljava/util/Map;
 
     invoke-interface {v15, v14}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2050,7 +2052,7 @@
     :cond_9
     const-string/jumbo v5, "title"
 
-    .line 560
+    .line 564
     invoke-virtual {v12, v8}, Landroid/content/pm/ResolveInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
 
     move-result-object v12
@@ -2063,7 +2065,7 @@
 
     const-string v5, "icon"
 
-    .line 561
+    .line 565
     invoke-interface {v15, v14}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v12
@@ -2074,26 +2076,26 @@
 
     const-string/jumbo v12, "system_and_device_section_title"
 
-    .line 562
+    .line 566
     invoke-virtual {v10, v5, v12}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string/jumbo v5, "package"
 
-    .line 563
+    .line 567
     iget-object v12, v13, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {v10, v5, v12}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string v5, "activityName"
 
-    .line 564
+    .line 568
     iget-object v12, v13, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
 
     invoke-virtual {v10, v5, v12}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     add-int/lit8 v5, v6, 0x1
 
-    .line 565
+    .line 569
     iget-object v12, v0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
     invoke-static {v12, v10, v0}, Lcom/android/settingslib/search/SettingsTree;->newInstance(Landroid/content/Context;Lorg/json/JSONObject;Lcom/android/settingslib/search/SettingsTree;)Lcom/android/settingslib/search/SettingsTree;
@@ -2112,18 +2114,18 @@
 
     goto :goto_4
 
-    .line 571
+    .line 575
     :catch_0
     :cond_b
     invoke-direct {v0, v2}, Lcom/android/settings/search/tree/MiuiSettingsTree;->ensureAddWellbeingSon(Ljava/util/LinkedList;)V
 
-    .line 572
+    .line 576
     invoke-direct/range {p0 .. p0}, Lcom/android/settings/search/tree/MiuiSettingsTree;->ensureAddAlexaSearch()V
 
     :cond_c
     const-string/jumbo v1, "privacy_dashboard_title"
 
-    .line 574
+    .line 578
     invoke-virtual {v0, v4}, Lcom/android/settingslib/search/SettingsTree;->getColumnValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -2134,14 +2136,14 @@
 
     if-eqz v1, :cond_f
 
-    .line 575
+    .line 579
     invoke-super/range {p0 .. p0}, Lcom/android/settingslib/search/SettingsTree;->getSons()Ljava/util/LinkedList;
 
     move-result-object v1
 
     if-eqz v1, :cond_e
 
-    .line 577
+    .line 581
     invoke-virtual {v1}, Ljava/util/LinkedList;->size()I
 
     move-result v2
@@ -2153,14 +2155,14 @@
     :goto_6
     if-ltz v2, :cond_e
 
-    .line 578
+    .line 582
     invoke-virtual {v1, v2}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Lcom/android/settingslib/search/SettingsTree;
 
-    .line 579
+    .line 583
     invoke-virtual {v4, v3}, Lcom/android/settingslib/search/SettingsTree;->getColumnValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
@@ -2171,7 +2173,7 @@
 
     if-eqz v5, :cond_d
 
-    .line 580
+    .line 584
     invoke-virtual {v4}, Lcom/android/settingslib/search/SettingsTree;->removeSelf()V
 
     :cond_d
@@ -2179,11 +2181,11 @@
 
     goto :goto_6
 
-    .line 584
+    .line 588
     :cond_e
     invoke-direct/range {p0 .. p0}, Lcom/android/settings/search/tree/MiuiSettingsTree;->addPrivacyDashboardSubItems()V
 
-    .line 587
+    .line 591
     :cond_f
     invoke-super/range {p0 .. p0}, Lcom/android/settingslib/search/SettingsTree;->getSons()Ljava/util/LinkedList;
 
@@ -2197,14 +2199,14 @@
 
     const-string/jumbo v0, "resource"
 
-    .line 229
+    .line 230
     invoke-virtual {p0, v0}, Lcom/android/settingslib/search/SettingsTree;->getColumnValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "ai_button_title"
 
-    .line 230
+    .line 231
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2213,7 +2215,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 231
+    .line 232
     iget-object v1, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
     invoke-static {v1}, Lcom/android/settings/MiuiUtils;->isAiKeyExist(Landroid/content/Context;)Z
@@ -2236,7 +2238,7 @@
     :cond_1
     const-string v1, "emergency_sos_title"
 
-    .line 236
+    .line 237
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2256,7 +2258,7 @@
     :cond_2
     const-string/jumbo v1, "wifi_tether_settings_title"
 
-    .line 240
+    .line 241
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2274,7 +2276,7 @@
     :cond_3
     const-string/jumbo v1, "vpn_settings_title"
 
-    .line 244
+    .line 245
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2292,7 +2294,7 @@
     :cond_4
     const-string v1, "home_title"
 
-    .line 248
+    .line 249
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2312,7 +2314,7 @@
     :cond_5
     const-string v1, "default_launcher_title"
 
-    .line 252
+    .line 253
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2333,7 +2335,7 @@
 
     const-string v4, "com.miui.home"
 
-    .line 253
+    .line 254
     invoke-static {v4, v1, v3}, Lcom/android/settings/MiuiUtils;->isPackagesSupportMetaDataFeature(Ljava/lang/String;Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v1
@@ -2346,7 +2348,7 @@
     :cond_7
     const-string/jumbo v1, "xiaomi_account"
 
-    .line 258
+    .line 259
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2372,7 +2374,7 @@
     :cond_8
     const-string/jumbo v1, "tether_use_wifi6_title"
 
-    .line 260
+    .line 261
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2381,7 +2383,7 @@
 
     iget-object v1, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
-    .line 261
+    .line 262
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -2399,7 +2401,7 @@
     :cond_9
     const-string/jumbo v1, "xspace"
 
-    .line 265
+    .line 266
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2417,7 +2419,7 @@
     :cond_a
     const-string v1, "bug_report_settings"
 
-    .line 269
+    .line 270
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2437,7 +2439,7 @@
     :cond_b
     const-string v1, "application_mode_name"
 
-    .line 273
+    .line 274
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2452,7 +2454,7 @@
 
     iget-object v1, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
-    .line 274
+    .line 275
     invoke-static {v1}, Lcom/android/settings/utils/SettingsFeatures;->isOnPcMode(Landroid/content/Context;)Z
 
     move-result v1
@@ -2465,7 +2467,7 @@
     :cond_d
     const-string/jumbo v1, "safe_install_mode_settings"
 
-    .line 279
+    .line 280
     invoke-static {v1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -2492,7 +2494,7 @@
     :cond_f
     const-string/jumbo v1, "status_bar_settings_manage_notification"
 
-    .line 283
+    .line 284
     invoke-static {v1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -2507,7 +2509,7 @@
 
     if-eqz v1, :cond_11
 
-    .line 284
+    .line 285
     :cond_10
     iget-object v1, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
@@ -2524,7 +2526,7 @@
     :cond_11
     const-string v1, "interconnection"
 
-    .line 288
+    .line 289
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2544,7 +2546,7 @@
     :cond_12
     const-string/jumbo v1, "privacy_dashboard_title"
 
-    .line 291
+    .line 292
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -2561,7 +2563,7 @@
 
     return v2
 
-    .line 294
+    .line 295
     :cond_13
     invoke-super {p0}, Lcom/android/settingslib/search/SettingsTree;->getStatus()I
 
@@ -2586,26 +2588,26 @@
 
     const-string/jumbo v0, "resource"
 
-    .line 458
+    .line 459
     invoke-virtual {p0, v0}, Lcom/android/settingslib/search/SettingsTree;->getColumnValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 459
+    .line 460
     sget-boolean v1, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-nez v1, :cond_0
 
     const-string/jumbo v1, "unlogin_account_title"
 
-    .line 460
+    .line 461
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 461
+    .line 462
     iget-object p0, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -2620,7 +2622,7 @@
 
     return-object p0
 
-    .line 463
+    .line 464
     :cond_0
     invoke-static {}, Lcom/android/settings/applicationmode/RemoteUtils;->isMiPadDevice()Z
 
@@ -2636,7 +2638,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 464
+    .line 465
     iget-object p0, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -2651,7 +2653,7 @@
 
     return-object p0
 
-    .line 466
+    .line 467
     :cond_1
     sget-object v1, Lcom/android/settings/search/tree/MiuiSettingsTree;->sTileMapCache:Ljava/util/HashMap;
 
@@ -2663,7 +2665,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 467
+    .line 468
     sget-object v1, Lcom/android/settings/search/tree/MiuiSettingsTree;->sTileMapCache:Ljava/util/HashMap;
 
     invoke-virtual {v1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2679,14 +2681,14 @@
     :cond_2
     const-string/jumbo v1, "privacy_and_security"
 
-    .line 472
+    .line 473
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 473
+    .line 474
     iget-object p0, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
     invoke-static {p0}, Lcom/android/settings/MiuiUtils;->getSecurityPrivacyTitle(Landroid/content/Context;)Ljava/lang/String;
@@ -2698,7 +2700,7 @@
     :cond_3
     const-string/jumbo v1, "privacy_dashboard_title"
 
-    .line 475
+    .line 476
     invoke-static {v0, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -2713,7 +2715,7 @@
 
     if-eqz v1, :cond_4
 
-    .line 476
+    .line 477
     iget-object p0, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
     invoke-static {p0}, Lcom/android/settings/MiuiUtils;->getMorePrivacyStr(Landroid/content/Context;)Ljava/lang/String;
@@ -2725,14 +2727,14 @@
     :cond_4
     const-string/jumbo v1, "special_access"
 
-    .line 478
+    .line 479
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_5
+    if-eqz v1, :cond_5
 
-    .line 479
+    .line 480
     iget-object p0, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
     invoke-static {p0}, Lcom/android/settings/MiuiUtils;->getSpecialStr(Landroid/content/Context;)Ljava/lang/String;
@@ -2741,8 +2743,33 @@
 
     return-object p0
 
-    .line 481
     :cond_5
+    const-string/jumbo v1, "wallpaper_settings_title"
+
+    .line 482
+    invoke-static {v0, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    .line 483
+    iget-object p0, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    sget p1, Lcom/android/settings/R$string;->personalize_title:I
+
+    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    .line 485
+    :cond_6
     invoke-super {p0, p1}, Lcom/android/settingslib/search/SettingsTree;->getTitle(Z)Ljava/lang/String;
 
     move-result-object p0
@@ -2755,14 +2782,14 @@
 
     const-string/jumbo v0, "resource"
 
-    .line 131
+    .line 132
     invoke-virtual {p0, v0}, Lcom/android/settingslib/search/SettingsTree;->getColumnValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     const-string v2, "home_title"
 
-    .line 132
+    .line 133
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -2777,16 +2804,16 @@
 
     if-eqz v2, :cond_0
 
-    .line 133
+    .line 134
     new-instance v2, Lorg/json/JSONObject;
 
     invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
 
-    .line 135
+    .line 136
     :try_start_0
     invoke-virtual {v2, v0, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 136
+    .line 137
     iget-object v0, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
     invoke-static {v0, v2, p0}, Lcom/android/settingslib/search/SettingsTree;->newInstance(Landroid/content/Context;Lorg/json/JSONObject;Lcom/android/settingslib/search/SettingsTree;)Lcom/android/settingslib/search/SettingsTree;
@@ -2799,7 +2826,7 @@
 
     goto/16 :goto_1
 
-    .line 139
+    .line 140
     :cond_0
     invoke-virtual {v5, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2807,12 +2834,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 140
+    .line 141
     sget-boolean v2, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-nez v2, :cond_1a
 
-    .line 141
+    .line 142
     new-instance v2, Lorg/json/JSONObject;
 
     invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
@@ -2820,10 +2847,10 @@
     :try_start_1
     const-string/jumbo v5, "oldman_mode_entry_name"
 
-    .line 143
+    .line 144
     invoke-virtual {v2, v0, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 144
+    .line 145
     iget-object v0, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
     invoke-static {v0, v2, p0}, Lcom/android/settingslib/search/SettingsTree;->newInstance(Landroid/content/Context;Lorg/json/JSONObject;Lcom/android/settingslib/search/SettingsTree;)Lcom/android/settingslib/search/SettingsTree;
@@ -2839,7 +2866,7 @@
     :cond_1
     const-string/jumbo v0, "mi_service"
 
-    .line 148
+    .line 149
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -2860,7 +2887,7 @@
     :cond_3
     const-string/jumbo v0, "theme_settings_title"
 
-    .line 151
+    .line 152
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -2876,7 +2903,7 @@
     :cond_4
     const-string/jumbo v2, "xiaomi_account"
 
-    .line 153
+    .line 154
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -2892,7 +2919,7 @@
     :cond_5
     const-string/jumbo v2, "unlogin_account_title"
 
-    .line 155
+    .line 156
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -2908,7 +2935,7 @@
     :cond_6
     const-string/jumbo v2, "usage_state_app_timer"
 
-    .line 157
+    .line 158
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -2928,7 +2955,7 @@
     :cond_7
     const-string v2, "block_list_title"
 
-    .line 159
+    .line 160
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -2945,7 +2972,7 @@
 
     const-string/jumbo v2, "show_connected_devices_title"
 
-    .line 160
+    .line 161
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -2957,7 +2984,7 @@
     :cond_8
     const-string/jumbo v2, "power_usage_summary_title"
 
-    .line 164
+    .line 165
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -2973,7 +3000,7 @@
     :cond_9
     const-string/jumbo v2, "power_usage_summary_title_new"
 
-    .line 166
+    .line 167
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -2989,14 +3016,14 @@
     :cond_a
     const-string v2, "location_settings_title"
 
-    .line 168
+    .line 169
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_b
 
-    .line 169
+    .line 170
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-nez v0, :cond_1a
@@ -3006,21 +3033,21 @@
     :cond_b
     const-string/jumbo v2, "privacy_dashboard_title"
 
-    .line 172
+    .line 173
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_c
 
-    .line 173
+    .line 174
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-nez v0, :cond_1a
 
     return v6
 
-    .line 176
+    .line 177
     :cond_c
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3037,7 +3064,7 @@
     :cond_d
     const-string/jumbo v0, "wallpaper_settings_title"
 
-    .line 178
+    .line 179
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -3053,7 +3080,7 @@
     :cond_e
     const-string/jumbo v0, "personalize_title"
 
-    .line 180
+    .line 181
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -3069,7 +3096,7 @@
     :cond_f
     const-string v0, "already_delete_system_app"
 
-    .line 182
+    .line 183
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -3089,7 +3116,7 @@
     :cond_10
     const-string v0, "application_mode_name"
 
-    .line 184
+    .line 185
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -3107,7 +3134,7 @@
     :cond_11
     const-string v0, "control_center_style"
 
-    .line 186
+    .line 187
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -3118,7 +3145,7 @@
 
     const-string/jumbo v2, "search_control_center_style"
 
-    .line 187
+    .line 188
     invoke-virtual {p0, v0, v2}, Lcom/android/settingslib/search/SettingsTree;->setColumnValue(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
@@ -3126,7 +3153,7 @@
     :cond_12
     const-string/jumbo v0, "security_center_title"
 
-    .line 188
+    .line 189
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -3146,14 +3173,14 @@
     :cond_13
     const-string v0, "launcher_icon_management"
 
-    .line 190
+    .line 191
     invoke-static {v0, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_16
 
-    .line 191
+    .line 192
     sget-object v0, Lmiui/os/Build;->DEVICE:Ljava/lang/String;
 
     const-string v2, "cetus"
@@ -3166,7 +3193,7 @@
 
     return v6
 
-    .line 194
+    .line 195
     :cond_14
     iget-object v0, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
@@ -3178,7 +3205,7 @@
 
     return v6
 
-    .line 197
+    .line 198
     :cond_15
     iget-object v0, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
@@ -3193,21 +3220,21 @@
     :cond_16
     const-string/jumbo v0, "safe_install_mode_settings"
 
-    .line 200
+    .line 201
     invoke-static {v0, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_18
 
-    .line 201
+    .line 202
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-eqz v0, :cond_17
 
     return v6
 
-    .line 204
+    .line 205
     :cond_17
     iget-object v0, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
@@ -3222,7 +3249,7 @@
     :cond_18
     const-string/jumbo v0, "permission_manager"
 
-    .line 207
+    .line 208
     invoke-static {v0, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -3239,7 +3266,7 @@
 
     return v6
 
-    .line 161
+    .line 162
     :cond_19
     :goto_0
     invoke-static {v3}, Lmiui/util/FeatureParser;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -3259,21 +3286,21 @@
     :goto_1
     const-string v0, "category_origin"
 
-    .line 211
+    .line 212
     invoke-virtual {p0, v0}, Lcom/android/settingslib/search/SettingsTree;->getColumnValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v2, "block_list_connected_devices"
 
-    .line 212
+    .line 213
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1b
 
-    .line 213
+    .line 214
     invoke-static {v3}, Lmiui/util/FeatureParser;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -3289,14 +3316,14 @@
     :cond_1b
     const-string v0, "aod_notification_style"
 
-    .line 218
+    .line 219
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1d
 
-    .line 219
+    .line 220
     iget-object v0, p0, Lcom/android/settingslib/search/SettingsTree;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/settings/search/tree/MiuiSettingsTree;->isSupportAod(Landroid/content/Context;)Z
@@ -3307,7 +3334,7 @@
 
     return v6
 
-    .line 222
+    .line 223
     :cond_1c
     invoke-super {p0}, Lcom/android/settingslib/search/SettingsTree;->initialize()Z
 
@@ -3315,7 +3342,7 @@
 
     return p0
 
-    .line 224
+    .line 225
     :cond_1d
     invoke-super {p0}, Lcom/android/settingslib/search/SettingsTree;->initialize()Z
 

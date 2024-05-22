@@ -95,13 +95,24 @@
     iput-object p1, p0, Lcom/android/settings/deviceinfo/SimEidPreferenceController;->eidTitle$delegate:Lkotlin/Lazy;
 
     .line 44
-    sget-object p1, Lcom/android/settings/deviceinfo/SimEidPreferenceController$exceptionHandler$2;->INSTANCE:Lcom/android/settings/deviceinfo/SimEidPreferenceController$exceptionHandler$2;
+    new-instance p1, Lcom/android/settings/deviceinfo/SimEidPreferenceController$exceptionHandler$2;
+
+    invoke-direct {p1, p0}, Lcom/android/settings/deviceinfo/SimEidPreferenceController$exceptionHandler$2;-><init>(Lcom/android/settings/deviceinfo/SimEidPreferenceController;)V
 
     invoke-static {p1}, Lkotlin/LazyKt;->lazy(Lkotlin/jvm/functions/Function0;)Lkotlin/Lazy;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/settings/deviceinfo/SimEidPreferenceController;->exceptionHandler$delegate:Lkotlin/Lazy;
+
+    return-void
+.end method
+
+.method public static final synthetic access$dismiss(Lcom/android/settings/deviceinfo/SimEidPreferenceController;Lmiuix/appcompat/app/AlertDialog;)V
+    .locals 0
+
+    .line 32
+    invoke-direct {p0, p1}, Lcom/android/settings/deviceinfo/SimEidPreferenceController;->dismiss(Lmiuix/appcompat/app/AlertDialog;)V
 
     return-void
 .end method
@@ -122,17 +133,6 @@
 
     .line 32
     iget-object p0, p0, Lcom/android/settings/deviceinfo/SimEidPreferenceController;->eid:Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method public static final synthetic access$getEidQrCodeImage(Lcom/android/settings/deviceinfo/SimEidPreferenceController;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 0
-
-    .line 32
-    invoke-direct {p0, p1, p2}, Lcom/android/settings/deviceinfo/SimEidPreferenceController;->getEidQrCodeImage(Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
 
     return-object p0
 .end method
@@ -195,6 +195,34 @@
     return-void
 .end method
 
+.method public static final synthetic access$show(Lcom/android/settings/deviceinfo/SimEidPreferenceController;Lmiuix/appcompat/app/AlertDialog;)V
+    .locals 0
+
+    .line 32
+    invoke-direct {p0, p1}, Lcom/android/settings/deviceinfo/SimEidPreferenceController;->show(Lmiuix/appcompat/app/AlertDialog;)V
+
+    return-void
+.end method
+
+.method private final dismiss(Lmiuix/appcompat/app/AlertDialog;)V
+    .locals 0
+
+    if-eqz p1, :cond_0
+
+    .line 187
+    invoke-virtual {p1}, Landroid/app/Dialog;->isShowing()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    .line 188
+    invoke-virtual {p1}, Lmiuix/appcompat/app/AlertDialog;->dismiss()V
+
+    :cond_0
+    return-void
+.end method
+
 .method private final getEid(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
@@ -208,7 +236,7 @@
         }
     .end annotation
 
-    .line 116
+    .line 120
     invoke-static {}, Lkotlinx/coroutines/Dispatchers;->getIO()Lkotlinx/coroutines/CoroutineDispatcher;
 
     move-result-object v0
@@ -220,38 +248,6 @@
     invoke-direct {v1, p0, v2}, Lcom/android/settings/deviceinfo/SimEidPreferenceController$getEid$2;-><init>(Lcom/android/settings/deviceinfo/SimEidPreferenceController;Lkotlin/coroutines/Continuation;)V
 
     invoke-static {v0, v1, p1}, Lkotlinx/coroutines/BuildersKt;->withContext(Lkotlin/coroutines/CoroutineContext;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method private final getEidQrCodeImage(Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            "Lkotlin/coroutines/Continuation<",
-            "-",
-            "Landroid/graphics/Bitmap;",
-            ">;)",
-            "Ljava/lang/Object;"
-        }
-    .end annotation
-
-    .line 120
-    invoke-static {}, Lkotlinx/coroutines/Dispatchers;->getIO()Lkotlinx/coroutines/CoroutineDispatcher;
-
-    move-result-object p0
-
-    new-instance v0, Lcom/android/settings/deviceinfo/SimEidPreferenceController$getEidQrCodeImage$2;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p1, v1}, Lcom/android/settings/deviceinfo/SimEidPreferenceController$getEidQrCodeImage$2;-><init>(Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {p0, v0, p2}, Lkotlinx/coroutines/BuildersKt;->withContext(Lkotlin/coroutines/CoroutineContext;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p0
 
@@ -291,7 +287,7 @@
 .method private final getTitle()Ljava/lang/String;
     .locals 5
 
-    .line 103
+    .line 107
     iget-object v0, p0, Lcom/android/settings/deviceinfo/SimEidPreferenceController;->slotSimStatus:Lcom/android/settings/deviceinfo/simstatus/SlotSimStatus;
 
     const/4 v1, 0x0
@@ -314,7 +310,7 @@
 
     if-gt v0, v3, :cond_1
 
-    .line 105
+    .line 109
     iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
 
     sget v0, Lcom/android/settings/R$string;->status_eid:I
@@ -331,7 +327,7 @@
     :goto_1
     if-ge v1, v0, :cond_4
 
-    .line 109
+    .line 113
     iget-object v4, p0, Lcom/android/settings/deviceinfo/SimEidPreferenceController;->slotSimStatus:Lcom/android/settings/deviceinfo/simstatus/SlotSimStatus;
 
     if-eqz v4, :cond_2
@@ -348,14 +344,14 @@
     :goto_2
     if-eqz v4, :cond_3
 
-    .line 110
+    .line 114
     invoke-virtual {v4}, Landroid/telephony/SubscriptionInfo;->isEmbedded()Z
 
     move-result v4
 
     if-eqz v4, :cond_3
 
-    .line 111
+    .line 115
     iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
 
     sget v0, Lcom/android/settings/R$string;->eid_multi_sim:I
@@ -385,7 +381,7 @@
 
     goto :goto_1
 
-    .line 114
+    .line 118
     :cond_4
     iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
 
@@ -400,6 +396,25 @@
     return-object p0
 .end method
 
+.method private final show(Lmiuix/appcompat/app/AlertDialog;)V
+    .locals 0
+
+    if-eqz p1, :cond_0
+
+    .line 194
+    invoke-virtual {p1}, Landroid/app/Dialog;->isShowing()Z
+
+    move-result p0
+
+    if-nez p0, :cond_0
+
+    .line 195
+    invoke-virtual {p1}, Landroid/app/Dialog;->show()V
+
+    :cond_0
+    return-void
+.end method
+
 
 # virtual methods
 .method public displayPreference(Landroidx/preference/PreferenceScreen;)V
@@ -409,10 +424,10 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 96
+    .line 100
     invoke-super {p0, p1}, Lcom/android/settings/core/BasePreferenceController;->displayPreference(Landroidx/preference/PreferenceScreen;)V
 
-    .line 97
+    .line 101
     invoke-virtual {p0}, Lcom/android/settings/core/BasePreferenceController;->getPreferenceKey()Ljava/lang/String;
 
     move-result-object v0
@@ -429,7 +444,7 @@
 
     const-string/jumbo p1, "preference"
 
-    .line 98
+    .line 102
     invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
 
     const/4 p1, 0x0
@@ -453,7 +468,7 @@
 
     const/4 v2, 0x0
 
-    .line 71
+    .line 75
     invoke-static {v1, v2}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v1
@@ -467,13 +482,13 @@
     :cond_0
     const/4 v1, 0x1
 
-    .line 73
+    .line 77
     :try_start_0
     sget-object v3, Lkotlin/Result;->Companion:Lkotlin/Result$Companion;
 
     const-string/jumbo v3, "miui.telephony.TelephonyManagerEx"
 
-    .line 74
+    .line 78
     invoke-static {v3}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v3
@@ -482,7 +497,7 @@
 
     new-array v5, v2, [Ljava/lang/Class;
 
-    .line 75
+    .line 79
     invoke-virtual {v3, v4, v5}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v4
@@ -495,19 +510,19 @@
 
     move-result-object v4
 
-    .line 76
+    .line 80
     invoke-static {}, Lcom/android/settings/RegionUtils;->getRegion()Ljava/lang/String;
 
     move-result-object v5
 
     new-array v6, v1, [Ljava/lang/Class;
 
-    .line 78
+    .line 82
     const-class v7, Ljava/lang/String;
 
     aput-object v7, v6, v2
 
-    .line 80
+    .line 84
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -526,7 +541,7 @@
 
     const-string v7, "isSupportEsimForCountry"
 
-    .line 81
+    .line 85
     invoke-static {v6, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
     move-result-object v6
@@ -537,7 +552,7 @@
 
     move-result-object v3
 
-    .line 82
+    .line 86
     filled-new-array {v5}, [Ljava/lang/Object;
 
     move-result-object v5
@@ -548,7 +563,7 @@
 
     const-string/jumbo v4, "null cannot be cast to non-null type kotlin.Boolean"
 
-    .line 81
+    .line 85
     invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v3, Ljava/lang/Boolean;
@@ -561,7 +576,7 @@
 
     move-result-object v3
 
-    .line 73
+    .line 77
     invoke-static {v3}, Lkotlin/Result;->constructor-impl(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
@@ -583,7 +598,7 @@
 
     move-result-object v3
 
-    .line 83
+    .line 87
     :goto_0
     invoke-static {v3}, Lkotlin/Result;->isSuccess-impl(Ljava/lang/Object;)Z
 
@@ -599,7 +614,7 @@
 
     move-result v4
 
-    .line 85
+    .line 89
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -621,7 +636,7 @@
     :cond_1
     move v4, v2
 
-    .line 86
+    .line 90
     :goto_1
     invoke-static {v3}, Lkotlin/Result;->exceptionOrNull-impl(Ljava/lang/Object;)Ljava/lang/Throwable;
 
@@ -631,10 +646,10 @@
 
     const-string v5, "isSupportESimForCountry: "
 
-    .line 87
+    .line 91
     invoke-static {v0, v5, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 89
+    .line 93
     :cond_2
     iget-object v0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
 
@@ -652,7 +667,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 90
+    .line 94
     iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
 
     invoke-static {p0}, Lcom/android/settingslib/Utils;->isWifiOnly(Landroid/content/Context;)Z
@@ -720,7 +735,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 126
+    .line 133
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object v0
@@ -735,12 +750,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 127
+    .line 134
     iget-object v0, p0, Lcom/android/settings/deviceinfo/SimEidPreferenceController;->appCompatActivity:Landroidx/fragment/app/FragmentActivity;
 
     if-eqz v0, :cond_0
 
-    .line 128
+    .line 135
     invoke-static {v0}, Landroidx/lifecycle/LifecycleOwnerKt;->getLifecycleScope(Landroidx/lifecycle/LifecycleOwner;)Landroidx/lifecycle/LifecycleCoroutineScope;
 
     move-result-object v1
@@ -768,7 +783,7 @@
 
     return p0
 
-    .line 150
+    .line 157
     :cond_1
     invoke-super {p0, p1}, Lcom/android/settings/core/BasePreferenceController;->handlePreferenceTreeClick(Landroidx/preference/Preference;)Z
 
@@ -791,15 +806,15 @@
 .method public final init(Lcom/android/settings/deviceinfo/simstatus/SlotSimStatus;Lcom/android/settings/deviceinfo/simstatus/EidStatus;)V
     .locals 0
 
-    .line 65
+    .line 69
     iput-object p1, p0, Lcom/android/settings/deviceinfo/SimEidPreferenceController;->slotSimStatus:Lcom/android/settings/deviceinfo/simstatus/SlotSimStatus;
 
-    .line 66
+    .line 70
     iput-object p2, p0, Lcom/android/settings/deviceinfo/SimEidPreferenceController;->eidStatus:Lcom/android/settings/deviceinfo/simstatus/EidStatus;
 
     const/4 p1, 0x0
 
-    .line 67
+    .line 71
     iput-object p1, p0, Lcom/android/settings/deviceinfo/SimEidPreferenceController;->appCompatActivity:Landroidx/fragment/app/FragmentActivity;
 
     return-void
@@ -808,22 +823,22 @@
 .method public final init(Lcom/android/settings/deviceinfo/simstatus/SlotSimStatus;Lcom/android/settings/deviceinfo/simstatus/EidStatus;Landroidx/fragment/app/FragmentActivity;)V
     .locals 2
 
-    .line 49
+    .line 53
     iput-object p1, p0, Lcom/android/settings/deviceinfo/SimEidPreferenceController;->slotSimStatus:Lcom/android/settings/deviceinfo/simstatus/SlotSimStatus;
 
-    .line 50
+    .line 54
     iput-object p2, p0, Lcom/android/settings/deviceinfo/SimEidPreferenceController;->eidStatus:Lcom/android/settings/deviceinfo/simstatus/EidStatus;
 
     const/4 p1, 0x0
 
     if-eqz p3, :cond_0
 
-    .line 52
+    .line 56
     new-instance p2, Lmiuix/appcompat/app/ProgressDialog;
 
     invoke-direct {p2, p3}, Lmiuix/appcompat/app/ProgressDialog;-><init>(Landroid/content/Context;)V
 
-    .line 53
+    .line 57
     iget-object v0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
 
     sget v1, Lcom/android/settings/R$string;->loading_eid_tip:I
@@ -834,44 +849,44 @@
 
     invoke-virtual {p2, v0}, Lmiuix/appcompat/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 52
+    .line 56
     iput-object p2, p0, Lcom/android/settings/deviceinfo/SimEidPreferenceController;->loadingDialog:Lmiuix/appcompat/app/ProgressDialog;
 
-    .line 55
+    .line 59
     new-instance p2, Lmiuix/appcompat/app/AlertDialog$Builder;
 
     invoke-direct {p2, p3}, Lmiuix/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 56
+    .line 60
     sget v0, Lcom/android/settings/R$string;->loading_eid_error_title:I
 
     invoke-virtual {p2, v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setTitle(I)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object p2
 
-    .line 57
+    .line 61
     sget v0, Lcom/android/settings/R$string;->loading_eid_error_message:I
 
     invoke-virtual {p2, v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setMessage(I)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object p2
 
-    .line 58
+    .line 62
     sget v0, Lcom/android/settings/R$string;->loading_eid_error_ok:I
 
     invoke-virtual {p2, v0, p1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object p1
 
-    .line 59
+    .line 63
     invoke-virtual {p1}, Lmiuix/appcompat/app/AlertDialog$Builder;->create()Lmiuix/appcompat/app/AlertDialog;
 
     move-result-object p1
 
-    .line 55
+    .line 59
     iput-object p1, p0, Lcom/android/settings/deviceinfo/SimEidPreferenceController;->errorDialog:Lmiuix/appcompat/app/AlertDialog;
 
-    .line 60
+    .line 64
     invoke-virtual {p3}, Landroidx/activity/ComponentActivity;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object p1
@@ -883,7 +898,7 @@
     :cond_0
     move-object p3, p1
 
-    .line 51
+    .line 55
     :goto_0
     iput-object p3, p0, Lcom/android/settings/deviceinfo/SimEidPreferenceController;->appCompatActivity:Landroidx/fragment/app/FragmentActivity;
 
@@ -923,36 +938,30 @@
 
     invoke-static {p2, p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 171
+    .line 178
     sget-object p1, Landroidx/lifecycle/Lifecycle$Event;->ON_DESTROY:Landroidx/lifecycle/Lifecycle$Event;
 
-    if-ne p2, p1, :cond_2
+    if-ne p2, p1, :cond_0
 
-    .line 172
+    .line 179
     iget-object p1, p0, Lcom/android/settings/deviceinfo/SimEidPreferenceController;->loadingDialog:Lmiuix/appcompat/app/ProgressDialog;
 
-    if-eqz p1, :cond_0
+    invoke-direct {p0, p1}, Lcom/android/settings/deviceinfo/SimEidPreferenceController;->dismiss(Lmiuix/appcompat/app/AlertDialog;)V
 
-    invoke-virtual {p1}, Lmiuix/appcompat/app/AlertDialog;->dismiss()V
-
-    .line 173
-    :cond_0
+    .line 180
     iget-object p1, p0, Lcom/android/settings/deviceinfo/SimEidPreferenceController;->errorDialog:Lmiuix/appcompat/app/AlertDialog;
 
-    if-eqz p1, :cond_1
+    invoke-direct {p0, p1}, Lcom/android/settings/deviceinfo/SimEidPreferenceController;->dismiss(Lmiuix/appcompat/app/AlertDialog;)V
 
-    invoke-virtual {p1}, Lmiuix/appcompat/app/AlertDialog;->dismiss()V
-
-    :cond_1
     const/4 p1, 0x0
 
-    .line 174
+    .line 181
     iput-object p1, p0, Lcom/android/settings/deviceinfo/SimEidPreferenceController;->loadingDialog:Lmiuix/appcompat/app/ProgressDialog;
 
-    .line 175
+    .line 182
     iput-object p1, p0, Lcom/android/settings/deviceinfo/SimEidPreferenceController;->errorDialog:Lmiuix/appcompat/app/AlertDialog;
 
-    :cond_2
+    :cond_0
     return-void
 .end method
 

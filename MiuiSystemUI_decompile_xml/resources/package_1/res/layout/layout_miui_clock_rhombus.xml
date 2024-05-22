@@ -1,21 +1,21 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent"
                       android:layout_height="fill_parent"
-                      android:layoutDirection="ltr" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto">
+                      android:layoutDirection="ltr" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <View android:id="@id/colon1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        systemui:r0x7f04042a="@id/colon2"
-        systemui:r0x7f04042f="0"
-        systemui:r0x7f040443="0"
-        systemui:r0x7f040447="0"
-        systemui:r0x7f040449="2" />
+        app:r0x7f04042a="@id/colon2"
+        app:r0x7f04042f="0"
+        app:r0x7f040443="0"
+        app:r0x7f040447="0"
+        app:r0x7f040449="2" />
   <FrameLayout android:id="@id/hour_container"
                android:layout_width="fill_parent"
                android:layout_height="@dimen/miui_rhombus_clock_inner_height"
-               systemui:r0x7f04042f="0"
-               systemui:r0x7f040443="0"
-               systemui:r0x7f040447="0">
+               app:r0x7f04042f="0"
+               app:r0x7f040443="0"
+               app:r0x7f040447="0">
     <com.miui.clock.MiuiClockNumberView android:layout_gravity="end"
                           android:id="@id/hour1"
                           android:layout_width="wrap_content"
@@ -28,9 +28,9 @@
   <FrameLayout android:id="@id/minute_container"
                android:layout_width="fill_parent"
                android:layout_height="@dimen/miui_rhombus_clock_inner_height"
-               systemui:r0x7f040429="0"
-               systemui:r0x7f04042f="0"
-               systemui:r0x7f040443="0">
+               app:r0x7f040429="0"
+               app:r0x7f04042f="0"
+               app:r0x7f040443="0">
     <com.miui.clock.MiuiClockNumberView android:layout_gravity="end"
                           android:id="@id/minute1"
                           android:layout_width="wrap_content"
@@ -43,16 +43,16 @@
   <View android:id="@id/colon2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        systemui:r0x7f040429="0"
-        systemui:r0x7f04042f="0"
-        systemui:r0x7f040443="0"
-        systemui:r0x7f040446="@id/colon1" />
+        app:r0x7f040429="0"
+        app:r0x7f04042f="0"
+        app:r0x7f040443="0"
+        app:r0x7f040446="@id/colon1" />
   <ImageView android:id="@id/colon_view"
              android:visibility="gone"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             systemui:r0x7f040429="0"
-             systemui:r0x7f04042f="0"
-             systemui:r0x7f040443="0"
-             systemui:r0x7f040447="0" />
+             app:r0x7f040429="0"
+             app:r0x7f04042f="0"
+             app:r0x7f040443="0"
+             app:r0x7f040447="0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

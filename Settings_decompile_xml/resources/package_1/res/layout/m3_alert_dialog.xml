@@ -3,7 +3,7 @@
                       android:orientation="vertical"
                       android:id="@id/parentPanel"
                       android:layout_width="fill_parent"
-                      android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+                      android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <include layout="@layout/m3_alert_dialog_title" />
   <FrameLayout android:id="@id/contentPanel"
                android:layout_width="fill_parent"
@@ -16,7 +16,7 @@
                android:layout_width="fill_parent"
                android:layout_height="1.0dp"
                android:contentDescription="@null"
-               settings:backgroundTint="?android:attr/colorForeground" />
+               app:backgroundTint="?android:attr/colorForeground" />
     <androidx.core.widget.NestedScrollView android:id="@id/id_0x7f0a0936"
                           android:clipToPadding="false"
                           android:layout_width="fill_parent"
@@ -47,7 +47,7 @@
                android:layout_width="fill_parent"
                android:layout_height="1.0dp"
                android:contentDescription="@null"
-               settings:backgroundTint="?android:attr/colorForeground" />
+               app:backgroundTint="?android:attr/colorForeground" />
   </FrameLayout>
   <FrameLayout android:id="@id/customPanel"
                android:layout_width="fill_parent"

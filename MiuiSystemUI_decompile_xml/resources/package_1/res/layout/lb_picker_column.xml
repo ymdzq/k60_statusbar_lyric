@@ -7,4 +7,4 @@
                       android:importantForAccessibility="no"
                       android:paddingStart="@dimen/picker_column_horizontal_padding"
                       android:paddingEnd="@dimen/picker_column_horizontal_padding"
-                      systemui:r0x7f0401cd="-2" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto" />
+                      lb:r0x7f0401cd="-2" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:lb="http://schemas.android.com/apk/res-auto" />

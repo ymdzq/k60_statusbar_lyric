@@ -386,7 +386,7 @@
 
 .field public static final choose_lock_pattern_common:I = 0x7f0d00be # @layout/choose_lock_pattern_common 'res/layout/choose_lock_pattern_common.xml'
 
-.field public static final choose_lock_pattern_tutorial:I = 0x7f0d00bf # @layout/choose_lock_pattern_tutorial 'res/layout-land-sw600dp/choose_lock_pattern_tutorial.xml'
+.field public static final choose_lock_pattern_tutorial:I = 0x7f0d00bf # @layout/choose_lock_pattern_tutorial 'res/layout-sw600dp/choose_lock_pattern_tutorial.xml'
 
 .field public static final choose_sim_activity:I = 0x7f0d00c0 # @layout/choose_sim_activity 'res/layout/choose_sim_activity.xml'
 

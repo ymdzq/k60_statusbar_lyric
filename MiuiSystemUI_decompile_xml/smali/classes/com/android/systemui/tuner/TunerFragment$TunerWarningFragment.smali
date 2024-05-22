@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/tuner/TunerFragment$TunerWarningFragment;
 .super Landroid/app/DialogFragment;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # direct methods
@@ -33,7 +33,7 @@
     invoke-direct {p1, v0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     .line 8
-    const v0, 0x7f130be9    # @string/tuner_warning_title 'Fun for some but not for all'
+    const v0, 0x7f130bef    # @string/tuner_warning_title 'Fun for some but not for all'
 
     .line 11
     invoke-virtual {p1, v0}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
@@ -42,7 +42,7 @@
     move-result-object p1
 
     .line 17
-    const v0, 0x7f130be8    # @string/tuner_warning 'System UI Tuner gives you extra ways to tweak and customize the Android user interface. These experi ...'
+    const v0, 0x7f130bee    # @string/tuner_warning 'System UI Tuner gives you extra ways to tweak and customize the Android user interface. These experi ...'
 
     .line 18
     invoke-virtual {p1, v0}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;

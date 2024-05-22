@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <set android:ordering="together" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f080408"
+  <objectAnimator android:interpolator="@drawable/$$pin_dot_shape_6_avd__1__0"
                   android:duration="67"
                   android:startOffset="0"
                   android:valueFrom="M-0.46 -13.65 C3.05,-13.65 12.63,-6.57 12.9,-3.63 C12.98,-2.7 12.65,12.85 -0.46,12.85 C-13.57,12.85 -13.77,-2.84 -13.76,-3.63 C-13.72,-6.87 -3.96,-13.65 -0.46,-13.65c "
                   android:valueTo="M-0.46 -13.65 C3.05,-13.65 12.63,-6.57 12.9,-3.63 C12.98,-2.7 12.65,12.85 -0.46,12.85 C-13.57,12.85 -13.77,-2.84 -13.76,-3.63 C-13.72,-6.87 -3.96,-13.65 -0.46,-13.65c "
                   android:valueType="pathType"
                   android:propertyName="pathData" />
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f080409"
+  <objectAnimator android:interpolator="@drawable/$$pin_dot_shape_6_avd__1__1"
                   android:duration="283"
                   android:startOffset="67"
                   android:valueFrom="M-0.46 -13.65 C3.05,-13.65 12.63,-6.57 12.9,-3.63 C12.98,-2.7 12.65,12.85 -0.46,12.85 C-13.57,12.85 -13.77,-2.84 -13.76,-3.63 C-13.72,-6.87 -3.96,-13.65 -0.46,-13.65c "

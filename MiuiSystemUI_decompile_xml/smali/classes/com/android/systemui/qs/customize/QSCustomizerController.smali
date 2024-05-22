@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/qs/customize/QSCustomizerController;
 .super Lcom/android/systemui/util/ViewController;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # instance fields
@@ -888,7 +888,7 @@
     iget-object p2, p1, Lcom/android/systemui/qs/customize/TileQueryHelper;->mContext:Landroid/content/Context;
 
     .line 224
-    const p3, 0x7f1309fe    # @string/quick_settings_tiles_stock 'internet,bt,flashlight,dnd,alarm,airplane,controls,wallet,rotation,battery,cast,screenrecord,mictogg ...'
+    const p3, 0x7f130a04    # @string/quick_settings_tiles_stock 'internet,bt,flashlight,dnd,alarm,airplane,controls,wallet,rotation,battery,cast,screenrecord,mictogg ...'
 
     .line 226
     invoke-virtual {p2, p3}, Landroid/content/Context;->getString(I)Ljava/lang/String;

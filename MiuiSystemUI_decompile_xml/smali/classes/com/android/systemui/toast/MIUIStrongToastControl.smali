@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/toast/MIUIStrongToastControl;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/policy/ConfigurationController$ConfigurationListener;
@@ -2527,7 +2527,7 @@
     if-eqz v4, :cond_2
 
     .line 49
-    const v4, 0x7f130b38    # @string/strong_toast_quick_charging 'Quick charging'
+    const v4, 0x7f130b3e    # @string/strong_toast_quick_charging 'Quick charging'
 
     .line 51
     invoke-virtual {v8, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -2540,7 +2540,7 @@
 
     .line 58
     :cond_2
-    const v4, 0x7f130b37    # @string/strong_toast_charging 'Charging'
+    const v4, 0x7f130b3d    # @string/strong_toast_charging 'Charging'
 
     .line 59
     invoke-virtual {v8, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;

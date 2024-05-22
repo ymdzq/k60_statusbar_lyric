@@ -1,6 +1,6 @@
 .class public Lcom/android/wm/shell/sosc/SoScSplitScreenController;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lcom/android/wm/shell/draganddrop/DragAndDropPolicy$Starter;
@@ -1488,6 +1488,104 @@
     :cond_2
     return v1
     .line 44
+.end method
+
+.method private isFreeFormWindowingMode(Landroid/content/ComponentName;)Z
+    .locals 3
+
+    .line 1
+    invoke-static {}, Landroid/app/ActivityTaskManager;->getInstance()Landroid/app/ActivityTaskManager;
+
+    .line 2
+    move-result-object p0
+
+    .line 5
+    const/4 v0, 0x2
+
+    .line 6
+    invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
+
+    .line 7
+    move-result v1
+
+    .line 10
+    const v2, 0x7fffffff
+
+    .line 11
+    invoke-virtual {p0, v2, v0, v1}, Landroid/app/ActivityTaskManager;->getRecentTasks(III)Ljava/util/List;
+
+    .line 14
+    move-result-object p0
+
+    .line 17
+    invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
+
+    .line 18
+    move-result v0
+
+    .line 21
+    const/4 v1, 0x1
+
+    .line 22
+    if-eqz v0, :cond_0
+
+    .line 23
+    return v1
+
+    .line 25
+    :cond_0
+    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    .line 26
+    move-result-object p0
+
+    .line 29
+    :cond_1
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 30
+    move-result v0
+
+    .line 33
+    if-eqz v0, :cond_2
+
+    .line 34
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 36
+    move-result-object v0
+
+    .line 39
+    check-cast v0, Landroid/app/ActivityManager$RecentTaskInfo;
+
+    .line 40
+    if-eqz v0, :cond_1
+
+    .line 42
+    if-eqz p1, :cond_1
+
+    .line 44
+    invoke-virtual {v0}, Landroid/app/ActivityManager$RecentTaskInfo;->getWindowingMode()I
+
+    .line 46
+    move-result v0
+
+    .line 49
+    const/4 v2, 0x5
+
+    .line 50
+    if-ne v0, v2, :cond_1
+
+    .line 51
+    return v1
+
+    .line 53
+    :cond_2
+    const/4 p0, 0x0
+
+    .line 54
+    return p0
+    .line 55
 .end method
 
 .method private isHomeOrRecent(I)Z
@@ -8405,7 +8503,7 @@
 .end method
 
 .method public startSplitWithIntentsForMiui(Landroid/app/PendingIntent;Landroid/app/PendingIntent;Landroid/os/Bundle;Landroid/window/RemoteTransition;)V
-    .locals 17
+    .locals 18
 
     .line 1
     move-object/from16 v0, p0
@@ -8590,13 +8688,13 @@
     move-result-object v7
 
     .line 115
-    if-eqz v6, :cond_2c
+    if-eqz v6, :cond_31
 
     .line 116
     if-nez v7, :cond_4
 
     .line 118
-    goto/16 :goto_d
+    goto/16 :goto_e
 
     .line 120
     :cond_4
@@ -8612,7 +8710,7 @@
     move-result v8
 
     .line 129
-    if-nez v8, :cond_2b
+    if-nez v8, :cond_30
 
     .line 130
     invoke-static {}, Lcom/android/wm/shell/sosc/SoScUtils;->getInstance()Lcom/android/wm/shell/sosc/SoScUtils;
@@ -8630,7 +8728,7 @@
     if-eqz v8, :cond_5
 
     .line 140
-    goto/16 :goto_c
+    goto/16 :goto_d
 
     .line 142
     :cond_5
@@ -8951,13 +9049,13 @@
 
     .line 349
     :goto_1
-    move/from16 v16, v2
+    move/from16 v17, v2
 
     .line 350
     move v2, v1
 
     .line 352
-    move/from16 v1, v16
+    move/from16 v1, v17
 
     .line 353
     goto :goto_2
@@ -9096,7 +9194,7 @@
     invoke-virtual/range {v5 .. v13}, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->startTasks(ILandroid/os/Bundle;ILandroid/os/Bundle;IFLandroid/window/RemoteTransition;Lcom/android/internal/logging/InstanceId;)V
 
     .line 448
-    goto/16 :goto_c
+    goto/16 :goto_d
 
     .line 451
     :cond_10
@@ -9500,745 +9598,907 @@
     move-object v4, v1
 
     .line 702
-    goto/16 :goto_b
+    move-object/from16 v16, v12
 
     .line 703
+    goto/16 :goto_c
+
+    .line 705
     :cond_1c
     invoke-direct/range {p0 .. p0}, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->getTopFullScreenTask()Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 705
+    .line 707
     move-result-object v2
-
-    .line 708
-    const/4 v8, 0x0
-
-    .line 709
-    aget v9, v4, v8
 
     .line 710
-    const/4 v10, -0x1
+    const/4 v8, 0x0
+
+    .line 711
+    aget v9, v4, v8
 
     .line 712
+    const/4 v10, -0x1
+
+    .line 714
     if-eq v9, v10, :cond_1e
 
-    .line 713
+    .line 715
     const/4 v11, 0x1
 
-    .line 715
+    .line 717
     aget v14, v4, v11
 
-    .line 716
+    .line 718
     if-eq v14, v10, :cond_1e
 
-    .line 718
+    .line 720
     sget-object v1, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->TAG:Ljava/lang/String;
 
-    .line 720
+    .line 722
     new-instance v2, Ljava/lang/StringBuilder;
 
-    .line 722
+    .line 724
     invoke-direct {v2, v13}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 724
+    .line 726
     aget v3, v4, v8
 
-    .line 727
+    .line 729
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 729
+    .line 731
     const-string v3, " and "
 
-    .line 732
+    .line 734
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 734
+    .line 736
     aget v3, v4, v11
 
-    .line 737
+    .line 739
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 739
+    .line 741
     const-string v3, "in bg."
 
-    .line 742
+    .line 744
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 744
+    .line 746
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 747
+    .line 749
     move-result-object v2
 
-    .line 750
+    .line 752
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 751
+    .line 753
     iget-object v1, v0, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->mStageCoordinator:Lcom/android/wm/shell/sosc/SoScStageCoordinator;
 
-    .line 754
+    .line 756
     invoke-virtual {v1}, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->isInMinimizedMode()Z
 
-    .line 756
+    .line 758
     move-result v1
 
-    .line 759
+    .line 761
     if-eqz v1, :cond_1d
 
-    .line 760
+    .line 762
     const/4 v1, 0x0
 
-    .line 762
+    .line 764
     invoke-virtual {v0, v1}, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->resetSoScMinimized(Z)V
 
-    .line 763
+    .line 765
     goto :goto_8
 
-    .line 766
+    .line 768
     :cond_1d
     const/4 v1, 0x0
 
-    .line 767
+    .line 769
     :goto_8
     iget-object v5, v0, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->mStageCoordinator:Lcom/android/wm/shell/sosc/SoScStageCoordinator;
 
-    .line 768
+    .line 770
     aget v6, v4, v1
 
-    .line 770
+    .line 772
     const/4 v7, 0x0
 
-    .line 772
+    .line 774
     const/4 v0, 0x1
 
-    .line 773
+    .line 775
     aget v8, v4, v0
 
-    .line 774
+    .line 776
     const/4 v9, 0x0
 
-    .line 776
+    .line 778
     const/4 v10, 0x0
 
-    .line 777
+    .line 779
     const/high16 v11, 0x3f000000    # 0.5f
 
-    .line 778
+    .line 780
     sget-object v13, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->instanceId:Lcom/android/internal/logging/InstanceId;
 
-    .line 780
+    .line 782
     invoke-virtual/range {v5 .. v13}, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->startTasks(ILandroid/os/Bundle;ILandroid/os/Bundle;IFLandroid/window/RemoteTransition;Lcom/android/internal/logging/InstanceId;)V
 
-    .line 782
+    .line 784
     return-void
 
-    .line 785
+    .line 787
     :cond_1e
-    const-string v8, " and a new to sosc."
-
-    .line 786
-    const-string/jumbo v10, "start task:"
+    const-string v8, " into sosc."
 
     .line 788
-    const-string v11, " to sosc"
+    const-string v10, " and a new to sosc."
 
-    .line 791
-    const-string v13, " and task "
+    .line 790
+    const-string/jumbo v11, "start task:"
 
-    .line 793
-    const/4 v14, -0x1
+    .line 792
+    const-string v13, " to sosc"
 
     .line 795
-    if-eq v9, v14, :cond_23
+    const-string v14, " and task "
 
-    .line 796
-    const/4 v15, 0x1
-
-    .line 798
-    aget v15, v4, v15
+    .line 797
+    const/4 v15, -0x1
 
     .line 799
-    if-ne v15, v14, :cond_23
+    if-eq v9, v15, :cond_25
 
-    .line 801
-    invoke-virtual {v6, v7}, Landroid/content/ComponentName;->equals(Ljava/lang/Object;)Z
+    .line 800
+    const/16 v16, 0x1
 
-    .line 803
-    move-result v9
+    .line 802
+    move/from16 p4, v9
+
+    .line 804
+    aget v9, v4, v16
 
     .line 806
+    if-ne v9, v15, :cond_24
+
+    .line 808
+    invoke-virtual {v6, v7}, Landroid/content/ComponentName;->equals(Ljava/lang/Object;)Z
+
+    .line 810
+    move-result v9
+
+    .line 813
     if-eqz v9, :cond_1f
 
-    .line 807
+    .line 814
     const/high16 v9, 0x8000000
 
-    .line 809
+    .line 816
     invoke-virtual {v5, v9}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 811
+    .line 818
     :cond_1f
     sget-object v9, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->TAG:Ljava/lang/String;
 
-    .line 814
-    new-instance v14, Ljava/lang/StringBuilder;
-
-    .line 816
-    invoke-direct {v14, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 818
-    const/4 v10, 0x0
-
     .line 821
-    aget v15, v4, v10
+    new-instance v15, Ljava/lang/StringBuilder;
 
-    .line 822
-    invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    .line 823
+    invoke-direct {v15, v11}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 824
-    invoke-virtual {v14, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 825
+    const/4 v11, 0x0
 
-    .line 827
-    invoke-virtual {v14}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 828
+    move-object/from16 v16, v12
 
-    .line 830
-    move-result-object v8
+    .line 829
+    aget v12, v4, v11
+
+    .line 831
+    invoke-virtual {v15, v12}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     .line 833
-    invoke-static {v9, v8}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {v15, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 834
-    iget-object v8, v0, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->mStageCoordinator:Lcom/android/wm/shell/sosc/SoScStageCoordinator;
-
-    .line 837
-    invoke-virtual {v8}, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->isInMinimizedMode()Z
+    .line 836
+    invoke-virtual {v15}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     .line 839
-    move-result v8
+    move-result-object v10
 
     .line 842
-    if-eqz v8, :cond_20
+    invoke-static {v9, v10}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 843
-    invoke-virtual {v0, v10}, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->resetSoScMinimized(Z)V
+    iget-object v10, v0, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->mStageCoordinator:Lcom/android/wm/shell/sosc/SoScStageCoordinator;
 
-    .line 845
+    .line 846
+    invoke-virtual {v10}, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->isInMinimizedMode()Z
+
+    .line 848
+    move-result v10
+
+    .line 851
+    if-eqz v10, :cond_20
+
+    .line 852
+    invoke-virtual {v0, v11}, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->resetSoScMinimized(Z)V
+
+    .line 854
     :cond_20
     if-eqz v2, :cond_21
 
-    .line 848
-    iget-object v8, v2, Landroid/app/ActivityManager$RunningTaskInfo;->baseIntent:Landroid/content/Intent;
-
-    .line 850
-    invoke-virtual {v8}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
-
-    .line 852
-    move-result-object v8
-
-    .line 855
-    invoke-virtual {v7, v8}, Landroid/content/ComponentName;->equals(Ljava/lang/Object;)Z
-
-    .line 856
-    move-result v7
+    .line 857
+    iget-object v10, v2, Landroid/app/ActivityManager$RunningTaskInfo;->baseIntent:Landroid/content/Intent;
 
     .line 859
-    if-eqz v7, :cond_21
+    invoke-virtual {v10}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
-    .line 860
-    aget v4, v4, v10
-
-    .line 862
-    invoke-virtual {v0, v4, v10}, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->moveToSideStage(II)Z
+    .line 861
+    move-result-object v10
 
     .line 864
-    move-result v4
+    invoke-virtual {v7, v10}, Landroid/content/ComponentName;->equals(Ljava/lang/Object;)Z
 
-    .line 867
-    if-nez v4, :cond_22
+    .line 865
+    move-result v10
 
     .line 868
-    iget-object v0, v0, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->mStageCoordinator:Lcom/android/wm/shell/sosc/SoScStageCoordinator;
+    if-eqz v10, :cond_21
 
-    .line 870
-    invoke-virtual {v0, v1, v5, v10, v3}, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->startIntent(Landroid/app/PendingIntent;Landroid/content/Intent;ILandroid/os/Bundle;)V
+    .line 869
+    aget v4, v4, v11
 
-    .line 872
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 871
+    invoke-virtual {v0, v4, v11}, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->moveToSideStage(II)Z
 
-    .line 875
-    const-string v1, "StartIntent+-:"
+    .line 873
+    move-result v4
+
+    .line 876
+    if-nez v4, :cond_23
 
     .line 877
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 879
-    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    .line 882
-    invoke-virtual {v0, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 885
-    iget v1, v2, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
-
-    .line 888
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 890
-    invoke-virtual {v0, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 893
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 896
-    move-result-object v0
-
-    .line 899
-    invoke-static {v9, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 900
-    goto :goto_9
-
-    .line 903
-    :cond_21
     iget-object v0, v0, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->mStageCoordinator:Lcom/android/wm/shell/sosc/SoScStageCoordinator;
 
-    .line 904
-    const/4 v3, 0x0
+    .line 879
+    invoke-virtual {v0, v1, v5, v11, v3}, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->startIntent(Landroid/app/PendingIntent;Landroid/content/Intent;ILandroid/os/Bundle;)V
 
-    .line 906
-    const/4 v1, 0x0
+    .line 881
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    .line 907
-    aget v4, v4, v1
+    .line 884
+    const-string v1, "StartIntent+-:"
+
+    .line 886
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 888
+    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 891
+    invoke-virtual {v0, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 894
+    iget v1, v2, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
+
+    .line 897
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 899
+    invoke-virtual {v0, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 902
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 905
+    move-result-object v0
 
     .line 908
-    const/4 v6, 0x0
+    invoke-static {v9, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 910
-    const/4 v7, 0x1
-
-    .line 911
-    const/high16 v8, 0x3f000000    # 0.5f
+    .line 909
+    goto :goto_9
 
     .line 912
-    sget-object v9, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->instanceId:Lcom/android/internal/logging/InstanceId;
+    :cond_21
+    invoke-direct {v0, v7}, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->isFreeFormWindowingMode(Landroid/content/ComponentName;)Z
 
-    .line 914
-    move-object/from16 v1, p2
+    .line 913
+    move-result v1
 
     .line 916
-    move-object v2, v5
+    if-eqz v1, :cond_22
 
-    .line 918
-    move-object v5, v6
+    .line 917
+    new-instance v1, Ljava/lang/StringBuilder;
 
     .line 919
-    move v6, v7
-
-    .line 920
-    move v7, v8
+    const-string/jumbo v2, "start task0: "
 
     .line 921
-    move-object v8, v12
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 922
+    .line 924
+    const/4 v2, 0x0
+
+    .line 927
+    aget v3, v4, v2
+
+    .line 928
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 930
+    invoke-virtual {v1, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 933
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 936
+    move-result-object v1
+
+    .line 939
+    invoke-static {v9, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 940
+    aget v1, v4, v2
+
+    .line 943
+    invoke-virtual {v0, v1, v2}, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->startTaskInSoSc(II)V
+
+    .line 945
+    return-void
+
+    .line 948
+    :cond_22
+    const/4 v1, 0x0
+
+    .line 949
+    iget-object v0, v0, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->mStageCoordinator:Lcom/android/wm/shell/sosc/SoScStageCoordinator;
+
+    .line 950
+    const/4 v3, 0x0
+
+    .line 952
+    aget v4, v4, v1
+
+    .line 953
+    const/4 v6, 0x0
+
+    .line 955
+    const/4 v7, 0x1
+
+    .line 956
+    const/high16 v8, 0x3f000000    # 0.5f
+
+    .line 957
+    sget-object v9, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->instanceId:Lcom/android/internal/logging/InstanceId;
+
+    .line 959
+    move-object/from16 v1, p2
+
+    .line 961
+    move-object v2, v5
+
+    .line 963
+    move-object v5, v6
+
+    .line 964
+    move v6, v7
+
+    .line 965
+    move v7, v8
+
+    .line 966
+    move-object/from16 v8, v16
+
+    .line 967
     invoke-virtual/range {v0 .. v9}, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->startIntentAndTask(Landroid/app/PendingIntent;Landroid/content/Intent;Landroid/os/Bundle;ILandroid/os/Bundle;IFLandroid/window/RemoteTransition;Lcom/android/internal/logging/InstanceId;)V
 
-    .line 923
-    :cond_22
+    .line 969
+    :cond_23
     :goto_9
     return-void
 
-    .line 926
-    :cond_23
-    if-ne v9, v14, :cond_28
-
-    .line 927
-    const/4 v15, 0x1
-
-    .line 929
-    aget v1, v4, v15
-
-    .line 930
-    if-eq v1, v14, :cond_28
-
-    .line 932
-    invoke-virtual {v6, v7}, Landroid/content/ComponentName;->equals(Ljava/lang/Object;)Z
-
-    .line 934
-    move-result v1
-
-    .line 937
-    if-eqz v1, :cond_24
-
-    .line 938
-    const/high16 v1, 0x8000000
-
-    .line 940
-    invoke-virtual {v5, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
-
-    .line 942
-    :cond_24
-    sget-object v1, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->TAG:Ljava/lang/String;
-
-    .line 945
-    new-instance v9, Ljava/lang/StringBuilder;
-
-    .line 947
-    invoke-direct {v9, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 949
-    aget v10, v4, v15
-
-    .line 952
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 954
-    invoke-virtual {v9, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 957
-    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 960
-    move-result-object v8
-
-    .line 963
-    invoke-static {v1, v8}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 964
-    iget-object v8, v0, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->mStageCoordinator:Lcom/android/wm/shell/sosc/SoScStageCoordinator;
-
-    .line 967
-    invoke-virtual {v8}, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->isInMinimizedMode()Z
-
-    .line 969
-    move-result v8
-
     .line 972
-    if-eqz v8, :cond_25
+    :cond_24
+    move-object/from16 v16, v12
 
     .line 973
-    const/4 v8, 0x0
+    move/from16 v9, p4
 
     .line 975
-    invoke-virtual {v0, v8}, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->resetSoScMinimized(Z)V
-
-    .line 976
-    :cond_25
-    if-eqz v2, :cond_26
-
-    .line 979
-    iget-object v8, v2, Landroid/app/ActivityManager$RunningTaskInfo;->baseIntent:Landroid/content/Intent;
-
-    .line 981
-    invoke-virtual {v8}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
-
-    .line 983
-    move-result-object v8
-
-    .line 986
-    invoke-virtual {v6, v8}, Landroid/content/ComponentName;->equals(Ljava/lang/Object;)Z
-
-    .line 987
-    move-result v6
-
-    .line 990
-    if-eqz v6, :cond_26
-
-    .line 991
-    const/4 v6, 0x1
-
-    .line 993
-    aget v4, v4, v6
-
-    .line 994
-    invoke-virtual {v0, v4, v6}, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->moveToSideStage(II)Z
-
-    .line 996
-    move-result v4
-
-    .line 999
-    if-nez v4, :cond_27
-
-    .line 1000
-    iget-object v0, v0, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->mStageCoordinator:Lcom/android/wm/shell/sosc/SoScStageCoordinator;
-
-    .line 1002
-    move-object/from16 v8, p2
-
-    .line 1004
-    invoke-virtual {v0, v8, v5, v6, v3}, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->startIntent(Landroid/app/PendingIntent;Landroid/content/Intent;ILandroid/os/Bundle;)V
-
-    .line 1006
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    .line 1009
-    const-string v3, "StartIntent-+:"
-
-    .line 1011
-    invoke-direct {v0, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 1013
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    .line 1016
-    invoke-virtual {v0, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 1019
-    iget v2, v2, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
-
-    .line 1022
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 1024
-    invoke-virtual {v0, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 1027
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 1030
-    move-result-object v0
-
-    .line 1033
-    invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 1034
     goto :goto_a
 
-    .line 1037
-    :cond_26
-    iget-object v0, v0, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->mStageCoordinator:Lcom/android/wm/shell/sosc/SoScStageCoordinator;
+    .line 977
+    :cond_25
+    move-object/from16 v16, v12
 
-    .line 1038
-    const/4 v3, 0x0
-
-    .line 1040
-    const/4 v1, 0x1
-
-    .line 1041
-    aget v4, v4, v1
-
-    .line 1042
-    const/4 v6, 0x0
-
-    .line 1044
-    const/4 v7, 0x0
-
-    .line 1045
-    const/high16 v8, 0x3f000000    # 0.5f
-
-    .line 1046
-    sget-object v9, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->instanceId:Lcom/android/internal/logging/InstanceId;
-
-    .line 1048
-    move-object/from16 v1, p1
-
-    .line 1050
-    move-object v2, v5
-
-    .line 1052
-    move-object v5, v6
-
-    .line 1053
-    move v6, v7
-
-    .line 1054
-    move v7, v8
-
-    .line 1055
-    move-object v8, v12
-
-    .line 1056
-    invoke-virtual/range {v0 .. v9}, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->startIntentAndTask(Landroid/app/PendingIntent;Landroid/content/Intent;Landroid/os/Bundle;ILandroid/os/Bundle;IFLandroid/window/RemoteTransition;Lcom/android/internal/logging/InstanceId;)V
-
-    .line 1057
-    :cond_27
+    .line 978
     :goto_a
-    return-void
+    if-ne v9, v15, :cond_2b
 
-    .line 1060
-    :cond_28
-    move-object/from16 v8, p2
+    .line 980
+    const/4 v12, 0x1
 
-    .line 1061
-    if-ne v9, v14, :cond_2a
+    .line 982
+    aget v1, v4, v12
 
-    .line 1063
-    const/4 v1, 0x1
+    .line 983
+    if-eq v1, v15, :cond_2b
 
-    .line 1065
-    aget v4, v4, v1
-
-    .line 1066
-    if-ne v4, v14, :cond_2a
-
-    .line 1068
-    if-eqz v2, :cond_2a
-
-    .line 1070
-    iget-object v4, v2, Landroid/app/ActivityManager$RunningTaskInfo;->baseIntent:Landroid/content/Intent;
-
-    .line 1072
-    invoke-virtual {v4}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
-
-    .line 1074
-    move-result-object v4
-
-    .line 1077
-    invoke-virtual {v6, v4}, Landroid/content/ComponentName;->equals(Ljava/lang/Object;)Z
-
-    .line 1078
-    move-result v4
-
-    .line 1081
-    const-string v9, "StartIntent--:"
-
-    .line 1082
-    if-eqz v4, :cond_29
-
-    .line 1084
-    iget-object v0, v0, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->mStageCoordinator:Lcom/android/wm/shell/sosc/SoScStageCoordinator;
-
-    .line 1086
-    invoke-virtual {v0, v8, v5, v1, v3}, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->startIntent(Landroid/app/PendingIntent;Landroid/content/Intent;ILandroid/os/Bundle;)V
-
-    .line 1088
-    sget-object v0, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->TAG:Ljava/lang/String;
-
-    .line 1091
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    .line 1093
-    invoke-direct {v1, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 1095
-    invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    .line 1098
-    invoke-virtual {v1, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 1101
-    iget v2, v2, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
-
-    .line 1104
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 1106
-    invoke-virtual {v1, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 1109
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 1112
-    move-result-object v1
-
-    .line 1115
-    invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 1116
-    return-void
-
-    .line 1119
-    :cond_29
-    iget-object v1, v2, Landroid/app/ActivityManager$RunningTaskInfo;->baseIntent:Landroid/content/Intent;
-
-    .line 1120
-    invoke-virtual {v1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
-
-    .line 1122
-    move-result-object v1
-
-    .line 1125
-    invoke-virtual {v7, v1}, Landroid/content/ComponentName;->equals(Ljava/lang/Object;)Z
-
-    .line 1126
-    move-result v1
-
-    .line 1129
-    if-eqz v1, :cond_2a
-
-    .line 1130
-    iget-object v0, v0, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->mStageCoordinator:Lcom/android/wm/shell/sosc/SoScStageCoordinator;
-
-    .line 1132
-    const/4 v1, 0x0
-
-    .line 1134
-    move-object/from16 v4, p1
-
-    .line 1135
-    invoke-virtual {v0, v4, v5, v1, v3}, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->startIntent(Landroid/app/PendingIntent;Landroid/content/Intent;ILandroid/os/Bundle;)V
-
-    .line 1137
-    sget-object v0, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->TAG:Ljava/lang/String;
-
-    .line 1140
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    .line 1142
-    invoke-direct {v1, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 1144
-    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    .line 1147
-    invoke-virtual {v1, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 1150
-    iget v2, v2, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
-
-    .line 1153
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 1155
-    invoke-virtual {v1, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 1158
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 1161
-    move-result-object v1
-
-    .line 1164
-    invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 1165
-    return-void
-
-    .line 1168
-    :cond_2a
-    move-object/from16 v4, p1
-
-    .line 1169
-    :goto_b
-    iget-object v0, v0, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->mStageCoordinator:Lcom/android/wm/shell/sosc/SoScStageCoordinator;
-
-    .line 1171
+    .line 985
     invoke-virtual {v6, v7}, Landroid/content/ComponentName;->equals(Ljava/lang/Object;)Z
 
-    .line 1173
+    .line 987
     move-result v1
 
-    .line 1176
-    invoke-virtual {v0, v4, v8, v1, v12}, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->startSplitWithIntentsForSoSc(Landroid/app/PendingIntent;Landroid/app/PendingIntent;ZLandroid/window/RemoteTransition;)V
+    .line 990
+    if-eqz v1, :cond_26
 
-    .line 1177
-    :cond_2b
-    :goto_c
+    .line 991
+    const/high16 v1, 0x8000000
+
+    .line 993
+    invoke-virtual {v5, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    .line 995
+    :cond_26
+    sget-object v1, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->TAG:Ljava/lang/String;
+
+    .line 998
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    .line 1000
+    invoke-direct {v9, v11}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 1002
+    aget v11, v4, v12
+
+    .line 1005
+    invoke-virtual {v9, v11}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 1007
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 1010
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 1013
+    move-result-object v9
+
+    .line 1016
+    invoke-static {v1, v9}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1017
+    iget-object v9, v0, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->mStageCoordinator:Lcom/android/wm/shell/sosc/SoScStageCoordinator;
+
+    .line 1020
+    invoke-virtual {v9}, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->isInMinimizedMode()Z
+
+    .line 1022
+    move-result v9
+
+    .line 1025
+    if-eqz v9, :cond_27
+
+    .line 1026
+    const/4 v9, 0x0
+
+    .line 1028
+    invoke-virtual {v0, v9}, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->resetSoScMinimized(Z)V
+
+    .line 1029
+    :cond_27
+    if-eqz v2, :cond_28
+
+    .line 1032
+    iget-object v9, v2, Landroid/app/ActivityManager$RunningTaskInfo;->baseIntent:Landroid/content/Intent;
+
+    .line 1034
+    invoke-virtual {v9}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
+
+    .line 1036
+    move-result-object v9
+
+    .line 1039
+    invoke-virtual {v6, v9}, Landroid/content/ComponentName;->equals(Ljava/lang/Object;)Z
+
+    .line 1040
+    move-result v9
+
+    .line 1043
+    if-eqz v9, :cond_28
+
+    .line 1044
+    const/4 v6, 0x1
+
+    .line 1046
+    aget v4, v4, v6
+
+    .line 1047
+    invoke-virtual {v0, v4, v6}, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->moveToSideStage(II)Z
+
+    .line 1049
+    move-result v4
+
+    .line 1052
+    if-nez v4, :cond_2a
+
+    .line 1053
+    iget-object v0, v0, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->mStageCoordinator:Lcom/android/wm/shell/sosc/SoScStageCoordinator;
+
+    .line 1055
+    move-object/from16 v8, p2
+
+    .line 1057
+    invoke-virtual {v0, v8, v5, v6, v3}, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->startIntent(Landroid/app/PendingIntent;Landroid/content/Intent;ILandroid/os/Bundle;)V
+
+    .line 1059
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    .line 1062
+    const-string v3, "StartIntent-+:"
+
+    .line 1064
+    invoke-direct {v0, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 1066
+    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 1069
+    invoke-virtual {v0, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 1072
+    iget v2, v2, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
+
+    .line 1075
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 1077
+    invoke-virtual {v0, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 1080
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 1083
+    move-result-object v0
+
+    .line 1086
+    invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1087
+    goto :goto_b
+
+    .line 1090
+    :cond_28
+    invoke-direct {v0, v6}, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->isFreeFormWindowingMode(Landroid/content/ComponentName;)Z
+
+    .line 1091
+    move-result v2
+
+    .line 1094
+    if-eqz v2, :cond_29
+
+    .line 1095
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    .line 1097
+    const-string/jumbo v3, "start task1: "
+
+    .line 1099
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 1102
+    const/4 v3, 0x1
+
+    .line 1105
+    aget v5, v4, v3
+
+    .line 1106
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 1108
+    invoke-virtual {v2, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 1111
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 1114
+    move-result-object v2
+
+    .line 1117
+    invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1118
+    aget v1, v4, v3
+
+    .line 1121
+    invoke-virtual {v0, v1, v3}, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->startTaskInSoSc(II)V
+
+    .line 1123
     return-void
 
-    .line 1180
-    :cond_2c
-    :goto_d
+    .line 1126
+    :cond_29
+    const/4 v1, 0x1
+
+    .line 1127
+    iget-object v0, v0, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->mStageCoordinator:Lcom/android/wm/shell/sosc/SoScStageCoordinator;
+
+    .line 1128
+    const/4 v3, 0x0
+
+    .line 1130
+    aget v4, v4, v1
+
+    .line 1131
+    const/4 v6, 0x0
+
+    .line 1133
+    const/4 v7, 0x0
+
+    .line 1134
+    const/high16 v8, 0x3f000000    # 0.5f
+
+    .line 1135
+    sget-object v9, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->instanceId:Lcom/android/internal/logging/InstanceId;
+
+    .line 1137
+    move-object/from16 v1, p1
+
+    .line 1139
+    move-object v2, v5
+
+    .line 1141
+    move-object v5, v6
+
+    .line 1142
+    move v6, v7
+
+    .line 1143
+    move v7, v8
+
+    .line 1144
+    move-object/from16 v8, v16
+
+    .line 1145
+    invoke-virtual/range {v0 .. v9}, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->startIntentAndTask(Landroid/app/PendingIntent;Landroid/content/Intent;Landroid/os/Bundle;ILandroid/os/Bundle;IFLandroid/window/RemoteTransition;Lcom/android/internal/logging/InstanceId;)V
+
+    .line 1147
+    :cond_2a
+    :goto_b
+    return-void
+
+    .line 1150
+    :cond_2b
+    move-object/from16 v8, p2
+
+    .line 1151
+    if-ne v9, v15, :cond_2e
+
+    .line 1153
+    const/4 v1, 0x1
+
+    .line 1155
+    aget v4, v4, v1
+
+    .line 1156
+    if-ne v4, v15, :cond_2e
+
+    .line 1158
+    if-eqz v2, :cond_2e
+
+    .line 1160
+    iget-object v4, v2, Landroid/app/ActivityManager$RunningTaskInfo;->baseIntent:Landroid/content/Intent;
+
+    .line 1162
+    invoke-virtual {v4}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
+
+    .line 1164
+    move-result-object v4
+
+    .line 1167
+    invoke-virtual {v6, v4}, Landroid/content/ComponentName;->equals(Ljava/lang/Object;)Z
+
+    .line 1168
+    move-result v4
+
+    .line 1171
+    const-string v9, "StartIntent--:"
+
+    .line 1172
+    if-eqz v4, :cond_2c
+
+    .line 1174
+    iget-object v0, v0, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->mStageCoordinator:Lcom/android/wm/shell/sosc/SoScStageCoordinator;
+
+    .line 1176
+    invoke-virtual {v0, v8, v5, v1, v3}, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->startIntent(Landroid/app/PendingIntent;Landroid/content/Intent;ILandroid/os/Bundle;)V
+
+    .line 1178
     sget-object v0, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->TAG:Ljava/lang/String;
 
     .line 1181
-    const-string/jumbo v1, "startSplitWithIntentsForMiui get a error, intent\'s component is null"
+    new-instance v1, Ljava/lang/StringBuilder;
 
     .line 1183
+    invoke-direct {v1, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 1185
+    invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 1188
+    invoke-virtual {v1, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 1191
+    iget v2, v2, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
+
+    .line 1194
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 1196
+    invoke-virtual {v1, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 1199
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 1202
+    move-result-object v1
+
+    .line 1205
+    invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1206
+    return-void
+
+    .line 1209
+    :cond_2c
+    iget-object v1, v2, Landroid/app/ActivityManager$RunningTaskInfo;->baseIntent:Landroid/content/Intent;
+
+    .line 1210
+    invoke-virtual {v1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
+
+    .line 1212
+    move-result-object v1
+
+    .line 1215
+    invoke-virtual {v7, v1}, Landroid/content/ComponentName;->equals(Ljava/lang/Object;)Z
+
+    .line 1216
+    move-result v1
+
+    .line 1219
+    if-eqz v1, :cond_2d
+
+    .line 1220
+    iget-object v0, v0, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->mStageCoordinator:Lcom/android/wm/shell/sosc/SoScStageCoordinator;
+
+    .line 1222
+    const/4 v1, 0x0
+
+    .line 1224
+    move-object/from16 v4, p1
+
+    .line 1225
+    invoke-virtual {v0, v4, v5, v1, v3}, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->startIntent(Landroid/app/PendingIntent;Landroid/content/Intent;ILandroid/os/Bundle;)V
+
+    .line 1227
+    sget-object v0, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->TAG:Ljava/lang/String;
+
+    .line 1230
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    .line 1232
+    invoke-direct {v1, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 1234
+    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 1237
+    invoke-virtual {v1, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 1240
+    iget v2, v2, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
+
+    .line 1243
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 1245
+    invoke-virtual {v1, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 1248
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 1251
+    move-result-object v1
+
+    .line 1254
+    invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1255
+    return-void
+
+    .line 1258
+    :cond_2d
+    move-object/from16 v4, p1
+
+    .line 1259
+    invoke-direct {v0, v6}, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->isFreeFormWindowingMode(Landroid/content/ComponentName;)Z
+
+    .line 1261
+    move-result v1
+
+    .line 1264
+    if-eqz v1, :cond_2f
+
+    .line 1265
+    invoke-direct {v0, v7}, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->isFreeFormWindowingMode(Landroid/content/ComponentName;)Z
+
+    .line 1267
+    move-result v1
+
+    .line 1270
+    if-eqz v1, :cond_2f
+
+    .line 1271
+    sget-object v0, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->TAG:Ljava/lang/String;
+
+    .line 1273
+    const-string v1, "Pair tasks all in freeform, do not start."
+
+    .line 1275
+    invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1277
+    return-void
+
+    .line 1280
+    :cond_2e
+    move-object/from16 v4, p1
+
+    .line 1281
+    :cond_2f
+    :goto_c
+    iget-object v0, v0, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->mStageCoordinator:Lcom/android/wm/shell/sosc/SoScStageCoordinator;
+
+    .line 1283
+    invoke-virtual {v6, v7}, Landroid/content/ComponentName;->equals(Ljava/lang/Object;)Z
+
+    .line 1285
+    move-result v1
+
+    .line 1288
+    move-object/from16 v2, v16
+
+    .line 1289
+    invoke-virtual {v0, v4, v8, v1, v2}, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->startSplitWithIntentsForSoSc(Landroid/app/PendingIntent;Landroid/app/PendingIntent;ZLandroid/window/RemoteTransition;)V
+
+    .line 1291
+    :cond_30
+    :goto_d
+    return-void
+
+    .line 1294
+    :cond_31
+    :goto_e
+    sget-object v0, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->TAG:Ljava/lang/String;
+
+    .line 1295
+    const-string/jumbo v1, "startSplitWithIntentsForMiui get a error, intent\'s component is null"
+
+    .line 1297
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1186
+    .line 1300
     return-void
-    .line 1189
+    .line 1303
 .end method
 
 .method public startTask(IILandroid/os/Bundle;)V

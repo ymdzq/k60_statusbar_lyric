@@ -22,7 +22,7 @@
 .method public constructor <init>(Lcom/android/settings/bluetooth/WifiInfoService;)V
     .locals 0
 
-    .line 98
+    .line 100
     iput-object p1, p0, Lcom/android/settings/bluetooth/WifiInfoService$WifiScanBroadcastReceiver;->this$0:Lcom/android/settings/bluetooth/WifiInfoService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -43,21 +43,21 @@
 
     const/4 v0, 0x0
 
-    .line 102
+    .line 104
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 104
+    .line 106
     iget-object p0, p0, Lcom/android/settings/bluetooth/WifiInfoService$WifiScanBroadcastReceiver;->this$0:Lcom/android/settings/bluetooth/WifiInfoService;
 
     invoke-static {p0}, Lcom/android/settings/bluetooth/WifiInfoService;->-$$Nest$mscanSuccess(Lcom/android/settings/bluetooth/WifiInfoService;)V
 
     goto :goto_0
 
-    .line 106
+    .line 108
     :cond_0
     iget-object p0, p0, Lcom/android/settings/bluetooth/WifiInfoService$WifiScanBroadcastReceiver;->this$0:Lcom/android/settings/bluetooth/WifiInfoService;
 

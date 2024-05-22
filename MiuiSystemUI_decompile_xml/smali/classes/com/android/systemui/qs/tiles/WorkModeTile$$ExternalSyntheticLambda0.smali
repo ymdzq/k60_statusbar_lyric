@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/qs/tiles/WorkModeTile$$ExternalSyntheticLambda0;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Ljava/util/function/Supplier;
@@ -37,7 +37,7 @@
     iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
 
     .line 4
-    const v0, 0x7f130a18    # @string/quick_settings_work_mode_label 'Work apps'
+    const v0, 0x7f130a1e    # @string/quick_settings_work_mode_label 'Work apps'
 
     .line 6
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;

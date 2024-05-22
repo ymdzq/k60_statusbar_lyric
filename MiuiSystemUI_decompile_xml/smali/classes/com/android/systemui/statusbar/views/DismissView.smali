@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/statusbar/views/DismissView;
 .super Lcom/miui/systemui/widget/CircleAndTickAnimView;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/policy/ConfigurationController$ConfigurationListener;
@@ -202,7 +202,7 @@
     invoke-super {p0, p1}, Landroid/view/View;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 2
-    const p1, 0x7f0816c3    # @drawable/notifications_clear_all 'res/drawable-440dpi-night/notifications_clear_all.webp'
+    const p1, 0x7f0816c3    # @drawable/notifications_clear_all 'res/drawable-night-440dpi/notifications_clear_all.webp'
 
     .line 5
     const v0, 0x7f080b98    # @drawable/btn_clear_all 'res/drawable-440dpi/btn_clear_all.webp'

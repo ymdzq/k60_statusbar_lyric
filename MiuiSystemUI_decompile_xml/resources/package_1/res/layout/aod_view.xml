@@ -2,4 +2,4 @@
 <FrameLayout android:id="@id/aod_root_view"
              android:layout_width="fill_parent"
              android:layout_height="fill_parent"
-             systemui:r0x7f0403ba="true" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto" />
+             sysui:r0x7f0403ba="true" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:sysui="http://schemas.android.com/apk/res-auto" />

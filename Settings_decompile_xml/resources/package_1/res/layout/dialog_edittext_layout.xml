@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <ScrollView android:layout_width="fill_parent"
-            android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+            android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <LinearLayout android:orientation="vertical"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
@@ -13,6 +13,6 @@
                           android:inputType="textPassword"
                           android:layout_marginStart="@dimen/miuix_appcompat_dialog_button_panel_horizontal_margin"
                           android:layout_marginEnd="@dimen/miuix_appcompat_dialog_button_panel_horizontal_margin"
-                          settings:miuixAppcompatWidgetManager="miuix.androidbasewidget.widget.PasswordWidgetManager" />
+                          app:miuixAppcompatWidgetManager="miuix.androidbasewidget.widget.PasswordWidgetManager" />
   </LinearLayout>
 </ScrollView>

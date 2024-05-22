@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/android/settings/NotificationStatusBarSettings;)V
     .locals 0
 
-    .line 480
+    .line 488
     iput-object p1, p0, Lcom/android/settings/NotificationStatusBarSettings$5;->this$0:Lcom/android/settings/NotificationStatusBarSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onPreferenceChange(Landroidx/preference/Preference;Ljava/lang/Object;)Z
     .locals 0
 
-    .line 483
+    .line 491
     iget-object p0, p0, Lcom/android/settings/NotificationStatusBarSettings$5;->this$0:Lcom/android/settings/NotificationStatusBarSettings;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;

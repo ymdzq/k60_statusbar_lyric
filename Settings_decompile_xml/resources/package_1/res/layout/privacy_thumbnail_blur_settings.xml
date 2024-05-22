@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <FrameLayout android:layout_width="fill_parent"
-             android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+             android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <miuix.springback.view.SpringBackLayout android:clipChildren="false"
                         android:clipToPadding="false"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
-                        settings:scrollOrientation="vertical"
-                        settings:scrollableView="@id/id_0x7f0a08c4">
+                        app:scrollOrientation="vertical"
+                        app:scrollableView="@id/id_0x7f0a08c4">
     <miuix.recyclerview.widget.RecyclerView android:id="@id/id_0x7f0a08c4"
                           android:scrollbars="none"
                           android:clipChildren="false"

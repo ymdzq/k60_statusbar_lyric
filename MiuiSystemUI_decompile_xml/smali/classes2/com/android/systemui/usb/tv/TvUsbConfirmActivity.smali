@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/usb/tv/TvUsbConfirmActivity;
 .super Lcom/android/systemui/usb/tv/TvUsbDialogActivity;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # direct methods
@@ -102,21 +102,21 @@
     if-eqz v0, :cond_1
 
     .line 28
-    const v0, 0x7f130c0e    # @string/usb_device_confirm_prompt_warn 'Open %1$s to handle %2$s?\nThis app has not been granted record permission but could capture audio th ...'
+    const v0, 0x7f130c14    # @string/usb_device_confirm_prompt_warn 'Open %1$s to handle %2$s?\nThis app has not been granted record permission but could capture audio th ...'
 
     .line 30
     goto :goto_1
 
     .line 33
     :cond_1
-    const v0, 0x7f130c0d    # @string/usb_device_confirm_prompt 'Open %1$s to handle %2$s?'
+    const v0, 0x7f130c13    # @string/usb_device_confirm_prompt 'Open %1$s to handle %2$s?'
 
     .line 34
     goto :goto_1
 
     .line 37
     :cond_2
-    const v0, 0x7f130bfc    # @string/usb_accessory_confirm_prompt 'Open %1$s to handle %2$s?'
+    const v0, 0x7f130c02    # @string/usb_accessory_confirm_prompt 'Open %1$s to handle %2$s?'
 
     .line 38
     :goto_1

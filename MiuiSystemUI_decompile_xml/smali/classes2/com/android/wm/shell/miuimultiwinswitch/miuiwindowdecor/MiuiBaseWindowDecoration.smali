@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Ljava/lang/AutoCloseable;
@@ -5033,6 +5033,12 @@
     move-result-object p1
 
     .line 11
+    iget-object v0, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
+
+    iget-boolean v0, v0, Landroid/app/ActivityManager$RunningTaskInfo;->isVisible:Z
+
+    if-eqz v0, :cond_3
+
     iget p3, p3, Landroid/content/res/Configuration;->densityDpi:I
 
     iget p1, p1, Landroid/content/res/Configuration;->densityDpi:I
@@ -5043,6 +5049,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 12
     invoke-virtual {p1}, Landroid/view/Display;->getDisplayId()I
 
     move-result p1
@@ -5053,11 +5060,11 @@
 
     if-eq p1, p3, :cond_3
 
-    .line 12
+    .line 13
     :cond_1
     invoke-virtual {p0}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->releaseViews()V
 
-    .line 13
+    .line 14
     invoke-direct {p0}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->obtainDisplayOrRegisterListener()Z
 
     move-result p1
@@ -5066,10 +5073,10 @@
 
     if-nez p1, :cond_2
 
-    .line 14
+    .line 15
     iput-object p5, p7, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration$RelayoutResult;->mRootView:Landroid/view/View;
 
-    .line 15
+    .line 16
     iput-object p5, p7, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration$RelayoutResult;->mBottomRootView:Landroid/view/View;
 
     return-void
@@ -5077,21 +5084,21 @@
     :cond_2
     move-object p6, p5
 
-    .line 16
+    .line 17
     :cond_3
     invoke-direct {p0, p7, p5, p6, p4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->updateViews(Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration$RelayoutResult;Landroid/view/View;Landroid/view/View;Landroid/window/WindowContainerTransaction;)V
 
-    .line 17
+    .line 18
     invoke-direct {p0, p7, p4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->updateInsets(Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration$RelayoutResult;Landroid/window/WindowContainerTransaction;)V
 
-    .line 18
+    .line 19
     iget-object p1, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
     iget-boolean p3, p1, Landroid/app/ActivityManager$RunningTaskInfo;->isVisible:Z
 
     if-nez p3, :cond_5
 
-    .line 19
+    .line 20
     invoke-virtual {p1}, Landroid/app/ActivityManager$RunningTaskInfo;->getWindowingMode()I
 
     move-result p1
@@ -5108,39 +5115,39 @@
 
     if-eqz p1, :cond_4
 
-    .line 20
+    .line 21
     iget-object p1, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mTaskSurface:Landroid/view/SurfaceControl;
 
     invoke-virtual {p2, p1}, Landroid/view/SurfaceControl$Transaction;->unsetColor(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
 
     const/4 p1, 0x0
 
-    .line 21
+    .line 22
     iput-boolean p1, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mHasSetColor:Z
 
-    .line 22
+    .line 23
     :cond_4
     invoke-virtual {p0}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->releaseViews()V
 
     return-void
 
-    .line 23
+    .line 24
     :cond_5
     invoke-direct {p0, p7, p2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->updateTopCaption(Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration$RelayoutResult;Landroid/view/SurfaceControl$Transaction;)V
 
-    .line 24
+    .line 25
     invoke-direct {p0, p7, p2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->updateBottomCaption(Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration$RelayoutResult;Landroid/view/SurfaceControl$Transaction;)V
 
-    .line 25
+    .line 26
     invoke-direct {p0, p2, p8}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->updateTaskColor(Landroid/view/SurfaceControl$Transaction;Z)V
 
-    .line 26
+    .line 27
     invoke-direct {p0, p7}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->updateFocus(Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration$RelayoutResult;)V
 
-    .line 27
+    .line 28
     invoke-virtual {p0, p7}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->updateSampling(Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration$RelayoutResult;)V
 
-    .line 28
+    .line 29
     invoke-virtual {p0, p2, p8}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->updateVisibility(Landroid/view/SurfaceControl$Transaction;Z)V
 
     return-void

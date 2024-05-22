@@ -1,6 +1,6 @@
 .class public final Lcom/android/keyguard/KeyguardSecurityContainerController$16;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -81,7 +81,7 @@
     if-eqz v0, :cond_0
 
     .line 31
-    const v0, 0x7f130ae0    # @string/shut_down_password_forget_password_suggesstion_one_content '<Data>Press and hold the <font color=#e6e6e6>[Power]</font> and <font color=#e6e6e6>[Volume +]</font ...'
+    const v0, 0x7f130ae6    # @string/shut_down_password_forget_password_suggesstion_one_content '<Data>Press and hold the <font color=#e6e6e6>[Power]</font> and <font color=#e6e6e6>[Volume +]</font ...'
 
     .line 33
     goto :goto_0
@@ -113,7 +113,7 @@
     if-eqz v1, :cond_1
 
     .line 52
-    const v1, 0x7f130ae1    # @string/shut_down_password_forget_password_suggesstion_two_content '<Data>Select <font color=#e6e6e6>[Wipe data]</font> and tap <font color=#e6e6e6>[Reboot]</font> afte ...'
+    const v1, 0x7f130ae7    # @string/shut_down_password_forget_password_suggesstion_two_content '<Data>Select <font color=#e6e6e6>[Wipe data]</font> and tap <font color=#e6e6e6>[Reboot]</font> afte ...'
 
     .line 54
     goto :goto_1

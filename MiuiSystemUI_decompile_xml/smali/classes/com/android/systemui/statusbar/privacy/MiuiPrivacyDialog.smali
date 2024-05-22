@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/statusbar/privacy/MiuiPrivacyDialog;
 .super Landroid/app/Activity;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # instance fields
@@ -312,7 +312,7 @@
     if-eqz v3, :cond_7
 
     .line 154
-    const v1, 0x7f130c36    # @string/using_camera_and_microphone 'This app is accessing camera and microphone'
+    const v1, 0x7f130c3c    # @string/using_camera_and_microphone 'This app is accessing camera and microphone'
 
     .line 156
     invoke-virtual {p3, v1}, Landroid/widget/TextView;->setText(I)V
@@ -325,7 +325,7 @@
     if-eqz v1, :cond_8
 
     .line 163
-    const v1, 0x7f130c35    # @string/using_camera 'This app is accessing camera'
+    const v1, 0x7f130c3b    # @string/using_camera 'This app is accessing camera'
 
     .line 165
     invoke-virtual {p3, v1}, Landroid/widget/TextView;->setText(I)V
@@ -341,7 +341,7 @@
     if-eqz v1, :cond_c
 
     .line 174
-    const v1, 0x7f130c37    # @string/using_microphone 'This app is accessing microphone'
+    const v1, 0x7f130c3d    # @string/using_microphone 'This app is accessing microphone'
 
     .line 176
     invoke-virtual {p3, v1}, Landroid/widget/TextView;->setText(I)V
@@ -363,7 +363,7 @@
     if-eqz v3, :cond_a
 
     .line 189
-    const v1, 0x7f130a26    # @string/recent_used_camera_and_microphone 'This app accessed camera and microphone'
+    const v1, 0x7f130a2c    # @string/recent_used_camera_and_microphone 'This app accessed camera and microphone'
 
     .line 191
     invoke-virtual {p3, v1}, Landroid/widget/TextView;->setText(I)V
@@ -376,7 +376,7 @@
     if-eqz v1, :cond_b
 
     .line 198
-    const v1, 0x7f130a25    # @string/recent_used_camera 'This app accessed camera'
+    const v1, 0x7f130a2b    # @string/recent_used_camera 'This app accessed camera'
 
     .line 200
     invoke-virtual {p3, v1}, Landroid/widget/TextView;->setText(I)V
@@ -392,7 +392,7 @@
     if-eqz v1, :cond_c
 
     .line 209
-    const v1, 0x7f130a27    # @string/recent_used_microphone 'This app accessed microphone'
+    const v1, 0x7f130a2d    # @string/recent_used_microphone 'This app accessed microphone'
 
     .line 211
     invoke-virtual {p3, v1}, Landroid/widget/TextView;->setText(I)V

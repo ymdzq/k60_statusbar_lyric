@@ -4967,6 +4967,10 @@ Open Xiaomi Cloud and restore items from there.</string>
   <string name="interesting_title">Realistic touch</string>
   <string name="internal_auto_rotate_title">Lock orientation for inner screen</string>
   <string name="internal_storage">Internal storage</string>
+  <string name="international_lyra_account_ap_summary">Allow nearby tablets and computers signed in to your account to turn on and connect to this device's hotspot automatically</string>
+  <string name="international_lyra_account_ap_title">Network sync</string>
+  <string name="international_lyra_auto_connect_summary">When a nearby device is signed in to your account and needs to connect to the internet, turn on and connect to this device's hotspot automatically</string>
+  <string name="international_lyra_auto_connect_title">Automatically connect to hotspot</string>
   <string name="internet_connectivity_panel_title">Internet connectivity</string>
   <string name="invalid_location">Install location isn’t valid.</string>
   <string name="invalid_size_value">Couldn’t compute package size.</string>
@@ -5759,9 +5763,13 @@ If this permission is denied, the system will limit how long the app can perform
   <string name="low_label">Low</string>
   <string name="low_storage_summary">Storage is low. %1$s used - %2$s free</string>
   <string name="lyra_account_ap_summary">Allow nearby tablets and computers signed in to your Xiaomi Account to turn on the hotspot on this device and connect to it</string>
+  <string name="lyra_account_ap_summary_v2">Allow nearby tablets and computers signed in to your Xiaomi Account to use this device's mobile data and turn on the hotspot on this device and connect to it</string>
   <string name="lyra_account_ap_title">Network assistance</string>
+  <string name="lyra_account_ap_title_v2">Shared connectivity</string>
   <string name="lyra_auto_connect_summary">Turn on the hotspot automatically and connect nearby devices signed in to your Xiaomi Account to it if they aren't connected to the network</string>
+  <string name="lyra_auto_connect_summary_v2">Turn on the hotspot automatically and connect nearby devices signed in to your Xiaomi Account to it if they aren't connected to the network and allow them to use this device's mobile data</string>
   <string name="lyra_auto_connect_title">Turn on hotspot automatically</string>
+  <string name="lyra_auto_connect_title_v2">Share automatically</string>
   <string name="m3_sys_motion_easing_emphasized">path(M 0,0 C 0.05, 0, 0.133333, 0.06, 0.166666, 0.4 C 0.208333, 0.82, 0.25, 1, 1, 1)</string>
   <string name="m3_sys_motion_easing_emphasized_accelerate">cubic-bezier(0.3, 0.0, 0.8, 0.2)</string>
   <string name="m3_sys_motion_easing_emphasized_decelerate">cubic-bezier(0.1, 0.7, 0.1, 1.0)</string>
@@ -9395,7 +9403,7 @@ Withdraw consent to %s now?</string>
   <string name="sound_effects_enable_title">Tap sounds</string>
   <string name="sound_haptic_settings">Sound &amp; touch</string>
   <string name="sound_mode">Sound options</string>
-  <string name="string_0x7f132303">Sound</string>
+  <string name="string_0x7f13230b">Sound</string>
   <string name="sound_settings_tab_haptic">Touch</string>
   <string name="sound_settings_tab_sound">Sound</string>
   <string name="sound_stereo_mode_summary">Only available when you play sound with speaker</string>
@@ -10109,6 +10117,7 @@ Try using a faster ^3, or use this ^4 for portable storage instead.</string>
   <string name="tip_remove_data">Factory reset will erase these items from your device</string>
   <string name="title_change_system_locale">Change system language to %s ?</string>
   <string name="title_color_calibration">Color correction preset</string>
+  <string name="title_device_control">Device controls</string>
   <string name="title_font">Font</string>
   <string name="title_font2">Font &amp; layout</string>
   <string name="title_font_current">System font</string>
@@ -10129,6 +10138,7 @@ Try using a faster ^3, or use this ^4 for portable storage instead.</string>
   <string name="title_special_features_health_global">Heart rate</string>
   <string name="title_unavailable_locale">%s not available</string>
   <string name="title_wordless_mode">Don't show icon labels</string>
+  <string name="title_xiaomi_smart_hub">Xiaomi Smart Hub</string>
   <string name="to_close">Turn off</string>
   <string name="to_switch_networks_disconnect_ethernet">To switch networks, disconnect ethernet</string>
   <string name="toast_allows_restricted_settings_successfully">Restricted settings allowed for %s</string>
@@ -11416,8 +11426,8 @@ Allow this for all apps that want to scan?</string>
   <string name="wifi_scan_throttling">WLAN scan throttling</string>
   <string name="wifi_scan_throttling_summary">Reduces battery drain &amp; improves network performance</string>
   <string name="wifi_security">Security</string>
-  <string name="string_0x7f132a82">WAPI CERT</string>
-  <string name="string_0x7f132a83">WAPI PSK</string>
+  <string name="string_0x7f132a8c">WAPI CERT</string>
+  <string name="string_0x7f132a8d">WAPI PSK</string>
   <string name="wifi_security_dpp">DPP</string>
   <string name="wifi_security_eap">WPA/WPA2/WPA3-Enterprise</string>
   <string name="wifi_security_eap_suiteb">WPA3-Enterprise 192-bit</string>
@@ -11448,8 +11458,8 @@ Allow this for all apps that want to scan?</string>
   <string name="wifi_security_short_wpa">WPA</string>
   <string name="wifi_security_short_wpa2">WPA2</string>
   <string name="wifi_security_short_wpa_wpa2">WPA/WPA2</string>
-  <string name="string_0x7f132aa2">WAPI CERT</string>
-  <string name="string_0x7f132aa3">WAPI PSK</string>
+  <string name="string_0x7f132aac">WAPI CERT</string>
+  <string name="string_0x7f132aad">WAPI PSK</string>
   <string name="wifi_security_wep">WEP</string>
   <string name="wifi_security_wpa">WPA-Personal</string>
   <string name="wifi_security_wpa2">WPA2-Personal</string>

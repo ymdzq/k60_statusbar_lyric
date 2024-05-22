@@ -1,6 +1,6 @@
 .class public Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lcom/android/wm/shell/transition/Transitions$TransitionHandler;
@@ -4238,7 +4238,7 @@
 .end method
 
 .method private applyFreeformToMiniAnimation(Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;)V
-    .locals 28
+    .locals 29
 
     .line 1
     move-object/from16 v0, p0
@@ -4502,458 +4502,458 @@
     move-result v3
 
     .line 171
-    if-eqz v3, :cond_0
+    const/high16 v6, 0x3ec00000    # 0.375f
 
     .line 172
-    const/high16 v3, 0x3ec00000    # 0.375f
+    const v28, 0x3eb33333    # 0.35f
 
     .line 174
-    goto :goto_0
-
-    .line 176
-    :cond_0
-    const v3, 0x3eb33333    # 0.35f
+    if-eqz v3, :cond_0
 
     .line 177
+    move v3, v6
+
+    .line 179
+    goto :goto_0
+
+    .line 180
+    :cond_0
+    move/from16 v3, v28
+
+    .line 181
     :goto_0
     invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    .line 180
+    .line 183
     move-result-object v3
 
-    .line 183
+    .line 186
     aput-object v3, v5, v2
 
-    .line 184
+    .line 187
     const/16 v2, 0xc
 
-    .line 186
+    .line 189
     const-string/jumbo v3, "shadowRadius"
 
-    .line 188
+    .line 191
     aput-object v3, v5, v2
 
-    .line 191
+    .line 194
     iget-object v2, v0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation;->mContext:Landroid/content/Context;
 
-    .line 193
-    const/high16 v3, 0x42f00000    # 120.0f
+    .line 196
+    const/high16 v3, 0x42700000    # 60.0f
 
-    .line 195
+    .line 198
     invoke-static {v2, v3}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeUtils;->applyDip2Px(Landroid/content/Context;F)F
 
-    .line 197
+    .line 200
     move-result v2
 
-    .line 200
+    .line 203
     invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    .line 201
-    move-result-object v2
 
     .line 204
-    const/16 v7, 0xd
-
-    .line 205
-    aput-object v2, v5, v7
+    move-result-object v2
 
     .line 207
+    const/16 v3, 0xd
+
+    .line 208
+    aput-object v2, v5, v3
+
+    .line 210
     const/16 v2, 0xe
 
-    .line 209
-    const-string/jumbo v7, "shadowOffsetX"
-
-    .line 211
-    aput-object v7, v5, v2
+    .line 212
+    const-string/jumbo v3, "shadowOffsetX"
 
     .line 214
+    aput-object v3, v5, v2
+
+    .line 217
     iget-object v2, v0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation;->mContext:Landroid/content/Context;
-
-    .line 216
-    const/4 v15, 0x0
-
-    .line 218
-    invoke-static {v2, v15}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeUtils;->applyDip2Px(Landroid/content/Context;F)F
 
     .line 219
-    move-result v2
+    const/4 v3, 0x0
+
+    .line 221
+    invoke-static {v2, v3}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeUtils;->applyDip2Px(Landroid/content/Context;F)F
 
     .line 222
-    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    .line 223
-    move-result-object v2
-
-    .line 226
-    const/16 v7, 0xf
-
-    .line 227
-    aput-object v2, v5, v7
-
-    .line 229
-    const/16 v2, 0x10
-
-    .line 231
-    const-string/jumbo v7, "shadowOffsetY"
-
-    .line 233
-    aput-object v7, v5, v2
-
-    .line 236
-    iget-object v2, v0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation;->mContext:Landroid/content/Context;
-
-    .line 238
-    const/high16 v7, 0x42200000    # 40.0f
-
-    .line 240
-    invoke-static {v2, v7}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeUtils;->applyDip2Px(Landroid/content/Context;F)F
-
-    .line 242
     move-result v2
 
-    .line 245
+    .line 225
     invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    .line 246
+    .line 226
     move-result-object v2
 
-    .line 249
-    const/16 v7, 0x11
+    .line 229
+    const/16 v7, 0xf
 
-    .line 250
+    .line 230
     aput-object v2, v5, v7
 
-    .line 252
-    const/16 v2, 0x12
+    .line 232
+    const/16 v2, 0x10
 
-    .line 254
-    const-string/jumbo v7, "shadowDispersion"
+    .line 234
+    const-string/jumbo v7, "shadowOffsetY"
 
-    .line 256
+    .line 236
     aput-object v7, v5, v2
 
-    .line 259
-    const/16 v2, 0x13
+    .line 239
+    iget-object v2, v0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation;->mContext:Landroid/content/Context;
 
-    .line 261
-    const/high16 v26, 0x3f800000    # 1.0f
+    .line 241
+    const/high16 v7, 0x42200000    # 40.0f
 
-    .line 263
-    invoke-static/range {v26 .. v26}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    .line 243
+    invoke-static {v2, v7}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeUtils;->applyDip2Px(Landroid/content/Context;F)F
 
-    .line 265
-    move-result-object v7
+    .line 245
+    move-result v2
 
-    .line 268
-    aput-object v7, v5, v2
+    .line 248
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    .line 269
-    invoke-interface {v4, v5}, Lmiuix/animation/IStateStyle;->setTo([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
-
-    .line 271
+    .line 249
     move-result-object v2
 
-    .line 274
-    const-string v7, "folmePosX"
+    .line 252
+    const/16 v7, 0x11
 
-    .line 275
-    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationBounds()Landroid/graphics/Rect;
+    .line 253
+    aput-object v2, v5, v7
+
+    .line 255
+    const/16 v2, 0x12
+
+    .line 257
+    const-string/jumbo v7, "shadowDispersion"
+
+    .line 259
+    aput-object v7, v5, v2
+
+    .line 262
+    const/16 v2, 0x13
+
+    .line 264
+    const/high16 v26, 0x3f800000    # 1.0f
+
+    .line 266
+    invoke-static/range {v26 .. v26}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    .line 268
+    move-result-object v7
+
+    .line 271
+    aput-object v7, v5, v2
+
+    .line 272
+    invoke-interface {v4, v5}, Lmiuix/animation/IStateStyle;->setTo([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
+
+    .line 274
+    move-result-object v2
 
     .line 277
-    move-result-object v4
+    const-string v7, "folmePosX"
 
-    .line 280
-    iget v4, v4, Landroid/graphics/Rect;->left:I
-
-    .line 281
-    int-to-float v4, v4
-
-    .line 283
-    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    .line 284
-    move-result-object v8
-
-    .line 287
-    const-string v9, "folmePosY"
-
-    .line 288
+    .line 278
     invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationBounds()Landroid/graphics/Rect;
 
-    .line 290
+    .line 280
     move-result-object v4
 
-    .line 293
-    iget v4, v4, Landroid/graphics/Rect;->top:I
+    .line 283
+    iget v4, v4, Landroid/graphics/Rect;->left:I
 
-    .line 294
+    .line 284
     int-to-float v4, v4
 
-    .line 296
+    .line 286
     invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    .line 287
+    move-result-object v8
+
+    .line 290
+    const-string v9, "folmePosY"
+
+    .line 291
+    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationBounds()Landroid/graphics/Rect;
+
+    .line 293
+    move-result-object v4
+
+    .line 296
+    iget v4, v4, Landroid/graphics/Rect;->top:I
 
     .line 297
-    move-result-object v10
+    int-to-float v4, v4
+
+    .line 299
+    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     .line 300
-    const-string v11, "folmeScaleX"
-
-    .line 301
-    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationScaleX()F
+    move-result-object v10
 
     .line 303
-    move-result v4
+    const-string v11, "folmeScaleX"
+
+    .line 304
+    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationScaleX()F
 
     .line 306
-    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    .line 307
-    move-result-object v12
-
-    .line 310
-    const-string v13, "folmeScaleY"
-
-    .line 311
-    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationScaleY()F
-
-    .line 313
     move-result v4
 
-    .line 316
+    .line 309
     invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    .line 317
-    move-result-object v14
+    .line 310
+    move-result-object v12
+
+    .line 313
+    const-string v13, "folmeScaleY"
+
+    .line 314
+    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationScaleY()F
+
+    .line 316
+    move-result v4
+
+    .line 319
+    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     .line 320
-    const-string v4, "radius"
-
-    .line 321
-    move v5, v15
+    move-result-object v14
 
     .line 323
-    move-object v15, v4
+    const-string v15, "radius"
 
     .line 324
     invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationRadius()F
 
-    .line 325
+    .line 326
     move-result v4
-
-    .line 328
-    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     .line 329
+    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    .line 330
     move-result-object v16
 
-    .line 332
+    .line 333
     const-string/jumbo v17, "shadowAlpha"
 
-    .line 333
+    .line 334
     const v4, 0x3ed1eb85    # 0.41f
 
-    .line 336
+    .line 337
     invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    .line 339
+    .line 340
     move-result-object v18
 
-    .line 342
+    .line 343
     const-string/jumbo v19, "shadowRadius"
 
-    .line 343
+    .line 344
     iget-object v4, v0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation;->mContext:Landroid/content/Context;
 
-    .line 346
-    const/high16 v6, 0x43480000    # 200.0f
+    .line 347
+    const/high16 v5, 0x42a00000    # 80.0f
 
-    .line 348
-    invoke-static {v4, v6}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeUtils;->applyDip2Px(Landroid/content/Context;F)F
-
-    .line 350
-    move-result v4
-
-    .line 353
-    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    .line 354
-    move-result-object v20
-
-    .line 357
-    const-string/jumbo v21, "shadowOffsetX"
-
-    .line 358
-    iget-object v4, v0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation;->mContext:Landroid/content/Context;
-
-    .line 361
+    .line 349
     invoke-static {v4, v5}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeUtils;->applyDip2Px(Landroid/content/Context;F)F
 
-    .line 363
+    .line 351
     move-result v4
 
-    .line 366
+    .line 354
     invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    .line 367
-    move-result-object v22
+    .line 355
+    move-result-object v20
 
-    .line 370
-    const-string/jumbo v23, "shadowOffsetY"
+    .line 358
+    const-string/jumbo v21, "shadowOffsetX"
 
-    .line 371
+    .line 359
     iget-object v4, v0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation;->mContext:Landroid/content/Context;
 
-    .line 374
+    .line 362
     invoke-static {v4, v3}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeUtils;->applyDip2Px(Landroid/content/Context;F)F
 
-    .line 376
+    .line 364
     move-result v3
 
-    .line 379
+    .line 367
     invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    .line 380
-    move-result-object v24
+    .line 368
+    move-result-object v22
+
+    .line 371
+    const-string/jumbo v23, "shadowOffsetY"
+
+    .line 372
+    iget-object v3, v0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation;->mContext:Landroid/content/Context;
+
+    .line 375
+    const/high16 v4, 0x41c80000    # 25.0f
+
+    .line 377
+    invoke-static {v3, v4}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeUtils;->applyDip2Px(Landroid/content/Context;F)F
+
+    .line 379
+    move-result v3
+
+    .line 382
+    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     .line 383
+    move-result-object v24
+
+    .line 386
     const-string/jumbo v25, "shadowDispersion"
 
-    .line 384
+    .line 387
     invoke-static/range {v26 .. v26}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    .line 387
+    .line 390
     move-result-object v26
 
-    .line 390
+    .line 393
     filled-new-array/range {v7 .. v27}, [Ljava/lang/Object;
 
-    .line 391
-    move-result-object v3
-
     .line 394
-    const-string v4, " start anim freeform to mini: setBounds:  fromPosX: "
-
-    .line 395
-    invoke-static {v2, v3, v4}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation$$ExternalSyntheticOutline0;->m(Lmiuix/animation/IStateStyle;[Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v3
 
     .line 397
-    move-result-object v2
+    const-string v4, " start anim freeform to mini: setBounds:  fromPosX: "
+
+    .line 398
+    invoke-static {v2, v3, v4}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation$$ExternalSyntheticOutline0;->m(Lmiuix/animation/IStateStyle;[Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 400
-    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBasedBounds()Landroid/graphics/Rect;
+    move-result-object v2
 
-    .line 401
-    move-result-object v3
+    .line 403
+    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBasedBounds()Landroid/graphics/Rect;
 
     .line 404
-    iget v3, v3, Landroid/graphics/Rect;->left:I
-
-    .line 405
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result-object v3
 
     .line 407
-    const-string v3, " fromPosY"
+    iget v3, v3, Landroid/graphics/Rect;->left:I
 
-    .line 410
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 412
-    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBasedBounds()Landroid/graphics/Rect;
-
-    .line 415
-    move-result-object v3
-
-    .line 418
-    iget v3, v3, Landroid/graphics/Rect;->top:I
-
-    .line 419
+    .line 408
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 421
-    const-string v3, " fromScaleX: "
+    .line 410
+    const-string v3, " fromPosY"
 
-    .line 424
+    .line 413
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 426
-    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBasedScaleX()F
+    .line 415
+    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBasedBounds()Landroid/graphics/Rect;
 
-    .line 429
-    move-result v3
-
-    .line 432
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    .line 433
-    const-string v3, " fromScaleY: "
-
-    .line 436
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 438
-    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBasedScaleY()F
-
-    .line 441
-    move-result v3
-
-    .line 444
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    .line 445
-    const-string v3, " fromRadius: "
-
-    .line 448
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 450
-    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBasedRadius()F
-
-    .line 453
-    move-result v3
-
-    .line 456
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    .line 457
-    const-string v3, " fromShadowAlpha"
-
-    .line 460
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 462
-    invoke-static {}, Lcom/xiaomi/freeform/MiuiFreeformStub;->getInstance()Lcom/xiaomi/freeform/MiuiFreeformStub;
-
-    .line 465
+    .line 418
     move-result-object v3
 
-    .line 468
-    iget-object v0, v0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation;->mContext:Landroid/content/Context;
+    .line 421
+    iget v3, v3, Landroid/graphics/Rect;->top:I
 
-    .line 469
-    invoke-virtual {v3, v0}, Lcom/xiaomi/freeform/MiuiFreeformStub;->isPadScreen(Landroid/content/Context;)Z
+    .line 422
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 424
+    const-string v3, " fromScaleX: "
+
+    .line 427
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 429
+    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBasedScaleX()F
+
+    .line 432
+    move-result v3
+
+    .line 435
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    .line 436
+    const-string v3, " fromScaleY: "
+
+    .line 439
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 441
+    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBasedScaleY()F
+
+    .line 444
+    move-result v3
+
+    .line 447
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    .line 448
+    const-string v3, " fromRadius: "
+
+    .line 451
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 453
+    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBasedRadius()F
+
+    .line 456
+    move-result v3
+
+    .line 459
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    .line 460
+    const-string v3, " fromShadowAlpha"
+
+    .line 463
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 465
+    invoke-static {}, Lcom/xiaomi/freeform/MiuiFreeformStub;->getInstance()Lcom/xiaomi/freeform/MiuiFreeformStub;
+
+    .line 468
+    move-result-object v3
 
     .line 471
-    move-result v0
+    iget-object v0, v0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation;->mContext:Landroid/content/Context;
+
+    .line 472
+    invoke-virtual {v3, v0}, Lcom/xiaomi/freeform/MiuiFreeformStub;->isPadScreen(Landroid/content/Context;)Z
 
     .line 474
-    if-eqz v0, :cond_1
-
-    .line 475
-    const/high16 v6, 0x3ec00000    # 0.375f
+    move-result v0
 
     .line 477
+    if-eqz v0, :cond_1
+
+    .line 478
     goto :goto_1
 
-    .line 479
-    :cond_1
-    const v6, 0x3eb33333    # 0.35f
-
     .line 480
+    :cond_1
+    move/from16 v6, v28
+
+    .line 481
     :goto_1
     invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
     .line 483
-    const-string v0, " fromShadowRadius120.0 fromShadowOffsetX0.0 fromShadowOffsetY40.0 fromShadowDispersion1.0 toPosX: "
+    const-string v0, " fromShadowRadius60.0 fromShadowOffsetX0.0 fromShadowOffsetY40.0 fromShadowDispersion1.0 toPosX: "
 
     .line 486
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -5034,7 +5034,7 @@
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
     .line 547
-    const-string v0, " toShadowAlpha0.41 toShadowRadius200.0 toShadowOffsetX0.0 toShadowOffsetY120.0 toShadowDispersion1.0 miuiFreeformModeTaskInfo: "
+    const-string v0, " toShadowAlpha0.41 toShadowRadius80.0 toShadowOffsetX0.0 toShadowOffsetY25.0 toShadowDispersion1.0 miuiFreeformModeTaskInfo: "
 
     .line 550
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -5900,7 +5900,7 @@
     iget-object v4, v0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation;->mContext:Landroid/content/Context;
 
     .line 391
-    const/high16 v6, 0x43480000    # 200.0f
+    const/high16 v6, 0x42a00000    # 80.0f
 
     .line 393
     invoke-static {v4, v6}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeUtils;->applyDip2Px(Landroid/content/Context;F)F
@@ -5942,7 +5942,7 @@
     iget-object v4, v0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation;->mContext:Landroid/content/Context;
 
     .line 420
-    const/high16 v6, 0x42f00000    # 120.0f
+    const/high16 v6, 0x41c80000    # 25.0f
 
     .line 422
     invoke-static {v4, v6}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeUtils;->applyDip2Px(Landroid/content/Context;F)F
@@ -5972,25 +5972,25 @@
     filled-new-array/range {v8 .. v29}, [Ljava/lang/Object;
 
     .line 441
-    move-result-object v8
+    move-result-object v6
 
     .line 444
-    invoke-interface {v5, v8}, Lmiuix/animation/IStateStyle;->setTo([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
+    invoke-interface {v5, v6}, Lmiuix/animation/IStateStyle;->setTo([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     .line 445
     move-result-object v5
 
     .line 448
-    const/16 v8, 0x17
+    const/16 v6, 0x17
 
     .line 449
-    new-array v8, v8, [Ljava/lang/Object;
+    new-array v6, v6, [Ljava/lang/Object;
 
     .line 451
-    const-string v9, "folmePosX"
+    const-string v8, "folmePosX"
 
     .line 453
-    aput-object v9, v8, v7
+    aput-object v8, v6, v7
 
     .line 455
     invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationBounds()Landroid/graphics/Rect;
@@ -6011,7 +6011,7 @@
     move-result-object v7
 
     .line 467
-    aput-object v7, v8, v3
+    aput-object v7, v6, v3
 
     .line 468
     const-string v3, "folmePosY"
@@ -6020,7 +6020,7 @@
     const/4 v7, 0x2
 
     .line 472
-    aput-object v3, v8, v7
+    aput-object v3, v6, v7
 
     .line 473
     invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationBounds()Landroid/graphics/Rect;
@@ -6044,7 +6044,7 @@
     const/4 v7, 0x3
 
     .line 486
-    aput-object v3, v8, v7
+    aput-object v3, v6, v7
 
     .line 487
     const-string v3, "folmeScaleX"
@@ -6053,7 +6053,7 @@
     const/4 v7, 0x4
 
     .line 491
-    aput-object v3, v8, v7
+    aput-object v3, v6, v7
 
     .line 492
     invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationScaleX()F
@@ -6071,7 +6071,7 @@
     const/4 v7, 0x5
 
     .line 502
-    aput-object v3, v8, v7
+    aput-object v3, v6, v7
 
     .line 503
     const/4 v3, 0x6
@@ -6080,7 +6080,7 @@
     const-string v7, "folmeScaleY"
 
     .line 506
-    aput-object v7, v8, v3
+    aput-object v7, v6, v3
 
     .line 508
     invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationScaleY()F
@@ -6098,7 +6098,7 @@
     const/4 v7, 0x7
 
     .line 518
-    aput-object v3, v8, v7
+    aput-object v3, v6, v7
 
     .line 519
     const/16 v3, 0x8
@@ -6107,7 +6107,7 @@
     const-string v7, "folmeStrokeThickness"
 
     .line 523
-    aput-object v7, v8, v3
+    aput-object v7, v6, v3
 
     .line 525
     invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestStrokeThickness()F
@@ -6125,7 +6125,7 @@
     const/16 v7, 0x9
 
     .line 535
-    aput-object v3, v8, v7
+    aput-object v3, v6, v7
 
     .line 537
     const-string v3, "radius"
@@ -6134,7 +6134,7 @@
     const/16 v7, 0xa
 
     .line 541
-    aput-object v3, v8, v7
+    aput-object v3, v6, v7
 
     .line 543
     invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationRadius()F
@@ -6152,7 +6152,7 @@
     const/16 v7, 0xb
 
     .line 553
-    aput-object v3, v8, v7
+    aput-object v3, v6, v7
 
     .line 555
     const/16 v3, 0xc
@@ -6161,7 +6161,7 @@
     const-string/jumbo v7, "shadowAlpha"
 
     .line 559
-    aput-object v7, v8, v3
+    aput-object v7, v6, v3
 
     .line 562
     invoke-static {}, Lcom/xiaomi/freeform/MiuiFreeformStub;->getInstance()Lcom/xiaomi/freeform/MiuiFreeformStub;
@@ -6182,7 +6182,7 @@
     const/high16 v7, 0x3ec00000    # 0.375f
 
     .line 574
-    const v9, 0x3eb33333    # 0.35f
+    const v8, 0x3eb33333    # 0.35f
 
     .line 576
     if-eqz v3, :cond_2
@@ -6195,7 +6195,7 @@
 
     .line 582
     :cond_2
-    move v3, v9
+    move v3, v8
 
     .line 583
     :goto_0
@@ -6205,395 +6205,398 @@
     move-result-object v3
 
     .line 587
-    const/16 v10, 0xd
+    const/16 v9, 0xd
 
     .line 588
-    aput-object v3, v8, v10
+    aput-object v3, v6, v9
 
     .line 590
     const/16 v3, 0xe
 
     .line 592
-    const-string/jumbo v10, "shadowRadius"
+    const-string/jumbo v9, "shadowRadius"
 
     .line 594
-    aput-object v10, v8, v3
+    aput-object v9, v6, v3
 
     .line 597
     iget-object v3, v0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation;->mContext:Landroid/content/Context;
 
     .line 599
-    invoke-static {v3, v6}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeUtils;->applyDip2Px(Landroid/content/Context;F)F
+    const/high16 v9, 0x42700000    # 60.0f
 
     .line 601
+    invoke-static {v3, v9}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeUtils;->applyDip2Px(Landroid/content/Context;F)F
+
+    .line 603
     move-result v3
 
-    .line 604
+    .line 606
     invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    .line 605
+    .line 607
     move-result-object v3
 
-    .line 608
-    const/16 v6, 0xf
-
-    .line 609
-    aput-object v3, v8, v6
+    .line 610
+    const/16 v9, 0xf
 
     .line 611
-    const-string/jumbo v3, "shadowOffsetX"
+    aput-object v3, v6, v9
 
     .line 613
-    const/16 v6, 0x10
+    const-string/jumbo v3, "shadowOffsetX"
 
-    .line 616
-    aput-object v3, v8, v6
+    .line 615
+    const/16 v9, 0x10
 
     .line 618
-    iget-object v3, v0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation;->mContext:Landroid/content/Context;
+    aput-object v3, v6, v9
 
     .line 620
-    const/4 v6, 0x0
-
-    .line 622
-    invoke-static {v3, v6}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeUtils;->applyDip2Px(Landroid/content/Context;F)F
-
-    .line 623
-    move-result v3
-
-    .line 626
-    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    .line 627
-    move-result-object v3
-
-    .line 630
-    const/16 v6, 0x11
-
-    .line 631
-    aput-object v3, v8, v6
-
-    .line 633
-    const/16 v3, 0x12
-
-    .line 635
-    const-string/jumbo v6, "shadowOffsetY"
-
-    .line 637
-    aput-object v6, v8, v3
-
-    .line 640
     iget-object v3, v0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation;->mContext:Landroid/content/Context;
 
-    .line 642
-    const/high16 v6, 0x42200000    # 40.0f
+    .line 622
+    const/4 v9, 0x0
 
-    .line 644
-    invoke-static {v3, v6}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeUtils;->applyDip2Px(Landroid/content/Context;F)F
+    .line 624
+    invoke-static {v3, v9}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeUtils;->applyDip2Px(Landroid/content/Context;F)F
 
-    .line 646
+    .line 625
     move-result v3
 
-    .line 649
+    .line 628
     invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    .line 650
+    .line 629
     move-result-object v3
 
-    .line 653
-    const/16 v6, 0x13
+    .line 632
+    const/16 v9, 0x11
 
-    .line 654
-    aput-object v3, v8, v6
+    .line 633
+    aput-object v3, v6, v9
+
+    .line 635
+    const/16 v3, 0x12
+
+    .line 637
+    const-string/jumbo v9, "shadowOffsetY"
+
+    .line 639
+    aput-object v9, v6, v3
+
+    .line 642
+    iget-object v3, v0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation;->mContext:Landroid/content/Context;
+
+    .line 644
+    const/high16 v9, 0x42200000    # 40.0f
+
+    .line 646
+    invoke-static {v3, v9}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeUtils;->applyDip2Px(Landroid/content/Context;F)F
+
+    .line 648
+    move-result v3
+
+    .line 651
+    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    .line 652
+    move-result-object v3
+
+    .line 655
+    const/16 v9, 0x13
 
     .line 656
-    const/16 v3, 0x14
+    aput-object v3, v6, v9
 
     .line 658
-    const-string/jumbo v6, "shadowDispersion"
+    const/16 v3, 0x14
 
     .line 660
-    aput-object v6, v8, v3
+    const-string/jumbo v9, "shadowDispersion"
 
-    .line 663
-    const/16 v3, 0x15
+    .line 662
+    aput-object v9, v6, v3
 
     .line 665
-    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    const/16 v3, 0x15
 
     .line 667
+    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    .line 669
     move-result-object v4
 
-    .line 670
-    aput-object v4, v8, v3
-
-    .line 671
-    const/16 v3, 0x16
+    .line 672
+    aput-object v4, v6, v3
 
     .line 673
-    aput-object v2, v8, v3
+    const/16 v3, 0x16
 
     .line 675
-    const-string v2, " start anim applyMiniFreeformTapAnimation  fromPosX: "
+    aput-object v2, v6, v3
 
     .line 677
-    invoke-static {v5, v8, v2}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation$$ExternalSyntheticOutline0;->m(Lmiuix/animation/IStateStyle;[Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v2, " start anim applyMiniFreeformTapAnimation  fromPosX: "
 
     .line 679
+    invoke-static {v5, v6, v2}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation$$ExternalSyntheticOutline0;->m(Lmiuix/animation/IStateStyle;[Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 681
     move-result-object v2
 
-    .line 682
+    .line 684
     invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBasedBounds()Landroid/graphics/Rect;
 
-    .line 683
+    .line 685
     move-result-object v3
 
-    .line 686
+    .line 688
     iget v3, v3, Landroid/graphics/Rect;->left:I
-
-    .line 687
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     .line 689
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 691
     const-string v3, " fromPosY"
 
-    .line 692
+    .line 694
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 694
+    .line 696
     invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBasedBounds()Landroid/graphics/Rect;
 
-    .line 697
+    .line 699
     move-result-object v3
 
-    .line 700
+    .line 702
     iget v3, v3, Landroid/graphics/Rect;->top:I
-
-    .line 701
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     .line 703
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 705
     const-string v3, " fromScaleX: "
 
-    .line 706
+    .line 708
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 708
+    .line 710
     invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBasedScaleX()F
 
-    .line 711
+    .line 713
     move-result v3
 
-    .line 714
+    .line 716
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 715
+    .line 717
     const-string v3, " fromScaleY: "
 
-    .line 718
+    .line 720
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 720
+    .line 722
     invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBasedScaleY()F
 
-    .line 723
+    .line 725
     move-result v3
 
-    .line 726
+    .line 728
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 727
+    .line 729
     const-string v3, " fromStrokeThickness: "
 
-    .line 730
+    .line 732
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 732
+    .line 734
     invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBasedStrokeThickness()F
 
-    .line 735
+    .line 737
     move-result v3
 
-    .line 738
+    .line 740
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 739
+    .line 741
     const-string v3, " fromRadius: "
 
-    .line 742
+    .line 744
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 744
+    .line 746
     invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBasedRadius()F
 
-    .line 747
+    .line 749
     move-result v3
 
-    .line 750
+    .line 752
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 751
-    const-string v3, " fromShadowAlpha0.41 fromShadowRadius200.0 fromShadowOffsetX0.0 fromShadowOffsetY120.0 fromShadowDispersion1.0 toPosX: "
-
-    .line 754
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 753
+    const-string v3, " fromShadowAlpha0.41 fromShadowRadius80.0 fromShadowOffsetX0.0 fromShadowOffsetY25.0 fromShadowDispersion1.0 toPosX: "
 
     .line 756
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 758
     invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationBounds()Landroid/graphics/Rect;
 
-    .line 759
+    .line 761
     move-result-object v3
 
-    .line 762
+    .line 764
     iget v3, v3, Landroid/graphics/Rect;->left:I
 
-    .line 763
+    .line 765
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 765
+    .line 767
     const-string v3, " toPosY: "
 
-    .line 768
+    .line 770
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 770
+    .line 772
     invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationBounds()Landroid/graphics/Rect;
 
-    .line 773
+    .line 775
     move-result-object v3
 
-    .line 776
+    .line 778
     iget v3, v3, Landroid/graphics/Rect;->top:I
 
-    .line 777
+    .line 779
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 779
+    .line 781
     const-string v3, " toScaleX: "
 
-    .line 782
+    .line 784
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 784
+    .line 786
     invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationScaleX()F
 
-    .line 787
+    .line 789
     move-result v3
 
-    .line 790
+    .line 792
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 791
+    .line 793
     const-string v3, " toScaleY: "
 
-    .line 794
+    .line 796
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 796
+    .line 798
     invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationScaleY()F
 
-    .line 799
+    .line 801
     move-result v3
 
-    .line 802
+    .line 804
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 803
+    .line 805
     const-string v3, " toStrokeThickness: "
 
-    .line 806
+    .line 808
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 808
+    .line 810
     invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestStrokeThickness()F
 
-    .line 811
+    .line 813
     move-result v3
 
-    .line 814
+    .line 816
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 815
+    .line 817
     const-string v3, " toRadius: "
 
-    .line 818
+    .line 820
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 820
+    .line 822
     invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationRadius()F
 
-    .line 823
+    .line 825
     move-result v3
 
-    .line 826
+    .line 828
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 827
+    .line 829
     const-string v3, " toShadowAlpha"
 
-    .line 830
+    .line 832
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 832
+    .line 834
     invoke-static {}, Lcom/xiaomi/freeform/MiuiFreeformStub;->getInstance()Lcom/xiaomi/freeform/MiuiFreeformStub;
 
-    .line 835
+    .line 837
     move-result-object v3
 
-    .line 838
+    .line 840
     iget-object v0, v0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation;->mContext:Landroid/content/Context;
 
-    .line 839
+    .line 841
     invoke-virtual {v3, v0}, Lcom/xiaomi/freeform/MiuiFreeformStub;->isPadScreen(Landroid/content/Context;)Z
 
-    .line 841
+    .line 843
     move-result v0
 
-    .line 844
+    .line 846
     if-eqz v0, :cond_3
 
-    .line 845
+    .line 847
     goto :goto_1
 
-    .line 847
+    .line 849
     :cond_3
-    move v7, v9
+    move v7, v8
 
-    .line 848
+    .line 850
     :goto_1
     invoke-virtual {v2, v7}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 849
-    const-string v0, " toShadowRadius120.0 toShadowOffsetX0.0 toShadowOffsetY40.0 toShadowDispersion1.0 miuiFreeformModeTaskInfo: "
-
-    .line 852
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 851
+    const-string v0, " toShadowRadius60.0 toShadowOffsetX0.0 toShadowOffsetY40.0 toShadowDispersion1.0 miuiFreeformModeTaskInfo: "
 
     .line 854
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 856
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 857
+    .line 859
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 860
+    .line 862
     move-result-object v0
 
-    .line 863
+    .line 865
     const-string v1, "MiuiFreeformAnimation"
 
-    .line 864
+    .line 866
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 866
+    .line 868
     return-void
 
-    .line 869
+    .line 871
     :array_0
     .array-data 4
         0x3f733333    # 0.95f
         0x3e800000    # 0.25f
     .end array-data
-    .line 870
+    .line 872
 .end method
 
 .method private applyMiuiFreeformAvoidAnimation(Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;)V
@@ -7382,746 +7385,749 @@
     iget-object v3, v7, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation;->mContext:Landroid/content/Context;
 
     .line 316
-    const/high16 v6, 0x42f00000    # 120.0f
-
-    .line 318
     if-eqz v2, :cond_5
 
-    .line 320
-    const/high16 v10, 0x43480000    # 200.0f
+    .line 318
+    const/high16 v6, 0x42a00000    # 80.0f
 
-    .line 322
+    .line 320
     goto :goto_2
 
-    .line 324
+    .line 322
     :cond_5
-    move v10, v6
+    const/high16 v6, 0x42700000    # 60.0f
 
-    .line 325
+    .line 323
     :goto_2
-    invoke-static {v3, v10}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeUtils;->applyDip2Px(Landroid/content/Context;F)F
-
-    .line 326
-    move-result v3
-
-    .line 329
-    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    .line 330
-    move-result-object v3
-
-    .line 333
-    const/16 v10, 0xb
-
-    .line 334
-    aput-object v3, v4, v10
-
-    .line 336
-    const/16 v3, 0xc
-
-    .line 338
-    const-string/jumbo v10, "shadowOffsetX"
-
-    .line 340
-    aput-object v10, v4, v3
-
-    .line 343
-    iget-object v3, v7, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation;->mContext:Landroid/content/Context;
-
-    .line 345
-    const/4 v10, 0x0
-
-    .line 347
-    invoke-static {v3, v10}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeUtils;->applyDip2Px(Landroid/content/Context;F)F
-
-    .line 348
-    move-result v3
-
-    .line 351
-    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    .line 352
-    move-result-object v3
-
-    .line 355
-    const/16 v11, 0xd
-
-    .line 356
-    aput-object v3, v4, v11
-
-    .line 358
-    const/16 v3, 0xe
-
-    .line 360
-    const-string/jumbo v11, "shadowOffsetY"
-
-    .line 362
-    aput-object v11, v4, v3
-
-    .line 365
-    iget-object v3, v7, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation;->mContext:Landroid/content/Context;
-
-    .line 367
-    if-eqz v2, :cond_6
-
-    .line 369
-    goto :goto_3
-
-    .line 371
-    :cond_6
-    const/high16 v6, 0x42200000    # 40.0f
-
-    .line 372
-    :goto_3
     invoke-static {v3, v6}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeUtils;->applyDip2Px(Landroid/content/Context;F)F
 
-    .line 374
-    move-result v2
+    .line 325
+    move-result v3
 
-    .line 377
-    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    .line 328
+    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    .line 329
+    move-result-object v3
+
+    .line 332
+    const/16 v6, 0xb
+
+    .line 333
+    aput-object v3, v4, v6
+
+    .line 335
+    const/16 v3, 0xc
+
+    .line 337
+    const-string/jumbo v6, "shadowOffsetX"
+
+    .line 339
+    aput-object v6, v4, v3
+
+    .line 342
+    iget-object v3, v7, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation;->mContext:Landroid/content/Context;
+
+    .line 344
+    const/4 v6, 0x0
+
+    .line 346
+    invoke-static {v3, v6}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeUtils;->applyDip2Px(Landroid/content/Context;F)F
+
+    .line 347
+    move-result v3
+
+    .line 350
+    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    .line 351
+    move-result-object v3
+
+    .line 354
+    const/16 v10, 0xd
+
+    .line 355
+    aput-object v3, v4, v10
+
+    .line 357
+    const/16 v3, 0xe
+
+    .line 359
+    const-string/jumbo v10, "shadowOffsetY"
+
+    .line 361
+    aput-object v10, v4, v3
+
+    .line 364
+    iget-object v3, v7, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation;->mContext:Landroid/content/Context;
+
+    .line 366
+    if-eqz v2, :cond_6
+
+    .line 368
+    const/high16 v2, 0x41c80000    # 25.0f
+
+    .line 370
+    goto :goto_3
+
+    .line 372
+    :cond_6
+    const/high16 v2, 0x42200000    # 40.0f
+
+    .line 373
+    :goto_3
+    invoke-static {v3, v2}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeUtils;->applyDip2Px(Landroid/content/Context;F)F
+
+    .line 375
+    move-result v2
 
     .line 378
-    move-result-object v2
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    .line 381
-    const/16 v3, 0xf
+    .line 379
+    move-result-object v2
 
     .line 382
+    const/16 v3, 0xf
+
+    .line 383
     aput-object v2, v4, v3
 
-    .line 384
+    .line 385
     const/16 v2, 0x10
 
-    .line 386
+    .line 387
     const-string/jumbo v3, "shadowDispersion"
 
-    .line 388
+    .line 389
     aput-object v3, v4, v2
 
-    .line 391
+    .line 392
     invoke-static {v5}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    .line 393
+    .line 394
     move-result-object v2
-
-    .line 396
-    const/16 v3, 0x11
 
     .line 397
+    const/16 v3, 0x11
+
+    .line 398
     aput-object v2, v4, v3
 
-    .line 399
+    .line 400
     const/16 v2, 0x12
 
-    .line 401
+    .line 402
     const-string v3, "folmeScaleX"
 
-    .line 403
+    .line 404
     aput-object v3, v4, v2
 
-    .line 405
+    .line 406
     invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBasedScaleX()F
 
-    .line 407
+    .line 408
     move-result v2
-
-    .line 410
-    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     .line 411
-    move-result-object v2
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    .line 414
-    const/16 v3, 0x13
+    .line 412
+    move-result-object v2
 
     .line 415
+    const/16 v3, 0x13
+
+    .line 416
     aput-object v2, v4, v3
 
-    .line 417
+    .line 418
     const/16 v2, 0x14
 
-    .line 419
+    .line 420
     const-string v3, "folmeScaleY"
 
-    .line 421
+    .line 422
     aput-object v3, v4, v2
 
-    .line 423
+    .line 424
     invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBasedScaleY()F
 
-    .line 425
+    .line 426
     move-result v2
-
-    .line 428
-    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     .line 429
-    move-result-object v2
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    .line 432
-    const/16 v3, 0x15
+    .line 430
+    move-result-object v2
 
     .line 433
+    const/16 v3, 0x15
+
+    .line 434
     aput-object v2, v4, v3
 
-    .line 435
+    .line 436
     const/16 v2, 0x16
 
-    .line 437
+    .line 438
     const-string v3, "folmePosX"
 
-    .line 439
+    .line 440
     aput-object v3, v4, v2
 
-    .line 441
+    .line 442
     invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBasedBounds()Landroid/graphics/Rect;
 
-    .line 443
+    .line 444
     move-result-object v2
-
-    .line 446
-    iget v2, v2, Landroid/graphics/Rect;->left:I
 
     .line 447
-    int-to-float v2, v2
-
-    .line 449
-    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    .line 450
-    move-result-object v2
-
-    .line 453
-    const/16 v3, 0x17
-
-    .line 454
-    aput-object v2, v4, v3
-
-    .line 456
-    const/16 v2, 0x18
-
-    .line 458
-    const-string v3, "folmePosY"
-
-    .line 460
-    aput-object v3, v4, v2
-
-    .line 462
-    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBasedBounds()Landroid/graphics/Rect;
-
-    .line 464
-    move-result-object v2
-
-    .line 467
-    iget v2, v2, Landroid/graphics/Rect;->top:I
-
-    .line 468
-    int-to-float v2, v2
-
-    .line 470
-    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    .line 471
-    move-result-object v2
-
-    .line 474
-    const/16 v3, 0x19
-
-    .line 475
-    aput-object v2, v4, v3
-
-    .line 477
-    invoke-interface {v1, v4}, Lmiuix/animation/IStateStyle;->setTo([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
-
-    .line 479
-    move-result-object v1
-
-    .line 482
-    const-string v16, "folmeAlpha"
-
-    .line 483
-    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationAlpha()F
-
-    .line 485
-    move-result v2
-
-    .line 488
-    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    .line 489
-    move-result-object v17
-
-    .line 492
-    const-string v18, "radius"
-
-    .line 493
-    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationRadius()F
-
-    .line 495
-    move-result v2
-
-    .line 498
-    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    .line 499
-    move-result-object v19
-
-    .line 502
-    const-string v20, "clipXWidth"
-
-    .line 503
-    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationClipRect()Landroid/graphics/Rect;
-
-    .line 505
-    move-result-object v2
-
-    .line 508
-    invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
-
-    .line 509
-    move-result v2
-
-    .line 512
-    int-to-float v2, v2
-
-    .line 513
-    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    .line 514
-    move-result-object v21
-
-    .line 517
-    const-string v22, "clipYHeight"
-
-    .line 518
-    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationClipRect()Landroid/graphics/Rect;
-
-    .line 520
-    move-result-object v2
-
-    .line 523
-    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
-
-    .line 524
-    move-result v2
-
-    .line 527
-    int-to-float v2, v2
-
-    .line 528
-    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    .line 529
-    move-result-object v23
-
-    .line 532
-    const-string/jumbo v24, "shadowAlpha"
-
-    .line 533
-    const v2, 0x3ecccccd    # 0.4f
-
-    .line 536
-    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    .line 539
-    move-result-object v25
-
-    .line 542
-    const-string/jumbo v26, "shadowRadius"
-
-    .line 543
-    iget-object v2, v7, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation;->mContext:Landroid/content/Context;
-
-    .line 546
-    const/high16 v3, 0x41a00000    # 20.0f
-
-    .line 548
-    invoke-static {v2, v3}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeUtils;->applyDip2Px(Landroid/content/Context;F)F
-
-    .line 550
-    move-result v2
-
-    .line 553
-    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    .line 554
-    move-result-object v27
-
-    .line 557
-    const-string/jumbo v28, "shadowOffsetX"
-
-    .line 558
-    invoke-static {v10}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    .line 561
-    move-result-object v29
-
-    .line 564
-    const-string/jumbo v30, "shadowOffsetY"
-
-    .line 565
-    invoke-static {v10}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    .line 568
-    move-result-object v31
-
-    .line 571
-    const-string/jumbo v32, "shadowDispersion"
-
-    .line 572
-    invoke-static {v5}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    .line 575
-    move-result-object v33
-
-    .line 578
-    const-string v34, "folmeScaleX"
-
-    .line 579
-    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationScaleX()F
-
-    .line 581
-    move-result v2
-
-    .line 584
-    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    .line 585
-    move-result-object v35
-
-    .line 588
-    const-string v36, "folmeScaleY"
-
-    .line 589
-    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationScaleY()F
-
-    .line 591
-    move-result v2
-
-    .line 594
-    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    .line 595
-    move-result-object v37
-
-    .line 598
-    const-string v38, "folmePosX"
-
-    .line 599
-    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationBounds()Landroid/graphics/Rect;
-
-    .line 601
-    move-result-object v2
-
-    .line 604
     iget v2, v2, Landroid/graphics/Rect;->left:I
 
-    .line 605
+    .line 448
     int-to-float v2, v2
 
-    .line 607
+    .line 450
     invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    .line 608
-    move-result-object v39
-
-    .line 611
-    const-string v40, "folmePosY"
-
-    .line 612
-    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationBounds()Landroid/graphics/Rect;
-
-    .line 614
+    .line 451
     move-result-object v2
 
-    .line 617
+    .line 454
+    const/16 v3, 0x17
+
+    .line 455
+    aput-object v2, v4, v3
+
+    .line 457
+    const/16 v2, 0x18
+
+    .line 459
+    const-string v3, "folmePosY"
+
+    .line 461
+    aput-object v3, v4, v2
+
+    .line 463
+    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBasedBounds()Landroid/graphics/Rect;
+
+    .line 465
+    move-result-object v2
+
+    .line 468
     iget v2, v2, Landroid/graphics/Rect;->top:I
 
-    .line 618
+    .line 469
     int-to-float v2, v2
 
-    .line 620
+    .line 471
     invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
+    .line 472
+    move-result-object v2
+
+    .line 475
+    const/16 v3, 0x19
+
+    .line 476
+    aput-object v2, v4, v3
+
+    .line 478
+    invoke-interface {v1, v4}, Lmiuix/animation/IStateStyle;->setTo([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
+
+    .line 480
+    move-result-object v1
+
+    .line 483
+    const-string v16, "folmeAlpha"
+
+    .line 484
+    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationAlpha()F
+
+    .line 486
+    move-result v2
+
+    .line 489
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    .line 490
+    move-result-object v17
+
+    .line 493
+    const-string v18, "radius"
+
+    .line 494
+    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationRadius()F
+
+    .line 496
+    move-result v2
+
+    .line 499
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    .line 500
+    move-result-object v19
+
+    .line 503
+    const-string v20, "clipXWidth"
+
+    .line 504
+    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationClipRect()Landroid/graphics/Rect;
+
+    .line 506
+    move-result-object v2
+
+    .line 509
+    invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
+
+    .line 510
+    move-result v2
+
+    .line 513
+    int-to-float v2, v2
+
+    .line 514
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    .line 515
+    move-result-object v21
+
+    .line 518
+    const-string v22, "clipYHeight"
+
+    .line 519
+    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationClipRect()Landroid/graphics/Rect;
+
+    .line 521
+    move-result-object v2
+
+    .line 524
+    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
+
+    .line 525
+    move-result v2
+
+    .line 528
+    int-to-float v2, v2
+
+    .line 529
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    .line 530
+    move-result-object v23
+
+    .line 533
+    const-string/jumbo v24, "shadowAlpha"
+
+    .line 534
+    const v2, 0x3ecccccd    # 0.4f
+
+    .line 537
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    .line 540
+    move-result-object v25
+
+    .line 543
+    const-string/jumbo v26, "shadowRadius"
+
+    .line 544
+    iget-object v2, v7, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation;->mContext:Landroid/content/Context;
+
+    .line 547
+    const/high16 v3, 0x41a00000    # 20.0f
+
+    .line 549
+    invoke-static {v2, v3}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeUtils;->applyDip2Px(Landroid/content/Context;F)F
+
+    .line 551
+    move-result v2
+
+    .line 554
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    .line 555
+    move-result-object v27
+
+    .line 558
+    const-string/jumbo v28, "shadowOffsetX"
+
+    .line 559
+    invoke-static {v6}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    .line 562
+    move-result-object v29
+
+    .line 565
+    const-string/jumbo v30, "shadowOffsetY"
+
+    .line 566
+    invoke-static {v6}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    .line 569
+    move-result-object v31
+
+    .line 572
+    const-string/jumbo v32, "shadowDispersion"
+
+    .line 573
+    invoke-static {v5}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    .line 576
+    move-result-object v33
+
+    .line 579
+    const-string v34, "folmeScaleX"
+
+    .line 580
+    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationScaleX()F
+
+    .line 582
+    move-result v2
+
+    .line 585
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    .line 586
+    move-result-object v35
+
+    .line 589
+    const-string v36, "folmeScaleY"
+
+    .line 590
+    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationScaleY()F
+
+    .line 592
+    move-result v2
+
+    .line 595
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    .line 596
+    move-result-object v37
+
+    .line 599
+    const-string v38, "folmePosX"
+
+    .line 600
+    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationBounds()Landroid/graphics/Rect;
+
+    .line 602
+    move-result-object v2
+
+    .line 605
+    iget v2, v2, Landroid/graphics/Rect;->left:I
+
+    .line 606
+    int-to-float v2, v2
+
+    .line 608
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    .line 609
+    move-result-object v39
+
+    .line 612
+    const-string v40, "folmePosY"
+
+    .line 613
+    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationBounds()Landroid/graphics/Rect;
+
+    .line 615
+    move-result-object v2
+
+    .line 618
+    iget v2, v2, Landroid/graphics/Rect;->top:I
+
+    .line 619
+    int-to-float v2, v2
+
     .line 621
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    .line 622
     move-result-object v41
 
-    .line 624
+    .line 625
     move-object/from16 v42, v0
 
-    .line 625
+    .line 626
     filled-new-array/range {v16 .. v42}, [Ljava/lang/Object;
 
-    .line 627
+    .line 628
     move-result-object v0
-
-    .line 630
-    const-string v2, "applyPinAnimation  from poxX: "
 
     .line 631
+    const-string v2, "applyPinAnimation  from poxX: "
+
+    .line 632
     invoke-static {v1, v0, v2}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation$$ExternalSyntheticOutline0;->m(Lmiuix/animation/IStateStyle;[Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 633
+    .line 634
     move-result-object v0
-
-    .line 636
-    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBasedBounds()Landroid/graphics/Rect;
 
     .line 637
-    move-result-object v1
-
-    .line 640
-    iget v1, v1, Landroid/graphics/Rect;->left:I
-
-    .line 641
-    int-to-float v1, v1
-
-    .line 643
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    .line 644
-    const-string v1, " from posY: "
-
-    .line 647
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 649
     invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBasedBounds()Landroid/graphics/Rect;
 
-    .line 652
+    .line 638
     move-result-object v1
 
-    .line 655
-    iget v1, v1, Landroid/graphics/Rect;->top:I
-
-    .line 656
-    int-to-float v1, v1
-
-    .line 658
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    .line 659
-    const-string v1, " from scaleX: "
-
-    .line 662
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 664
-    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBasedScaleX()F
-
-    .line 667
-    move-result v1
-
-    .line 670
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    .line 671
-    const-string v1, " from scaleY: "
-
-    .line 674
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 676
-    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBasedScaleY()F
-
-    .line 679
-    move-result v1
-
-    .line 682
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    .line 683
-    const-string v1, " from clipXWidth: "
-
-    .line 686
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 688
-    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBasedClipRect()Landroid/graphics/Rect;
-
-    .line 691
-    move-result-object v1
-
-    .line 694
-    invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
-
-    .line 695
-    move-result v1
-
-    .line 698
-    int-to-float v1, v1
-
-    .line 699
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    .line 700
-    const-string v1, " from clipYHeight: "
-
-    .line 703
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 705
-    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBasedClipRect()Landroid/graphics/Rect;
-
-    .line 708
-    move-result-object v1
-
-    .line 711
-    invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
-
-    .line 712
-    move-result v1
-
-    .line 715
-    int-to-float v1, v1
-
-    .line 716
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    .line 717
-    const-string v1, " To posX: "
-
-    .line 720
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 722
-    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationBounds()Landroid/graphics/Rect;
-
-    .line 725
-    move-result-object v1
-
-    .line 728
+    .line 641
     iget v1, v1, Landroid/graphics/Rect;->left:I
 
-    .line 729
+    .line 642
     int-to-float v1, v1
 
-    .line 731
+    .line 644
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 732
-    const-string v1, " To posY: "
+    .line 645
+    const-string v1, " from posY: "
 
-    .line 735
+    .line 648
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 737
-    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationBounds()Landroid/graphics/Rect;
+    .line 650
+    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBasedBounds()Landroid/graphics/Rect;
 
-    .line 740
+    .line 653
     move-result-object v1
 
-    .line 743
+    .line 656
     iget v1, v1, Landroid/graphics/Rect;->top:I
 
-    .line 744
+    .line 657
     int-to-float v1, v1
 
-    .line 746
+    .line 659
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 747
-    const-string v1, " To scaleX: "
+    .line 660
+    const-string v1, " from scaleX: "
 
-    .line 750
+    .line 663
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 752
-    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationScaleX()F
+    .line 665
+    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBasedScaleX()F
 
-    .line 755
+    .line 668
     move-result v1
 
-    .line 758
+    .line 671
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 759
-    const-string v1, " To scaleY: "
+    .line 672
+    const-string v1, " from scaleY: "
 
-    .line 762
+    .line 675
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 764
-    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationScaleX()F
+    .line 677
+    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBasedScaleY()F
 
-    .line 767
+    .line 680
     move-result v1
 
-    .line 770
+    .line 683
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 771
-    const-string v1, " To clipXWidth: "
+    .line 684
+    const-string v1, " from clipXWidth: "
 
-    .line 774
+    .line 687
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 776
-    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationClipRect()Landroid/graphics/Rect;
+    .line 689
+    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBasedClipRect()Landroid/graphics/Rect;
 
-    .line 779
+    .line 692
     move-result-object v1
 
-    .line 782
+    .line 695
     invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
 
-    .line 783
+    .line 696
     move-result v1
 
-    .line 786
+    .line 699
     int-to-float v1, v1
 
-    .line 787
+    .line 700
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 788
-    const-string v1, " To clipYHeight: "
+    .line 701
+    const-string v1, " from clipYHeight: "
 
-    .line 791
+    .line 704
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 793
-    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationClipRect()Landroid/graphics/Rect;
+    .line 706
+    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBasedClipRect()Landroid/graphics/Rect;
 
-    .line 796
+    .line 709
     move-result-object v1
 
-    .line 799
+    .line 712
     invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
 
-    .line 800
+    .line 713
     move-result v1
 
-    .line 803
+    .line 716
     int-to-float v1, v1
 
-    .line 804
+    .line 717
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 805
-    const-string v1, " miuiFreeformModeTaskInfo: "
+    .line 718
+    const-string v1, " To posX: "
 
-    .line 808
+    .line 721
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 810
+    .line 723
+    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationBounds()Landroid/graphics/Rect;
+
+    .line 726
+    move-result-object v1
+
+    .line 729
+    iget v1, v1, Landroid/graphics/Rect;->left:I
+
+    .line 730
+    int-to-float v1, v1
+
+    .line 732
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    .line 733
+    const-string v1, " To posY: "
+
+    .line 736
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 738
+    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationBounds()Landroid/graphics/Rect;
+
+    .line 741
+    move-result-object v1
+
+    .line 744
+    iget v1, v1, Landroid/graphics/Rect;->top:I
+
+    .line 745
+    int-to-float v1, v1
+
+    .line 747
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    .line 748
+    const-string v1, " To scaleX: "
+
+    .line 751
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 753
+    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationScaleX()F
+
+    .line 756
+    move-result v1
+
+    .line 759
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    .line 760
+    const-string v1, " To scaleY: "
+
+    .line 763
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 765
+    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationScaleX()F
+
+    .line 768
+    move-result v1
+
+    .line 771
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    .line 772
+    const-string v1, " To clipXWidth: "
+
+    .line 775
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 777
+    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationClipRect()Landroid/graphics/Rect;
+
+    .line 780
+    move-result-object v1
+
+    .line 783
+    invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
+
+    .line 784
+    move-result v1
+
+    .line 787
+    int-to-float v1, v1
+
+    .line 788
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    .line 789
+    const-string v1, " To clipYHeight: "
+
+    .line 792
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 794
+    invoke-virtual/range {p1 .. p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationClipRect()Landroid/graphics/Rect;
+
+    .line 797
+    move-result-object v1
+
+    .line 800
+    invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
+
+    .line 801
+    move-result v1
+
+    .line 804
+    int-to-float v1, v1
+
+    .line 805
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    .line 806
+    const-string v1, " miuiFreeformModeTaskInfo: "
+
+    .line 809
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 811
     invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 813
+    .line 814
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 816
+    .line 817
     move-result-object v0
 
-    .line 819
+    .line 820
     const-string v1, "MiuiFreeformAnimation"
 
-    .line 820
+    .line 821
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 822
+    .line 823
     return v9
+
+    .line 826
+    nop
 
     :array_0
     .array-data 4
@@ -10798,14 +10804,14 @@
     if-eqz v1, :cond_7
 
     .line 764
-    const/high16 v6, 0x43480000    # 200.0f
+    const/high16 v6, 0x42a00000    # 80.0f
 
     .line 766
     goto :goto_4
 
     .line 768
     :cond_7
-    const/high16 v6, 0x42f00000    # 120.0f
+    const/high16 v6, 0x42700000    # 60.0f
 
     .line 769
     :goto_4
@@ -10872,7 +10878,7 @@
     if-eqz v1, :cond_8
 
     .line 813
-    const/high16 v1, 0x42f00000    # 120.0f
+    const/high16 v1, 0x41c80000    # 25.0f
 
     .line 815
     goto :goto_5
@@ -30307,121 +30313,109 @@
     invoke-virtual {v2, v3}, Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;->setMiuiFreeformExiting(Z)Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;
 
     .line 100
-    move-result-object v2
+    invoke-virtual {p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getState()Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo$State;
 
     .line 103
-    invoke-virtual {v2}, Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;->freeformToFullscreen()Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;
-
-    .line 104
-    invoke-virtual {p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getState()Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo$State;
-
-    .line 107
     move-result-object v2
 
-    .line 110
+    .line 106
     iget-object v2, v2, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo$State;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 111
+    .line 107
     iget-object v2, v2, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
 
-    .line 113
+    .line 109
     invoke-virtual {v0, v2, v1}, Landroid/window/WindowContainerTransaction;->setMiuiFreeformInfoChange(Landroid/window/WindowContainerToken;Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;)Landroid/window/WindowContainerTransaction;
 
-    .line 115
+    .line 111
     iget-object v1, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation;->mPendingTransitionTokens:Landroid/util/ArrayMap;
 
-    .line 118
+    .line 114
     iget-object v2, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation;->mTransitions:Lcom/android/wm/shell/transition/Transitions;
 
-    .line 120
+    .line 116
     const v3, 0x7ffffff1
 
-    .line 122
+    .line 118
     invoke-virtual {v2, v3, v0, p0}, Lcom/android/wm/shell/transition/Transitions;->startTransition(ILandroid/window/WindowContainerTransaction;Lcom/android/wm/shell/transition/Transitions$TransitionHandler;)Landroid/os/IBinder;
 
-    .line 125
+    .line 121
     move-result-object v0
 
-    .line 128
+    .line 124
     new-instance v2, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation$PendingTransition;
 
-    .line 129
+    .line 125
     invoke-direct {v2, v3, p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation$PendingTransition;-><init>(ILcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;)V
 
-    .line 131
+    .line 127
     invoke-virtual {v1, v0, v2}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 134
+    .line 130
     iget-object p0, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation;->mPendingMaximizeMiuiFreeform:Landroid/util/SparseArray;
 
-    .line 137
+    .line 133
     invoke-virtual {p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getState()Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo$State;
 
-    .line 139
+    .line 135
     move-result-object v0
 
-    .line 142
+    .line 138
     iget-object v0, v0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo$State;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 143
+    .line 139
     iget v0, v0, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
-    .line 145
+    .line 141
     invoke-virtual {p0, v0, p1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 147
+    .line 143
     goto :goto_1
 
-    .line 150
+    .line 146
     :cond_1
     invoke-virtual {p1, v6}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->setScale(F)V
 
-    .line 151
+    .line 147
     invoke-virtual {p1, v5}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->setMode(I)V
 
-    .line 154
+    .line 150
     invoke-virtual {p1, v4}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 157
+    .line 153
     invoke-virtual {v1, v5}, Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;->setMiuiFreeformMode(I)Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;
 
-    .line 160
+    .line 156
     move-result-object v2
 
-    .line 163
+    .line 159
     invoke-virtual {v2, v6}, Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;->setMiuiFreeformScale(F)Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;
 
-    .line 164
-    move-result-object v2
-
-    .line 167
-    invoke-virtual {v2}, Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;->freeformToFullscreen()Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;
-
-    .line 168
+    .line 160
     invoke-virtual {p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getState()Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo$State;
 
-    .line 171
+    .line 163
     move-result-object p1
 
-    .line 174
+    .line 166
     iget-object p1, p1, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo$State;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 175
+    .line 167
     iget-object p1, p1, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
 
-    .line 177
+    .line 169
     invoke-virtual {v0, p1, v1}, Landroid/window/WindowContainerTransaction;->setMiuiFreeformInfoChange(Landroid/window/WindowContainerToken;Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;)Landroid/window/WindowContainerTransaction;
 
-    .line 179
+    .line 171
     iget-object p0, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation;->mRootTaskDisplayAreaOrganizer:Lcom/android/wm/shell/RootTaskDisplayAreaOrganizer;
 
-    .line 182
+    .line 174
     invoke-virtual {p0, v0}, Landroid/window/DisplayAreaOrganizer;->applyTransaction(Landroid/window/WindowContainerTransaction;)V
 
-    .line 184
+    .line 176
     :goto_1
     return-void
-    .line 187
+    .line 179
 .end method
 
 .method public startMiniFreeformDoubleTapShellTransition(Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;)V
@@ -30574,181 +30568,169 @@
     move-result-object v2
 
     .line 100
-    invoke-virtual {v2}, Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;->freeformToFullscreen()Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;
-
-    .line 101
-    move-result-object v2
-
-    .line 104
     invoke-virtual {v2, v5}, Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;->setFreeformChange(I)Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;
 
-    .line 105
+    .line 101
     invoke-virtual {p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getState()Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo$State;
 
-    .line 108
+    .line 104
     move-result-object v2
 
-    .line 111
+    .line 107
     iget-object v2, v2, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo$State;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 112
+    .line 108
     iget-object v2, v2, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
 
-    .line 114
+    .line 110
     invoke-virtual {v0, v2, v1}, Landroid/window/WindowContainerTransaction;->setMiuiFreeformInfoChange(Landroid/window/WindowContainerToken;Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;)Landroid/window/WindowContainerTransaction;
 
-    .line 116
+    .line 112
     iget-object v1, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation;->mPendingTransitionTokens:Landroid/util/ArrayMap;
 
-    .line 119
+    .line 115
     iget-object v2, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation;->mTransitions:Lcom/android/wm/shell/transition/Transitions;
 
-    .line 121
+    .line 117
     const v3, 0x7ffffff1
 
-    .line 123
+    .line 119
     invoke-virtual {v2, v3, v0, p0}, Lcom/android/wm/shell/transition/Transitions;->startTransition(ILandroid/window/WindowContainerTransaction;Lcom/android/wm/shell/transition/Transitions$TransitionHandler;)Landroid/os/IBinder;
 
-    .line 126
+    .line 122
     move-result-object v0
 
-    .line 129
+    .line 125
     new-instance v2, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation$PendingTransition;
 
-    .line 130
+    .line 126
     invoke-direct {v2, v3, p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation$PendingTransition;-><init>(ILcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;)V
 
-    .line 132
+    .line 128
     invoke-virtual {v1, v0, v2}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 135
+    .line 131
     iget-object v0, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation;->mPendingMaximizeMiuiFreeform:Landroid/util/SparseArray;
 
-    .line 138
+    .line 134
     invoke-virtual {p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getState()Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo$State;
 
-    .line 140
+    .line 136
     move-result-object v1
 
-    .line 143
+    .line 139
     iget-object v1, v1, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo$State;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 144
+    .line 140
     iget v1, v1, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
-    .line 146
+    .line 142
     invoke-virtual {v0, v1, p1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 148
+    .line 144
     goto :goto_1
 
-    .line 151
+    .line 147
     :cond_1
     invoke-virtual {p1, v7}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->setMode(I)V
 
-    .line 152
+    .line 148
     invoke-virtual {p1, v6}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->setScale(F)V
 
-    .line 155
+    .line 151
     invoke-virtual {p1, v4}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 158
+    .line 154
     invoke-virtual {v1, v7}, Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;->setMiuiFreeformMode(I)Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;
+
+    .line 157
+    move-result-object v2
+
+    .line 160
+    invoke-virtual {v2, v6}, Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;->setMiuiFreeformScale(F)Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;
 
     .line 161
     move-result-object v2
 
     .line 164
-    invoke-virtual {v2, v6}, Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;->setMiuiFreeformScale(F)Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;
-
-    .line 165
-    move-result-object v2
-
-    .line 168
-    invoke-virtual {v2}, Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;->freeformToFullscreen()Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;
-
-    .line 169
-    move-result-object v2
-
-    .line 172
     invoke-virtual {v2, v5}, Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;->setFreeformChange(I)Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;
 
-    .line 173
+    .line 165
     invoke-virtual {p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getState()Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo$State;
 
-    .line 176
+    .line 168
     move-result-object v2
 
-    .line 179
+    .line 171
     iget-object v2, v2, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo$State;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 180
+    .line 172
     iget-object v2, v2, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
 
-    .line 182
+    .line 174
     invoke-virtual {v0, v2, v1}, Landroid/window/WindowContainerTransaction;->setMiuiFreeformInfoChange(Landroid/window/WindowContainerToken;Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;)Landroid/window/WindowContainerTransaction;
 
-    .line 184
+    .line 176
     iget-object v1, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation;->mRootTaskDisplayAreaOrganizer:Lcom/android/wm/shell/RootTaskDisplayAreaOrganizer;
 
-    .line 187
+    .line 179
     invoke-virtual {v1, v0}, Landroid/window/DisplayAreaOrganizer;->applyTransaction(Landroid/window/WindowContainerTransaction;)V
 
-    .line 189
+    .line 181
     :goto_1
     invoke-static {}, Lsrc/com/miui/analytics/MiuiFreeFormTrackStub;->getInstance()Lsrc/com/miui/analytics/MiuiFreeFormTrackStub;
 
-    .line 192
+    .line 184
     move-result-object v0
 
-    .line 195
+    .line 187
     invoke-static {p1}, Lsrc/com/miui/analytics/MiuiFreeFormTrackStub;->loadFrom(Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;)Lsrc/com/miui/analytics/MiuiFreeFormTrackStub$FreeFormTrackObj;
 
-    .line 196
+    .line 188
     move-result-object v1
 
-    .line 199
+    .line 191
     iget-object p0, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation;->mContext:Landroid/content/Context;
 
-    .line 200
+    .line 192
     iput-object p0, v1, Lsrc/com/miui/analytics/MiuiFreeFormTrackStub$FreeFormTrackObj;->context:Landroid/content/Context;
 
-    .line 202
+    .line 194
     const-string/jumbo p0, "\u5168\u5c4f"
 
-    .line 204
+    .line 196
     iput-object p0, v1, Lsrc/com/miui/analytics/MiuiFreeFormTrackStub$FreeFormTrackObj;->quitWay:Ljava/lang/String;
 
-    .line 207
+    .line 199
     invoke-virtual {v0, v1}, Lsrc/com/miui/analytics/MiuiFreeFormTrackStub;->trackMiniExitEvent(Lsrc/com/miui/analytics/MiuiFreeFormTrackStub$FreeFormTrackObj;)V
 
-    .line 209
+    .line 201
     new-instance p0, Ljava/lang/StringBuilder;
 
-    .line 212
+    .line 204
     const-string v0, " start anim applyMiniFreeformDoubleTapAnimation: miuiFreeformModeTaskInfo"
 
-    .line 214
+    .line 206
     invoke-direct {p0, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 216
+    .line 208
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 219
+    .line 211
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 222
+    .line 214
     move-result-object p0
 
-    .line 225
+    .line 217
     const-string p1, "MiuiFreeformAnimation"
 
-    .line 226
+    .line 218
     invoke-static {p1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 228
+    .line 220
     return-void
-    .line 231
+    .line 223
 .end method
 
 .method public startMiuiDesktopFullScreenToFreeformAnimation(Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;Landroid/window/TransitionInfo$Change;Landroid/view/SurfaceControl$Transaction;Landroid/view/SurfaceControl$Transaction;Lcom/android/wm/shell/transition/Transitions$TransitionFinishCallback;Landroid/window/TransitionInfo;)V

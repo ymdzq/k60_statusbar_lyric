@@ -4,15 +4,15 @@
               android:background="@drawable/preference_connect_background"
               android:layout_width="fill_parent"
               android:layout_height="wrap_content"
-              android:minWidth="@dimen/bt_custom_preference_height" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+              android:minWidth="@dimen/bt_custom_preference_height" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <androidx.cardview.widget.CardView android:id="@id/view_corner"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
                         android:layout_marginTop="@dimen/preference_bt_custom_margin_top"
                         android:layout_marginBottom="@dimen/preference_bt_custom_margin_bottom"
-                        settings:cardBackgroundColor="@android:color/transparent"
-                        settings:cardCornerRadius="@dimen/miuix_preference_high_light_radius"
-                        settings:cardElevation="0.0dp">
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardCornerRadius="@dimen/miuix_preference_high_light_radius"
+                        app:cardElevation="0.0dp">
     <LinearLayout android:gravity="center_vertical"
                   android:layout_gravity="center_vertical"
                   android:id="@id/view_high_light_root"

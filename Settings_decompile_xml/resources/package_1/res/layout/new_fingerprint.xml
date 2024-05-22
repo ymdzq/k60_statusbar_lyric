@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <androidx.constraintlayout.widget.ConstraintLayout android:background="@android:color/black"
                       android:layout_width="fill_parent"
-                      android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+                      android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <LinearLayout android:id="@id/back_linearlayout"
                 android:layout_width="fill_parent"
                 android:layout_height="@dimen/miui_finger_enroll_back_linear_height"
                 android:layout_marginTop="@dimen/miui_finger_enroll_back_linear_top"
-                settings:layout_constraintStart_toStartOf="parent"
-                settings:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
     <ImageView android:layout_gravity="center_vertical"
                android:id="@id/back_image"
                android:layout_width="wrap_content"
@@ -23,7 +23,7 @@
                android:layout_width="fill_parent"
                android:layout_height="fill_parent"
                android:layout_marginTop="@dimen/miui_finger_enroll_margin_top"
-               settings:layout_constraintTop_toBottomOf="@id/back_linearlayout">
+               app:layout_constraintTop_toBottomOf="@id/back_linearlayout">
     <FrameLayout android:layout_gravity="center_horizontal"
                  android:clipChildren="false"
                  android:clipToPadding="false"
@@ -55,9 +55,9 @@
                 android:layout_marginTop="@dimen/miui_finger_enroll_title_top"
                 android:maxLines="3"
                 android:fallbackLineSpacing="false"
-                settings:layout_constraintEnd_toEndOf="parent"
-                settings:layout_constraintStart_toStartOf="parent"
-                settings:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
       <TextView android:textSize="@dimen/miui_finger_enroll_title_message_size"
                 android:textColor="@color/fingerprint_top_text_color"
                 android:ellipsize="end"
@@ -67,9 +67,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/miui_finger_enroll_title_message_top"
                 android:maxLines="3"
-                settings:layout_constraintEnd_toEndOf="parent"
-                settings:layout_constraintStart_toStartOf="parent"
-                settings:layout_constraintTop_toBottomOf="@id/new_fingerprint_top_title" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/new_fingerprint_top_title" />
       <TextView android:textSize="@dimen/miui_finger_enroll_name_text_size"
                 android:textColor="#99ffffff"
                 android:layout_gravity="center_horizontal"
@@ -80,10 +80,10 @@
                 android:layout_marginBottom="@dimen/miui_finger_enroll_suggest_title_bottom"
                 android:text="@string/add_fingerprint_name_suggest_text"
                 android:fontFamily="mipro-regular"
-                settings:layout_constraintBottom_toBottomOf="parent"
-                settings:layout_constraintEnd_toEndOf="parent"
-                settings:layout_constraintStart_toStartOf="parent"
-                settings:layout_constraintWidth_max="@dimen/miui_finger_enroll_name_edittext_width" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintWidth_max="@dimen/miui_finger_enroll_name_edittext_width" />
       <miuix.androidbasewidget.widget.ClearableEditText android:textSize="@dimen/miui_finger_enroll_name_edittext_text_size"
                             android:textColor="#ffffffff"
                             android:textColorHint="@color/miui_face_input_name_edittext_hint_text_color"
@@ -96,11 +96,11 @@
                             android:inputType="textNoSuggestions"
                             android:imeOptions="flagNoExtractUi"
                             android:fontFamily="mipro-regular"
-                            settings:drawableEndCompat="?attr/clearableEditTextIcon"
-                            settings:layout_constraintEnd_toEndOf="parent"
-                            settings:layout_constraintStart_toStartOf="parent"
-                            settings:layout_constraintTop_toBottomOf="@id/fingerprint_name_suggest_title"
-                            settings:layout_constraintWidth_max="@dimen/miui_finger_enroll_name_edittext_width"
+                            app:drawableEndCompat="?attr/clearableEditTextIcon"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/fingerprint_name_suggest_title"
+                            app:layout_constraintWidth_max="@dimen/miui_finger_enroll_name_edittext_width"
                             style="@style/Widget.EditText.Dark" />
       <Button android:textSize="@dimen/miui_finger_enroll_button_text_size"
               android:textColor="@android:color/white"
@@ -113,10 +113,10 @@
               android:layout_marginTop="@dimen/miui_finger_enroll_next_button_margin_top"
               android:text="@string/add_fingerprint_finished_button_text"
               android:fontFamily="mipro-regular"
-              settings:layout_constraintEnd_toEndOf="parent"
-              settings:layout_constraintStart_toStartOf="parent"
-              settings:layout_constraintTop_toBottomOf="@id/fingerprint_name_edit_text"
-              settings:layout_constraintWidth_max="@dimen/miui_finger_enroll_name_edittext_width" />
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@id/fingerprint_name_edit_text"
+              app:layout_constraintWidth_max="@dimen/miui_finger_enroll_name_edittext_width" />
     </androidx.constraintlayout.widget.ConstraintLayout>
   </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

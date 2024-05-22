@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/android/settings/wifi/WifiDialogActivity;Ljava/time/ZoneId;)V
     .locals 0
 
-    .line 145
+    .line 146
     iput-object p1, p0, Lcom/android/settings/wifi/WifiDialogActivity$1;->this$0:Lcom/android/settings/wifi/WifiDialogActivity;
 
     invoke-direct {p0, p2}, Landroid/os/SimpleClock;-><init>(Ljava/time/ZoneId;)V
@@ -35,7 +35,7 @@
 .method public millis()J
     .locals 2
 
-    .line 148
+    .line 149
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0

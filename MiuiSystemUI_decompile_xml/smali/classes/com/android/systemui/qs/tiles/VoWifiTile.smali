@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/qs/tiles/VoWifiTile;
 .super Lcom/android/systemui/qs/tileimpl/QSTileImpl;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lmiui/telephony/SubscriptionManager$OnSubscriptionsChangedListener;
@@ -312,21 +312,21 @@
     if-nez p0, :cond_1
 
     .line 37
-    const p0, 0x7f130a07    # @string/quick_settings_vowifi_sim1_label 'WLAN Calling SIM1'
+    const p0, 0x7f130a0d    # @string/quick_settings_vowifi_sim1_label 'WLAN Calling SIM1'
 
     .line 39
     goto :goto_1
 
     .line 42
     :cond_1
-    const p0, 0x7f130a08    # @string/quick_settings_vowifi_sim2_label 'WLAN Calling SIM2'
+    const p0, 0x7f130a0e    # @string/quick_settings_vowifi_sim2_label 'WLAN Calling SIM2'
 
     .line 43
     goto :goto_1
 
     .line 46
     :cond_2
-    const p0, 0x7f130a06    # @string/quick_settings_vowifi_label 'WLAN Calling'
+    const p0, 0x7f130a0c    # @string/quick_settings_vowifi_label 'WLAN Calling'
 
     .line 47
     :goto_1

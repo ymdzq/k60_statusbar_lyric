@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/screenrecord/ScreenRecordDialog;
 .super Lcom/android/systemui/statusbar/phone/SystemUIDialog;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # static fields
@@ -111,7 +111,7 @@
     invoke-virtual {p1, v0}, Landroid/view/Window;->setGravity(I)V
 
     .line 16
-    const p1, 0x7f130a7c    # @string/screenrecord_title 'Screen Recorder'
+    const p1, 0x7f130a82    # @string/screenrecord_title 'Screen Recorder'
 
     .line 19
     invoke-virtual {p0, p1}, Landroid/app/AlertDialog;->setTitle(I)V

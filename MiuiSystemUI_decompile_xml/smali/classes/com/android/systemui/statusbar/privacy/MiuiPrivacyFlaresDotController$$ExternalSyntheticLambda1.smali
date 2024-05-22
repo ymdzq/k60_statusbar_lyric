@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/statusbar/privacy/MiuiPrivacyFlaresDotController$$ExternalSyntheticLambda1;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -58,7 +58,7 @@
     invoke-virtual {p0, p1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 21
-    const p1, 0x7f130ba2    # @string/tip_close_flares 'You won't receive notifications about app behavior during this session'
+    const p1, 0x7f130ba8    # @string/tip_close_flares 'You won't receive notifications about app behavior during this session'
 
     .line 24
     const/4 v0, 0x0

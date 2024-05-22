@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/android/settings/LockScreenActionsSettings;)V
     .locals 0
 
-    .line 56
+    .line 65
     iput-object p1, p0, Lcom/android/settings/LockScreenActionsSettings$1;->this$0:Lcom/android/settings/LockScreenActionsSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onPreferenceChange(Landroidx/preference/Preference;Ljava/lang/Object;)Z
     .locals 0
 
-    .line 59
+    .line 68
     iget-object p0, p0, Lcom/android/settings/LockScreenActionsSettings$1;->this$0:Lcom/android/settings/LockScreenActionsSettings;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;

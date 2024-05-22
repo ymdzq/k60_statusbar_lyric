@@ -1,20 +1,20 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent"
-                      android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto">
+                      android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <com.miui.clock.utils.BaseLineSpaceView android:id="@id/hour_space"
                         android:layout_width="0.0dp"
                         android:layout_height="1.0dp"
                         android:layout_marginTop="@dimen/miui_smart_frame_clock_hour_margin_top"
-                        systemui:r0x7f04042f="0"
-                        systemui:r0x7f040443="0"
-                        systemui:r0x7f040447="0" />
+                        app:r0x7f04042f="0"
+                        app:r0x7f040443="0"
+                        app:r0x7f040447="0" />
   <com.miui.clock.utils.BaseLineSpaceView android:id="@id/minute_space"
                         android:layout_width="0.0dp"
                         android:layout_height="1.0dp"
                         android:layout_marginTop="@dimen/miui_smart_frame_clock_minute_margin_top"
-                        systemui:r0x7f04042f="0"
-                        systemui:r0x7f040443="0"
-                        systemui:r0x7f040447="0" />
+                        app:r0x7f04042f="0"
+                        app:r0x7f040443="0"
+                        app:r0x7f040447="0" />
   <TextView android:textSize="@dimen/miui_smart_frame_clock_time_text_size"
             android:id="@id/current_time_hour1"
             android:layout_width="wrap_content"
@@ -23,8 +23,8 @@
             android:fontFamily="miclock-gulfs-display-extra-expanded-italic"
             android:layout_marginStart="@dimen/miui_smart_frame_clock_time_margin_start"
             android:elegantTextHeight="false"
-            systemui:r0x7f040425="@id/hour_space"
-            systemui:r0x7f040443="0" />
+            app:r0x7f040425="@id/hour_space"
+            app:r0x7f040443="0" />
   <TextView android:textSize="@dimen/miui_smart_frame_clock_time_text_size"
             android:id="@id/current_time_hour2"
             android:layout_width="wrap_content"
@@ -33,8 +33,8 @@
             android:fontFamily="miclock-gulfs-display-extra-expanded-italic"
             android:layout_marginStart="@dimen/miui_smart_frame_clock_time_letter_space"
             android:elegantTextHeight="false"
-            systemui:r0x7f040425="@id/hour_space"
-            systemui:r0x7f040443="0" />
+            app:r0x7f040425="@id/hour_space"
+            app:r0x7f040443="0" />
   <TextView android:textSize="@dimen/miui_smart_frame_clock_time_text_size"
             android:id="@id/current_time_minute1"
             android:layout_width="wrap_content"
@@ -44,8 +44,8 @@
             android:fontFamily="miclock-gulfs-display-extra-expanded-italic"
             android:layout_marginStart="@dimen/miui_smart_frame_clock_time_margin_start"
             android:elegantTextHeight="false"
-            systemui:r0x7f040425="@id/minute_space"
-            systemui:r0x7f040443="0" />
+            app:r0x7f040425="@id/minute_space"
+            app:r0x7f040443="0" />
   <TextView android:textSize="@dimen/miui_smart_frame_clock_time_text_size"
             android:id="@id/current_time_minute2"
             android:layout_width="wrap_content"
@@ -55,15 +55,15 @@
             android:fontFamily="miclock-gulfs-display-extra-expanded-italic"
             android:layout_marginStart="@dimen/miui_smart_frame_clock_time_letter_space"
             android:elegantTextHeight="false"
-            systemui:r0x7f040425="@id/minute_space"
-            systemui:r0x7f040443="0" />
+            app:r0x7f040425="@id/minute_space"
+            app:r0x7f040443="0" />
   <View android:id="@id/view_line"
         android:layout_width="fill_parent"
         android:layout_height="@dimen/miui_smart_frame_clock_line_height"
         android:layout_marginTop="@dimen/miui_smart_frame_clock_line_margin_top"
-        systemui:r0x7f04042f="0"
-        systemui:r0x7f040443="0"
-        systemui:r0x7f040447="0" />
+        app:r0x7f04042f="0"
+        app:r0x7f040443="0"
+        app:r0x7f040447="0" />
   <TextView android:textSize="@dimen/miui_smart_frame_clock_date_text_size"
             android:id="@id/current_week"
             android:layout_width="wrap_content"
@@ -72,8 +72,8 @@
             android:fontFamily="mipro-regular"
             android:layout_marginEnd="@dimen/miui_smart_frame_clock_week_margin_end"
             android:elegantTextHeight="false"
-            systemui:r0x7f04042a="@id/view_line"
-            systemui:r0x7f04042f="0" />
+            app:r0x7f04042a="@id/view_line"
+            app:r0x7f04042f="0" />
   <TextView android:textSize="@dimen/miui_smart_frame_clock_date_text_size"
             android:id="@id/current_date"
             android:layout_width="wrap_content"
@@ -82,6 +82,6 @@
             android:fontFamily="mipro-regular"
             android:layout_marginEnd="@dimen/miui_smart_frame_clock_date_margin_end"
             android:elegantTextHeight="false"
-            systemui:r0x7f04042a="@id/view_line"
-            systemui:r0x7f040430="@id/current_week" />
+            app:r0x7f04042a="@id/view_line"
+            app:r0x7f040430="@id/current_week" />
 </androidx.constraintlayout.widget.ConstraintLayout>

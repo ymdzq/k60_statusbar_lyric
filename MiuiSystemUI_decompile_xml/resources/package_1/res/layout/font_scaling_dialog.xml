@@ -3,7 +3,7 @@
                       android:id="@id/font_scaling_slider"
                       android:layout_width="fill_parent"
                       android:layout_height="wrap_content"
-                      systemui:r0x7f0403ac="@string/font_scaling_larger"
-                      systemui:r0x7f0403b3="@string/font_scaling_smaller"
-                      systemui:r0x7f0404d8="6"
-                      systemui:r0x7f040618="0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto" />
+                      app:r0x7f0403ac="@string/font_scaling_larger"
+                      app:r0x7f0403b3="@string/font_scaling_smaller"
+                      app:r0x7f0404d8="6"
+                      app:r0x7f040618="0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

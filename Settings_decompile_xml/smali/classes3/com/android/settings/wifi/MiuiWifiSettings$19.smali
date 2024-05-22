@@ -34,7 +34,7 @@
         }
     .end annotation
 
-    .line 2479
+    .line 2497
     iput-object p1, p0, Lcom/android/settings/wifi/MiuiWifiSettings$19;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     iput-object p2, p0, Lcom/android/settings/wifi/MiuiWifiSettings$19;->val$deviceId:Ljava/lang/String;
@@ -51,7 +51,7 @@
 .method public onPreferenceChange(Landroidx/preference/Preference;Ljava/lang/Object;)Z
     .locals 3
 
-    .line 2482
+    .line 2500
     invoke-static {}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p2
@@ -60,7 +60,7 @@
 
     invoke-static {p2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2483
+    .line 2501
     iget-object p2, p0, Lcom/android/settings/wifi/MiuiWifiSettings$19;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-static {p2}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$fgetmIsEasyTetherConnecting(Lcom/android/settings/wifi/MiuiWifiSettings;)Z
@@ -71,7 +71,7 @@
 
     if-eqz p2, :cond_0
 
-    .line 2484
+    .line 2502
     invoke-static {}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -82,7 +82,7 @@
 
     return v0
 
-    .line 2487
+    .line 2505
     :cond_0
     iget-object p2, p0, Lcom/android/settings/wifi/MiuiWifiSettings$19;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
@@ -92,7 +92,7 @@
 
     if-nez p2, :cond_1
 
-    .line 2488
+    .line 2506
     invoke-static {}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -103,11 +103,11 @@
 
     return v0
 
-    .line 2491
+    .line 2509
     :cond_1
     check-cast p1, Lcom/android/settings/wifi/MiuiVirtualWifiEntryPreference;
 
-    .line 2493
+    .line 2511
     iget-object p2, p0, Lcom/android/settings/wifi/MiuiWifiSettings$19;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-static {p2}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$fgetmEasyTetherCoreService(Lcom/android/settings/wifi/MiuiWifiSettings;)Lcom/android/bluetooth/ble/app/IMiuiNearbyApiService;
@@ -118,15 +118,15 @@
 
     if-eqz p2, :cond_2
 
-    .line 2494
+    .line 2512
     iget-object p2, p0, Lcom/android/settings/wifi/MiuiWifiSettings$19;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-static {p2, v0}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$fputmIsEasyTetherConnecting(Lcom/android/settings/wifi/MiuiWifiSettings;Z)V
 
-    .line 2495
+    .line 2513
     invoke-static {p1}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$sfputmEasyTetherConnectingPreference(Lcom/android/settings/wifi/MiuiVirtualWifiEntryPreference;)V
 
-    .line 2496
+    .line 2514
     iget-object p2, p0, Lcom/android/settings/wifi/MiuiWifiSettings$19;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     iget-object v2, p0, Lcom/android/settings/wifi/MiuiWifiSettings$19;->val$deviceId:Ljava/lang/String;
@@ -135,13 +135,13 @@
 
     const/4 p2, 0x2
 
-    .line 2497
+    .line 2515
     invoke-virtual {p1, p2}, Lcom/android/settings/wifi/MiuiVirtualWifiEntryPreference;->updateState(I)V
 
-    .line 2498
+    .line 2516
     invoke-virtual {p1}, Lcom/android/settings/wifi/MiuiVirtualWifiEntryPreference;->updateSummary()V
 
-    .line 2499
+    .line 2517
     invoke-static {}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$sfgetmWifiHelpWorkHandler()Lcom/android/settings/wifi/MiuiWifiSettings$MessageHandler;
 
     move-result-object p1
@@ -164,7 +164,7 @@
 
     invoke-virtual {p1, p0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 2500
+    .line 2518
     invoke-static {}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$sfgetmWifiHelpWorkHandler()Lcom/android/settings/wifi/MiuiWifiSettings$MessageHandler;
 
     move-result-object p0
@@ -173,7 +173,7 @@
 
     invoke-virtual {p0, p1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 2501
+    .line 2519
     invoke-static {}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$sfgetmWifiHelpWorkHandler()Lcom/android/settings/wifi/MiuiWifiSettings$MessageHandler;
 
     move-result-object p0
@@ -184,7 +184,7 @@
 
     return v0
 
-    .line 2503
+    .line 2521
     :cond_2
     invoke-static {}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$sfgetTAG()Ljava/lang/String;
 

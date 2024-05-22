@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/keyguard/data/quickaffordance/FlashlightQuickAffordanceConfig$lockScreenState$1$flashlightCallback$1;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/policy/FlashlightController$FlashlightListener;
@@ -67,7 +67,7 @@
     const/4 v1, 0x0
 
     .line 18
-    const v2, 0x7f1309aa    # @string/quick_settings_flashlight_label 'Flashlight'
+    const v2, 0x7f1309b0    # @string/quick_settings_flashlight_label 'Flashlight'
 
     .line 19
     if-eqz p1, :cond_1
@@ -180,7 +180,7 @@
     const/4 v1, 0x0
 
     .line 3
-    const v2, 0x7f1309aa    # @string/quick_settings_flashlight_label 'Flashlight'
+    const v2, 0x7f1309b0    # @string/quick_settings_flashlight_label 'Flashlight'
 
     .line 4
     if-eqz p1, :cond_0
@@ -296,7 +296,7 @@
     new-instance v2, Lcom/android/systemui/common/shared/model/ContentDescription$Resource;
 
     .line 6
-    const v3, 0x7f1309aa    # @string/quick_settings_flashlight_label 'Flashlight'
+    const v3, 0x7f1309b0    # @string/quick_settings_flashlight_label 'Flashlight'
 
     .line 8
     invoke-direct {v2, v3}, Lcom/android/systemui/common/shared/model/ContentDescription$Resource;-><init>(I)V

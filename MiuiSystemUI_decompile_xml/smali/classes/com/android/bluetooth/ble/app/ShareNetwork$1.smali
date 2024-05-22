@@ -1,6 +1,6 @@
 .class public final Lcom/android/bluetooth/ble/app/ShareNetwork$1;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Landroid/content/ServiceConnection;
@@ -217,59 +217,62 @@
     invoke-static {p2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 119
-    iget-object p2, p0, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->callback:Lcom/android/systemui/qs/tiles/MiuiWifiTile$ShareNetworkCallback;
+    invoke-virtual {p0}, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->getHotspotList()Ljava/util/List;
 
     .line 122
-    if-eqz p2, :cond_4
+    move-result-object p2
 
-    .line 124
-    invoke-virtual {p0}, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->getHotspotList()Ljava/util/List;
+    .line 125
+    invoke-virtual {p0}, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->getConnectedHotspot()Lcom/android/systemui/controlcenter/policy/ShareNetworkController$Hotspot;
 
     .line 126
     move-result-object v0
 
     .line 129
-    invoke-virtual {p0}, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->getConnectedHotspot()Lcom/android/systemui/controlcenter/policy/ShareNetworkController$Hotspot;
+    invoke-virtual {p0, p2, v0}, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->onHotspotUpdateCallback(Ljava/util/List;Lcom/android/systemui/controlcenter/policy/ShareNetworkController$Hotspot;)V
 
     .line 130
-    move-result-object p0
+    invoke-virtual {p0}, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->getCelluarTetherDeviceInfo()Lcom/android/systemui/controlcenter/policy/ShareNetworkController$Cellular;
 
     .line 133
-    invoke-virtual {p2, v0, p0}, Lcom/android/systemui/qs/tiles/MiuiWifiTile$ShareNetworkCallback;->onHotspotUpdate(Ljava/util/List;Lcom/android/systemui/controlcenter/policy/ShareNetworkController$Hotspot;)V
+    move-result-object p2
 
-    .line 134
-    goto :goto_1
+    .line 136
+    invoke-virtual {p0, p2}, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->onCellularTetherStateUpdateCallback(Lcom/android/systemui/controlcenter/policy/ShareNetworkController$Cellular;)V
 
     .line 137
+    goto :goto_1
+
+    .line 140
     :catchall_0
     move-exception p0
 
-    .line 138
+    .line 141
     invoke-virtual {v4}, Landroid/os/Parcel;->recycle()V
 
-    .line 139
+    .line 142
     invoke-virtual {v3}, Landroid/os/Parcel;->recycle()V
 
-    .line 142
+    .line 145
     throw p0
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
 
-    .line 145
+    .line 148
     :catch_0
     move-exception p0
 
-    .line 146
+    .line 149
     const-string p2, "EasyTetherCoreService register error"
 
-    .line 147
+    .line 150
     invoke-static {p2, p0, p1}, Lcom/android/bluetooth/ble/app/ShareNetwork$1$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 149
+    .line 152
     :cond_4
     :goto_1
     return-void
-    .line 152
+    .line 155
 .end method
 
 .method public final onServiceDisconnected(Landroid/content/ComponentName;)V

@@ -1,6 +1,6 @@
 .class public final synthetic Lcom/android/systemui/toast/MIUIStrongToast$$ExternalSyntheticLambda7;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -55,173 +55,176 @@
     const-string/jumbo v2, "width :"
 
     .line 6
-    const-string v3, "rect:"
+    const-string/jumbo v3, "rect:"
 
     .line 9
     const-string v4, "containerMargin:"
 
-    .line 11
+    .line 12
     packed-switch v0, :pswitch_data_0
 
-    .line 13
+    .line 14
     goto :goto_0
 
-    .line 16
+    .line 17
     :pswitch_0
     iget-object v0, p0, Lcom/android/systemui/toast/MIUIStrongToast$$ExternalSyntheticLambda7;->f$0:Lcom/android/systemui/toast/MIUIStrongToast;
 
-    .line 17
+    .line 18
     iget v5, p0, Lcom/android/systemui/toast/MIUIStrongToast$$ExternalSyntheticLambda7;->f$1:I
 
-    .line 19
+    .line 20
     iget-object p0, p0, Lcom/android/systemui/toast/MIUIStrongToast$$ExternalSyntheticLambda7;->f$2:Landroid/graphics/Rect;
 
-    .line 21
+    .line 22
     sget v6, Lcom/android/systemui/toast/MIUIStrongToast;->$r8$clinit:I
 
-    .line 23
+    .line 24
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 25
+    .line 26
     new-instance v6, Ljava/lang/StringBuilder;
 
-    .line 28
+    .line 29
     const-string v7, "leftMargin:"
 
-    .line 30
+    .line 31
     invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 32
+    .line 33
     invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 35
+    .line 36
     invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 38
+    .line 39
     iget v4, v0, Lcom/android/systemui/toast/MIUIStrongToast;->mContainerMargin:I
 
-    .line 41
+    .line 42
     invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 43
+    .line 44
     invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 46
+    .line 47
     invoke-virtual {p0}, Landroid/graphics/Rect;->width()I
 
-    .line 49
+    .line 50
     move-result p0
-
-    .line 52
-    invoke-virtual {v6, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     .line 53
-    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 56
-    iget-object p0, v0, Lcom/android/systemui/toast/MIUIStrongToast;->mCutOut:Landroid/view/View;
-
-    .line 59
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    .line 61
-    move-result p0
-
-    .line 64
     invoke-virtual {v6, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
+    .line 54
+    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 57
+    iget-object p0, v0, Lcom/android/systemui/toast/MIUIStrongToast;->mCutOut:Landroid/view/View;
+
+    .line 60
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+
+    .line 62
+    move-result p0
+
     .line 65
+    invoke-virtual {v6, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 66
     invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 68
+    .line 69
     move-result-object p0
 
-    .line 71
+    .line 72
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 72
+    .line 73
     return-void
 
-    .line 75
+    .line 76
     :goto_0
     iget-object v0, p0, Lcom/android/systemui/toast/MIUIStrongToast$$ExternalSyntheticLambda7;->f$0:Lcom/android/systemui/toast/MIUIStrongToast;
 
-    .line 76
+    .line 77
     iget v5, p0, Lcom/android/systemui/toast/MIUIStrongToast$$ExternalSyntheticLambda7;->f$1:I
 
-    .line 78
+    .line 79
     iget-object p0, p0, Lcom/android/systemui/toast/MIUIStrongToast$$ExternalSyntheticLambda7;->f$2:Landroid/graphics/Rect;
 
-    .line 80
+    .line 81
     sget v6, Lcom/android/systemui/toast/MIUIStrongToast;->$r8$clinit:I
 
-    .line 82
+    .line 83
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 84
+    .line 85
     new-instance v6, Ljava/lang/StringBuilder;
 
-    .line 87
+    .line 88
     const-string/jumbo v7, "rightMargin:"
 
-    .line 89
+    .line 90
     invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 92
+    .line 93
     invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 95
+    .line 96
     invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 98
+    .line 99
     iget v4, v0, Lcom/android/systemui/toast/MIUIStrongToast;->mContainerMargin:I
 
-    .line 101
+    .line 102
     invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 103
+    .line 104
     invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 106
+    .line 107
     invoke-virtual {p0}, Landroid/graphics/Rect;->width()I
 
-    .line 109
+    .line 110
     move-result p0
-
-    .line 112
-    invoke-virtual {v6, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     .line 113
-    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 116
-    iget-object p0, v0, Lcom/android/systemui/toast/MIUIStrongToast;->mCutOut:Landroid/view/View;
-
-    .line 119
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    .line 121
-    move-result p0
-
-    .line 124
     invoke-virtual {v6, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
+    .line 114
+    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 117
+    iget-object p0, v0, Lcom/android/systemui/toast/MIUIStrongToast;->mCutOut:Landroid/view/View;
+
+    .line 120
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+
+    .line 122
+    move-result p0
+
     .line 125
+    invoke-virtual {v6, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 126
     invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 128
+    .line 129
     move-result-object p0
 
-    .line 131
+    .line 132
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 132
+    .line 133
     return-void
 
-    .line 135
+    .line 136
+    nop
+
+    .line 137
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
     .end packed-switch
-    .line 136
+    .line 138
 .end method

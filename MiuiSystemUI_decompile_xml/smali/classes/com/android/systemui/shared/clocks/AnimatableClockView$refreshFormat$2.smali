@@ -1,6 +1,6 @@
 .class final Lcom/android/systemui/shared/clocks/AnimatableClockView$refreshFormat$2;
 .super Lkotlin/jvm/internal/Lambda;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -57,15 +57,15 @@
     move-result-object p0
 
     .line 7
-    const-string p1, "refreshFormat format="
+    const-string/jumbo p1, "refreshFormat format="
 
     .line 8
     invoke-static {p1, p0}, Landroidx/constraintlayout/motion/widget/KeyAttributes$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 10
+    .line 11
     move-result-object p0
 
-    .line 13
-    return-object p0
     .line 14
+    return-object p0
+    .line 15
 .end method

@@ -36,7 +36,7 @@
         }
     .end annotation
 
-    .line 229
+    .line 231
     iput-object p1, p0, Lcom/android/settings/bluetooth/WifiInfoService$WifiInfoApi$1;->this$1:Lcom/android/settings/bluetooth/WifiInfoService$WifiInfoApi;
 
     iput-object p2, p0, Lcom/android/settings/bluetooth/WifiInfoService$WifiInfoApi$1;->val$targetSsid:Ljava/lang/String;
@@ -45,12 +45,12 @@
 
     const/4 p1, 0x0
 
-    .line 230
+    .line 232
     iput-boolean p1, p0, Lcom/android/settings/bluetooth/WifiInfoService$WifiInfoApi$1;->found:Z
 
     const/4 p1, 0x0
 
-    .line 231
+    .line 233
     iput-object p1, p0, Lcom/android/settings/bluetooth/WifiInfoService$WifiInfoApi$1;->targetBssid:Ljava/lang/String;
 
     return-void
@@ -64,7 +64,7 @@
     :try_start_0
     const-string p0, "WifiInfoService"
 
-    .line 270
+    .line 272
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -94,7 +94,7 @@
     :catch_0
     move-exception p0
 
-    .line 272
+    .line 274
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0
@@ -108,7 +108,7 @@
 
     const-string/jumbo p1, "scan onFullResult."
 
-    .line 235
+    .line 237
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -121,7 +121,7 @@
 
     const-string/jumbo p1, "scan onPeriodChanged"
 
-    .line 233
+    .line 235
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -130,7 +130,7 @@
 .method public onResults([Landroid/net/wifi/WifiScanner$ScanData;)V
     .locals 10
 
-    .line 241
+    .line 243
     :try_start_0
     array-length v0, p1
     :try_end_0
@@ -148,12 +148,12 @@
     :try_start_1
     aget-object v4, p1, v2
 
-    .line 242
+    .line 244
     invoke-virtual {v4}, Landroid/net/wifi/WifiScanner$ScanData;->getResults()[Landroid/net/wifi/ScanResult;
 
     move-result-object v4
 
-    .line 243
+    .line 245
     array-length v5, v4
 
     move v6, v1
@@ -163,7 +163,7 @@
 
     aget-object v7, v4, v6
 
-    .line 244
+    .line 246
     iget-object v8, p0, Lcom/android/settings/bluetooth/WifiInfoService$WifiInfoApi$1;->this$1:Lcom/android/settings/bluetooth/WifiInfoService$WifiInfoApi;
 
     iget-object v8, v8, Lcom/android/settings/bluetooth/WifiInfoService$WifiInfoApi;->this$0:Lcom/android/settings/bluetooth/WifiInfoService;
@@ -174,7 +174,7 @@
 
     if-eqz v8, :cond_0
 
-    .line 245
+    .line 247
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -207,7 +207,7 @@
 
     invoke-static {v3, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 247
+    .line 249
     :cond_0
     new-instance v8, Ljava/lang/String;
 
@@ -231,10 +231,10 @@
 
     const/4 v3, 0x1
 
-    .line 248
+    .line 250
     iput-boolean v3, p0, Lcom/android/settings/bluetooth/WifiInfoService$WifiInfoApi$1;->found:Z
 
-    .line 249
+    .line 251
     iget-object v3, v7, Landroid/net/wifi/ScanResult;->BSSID:Ljava/lang/String;
 
     iput-object v3, p0, Lcom/android/settings/bluetooth/WifiInfoService$WifiInfoApi$1;->targetBssid:Ljava/lang/String;
@@ -252,7 +252,7 @@
 
     goto :goto_0
 
-    .line 255
+    .line 257
     :cond_3
     iget-object p1, p0, Lcom/android/settings/bluetooth/WifiInfoService$WifiInfoApi$1;->this$1:Lcom/android/settings/bluetooth/WifiInfoService$WifiInfoApi;
 
@@ -264,7 +264,7 @@
 
     if-eqz p1, :cond_4
 
-    .line 256
+    .line 258
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -287,7 +287,7 @@
 
     invoke-static {v3, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 258
+    .line 260
     :cond_4
     new-instance p1, Landroid/content/Intent;
 
@@ -297,19 +297,19 @@
 
     const-string v0, "easyconnectssid"
 
-    .line 259
+    .line 261
     iget-object v1, p0, Lcom/android/settings/bluetooth/WifiInfoService$WifiInfoApi$1;->val$targetSsid:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v0, "easyconnectBssid"
 
-    .line 260
+    .line 262
     iget-object v1, p0, Lcom/android/settings/bluetooth/WifiInfoService$WifiInfoApi$1;->targetBssid:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 261
+    .line 263
     iget-object p0, p0, Lcom/android/settings/bluetooth/WifiInfoService$WifiInfoApi$1;->this$1:Lcom/android/settings/bluetooth/WifiInfoService$WifiInfoApi;
 
     iget-object p0, p0, Lcom/android/settings/bluetooth/WifiInfoService$WifiInfoApi;->this$0:Lcom/android/settings/bluetooth/WifiInfoService;
@@ -325,7 +325,7 @@
     :catch_0
     move-exception p0
 
-    .line 263
+    .line 265
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_3
@@ -339,7 +339,7 @@
 
     const-string/jumbo v0, "scan onSucces."
 
-    .line 237
+    .line 239
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void

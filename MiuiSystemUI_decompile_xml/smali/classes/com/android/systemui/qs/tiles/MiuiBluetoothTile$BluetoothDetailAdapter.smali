@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/qs/tiles/MiuiBluetoothTile$BluetoothDetailAdapter;
 .super Lcom/android/systemui/qs/tileimpl/QSDetailAdapter;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lcom/android/systemui/qs/QSDetailContent$Callback;
@@ -631,7 +631,7 @@
     iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
 
     .line 4
-    const v0, 0x7f13095e    # @string/quick_settings_bluetooth_label 'Bluetooth'
+    const v0, 0x7f130962    # @string/quick_settings_bluetooth_label 'Bluetooth'
 
     .line 6
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1172,7 +1172,7 @@
     if-eqz p0, :cond_1
 
     .line 22
-    const v1, 0x7f13093c    # @string/qs_control_big_tile_state_opening 'Turning on…'
+    const v1, 0x7f13093e    # @string/qs_control_big_tile_state_opening 'Turning on…'
 
     .line 24
     invoke-virtual {p0, v2, v1}, Lcom/android/systemui/qs/QSDetailContent;->setEmptyState(II)V
@@ -1294,7 +1294,7 @@
     if-eqz v0, :cond_1
 
     .line 33
-    const v3, 0x7f13093c    # @string/qs_control_big_tile_state_opening 'Turning on…'
+    const v3, 0x7f13093e    # @string/qs_control_big_tile_state_opening 'Turning on…'
 
     .line 35
     invoke-virtual {v0, v2, v3}, Lcom/android/systemui/qs/QSDetailContent;->setEmptyState(II)V

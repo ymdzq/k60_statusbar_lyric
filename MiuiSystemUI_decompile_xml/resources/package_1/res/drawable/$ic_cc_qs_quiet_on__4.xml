@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <set android:ordering="together" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f0802ad"
+  <objectAnimator android:interpolator="@drawable/$$ic_cc_qs_quiet_on__4__0"
                   android:duration="767"
                   android:startOffset="0"
                   android:valueFrom="1"
                   android:valueTo="1"
                   android:valueType="floatType"
                   android:propertyName="fillAlpha" />
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f0802ae"
+  <objectAnimator android:interpolator="@drawable/$$ic_cc_qs_quiet_on__4__1"
                   android:duration="400"
                   android:startOffset="767"
                   android:valueFrom="1"

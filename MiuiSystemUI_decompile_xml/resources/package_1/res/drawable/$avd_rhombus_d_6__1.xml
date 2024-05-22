@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <set android:ordering="together" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f080069"
+  <objectAnimator android:interpolator="@drawable/$$avd_rhombus_d_6__1__0"
                   android:duration="500"
                   android:startOffset="0"
                   android:valueFrom="M2.85 75.1 C-10.08,75.1 -21.42,72.57 -31.15,67.5 C-40.75,62.3 -48.22,54.9 -53.55,45.3 C-58.75,35.7 -61.35,24.43 -61.35,11.5 C-61.35,-1.57 -57.42,-14.43 -49.55,-27.1 C-41.55,-39.77 -29.68,-50.5 -13.95,-59.3 C1.92,-68.1 21.12,-73.37 43.65,-75.1 C43.65,-75.1 44.25,-73.9 44.25,-73.9 C25.32,-69.5 11.65,-58.63 3.25,-41.3 C-5.02,-24.1 -9.15,-3.37 -9.15,20.9 C-9.15,32.63 -8.55,42.43 -7.35,50.3 C-6.02,58.17 -4.42,63.97 -2.55,67.7 C-0.68,71.3 1.12,73.1 2.85,73.1 C2.85,73.1 2.85,75.1 2.85,75.1c "

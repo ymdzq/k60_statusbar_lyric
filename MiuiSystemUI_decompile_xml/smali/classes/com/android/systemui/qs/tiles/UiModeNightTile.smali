@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/qs/tiles/UiModeNightTile;
 .super Lcom/android/systemui/qs/tileimpl/QSTileImpl;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/policy/ConfigurationController$ConfigurationListener;
@@ -260,7 +260,7 @@
     move-result-object p0
 
     .line 44
-    const p2, 0x7f130989    # @string/quick_settings_dark_mode_secondary_label_battery_saver 'Battery Saver'
+    const p2, 0x7f13098f    # @string/quick_settings_dark_mode_secondary_label_battery_saver 'Battery Saver'
 
     .line 45
     invoke-virtual {p0, p2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -303,14 +303,14 @@
     if-eqz v3, :cond_2
 
     .line 72
-    const p2, 0x7f13098f    # @string/quick_settings_dark_mode_secondary_label_until_sunrise 'Until sunrise'
+    const p2, 0x7f130995    # @string/quick_settings_dark_mode_secondary_label_until_sunrise 'Until sunrise'
 
     .line 74
     goto :goto_1
 
     .line 77
     :cond_2
-    const p2, 0x7f13098c    # @string/quick_settings_dark_mode_secondary_label_on_at_sunset 'On at sunset'
+    const p2, 0x7f130992    # @string/quick_settings_dark_mode_secondary_label_on_at_sunset 'On at sunset'
 
     .line 78
     :goto_1
@@ -380,14 +380,14 @@
     if-eqz v3, :cond_5
 
     .line 117
-    const v4, 0x7f13098d    # @string/quick_settings_dark_mode_secondary_label_until 'Until %s'
+    const v4, 0x7f130993    # @string/quick_settings_dark_mode_secondary_label_until 'Until %s'
 
     .line 119
     goto :goto_3
 
     .line 122
     :cond_5
-    const v4, 0x7f13098a    # @string/quick_settings_dark_mode_secondary_label_on_at 'On at %s'
+    const v4, 0x7f130990    # @string/quick_settings_dark_mode_secondary_label_on_at 'On at %s'
 
     .line 123
     :goto_3
@@ -445,14 +445,14 @@
     if-eqz v3, :cond_8
 
     .line 156
-    const p2, 0x7f13098e    # @string/quick_settings_dark_mode_secondary_label_until_bedtime_ends 'Until bedtime ends'
+    const p2, 0x7f130994    # @string/quick_settings_dark_mode_secondary_label_until_bedtime_ends 'Until bedtime ends'
 
     .line 158
     goto :goto_5
 
     .line 161
     :cond_8
-    const p2, 0x7f13098b    # @string/quick_settings_dark_mode_secondary_label_on_at_bedtime 'On at bedtime'
+    const p2, 0x7f130991    # @string/quick_settings_dark_mode_secondary_label_on_at_bedtime 'On at bedtime'
 
     .line 162
     :goto_5
@@ -483,7 +483,7 @@
     iput-boolean v3, p1, Lcom/android/systemui/plugins/qs/QSTile$BooleanState;->value:Z
 
     .line 177
-    const p0, 0x7f130a01    # @string/quick_settings_ui_mode_night_label 'Dark theme'
+    const p0, 0x7f130a07    # @string/quick_settings_ui_mode_night_label 'Dark theme'
 
     .line 179
     invoke-virtual {v2, p0}, Landroid/content/Context;->getString(I)Ljava/lang/String;

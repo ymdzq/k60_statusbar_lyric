@@ -1,6 +1,6 @@
 .class public final Lcom/android/settingslib/users/AvatarPickerActivity$AvatarAdapter;
 .super Landroidx/recyclerview/widget/RecyclerView$Adapter;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # instance fields
@@ -558,7 +558,7 @@
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 19
-    const v0, 0x7f130c23    # @string/user_image_take_photo 'Take a photo'
+    const v0, 0x7f130c29    # @string/user_image_take_photo 'Take a photo'
 
     .line 22
     invoke-virtual {v1, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -592,7 +592,7 @@
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 44
-    const v0, 0x7f130c21    # @string/user_image_choose_photo 'Choose an image'
+    const v0, 0x7f130c27    # @string/user_image_choose_photo 'Choose an image'
 
     .line 47
     invoke-virtual {v1, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;

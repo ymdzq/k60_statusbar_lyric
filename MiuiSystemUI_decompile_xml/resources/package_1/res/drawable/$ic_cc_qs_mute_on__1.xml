@@ -1,20 +1,20 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <set android:ordering="together" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f080240"
+  <objectAnimator android:interpolator="@drawable/$$ic_cc_qs_mute_on__1__0"
                   android:duration="33"
                   android:startOffset="0"
                   android:propertyName="translateXY"
                   android:pathData="M -5.814,-35.487C -6.312,-34.973 -5.814,-35.487 -5.814,-35.487"
                   android:propertyXName="translateX"
                   android:propertyYName="translateY" />
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f080241"
+  <objectAnimator android:interpolator="@drawable/$$ic_cc_qs_mute_on__1__1"
                   android:duration="167"
                   android:startOffset="33"
                   android:propertyName="translateXY"
                   android:pathData="M -5.814,-35.487C -6.312,-34.973 -8.8,-32.4 -8.8,-32.4"
                   android:propertyXName="translateX"
                   android:propertyYName="translateY" />
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f080242"
+  <objectAnimator android:interpolator="@drawable/$$ic_cc_qs_mute_on__1__2"
                   android:duration="117"
                   android:startOffset="200"
                   android:propertyName="translateXY"

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/qs/tiles/MiuiFlashlightTile;
 .super Lcom/android/systemui/qs/tileimpl/QSTileImpl;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/policy/FlashlightController$FlashlightListener;
@@ -71,7 +71,7 @@
     iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
 
     .line 2
-    const v0, 0x7f1309aa    # @string/quick_settings_flashlight_label 'Flashlight'
+    const v0, 0x7f1309b0    # @string/quick_settings_flashlight_label 'Flashlight'
 
     .line 4
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -198,7 +198,7 @@
     if-ne v2, v3, :cond_2
 
     .line 26
-    const v0, 0x7f1309ac    # @string/quick_settings_flashlight_state_change_message_on 'Flashlight is on'
+    const v0, 0x7f1309b2    # @string/quick_settings_flashlight_state_change_message_on 'Flashlight is on'
 
     .line 28
     invoke-virtual {v1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -234,7 +234,7 @@
     if-ne v0, v2, :cond_4
 
     .line 47
-    const v0, 0x7f1309ab    # @string/quick_settings_flashlight_state_change_message_off 'Flashlight is off'
+    const v0, 0x7f1309b1    # @string/quick_settings_flashlight_state_change_message_off 'Flashlight is off'
 
     .line 49
     invoke-virtual {v1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -271,7 +271,7 @@
     move-result-object v0
 
     .line 12
-    const v1, 0x7f1309aa    # @string/quick_settings_flashlight_label 'Flashlight'
+    const v1, 0x7f1309b0    # @string/quick_settings_flashlight_label 'Flashlight'
 
     .line 13
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -421,14 +421,14 @@
     if-eqz v0, :cond_4
 
     .line 107
-    const v0, 0x7f130b54    # @string/switch_bar_on 'On'
+    const v0, 0x7f130b5a    # @string/switch_bar_on 'On'
 
     .line 109
     goto :goto_2
 
     .line 112
     :cond_4
-    const v0, 0x7f130b53    # @string/switch_bar_off 'Off'
+    const v0, 0x7f130b59    # @string/switch_bar_off 'Off'
 
     .line 113
     :goto_2

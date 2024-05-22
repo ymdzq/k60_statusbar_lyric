@@ -9,6 +9,12 @@
                       android:key="lock_screen_control_center"
                       android:summary="@string/requires_modern_control_center" />
   <CheckBoxPreference android:persistent="false"
+                      android:title="@string/title_device_control"
+                      android:key="lock_screen_device_control" />
+  <CheckBoxPreference android:persistent="false"
+                      android:title="@string/title_xiaomi_smart_hub"
+                      android:key="lock_screen_xiaomi_smart_hub" />
+  <CheckBoxPreference android:persistent="false"
                       android:title="@string/title_smart_device_control"
                       android:key="lock_screen_smart_device_control" />
   <CheckBoxPreference android:persistent="false"

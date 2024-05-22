@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/SlicePermissionActivity;
 .super Landroid/app/Activity;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Landroid/content/DialogInterface$OnClickListener;
@@ -313,7 +313,7 @@
     move-result-object v3
 
     .line 156
-    const v4, 0x7f130aeb    # @string/slice_permission_title 'Allow %1$s to show %2$s slices?'
+    const v4, 0x7f130af1    # @string/slice_permission_title 'Allow %1$s to show %2$s slices?'
 
     .line 157
     invoke-virtual {p0, v4, v3}, Landroid/app/Activity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -337,7 +337,7 @@
     move-result-object v2
 
     .line 174
-    const v3, 0x7f130ae8    # @string/slice_permission_deny 'Deny'
+    const v3, 0x7f130aee    # @string/slice_permission_deny 'Deny'
 
     .line 175
     invoke-virtual {v2, v3, p0}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
@@ -346,7 +346,7 @@
     move-result-object v2
 
     .line 181
-    const v3, 0x7f130ae6    # @string/slice_permission_allow 'Allow'
+    const v3, 0x7f130aec    # @string/slice_permission_allow 'Allow'
 
     .line 182
     invoke-virtual {v2, v3, p0}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
@@ -412,7 +412,7 @@
     move-result-object v4
 
     .line 229
-    const v5, 0x7f130ae9    # @string/slice_permission_text_1 '- It can read information from %1$s'
+    const v5, 0x7f130aef    # @string/slice_permission_text_1 '- It can read information from %1$s'
 
     .line 230
     invoke-virtual {p0, v5, v4}, Landroid/app/Activity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -454,7 +454,7 @@
     move-result-object p1
 
     .line 260
-    const v4, 0x7f130aea    # @string/slice_permission_text_2 '- It can take actions inside %1$s'
+    const v4, 0x7f130af0    # @string/slice_permission_text_2 '- It can take actions inside %1$s'
 
     .line 261
     invoke-virtual {p0, v4, p1}, Landroid/app/Activity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -499,7 +499,7 @@
     move-result-object v1
 
     .line 293
-    const v2, 0x7f130ae7    # @string/slice_permission_checkbox 'Allow %1$s to show slices from any app'
+    const v2, 0x7f130aed    # @string/slice_permission_checkbox 'Allow %1$s to show slices from any app'
 
     .line 294
     invoke-virtual {p0, v2, v1}, Landroid/app/Activity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;

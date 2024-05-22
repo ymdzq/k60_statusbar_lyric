@@ -3,14 +3,14 @@
               android:nextFocusDown="@id/checkgroup"
               android:layout_width="fill_parent"
               android:layout_height="wrap_content"
-              android:importantForAccessibility="no" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+              android:importantForAccessibility="no" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <miuix.visual.check.VisualCheckGroup android:id="@id/checkgroup"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/shoulderkey_sound_selection_margin_top"
-                        settings:itemSpacing="0.0dp"
-                        settings:lineGravity="center"
-                        settings:lineSpacing="2.0dp">
+                        app:itemSpacing="0.0dp"
+                        app:lineGravity="center"
+                        app:lineSpacing="2.0dp">
     <miuix.visual.check.VisualCheckBox android:orientation="vertical"
                           android:id="@id/sound_bullet"
                           android:layout_width="wrap_content"

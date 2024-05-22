@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/qs/tiles/MiuiBluetoothTile$BluetoothDetailAdapter$updateItemsRunnable$1$2;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -98,7 +98,7 @@
     const v2, 0x7f081074    # @drawable/ic_miui_qs_bluetooth_detail_empty 'res/drawable/ic_miui_qs_bluetooth_detail_empty.xml'
 
     .line 37
-    const v3, 0x7f13095c    # @string/quick_settings_bluetooth_detail_empty_text 'No paired devices available'
+    const v3, 0x7f130960    # @string/quick_settings_bluetooth_detail_empty_text 'No paired devices available'
 
     .line 40
     invoke-virtual {v0, v2, v3}, Lcom/android/systemui/qs/QSDetailContent;->setEmptyState(II)V

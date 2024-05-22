@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <PreferenceScreen android:title="@string/language_keyboard_settings_title"
-                  android:key="language_keyboard_settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+                  android:key="language_keyboard_settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res/com.android.settings" xmlns:settingslib="http://schemas.android.com/apk/res-auto">
   <PreferenceCategory android:title="@string/phone_language" />
   <com.android.settingslib.miuisettings.preference.ValuePreference android:title="@string/phone_language"
                         android:key="phone_language"
                         android:fragment="com.android.settings.MiuiLocalePicker" />
   <com.android.settingslib.miuisettings.preference.Preference android:title="@string/user_dict_settings_title"
                         android:key="key_user_dictionary_settings"
-                        settings:showRightArrow="true" />
+                        settingslib:showRightArrow="true" />
   <PreferenceCategory android:title="@string/keyboard_settings_category"
                       android:key="keyboard_settings_category">
     <com.android.settingslib.miuisettings.preference.miuix.DropDownPreference android:title="@string/current_input_method"
@@ -53,7 +53,7 @@
     <com.android.settingslib.miuisettings.preference.Preference android:persistent="false"
                           android:title="@string/spellcheckers_settings_title"
                           android:key="spellcheckers_settings"
-                          settings:showRightArrow="true" />
+                          settingslib:showRightArrow="true" />
     <com.android.settingslib.miuisettings.preference.Preference android:title="@string/autofill_app"
                           android:key="default_autofill"
                           android:fragment="com.android.settings.applications.defaultapps.DefaultAutofillPicker"
@@ -68,6 +68,6 @@
                           android:key="miui_mechanical_ime"
                           android:summary="@string/mechanical_ime_hint"
                           settings:controller="src.com.android.settings.inputmethod.MecBoardInputController"
-                          settings:showRightArrow="true" />
+                          settingslib:showRightArrow="true" />
   </PreferenceCategory>
 </PreferenceScreen>

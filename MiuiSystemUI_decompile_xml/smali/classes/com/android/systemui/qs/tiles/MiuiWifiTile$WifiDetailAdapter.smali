@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/qs/tiles/MiuiWifiTile$WifiDetailAdapter;
 .super Lcom/android/systemui/qs/tileimpl/QSDetailAdapter;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/connectivity/AccessPointController$AccessPointCallback;
@@ -943,7 +943,7 @@
     move-result-object v6
 
     .line 293
-    const v8, 0x7f130a0d    # @string/quick_settings_wifi_detail_dual_wifi_switching_prompt 'Switching between networks'
+    const v8, 0x7f130a13    # @string/quick_settings_wifi_detail_dual_wifi_switching_prompt 'Switching between networks'
 
     .line 294
     invoke-virtual {v6, v8}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -955,7 +955,7 @@
     invoke-virtual {v0, v8}, Lmiuix/appcompat/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 301
-    const v8, 0x7f130a0e    # @string/quick_settings_wifi_detail_dual_wifi_switching_summary 'Dual band WLAN speed boost needs to use two different WLAN bands. If you connect to a different main ...'
+    const v8, 0x7f130a14    # @string/quick_settings_wifi_detail_dual_wifi_switching_summary 'Dual band WLAN speed boost needs to use two different WLAN bands. If you connect to a different main ...'
 
     .line 304
     invoke-virtual {v6, v8}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -967,7 +967,7 @@
     invoke-virtual {v0, v8}, Lmiuix/appcompat/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)V
 
     .line 311
-    const v8, 0x7f130a0c    # @string/quick_settings_wifi_detail_dual_wifi_switching_not_remind 'Don't show again'
+    const v8, 0x7f130a12    # @string/quick_settings_wifi_detail_dual_wifi_switching_not_remind 'Don't show again'
 
     .line 314
     invoke-virtual {v6, v8}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -979,7 +979,7 @@
     invoke-virtual {v0, v8, v4}, Lmiuix/appcompat/app/AlertDialog$Builder;->setCheckBox(Ljava/lang/CharSequence;Z)V
 
     .line 321
-    const v8, 0x7f130a0a    # @string/quick_settings_wifi_detail_dual_wifi_switching_cancel 'Cancel'
+    const v8, 0x7f130a10    # @string/quick_settings_wifi_detail_dual_wifi_switching_cancel 'Cancel'
 
     .line 324
     invoke-virtual {v6, v8}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -994,7 +994,7 @@
     invoke-virtual {v0, v8, v9}, Lmiuix/appcompat/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
     .line 333
-    const v8, 0x7f130a0b    # @string/quick_settings_wifi_detail_dual_wifi_switching_confirm 'Confirm'
+    const v8, 0x7f130a11    # @string/quick_settings_wifi_detail_dual_wifi_switching_confirm 'Confirm'
 
     .line 336
     invoke-virtual {v6, v8}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -1163,188 +1163,185 @@
     check-cast p1, Lcom/android/systemui/controlcenter/policy/ShareNetworkController$Hotspot;
 
     .line 452
-    check-cast p0, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;
-
-    .line 454
-    iget-boolean v0, p0, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->enable:Z
-
-    .line 456
-    if-nez v0, :cond_16
-
-    .line 458
-    goto :goto_b
-
-    .line 460
-    :cond_16
     iget-object p1, p1, Lcom/android/systemui/controlcenter/policy/ShareNetworkController$Hotspot;->ap:Lcom/android/bluetooth/ble/app/EasyTetherHotspotEntry;
 
-    .line 461
-    if-eqz p1, :cond_17
+    .line 454
+    if-eqz p1, :cond_16
 
-    .line 463
+    .line 456
     iget-object v3, p1, Lcom/android/bluetooth/ble/app/EasyTetherHotspotEntry;->deviceId:Ljava/lang/String;
 
+    .line 458
+    :cond_16
+    check-cast p0, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;
+
+    .line 460
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 462
+    sget-boolean p1, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->WIFI_ENABLED:Z
+
     .line 465
+    if-nez p1, :cond_17
+
+    .line 467
+    goto :goto_b
+
+    .line 469
     :cond_17
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    .line 467
+    .line 470
     move-result p1
 
-    .line 470
+    .line 473
     const-string v0, "ShareNetworkControllerImpl"
 
-    .line 471
+    .line 474
     if-eqz p1, :cond_18
 
-    .line 473
-    const-string p0, "connect hotspot deviceId is null"
+    .line 476
+    const-string p0, "connectHotspot: deviceId is null"
 
-    .line 475
+    .line 478
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 477
+    .line 480
     goto :goto_b
 
-    .line 480
+    .line 483
     :cond_18
     iget-boolean p1, p0, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->connectingHotspot:Z
 
-    .line 481
+    .line 484
     if-eqz p1, :cond_19
 
-    .line 483
-    const-string p0, "already connecting hotspot"
+    .line 486
+    const-string p0, "Already connecting hotspot 0"
 
-    .line 485
+    .line 488
     invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 487
+    .line 490
     goto :goto_b
 
-    .line 490
+    .line 493
     :cond_19
     iput-boolean v2, p0, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->connectingHotspot:Z
 
-    .line 491
-    const-string p1, "connect hotspot"
+    .line 494
+    const-string p1, "connectHotspot 0"
 
-    .line 493
+    .line 496
     invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 495
-    iget-object p0, p0, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->sharenetwork$delegate:Lkotlin/Lazy;
-
     .line 498
-    invoke-interface {p0}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/android/systemui/controlcenter/policy/ShareNetworkControllerImpl;->getShareNetwork()Lcom/android/bluetooth/ble/app/ShareNetwork;
 
-    .line 500
+    .line 501
     move-result-object p0
-
-    .line 503
-    check-cast p0, Lcom/android/bluetooth/ble/app/ShareNetwork;
 
     .line 504
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 506
+    .line 505
     :try_start_2
     iget-object p0, p0, Lcom/android/bluetooth/ble/app/ShareNetwork;->mEasyTetherCoreService:Lcom/android/bluetooth/ble/app/IMiuiNearbyApiService;
 
-    .line 509
+    .line 508
     if-eqz p0, :cond_1b
 
-    .line 511
+    .line 510
     check-cast p0, Lcom/android/bluetooth/ble/app/IMiuiNearbyApiService$Stub$Proxy;
 
-    .line 513
+    .line 512
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
-    .line 515
+    .line 514
     move-result-object p1
 
-    .line 518
+    .line 517
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
-    .line 519
+    .line 518
     move-result-object v0
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 522
+    .line 521
     :try_start_3
     const-string v1, "com.android.bluetooth.ble.app.IMiuiNearbyApiService"
 
-    .line 523
+    .line 522
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 525
+    .line 524
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 528
+    .line 527
     invoke-virtual {p1, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 531
+    .line 530
     iget-object p0, p0, Lcom/android/bluetooth/ble/app/IMiuiNearbyApiService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    .line 534
+    .line 533
     const/16 v1, 0x15
 
-    .line 536
+    .line 535
     invoke-interface {p0, v1, p1, v0, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 538
+    .line 537
     move-result p0
 
-    .line 541
+    .line 540
     if-nez p0, :cond_1a
 
-    .line 542
+    .line 541
     sget p0, Lcom/android/bluetooth/ble/app/IMiuiNearbyApiService$Stub;->$r8$clinit:I
 
-    .line 544
+    .line 543
     :cond_1a
     invoke-virtual {v0}, Landroid/os/Parcel;->readException()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 546
+    .line 545
     :try_start_4
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 549
+    .line 548
     invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
 
-    .line 552
+    .line 551
     goto :goto_b
 
-    .line 555
+    .line 554
     :catchall_0
     move-exception p0
 
-    .line 556
+    .line 555
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 557
+    .line 556
     invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
 
-    .line 560
+    .line 559
     throw p0
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
 
-    .line 563
+    .line 562
     :catch_2
     move-exception p0
 
-    .line 564
+    .line 563
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 565
+    .line 564
     :cond_1b
     :goto_b
     return-void
-    .line 568
+    .line 567
 .end method
 
 .method public final onDetailItemDisconnect(Lcom/android/systemui/qs/QSDetailContent$SelectableItem;)V
@@ -1571,14 +1568,14 @@
     if-eqz v0, :cond_5
 
     .line 74
-    const v0, 0x7f130a10    # @string/quick_settings_wifi_is_off 'WLAN is off'
+    const v0, 0x7f130a16    # @string/quick_settings_wifi_is_off 'WLAN is off'
 
     .line 76
     goto :goto_4
 
     .line 79
     :cond_5
-    const v0, 0x7f130a15    # @string/quick_settings_wlan_is_off 'WLAN is off'
+    const v0, 0x7f130a1b    # @string/quick_settings_wlan_is_off 'WLAN is off'
 
     .line 80
     :goto_4
@@ -1601,14 +1598,14 @@
     if-eqz v5, :cond_7
 
     .line 94
-    const v5, 0x7f1309c0    # @string/quick_settings_miui_wifi_detail_empty_text 'No WLAN networks available'
+    const v5, 0x7f1309c6    # @string/quick_settings_miui_wifi_detail_empty_text 'No WLAN networks available'
 
     .line 96
     goto :goto_5
 
     .line 99
     :cond_7
-    const v5, 0x7f1309c2    # @string/quick_settings_miui_wlan_detail_empty_text 'No WLAN networks available'
+    const v5, 0x7f1309c8    # @string/quick_settings_miui_wlan_detail_empty_text 'No WLAN networks available'
 
     .line 100
     :goto_5
@@ -2156,7 +2153,7 @@
     move-result-object v3
 
     .line 412
-    const v9, 0x7f130937    # @string/qs_control_big_tile_state_connected 'Connected'
+    const v9, 0x7f130939    # @string/qs_control_big_tile_state_connected 'Connected'
 
     .line 413
     invoke-virtual {v3, v9}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -2242,7 +2239,7 @@
     move-result-object v9
 
     .line 467
-    const v10, 0x7f130a09    # @string/quick_settings_wifi_detail_dual_wifi_accelerated 'Boosting speed'
+    const v10, 0x7f130a0f    # @string/quick_settings_wifi_detail_dual_wifi_accelerated 'Boosting speed'
 
     .line 468
     invoke-virtual {v9, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -2292,7 +2289,7 @@
     move-result-object v3
 
     .line 499
-    const v9, 0x7f1309f4    # @string/quick_settings_state_saved 'Saved'
+    const v9, 0x7f1309fa    # @string/quick_settings_state_saved 'Saved'
 
     .line 500
     invoke-virtual {v3, v9}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -2350,10 +2347,10 @@
 
     .line 530
     :goto_18
-    const v2, 0x7f1309f5    # @string/quick_settings_state_wifi_select_nearby_ap 'Select WLAN networks nearby'
+    const v2, 0x7f1309fb    # @string/quick_settings_state_wifi_select_nearby_ap 'Select WLAN networks nearby'
 
     .line 531
-    const v3, 0x7f1309f6    # @string/quick_settings_state_wlan_select_nearby_ap 'Select WLAN networks nearby'
+    const v3, 0x7f1309fc    # @string/quick_settings_state_wlan_select_nearby_ap 'Select WLAN networks nearby'
 
     .line 534
     iget-object v6, v7, Lcom/android/systemui/controlcenter/policy/SlaveWifiHelper;->context:Landroid/content/Context;

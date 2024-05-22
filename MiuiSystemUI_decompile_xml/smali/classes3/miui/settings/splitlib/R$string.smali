@@ -1,6 +1,6 @@
 .class public final Lmiui/settings/splitlib/R$string;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # static fields
@@ -4718,2055 +4718,2067 @@
 
 .field public static final qs_bill_message_unit_cny:I = 0x7f130934 # @string/qs_bill_message_unit_cny 'CNY'
 
-.field public static final qs_control_big_tile_state_closed:I = 0x7f130935
+.field public static final qs_control_big_tile_click_cellular_tether_tip:I = 0x7f130935 # @string/qs_control_big_tile_click_cellular_tether_tip 'Exit Second space and try again'
 
-.field public static final qs_control_big_tile_state_closing:I = 0x7f130936
+.field public static final qs_control_big_tile_connect_share_network_fail:I = 0x7f130936 # @string/qs_control_big_tile_connect_share_network_fail 'Couldn't connect to mobile data network. Wait a minute or two and try again.'
 
-.field public static final qs_control_big_tile_state_connected:I = 0x7f130937 # @string/qs_control_big_tile_state_connected 'Connected'
+.field public static final qs_control_big_tile_state_closed:I = 0x7f130937 # @string/qs_control_big_tile_state_closed 'Off'
 
-.field public static final qs_control_big_tile_state_connecting:I = 0x7f130938 # @string/qs_control_big_tile_state_connecting 'Connecting…'
+.field public static final qs_control_big_tile_state_closing:I = 0x7f130938
 
-.field public static final qs_control_big_tile_state_disconnected:I = 0x7f130939
+.field public static final qs_control_big_tile_state_connected:I = 0x7f130939 # @string/qs_control_big_tile_state_connected 'Connected'
 
-.field public static final qs_control_big_tile_state_disconnecting:I = 0x7f13093a
+.field public static final qs_control_big_tile_state_connecting:I = 0x7f13093a # @string/qs_control_big_tile_state_connecting 'Connecting…'
 
-.field public static final qs_control_big_tile_state_opened:I = 0x7f13093b
+.field public static final qs_control_big_tile_state_disconnected:I = 0x7f13093b
 
-.field public static final qs_control_big_tile_state_opening:I = 0x7f13093c # @string/qs_control_big_tile_state_opening 'Turning on…'
+.field public static final qs_control_big_tile_state_disconnecting:I = 0x7f13093c
 
-.field public static final qs_control_big_tile_state_unavailable:I = 0x7f13093d
+.field public static final qs_control_big_tile_state_opened:I = 0x7f13093d
 
-.field public static final qs_control_customize_other_tiles_title:I = 0x7f13093e
+.field public static final qs_control_big_tile_state_opening:I = 0x7f13093e # @string/qs_control_big_tile_state_opening 'Turning on…'
 
-.field public static final qs_control_customize_save_text:I = 0x7f13093f
+.field public static final qs_control_big_tile_state_tethered_wifi:I = 0x7f13093f # @string/qs_control_big_tile_state_tethered_wifi 'Using phone's WLAN signal'
 
-.field public static final qs_control_customize_sub_title:I = 0x7f130940
+.field public static final qs_control_big_tile_state_tethered_wlan:I = 0x7f130940 # @string/qs_control_big_tile_state_tethered_wlan 'Using phone's WLAN signal'
 
-.field public static final qs_control_customize_title:I = 0x7f130941
+.field public static final qs_control_big_tile_state_unavailable:I = 0x7f130941 # @string/qs_control_big_tile_state_unavailable 'Not available'
 
-.field public static final qs_control_expand_detail_title:I = 0x7f130942
+.field public static final qs_control_customize_other_tiles_title:I = 0x7f130942
 
-.field public static final qs_control_header_tiles_title:I = 0x7f130943
+.field public static final qs_control_customize_save_text:I = 0x7f130943
 
-.field public static final qs_customize_remove:I = 0x7f130944 # @string/qs_customize_remove 'Remove'
+.field public static final qs_control_customize_sub_title:I = 0x7f130944
 
-.field public static final qs_customize_title:I = 0x7f130945 # @string/qs_customize_title 'Edit'
+.field public static final qs_control_customize_title:I = 0x7f130945
 
-.field public static final qs_dnd_prompt_app:I = 0x7f130946
+.field public static final qs_control_expand_detail_title:I = 0x7f130946
 
-.field public static final qs_dnd_prompt_auto_rule:I = 0x7f130947
+.field public static final qs_control_header_tiles_title:I = 0x7f130947
 
-.field public static final qs_dnd_prompt_auto_rule_app:I = 0x7f130948
+.field public static final qs_customize_remove:I = 0x7f130948 # @string/qs_customize_remove 'Remove'
 
-.field public static final qs_edit:I = 0x7f130949 # @string/qs_edit 'Edit'
+.field public static final qs_customize_title:I = 0x7f130949 # @string/qs_customize_title 'Edit'
 
-.field public static final qs_open_night_mode_alert_summary:I = 0x7f13094a # @string/qs_open_night_mode_alert_summary 'Certain display settings aren't compatible with Dark mode. However, they will be restored once you t ...'
+.field public static final qs_dnd_prompt_app:I = 0x7f13094a
 
-.field public static final qs_tile_request_dialog_add:I = 0x7f13094b # @string/qs_tile_request_dialog_add 'Add tile'
+.field public static final qs_dnd_prompt_auto_rule:I = 0x7f13094b
 
-.field public static final qs_tile_request_dialog_not_add:I = 0x7f13094c # @string/qs_tile_request_dialog_not_add 'Do not add tile'
+.field public static final qs_dnd_prompt_auto_rule_app:I = 0x7f13094c
 
-.field public static final qs_tile_request_dialog_text:I = 0x7f13094d # @string/qs_tile_request_dialog_text '%1$s wants to add the following tile to Quick Settings'
+.field public static final qs_edit:I = 0x7f13094d # @string/qs_edit 'Edit'
 
-.field public static final qs_traffic_message_type_exceed:I = 0x7f13094e # @string/qs_traffic_message_type_exceed '%1$s %2$s over limit'
+.field public static final qs_open_night_mode_alert_summary:I = 0x7f13094e # @string/qs_open_night_mode_alert_summary 'Certain display settings aren't compatible with Dark mode. However, they will be restored once you t ...'
 
-.field public static final qs_traffic_message_type_remain:I = 0x7f13094f # @string/qs_traffic_message_type_remain '%1$s %2$s remaining'
+.field public static final qs_tile_request_dialog_add:I = 0x7f13094f # @string/qs_tile_request_dialog_add 'Add tile'
 
-.field public static final qs_traffic_message_type_used:I = 0x7f130950 # @string/qs_traffic_message_type_used 'Used %1$s %2$s'
+.field public static final qs_tile_request_dialog_not_add:I = 0x7f130950 # @string/qs_tile_request_dialog_not_add 'Do not add tile'
 
-.field public static final qs_user_switch_dialog_title:I = 0x7f130951 # @string/qs_user_switch_dialog_title 'Select user'
+.field public static final qs_tile_request_dialog_text:I = 0x7f130951 # @string/qs_tile_request_dialog_text '%1$s wants to add the following tile to Quick Settings'
 
-.field public static final quick_controls_title:I = 0x7f130952 # @string/quick_controls_title 'Device controls'
+.field public static final qs_traffic_message_type_exceed:I = 0x7f130952 # @string/qs_traffic_message_type_exceed '%1$s %2$s over limit'
 
-.field public static final quick_settings_airplane_state_change_message_off:I = 0x7f130953 # @string/quick_settings_airplane_state_change_message_off 'Airplane mode is off'
+.field public static final qs_traffic_message_type_remain:I = 0x7f130953 # @string/qs_traffic_message_type_remain '%1$s %2$s remaining'
 
-.field public static final quick_settings_airplane_state_change_message_on:I = 0x7f130954 # @string/quick_settings_airplane_state_change_message_on 'Airplane mode is on'
+.field public static final qs_traffic_message_type_used:I = 0x7f130954 # @string/qs_traffic_message_type_used 'Used %1$s %2$s'
 
-.field public static final quick_settings_auto_rotate_state_change_message_off:I = 0x7f130955 # @string/quick_settings_auto_rotate_state_change_message_off 'Auto rotate is off'
+.field public static final qs_user_switch_dialog_title:I = 0x7f130955 # @string/qs_user_switch_dialog_title 'Select user'
 
-.field public static final quick_settings_auto_rotate_state_change_message_on:I = 0x7f130956 # @string/quick_settings_auto_rotate_state_change_message_on 'Auto rotate is on'
+.field public static final quick_controls_title:I = 0x7f130956 # @string/quick_controls_title 'Device controls'
 
-.field public static final quick_settings_autobrightness_label:I = 0x7f130957 # @string/quick_settings_autobrightness_label 'Auto brightness'
+.field public static final quick_settings_airplane_state_change_message_off:I = 0x7f130957 # @string/quick_settings_airplane_state_change_message_off 'Airplane mode is off'
 
-.field public static final quick_settings_autobrightness_state_change_message_off:I = 0x7f130958 # @string/quick_settings_autobrightness_state_change_message_off 'Auto brightness is off'
+.field public static final quick_settings_airplane_state_change_message_on:I = 0x7f130958 # @string/quick_settings_airplane_state_change_message_on 'Airplane mode is on'
 
-.field public static final quick_settings_autobrightness_state_change_message_on:I = 0x7f130959 # @string/quick_settings_autobrightness_state_change_message_on 'Auto brightness is on'
+.field public static final quick_settings_auto_rotate_state_change_message_off:I = 0x7f130959 # @string/quick_settings_auto_rotate_state_change_message_off 'Auto rotate is off'
 
-.field public static final quick_settings_batterysaver_label:I = 0x7f13095a # @string/quick_settings_batterysaver_label 'Battery saver'
+.field public static final quick_settings_auto_rotate_state_change_message_on:I = 0x7f13095a # @string/quick_settings_auto_rotate_state_change_message_on 'Auto rotate is on'
 
-.field public static final quick_settings_bluetooth_connected_tip:I = 0x7f13095b # @string/quick_settings_bluetooth_connected_tip 'Connected via Bluetooth successfully'
+.field public static final quick_settings_autobrightness_label:I = 0x7f13095b # @string/quick_settings_autobrightness_label 'Auto brightness'
 
-.field public static final quick_settings_bluetooth_detail_empty_text:I = 0x7f13095c # @string/quick_settings_bluetooth_detail_empty_text 'No paired devices available'
+.field public static final quick_settings_autobrightness_state_change_message_off:I = 0x7f13095c # @string/quick_settings_autobrightness_state_change_message_off 'Auto brightness is off'
 
-.field public static final quick_settings_bluetooth_disconnected_tip:I = 0x7f13095d # @string/quick_settings_bluetooth_disconnected_tip 'All Bluetooth devices will stay disconnected today'
+.field public static final quick_settings_autobrightness_state_change_message_on:I = 0x7f13095d # @string/quick_settings_autobrightness_state_change_message_on 'Auto brightness is on'
 
-.field public static final quick_settings_bluetooth_label:I = 0x7f13095e # @string/quick_settings_bluetooth_label 'Bluetooth'
+.field public static final quick_settings_batterysaver_label:I = 0x7f13095e # @string/quick_settings_batterysaver_label 'Battery saver'
 
-.field public static final quick_settings_bluetooth_secondary_label_audio:I = 0x7f13095f # @string/quick_settings_bluetooth_secondary_label_audio 'Audio'
+.field public static final quick_settings_bluetooth_connected_tip:I = 0x7f13095f # @string/quick_settings_bluetooth_connected_tip 'Connected via Bluetooth successfully'
 
-.field public static final quick_settings_bluetooth_secondary_label_battery_level:I = 0x7f130960 # @string/quick_settings_bluetooth_secondary_label_battery_level '%s battery'
+.field public static final quick_settings_bluetooth_detail_empty_text:I = 0x7f130960 # @string/quick_settings_bluetooth_detail_empty_text 'No paired devices available'
 
-.field public static final quick_settings_bluetooth_secondary_label_headset:I = 0x7f130961 # @string/quick_settings_bluetooth_secondary_label_headset 'Headset'
+.field public static final quick_settings_bluetooth_disconnected_tip:I = 0x7f130961 # @string/quick_settings_bluetooth_disconnected_tip 'All Bluetooth devices will stay disconnected today'
 
-.field public static final quick_settings_bluetooth_secondary_label_hearing_aids:I = 0x7f130962 # @string/quick_settings_bluetooth_secondary_label_hearing_aids 'Hearing Aids'
+.field public static final quick_settings_bluetooth_label:I = 0x7f130962 # @string/quick_settings_bluetooth_label 'Bluetooth'
 
-.field public static final quick_settings_bluetooth_secondary_label_input:I = 0x7f130963 # @string/quick_settings_bluetooth_secondary_label_input 'Input'
+.field public static final quick_settings_bluetooth_secondary_label_audio:I = 0x7f130963 # @string/quick_settings_bluetooth_secondary_label_audio 'Audio'
 
-.field public static final quick_settings_bluetooth_secondary_label_transient:I = 0x7f130964 # @string/quick_settings_bluetooth_secondary_label_transient 'Turning on…'
+.field public static final quick_settings_bluetooth_secondary_label_battery_level:I = 0x7f130964 # @string/quick_settings_bluetooth_secondary_label_battery_level '%s battery'
 
-.field public static final quick_settings_brightness_dialog_title:I = 0x7f130965 # @string/quick_settings_brightness_dialog_title 'Brightness'
+.field public static final quick_settings_bluetooth_secondary_label_headset:I = 0x7f130965 # @string/quick_settings_bluetooth_secondary_label_headset 'Headset'
 
-.field public static final quick_settings_bt_state_change_message_off:I = 0x7f130966 # @string/quick_settings_bt_state_change_message_off 'Bluetooth is off'
+.field public static final quick_settings_bluetooth_secondary_label_hearing_aids:I = 0x7f130966 # @string/quick_settings_bluetooth_secondary_label_hearing_aids 'Hearing Aids'
 
-.field public static final quick_settings_bt_state_change_message_on:I = 0x7f130967 # @string/quick_settings_bt_state_change_message_on 'Bluetooth is on'
+.field public static final quick_settings_bluetooth_secondary_label_input:I = 0x7f130967 # @string/quick_settings_bluetooth_secondary_label_input 'Input'
 
-.field public static final quick_settings_camera_label:I = 0x7f130968 # @string/quick_settings_camera_label 'Camera access'
+.field public static final quick_settings_bluetooth_secondary_label_transient:I = 0x7f130968 # @string/quick_settings_bluetooth_secondary_label_transient 'Turning on…'
 
-.field public static final quick_settings_camera_mic_available:I = 0x7f130969 # @string/quick_settings_camera_mic_available 'Available'
+.field public static final quick_settings_brightness_dialog_title:I = 0x7f130969 # @string/quick_settings_brightness_dialog_title 'Brightness'
 
-.field public static final quick_settings_camera_mic_blocked:I = 0x7f13096a # @string/quick_settings_camera_mic_blocked 'Blocked'
+.field public static final quick_settings_bt_state_change_message_off:I = 0x7f13096a # @string/quick_settings_bt_state_change_message_off 'Bluetooth is off'
 
-.field public static final quick_settings_cast_detail_empty_text:I = 0x7f13096b
+.field public static final quick_settings_bt_state_change_message_on:I = 0x7f13096b # @string/quick_settings_bt_state_change_message_on 'Bluetooth is on'
 
-.field public static final quick_settings_cast_device_default_name:I = 0x7f13096c # @string/quick_settings_cast_device_default_name 'Unnamed device'
+.field public static final quick_settings_camera_label:I = 0x7f13096c # @string/quick_settings_camera_label 'Camera access'
 
-.field public static final quick_settings_cast_no_wifi:I = 0x7f13096d # @string/quick_settings_cast_no_wifi 'Wi‑Fi not connected'
+.field public static final quick_settings_camera_mic_available:I = 0x7f13096d # @string/quick_settings_camera_mic_available 'Available'
 
-.field public static final quick_settings_cast_title:I = 0x7f13096e # @string/quick_settings_cast_title 'Screen Cast'
+.field public static final quick_settings_camera_mic_blocked:I = 0x7f13096e # @string/quick_settings_camera_mic_blocked 'Blocked'
 
-.field public static final quick_settings_casting:I = 0x7f13096f # @string/quick_settings_casting 'Casting'
+.field public static final quick_settings_cast_detail_empty_text:I = 0x7f13096f
 
-.field public static final quick_settings_cellular_detail_data_limit:I = 0x7f130970
+.field public static final quick_settings_cast_device_default_name:I = 0x7f130970 # @string/quick_settings_cast_device_default_name 'Unnamed device'
 
-.field public static final quick_settings_cellular_detail_data_usage:I = 0x7f130971
+.field public static final quick_settings_cast_no_wifi:I = 0x7f130971 # @string/quick_settings_cast_no_wifi 'Wi‑Fi not connected'
 
-.field public static final quick_settings_cellular_detail_data_used:I = 0x7f130972
+.field public static final quick_settings_cast_title:I = 0x7f130972 # @string/quick_settings_cast_title 'Screen Cast'
 
-.field public static final quick_settings_cellular_detail_data_warning:I = 0x7f130973
+.field public static final quick_settings_casting:I = 0x7f130973 # @string/quick_settings_casting 'Casting'
 
-.field public static final quick_settings_cellular_detail_dialog_message_turnoff:I = 0x7f130974 # @string/quick_settings_cellular_detail_dialog_message_turnoff 'If you turn off mobile data, you won't be able to use the internet unless you connect to WLAN. You'l ...'
+.field public static final quick_settings_cellular_detail_data_limit:I = 0x7f130974
 
-.field public static final quick_settings_cellular_detail_dialog_message_turnoff_wlan:I = 0x7f130975
+.field public static final quick_settings_cellular_detail_data_usage:I = 0x7f130975
 
-.field public static final quick_settings_cellular_detail_dialog_message_turnon:I = 0x7f130976 # @string/quick_settings_cellular_detail_dialog_message_turnon 'Using mobile data may generate additional charges depending on your payment plan. Allow using mobile ...'
+.field public static final quick_settings_cellular_detail_data_used:I = 0x7f130976
 
-.field public static final quick_settings_cellular_detail_dialog_negative_button_cancel:I = 0x7f130977 # @string/quick_settings_cellular_detail_dialog_negative_button_cancel 'Cancel'
+.field public static final quick_settings_cellular_detail_data_warning:I = 0x7f130977
 
-.field public static final quick_settings_cellular_detail_dialog_positive_button_ok:I = 0x7f130978 # @string/quick_settings_cellular_detail_dialog_positive_button_ok 'OK'
+.field public static final quick_settings_cellular_detail_dialog_message_turnoff:I = 0x7f130978 # @string/quick_settings_cellular_detail_dialog_message_turnoff 'If you turn off mobile data, you won't be able to use the internet unless you connect to WLAN. You'l ...'
 
-.field public static final quick_settings_cellular_detail_dialog_positive_button_turnoff:I = 0x7f130979 # @string/quick_settings_cellular_detail_dialog_positive_button_turnoff 'Turn off'
+.field public static final quick_settings_cellular_detail_dialog_message_turnoff_wlan:I = 0x7f130979
 
-.field public static final quick_settings_cellular_detail_over_limit:I = 0x7f13097a
+.field public static final quick_settings_cellular_detail_dialog_message_turnon:I = 0x7f13097a # @string/quick_settings_cellular_detail_dialog_message_turnon 'Using mobile data may generate additional charges depending on your payment plan. Allow using mobile ...'
 
-.field public static final quick_settings_cellular_detail_remaining_data:I = 0x7f13097b
+.field public static final quick_settings_cellular_detail_dialog_negative_button_cancel:I = 0x7f13097b # @string/quick_settings_cellular_detail_dialog_negative_button_cancel 'Cancel'
 
-.field public static final quick_settings_cellular_detail_title:I = 0x7f13097c # @string/quick_settings_cellular_detail_title 'Mobile data'
+.field public static final quick_settings_cellular_detail_dialog_positive_button_ok:I = 0x7f13097c # @string/quick_settings_cellular_detail_dialog_positive_button_ok 'OK'
 
-.field public static final quick_settings_cellular_detail_unable_change:I = 0x7f13097d # @string/quick_settings_cellular_detail_unable_change 'Can't set during call'
+.field public static final quick_settings_cellular_detail_dialog_positive_button_turnoff:I = 0x7f13097d # @string/quick_settings_cellular_detail_dialog_positive_button_turnoff 'Turn off'
 
-.field public static final quick_settings_cellular_state_change_message_off:I = 0x7f13097e # @string/quick_settings_cellular_state_change_message_off 'Mobile data is off'
+.field public static final quick_settings_cellular_detail_over_limit:I = 0x7f13097e
 
-.field public static final quick_settings_cellular_state_change_message_on:I = 0x7f13097f # @string/quick_settings_cellular_state_change_message_on 'Mobile data is on'
+.field public static final quick_settings_cellular_detail_remaining_data:I = 0x7f13097f
 
-.field public static final quick_settings_close_user_panel:I = 0x7f130980
+.field public static final quick_settings_cellular_detail_title:I = 0x7f130980 # @string/quick_settings_cellular_detail_title 'Mobile data'
 
-.field public static final quick_settings_color_correction_label:I = 0x7f130981 # @string/quick_settings_color_correction_label 'Color correction'
+.field public static final quick_settings_cellular_detail_unable_change:I = 0x7f130981 # @string/quick_settings_cellular_detail_unable_change 'Can't set during call'
 
-.field public static final quick_settings_connected:I = 0x7f130982
+.field public static final quick_settings_cellular_state_change_message_connected:I = 0x7f130982 # @string/quick_settings_cellular_state_change_message_connected 'Connected to mobile data network'
 
-.field public static final quick_settings_connected_battery_level:I = 0x7f130983
+.field public static final quick_settings_cellular_state_change_message_disconnected:I = 0x7f130983 # @string/quick_settings_cellular_state_change_message_disconnected 'Disconnected from mobile data network'
 
-.field public static final quick_settings_connecting:I = 0x7f130984 # @string/quick_settings_connecting 'Connecting...'
+.field public static final quick_settings_cellular_state_change_message_off:I = 0x7f130984 # @string/quick_settings_cellular_state_change_message_off 'Mobile data is off'
 
-.field public static final quick_settings_contrast_high:I = 0x7f130985 # @string/quick_settings_contrast_high 'High'
+.field public static final quick_settings_cellular_state_change_message_on:I = 0x7f130985 # @string/quick_settings_cellular_state_change_message_on 'Mobile data is on'
 
-.field public static final quick_settings_contrast_label:I = 0x7f130986 # @string/quick_settings_contrast_label 'Contrast'
+.field public static final quick_settings_close_user_panel:I = 0x7f130986
 
-.field public static final quick_settings_contrast_medium:I = 0x7f130987 # @string/quick_settings_contrast_medium 'Medium'
+.field public static final quick_settings_color_correction_label:I = 0x7f130987 # @string/quick_settings_color_correction_label 'Color correction'
 
-.field public static final quick_settings_contrast_standard:I = 0x7f130988 # @string/quick_settings_contrast_standard 'Standard'
+.field public static final quick_settings_connected:I = 0x7f130988
 
-.field public static final quick_settings_dark_mode_secondary_label_battery_saver:I = 0x7f130989 # @string/quick_settings_dark_mode_secondary_label_battery_saver 'Battery Saver'
+.field public static final quick_settings_connected_battery_level:I = 0x7f130989
 
-.field public static final quick_settings_dark_mode_secondary_label_on_at:I = 0x7f13098a # @string/quick_settings_dark_mode_secondary_label_on_at 'On at %s'
+.field public static final quick_settings_connecting:I = 0x7f13098a # @string/quick_settings_connecting 'Connecting...'
 
-.field public static final quick_settings_dark_mode_secondary_label_on_at_bedtime:I = 0x7f13098b # @string/quick_settings_dark_mode_secondary_label_on_at_bedtime 'On at bedtime'
+.field public static final quick_settings_contrast_high:I = 0x7f13098b # @string/quick_settings_contrast_high 'High'
 
-.field public static final quick_settings_dark_mode_secondary_label_on_at_sunset:I = 0x7f13098c # @string/quick_settings_dark_mode_secondary_label_on_at_sunset 'On at sunset'
+.field public static final quick_settings_contrast_label:I = 0x7f13098c # @string/quick_settings_contrast_label 'Contrast'
 
-.field public static final quick_settings_dark_mode_secondary_label_until:I = 0x7f13098d # @string/quick_settings_dark_mode_secondary_label_until 'Until %s'
+.field public static final quick_settings_contrast_medium:I = 0x7f13098d # @string/quick_settings_contrast_medium 'Medium'
 
-.field public static final quick_settings_dark_mode_secondary_label_until_bedtime_ends:I = 0x7f13098e # @string/quick_settings_dark_mode_secondary_label_until_bedtime_ends 'Until bedtime ends'
+.field public static final quick_settings_contrast_standard:I = 0x7f13098e # @string/quick_settings_contrast_standard 'Standard'
 
-.field public static final quick_settings_dark_mode_secondary_label_until_sunrise:I = 0x7f13098f # @string/quick_settings_dark_mode_secondary_label_until_sunrise 'Until sunrise'
+.field public static final quick_settings_dark_mode_secondary_label_battery_saver:I = 0x7f13098f # @string/quick_settings_dark_mode_secondary_label_battery_saver 'Battery Saver'
 
-.field public static final quick_settings_disclosure_managed_profile_monitoring:I = 0x7f130990 # @string/quick_settings_disclosure_managed_profile_monitoring 'Your organization may monitor network traffic in your work profile'
+.field public static final quick_settings_dark_mode_secondary_label_on_at:I = 0x7f130990 # @string/quick_settings_dark_mode_secondary_label_on_at 'On at %s'
 
-.field public static final quick_settings_disclosure_managed_profile_named_vpn:I = 0x7f130991 # @string/quick_settings_disclosure_managed_profile_named_vpn 'Your work apps are connected to the internet through %1$s'
+.field public static final quick_settings_dark_mode_secondary_label_on_at_bedtime:I = 0x7f130991 # @string/quick_settings_dark_mode_secondary_label_on_at_bedtime 'On at bedtime'
 
-.field public static final quick_settings_disclosure_managed_profile_network_activity:I = 0x7f130992 # @string/quick_settings_disclosure_managed_profile_network_activity 'Work profile network activity is visible to your IT admin'
+.field public static final quick_settings_dark_mode_secondary_label_on_at_sunset:I = 0x7f130992 # @string/quick_settings_dark_mode_secondary_label_on_at_sunset 'On at sunset'
 
-.field public static final quick_settings_disclosure_management:I = 0x7f130993 # @string/quick_settings_disclosure_management 'This device belongs to your organization'
+.field public static final quick_settings_dark_mode_secondary_label_until:I = 0x7f130993 # @string/quick_settings_dark_mode_secondary_label_until 'Until %s'
 
-.field public static final quick_settings_disclosure_management_monitoring:I = 0x7f130994 # @string/quick_settings_disclosure_management_monitoring 'Your organization owns this device and may monitor network traffic'
+.field public static final quick_settings_dark_mode_secondary_label_until_bedtime_ends:I = 0x7f130994 # @string/quick_settings_dark_mode_secondary_label_until_bedtime_ends 'Until bedtime ends'
 
-.field public static final quick_settings_disclosure_management_named_vpn:I = 0x7f130995 # @string/quick_settings_disclosure_management_named_vpn 'This device belongs to your organization and is connected to the internet through %1$s'
+.field public static final quick_settings_dark_mode_secondary_label_until_sunrise:I = 0x7f130995 # @string/quick_settings_dark_mode_secondary_label_until_sunrise 'Until sunrise'
 
-.field public static final quick_settings_disclosure_management_vpns:I = 0x7f130996 # @string/quick_settings_disclosure_management_vpns 'This device belongs to your organization and is connected to the internet through VPNs'
+.field public static final quick_settings_disclosure_managed_profile_monitoring:I = 0x7f130996 # @string/quick_settings_disclosure_managed_profile_monitoring 'Your organization may monitor network traffic in your work profile'
 
-.field public static final quick_settings_disclosure_monitoring:I = 0x7f130997 # @string/quick_settings_disclosure_monitoring 'Network may be monitored'
+.field public static final quick_settings_disclosure_managed_profile_named_vpn:I = 0x7f130997 # @string/quick_settings_disclosure_managed_profile_named_vpn 'Your work apps are connected to the internet through %1$s'
 
-.field public static final quick_settings_disclosure_named_managed_profile_monitoring:I = 0x7f130998 # @string/quick_settings_disclosure_named_managed_profile_monitoring '%1$s may monitor network traffic in your work profile'
+.field public static final quick_settings_disclosure_managed_profile_network_activity:I = 0x7f130998 # @string/quick_settings_disclosure_managed_profile_network_activity 'Work profile network activity is visible to your IT admin'
 
-.field public static final quick_settings_disclosure_named_management:I = 0x7f130999 # @string/quick_settings_disclosure_named_management 'This device belongs to %1$s'
+.field public static final quick_settings_disclosure_management:I = 0x7f130999 # @string/quick_settings_disclosure_management 'This device belongs to your organization'
 
-.field public static final quick_settings_disclosure_named_management_monitoring:I = 0x7f13099a # @string/quick_settings_disclosure_named_management_monitoring '%1$s owns this device and may monitor network traffic'
+.field public static final quick_settings_disclosure_management_monitoring:I = 0x7f13099a # @string/quick_settings_disclosure_management_monitoring 'Your organization owns this device and may monitor network traffic'
 
-.field public static final quick_settings_disclosure_named_management_named_vpn:I = 0x7f13099b # @string/quick_settings_disclosure_named_management_named_vpn 'This device belongs to %1$s and is connected to the internet through %2$s'
+.field public static final quick_settings_disclosure_management_named_vpn:I = 0x7f13099b # @string/quick_settings_disclosure_management_named_vpn 'This device belongs to your organization and is connected to the internet through %1$s'
 
-.field public static final quick_settings_disclosure_named_management_vpns:I = 0x7f13099c # @string/quick_settings_disclosure_named_management_vpns 'This device belongs to %1$s and is connected to the internet through VPNs'
+.field public static final quick_settings_disclosure_management_vpns:I = 0x7f13099c # @string/quick_settings_disclosure_management_vpns 'This device belongs to your organization and is connected to the internet through VPNs'
 
-.field public static final quick_settings_disclosure_named_vpn:I = 0x7f13099d # @string/quick_settings_disclosure_named_vpn 'This device is connected to the internet through %1$s'
+.field public static final quick_settings_disclosure_monitoring:I = 0x7f13099d # @string/quick_settings_disclosure_monitoring 'Network may be monitored'
 
-.field public static final quick_settings_disclosure_parental_controls:I = 0x7f13099e # @string/quick_settings_disclosure_parental_controls 'This device is managed by your parent'
+.field public static final quick_settings_disclosure_named_managed_profile_monitoring:I = 0x7f13099e # @string/quick_settings_disclosure_named_managed_profile_monitoring '%1$s may monitor network traffic in your work profile'
 
-.field public static final quick_settings_disclosure_personal_profile_named_vpn:I = 0x7f13099f # @string/quick_settings_disclosure_personal_profile_named_vpn 'Your personal apps are connected to the internet through %1$s'
+.field public static final quick_settings_disclosure_named_management:I = 0x7f13099f # @string/quick_settings_disclosure_named_management 'This device belongs to %1$s'
 
-.field public static final quick_settings_disclosure_vpns:I = 0x7f1309a0 # @string/quick_settings_disclosure_vpns 'This device is connected to the internet through VPNs'
+.field public static final quick_settings_disclosure_named_management_monitoring:I = 0x7f1309a0 # @string/quick_settings_disclosure_named_management_monitoring '%1$s owns this device and may monitor network traffic'
 
-.field public static final quick_settings_dnd_label:I = 0x7f1309a1 # @string/quick_settings_dnd_label 'Do Not Disturb'
+.field public static final quick_settings_disclosure_named_management_named_vpn:I = 0x7f1309a1 # @string/quick_settings_disclosure_named_management_named_vpn 'This device belongs to %1$s and is connected to the internet through %2$s'
 
-.field public static final quick_settings_dnd_state_change_message_off:I = 0x7f1309a2 # @string/quick_settings_dnd_state_change_message_off 'DND is off'
+.field public static final quick_settings_disclosure_named_management_vpns:I = 0x7f1309a2 # @string/quick_settings_disclosure_named_management_vpns 'This device belongs to %1$s and is connected to the internet through VPNs'
 
-.field public static final quick_settings_dnd_state_change_message_on:I = 0x7f1309a3 # @string/quick_settings_dnd_state_change_message_on 'DND is on'
+.field public static final quick_settings_disclosure_named_vpn:I = 0x7f1309a3 # @string/quick_settings_disclosure_named_vpn 'This device is connected to the internet through %1$s'
 
-.field public static final quick_settings_done:I = 0x7f1309a4 # @string/quick_settings_done 'Done'
+.field public static final quick_settings_disclosure_parental_controls:I = 0x7f1309a4 # @string/quick_settings_disclosure_parental_controls 'This device is managed by your parent'
 
-.field public static final quick_settings_drivemode_label:I = 0x7f1309a5
+.field public static final quick_settings_disclosure_personal_profile_named_vpn:I = 0x7f1309a5 # @string/quick_settings_disclosure_personal_profile_named_vpn 'Your personal apps are connected to the internet through %1$s'
 
-.field public static final quick_settings_edit_label:I = 0x7f1309a6 # @string/quick_settings_edit_label 'Edit'
+.field public static final quick_settings_disclosure_vpns:I = 0x7f1309a6 # @string/quick_settings_disclosure_vpns 'This device is connected to the internet through VPNs'
 
-.field public static final quick_settings_extreme_batterysaver_label:I = 0x7f1309a7
+.field public static final quick_settings_dnd_label:I = 0x7f1309a7 # @string/quick_settings_dnd_label 'Do Not Disturb'
 
-.field public static final quick_settings_financed_disclosure_named_management:I = 0x7f1309a8 # @string/quick_settings_financed_disclosure_named_management 'This device is provided by %s'
+.field public static final quick_settings_dnd_state_change_message_off:I = 0x7f1309a8 # @string/quick_settings_dnd_state_change_message_off 'DND is off'
 
-.field public static final quick_settings_flashlight_camera_in_use:I = 0x7f1309a9 # @string/quick_settings_flashlight_camera_in_use 'Camera in use'
+.field public static final quick_settings_dnd_state_change_message_on:I = 0x7f1309a9 # @string/quick_settings_dnd_state_change_message_on 'DND is on'
 
-.field public static final quick_settings_flashlight_label:I = 0x7f1309aa # @string/quick_settings_flashlight_label 'Flashlight'
+.field public static final quick_settings_done:I = 0x7f1309aa # @string/quick_settings_done 'Done'
 
-.field public static final quick_settings_flashlight_state_change_message_off:I = 0x7f1309ab # @string/quick_settings_flashlight_state_change_message_off 'Flashlight is off'
+.field public static final quick_settings_drivemode_label:I = 0x7f1309ab
 
-.field public static final quick_settings_flashlight_state_change_message_on:I = 0x7f1309ac # @string/quick_settings_flashlight_state_change_message_on 'Flashlight is on'
+.field public static final quick_settings_edit_label:I = 0x7f1309ac # @string/quick_settings_edit_label 'Edit'
 
-.field public static final quick_settings_font_scaling_label:I = 0x7f1309ad # @string/quick_settings_font_scaling_label 'Font size'
+.field public static final quick_settings_extreme_batterysaver_label:I = 0x7f1309ad
 
-.field public static final quick_settings_googlehome_label:I = 0x7f1309ae # @string/quick_settings_googlehome_label 'Google Home'
+.field public static final quick_settings_financed_disclosure_named_management:I = 0x7f1309ae # @string/quick_settings_financed_disclosure_named_management 'This device is provided by %s'
 
-.field public static final quick_settings_googlepay_label:I = 0x7f1309af # @string/quick_settings_googlepay_label 'Google Pay'
+.field public static final quick_settings_flashlight_camera_in_use:I = 0x7f1309af # @string/quick_settings_flashlight_camera_in_use 'Camera in use'
 
-.field public static final quick_settings_hotspot_label:I = 0x7f1309b0 # @string/quick_settings_hotspot_label 'Hotspot'
+.field public static final quick_settings_flashlight_label:I = 0x7f1309b0 # @string/quick_settings_flashlight_label 'Flashlight'
 
-.field public static final quick_settings_hotspot_secondary_label_data_saver_enabled:I = 0x7f1309b1 # @string/quick_settings_hotspot_secondary_label_data_saver_enabled 'Data Saver is on'
+.field public static final quick_settings_flashlight_state_change_message_off:I = 0x7f1309b1 # @string/quick_settings_flashlight_state_change_message_off 'Flashlight is off'
 
-.field public static final quick_settings_hotspot_secondary_label_num_devices:I = 0x7f1309b2 # @string/quick_settings_hotspot_secondary_label_num_devices '{count, plural, =1 {# device} other {# devices} }'
+.field public static final quick_settings_flashlight_state_change_message_on:I = 0x7f1309b2 # @string/quick_settings_flashlight_state_change_message_on 'Flashlight is on'
 
-.field public static final quick_settings_hotspot_secondary_label_transient:I = 0x7f1309b3 # @string/quick_settings_hotspot_secondary_label_transient 'Turning on…'
+.field public static final quick_settings_font_scaling_label:I = 0x7f1309b3 # @string/quick_settings_font_scaling_label 'Font size'
 
-.field public static final quick_settings_hotspot_state_change_message_off:I = 0x7f1309b4 # @string/quick_settings_hotspot_state_change_message_off 'Hotspot is off'
+.field public static final quick_settings_googlehome_label:I = 0x7f1309b4 # @string/quick_settings_googlehome_label 'Google Home'
 
-.field public static final quick_settings_hotspot_state_change_message_on:I = 0x7f1309b5 # @string/quick_settings_hotspot_state_change_message_on 'Hotspot is on'
+.field public static final quick_settings_googlepay_label:I = 0x7f1309b5 # @string/quick_settings_googlepay_label 'Google Pay'
 
-.field public static final quick_settings_intelligent_dual_sim_accelerate_summary:I = 0x7f1309b6 # @string/quick_settings_intelligent_dual_sim_accelerate_summary 'Use mobile data of the secondary SIM to boost connection speed'
+.field public static final quick_settings_hotspot_label:I = 0x7f1309b6 # @string/quick_settings_hotspot_label 'Hotspot'
 
-.field public static final quick_settings_intelligent_dual_sim_accelerate_title:I = 0x7f1309b7 # @string/quick_settings_intelligent_dual_sim_accelerate_title 'Smart dual SIM'
+.field public static final quick_settings_hotspot_secondary_label_data_saver_enabled:I = 0x7f1309b7 # @string/quick_settings_hotspot_secondary_label_data_saver_enabled 'Data Saver is on'
 
-.field public static final quick_settings_internet_label:I = 0x7f1309b8 # @string/quick_settings_internet_label 'Internet'
+.field public static final quick_settings_hotspot_secondary_label_num_devices:I = 0x7f1309b8 # @string/quick_settings_hotspot_secondary_label_num_devices '{count, plural, =1 {# device} other {# devices} }'
 
-.field public static final quick_settings_inversion_label:I = 0x7f1309b9 # @string/quick_settings_inversion_label 'Color inversion'
+.field public static final quick_settings_hotspot_secondary_label_transient:I = 0x7f1309b9 # @string/quick_settings_hotspot_secondary_label_transient 'Turning on…'
 
-.field public static final quick_settings_location_label:I = 0x7f1309ba # @string/quick_settings_location_label 'Location'
+.field public static final quick_settings_hotspot_state_change_message_off:I = 0x7f1309ba # @string/quick_settings_hotspot_state_change_message_off 'Hotspot is off'
 
-.field public static final quick_settings_location_state_change_message_off:I = 0x7f1309bb # @string/quick_settings_location_state_change_message_off 'Location access is off'
+.field public static final quick_settings_hotspot_state_change_message_on:I = 0x7f1309bb # @string/quick_settings_hotspot_state_change_message_on 'Hotspot is on'
 
-.field public static final quick_settings_location_state_change_message_on:I = 0x7f1309bc # @string/quick_settings_location_state_change_message_on 'Location access is on'
+.field public static final quick_settings_intelligent_dual_sim_accelerate_summary:I = 0x7f1309bc # @string/quick_settings_intelligent_dual_sim_accelerate_summary 'Use mobile data of the secondary SIM to boost connection speed'
 
-.field public static final quick_settings_low_battery_toast_text:I = 0x7f1309bd
+.field public static final quick_settings_intelligent_dual_sim_accelerate_title:I = 0x7f1309bd # @string/quick_settings_intelligent_dual_sim_accelerate_title 'Smart dual SIM'
 
-.field public static final quick_settings_media_device_label:I = 0x7f1309be # @string/quick_settings_media_device_label 'Media device'
+.field public static final quick_settings_internet_label:I = 0x7f1309be # @string/quick_settings_internet_label 'Internet'
 
-.field public static final quick_settings_mic_label:I = 0x7f1309bf # @string/quick_settings_mic_label 'Mic access'
+.field public static final quick_settings_inversion_label:I = 0x7f1309bf # @string/quick_settings_inversion_label 'Color inversion'
 
-.field public static final quick_settings_miui_wifi_detail_empty_text:I = 0x7f1309c0 # @string/quick_settings_miui_wifi_detail_empty_text 'No WLAN networks available'
+.field public static final quick_settings_location_label:I = 0x7f1309c0 # @string/quick_settings_location_label 'Location'
 
-.field public static final quick_settings_miui_wifi_label:I = 0x7f1309c1 # @string/quick_settings_miui_wifi_label 'WLAN'
+.field public static final quick_settings_location_state_change_message_off:I = 0x7f1309c1 # @string/quick_settings_location_state_change_message_off 'Location access is off'
 
-.field public static final quick_settings_miui_wlan_detail_empty_text:I = 0x7f1309c2 # @string/quick_settings_miui_wlan_detail_empty_text 'No WLAN networks available'
+.field public static final quick_settings_location_state_change_message_on:I = 0x7f1309c2 # @string/quick_settings_location_state_change_message_on 'Location access is on'
 
-.field public static final quick_settings_miui_wlan_label:I = 0x7f1309c3 # @string/quick_settings_miui_wlan_label 'WLAN'
+.field public static final quick_settings_low_battery_toast_text:I = 0x7f1309c3
 
-.field public static final quick_settings_more_settings:I = 0x7f1309c4 # @string/quick_settings_more_settings 'More settings'
+.field public static final quick_settings_media_device_label:I = 0x7f1309c4 # @string/quick_settings_media_device_label 'Media device'
 
-.field public static final quick_settings_more_user_settings:I = 0x7f1309c5 # @string/quick_settings_more_user_settings 'Manage users'
+.field public static final quick_settings_mic_label:I = 0x7f1309c5 # @string/quick_settings_mic_label 'Mic access'
 
-.field public static final quick_settings_mute_label:I = 0x7f1309c6 # @string/quick_settings_mute_label 'Mute'
+.field public static final quick_settings_miui_wifi_detail_empty_text:I = 0x7f1309c6 # @string/quick_settings_miui_wifi_detail_empty_text 'No WLAN networks available'
 
-.field public static final quick_settings_mute_state_change_message_off:I = 0x7f1309c7 # @string/quick_settings_mute_state_change_message_off 'Silent mode is off'
+.field public static final quick_settings_miui_wifi_label:I = 0x7f1309c7 # @string/quick_settings_miui_wifi_label 'WLAN'
 
-.field public static final quick_settings_mute_state_change_message_on:I = 0x7f1309c8 # @string/quick_settings_mute_state_change_message_on 'Silent mode is on'
+.field public static final quick_settings_miui_wlan_detail_empty_text:I = 0x7f1309c8 # @string/quick_settings_miui_wlan_detail_empty_text 'No WLAN networks available'
 
-.field public static final quick_settings_networks_available:I = 0x7f1309c9 # @string/quick_settings_networks_available 'Networks available'
+.field public static final quick_settings_miui_wlan_label:I = 0x7f1309c9 # @string/quick_settings_miui_wlan_label 'WLAN'
 
-.field public static final quick_settings_networks_unavailable:I = 0x7f1309ca # @string/quick_settings_networks_unavailable 'Networks unavailable'
+.field public static final quick_settings_more_settings:I = 0x7f1309ca # @string/quick_settings_more_settings 'More settings'
 
-.field public static final quick_settings_nfc_label:I = 0x7f1309cb # @string/quick_settings_nfc_label 'NFC'
+.field public static final quick_settings_more_user_settings:I = 0x7f1309cb # @string/quick_settings_more_user_settings 'Manage users'
 
-.field public static final quick_settings_nfc_off:I = 0x7f1309cc
+.field public static final quick_settings_mute_label:I = 0x7f1309cc # @string/quick_settings_mute_label 'Mute'
 
-.field public static final quick_settings_nfc_on:I = 0x7f1309cd
+.field public static final quick_settings_mute_state_change_message_off:I = 0x7f1309cd # @string/quick_settings_mute_state_change_message_off 'Silent mode is off'
 
-.field public static final quick_settings_nfc_state_change_message_off:I = 0x7f1309ce # @string/quick_settings_nfc_state_change_message_off 'NFC is off'
+.field public static final quick_settings_mute_state_change_message_on:I = 0x7f1309ce # @string/quick_settings_mute_state_change_message_on 'Silent mode is on'
 
-.field public static final quick_settings_nfc_state_change_message_on:I = 0x7f1309cf # @string/quick_settings_nfc_state_change_message_on 'NFC is on'
+.field public static final quick_settings_networks_available:I = 0x7f1309cf # @string/quick_settings_networks_available 'Networks available'
 
-.field public static final quick_settings_night_display_label:I = 0x7f1309d0 # @string/quick_settings_night_display_label 'Night Light'
+.field public static final quick_settings_networks_unavailable:I = 0x7f1309d0 # @string/quick_settings_networks_unavailable 'Networks unavailable'
 
-.field public static final quick_settings_night_secondary_label_on_at:I = 0x7f1309d1 # @string/quick_settings_night_secondary_label_on_at 'On at %s'
+.field public static final quick_settings_nfc_label:I = 0x7f1309d1 # @string/quick_settings_nfc_label 'NFC'
 
-.field public static final quick_settings_night_secondary_label_on_at_sunset:I = 0x7f1309d2 # @string/quick_settings_night_secondary_label_on_at_sunset 'On at sunset'
+.field public static final quick_settings_nfc_off:I = 0x7f1309d2
 
-.field public static final quick_settings_night_secondary_label_until_sunrise:I = 0x7f1309d3 # @string/quick_settings_night_secondary_label_until_sunrise 'Until sunrise'
+.field public static final quick_settings_nfc_on:I = 0x7f1309d3
 
-.field public static final quick_settings_night_state_change_message_off:I = 0x7f1309d4 # @string/quick_settings_night_state_change_message_off 'Dark mode is off'
+.field public static final quick_settings_nfc_state_change_message_off:I = 0x7f1309d4 # @string/quick_settings_nfc_state_change_message_off 'NFC is off'
 
-.field public static final quick_settings_night_state_change_message_on:I = 0x7f1309d5 # @string/quick_settings_night_state_change_message_on 'Dark mode is on'
+.field public static final quick_settings_nfc_state_change_message_on:I = 0x7f1309d5 # @string/quick_settings_nfc_state_change_message_on 'NFC is on'
 
-.field public static final quick_settings_nightmode_label:I = 0x7f1309d6 # @string/quick_settings_nightmode_label 'Dark mode'
+.field public static final quick_settings_night_display_label:I = 0x7f1309d6 # @string/quick_settings_night_display_label 'Night Light'
 
-.field public static final quick_settings_onehanded_label:I = 0x7f1309d7 # @string/quick_settings_onehanded_label 'One-handed mode'
+.field public static final quick_settings_night_secondary_label_on_at:I = 0x7f1309d7 # @string/quick_settings_night_secondary_label_on_at 'On at %s'
 
-.field public static final quick_settings_paper_state_change_message_off:I = 0x7f1309d8 # @string/quick_settings_paper_state_change_message_off 'Reading mode is off'
+.field public static final quick_settings_night_secondary_label_on_at_sunset:I = 0x7f1309d8 # @string/quick_settings_night_secondary_label_on_at_sunset 'On at sunset'
 
-.field public static final quick_settings_paper_state_change_message_on:I = 0x7f1309d9 # @string/quick_settings_paper_state_change_message_on 'Reading mode is on'
+.field public static final quick_settings_night_secondary_label_until_sunrise:I = 0x7f1309d9 # @string/quick_settings_night_secondary_label_until_sunrise 'Until sunrise'
 
-.field public static final quick_settings_papermode_label:I = 0x7f1309da # @string/quick_settings_papermode_label 'Reading mode'
+.field public static final quick_settings_night_state_change_message_off:I = 0x7f1309da # @string/quick_settings_night_state_change_message_off 'Dark mode is off'
 
-.field public static final quick_settings_powermode_label:I = 0x7f1309db
+.field public static final quick_settings_night_state_change_message_on:I = 0x7f1309db # @string/quick_settings_night_state_change_message_on 'Dark mode is on'
 
-.field public static final quick_settings_powersaver_state_change_message_off:I = 0x7f1309dc # @string/quick_settings_powersaver_state_change_message_off 'Battery saver is off'
+.field public static final quick_settings_nightmode_label:I = 0x7f1309dc # @string/quick_settings_nightmode_label 'Dark mode'
 
-.field public static final quick_settings_powersaver_state_change_message_on:I = 0x7f1309dd # @string/quick_settings_powersaver_state_change_message_on 'Battery saver is on'
+.field public static final quick_settings_onehanded_label:I = 0x7f1309dd # @string/quick_settings_onehanded_label 'One-handed mode'
 
-.field public static final quick_settings_quietmode_label:I = 0x7f1309de # @string/quick_settings_quietmode_label 'DND'
+.field public static final quick_settings_paper_state_change_message_off:I = 0x7f1309de # @string/quick_settings_paper_state_change_message_off 'Reading mode is off'
 
-.field public static final quick_settings_rotation_state_change_message_off:I = 0x7f1309df # @string/quick_settings_rotation_state_change_message_off 'Screen orientation is unlocked'
+.field public static final quick_settings_paper_state_change_message_on:I = 0x7f1309df # @string/quick_settings_paper_state_change_message_on 'Reading mode is on'
 
-.field public static final quick_settings_rotation_state_change_message_on:I = 0x7f1309e0 # @string/quick_settings_rotation_state_change_message_on 'Screen orientation is locked'
+.field public static final quick_settings_papermode_label:I = 0x7f1309e0 # @string/quick_settings_papermode_label 'Reading mode'
 
-.field public static final quick_settings_rotation_unlocked_label:I = 0x7f1309e1 # @string/quick_settings_rotation_unlocked_label 'Auto-rotate'
+.field public static final quick_settings_powermode_label:I = 0x7f1309e1
 
-.field public static final quick_settings_rotationlock_label:I = 0x7f1309e2 # @string/quick_settings_rotationlock_label 'Lock orientation'
+.field public static final quick_settings_powersaver_state_change_message_off:I = 0x7f1309e2 # @string/quick_settings_powersaver_state_change_message_off 'Battery saver is off'
 
-.field public static final quick_settings_screen_record_label:I = 0x7f1309e3 # @string/quick_settings_screen_record_label 'Screen record'
+.field public static final quick_settings_powersaver_state_change_message_on:I = 0x7f1309e3 # @string/quick_settings_powersaver_state_change_message_on 'Battery saver is on'
 
-.field public static final quick_settings_screen_record_start:I = 0x7f1309e4 # @string/quick_settings_screen_record_start 'Start'
+.field public static final quick_settings_quietmode_label:I = 0x7f1309e4 # @string/quick_settings_quietmode_label 'DND'
 
-.field public static final quick_settings_screen_record_stop:I = 0x7f1309e5 # @string/quick_settings_screen_record_stop 'Stop'
+.field public static final quick_settings_rotation_state_change_message_off:I = 0x7f1309e5 # @string/quick_settings_rotation_state_change_message_off 'Screen orientation is unlocked'
 
-.field public static final quick_settings_screen_rotation_inner_locked:I = 0x7f1309e6 # @string/quick_settings_screen_rotation_inner_locked 'Inner screen rotate off'
+.field public static final quick_settings_rotation_state_change_message_on:I = 0x7f1309e6 # @string/quick_settings_rotation_state_change_message_on 'Screen orientation is locked'
 
-.field public static final quick_settings_screen_rotation_inner_unlocked:I = 0x7f1309e7 # @string/quick_settings_screen_rotation_inner_unlocked 'Inner screen rotate on'
+.field public static final quick_settings_rotation_unlocked_label:I = 0x7f1309e7 # @string/quick_settings_rotation_unlocked_label 'Auto-rotate'
 
-.field public static final quick_settings_screen_rotation_outer_landscape_locked:I = 0x7f1309e8 # @string/quick_settings_screen_rotation_outer_landscape_locked 'Outer screen locked in landscape mode'
+.field public static final quick_settings_rotationlock_label:I = 0x7f1309e8 # @string/quick_settings_rotationlock_label 'Lock orientation'
 
-.field public static final quick_settings_screen_rotation_outer_portrait_locked:I = 0x7f1309e9 # @string/quick_settings_screen_rotation_outer_portrait_locked 'Outer screen locked in portrait mode'
+.field public static final quick_settings_screen_record_label:I = 0x7f1309e9 # @string/quick_settings_screen_record_label 'Screen record'
 
-.field public static final quick_settings_screen_rotation_outer_unlocked:I = 0x7f1309ea # @string/quick_settings_screen_rotation_outer_unlocked 'Outer screen rotate on'
+.field public static final quick_settings_screen_record_start:I = 0x7f1309ea # @string/quick_settings_screen_record_start 'Start'
 
-.field public static final quick_settings_screenbutton_label:I = 0x7f1309eb
+.field public static final quick_settings_screen_record_stop:I = 0x7f1309eb # @string/quick_settings_screen_record_stop 'Stop'
 
-.field public static final quick_settings_screenlock_label:I = 0x7f1309ec # @string/quick_settings_screenlock_label 'Lock screen'
+.field public static final quick_settings_screen_rotation_inner_locked:I = 0x7f1309ec # @string/quick_settings_screen_rotation_inner_locked 'Inner screen rotate off'
 
-.field public static final quick_settings_screensaver_label:I = 0x7f1309ed # @string/quick_settings_screensaver_label 'Screen saver'
+.field public static final quick_settings_screen_rotation_inner_unlocked:I = 0x7f1309ed # @string/quick_settings_screen_rotation_inner_unlocked 'Inner screen rotate on'
 
-.field public static final quick_settings_screenshot_label:I = 0x7f1309ee # @string/quick_settings_screenshot_label 'Screenshot'
+.field public static final quick_settings_screen_rotation_outer_landscape_locked:I = 0x7f1309ee # @string/quick_settings_screen_rotation_outer_landscape_locked 'Outer screen locked in landscape mode'
 
-.field public static final quick_settings_secondary_label_until:I = 0x7f1309ef # @string/quick_settings_secondary_label_until 'Until %s'
+.field public static final quick_settings_screen_rotation_outer_portrait_locked:I = 0x7f1309ef # @string/quick_settings_screen_rotation_outer_portrait_locked 'Outer screen locked in portrait mode'
 
-.field public static final quick_settings_sim_disabled:I = 0x7f1309f0 # @string/quick_settings_sim_disabled ' (Disabled)'
+.field public static final quick_settings_screen_rotation_outer_unlocked:I = 0x7f1309f0 # @string/quick_settings_screen_rotation_outer_unlocked 'Outer screen rotate on'
 
-.field public static final quick_settings_slt_lable:I = 0x7f1309f1 # @string/quick_settings_slt_lable ''
+.field public static final quick_settings_screenbutton_label:I = 0x7f1309f1
 
-.field public static final quick_settings_state_change_message_off:I = 0x7f1309f2 # @string/quick_settings_state_change_message_off '%1$s is off'
+.field public static final quick_settings_screenlock_label:I = 0x7f1309f2 # @string/quick_settings_screenlock_label 'Lock screen'
 
-.field public static final quick_settings_state_change_message_on:I = 0x7f1309f3 # @string/quick_settings_state_change_message_on '%1$s is on'
+.field public static final quick_settings_screensaver_label:I = 0x7f1309f3 # @string/quick_settings_screensaver_label 'Screen saver'
 
-.field public static final quick_settings_state_saved:I = 0x7f1309f4 # @string/quick_settings_state_saved 'Saved'
+.field public static final quick_settings_screenshot_label:I = 0x7f1309f4 # @string/quick_settings_screenshot_label 'Screenshot'
 
-.field public static final quick_settings_state_wifi_select_nearby_ap:I = 0x7f1309f5 # @string/quick_settings_state_wifi_select_nearby_ap 'Select WLAN networks nearby'
+.field public static final quick_settings_secondary_label_until:I = 0x7f1309f5 # @string/quick_settings_secondary_label_until 'Until %s'
 
-.field public static final quick_settings_state_wlan_select_nearby_ap:I = 0x7f1309f6 # @string/quick_settings_state_wlan_select_nearby_ap 'Select WLAN networks nearby'
+.field public static final quick_settings_sim_disabled:I = 0x7f1309f6 # @string/quick_settings_sim_disabled ' (Disabled)'
 
-.field public static final quick_settings_sync_label:I = 0x7f1309f7 # @string/quick_settings_sync_label 'Sync'
+.field public static final quick_settings_slt_lable:I = 0x7f1309f7 # @string/quick_settings_slt_lable ''
 
-.field public static final quick_settings_sync_state_change_message_off:I = 0x7f1309f8 # @string/quick_settings_sync_state_change_message_off 'Sync is off'
+.field public static final quick_settings_state_change_message_off:I = 0x7f1309f8 # @string/quick_settings_state_change_message_off '%1$s is off'
 
-.field public static final quick_settings_sync_state_change_message_on:I = 0x7f1309f9 # @string/quick_settings_sync_state_change_message_on 'Sync is on'
+.field public static final quick_settings_state_change_message_on:I = 0x7f1309f9 # @string/quick_settings_state_change_message_on '%1$s is on'
 
-.field public static final quick_settings_tiles:I = 0x7f1309fa # @string/quick_settings_tiles 'default'
+.field public static final quick_settings_state_saved:I = 0x7f1309fa # @string/quick_settings_state_saved 'Saved'
 
-.field public static final quick_settings_tiles_default:I = 0x7f1309fb # @string/quick_settings_tiles_default 'internet,bt,flashlight,dnd,alarm,airplane,controls,wallet,rotation,battery,cast,screenrecord,mictogg ...'
+.field public static final quick_settings_state_wifi_select_nearby_ap:I = 0x7f1309fb # @string/quick_settings_state_wifi_select_nearby_ap 'Select WLAN networks nearby'
 
-.field public static final quick_settings_tiles_old_mode:I = 0x7f1309fc
+.field public static final quick_settings_state_wlan_select_nearby_ap:I = 0x7f1309fc # @string/quick_settings_state_wlan_select_nearby_ap 'Select WLAN networks nearby'
 
-.field public static final quick_settings_tiles_retail_mode:I = 0x7f1309fd # @string/quick_settings_tiles_retail_mode 'night,dark,dnd,flashlight,rotation,location'
+.field public static final quick_settings_sync_label:I = 0x7f1309fd # @string/quick_settings_sync_label 'Sync'
 
-.field public static final quick_settings_tiles_stock:I = 0x7f1309fe # @string/quick_settings_tiles_stock 'internet,bt,flashlight,dnd,alarm,airplane,controls,wallet,rotation,battery,cast,screenrecord,mictogg ...'
+.field public static final quick_settings_sync_state_change_message_off:I = 0x7f1309fe # @string/quick_settings_sync_state_change_message_off 'Sync is off'
 
-.field public static final quick_settings_tiles_super_save:I = 0x7f1309ff # @string/quick_settings_tiles_super_save 'cell,wifi,bt,gps,vibrate'
+.field public static final quick_settings_sync_state_change_message_on:I = 0x7f1309ff # @string/quick_settings_sync_state_change_message_on 'Sync is on'
 
-.field public static final quick_settings_toast_drag_to_enable_custom_tile:I = 0x7f130a00
+.field public static final quick_settings_tiles:I = 0x7f130a00 # @string/quick_settings_tiles 'default'
 
-.field public static final quick_settings_ui_mode_night_label:I = 0x7f130a01 # @string/quick_settings_ui_mode_night_label 'Dark theme'
+.field public static final quick_settings_tiles_default:I = 0x7f130a01 # @string/quick_settings_tiles_default 'internet,bt,flashlight,dnd,alarm,airplane,controls,wallet,rotation,battery,cast,screenrecord,mictogg ...'
 
-.field public static final quick_settings_user_title:I = 0x7f130a02
+.field public static final quick_settings_tiles_old_mode:I = 0x7f130a02
 
-.field public static final quick_settings_vibrate_label:I = 0x7f130a03 # @string/quick_settings_vibrate_label 'Vibrate'
+.field public static final quick_settings_tiles_retail_mode:I = 0x7f130a03 # @string/quick_settings_tiles_retail_mode 'night,dark,dnd,flashlight,rotation,location'
 
-.field public static final quick_settings_vibrate_state_change_message_off:I = 0x7f130a04 # @string/quick_settings_vibrate_state_change_message_off 'Vibration is off'
+.field public static final quick_settings_tiles_stock:I = 0x7f130a04 # @string/quick_settings_tiles_stock 'internet,bt,flashlight,dnd,alarm,airplane,controls,wallet,rotation,battery,cast,screenrecord,mictogg ...'
 
-.field public static final quick_settings_vibrate_state_change_message_on:I = 0x7f130a05 # @string/quick_settings_vibrate_state_change_message_on 'Vibration is on'
+.field public static final quick_settings_tiles_super_save:I = 0x7f130a05 # @string/quick_settings_tiles_super_save 'cell,wifi,bt,gps,vibrate'
 
-.field public static final quick_settings_vowifi_label:I = 0x7f130a06 # @string/quick_settings_vowifi_label 'WLAN Calling'
+.field public static final quick_settings_toast_drag_to_enable_custom_tile:I = 0x7f130a06
 
-.field public static final quick_settings_vowifi_sim1_label:I = 0x7f130a07 # @string/quick_settings_vowifi_sim1_label 'WLAN Calling SIM1'
+.field public static final quick_settings_ui_mode_night_label:I = 0x7f130a07 # @string/quick_settings_ui_mode_night_label 'Dark theme'
 
-.field public static final quick_settings_vowifi_sim2_label:I = 0x7f130a08 # @string/quick_settings_vowifi_sim2_label 'WLAN Calling SIM2'
+.field public static final quick_settings_user_title:I = 0x7f130a08
 
-.field public static final quick_settings_wifi_detail_dual_wifi_accelerated:I = 0x7f130a09 # @string/quick_settings_wifi_detail_dual_wifi_accelerated 'Boosting speed'
+.field public static final quick_settings_vibrate_label:I = 0x7f130a09 # @string/quick_settings_vibrate_label 'Vibrate'
 
-.field public static final quick_settings_wifi_detail_dual_wifi_switching_cancel:I = 0x7f130a0a # @string/quick_settings_wifi_detail_dual_wifi_switching_cancel 'Cancel'
+.field public static final quick_settings_vibrate_state_change_message_off:I = 0x7f130a0a # @string/quick_settings_vibrate_state_change_message_off 'Vibration is off'
 
-.field public static final quick_settings_wifi_detail_dual_wifi_switching_confirm:I = 0x7f130a0b # @string/quick_settings_wifi_detail_dual_wifi_switching_confirm 'Confirm'
+.field public static final quick_settings_vibrate_state_change_message_on:I = 0x7f130a0b # @string/quick_settings_vibrate_state_change_message_on 'Vibration is on'
 
-.field public static final quick_settings_wifi_detail_dual_wifi_switching_not_remind:I = 0x7f130a0c # @string/quick_settings_wifi_detail_dual_wifi_switching_not_remind 'Don't show again'
+.field public static final quick_settings_vowifi_label:I = 0x7f130a0c # @string/quick_settings_vowifi_label 'WLAN Calling'
 
-.field public static final quick_settings_wifi_detail_dual_wifi_switching_prompt:I = 0x7f130a0d # @string/quick_settings_wifi_detail_dual_wifi_switching_prompt 'Switching between networks'
+.field public static final quick_settings_vowifi_sim1_label:I = 0x7f130a0d # @string/quick_settings_vowifi_sim1_label 'WLAN Calling SIM1'
 
-.field public static final quick_settings_wifi_detail_dual_wifi_switching_summary:I = 0x7f130a0e # @string/quick_settings_wifi_detail_dual_wifi_switching_summary 'Dual band WLAN speed boost needs to use two different WLAN bands. If you connect to a different main ...'
+.field public static final quick_settings_vowifi_sim2_label:I = 0x7f130a0e # @string/quick_settings_vowifi_sim2_label 'WLAN Calling SIM2'
 
-.field public static final quick_settings_wifi_detail_empty_text:I = 0x7f130a0f
+.field public static final quick_settings_wifi_detail_dual_wifi_accelerated:I = 0x7f130a0f # @string/quick_settings_wifi_detail_dual_wifi_accelerated 'Boosting speed'
 
-.field public static final quick_settings_wifi_is_off:I = 0x7f130a10 # @string/quick_settings_wifi_is_off 'WLAN is off'
+.field public static final quick_settings_wifi_detail_dual_wifi_switching_cancel:I = 0x7f130a10 # @string/quick_settings_wifi_detail_dual_wifi_switching_cancel 'Cancel'
 
-.field public static final quick_settings_wifi_label:I = 0x7f130a11 # @string/quick_settings_wifi_label 'WLAN'
+.field public static final quick_settings_wifi_detail_dual_wifi_switching_confirm:I = 0x7f130a11 # @string/quick_settings_wifi_detail_dual_wifi_switching_confirm 'Confirm'
 
-.field public static final quick_settings_wifi_secondary_label_transient:I = 0x7f130a12 # @string/quick_settings_wifi_secondary_label_transient 'Turning on…'
+.field public static final quick_settings_wifi_detail_dual_wifi_switching_not_remind:I = 0x7f130a12 # @string/quick_settings_wifi_detail_dual_wifi_switching_not_remind 'Don't show again'
 
-.field public static final quick_settings_wifi_state_change_message_off:I = 0x7f130a13 # @string/quick_settings_wifi_state_change_message_off 'WLAN is off'
+.field public static final quick_settings_wifi_detail_dual_wifi_switching_prompt:I = 0x7f130a13 # @string/quick_settings_wifi_detail_dual_wifi_switching_prompt 'Switching between networks'
 
-.field public static final quick_settings_wifi_state_change_message_on:I = 0x7f130a14 # @string/quick_settings_wifi_state_change_message_on 'WLAN is on'
+.field public static final quick_settings_wifi_detail_dual_wifi_switching_summary:I = 0x7f130a14 # @string/quick_settings_wifi_detail_dual_wifi_switching_summary 'Dual band WLAN speed boost needs to use two different WLAN bands. If you connect to a different main ...'
 
-.field public static final quick_settings_wlan_is_off:I = 0x7f130a15 # @string/quick_settings_wlan_is_off 'WLAN is off'
+.field public static final quick_settings_wifi_detail_empty_text:I = 0x7f130a15
 
-.field public static final quick_settings_wlan_state_change_message_off:I = 0x7f130a16 # @string/quick_settings_wlan_state_change_message_off 'WLAN is off'
+.field public static final quick_settings_wifi_is_off:I = 0x7f130a16 # @string/quick_settings_wifi_is_off 'WLAN is off'
 
-.field public static final quick_settings_wlan_state_change_message_on:I = 0x7f130a17 # @string/quick_settings_wlan_state_change_message_on 'WLAN is on'
+.field public static final quick_settings_wifi_label:I = 0x7f130a17 # @string/quick_settings_wifi_label 'WLAN'
 
-.field public static final quick_settings_work_mode_label:I = 0x7f130a18 # @string/quick_settings_work_mode_label 'Work apps'
+.field public static final quick_settings_wifi_secondary_label_transient:I = 0x7f130a18 # @string/quick_settings_wifi_secondary_label_transient 'Turning on…'
 
-.field public static final quick_step_accessibility_toggle_overview:I = 0x7f130a19 # @string/quick_step_accessibility_toggle_overview 'Toggle Overview'
+.field public static final quick_settings_wifi_state_change_message_off:I = 0x7f130a19 # @string/quick_settings_wifi_state_change_message_off 'WLAN is off'
 
-.field public static final rain_probability_desc:I = 0x7f130a1a # @string/rain_probability_desc 'Chance of precipitation: %s'
+.field public static final quick_settings_wifi_state_change_message_on:I = 0x7f130a1a # @string/quick_settings_wifi_state_change_message_on 'WLAN is on'
 
-.field public static final rapid_charge_mode_tip:I = 0x7f130a1b # @string/rapid_charge_mode_tip 'Quick charge'
+.field public static final quick_settings_wlan_is_off:I = 0x7f130a1b # @string/quick_settings_wlan_is_off 'WLAN is off'
 
-.field public static final rear_display_accessibility_folded_animation:I = 0x7f130a1c # @string/rear_display_accessibility_folded_animation 'Foldable device being unfolded'
+.field public static final quick_settings_wlan_state_change_message_off:I = 0x7f130a1c # @string/quick_settings_wlan_state_change_message_off 'WLAN is off'
 
-.field public static final rear_display_accessibility_unfolded_animation:I = 0x7f130a1d # @string/rear_display_accessibility_unfolded_animation 'Foldable device being flipped around'
+.field public static final quick_settings_wlan_state_change_message_on:I = 0x7f130a1d # @string/quick_settings_wlan_state_change_message_on 'WLAN is on'
 
-.field public static final rear_display_bottom_sheet_cancel:I = 0x7f130a1e # @string/rear_display_bottom_sheet_cancel 'Cancel'
+.field public static final quick_settings_work_mode_label:I = 0x7f130a1e # @string/quick_settings_work_mode_label 'Work apps'
 
-.field public static final rear_display_bottom_sheet_confirm:I = 0x7f130a1f # @string/rear_display_bottom_sheet_confirm 'Switch screens now'
+.field public static final quick_step_accessibility_toggle_overview:I = 0x7f130a1f # @string/quick_step_accessibility_toggle_overview 'Toggle Overview'
 
-.field public static final rear_display_folded_bottom_sheet_description:I = 0x7f130a20 # @string/rear_display_folded_bottom_sheet_description 'For higher resolution, use the rear camera'
+.field public static final rain_probability_desc:I = 0x7f130a20 # @string/rain_probability_desc 'Chance of precipitation: %s'
 
-.field public static final rear_display_folded_bottom_sheet_title:I = 0x7f130a21 # @string/rear_display_folded_bottom_sheet_title 'Unfold phone'
+.field public static final rapid_charge_mode_tip:I = 0x7f130a21 # @string/rapid_charge_mode_tip 'Quick charge'
 
-.field public static final rear_display_unfolded_bottom_sheet_description:I = 0x7f130a22 # @string/rear_display_unfolded_bottom_sheet_description 'For higher resolution, flip the phone'
+.field public static final rear_display_accessibility_folded_animation:I = 0x7f130a22 # @string/rear_display_accessibility_folded_animation 'Foldable device being unfolded'
 
-.field public static final rear_display_unfolded_bottom_sheet_title:I = 0x7f130a23 # @string/rear_display_unfolded_bottom_sheet_title 'Switch screens?'
+.field public static final rear_display_accessibility_unfolded_animation:I = 0x7f130a23 # @string/rear_display_accessibility_unfolded_animation 'Foldable device being flipped around'
 
-.field public static final recent_conversations:I = 0x7f130a24 # @string/recent_conversations 'Recent conversations'
+.field public static final rear_display_bottom_sheet_cancel:I = 0x7f130a24 # @string/rear_display_bottom_sheet_cancel 'Cancel'
 
-.field public static final recent_used_camera:I = 0x7f130a25 # @string/recent_used_camera 'This app accessed camera'
+.field public static final rear_display_bottom_sheet_confirm:I = 0x7f130a25 # @string/rear_display_bottom_sheet_confirm 'Switch screens now'
 
-.field public static final recent_used_camera_and_microphone:I = 0x7f130a26 # @string/recent_used_camera_and_microphone 'This app accessed camera and microphone'
+.field public static final rear_display_folded_bottom_sheet_description:I = 0x7f130a26 # @string/rear_display_folded_bottom_sheet_description 'For higher resolution, use the rear camera'
 
-.field public static final recent_used_microphone:I = 0x7f130a27 # @string/recent_used_microphone 'This app accessed microphone'
+.field public static final rear_display_folded_bottom_sheet_title:I = 0x7f130a27 # @string/rear_display_folded_bottom_sheet_title 'Unfold phone'
 
-.field public static final recents_quick_scrub_onboarding:I = 0x7f130a28
+.field public static final rear_display_unfolded_bottom_sheet_description:I = 0x7f130a28 # @string/rear_display_unfolded_bottom_sheet_description 'For higher resolution, flip the phone'
 
-.field public static final remaining_length_format:I = 0x7f130a29
+.field public static final rear_display_unfolded_bottom_sheet_title:I = 0x7f130a29 # @string/rear_display_unfolded_bottom_sheet_title 'Switch screens?'
 
-.field public static final remote_input_image_insertion_text:I = 0x7f130a2a # @string/remote_input_image_insertion_text 'sent an image'
+.field public static final recent_conversations:I = 0x7f130a2a # @string/recent_conversations 'Recent conversations'
 
-.field public static final remove_from_settings:I = 0x7f130a2b # @string/remove_from_settings 'Remove from Settings'
+.field public static final recent_used_camera:I = 0x7f130a2b # @string/recent_used_camera 'This app accessed camera'
 
-.field public static final remove_from_settings_prompt:I = 0x7f130a2c # @string/remove_from_settings_prompt 'Remove System UI Tuner from Settings and stop using all of its features?'
+.field public static final recent_used_camera_and_microphone:I = 0x7f130a2c # @string/recent_used_camera_and_microphone 'This app accessed camera and microphone'
 
-.field public static final report_rejected_touch:I = 0x7f130a2d # @string/report_rejected_touch 'Report rejected touch'
+.field public static final recent_used_microphone:I = 0x7f130a2d # @string/recent_used_microphone 'This app accessed microphone'
 
-.field public static final require_unlock_for_nfc:I = 0x7f130a2e # @string/require_unlock_for_nfc 'Unlock to use NFC'
+.field public static final recents_quick_scrub_onboarding:I = 0x7f130a2e
 
-.field public static final reset:I = 0x7f130a2f # @string/reset 'Reset'
+.field public static final remaining_length_format:I = 0x7f130a2f
 
-.field public static final restart_button_description:I = 0x7f130a30 # @string/restart_button_description 'Tap to restart this app for a better view.'
+.field public static final remote_input_image_insertion_text:I = 0x7f130a30 # @string/remote_input_image_insertion_text 'sent an image'
 
-.field public static final retail_demo_reset_message:I = 0x7f130a31
+.field public static final remove_from_settings:I = 0x7f130a31 # @string/remove_from_settings 'Remove from Settings'
 
-.field public static final retail_demo_reset_next:I = 0x7f130a32
+.field public static final remove_from_settings_prompt:I = 0x7f130a32 # @string/remove_from_settings_prompt 'Remove System UI Tuner from Settings and stop using all of its features?'
 
-.field public static final retail_demo_reset_title:I = 0x7f130a33
+.field public static final report_rejected_touch:I = 0x7f130a33 # @string/report_rejected_touch 'Report rejected touch'
 
-.field public static final return_to_incall_screen:I = 0x7f130a34
+.field public static final require_unlock_for_nfc:I = 0x7f130a34 # @string/require_unlock_for_nfc 'Unlock to use NFC'
 
-.field public static final right_icon:I = 0x7f130a35 # @string/right_icon 'Right icon'
+.field public static final reset:I = 0x7f130a35 # @string/reset 'Reset'
 
-.field public static final right_keycode:I = 0x7f130a36 # @string/right_keycode 'Right keycode'
+.field public static final restart_button_description:I = 0x7f130a36 # @string/restart_button_description 'Tap to restart this app for a better view.'
 
-.field public static final right_nav_bar_button_type:I = 0x7f130a37 # @string/right_nav_bar_button_type 'Extra right button type'
+.field public static final retail_demo_reset_message:I = 0x7f130a37
 
-.field public static final rotation_lock_camera_rotation_on:I = 0x7f130a38 # @string/rotation_lock_camera_rotation_on 'On - Face-based'
+.field public static final retail_demo_reset_next:I = 0x7f130a38
 
-.field public static final running_foreground_services_msg:I = 0x7f130a39 # @string/running_foreground_services_msg 'Tap for details on battery and data usage'
+.field public static final retail_demo_reset_title:I = 0x7f130a39
 
-.field public static final running_foreground_services_title:I = 0x7f130a3a # @string/running_foreground_services_title 'Apps running in background'
+.field public static final return_to_incall_screen:I = 0x7f130a3a
 
-.field public static final running_process_item_user_label:I = 0x7f130a3b
+.field public static final right_icon:I = 0x7f130a3b # @string/right_icon 'Right icon'
 
-.field public static final runningservices_settings_summary:I = 0x7f130a3c
+.field public static final right_keycode:I = 0x7f130a3c # @string/right_keycode 'Right keycode'
 
-.field public static final runningservices_settings_title:I = 0x7f130a3d
+.field public static final right_nav_bar_button_type:I = 0x7f130a3d # @string/right_nav_bar_button_type 'Extra right button type'
 
-.field public static final safety_quick_settings_tile_class:I = 0x7f130a3e # @string/safety_quick_settings_tile_class 'com.android.permissioncontroller.permission.service.v33.SafetyCenterQsTileService'
+.field public static final rotation_lock_camera_rotation_on:I = 0x7f130a3e # @string/rotation_lock_camera_rotation_on 'On - Face-based'
 
-.field public static final saturday:I = 0x7f130a3f # @string/saturday 'Saturday'
+.field public static final running_foreground_services_msg:I = 0x7f130a3f # @string/running_foreground_services_msg 'Tap for details on battery and data usage'
 
-.field public static final saturday_short:I = 0x7f130a40 # @string/saturday_short 'Sat'
+.field public static final running_foreground_services_title:I = 0x7f130a40 # @string/running_foreground_services_title 'Apps running in background'
 
-.field public static final saturday_shortest:I = 0x7f130a41 # @string/saturday_shortest 'Sat'
+.field public static final running_process_item_user_label:I = 0x7f130a41
 
-.field public static final save:I = 0x7f130a42 # @string/save 'Save'
+.field public static final runningservices_settings_summary:I = 0x7f130a42
 
-.field public static final saved_network:I = 0x7f130a43
+.field public static final runningservices_settings_title:I = 0x7f130a43
 
-.field public static final screen_capturing_disabled_by_policy_dialog_description:I = 0x7f130a44
+.field public static final safety_quick_settings_tile_class:I = 0x7f130a44 # @string/safety_quick_settings_tile_class 'com.android.permissioncontroller.permission.service.v33.SafetyCenterQsTileService'
 
-.field public static final screen_capturing_disabled_by_policy_dialog_title:I = 0x7f130a45 # @string/screen_capturing_disabled_by_policy_dialog_title 'Blocked by your IT admin'
+.field public static final saturday:I = 0x7f130a45 # @string/saturday 'Saturday'
 
-.field public static final screen_pinning_can_open_other_apps:I = 0x7f130a46
+.field public static final saturday_short:I = 0x7f130a46 # @string/saturday_short 'Sat'
 
-.field public static final screen_pinning_description:I = 0x7f130a47
+.field public static final saturday_shortest:I = 0x7f130a47 # @string/saturday_shortest 'Sat'
 
-.field public static final screen_pinning_description_accessible:I = 0x7f130a48
+.field public static final save:I = 0x7f130a48 # @string/save 'Save'
 
-.field public static final screen_pinning_description_gestural:I = 0x7f130a49
+.field public static final saved_network:I = 0x7f130a49
 
-.field public static final screen_pinning_description_gesture_mode:I = 0x7f130a4a # @string/screen_pinning_description_gesture_mode 'This app will stay in Recents until you unpin it by sliding up from the bottom of the screen and pau ...'
+.field public static final screen_capturing_disabled_by_policy_dialog_description:I = 0x7f130a4a
 
-.field public static final screen_pinning_description_navigation_mode:I = 0x7f130a4b # @string/screen_pinning_description_navigation_mode 'This app will stay in Recents until you unpin it by pressing and holding the back and preview button ...'
+.field public static final screen_capturing_disabled_by_policy_dialog_title:I = 0x7f130a4b # @string/screen_capturing_disabled_by_policy_dialog_title 'Blocked by your IT admin'
 
-.field public static final screen_pinning_description_recents_invisible:I = 0x7f130a4c
+.field public static final screen_pinning_can_open_other_apps:I = 0x7f130a4c
 
-.field public static final screen_pinning_description_recents_invisible_accessible:I = 0x7f130a4d
+.field public static final screen_pinning_description:I = 0x7f130a4d
 
-.field public static final screen_pinning_exit:I = 0x7f130a4e # @string/screen_pinning_exit 'App unpinned'
+.field public static final screen_pinning_description_accessible:I = 0x7f130a4e
 
-.field public static final screen_pinning_exposes_personal_data:I = 0x7f130a4f
+.field public static final screen_pinning_description_gestural:I = 0x7f130a4f
 
-.field public static final screen_pinning_negative:I = 0x7f130a50
+.field public static final screen_pinning_description_gesture_mode:I = 0x7f130a50 # @string/screen_pinning_description_gesture_mode 'This app will stay in Recents until you unpin it by sliding up from the bottom of the screen and pau ...'
 
-.field public static final screen_pinning_positive:I = 0x7f130a51 # @string/screen_pinning_positive 'Got it'
+.field public static final screen_pinning_description_navigation_mode:I = 0x7f130a51 # @string/screen_pinning_description_navigation_mode 'This app will stay in Recents until you unpin it by pressing and holding the back and preview button ...'
 
-.field public static final screen_pinning_start:I = 0x7f130a52
+.field public static final screen_pinning_description_recents_invisible:I = 0x7f130a52
 
-.field public static final screen_pinning_title:I = 0x7f130a53
+.field public static final screen_pinning_description_recents_invisible_accessible:I = 0x7f130a53
 
-.field public static final screen_pinning_title_gesture_mode:I = 0x7f130a54 # @string/screen_pinning_title_gesture_mode 'This app is pinned'
+.field public static final screen_pinning_exit:I = 0x7f130a54 # @string/screen_pinning_exit 'App unpinned'
 
-.field public static final screen_pinning_title_navigation_mode:I = 0x7f130a55 # @string/screen_pinning_title_navigation_mode 'This app is pinned'
+.field public static final screen_pinning_exposes_personal_data:I = 0x7f130a55
 
-.field public static final screen_pinning_toast:I = 0x7f130a56
+.field public static final screen_pinning_negative:I = 0x7f130a56
 
-.field public static final screen_pinning_toast_gesture_mode:I = 0x7f130a57 # @string/screen_pinning_toast_gesture_mode 'Slide up from the bottom of the screen and pause to unpin this app'
+.field public static final screen_pinning_positive:I = 0x7f130a57 # @string/screen_pinning_positive 'Got it'
 
-.field public static final screen_pinning_toast_gesture_nav:I = 0x7f130a58
+.field public static final screen_pinning_start:I = 0x7f130a58
 
-.field public static final screen_pinning_toast_navigation_mode:I = 0x7f130a59 # @string/screen_pinning_toast_navigation_mode 'Press and hold the back and preview buttons to unpin this app'
+.field public static final screen_pinning_title:I = 0x7f130a59
 
-.field public static final screen_pinning_toast_recents_invisible:I = 0x7f130a5a # @string/screen_pinning_toast_recents_invisible 'To unpin this app, touch & hold Back and Home buttons'
+.field public static final screen_pinning_title_gesture_mode:I = 0x7f130a5a # @string/screen_pinning_title_gesture_mode 'This app is pinned'
 
-.field public static final screen_pinning_toast_start:I = 0x7f130a5b # @string/screen_pinning_toast_start 'This app is pinned'
+.field public static final screen_pinning_title_navigation_mode:I = 0x7f130a5b # @string/screen_pinning_title_navigation_mode 'This app is pinned'
 
-.field public static final screen_recording_announcement:I = 0x7f130a5c # @string/screen_recording_announcement 'Screen recording started'
+.field public static final screen_pinning_toast:I = 0x7f130a5c
 
-.field public static final screen_share_permission_app_selector_title:I = 0x7f130a5d # @string/screen_share_permission_app_selector_title 'Share or record an app'
+.field public static final screen_pinning_toast_gesture_mode:I = 0x7f130a5d # @string/screen_pinning_toast_gesture_mode 'Slide up from the bottom of the screen and pause to unpin this app'
 
-.field public static final screen_share_permission_dialog_option_entire_screen:I = 0x7f130a5e
+.field public static final screen_pinning_toast_gesture_nav:I = 0x7f130a5e
 
-.field public static final screen_share_permission_dialog_option_single_app:I = 0x7f130a5f
+.field public static final screen_pinning_toast_navigation_mode:I = 0x7f130a5f # @string/screen_pinning_toast_navigation_mode 'Press and hold the back and preview buttons to unpin this app'
 
-.field public static final screen_stopped_recording_announcement:I = 0x7f130a60 # @string/screen_stopped_recording_announcement 'Screen recording stopped'
+.field public static final screen_pinning_toast_recents_invisible:I = 0x7f130a60 # @string/screen_pinning_toast_recents_invisible 'To unpin this app, touch & hold Back and Home buttons'
 
-.field public static final screen_zoom_summary_custom:I = 0x7f130a61
+.field public static final screen_pinning_toast_start:I = 0x7f130a61 # @string/screen_pinning_toast_start 'This app is pinned'
 
-.field public static final screen_zoom_summary_default:I = 0x7f130a62
+.field public static final screen_recording_announcement:I = 0x7f130a62 # @string/screen_recording_announcement 'Screen recording started'
 
-.field public static final screen_zoom_summary_extremely_large:I = 0x7f130a63
+.field public static final screen_share_permission_app_selector_title:I = 0x7f130a63 # @string/screen_share_permission_app_selector_title 'Share or record an app'
 
-.field public static final screen_zoom_summary_large:I = 0x7f130a64
+.field public static final screen_share_permission_dialog_option_entire_screen:I = 0x7f130a64
 
-.field public static final screen_zoom_summary_small:I = 0x7f130a65
+.field public static final screen_share_permission_dialog_option_single_app:I = 0x7f130a65
 
-.field public static final screen_zoom_summary_very_large:I = 0x7f130a66
+.field public static final screen_stopped_recording_announcement:I = 0x7f130a66 # @string/screen_stopped_recording_announcement 'Screen recording stopped'
 
-.field public static final screenrecord_audio_label:I = 0x7f130a67 # @string/screenrecord_audio_label 'Record audio'
+.field public static final screen_zoom_summary_custom:I = 0x7f130a67
 
-.field public static final screenrecord_background_processing_label:I = 0x7f130a68 # @string/screenrecord_background_processing_label 'Processing screen recording'
+.field public static final screen_zoom_summary_default:I = 0x7f130a68
 
-.field public static final screenrecord_channel_description:I = 0x7f130a69 # @string/screenrecord_channel_description 'Ongoing notification for a screen record session'
+.field public static final screen_zoom_summary_extremely_large:I = 0x7f130a69
 
-.field public static final screenrecord_continue:I = 0x7f130a6a # @string/screenrecord_continue 'Start'
+.field public static final screen_zoom_summary_large:I = 0x7f130a6a
 
-.field public static final screenrecord_device_audio_and_mic_label:I = 0x7f130a6b # @string/screenrecord_device_audio_and_mic_label 'Device audio and microphone'
+.field public static final screen_zoom_summary_small:I = 0x7f130a6b
 
-.field public static final screenrecord_device_audio_description:I = 0x7f130a6c # @string/screenrecord_device_audio_description 'Sound from your device, like music, calls, and ringtones'
+.field public static final screen_zoom_summary_very_large:I = 0x7f130a6c
 
-.field public static final screenrecord_device_audio_label:I = 0x7f130a6d # @string/screenrecord_device_audio_label 'Device audio'
+.field public static final screenrecord_audio_label:I = 0x7f130a6d # @string/screenrecord_audio_label 'Record audio'
 
-.field public static final screenrecord_mic_label:I = 0x7f130a6e # @string/screenrecord_mic_label 'Microphone'
+.field public static final screenrecord_background_processing_label:I = 0x7f130a6e # @string/screenrecord_background_processing_label 'Processing screen recording'
 
-.field public static final screenrecord_ongoing_screen_and_audio:I = 0x7f130a6f # @string/screenrecord_ongoing_screen_and_audio 'Recording screen and audio'
+.field public static final screenrecord_channel_description:I = 0x7f130a6f # @string/screenrecord_channel_description 'Ongoing notification for a screen record session'
 
-.field public static final screenrecord_ongoing_screen_only:I = 0x7f130a70 # @string/screenrecord_ongoing_screen_only 'Recording screen'
+.field public static final screenrecord_continue:I = 0x7f130a70 # @string/screenrecord_continue 'Start'
 
-.field public static final screenrecord_permission_dialog_continue:I = 0x7f130a71
+.field public static final screenrecord_device_audio_and_mic_label:I = 0x7f130a71 # @string/screenrecord_device_audio_and_mic_label 'Device audio and microphone'
 
-.field public static final screenrecord_permission_dialog_title:I = 0x7f130a72 # @string/screenrecord_permission_dialog_title 'Start Recording?'
+.field public static final screenrecord_device_audio_description:I = 0x7f130a72 # @string/screenrecord_device_audio_description 'Sound from your device, like music, calls, and ringtones'
 
-.field public static final screenrecord_permission_dialog_warning_entire_screen:I = 0x7f130a73 # @string/screenrecord_permission_dialog_warning_entire_screen 'While you’re recording, Android has access to anything visible on your screen or played on your devi ...'
+.field public static final screenrecord_device_audio_label:I = 0x7f130a73 # @string/screenrecord_device_audio_label 'Device audio'
 
-.field public static final screenrecord_permission_dialog_warning_single_app:I = 0x7f130a74
+.field public static final screenrecord_mic_label:I = 0x7f130a74 # @string/screenrecord_mic_label 'Microphone'
 
-.field public static final screenrecord_save_error:I = 0x7f130a75 # @string/screenrecord_save_error 'Error saving screen recording'
+.field public static final screenrecord_ongoing_screen_and_audio:I = 0x7f130a75 # @string/screenrecord_ongoing_screen_and_audio 'Recording screen and audio'
 
-.field public static final screenrecord_save_text:I = 0x7f130a76 # @string/screenrecord_save_text 'Tap to view'
+.field public static final screenrecord_ongoing_screen_only:I = 0x7f130a76 # @string/screenrecord_ongoing_screen_only 'Recording screen'
 
-.field public static final screenrecord_save_title:I = 0x7f130a77 # @string/screenrecord_save_title 'Screen recording saved'
+.field public static final screenrecord_permission_dialog_continue:I = 0x7f130a77
 
-.field public static final screenrecord_share_label:I = 0x7f130a78 # @string/screenrecord_share_label 'Share'
+.field public static final screenrecord_permission_dialog_title:I = 0x7f130a78 # @string/screenrecord_permission_dialog_title 'Start Recording?'
 
-.field public static final screenrecord_start_error:I = 0x7f130a79 # @string/screenrecord_start_error 'Error starting screen recording'
+.field public static final screenrecord_permission_dialog_warning_entire_screen:I = 0x7f130a79 # @string/screenrecord_permission_dialog_warning_entire_screen 'While you’re recording, Android has access to anything visible on your screen or played on your devi ...'
 
-.field public static final screenrecord_stop_label:I = 0x7f130a7a # @string/screenrecord_stop_label 'Stop'
+.field public static final screenrecord_permission_dialog_warning_single_app:I = 0x7f130a7a
 
-.field public static final screenrecord_taps_label:I = 0x7f130a7b # @string/screenrecord_taps_label 'Show touches on screen'
+.field public static final screenrecord_save_error:I = 0x7f130a7b # @string/screenrecord_save_error 'Error saving screen recording'
 
-.field public static final screenrecord_title:I = 0x7f130a7c # @string/screenrecord_title 'Screen Recorder'
+.field public static final screenrecord_save_text:I = 0x7f130a7c # @string/screenrecord_save_text 'Tap to view'
 
-.field public static final screenshot_blocked_by_admin:I = 0x7f130a7d # @string/screenshot_blocked_by_admin 'Taking screenshots is blocked by your IT admin'
+.field public static final screenrecord_save_title:I = 0x7f130a7d # @string/screenrecord_save_title 'Screen recording saved'
 
-.field public static final screenshot_bottom_boundary_pct:I = 0x7f130a7e # @string/screenshot_bottom_boundary_pct 'Bottom boundary %1$d percent'
+.field public static final screenrecord_share_label:I = 0x7f130a7e # @string/screenrecord_share_label 'Share'
 
-.field public static final screenshot_default_files_app_name:I = 0x7f130a7f # @string/screenshot_default_files_app_name 'Files'
+.field public static final screenrecord_start_error:I = 0x7f130a7f # @string/screenrecord_start_error 'Error starting screen recording'
 
-.field public static final screenshot_detected_multiple_template:I = 0x7f130a80 # @string/screenshot_detected_multiple_template '%1$s and other open apps detected this screenshot.'
+.field public static final screenrecord_stop_label:I = 0x7f130a80 # @string/screenrecord_stop_label 'Stop'
 
-.field public static final screenshot_detected_template:I = 0x7f130a81 # @string/screenshot_detected_template '%1$s detected this screenshot.'
+.field public static final screenrecord_taps_label:I = 0x7f130a81 # @string/screenrecord_taps_label 'Show touches on screen'
 
-.field public static final screenshot_dismiss_description:I = 0x7f130a82 # @string/screenshot_dismiss_description 'Dismiss screenshot'
+.field public static final screenrecord_title:I = 0x7f130a82 # @string/screenrecord_title 'Screen Recorder'
 
-.field public static final screenshot_dismiss_work_profile:I = 0x7f130a83 # @string/screenshot_dismiss_work_profile 'Dismiss work profile message'
+.field public static final screenshot_blocked_by_admin:I = 0x7f130a83 # @string/screenshot_blocked_by_admin 'Taking screenshots is blocked by your IT admin'
 
-.field public static final screenshot_edit_description:I = 0x7f130a84 # @string/screenshot_edit_description 'Edit screenshot'
+.field public static final screenshot_bottom_boundary_pct:I = 0x7f130a84 # @string/screenshot_bottom_boundary_pct 'Bottom boundary %1$d percent'
 
-.field public static final screenshot_edit_label:I = 0x7f130a85 # @string/screenshot_edit_label 'Edit'
+.field public static final screenshot_default_files_app_name:I = 0x7f130a85 # @string/screenshot_default_files_app_name 'Files'
 
-.field public static final screenshot_failed_title:I = 0x7f130a86 # @string/screenshot_failed_title 'Couldn't save screenshot'
+.field public static final screenshot_detected_multiple_template:I = 0x7f130a86 # @string/screenshot_detected_multiple_template '%1$s and other open apps detected this screenshot.'
 
-.field public static final screenshot_failed_to_capture_text:I = 0x7f130a87 # @string/screenshot_failed_to_capture_text 'Taking screenshots isn't allowed by the app or your organization'
+.field public static final screenshot_detected_template:I = 0x7f130a87 # @string/screenshot_detected_template '%1$s detected this screenshot.'
 
-.field public static final screenshot_failed_to_save_text:I = 0x7f130a88 # @string/screenshot_failed_to_save_text 'Can't save screenshot'
+.field public static final screenshot_dismiss_description:I = 0x7f130a88 # @string/screenshot_dismiss_description 'Dismiss screenshot'
 
-.field public static final screenshot_failed_to_save_unknown_text:I = 0x7f130a89 # @string/screenshot_failed_to_save_unknown_text 'Try taking screenshot again'
+.field public static final screenshot_dismiss_work_profile:I = 0x7f130a89 # @string/screenshot_dismiss_work_profile 'Dismiss work profile message'
 
-.field public static final screenshot_failed_to_save_user_locked_text:I = 0x7f130a8a # @string/screenshot_failed_to_save_user_locked_text 'Device must be unlocked before screenshot can be saved'
+.field public static final screenshot_edit_description:I = 0x7f130a8a # @string/screenshot_edit_description 'Edit screenshot'
 
-.field public static final screenshot_left_boundary_pct:I = 0x7f130a8b # @string/screenshot_left_boundary_pct 'Left boundary %1$d percent'
+.field public static final screenshot_edit_label:I = 0x7f130a8b # @string/screenshot_edit_label 'Edit'
 
-.field public static final screenshot_preview_description:I = 0x7f130a8c # @string/screenshot_preview_description 'Screenshot preview'
+.field public static final screenshot_failed_title:I = 0x7f130a8c # @string/screenshot_failed_title 'Couldn't save screenshot'
 
-.field public static final screenshot_right_boundary_pct:I = 0x7f130a8d # @string/screenshot_right_boundary_pct 'Right boundary %1$d percent'
+.field public static final screenshot_failed_to_capture_text:I = 0x7f130a8d # @string/screenshot_failed_to_capture_text 'Taking screenshots isn't allowed by the app or your organization'
 
-.field public static final screenshot_saved_title:I = 0x7f130a8e # @string/screenshot_saved_title 'Screenshot saved'
+.field public static final screenshot_failed_to_save_text:I = 0x7f130a8e # @string/screenshot_failed_to_save_text 'Can't save screenshot'
 
-.field public static final screenshot_saving_title:I = 0x7f130a8f # @string/screenshot_saving_title 'Saving screenshot…'
+.field public static final screenshot_failed_to_save_unknown_text:I = 0x7f130a8f # @string/screenshot_failed_to_save_unknown_text 'Try taking screenshot again'
 
-.field public static final screenshot_saving_work_profile_title:I = 0x7f130a90 # @string/screenshot_saving_work_profile_title 'Saving screenshot to work profile…'
+.field public static final screenshot_failed_to_save_user_locked_text:I = 0x7f130a90 # @string/screenshot_failed_to_save_user_locked_text 'Device must be unlocked before screenshot can be saved'
 
-.field public static final screenshot_scroll_label:I = 0x7f130a91 # @string/screenshot_scroll_label 'Capture more'
+.field public static final screenshot_left_boundary_pct:I = 0x7f130a91 # @string/screenshot_left_boundary_pct 'Left boundary %1$d percent'
 
-.field public static final screenshot_share_description:I = 0x7f130a92 # @string/screenshot_share_description 'Share screenshot'
+.field public static final screenshot_preview_description:I = 0x7f130a92 # @string/screenshot_preview_description 'Screenshot preview'
 
-.field public static final screenshot_text:I = 0x7f130a93 # @string/screenshot_text 'Screenshot'
+.field public static final screenshot_right_boundary_pct:I = 0x7f130a93 # @string/screenshot_right_boundary_pct 'Right boundary %1$d percent'
 
-.field public static final screenshot_top_boundary_pct:I = 0x7f130a94 # @string/screenshot_top_boundary_pct 'Top boundary %1$d percent'
+.field public static final screenshot_saved_title:I = 0x7f130a94 # @string/screenshot_saved_title 'Screenshot saved'
 
-.field public static final screenshot_work_profile_notification:I = 0x7f130a95 # @string/screenshot_work_profile_notification 'Saved in %1$s in the work profile'
+.field public static final screenshot_saving_title:I = 0x7f130a95 # @string/screenshot_saving_title 'Saving screenshot…'
 
-.field public static final search_menu:I = 0x7f130a96
+.field public static final screenshot_saving_work_profile_title:I = 0x7f130a96 # @string/screenshot_saving_work_profile_title 'Saving screenshot to work profile…'
 
-.field public static final search_menu_title:I = 0x7f130a97
+.field public static final screenshot_scroll_label:I = 0x7f130a97 # @string/screenshot_scroll_label 'Capture more'
 
-.field public static final security_settings_sfps_enroll_find_sensor_message:I = 0x7f130a98 # @string/security_settings_sfps_enroll_find_sensor_message 'The fingerprint sensor is on the power button. It’s the flat button next to the raised volume button ...'
+.field public static final screenshot_share_description:I = 0x7f130a98 # @string/screenshot_share_description 'Share screenshot'
 
-.field public static final see_all_networks:I = 0x7f130a99 # @string/see_all_networks 'See all'
+.field public static final screenshot_text:I = 0x7f130a99 # @string/screenshot_text 'Screenshot'
 
-.field public static final see_more_title:I = 0x7f130a9a # @string/see_more_title 'See more'
+.field public static final screenshot_top_boundary_pct:I = 0x7f130a9a # @string/screenshot_top_boundary_pct 'Top boundary %1$d percent'
 
-.field public static final select_application:I = 0x7f130a9b
+.field public static final screenshot_work_profile_notification:I = 0x7f130a9b # @string/screenshot_work_profile_notification 'Saved in %1$s in the work profile'
 
-.field public static final select_conversation_text:I = 0x7f130a9c # @string/select_conversation_text 'Tap a conversation to add it to your Home screen'
+.field public static final search_menu:I = 0x7f130a9c
 
-.field public static final select_conversation_title:I = 0x7f130a9d # @string/select_conversation_title 'Conversation widgets'
+.field public static final search_menu_title:I = 0x7f130a9d
 
-.field public static final select_logd_size_dialog_title:I = 0x7f130a9e
+.field public static final security_settings_sfps_enroll_find_sensor_message:I = 0x7f130a9e # @string/security_settings_sfps_enroll_find_sensor_message 'The fingerprint sensor is on the power button. It’s the flat button next to the raised volume button ...'
 
-.field public static final select_logd_size_title:I = 0x7f130a9f
+.field public static final see_all_networks:I = 0x7f130a9f # @string/see_all_networks 'See all'
 
-.field public static final select_logpersist_dialog_title:I = 0x7f130aa0
+.field public static final see_more_title:I = 0x7f130aa0 # @string/see_more_title 'See more'
 
-.field public static final select_logpersist_title:I = 0x7f130aa1
+.field public static final select_application:I = 0x7f130aa1
 
-.field public static final select_private_dns_configuration_dialog_title:I = 0x7f130aa2
+.field public static final select_conversation_text:I = 0x7f130aa2 # @string/select_conversation_text 'Tap a conversation to add it to your Home screen'
 
-.field public static final select_private_dns_configuration_title:I = 0x7f130aa3
+.field public static final select_conversation_title:I = 0x7f130aa3 # @string/select_conversation_title 'Conversation widgets'
 
-.field public static final select_text:I = 0x7f130aa4 # @string/select_text 'Select'
+.field public static final select_logd_size_dialog_title:I = 0x7f130aa4
 
-.field public static final select_usb_configuration_dialog_title:I = 0x7f130aa5
+.field public static final select_logd_size_title:I = 0x7f130aa5
 
-.field public static final select_usb_configuration_title:I = 0x7f130aa6
+.field public static final select_logpersist_dialog_title:I = 0x7f130aa6
 
-.field public static final select_webview_provider_dialog_title:I = 0x7f130aa7
+.field public static final select_logpersist_title:I = 0x7f130aa7
 
-.field public static final select_webview_provider_title:I = 0x7f130aa8
+.field public static final select_private_dns_configuration_dialog_title:I = 0x7f130aa8
 
-.field public static final select_webview_provider_toast_text:I = 0x7f130aa9
+.field public static final select_private_dns_configuration_title:I = 0x7f130aa9
 
-.field public static final send:I = 0x7f130aaa
+.field public static final select_text:I = 0x7f130aaa # @string/select_text 'Select'
 
-.field public static final sensor_privacy_camera_blocked_dialog_content:I = 0x7f130aab # @string/sensor_privacy_camera_blocked_dialog_content 'Camera access is disabled for all apps and services.'
+.field public static final select_usb_configuration_dialog_title:I = 0x7f130aab
 
-.field public static final sensor_privacy_camera_turned_off_dialog_title:I = 0x7f130aac # @string/sensor_privacy_camera_turned_off_dialog_title 'Camera turned off'
+.field public static final select_usb_configuration_title:I = 0x7f130aac
 
-.field public static final sensor_privacy_camera_turned_on_dialog_title:I = 0x7f130aad # @string/sensor_privacy_camera_turned_on_dialog_title 'Camera turned on'
+.field public static final select_webview_provider_dialog_title:I = 0x7f130aad
 
-.field public static final sensor_privacy_camera_unblocked_dialog_content:I = 0x7f130aae # @string/sensor_privacy_camera_unblocked_dialog_content 'Camera is enabled for all apps and services.'
+.field public static final select_webview_provider_title:I = 0x7f130aae
 
-.field public static final sensor_privacy_camera_unblocked_toast_content:I = 0x7f130aaf # @string/sensor_privacy_camera_unblocked_toast_content 'Camera available'
+.field public static final select_webview_provider_toast_text:I = 0x7f130aaf
 
-.field public static final sensor_privacy_dialog_open_settings:I = 0x7f130ab0 # @string/sensor_privacy_dialog_open_settings 'Open Settings'
+.field public static final send:I = 0x7f130ab0
 
-.field public static final sensor_privacy_htt_blocked_dialog_content:I = 0x7f130ab1 # @string/sensor_privacy_htt_blocked_dialog_content 'To use the microphone button, enable microphone access in Settings.'
+.field public static final sensor_privacy_camera_blocked_dialog_content:I = 0x7f130ab1 # @string/sensor_privacy_camera_blocked_dialog_content 'Camera access is disabled for all apps and services.'
 
-.field public static final sensor_privacy_mic_blocked_no_exception_dialog_content:I = 0x7f130ab2 # @string/sensor_privacy_mic_blocked_no_exception_dialog_content 'Microphone access is disabled for all apps and services. You can enable microphone access in Setting ...'
+.field public static final sensor_privacy_camera_turned_off_dialog_title:I = 0x7f130ab2 # @string/sensor_privacy_camera_turned_off_dialog_title 'Camera turned off'
 
-.field public static final sensor_privacy_mic_blocked_with_exception_dialog_content:I = 0x7f130ab3 # @string/sensor_privacy_mic_blocked_with_exception_dialog_content 'Microphone access is disabled for all apps and services. You can change this in Settings > Privacy > ...'
+.field public static final sensor_privacy_camera_turned_on_dialog_title:I = 0x7f130ab3 # @string/sensor_privacy_camera_turned_on_dialog_title 'Camera turned on'
 
-.field public static final sensor_privacy_mic_camera_unblocked_toast_content:I = 0x7f130ab4 # @string/sensor_privacy_mic_camera_unblocked_toast_content 'Microphone and camera available'
+.field public static final sensor_privacy_camera_unblocked_dialog_content:I = 0x7f130ab4 # @string/sensor_privacy_camera_unblocked_dialog_content 'Camera is enabled for all apps and services.'
 
-.field public static final sensor_privacy_mic_turned_off_dialog_title:I = 0x7f130ab5 # @string/sensor_privacy_mic_turned_off_dialog_title 'Microphone turned off'
+.field public static final sensor_privacy_camera_unblocked_toast_content:I = 0x7f130ab5 # @string/sensor_privacy_camera_unblocked_toast_content 'Camera available'
 
-.field public static final sensor_privacy_mic_turned_on_dialog_title:I = 0x7f130ab6 # @string/sensor_privacy_mic_turned_on_dialog_title 'Microphone turned on'
+.field public static final sensor_privacy_dialog_open_settings:I = 0x7f130ab6 # @string/sensor_privacy_dialog_open_settings 'Open Settings'
 
-.field public static final sensor_privacy_mic_unblocked_dialog_content:I = 0x7f130ab7 # @string/sensor_privacy_mic_unblocked_dialog_content 'Microphone is enabled for all apps and services.'
+.field public static final sensor_privacy_htt_blocked_dialog_content:I = 0x7f130ab7 # @string/sensor_privacy_htt_blocked_dialog_content 'To use the microphone button, enable microphone access in Settings.'
 
-.field public static final sensor_privacy_mic_unblocked_toast_content:I = 0x7f130ab8 # @string/sensor_privacy_mic_unblocked_toast_content 'Microphone available'
+.field public static final sensor_privacy_mic_blocked_no_exception_dialog_content:I = 0x7f130ab8 # @string/sensor_privacy_mic_blocked_no_exception_dialog_content 'Microphone access is disabled for all apps and services. You can enable microphone access in Setting ...'
 
-.field public static final sensor_privacy_start_use_camera_blocked_dialog_content:I = 0x7f130ab9 # @string/sensor_privacy_start_use_camera_blocked_dialog_content 'To unblock, move the privacy switch on your device to the camera on position to allow camera access. ...'
+.field public static final sensor_privacy_mic_blocked_with_exception_dialog_content:I = 0x7f130ab9 # @string/sensor_privacy_mic_blocked_with_exception_dialog_content 'Microphone access is disabled for all apps and services. You can change this in Settings > Privacy > ...'
 
-.field public static final sensor_privacy_start_use_camera_blocked_dialog_title:I = 0x7f130aba # @string/sensor_privacy_start_use_camera_blocked_dialog_title 'Camera is blocked'
+.field public static final sensor_privacy_mic_camera_unblocked_toast_content:I = 0x7f130aba # @string/sensor_privacy_mic_camera_unblocked_toast_content 'Microphone and camera available'
 
-.field public static final sensor_privacy_start_use_camera_dialog_content:I = 0x7f130abb # @string/sensor_privacy_start_use_camera_dialog_content 'This unblocks access for all apps and services allowed to use your camera.'
+.field public static final sensor_privacy_mic_turned_off_dialog_title:I = 0x7f130abb # @string/sensor_privacy_mic_turned_off_dialog_title 'Microphone turned off'
 
-.field public static final sensor_privacy_start_use_camera_dialog_title:I = 0x7f130abc # @string/sensor_privacy_start_use_camera_dialog_title 'Unblock device camera?'
+.field public static final sensor_privacy_mic_turned_on_dialog_title:I = 0x7f130abc # @string/sensor_privacy_mic_turned_on_dialog_title 'Microphone turned on'
 
-.field public static final sensor_privacy_start_use_mic_blocked_dialog_content:I = 0x7f130abd # @string/sensor_privacy_start_use_mic_blocked_dialog_content 'To unblock, move the privacy switch on your device to the microphone on position to allow microphone ...'
+.field public static final sensor_privacy_mic_unblocked_dialog_content:I = 0x7f130abd # @string/sensor_privacy_mic_unblocked_dialog_content 'Microphone is enabled for all apps and services.'
 
-.field public static final sensor_privacy_start_use_mic_blocked_dialog_title:I = 0x7f130abe # @string/sensor_privacy_start_use_mic_blocked_dialog_title 'Microphone is blocked'
+.field public static final sensor_privacy_mic_unblocked_toast_content:I = 0x7f130abe # @string/sensor_privacy_mic_unblocked_toast_content 'Microphone available'
 
-.field public static final sensor_privacy_start_use_mic_camera_blocked_dialog_content:I = 0x7f130abf # @string/sensor_privacy_start_use_mic_camera_blocked_dialog_content 'To unblock them, move the privacy switch on your device to the unblocked position to allow access. R ...'
+.field public static final sensor_privacy_start_use_camera_blocked_dialog_content:I = 0x7f130abf # @string/sensor_privacy_start_use_camera_blocked_dialog_content 'To unblock, move the privacy switch on your device to the camera on position to allow camera access. ...'
 
-.field public static final sensor_privacy_start_use_mic_camera_blocked_dialog_title:I = 0x7f130ac0 # @string/sensor_privacy_start_use_mic_camera_blocked_dialog_title 'The mic & camera are blocked'
+.field public static final sensor_privacy_start_use_camera_blocked_dialog_title:I = 0x7f130ac0 # @string/sensor_privacy_start_use_camera_blocked_dialog_title 'Camera is blocked'
 
-.field public static final sensor_privacy_start_use_mic_camera_dialog_content:I = 0x7f130ac1 # @string/sensor_privacy_start_use_mic_camera_dialog_content 'This unblocks access for all apps and services allowed to use your camera or microphone.'
+.field public static final sensor_privacy_start_use_camera_dialog_content:I = 0x7f130ac1 # @string/sensor_privacy_start_use_camera_dialog_content 'This unblocks access for all apps and services allowed to use your camera.'
 
-.field public static final sensor_privacy_start_use_mic_camera_dialog_title:I = 0x7f130ac2 # @string/sensor_privacy_start_use_mic_camera_dialog_title 'Unblock device camera and microphone?'
+.field public static final sensor_privacy_start_use_camera_dialog_title:I = 0x7f130ac2 # @string/sensor_privacy_start_use_camera_dialog_title 'Unblock device camera?'
 
-.field public static final sensor_privacy_start_use_mic_dialog_content:I = 0x7f130ac3 # @string/sensor_privacy_start_use_mic_dialog_content 'This unblocks access for all apps and services allowed to use your microphone.'
+.field public static final sensor_privacy_start_use_mic_blocked_dialog_content:I = 0x7f130ac3 # @string/sensor_privacy_start_use_mic_blocked_dialog_content 'To unblock, move the privacy switch on your device to the microphone on position to allow microphone ...'
 
-.field public static final sensor_privacy_start_use_mic_dialog_title:I = 0x7f130ac4 # @string/sensor_privacy_start_use_mic_dialog_title 'Unblock device microphone?'
+.field public static final sensor_privacy_start_use_mic_blocked_dialog_title:I = 0x7f130ac4 # @string/sensor_privacy_start_use_mic_blocked_dialog_title 'Microphone is blocked'
 
-.field public static final set_default_notes_app_toast_content:I = 0x7f130ac5 # @string/set_default_notes_app_toast_content 'Set default notes app in Settings'
+.field public static final sensor_privacy_start_use_mic_camera_blocked_dialog_content:I = 0x7f130ac5 # @string/sensor_privacy_start_use_mic_camera_blocked_dialog_content 'To unblock them, move the privacy switch on your device to the unblocked position to allow access. R ...'
 
-.field public static final settings_label:I = 0x7f130ac6 # @string/settings_label 'Settings'
+.field public static final sensor_privacy_start_use_mic_camera_blocked_dialog_title:I = 0x7f130ac6 # @string/sensor_privacy_start_use_mic_camera_blocked_dialog_title 'The mic & camera are blocked'
 
-.field public static final settings_package:I = 0x7f130ac7
+.field public static final sensor_privacy_start_use_mic_camera_dialog_content:I = 0x7f130ac7 # @string/sensor_privacy_start_use_mic_camera_dialog_content 'This unblocks access for all apps and services allowed to use your camera or microphone.'
 
-.field public static final settingslib_category_personal:I = 0x7f130ac8
+.field public static final sensor_privacy_start_use_mic_camera_dialog_title:I = 0x7f130ac8 # @string/sensor_privacy_start_use_mic_camera_dialog_title 'Unblock device camera and microphone?'
 
-.field public static final settingslib_category_work:I = 0x7f130ac9
+.field public static final sensor_privacy_start_use_mic_dialog_content:I = 0x7f130ac9 # @string/sensor_privacy_start_use_mic_dialog_content 'This unblocks access for all apps and services allowed to use your microphone.'
 
-.field public static final settingslib_config_headlineFontFamily:I = 0x7f130aca # @string/settingslib_config_headlineFontFamily ''
+.field public static final sensor_privacy_start_use_mic_dialog_title:I = 0x7f130aca # @string/sensor_privacy_start_use_mic_dialog_title 'Unblock device microphone?'
 
-.field public static final settingslib_learn_more_text:I = 0x7f130acb # @string/settingslib_learn_more_text 'Learn more'
+.field public static final set_default_notes_app_toast_content:I = 0x7f130acb # @string/set_default_notes_app_toast_content 'Set default notes app in Settings'
 
-.field public static final shared_data_delete_failure_text:I = 0x7f130acc
+.field public static final settings_label:I = 0x7f130acc # @string/settings_label 'Settings'
 
-.field public static final shared_data_no_accessors_dialog_text:I = 0x7f130acd
+.field public static final settings_package:I = 0x7f130acd
 
-.field public static final shared_data_no_blobs_text:I = 0x7f130ace
+.field public static final settingslib_category_personal:I = 0x7f130ace
 
-.field public static final shared_data_query_failure_text:I = 0x7f130acf
+.field public static final settingslib_category_work:I = 0x7f130acf
 
-.field public static final shared_data_summary:I = 0x7f130ad0
+.field public static final settingslib_config_headlineFontFamily:I = 0x7f130ad0 # @string/settingslib_config_headlineFontFamily ''
 
-.field public static final shared_data_title:I = 0x7f130ad1
+.field public static final settingslib_learn_more_text:I = 0x7f130ad1 # @string/settingslib_learn_more_text 'Learn more'
 
-.field public static final show_all_anrs:I = 0x7f130ad2
+.field public static final shared_data_delete_failure_text:I = 0x7f130ad2
 
-.field public static final show_all_anrs_summary:I = 0x7f130ad3
+.field public static final shared_data_no_accessors_dialog_text:I = 0x7f130ad3
 
-.field public static final show_demo_mode:I = 0x7f130ad4 # @string/show_demo_mode 'Show demo mode'
+.field public static final shared_data_no_blobs_text:I = 0x7f130ad4
 
-.field public static final show_hw_layers_updates:I = 0x7f130ad5
+.field public static final shared_data_query_failure_text:I = 0x7f130ad5
 
-.field public static final show_hw_layers_updates_summary:I = 0x7f130ad6
+.field public static final shared_data_summary:I = 0x7f130ad6
 
-.field public static final show_hw_screen_updates:I = 0x7f130ad7
+.field public static final shared_data_title:I = 0x7f130ad7
 
-.field public static final show_hw_screen_updates_summary:I = 0x7f130ad8
+.field public static final show_all_anrs:I = 0x7f130ad8
 
-.field public static final show_non_rect_clip:I = 0x7f130ad9
+.field public static final show_all_anrs_summary:I = 0x7f130ad9
 
-.field public static final show_notification_channel_warnings:I = 0x7f130ada
+.field public static final show_demo_mode:I = 0x7f130ada # @string/show_demo_mode 'Show demo mode'
 
-.field public static final show_notification_channel_warnings_summary:I = 0x7f130adb
+.field public static final show_hw_layers_updates:I = 0x7f130adb
 
-.field public static final show_screen_updates:I = 0x7f130adc
+.field public static final show_hw_layers_updates_summary:I = 0x7f130adc
 
-.field public static final show_screen_updates_summary:I = 0x7f130add
+.field public static final show_hw_screen_updates:I = 0x7f130add
 
-.field public static final show_touches:I = 0x7f130ade
+.field public static final show_hw_screen_updates_summary:I = 0x7f130ade
 
-.field public static final show_touches_summary:I = 0x7f130adf
+.field public static final show_non_rect_clip:I = 0x7f130adf
 
-.field public static final shut_down_password_forget_password_suggesstion_one_content:I = 0x7f130ae0 # @string/shut_down_password_forget_password_suggesstion_one_content '<Data>Press and hold the <font color=#e6e6e6>[Power]</font> and <font color=#e6e6e6>[Volume +]</font ...'
+.field public static final show_notification_channel_warnings:I = 0x7f130ae0
 
-.field public static final shut_down_password_forget_password_suggesstion_two_content:I = 0x7f130ae1 # @string/shut_down_password_forget_password_suggesstion_two_content '<Data>Select <font color=#e6e6e6>[Wipe data]</font> and tap <font color=#e6e6e6>[Reboot]</font> afte ...'
+.field public static final show_notification_channel_warnings_summary:I = 0x7f130ae1
 
-.field public static final sim_lock_bouncer_hint_msg:I = 0x7f130ae2 # @string/sim_lock_bouncer_hint_msg 'SIM card is locked. Replace it or enter password to unlock.'
+.field public static final show_screen_updates:I = 0x7f130ae2
 
-.field public static final sim_state_locked_dialog_title:I = 0x7f130ae3
+.field public static final show_screen_updates_summary:I = 0x7f130ae3
 
-.field public static final sim_state_locked_puk_dialog_message:I = 0x7f130ae4
+.field public static final show_touches:I = 0x7f130ae4
 
-.field public static final simulate_color_space:I = 0x7f130ae5
+.field public static final show_touches_summary:I = 0x7f130ae5
 
-.field public static final slice_permission_allow:I = 0x7f130ae6 # @string/slice_permission_allow 'Allow'
+.field public static final shut_down_password_forget_password_suggesstion_one_content:I = 0x7f130ae6 # @string/shut_down_password_forget_password_suggesstion_one_content '<Data>Press and hold the <font color=#e6e6e6>[Power]</font> and <font color=#e6e6e6>[Volume +]</font ...'
 
-.field public static final slice_permission_checkbox:I = 0x7f130ae7 # @string/slice_permission_checkbox 'Allow %1$s to show slices from any app'
+.field public static final shut_down_password_forget_password_suggesstion_two_content:I = 0x7f130ae7 # @string/shut_down_password_forget_password_suggesstion_two_content '<Data>Select <font color=#e6e6e6>[Wipe data]</font> and tap <font color=#e6e6e6>[Reboot]</font> afte ...'
 
-.field public static final slice_permission_deny:I = 0x7f130ae8 # @string/slice_permission_deny 'Deny'
+.field public static final sim_lock_bouncer_hint_msg:I = 0x7f130ae8 # @string/sim_lock_bouncer_hint_msg 'SIM card is locked. Replace it or enter password to unlock.'
 
-.field public static final slice_permission_text_1:I = 0x7f130ae9 # @string/slice_permission_text_1 '- It can read information from %1$s'
+.field public static final sim_state_locked_dialog_title:I = 0x7f130ae9
 
-.field public static final slice_permission_text_2:I = 0x7f130aea # @string/slice_permission_text_2 '- It can take actions inside %1$s'
+.field public static final sim_state_locked_puk_dialog_message:I = 0x7f130aea
 
-.field public static final slice_permission_title:I = 0x7f130aeb # @string/slice_permission_title 'Allow %1$s to show %2$s slices?'
+.field public static final simulate_color_space:I = 0x7f130aeb
 
-.field public static final snoozeHourOptions:I = 0x7f130aec # @string/snoozeHourOptions '{count, plural, =1 {# hour} =2 {# hours} few {# hours} other {# hours} }'
+.field public static final slice_permission_allow:I = 0x7f130aec # @string/slice_permission_allow 'Allow'
 
-.field public static final snoozeMinuteOptions:I = 0x7f130aed # @string/snoozeMinuteOptions '{count, plural, =1 {# minute} few {# minutes} other {# minutes} }'
+.field public static final slice_permission_checkbox:I = 0x7f130aed # @string/slice_permission_checkbox 'Allow %1$s to show slices from any app'
 
-.field public static final snooze_undo:I = 0x7f130aee # @string/snooze_undo 'Undo'
+.field public static final slice_permission_deny:I = 0x7f130aee # @string/slice_permission_deny 'Deny'
 
-.field public static final snoozed_for_time:I = 0x7f130aef # @string/snoozed_for_time 'Snoozed for %1$s'
+.field public static final slice_permission_text_1:I = 0x7f130aef # @string/slice_permission_text_1 '- It can read information from %1$s'
 
-.field public static final solar_term_autumn_begins:I = 0x7f130af0 # @string/solar_term_autumn_begins 'Autumn begins'
+.field public static final slice_permission_text_2:I = 0x7f130af0 # @string/slice_permission_text_2 '- It can take actions inside %1$s'
 
-.field public static final solar_term_autumn_equinox:I = 0x7f130af1 # @string/solar_term_autumn_equinox 'Autumn equinox'
+.field public static final slice_permission_title:I = 0x7f130af1 # @string/slice_permission_title 'Allow %1$s to show %2$s slices?'
 
-.field public static final solar_term_clear_and_bright:I = 0x7f130af2 # @string/solar_term_clear_and_bright 'Clear and bright'
+.field public static final snoozeHourOptions:I = 0x7f130af2 # @string/snoozeHourOptions '{count, plural, =1 {# hour} =2 {# hours} few {# hours} other {# hours} }'
 
-.field public static final solar_term_cold_dews:I = 0x7f130af3 # @string/solar_term_cold_dews 'Cold dews'
+.field public static final snoozeMinuteOptions:I = 0x7f130af3 # @string/snoozeMinuteOptions '{count, plural, =1 {# minute} few {# minutes} other {# minutes} }'
 
-.field public static final solar_term_grain_buds:I = 0x7f130af4 # @string/solar_term_grain_buds 'Creatures plenish'
+.field public static final snooze_undo:I = 0x7f130af4 # @string/snooze_undo 'Undo'
 
-.field public static final solar_term_grain_in_ear:I = 0x7f130af5 # @string/solar_term_grain_in_ear 'Seeding millet'
+.field public static final snoozed_for_time:I = 0x7f130af5 # @string/snoozed_for_time 'Snoozed for %1$s'
 
-.field public static final solar_term_grain_rain:I = 0x7f130af6 # @string/solar_term_grain_rain 'Wheat rain'
+.field public static final solar_term_autumn_begins:I = 0x7f130af6 # @string/solar_term_autumn_begins 'Autumn begins'
 
-.field public static final solar_term_great_cold:I = 0x7f130af7 # @string/solar_term_great_cold 'Severe cold'
+.field public static final solar_term_autumn_equinox:I = 0x7f130af7 # @string/solar_term_autumn_equinox 'Autumn equinox'
 
-.field public static final solar_term_great_heat:I = 0x7f130af8 # @string/solar_term_great_heat 'Great heat'
+.field public static final solar_term_clear_and_bright:I = 0x7f130af8 # @string/solar_term_clear_and_bright 'Clear and bright'
 
-.field public static final solar_term_heavy_snow:I = 0x7f130af9 # @string/solar_term_heavy_snow 'Heavy snow'
+.field public static final solar_term_cold_dews:I = 0x7f130af9 # @string/solar_term_cold_dews 'Cold dews'
 
-.field public static final solar_term_hoar_frost_falls:I = 0x7f130afa # @string/solar_term_hoar_frost_falls 'Frost'
+.field public static final solar_term_grain_buds:I = 0x7f130afa # @string/solar_term_grain_buds 'Creatures plenish'
 
-.field public static final solar_term_insects_awaken:I = 0x7f130afb # @string/solar_term_insects_awaken 'Insects waken'
+.field public static final solar_term_grain_in_ear:I = 0x7f130afb # @string/solar_term_grain_in_ear 'Seeding millet'
 
-.field public static final solar_term_light_snow:I = 0x7f130afc # @string/solar_term_light_snow 'Light snow'
+.field public static final solar_term_grain_rain:I = 0x7f130afc # @string/solar_term_grain_rain 'Wheat rain'
 
-.field public static final solar_term_slight_cold:I = 0x7f130afd # @string/solar_term_slight_cold 'Moderate cold'
+.field public static final solar_term_great_cold:I = 0x7f130afd # @string/solar_term_great_cold 'Severe cold'
 
-.field public static final solar_term_slight_heat:I = 0x7f130afe # @string/solar_term_slight_heat 'Moderate heat'
+.field public static final solar_term_great_heat:I = 0x7f130afe # @string/solar_term_great_heat 'Great heat'
 
-.field public static final solar_term_spring_begins:I = 0x7f130aff # @string/solar_term_spring_begins 'Spring begins'
+.field public static final solar_term_heavy_snow:I = 0x7f130aff # @string/solar_term_heavy_snow 'Heavy snow'
 
-.field public static final solar_term_stopping_the_heat:I = 0x7f130b00 # @string/solar_term_stopping_the_heat 'Heat withdraws'
+.field public static final solar_term_hoar_frost_falls:I = 0x7f130b00 # @string/solar_term_hoar_frost_falls 'Frost'
 
-.field public static final solar_term_summer_begins:I = 0x7f130b01 # @string/solar_term_summer_begins 'Summer begins'
+.field public static final solar_term_insects_awaken:I = 0x7f130b01 # @string/solar_term_insects_awaken 'Insects waken'
 
-.field public static final solar_term_summer_solstice:I = 0x7f130b02 # @string/solar_term_summer_solstice 'Summer solstice'
+.field public static final solar_term_light_snow:I = 0x7f130b02 # @string/solar_term_light_snow 'Light snow'
 
-.field public static final solar_term_the_rains:I = 0x7f130b03 # @string/solar_term_the_rains 'Spring showers'
+.field public static final solar_term_slight_cold:I = 0x7f130b03 # @string/solar_term_slight_cold 'Moderate cold'
 
-.field public static final solar_term_vernal_equinox:I = 0x7f130b04 # @string/solar_term_vernal_equinox 'Vernal equinox'
+.field public static final solar_term_slight_heat:I = 0x7f130b04 # @string/solar_term_slight_heat 'Moderate heat'
 
-.field public static final solar_term_white_dews:I = 0x7f130b05 # @string/solar_term_white_dews 'Dews'
+.field public static final solar_term_spring_begins:I = 0x7f130b05 # @string/solar_term_spring_begins 'Spring begins'
 
-.field public static final solar_term_winter_begins:I = 0x7f130b06 # @string/solar_term_winter_begins 'Winter begins'
+.field public static final solar_term_stopping_the_heat:I = 0x7f130b06 # @string/solar_term_stopping_the_heat 'Heat withdraws'
 
-.field public static final solar_term_winter_solstice:I = 0x7f130b07 # @string/solar_term_winter_solstice 'Winter solstice'
+.field public static final solar_term_summer_begins:I = 0x7f130b07 # @string/solar_term_summer_begins 'Summer begins'
 
-.field public static final somatosensory_temperature_format:I = 0x7f130b08 # @string/somatosensory_temperature_format 'Feels like %s°'
+.field public static final solar_term_summer_solstice:I = 0x7f130b08 # @string/solar_term_summer_solstice 'Summer solstice'
 
-.field public static final sound_settings:I = 0x7f130b09 # @string/sound_settings 'Sound & vibration'
+.field public static final solar_term_the_rains:I = 0x7f130b09 # @string/solar_term_the_rains 'Spring showers'
 
-.field public static final speed_label_fast:I = 0x7f130b0a # @string/speed_label_fast 'Fast'
+.field public static final solar_term_vernal_equinox:I = 0x7f130b0a # @string/solar_term_vernal_equinox 'Vernal equinox'
 
-.field public static final speed_label_okay:I = 0x7f130b0b # @string/speed_label_okay 'OK'
+.field public static final solar_term_white_dews:I = 0x7f130b0b # @string/solar_term_white_dews 'Dews'
 
-.field public static final speed_label_slow:I = 0x7f130b0c # @string/speed_label_slow 'Slow'
+.field public static final solar_term_winter_begins:I = 0x7f130b0c # @string/solar_term_winter_begins 'Winter begins'
 
-.field public static final speed_label_very_fast:I = 0x7f130b0d # @string/speed_label_very_fast 'Very Fast'
+.field public static final solar_term_winter_solstice:I = 0x7f130b0d # @string/solar_term_winter_solstice 'Winter solstice'
 
-.field public static final split_screen_text:I = 0x7f130b0e # @string/split_screen_text 'Split Screen'
+.field public static final somatosensory_temperature_format:I = 0x7f130b0e # @string/somatosensory_temperature_format 'Feels like %s°'
 
-.field public static final standby_bucket_summary:I = 0x7f130b0f
+.field public static final sound_settings:I = 0x7f130b0f # @string/sound_settings 'Sound & vibration'
 
-.field public static final start_camera_error_try_again:I = 0x7f130b10
+.field public static final speed_label_fast:I = 0x7f130b10 # @string/speed_label_fast 'Fast'
 
-.field public static final start_dreams:I = 0x7f130b11 # @string/start_dreams 'Screen saver'
+.field public static final speed_label_okay:I = 0x7f130b11 # @string/speed_label_okay 'OK'
 
-.field public static final status_bar:I = 0x7f130b12 # @string/status_bar 'Status bar'
+.field public static final speed_label_slow:I = 0x7f130b12 # @string/speed_label_slow 'Slow'
 
-.field public static final status_bar_airplane:I = 0x7f130b13 # @string/status_bar_airplane 'Airplane mode'
+.field public static final speed_label_very_fast:I = 0x7f130b13 # @string/speed_label_very_fast 'Very Fast'
 
-.field public static final status_bar_alarm:I = 0x7f130b14 # @string/status_bar_alarm 'Alarm'
+.field public static final split_screen_text:I = 0x7f130b14 # @string/split_screen_text 'Split Screen'
 
-.field public static final status_bar_clear_all_button:I = 0x7f130b15
+.field public static final standby_bucket_summary:I = 0x7f130b15
 
-.field public static final status_bar_clock_date_format:I = 0x7f130b16 # @string/status_bar_clock_date_format 'E, MMM d'
+.field public static final start_camera_error_try_again:I = 0x7f130b16
 
-.field public static final status_bar_clock_date_format_12:I = 0x7f130b17 # @string/status_bar_clock_date_format_12 'E, MMM d'
+.field public static final start_dreams:I = 0x7f130b17 # @string/start_dreams 'Screen saver'
 
-.field public static final status_bar_clock_date_time_format:I = 0x7f130b18 # @string/status_bar_clock_date_time_format 'H:mm E, MMM d'
+.field public static final status_bar:I = 0x7f130b18 # @string/status_bar 'Status bar'
 
-.field public static final status_bar_clock_date_time_format_12:I = 0x7f130b19 # @string/status_bar_clock_date_time_format_12 'h:mm a, E, MMM d'
+.field public static final status_bar_airplane:I = 0x7f130b19 # @string/status_bar_airplane 'Airplane mode'
 
-.field public static final status_bar_clock_date_weekday_format:I = 0x7f130b1a
+.field public static final status_bar_alarm:I = 0x7f130b1a # @string/status_bar_alarm 'Alarm'
 
-.field public static final status_bar_clock_date_weekday_format_12:I = 0x7f130b1b
+.field public static final status_bar_clear_all_button:I = 0x7f130b1b
 
-.field public static final status_bar_clock_date_weekday_format_12_brief:I = 0x7f130b1c # @string/status_bar_clock_date_weekday_format_12_brief '@string/status_bar_clock_date_format_12'
+.field public static final status_bar_clock_date_format:I = 0x7f130b1c # @string/status_bar_clock_date_format 'E, MMM d'
 
-.field public static final status_bar_clock_date_weekday_format_brief:I = 0x7f130b1d # @string/status_bar_clock_date_weekday_format_brief '@string/status_bar_clock_date_format'
+.field public static final status_bar_clock_date_format_12:I = 0x7f130b1d # @string/status_bar_clock_date_format_12 'E, MMM d'
 
-.field public static final status_bar_date_format:I = 0x7f130b1e
+.field public static final status_bar_clock_date_time_format:I = 0x7f130b1e # @string/status_bar_clock_date_time_format 'H:mm E, MMM d'
 
-.field public static final status_bar_date_format_12:I = 0x7f130b1f
+.field public static final status_bar_clock_date_time_format_12:I = 0x7f130b1f # @string/status_bar_clock_date_time_format_12 'h:mm a, E, MMM d'
 
-.field public static final status_bar_ethernet:I = 0x7f130b20 # @string/status_bar_ethernet 'Ethernet'
+.field public static final status_bar_clock_date_weekday_format:I = 0x7f130b20
 
-.field public static final status_bar_network_name_separator:I = 0x7f130b21 # @string/status_bar_network_name_separator '-'
+.field public static final status_bar_clock_date_weekday_format_12:I = 0x7f130b21
 
-.field public static final status_bar_no_sim:I = 0x7f130b22 # @string/status_bar_no_sim 'no_sim'
+.field public static final status_bar_clock_date_weekday_format_12_brief:I = 0x7f130b22 # @string/status_bar_clock_date_weekday_format_12_brief '@string/status_bar_clock_date_format_12'
 
-.field public static final status_bar_notification_info_overflow:I = 0x7f130b23
+.field public static final status_bar_clock_date_weekday_format_brief:I = 0x7f130b23 # @string/status_bar_clock_date_weekday_format_brief '@string/status_bar_clock_date_format'
 
-.field public static final status_bar_settings_auto_rotation:I = 0x7f130b24 # @string/status_bar_settings_auto_rotation 'Auto-rotate screen'
+.field public static final status_bar_date_format:I = 0x7f130b24
 
-.field public static final status_bar_work:I = 0x7f130b25 # @string/status_bar_work 'Work profile'
+.field public static final status_bar_date_format_12:I = 0x7f130b25
 
-.field public static final status_before_loading:I = 0x7f130b26
+.field public static final status_bar_ethernet:I = 0x7f130b26 # @string/status_bar_ethernet 'Ethernet'
 
-.field public static final status_unavailable:I = 0x7f130b27
+.field public static final status_bar_network_name_separator:I = 0x7f130b27 # @string/status_bar_network_name_separator '-'
 
-.field public static final storage_category:I = 0x7f130b28
+.field public static final status_bar_no_sim:I = 0x7f130b28 # @string/status_bar_no_sim 'no_sim'
 
-.field public static final stream_accessibility:I = 0x7f130b29 # @string/stream_accessibility 'Accessibility'
+.field public static final status_bar_notification_info_overflow:I = 0x7f130b29
 
-.field public static final stream_alarm:I = 0x7f130b2a # @string/stream_alarm 'Alarm'
+.field public static final status_bar_settings_auto_rotation:I = 0x7f130b2a # @string/status_bar_settings_auto_rotation 'Auto-rotate screen'
 
-.field public static final stream_assistant:I = 0x7f130b2b # @string/stream_assistant 'Voice assistant'
+.field public static final status_bar_work:I = 0x7f130b2b # @string/status_bar_work 'Work profile'
 
-.field public static final stream_bluetooth_sco:I = 0x7f130b2c # @string/stream_bluetooth_sco 'Bluetooth'
+.field public static final status_before_loading:I = 0x7f130b2c
 
-.field public static final stream_dtmf:I = 0x7f130b2d # @string/stream_dtmf 'Dual multi tone frequency'
+.field public static final status_unavailable:I = 0x7f130b2d
 
-.field public static final stream_music:I = 0x7f130b2e # @string/stream_music 'Media'
+.field public static final storage_category:I = 0x7f130b2e
 
-.field public static final stream_notification:I = 0x7f130b2f # @string/stream_notification 'Notification'
+.field public static final stream_accessibility:I = 0x7f130b2f # @string/stream_accessibility 'Accessibility'
 
-.field public static final stream_ring:I = 0x7f130b30 # @string/stream_ring 'Ring'
+.field public static final stream_alarm:I = 0x7f130b30 # @string/stream_alarm 'Alarm'
 
-.field public static final stream_system:I = 0x7f130b31 # @string/stream_system 'System'
+.field public static final stream_assistant:I = 0x7f130b31 # @string/stream_assistant 'Voice assistant'
 
-.field public static final stream_system_enforced:I = 0x7f130b32 # @string/stream_system_enforced 'System enforced'
+.field public static final stream_bluetooth_sco:I = 0x7f130b32 # @string/stream_bluetooth_sco 'Bluetooth'
 
-.field public static final stream_tts:I = 0x7f130b33 # @string/stream_tts 'Transmitted Through Speaker'
+.field public static final stream_dtmf:I = 0x7f130b33 # @string/stream_dtmf 'Dual multi tone frequency'
 
-.field public static final stream_voice_call:I = 0x7f130b34 # @string/stream_voice_call 'Call'
+.field public static final stream_music:I = 0x7f130b34 # @string/stream_music 'Media'
 
-.field public static final strict_mode:I = 0x7f130b35
+.field public static final stream_notification:I = 0x7f130b35 # @string/stream_notification 'Notification'
 
-.field public static final strict_mode_summary:I = 0x7f130b36
+.field public static final stream_ring:I = 0x7f130b36 # @string/stream_ring 'Ring'
 
-.field public static final strong_toast_charging:I = 0x7f130b37 # @string/strong_toast_charging 'Charging'
+.field public static final stream_system:I = 0x7f130b37 # @string/stream_system 'System'
 
-.field public static final strong_toast_quick_charging:I = 0x7f130b38 # @string/strong_toast_quick_charging 'Quick charging'
+.field public static final stream_system_enforced:I = 0x7f130b38 # @string/stream_system_enforced 'System enforced'
 
-.field public static final structure_face_data_input_error_away_screen:I = 0x7f130b39
+.field public static final stream_tts:I = 0x7f130b39 # @string/stream_tts 'Transmitted Through Speaker'
 
-.field public static final structure_face_data_input_error_expose_features:I = 0x7f130b3a
+.field public static final stream_voice_call:I = 0x7f130b3a # @string/stream_voice_call 'Call'
 
-.field public static final structure_face_data_input_error_overly_light:I = 0x7f130b3b
+.field public static final strict_mode:I = 0x7f130b3b
 
-.field public static final stylus_battery_low:I = 0x7f130b3c
+.field public static final strict_mode_summary:I = 0x7f130b3c
 
-.field public static final stylus_battery_low_percentage:I = 0x7f130b3d # @string/stylus_battery_low_percentage '%s battery remaining'
+.field public static final strong_toast_charging:I = 0x7f130b3d # @string/strong_toast_charging 'Charging'
 
-.field public static final stylus_battery_low_subtitle:I = 0x7f130b3e # @string/stylus_battery_low_subtitle 'Connect your stylus to a charger'
+.field public static final strong_toast_quick_charging:I = 0x7f130b3e # @string/strong_toast_quick_charging 'Quick charging'
 
-.field public static final sudFontSecondary:I = 0x7f130b3f # @string/sudFontSecondary 'google-sans'
+.field public static final structure_face_data_input_error_away_screen:I = 0x7f130b3f
 
-.field public static final sudFontSecondaryMedium:I = 0x7f130b40 # @string/sudFontSecondaryMedium 'google-sans-medium'
+.field public static final structure_face_data_input_error_expose_features:I = 0x7f130b40
 
-.field public static final sudFontSecondaryMediumMaterialYou:I = 0x7f130b41 # @string/sudFontSecondaryMediumMaterialYou 'google-sans-text-medium'
+.field public static final structure_face_data_input_error_overly_light:I = 0x7f130b41
 
-.field public static final sudFontSecondaryText:I = 0x7f130b42 # @string/sudFontSecondaryText 'google-sans-text'
+.field public static final stylus_battery_low:I = 0x7f130b42
 
-.field public static final sud_back_button_label:I = 0x7f130b43 # @string/sud_back_button_label 'Back'
+.field public static final stylus_battery_low_percentage:I = 0x7f130b43 # @string/stylus_battery_low_percentage '%s battery remaining'
 
-.field public static final sud_default_device_name:I = 0x7f130b44
+.field public static final stylus_battery_low_subtitle:I = 0x7f130b44 # @string/stylus_battery_low_subtitle 'Connect your stylus to a charger'
 
-.field public static final sud_more_button_label:I = 0x7f130b45 # @string/sud_more_button_label 'More'
+.field public static final sudFontSecondary:I = 0x7f130b45 # @string/sudFontSecondary 'google-sans'
 
-.field public static final sud_next_button_label:I = 0x7f130b46 # @string/sud_next_button_label 'Next'
+.field public static final sudFontSecondaryMedium:I = 0x7f130b46 # @string/sudFontSecondaryMedium 'google-sans-medium'
 
-.field public static final sud_skip_button_label:I = 0x7f130b47
+.field public static final sudFontSecondaryMediumMaterialYou:I = 0x7f130b47 # @string/sudFontSecondaryMediumMaterialYou 'google-sans-text-medium'
 
-.field public static final summary_collapsed_preference_list:I = 0x7f130b48 # @string/summary_collapsed_preference_list '%1$s, %2$s'
+.field public static final sudFontSecondaryText:I = 0x7f130b48 # @string/sudFontSecondaryText 'google-sans-text'
 
-.field public static final summary_empty:I = 0x7f130b49 # @string/summary_empty ''
+.field public static final sud_back_button_label:I = 0x7f130b49 # @string/sud_back_button_label 'Back'
 
-.field public static final summary_placeholder:I = 0x7f130b4a
+.field public static final sud_default_device_name:I = 0x7f130b4a
 
-.field public static final sunday:I = 0x7f130b4b # @string/sunday 'Sunday'
+.field public static final sud_more_button_label:I = 0x7f130b4b # @string/sud_more_button_label 'More'
 
-.field public static final sunday_short:I = 0x7f130b4c # @string/sunday_short 'Sun'
+.field public static final sud_next_button_label:I = 0x7f130b4c # @string/sud_next_button_label 'Next'
 
-.field public static final sunday_shortest:I = 0x7f130b4d # @string/sunday_shortest 'Sun'
+.field public static final sud_skip_button_label:I = 0x7f130b4d
 
-.field public static final sunrise_time_format:I = 0x7f130b4e # @string/sunrise_time_format 'Sunrise %s'
+.field public static final summary_collapsed_preference_list:I = 0x7f130b4e # @string/summary_collapsed_preference_list '%1$s, %2$s'
 
-.field public static final sunrise_time_format_desc:I = 0x7f130b4f # @string/sunrise_time_format_desc 'Sunrise time: %s'
+.field public static final summary_empty:I = 0x7f130b4f # @string/summary_empty ''
 
-.field public static final sunrise_time_format_tomorrow_desc:I = 0x7f130b50 # @string/sunrise_time_format_tomorrow_desc 'Tomorrow's sunrise: %s'
+.field public static final summary_placeholder:I = 0x7f130b50
 
-.field public static final sunset_time_format:I = 0x7f130b51 # @string/sunset_time_format 'Sunset %s'
+.field public static final sunday:I = 0x7f130b51 # @string/sunday 'Sunday'
 
-.field public static final sunset_time_format_desc:I = 0x7f130b52 # @string/sunset_time_format_desc 'Sunset time: %s'
+.field public static final sunday_short:I = 0x7f130b52 # @string/sunday_short 'Sun'
 
-.field public static final switch_bar_off:I = 0x7f130b53 # @string/switch_bar_off 'Off'
+.field public static final sunday_shortest:I = 0x7f130b53 # @string/sunday_shortest 'Sun'
 
-.field public static final switch_bar_on:I = 0x7f130b54 # @string/switch_bar_on 'On'
+.field public static final sunrise_time_format:I = 0x7f130b54 # @string/sunrise_time_format 'Sunrise %s'
 
-.field public static final switch_system_user:I = 0x7f130b55 # @string/switch_system_user 'Back to First space'
+.field public static final sunrise_time_format_desc:I = 0x7f130b55 # @string/sunrise_time_format_desc 'Sunrise time: %s'
 
-.field public static final symbol_colon:I = 0x7f130b56
+.field public static final sunrise_time_format_tomorrow_desc:I = 0x7f130b56 # @string/sunrise_time_format_tomorrow_desc 'Tomorrow's sunrise: %s'
 
-.field public static final system_multitasking_full_screen:I = 0x7f130b57 # @string/system_multitasking_full_screen 'Switch from Split screen to full screen'
+.field public static final sunset_time_format:I = 0x7f130b57 # @string/sunset_time_format 'Sunset %s'
 
-.field public static final system_multitasking_lhs:I = 0x7f130b58
+.field public static final sunset_time_format_desc:I = 0x7f130b58 # @string/sunset_time_format_desc 'Sunset time: %s'
 
-.field public static final system_multitasking_replace:I = 0x7f130b59
+.field public static final switch_bar_off:I = 0x7f130b59 # @string/switch_bar_off 'Off'
 
-.field public static final system_multitasking_rhs:I = 0x7f130b5a
+.field public static final switch_bar_on:I = 0x7f130b5a # @string/switch_bar_on 'On'
 
-.field public static final system_ui_aod_date_pattern:I = 0x7f130b5b # @string/system_ui_aod_date_pattern 'EEEMMMd'
+.field public static final switch_system_user:I = 0x7f130b5b # @string/switch_system_user 'Back to First space'
 
-.field public static final system_ui_date_pattern:I = 0x7f130b5c # @string/system_ui_date_pattern '@android:string/zen_mode_default_events_name'
+.field public static final symbol_colon:I = 0x7f130b5c
 
-.field public static final system_ui_tuner:I = 0x7f130b5d # @string/system_ui_tuner 'System UI Tuner'
+.field public static final system_multitasking_full_screen:I = 0x7f130b5d # @string/system_multitasking_full_screen 'Switch from Split screen to full screen'
 
-.field public static final tap_a_network_to_connect:I = 0x7f130b5e # @string/tap_a_network_to_connect 'Tap a network to connect'
+.field public static final system_multitasking_lhs:I = 0x7f130b5e
 
-.field public static final tap_again:I = 0x7f130b5f # @string/tap_again 'Tap again'
+.field public static final system_multitasking_replace:I = 0x7f130b5f
 
-.field public static final tap_to_sign_up:I = 0x7f130b60
+.field public static final system_multitasking_rhs:I = 0x7f130b60
 
-.field public static final temperature_unit:I = 0x7f130b61 # @string/temperature_unit '°'
+.field public static final system_ui_aod_date_pattern:I = 0x7f130b61 # @string/system_ui_aod_date_pattern 'EEEMMMd'
 
-.field public static final tether_settings_title_all:I = 0x7f130b62
+.field public static final system_ui_date_pattern:I = 0x7f130b62 # @string/system_ui_date_pattern '@android:string/zen_mode_default_events_name'
 
-.field public static final tether_settings_title_bluetooth:I = 0x7f130b63
+.field public static final system_ui_tuner:I = 0x7f130b63 # @string/system_ui_tuner 'System UI Tuner'
 
-.field public static final tether_settings_title_usb:I = 0x7f130b64
+.field public static final tap_a_network_to_connect:I = 0x7f130b64 # @string/tap_a_network_to_connect 'Tap a network to connect'
 
-.field public static final tether_settings_title_usb_bluetooth:I = 0x7f130b65
+.field public static final tap_again:I = 0x7f130b65 # @string/tap_again 'Tap again'
 
-.field public static final tether_settings_title_wifi:I = 0x7f130b66
+.field public static final tap_to_sign_up:I = 0x7f130b66
 
-.field public static final tethering_hardware_offload:I = 0x7f130b67
+.field public static final temperature_unit:I = 0x7f130b67 # @string/temperature_unit '°'
 
-.field public static final tethering_hardware_offload_summary:I = 0x7f130b68
+.field public static final tether_settings_title_all:I = 0x7f130b68
 
-.field public static final tethering_settings_not_available:I = 0x7f130b69
+.field public static final tether_settings_title_bluetooth:I = 0x7f130b69
 
-.field public static final text_slash:I = 0x7f130b6a # @string/text_slash '/'
+.field public static final tether_settings_title_usb:I = 0x7f130b6a
 
-.field public static final the_anniversary_of_lifting_martial_law:I = 0x7f130b6b
+.field public static final tether_settings_title_usb_bluetooth:I = 0x7f130b6b
 
-.field public static final the_anti_aggression_day:I = 0x7f130b6c
+.field public static final tether_settings_title_wifi:I = 0x7f130b6c
 
-.field public static final the_arbor_day:I = 0x7f130b6d
+.field public static final tethering_hardware_offload:I = 0x7f130b6d
 
-.field public static final the_armed_forces_day:I = 0x7f130b6e
+.field public static final tethering_hardware_offload_summary:I = 0x7f130b6e
 
-.field public static final the_armys_day:I = 0x7f130b6f
+.field public static final tethering_settings_not_available:I = 0x7f130b6f
 
-.field public static final the_childrens_day:I = 0x7f130b70
+.field public static final text_slash:I = 0x7f130b70 # @string/text_slash '/'
 
-.field public static final the_chinese_youth_day:I = 0x7f130b71
+.field public static final the_anniversary_of_lifting_martial_law:I = 0x7f130b71
 
-.field public static final the_christmas_day:I = 0x7f130b72
+.field public static final the_anti_aggression_day:I = 0x7f130b72
 
-.field public static final the_double_ninth_festival:I = 0x7f130b73
+.field public static final the_arbor_day:I = 0x7f130b73
 
-.field public static final the_dragon_boat_festival:I = 0x7f130b74
+.field public static final the_armed_forces_day:I = 0x7f130b74
 
-.field public static final the_easter_day:I = 0x7f130b75
+.field public static final the_armys_day:I = 0x7f130b75
 
-.field public static final the_eve_of_the_spring_festival:I = 0x7f130b76
+.field public static final the_childrens_day:I = 0x7f130b76
 
-.field public static final the_fifth_day:I = 0x7f130b77
+.field public static final the_chinese_youth_day:I = 0x7f130b77
 
-.field public static final the_fools_day:I = 0x7f130b78
+.field public static final the_christmas_day:I = 0x7f130b78
 
-.field public static final the_forth_day:I = 0x7f130b79
+.field public static final the_double_ninth_festival:I = 0x7f130b79
 
-.field public static final the_hksar_establishment_day:I = 0x7f130b7a
+.field public static final the_dragon_boat_festival:I = 0x7f130b7a
 
-.field public static final the_international_womens_day:I = 0x7f130b7b
+.field public static final the_easter_day:I = 0x7f130b7b
 
-.field public static final the_laba_festival:I = 0x7f130b7c
+.field public static final the_eve_of_the_spring_festival:I = 0x7f130b7c
 
-.field public static final the_labour_day:I = 0x7f130b7d
+.field public static final the_fifth_day:I = 0x7f130b7d
 
-.field public static final the_lantern_festival:I = 0x7f130b7e
+.field public static final the_fools_day:I = 0x7f130b7e
 
-.field public static final the_mid_autumn_festival:I = 0x7f130b7f
+.field public static final the_forth_day:I = 0x7f130b7f
 
-.field public static final the_national_day:I = 0x7f130b80
+.field public static final the_hksar_establishment_day:I = 0x7f130b80
 
-.field public static final the_national_father_day:I = 0x7f130b81
+.field public static final the_international_womens_day:I = 0x7f130b81
 
-.field public static final the_new_years_day:I = 0x7f130b82
+.field public static final the_laba_festival:I = 0x7f130b82
 
-.field public static final the_night_of_sevens:I = 0x7f130b83
+.field public static final the_labour_day:I = 0x7f130b83
 
-.field public static final the_partys_day:I = 0x7f130b84
+.field public static final the_lantern_festival:I = 0x7f130b84
 
-.field public static final the_peace_day:I = 0x7f130b85
+.field public static final the_mid_autumn_festival:I = 0x7f130b85
 
-.field public static final the_retrocession_day:I = 0x7f130b86
+.field public static final the_national_day:I = 0x7f130b86
 
-.field public static final the_second_day:I = 0x7f130b87
+.field public static final the_national_father_day:I = 0x7f130b87
 
-.field public static final the_seventh_day:I = 0x7f130b88
+.field public static final the_new_years_day:I = 0x7f130b88
 
-.field public static final the_sixth_day:I = 0x7f130b89
+.field public static final the_night_of_sevens:I = 0x7f130b89
 
-.field public static final the_spirit_festival:I = 0x7f130b8a
+.field public static final the_partys_day:I = 0x7f130b8a
 
-.field public static final the_spring_festival:I = 0x7f130b8b
+.field public static final the_peace_day:I = 0x7f130b8b
 
-.field public static final the_teachers_day:I = 0x7f130b8c
+.field public static final the_retrocession_day:I = 0x7f130b8c
 
-.field public static final the_third_day:I = 0x7f130b8d
+.field public static final the_second_day:I = 0x7f130b8d
 
-.field public static final the_tw_childrens_day:I = 0x7f130b8e
+.field public static final the_seventh_day:I = 0x7f130b8e
 
-.field public static final the_tw_youth_day:I = 0x7f130b8f
+.field public static final the_sixth_day:I = 0x7f130b8f
 
-.field public static final the_united_nations_day:I = 0x7f130b90
+.field public static final the_spirit_festival:I = 0x7f130b90
 
-.field public static final the_valentines_day:I = 0x7f130b91
+.field public static final the_spring_festival:I = 0x7f130b91
 
-.field public static final the_water_lantern_festival:I = 0x7f130b92
+.field public static final the_teachers_day:I = 0x7f130b92
 
-.field public static final themepicker_overlayable_package:I = 0x7f130b93 # @string/themepicker_overlayable_package 'com.android.wallpaper'
+.field public static final the_third_day:I = 0x7f130b93
 
-.field public static final thermal_protection_warning:I = 0x7f130b94 # @string/thermal_protection_warning 'Your device is overheated. Can't use this feature now.'
+.field public static final the_tw_childrens_day:I = 0x7f130b94
 
-.field public static final thermal_shutdown_dialog_help_text:I = 0x7f130b95 # @string/thermal_shutdown_dialog_help_text 'See care steps'
+.field public static final the_tw_youth_day:I = 0x7f130b95
 
-.field public static final thermal_shutdown_dialog_help_url:I = 0x7f130b96 # @string/thermal_shutdown_dialog_help_url ''
+.field public static final the_united_nations_day:I = 0x7f130b96
 
-.field public static final thermal_shutdown_dialog_message:I = 0x7f130b97 # @string/thermal_shutdown_dialog_message 'Your phone was too hot, so it turned off to cool down. Your phone is now running normally.\n\nYour pho ...'
+.field public static final the_valentines_day:I = 0x7f130b97
 
-.field public static final thermal_shutdown_message:I = 0x7f130b98 # @string/thermal_shutdown_message 'Your phone is now running normally.\nTap for more info'
+.field public static final the_water_lantern_festival:I = 0x7f130b98
 
-.field public static final thermal_shutdown_title:I = 0x7f130b99 # @string/thermal_shutdown_title 'Phone turned off due to heat'
+.field public static final themepicker_overlayable_package:I = 0x7f130b99 # @string/themepicker_overlayable_package 'com.android.wallpaper'
 
-.field public static final thursday:I = 0x7f130b9a # @string/thursday 'Thursday'
+.field public static final thermal_protection_warning:I = 0x7f130b9a # @string/thermal_protection_warning 'Your device is overheated. Can't use this feature now.'
 
-.field public static final thursday_short:I = 0x7f130b9b # @string/thursday_short 'Thu'
+.field public static final thermal_shutdown_dialog_help_text:I = 0x7f130b9b # @string/thermal_shutdown_dialog_help_text 'See care steps'
 
-.field public static final thursday_shortest:I = 0x7f130b9c # @string/thursday_shortest 'Thu'
+.field public static final thermal_shutdown_dialog_help_url:I = 0x7f130b9c # @string/thermal_shutdown_dialog_help_url ''
 
-.field public static final tile_unavailable:I = 0x7f130b9d # @string/tile_unavailable 'Unavailable'
+.field public static final thermal_shutdown_dialog_message:I = 0x7f130b9d # @string/thermal_shutdown_dialog_message 'Your phone was too hot, so it turned off to cool down. Your phone is now running normally.\n\nYour pho ...'
 
-.field public static final time_picker_dialog_title:I = 0x7f130b9e
+.field public static final thermal_shutdown_message:I = 0x7f130b9e # @string/thermal_shutdown_message 'Your phone is now running normally.\nTap for more info'
 
-.field public static final time_picker_label_hour:I = 0x7f130b9f # @string/time_picker_label_hour 'H'
+.field public static final thermal_shutdown_title:I = 0x7f130b9f # @string/thermal_shutdown_title 'Phone turned off due to heat'
 
-.field public static final time_picker_label_minute:I = 0x7f130ba0 # @string/time_picker_label_minute 'M'
+.field public static final thursday:I = 0x7f130ba0 # @string/thursday 'Thursday'
 
-.field public static final time_unit_just_now:I = 0x7f130ba1
+.field public static final thursday_short:I = 0x7f130ba1 # @string/thursday_short 'Thu'
 
-.field public static final tip_close_flares:I = 0x7f130ba2 # @string/tip_close_flares 'You won't receive notifications about app behavior during this session'
+.field public static final thursday_shortest:I = 0x7f130ba2 # @string/thursday_shortest 'Thu'
 
-.field public static final title_usb_accessory:I = 0x7f130ba3 # @string/title_usb_accessory 'USB accessory'
+.field public static final tile_unavailable:I = 0x7f130ba3 # @string/tile_unavailable 'Unavailable'
 
-.field public static final to_switch_networks_disconnect_ethernet:I = 0x7f130ba4 # @string/to_switch_networks_disconnect_ethernet 'To switch networks, disconnect ethernet'
+.field public static final time_picker_dialog_title:I = 0x7f130ba4
 
-.field public static final toast_rotation_locked:I = 0x7f130ba5
+.field public static final time_picker_label_hour:I = 0x7f130ba5 # @string/time_picker_label_hour 'H'
 
-.field public static final today:I = 0x7f130ba6
+.field public static final time_picker_label_minute:I = 0x7f130ba6 # @string/time_picker_label_minute 'M'
 
-.field public static final tomorrow:I = 0x7f130ba7
+.field public static final time_unit_just_now:I = 0x7f130ba7
 
-.field public static final torch_high_temperature_warning:I = 0x7f130ba8 # @string/torch_high_temperature_warning 'Your device is overheated. Can't use flashlight now.'
+.field public static final tip_close_flares:I = 0x7f130ba8 # @string/tip_close_flares 'You won't receive notifications about app behavior during this session'
 
-.field public static final touch_filtered_warning:I = 0x7f130ba9
+.field public static final title_usb_accessory:I = 0x7f130ba9 # @string/title_usb_accessory 'USB accessory'
 
-.field public static final track_frame_time:I = 0x7f130baa
+.field public static final to_switch_networks_disconnect_ethernet:I = 0x7f130baa # @string/to_switch_networks_disconnect_ethernet 'To switch networks, disconnect ethernet'
 
-.field public static final traffic_unit_byte:I = 0x7f130bab # @string/traffic_unit_byte 'B'
+.field public static final toast_rotation_locked:I = 0x7f130bab
 
-.field public static final traffic_unit_gigabyte:I = 0x7f130bac # @string/traffic_unit_gigabyte 'GB'
+.field public static final today:I = 0x7f130bac
 
-.field public static final traffic_unit_kilobyte:I = 0x7f130bad # @string/traffic_unit_kilobyte 'KB'
+.field public static final tomorrow:I = 0x7f130bad
 
-.field public static final traffic_unit_megabyte:I = 0x7f130bae # @string/traffic_unit_megabyte 'MB'
+.field public static final torch_high_temperature_warning:I = 0x7f130bae # @string/torch_high_temperature_warning 'Your device is overheated. Can't use flashlight now.'
 
-.field public static final transcode_default:I = 0x7f130baf
+.field public static final touch_filtered_warning:I = 0x7f130baf
 
-.field public static final transcode_disable_cache:I = 0x7f130bb0
+.field public static final track_frame_time:I = 0x7f130bb0
 
-.field public static final transcode_enable_all:I = 0x7f130bb1
+.field public static final traffic_unit_byte:I = 0x7f130bb1 # @string/traffic_unit_byte 'B'
 
-.field public static final transcode_notification:I = 0x7f130bb2
+.field public static final traffic_unit_gigabyte:I = 0x7f130bb2 # @string/traffic_unit_gigabyte 'GB'
 
-.field public static final transcode_settings_title:I = 0x7f130bb3
+.field public static final traffic_unit_kilobyte:I = 0x7f130bb3 # @string/traffic_unit_kilobyte 'KB'
 
-.field public static final transcode_user_control:I = 0x7f130bb4
+.field public static final traffic_unit_megabyte:I = 0x7f130bb4 # @string/traffic_unit_megabyte 'MB'
 
-.field public static final transition_animation_scale_title:I = 0x7f130bb5
+.field public static final transcode_default:I = 0x7f130bb5
 
-.field public static final transparent_navigation_bar:I = 0x7f130bb6
+.field public static final transcode_disable_cache:I = 0x7f130bb6
 
-.field public static final transparent_navigation_bar_summary:I = 0x7f130bb7
+.field public static final transcode_enable_all:I = 0x7f130bb7
 
-.field public static final tts_default_lang_summary:I = 0x7f130bb8
+.field public static final transcode_notification:I = 0x7f130bb8
 
-.field public static final tts_default_lang_title:I = 0x7f130bb9
+.field public static final transcode_settings_title:I = 0x7f130bb9
 
-.field public static final tts_default_pitch_summary:I = 0x7f130bba
+.field public static final transcode_user_control:I = 0x7f130bba
 
-.field public static final tts_default_pitch_title:I = 0x7f130bbb
+.field public static final transition_animation_scale_title:I = 0x7f130bbb
 
-.field public static final tts_default_rate_summary:I = 0x7f130bbc
+.field public static final transparent_navigation_bar:I = 0x7f130bbc
 
-.field public static final tts_default_rate_title:I = 0x7f130bbd
+.field public static final transparent_navigation_bar_summary:I = 0x7f130bbd
 
-.field public static final tts_default_sample_string:I = 0x7f130bbe
+.field public static final tts_default_lang_summary:I = 0x7f130bbe
 
-.field public static final tts_engine_network_required:I = 0x7f130bbf
+.field public static final tts_default_lang_title:I = 0x7f130bbf
 
-.field public static final tts_engine_preference_section_title:I = 0x7f130bc0
+.field public static final tts_default_pitch_summary:I = 0x7f130bc0
 
-.field public static final tts_engine_security_warning:I = 0x7f130bc1
+.field public static final tts_default_pitch_title:I = 0x7f130bc1
 
-.field public static final tts_engine_settings_button:I = 0x7f130bc2
+.field public static final tts_default_rate_summary:I = 0x7f130bc2
 
-.field public static final tts_engine_settings_title:I = 0x7f130bc3
+.field public static final tts_default_rate_title:I = 0x7f130bc3
 
-.field public static final tts_general_section_title:I = 0x7f130bc4
+.field public static final tts_default_sample_string:I = 0x7f130bc4
 
-.field public static final tts_install_data_summary:I = 0x7f130bc5
+.field public static final tts_engine_network_required:I = 0x7f130bc5
 
-.field public static final tts_install_data_title:I = 0x7f130bc6
+.field public static final tts_engine_preference_section_title:I = 0x7f130bc6
 
-.field public static final tts_lang_not_selected:I = 0x7f130bc7
+.field public static final tts_engine_security_warning:I = 0x7f130bc7
 
-.field public static final tts_lang_use_system:I = 0x7f130bc8
+.field public static final tts_engine_settings_button:I = 0x7f130bc8
 
-.field public static final tts_play_example_summary:I = 0x7f130bc9
+.field public static final tts_engine_settings_title:I = 0x7f130bc9
 
-.field public static final tts_play_example_title:I = 0x7f130bca
+.field public static final tts_general_section_title:I = 0x7f130bca
 
-.field public static final tts_reset_speech_pitch_summary:I = 0x7f130bcb
+.field public static final tts_install_data_summary:I = 0x7f130bcb
 
-.field public static final tts_reset_speech_pitch_title:I = 0x7f130bcc
+.field public static final tts_install_data_title:I = 0x7f130bcc
 
-.field public static final tts_settings:I = 0x7f130bcd
+.field public static final tts_lang_not_selected:I = 0x7f130bcd
 
-.field public static final tts_settings_title:I = 0x7f130bce
+.field public static final tts_lang_use_system:I = 0x7f130bce
 
-.field public static final tts_status_checking:I = 0x7f130bcf
+.field public static final tts_play_example_summary:I = 0x7f130bcf
 
-.field public static final tts_status_not_supported:I = 0x7f130bd0
+.field public static final tts_play_example_title:I = 0x7f130bd0
 
-.field public static final tts_status_ok:I = 0x7f130bd1
+.field public static final tts_reset_speech_pitch_summary:I = 0x7f130bd1
 
-.field public static final tts_status_requires_network:I = 0x7f130bd2
+.field public static final tts_reset_speech_pitch_title:I = 0x7f130bd2
 
-.field public static final tts_status_title:I = 0x7f130bd3
+.field public static final tts_settings:I = 0x7f130bd3
 
-.field public static final tuesday:I = 0x7f130bd4 # @string/tuesday 'Tuesday'
+.field public static final tts_settings_title:I = 0x7f130bd4
 
-.field public static final tuesday_short:I = 0x7f130bd5 # @string/tuesday_short 'Tue'
+.field public static final tts_status_checking:I = 0x7f130bd5
 
-.field public static final tuesday_shortest:I = 0x7f130bd6 # @string/tuesday_shortest 'Tue'
+.field public static final tts_status_not_supported:I = 0x7f130bd6
 
-.field public static final tuner_app:I = 0x7f130bd7 # @string/tuner_app '%1$s app'
+.field public static final tts_status_ok:I = 0x7f130bd7
 
-.field public static final tuner_circle:I = 0x7f130bd8 # @string/tuner_circle 'Circle'
+.field public static final tts_status_requires_network:I = 0x7f130bd8
 
-.field public static final tuner_doze:I = 0x7f130bd9 # @string/tuner_doze 'Ambient Display'
+.field public static final tts_status_title:I = 0x7f130bd9
 
-.field public static final tuner_doze_always_on:I = 0x7f130bda # @string/tuner_doze_always_on 'Always on'
+.field public static final tuesday:I = 0x7f130bda # @string/tuesday 'Tuesday'
 
-.field public static final tuner_full_importance_settings:I = 0x7f130bdb # @string/tuner_full_importance_settings 'Power notification controls'
+.field public static final tuesday_short:I = 0x7f130bdb # @string/tuesday_short 'Tue'
 
-.field public static final tuner_launch_app:I = 0x7f130bdc # @string/tuner_launch_app 'Launch %1$s'
+.field public static final tuesday_shortest:I = 0x7f130bdc # @string/tuesday_shortest 'Tue'
 
-.field public static final tuner_left:I = 0x7f130bdd # @string/tuner_left 'Left'
+.field public static final tuner_app:I = 0x7f130bdd # @string/tuner_app '%1$s app'
 
-.field public static final tuner_lock_screen:I = 0x7f130bde # @string/tuner_lock_screen 'Lock screen'
+.field public static final tuner_circle:I = 0x7f130bde # @string/tuner_circle 'Circle'
 
-.field public static final tuner_low_priority:I = 0x7f130bdf # @string/tuner_low_priority 'Show low-priority notification icons'
+.field public static final tuner_doze:I = 0x7f130bdf # @string/tuner_doze 'Ambient Display'
 
-.field public static final tuner_menu:I = 0x7f130be0 # @string/tuner_menu 'Menu'
+.field public static final tuner_doze_always_on:I = 0x7f130be0 # @string/tuner_doze_always_on 'Always on'
 
-.field public static final tuner_minus:I = 0x7f130be1 # @string/tuner_minus 'Minus'
+.field public static final tuner_full_importance_settings:I = 0x7f130be1 # @string/tuner_full_importance_settings 'Power notification controls'
 
-.field public static final tuner_other_apps:I = 0x7f130be2 # @string/tuner_other_apps 'Other apps'
+.field public static final tuner_launch_app:I = 0x7f130be2 # @string/tuner_launch_app 'Launch %1$s'
 
-.field public static final tuner_persistent_warning:I = 0x7f130be3 # @string/tuner_persistent_warning 'These experimental features may change, break, or disappear in future releases. Proceed with caution ...'
+.field public static final tuner_left:I = 0x7f130be3 # @string/tuner_left 'Left'
 
-.field public static final tuner_plus:I = 0x7f130be4 # @string/tuner_plus 'Plus'
+.field public static final tuner_lock_screen:I = 0x7f130be4 # @string/tuner_lock_screen 'Lock screen'
 
-.field public static final tuner_right:I = 0x7f130be5 # @string/tuner_right 'Right'
+.field public static final tuner_low_priority:I = 0x7f130be5 # @string/tuner_low_priority 'Show low-priority notification icons'
 
-.field public static final tuner_time:I = 0x7f130be6 # @string/tuner_time 'Time'
+.field public static final tuner_menu:I = 0x7f130be6 # @string/tuner_menu 'Menu'
 
-.field public static final tuner_toast:I = 0x7f130be7
+.field public static final tuner_minus:I = 0x7f130be7 # @string/tuner_minus 'Minus'
 
-.field public static final tuner_warning:I = 0x7f130be8 # @string/tuner_warning 'System UI Tuner gives you extra ways to tweak and customize the Android user interface. These experi ...'
+.field public static final tuner_other_apps:I = 0x7f130be8 # @string/tuner_other_apps 'Other apps'
 
-.field public static final tuner_warning_title:I = 0x7f130be9 # @string/tuner_warning_title 'Fun for some but not for all'
+.field public static final tuner_persistent_warning:I = 0x7f130be9 # @string/tuner_persistent_warning 'These experimental features may change, break, or disappear in future releases. Proceed with caution ...'
 
-.field public static final turn_off_airplane_mode:I = 0x7f130bea # @string/turn_off_airplane_mode 'Turn off airplane mode'
+.field public static final tuner_plus:I = 0x7f130bea # @string/tuner_plus 'Plus'
 
-.field public static final turn_on_wifi:I = 0x7f130beb # @string/turn_on_wifi 'Wi‑Fi'
+.field public static final tuner_right:I = 0x7f130beb # @string/tuner_right 'Right'
 
-.field public static final turn_screen_on_title:I = 0x7f130bec
+.field public static final tuner_time:I = 0x7f130bec # @string/tuner_time 'Time'
 
-.field public static final tv_notification_panel_no_notifications:I = 0x7f130bed # @string/tv_notification_panel_no_notifications 'No Notifications'
+.field public static final tuner_toast:I = 0x7f130bed
 
-.field public static final tv_notification_panel_title:I = 0x7f130bee # @string/tv_notification_panel_title 'Notifications'
+.field public static final tuner_warning:I = 0x7f130bee # @string/tuner_warning 'System UI Tuner gives you extra ways to tweak and customize the Android user interface. These experi ...'
 
-.field public static final two_weeks_timestamp:I = 0x7f130bef # @string/two_weeks_timestamp '2 weeks ago'
+.field public static final tuner_warning_title:I = 0x7f130bef # @string/tuner_warning_title 'Fun for some but not for all'
 
-.field public static final ultraviolet_rays_abbreviation:I = 0x7f130bf0 # @string/ultraviolet_rays_abbreviation 'UVI'
+.field public static final turn_off_airplane_mode:I = 0x7f130bf0 # @string/turn_off_airplane_mode 'Turn off airplane mode'
 
-.field public static final unknown:I = 0x7f130bf1 # @string/unknown 'Unknown'
+.field public static final turn_on_wifi:I = 0x7f130bf1 # @string/turn_on_wifi 'Wi‑Fi'
 
-.field public static final unlock_failed:I = 0x7f130bf2 # @string/unlock_failed 'Internal error'
+.field public static final turn_screen_on_title:I = 0x7f130bf2
 
-.field public static final unlock_string:I = 0x7f130bf3
+.field public static final tv_notification_panel_no_notifications:I = 0x7f130bf3 # @string/tv_notification_panel_no_notifications 'No Notifications'
 
-.field public static final unlock_to_see_notif_text:I = 0x7f130bf4 # @string/unlock_to_see_notif_text 'Unlock to see older notifications'
+.field public static final tv_notification_panel_title:I = 0x7f130bf4 # @string/tv_notification_panel_title 'Notifications'
 
-.field public static final unlock_to_view_networks:I = 0x7f130bf5 # @string/unlock_to_view_networks 'Unlock to view networks'
+.field public static final two_weeks_timestamp:I = 0x7f130bf5 # @string/two_weeks_timestamp '2 weeks ago'
 
-.field public static final unlocking_sim_card:I = 0x7f130bf6
+.field public static final ultraviolet_rays_abbreviation:I = 0x7f130bf6 # @string/ultraviolet_rays_abbreviation 'UVI'
 
-.field public static final unlockscreen_low_battery:I = 0x7f130bf7
+.field public static final unknown:I = 0x7f130bf7 # @string/unknown 'Unknown'
 
-.field public static final unlockscreen_recharge_completed:I = 0x7f130bf8
+.field public static final unlock_failed:I = 0x7f130bf8 # @string/unlock_failed 'Internal error'
 
-.field public static final unlockscreen_recharging_message:I = 0x7f130bf9
+.field public static final unlock_string:I = 0x7f130bf9
 
-.field public static final upcoming_birthday_status:I = 0x7f130bfa # @string/upcoming_birthday_status 'Birthday soon'
+.field public static final unlock_to_see_notif_text:I = 0x7f130bfa # @string/unlock_to_see_notif_text 'Unlock to see older notifications'
 
-.field public static final upcoming_birthday_status_content_description:I = 0x7f130bfb # @string/upcoming_birthday_status_content_description 'It's %1$s’s birthday soon'
+.field public static final unlock_to_view_networks:I = 0x7f130bfb # @string/unlock_to_view_networks 'Unlock to view networks'
 
-.field public static final usb_accessory_confirm_prompt:I = 0x7f130bfc # @string/usb_accessory_confirm_prompt 'Open %1$s to handle %2$s?'
+.field public static final unlocking_sim_card:I = 0x7f130bfc
 
-.field public static final usb_accessory_permission_prompt:I = 0x7f130bfd # @string/usb_accessory_permission_prompt 'Allow %1$s to access %2$s?'
+.field public static final unlockscreen_low_battery:I = 0x7f130bfd
 
-.field public static final usb_accessory_uri_prompt:I = 0x7f130bfe # @string/usb_accessory_uri_prompt 'No installed apps work with this USB accessory. Learn more about this accessory at %1$s'
+.field public static final unlockscreen_recharge_completed:I = 0x7f130bfe
 
-.field public static final usb_audio_device_confirm_prompt_title:I = 0x7f130bff # @string/usb_audio_device_confirm_prompt_title 'Open %1$s to handle %2$s?'
+.field public static final unlockscreen_recharging_message:I = 0x7f130bff
 
-.field public static final usb_audio_device_permission_prompt_title:I = 0x7f130c00 # @string/usb_audio_device_permission_prompt_title 'Allow %1$s to access %2$s?'
+.field public static final upcoming_birthday_status:I = 0x7f130c00 # @string/upcoming_birthday_status 'Birthday soon'
 
-.field public static final usb_audio_device_prompt:I = 0x7f130c01 # @string/usb_audio_device_prompt 'Using %1$s with this device might prevent hearing calls, notifications and alarms.'
+.field public static final upcoming_birthday_status_content_description:I = 0x7f130c01 # @string/upcoming_birthday_status_content_description 'It's %1$s’s birthday soon'
 
-.field public static final usb_audio_device_prompt_warn:I = 0x7f130c02 # @string/usb_audio_device_prompt_warn 'This app has not been granted record permission but could capture audio through this USB device. Usi ...'
+.field public static final usb_accessory_confirm_prompt:I = 0x7f130c02 # @string/usb_accessory_confirm_prompt 'Open %1$s to handle %2$s?'
 
-.field public static final usb_audio_disable_routing:I = 0x7f130c03
+.field public static final usb_accessory_permission_prompt:I = 0x7f130c03 # @string/usb_accessory_permission_prompt 'Allow %1$s to access %2$s?'
 
-.field public static final usb_audio_disable_routing_summary:I = 0x7f130c04
+.field public static final usb_accessory_uri_prompt:I = 0x7f130c04 # @string/usb_accessory_uri_prompt 'No installed apps work with this USB accessory. Learn more about this accessory at %1$s'
 
-.field public static final usb_contaminant_message:I = 0x7f130c05 # @string/usb_contaminant_message 'To protect your device from liquid or debris, the USB port is disabled and won’t detect any accessor ...'
+.field public static final usb_audio_device_confirm_prompt_title:I = 0x7f130c05 # @string/usb_audio_device_confirm_prompt_title 'Open %1$s to handle %2$s?'
 
-.field public static final usb_contaminant_title:I = 0x7f130c06 # @string/usb_contaminant_title 'USB port disabled'
+.field public static final usb_audio_device_permission_prompt_title:I = 0x7f130c06 # @string/usb_audio_device_permission_prompt_title 'Allow %1$s to access %2$s?'
 
-.field public static final usb_debugging_allow:I = 0x7f130c07
+.field public static final usb_audio_device_prompt:I = 0x7f130c07 # @string/usb_audio_device_prompt 'Using %1$s with this device might prevent hearing calls, notifications and alarms.'
 
-.field public static final usb_debugging_always:I = 0x7f130c08 # @string/usb_debugging_always 'Always allow from this computer'
+.field public static final usb_audio_device_prompt_warn:I = 0x7f130c08 # @string/usb_audio_device_prompt_warn 'This app has not been granted record permission but could capture audio through this USB device. Usi ...'
 
-.field public static final usb_debugging_message:I = 0x7f130c09 # @string/usb_debugging_message 'The computer's RSA key fingerprint is:\n%1$s'
+.field public static final usb_audio_disable_routing:I = 0x7f130c09
 
-.field public static final usb_debugging_secondary_user_message:I = 0x7f130c0a # @string/usb_debugging_secondary_user_message 'The user currently signed in to this device can't turn on USB debugging. To use this feature, switch ...'
+.field public static final usb_audio_disable_routing_summary:I = 0x7f130c0a
 
-.field public static final usb_debugging_secondary_user_title:I = 0x7f130c0b # @string/usb_debugging_secondary_user_title 'USB debugging not allowed'
+.field public static final usb_contaminant_message:I = 0x7f130c0b # @string/usb_contaminant_message 'To protect your device from liquid or debris, the USB port is disabled and won’t detect any accessor ...'
 
-.field public static final usb_debugging_title:I = 0x7f130c0c # @string/usb_debugging_title 'Allow USB debugging?'
+.field public static final usb_contaminant_title:I = 0x7f130c0c # @string/usb_contaminant_title 'USB port disabled'
 
-.field public static final usb_device_confirm_prompt:I = 0x7f130c0d # @string/usb_device_confirm_prompt 'Open %1$s to handle %2$s?'
+.field public static final usb_debugging_allow:I = 0x7f130c0d
 
-.field public static final usb_device_confirm_prompt_warn:I = 0x7f130c0e # @string/usb_device_confirm_prompt_warn 'Open %1$s to handle %2$s?\nThis app has not been granted record permission but could capture audio th ...'
+.field public static final usb_debugging_always:I = 0x7f130c0e # @string/usb_debugging_always 'Always allow from this computer'
 
-.field public static final usb_device_permission_prompt:I = 0x7f130c0f # @string/usb_device_permission_prompt 'Allow %1$s to access %2$s?'
+.field public static final usb_debugging_message:I = 0x7f130c0f # @string/usb_debugging_message 'The computer's RSA key fingerprint is:\n%1$s'
 
-.field public static final usb_device_permission_prompt_warn:I = 0x7f130c10 # @string/usb_device_permission_prompt_warn 'Allow %1$s to access %2$s?\nThis app has not been granted record permission but could capture audio t ...'
+.field public static final usb_debugging_secondary_user_message:I = 0x7f130c10 # @string/usb_debugging_secondary_user_message 'The user currently signed in to this device can't turn on USB debugging. To use this feature, switch ...'
 
-.field public static final usb_disable_contaminant_detection:I = 0x7f130c11 # @string/usb_disable_contaminant_detection 'Enable USB'
+.field public static final usb_debugging_secondary_user_title:I = 0x7f130c11 # @string/usb_debugging_secondary_user_title 'USB debugging not allowed'
 
-.field public static final usb_port_enabled:I = 0x7f130c12 # @string/usb_port_enabled 'USB port enabled to detect chargers and accessories'
+.field public static final usb_debugging_title:I = 0x7f130c12 # @string/usb_debugging_title 'Allow USB debugging?'
 
-.field public static final use_system_language_to_select_input_method_subtypes:I = 0x7f130c13
+.field public static final usb_device_confirm_prompt:I = 0x7f130c13 # @string/usb_device_confirm_prompt 'Open %1$s to handle %2$s?'
 
-.field public static final user_add_profile_item_summary:I = 0x7f130c14
+.field public static final usb_device_confirm_prompt_warn:I = 0x7f130c14 # @string/usb_device_confirm_prompt_warn 'Open %1$s to handle %2$s?\nThis app has not been granted record permission but could capture audio th ...'
 
-.field public static final user_add_profile_item_title:I = 0x7f130c15
+.field public static final usb_device_permission_prompt:I = 0x7f130c15 # @string/usb_device_permission_prompt 'Allow %1$s to access %2$s?'
 
-.field public static final user_add_user:I = 0x7f130c16 # @string/user_add_user 'Add user'
+.field public static final usb_device_permission_prompt_warn:I = 0x7f130c16 # @string/usb_device_permission_prompt_warn 'Allow %1$s to access %2$s?\nThis app has not been granted record permission but could capture audio t ...'
 
-.field public static final user_add_user_item_summary:I = 0x7f130c17
+.field public static final usb_disable_contaminant_detection:I = 0x7f130c17 # @string/usb_disable_contaminant_detection 'Enable USB'
 
-.field public static final user_add_user_item_title:I = 0x7f130c18
+.field public static final usb_port_enabled:I = 0x7f130c18 # @string/usb_port_enabled 'USB port enabled to detect chargers and accessories'
 
-.field public static final user_add_user_message_guest_remove:I = 0x7f130c19
+.field public static final use_system_language_to_select_input_method_subtypes:I = 0x7f130c19
 
-.field public static final user_add_user_message_long:I = 0x7f130c1a # @string/user_add_user_message_long 'You can share this device with other people by creating additional users. Each user has their own sp ...'
+.field public static final user_add_profile_item_summary:I = 0x7f130c1a
 
-.field public static final user_add_user_message_short:I = 0x7f130c1b # @string/user_add_user_message_short 'When you add a new user, that person needs to set up their space.\n\nAny user can update apps for all  ...'
+.field public static final user_add_profile_item_title:I = 0x7f130c1b
 
-.field public static final user_add_user_title:I = 0x7f130c1c # @string/user_add_user_title 'Add new user?'
+.field public static final user_add_user:I = 0x7f130c1c # @string/user_add_user 'Add user'
 
-.field public static final user_add_user_type_title:I = 0x7f130c1d
+.field public static final user_add_user_item_summary:I = 0x7f130c1d
 
-.field public static final user_grant_admin_button:I = 0x7f130c1e
+.field public static final user_add_user_item_title:I = 0x7f130c1e
 
-.field public static final user_grant_admin_message:I = 0x7f130c1f # @string/user_grant_admin_message 'Admins have special privileges that other users don’t. An admin can manage all users, update or rese ...'
+.field public static final user_add_user_message_guest_remove:I = 0x7f130c1f
 
-.field public static final user_grant_admin_title:I = 0x7f130c20 # @string/user_grant_admin_title 'Make this user an admin?'
+.field public static final user_add_user_message_long:I = 0x7f130c20 # @string/user_add_user_message_long 'You can share this device with other people by creating additional users. Each user has their own sp ...'
 
-.field public static final user_image_choose_photo:I = 0x7f130c21 # @string/user_image_choose_photo 'Choose an image'
+.field public static final user_add_user_message_short:I = 0x7f130c21 # @string/user_add_user_message_short 'When you add a new user, that person needs to set up their space.\n\nAny user can update apps for all  ...'
 
-.field public static final user_image_photo_selector:I = 0x7f130c22 # @string/user_image_photo_selector 'Select photo'
+.field public static final user_add_user_title:I = 0x7f130c22 # @string/user_add_user_title 'Add new user?'
 
-.field public static final user_image_take_photo:I = 0x7f130c23 # @string/user_image_take_photo 'Take a photo'
+.field public static final user_add_user_type_title:I = 0x7f130c23
 
-.field public static final user_info_settings_title:I = 0x7f130c24 # @string/user_info_settings_title 'User info'
+.field public static final user_grant_admin_button:I = 0x7f130c24
 
-.field public static final user_limit_reached_message:I = 0x7f130c25
+.field public static final user_grant_admin_message:I = 0x7f130c25 # @string/user_grant_admin_message 'Admins have special privileges that other users don’t. An admin can manage all users, update or rese ...'
 
-.field public static final user_limit_reached_title:I = 0x7f130c26
+.field public static final user_grant_admin_title:I = 0x7f130c26 # @string/user_grant_admin_title 'Make this user an admin?'
 
-.field public static final user_need_lock_message:I = 0x7f130c27
+.field public static final user_image_choose_photo:I = 0x7f130c27 # @string/user_image_choose_photo 'Choose an image'
 
-.field public static final user_new_profile_name:I = 0x7f130c28
+.field public static final user_image_photo_selector:I = 0x7f130c28 # @string/user_image_photo_selector 'Select photo'
 
-.field public static final user_new_user_name:I = 0x7f130c29 # @string/user_new_user_name 'New user'
+.field public static final user_image_take_photo:I = 0x7f130c29 # @string/user_image_take_photo 'Take a photo'
 
-.field public static final user_nickname:I = 0x7f130c2a # @string/user_nickname 'Nickname'
+.field public static final user_info_settings_title:I = 0x7f130c2a # @string/user_info_settings_title 'User info'
 
-.field public static final user_remove_user_message:I = 0x7f130c2b
+.field public static final user_limit_reached_message:I = 0x7f130c2b
 
-.field public static final user_remove_user_remove:I = 0x7f130c2c
+.field public static final user_limit_reached_title:I = 0x7f130c2c
 
-.field public static final user_remove_user_title:I = 0x7f130c2d
+.field public static final user_need_lock_message:I = 0x7f130c2d
 
-.field public static final user_set_lock_button:I = 0x7f130c2e
+.field public static final user_new_profile_name:I = 0x7f130c2e
 
-.field public static final user_setup_button_setup_later:I = 0x7f130c2f
+.field public static final user_new_user_name:I = 0x7f130c2f # @string/user_new_user_name 'New user'
 
-.field public static final user_setup_button_setup_now:I = 0x7f130c30
+.field public static final user_nickname:I = 0x7f130c30 # @string/user_nickname 'Nickname'
 
-.field public static final user_setup_dialog_message:I = 0x7f130c31
+.field public static final user_remove_user_message:I = 0x7f130c31
 
-.field public static final user_setup_dialog_title:I = 0x7f130c32
+.field public static final user_remove_user_remove:I = 0x7f130c32
 
-.field public static final user_setup_profile_dialog_message:I = 0x7f130c33
+.field public static final user_remove_user_title:I = 0x7f130c33
 
-.field public static final user_switch_to_user:I = 0x7f130c34
+.field public static final user_set_lock_button:I = 0x7f130c34
 
-.field public static final using_camera:I = 0x7f130c35 # @string/using_camera 'This app is accessing camera'
+.field public static final user_setup_button_setup_later:I = 0x7f130c35
 
-.field public static final using_camera_and_microphone:I = 0x7f130c36 # @string/using_camera_and_microphone 'This app is accessing camera and microphone'
+.field public static final user_setup_button_setup_now:I = 0x7f130c36
 
-.field public static final using_microphone:I = 0x7f130c37 # @string/using_microphone 'This app is accessing microphone'
+.field public static final user_setup_dialog_message:I = 0x7f130c37
 
-.field public static final uvi_format:I = 0x7f130c38 # @string/uvi_format 'UVI %1$s %2$s'
+.field public static final user_setup_dialog_title:I = 0x7f130c38
 
-.field public static final uvi_format_desc:I = 0x7f130c39 # @string/uvi_format_desc 'Ultraviolet index: %1$s, %2$s'
+.field public static final user_setup_profile_dialog_message:I = 0x7f130c39
 
-.field public static final v7_preference_off:I = 0x7f130c3a # @string/v7_preference_off 'OFF'
+.field public static final user_switch_to_user:I = 0x7f130c3a
 
-.field public static final v7_preference_on:I = 0x7f130c3b # @string/v7_preference_on 'ON'
+.field public static final using_camera:I = 0x7f130c3b # @string/using_camera 'This app is accessing camera'
 
-.field public static final verify_apps_over_usb_summary:I = 0x7f130c3c
+.field public static final using_camera_and_microphone:I = 0x7f130c3c # @string/using_camera_and_microphone 'This app is accessing camera and microphone'
 
-.field public static final verify_apps_over_usb_title:I = 0x7f130c3d
+.field public static final using_microphone:I = 0x7f130c3d # @string/using_microphone 'This app is accessing microphone'
 
-.field public static final video_camera:I = 0x7f130c3e # @string/video_camera 'Video camera'
+.field public static final uvi_format:I = 0x7f130c3e # @string/uvi_format 'UVI %1$s %2$s'
 
-.field public static final video_status:I = 0x7f130c3f # @string/video_status 'Watching'
+.field public static final uvi_format_desc:I = 0x7f130c3f # @string/uvi_format_desc 'Ultraviolet index: %1$s, %2$s'
 
-.field public static final voice_hint:I = 0x7f130c40
+.field public static final v7_preference_off:I = 0x7f130c40 # @string/v7_preference_off 'OFF'
 
-.field public static final volume_and_do_not_disturb:I = 0x7f130c41 # @string/volume_and_do_not_disturb 'Do Not Disturb'
+.field public static final v7_preference_on:I = 0x7f130c41 # @string/v7_preference_on 'ON'
 
-.field public static final volume_dialog_ringer_guidance_ring:I = 0x7f130c42 # @string/volume_dialog_ringer_guidance_ring 'Calls and notifications will ring (%1$s)'
+.field public static final verify_apps_over_usb_summary:I = 0x7f130c42
 
-.field public static final volume_dialog_title:I = 0x7f130c43 # @string/volume_dialog_title '%s volume controls'
+.field public static final verify_apps_over_usb_title:I = 0x7f130c43
 
-.field public static final volume_dnd_silent:I = 0x7f130c44 # @string/volume_dnd_silent 'Volume buttons shortcut'
+.field public static final video_camera:I = 0x7f130c44 # @string/video_camera 'Video camera'
 
-.field public static final volume_odi_captions_content_description:I = 0x7f130c45 # @string/volume_odi_captions_content_description 'Captions overlay'
+.field public static final video_status:I = 0x7f130c45 # @string/video_status 'Watching'
 
-.field public static final volume_odi_captions_hint_disable:I = 0x7f130c46 # @string/volume_odi_captions_hint_disable 'disable'
+.field public static final voice_hint:I = 0x7f130c46
 
-.field public static final volume_odi_captions_hint_enable:I = 0x7f130c47 # @string/volume_odi_captions_hint_enable 'enable'
+.field public static final volume_and_do_not_disturb:I = 0x7f130c47 # @string/volume_and_do_not_disturb 'Do Not Disturb'
 
-.field public static final volume_odi_captions_tip:I = 0x7f130c48 # @string/volume_odi_captions_tip 'Automatically caption media'
+.field public static final volume_dialog_ringer_guidance_ring:I = 0x7f130c48 # @string/volume_dialog_ringer_guidance_ring 'Calls and notifications will ring (%1$s)'
 
-.field public static final volume_panel_dialog_settings_button:I = 0x7f130c49 # @string/volume_panel_dialog_settings_button 'Settings'
+.field public static final volume_dialog_title:I = 0x7f130c49 # @string/volume_dialog_title '%s volume controls'
 
-.field public static final volume_ringer_change:I = 0x7f130c4a # @string/volume_ringer_change 'Tap to change ringer mode'
+.field public static final volume_dnd_silent:I = 0x7f130c4a # @string/volume_dnd_silent 'Volume buttons shortcut'
 
-.field public static final volume_ringer_hint_mute:I = 0x7f130c4b # @string/volume_ringer_hint_mute 'mute'
+.field public static final volume_odi_captions_content_description:I = 0x7f130c4b # @string/volume_odi_captions_content_description 'Captions overlay'
 
-.field public static final volume_ringer_hint_unmute:I = 0x7f130c4c # @string/volume_ringer_hint_unmute 'unmute'
+.field public static final volume_odi_captions_hint_disable:I = 0x7f130c4c # @string/volume_odi_captions_hint_disable 'disable'
 
-.field public static final volume_ringer_hint_vibrate:I = 0x7f130c4d # @string/volume_ringer_hint_vibrate 'vibrate'
+.field public static final volume_odi_captions_hint_enable:I = 0x7f130c4d # @string/volume_odi_captions_hint_enable 'enable'
 
-.field public static final volume_ringer_status_normal:I = 0x7f130c4e # @string/volume_ringer_status_normal 'Ring'
+.field public static final volume_odi_captions_tip:I = 0x7f130c4e # @string/volume_odi_captions_tip 'Automatically caption media'
 
-.field public static final volume_ringer_status_silent:I = 0x7f130c4f # @string/volume_ringer_status_silent 'Mute'
+.field public static final volume_panel_dialog_settings_button:I = 0x7f130c4f # @string/volume_panel_dialog_settings_button 'Settings'
 
-.field public static final volume_ringer_status_vibrate:I = 0x7f130c50 # @string/volume_ringer_status_vibrate 'Vibrate'
+.field public static final volume_ringer_change:I = 0x7f130c50 # @string/volume_ringer_change 'Tap to change ringer mode'
 
-.field public static final volume_stream_content_description_mute:I = 0x7f130c51 # @string/volume_stream_content_description_mute '%1$s. Tap to mute. Accessibility services may be muted.'
+.field public static final volume_ringer_hint_mute:I = 0x7f130c51 # @string/volume_ringer_hint_mute 'mute'
 
-.field public static final volume_stream_content_description_mute_a11y:I = 0x7f130c52 # @string/volume_stream_content_description_mute_a11y '%1$s. Tap to mute.'
+.field public static final volume_ringer_hint_unmute:I = 0x7f130c52 # @string/volume_ringer_hint_unmute 'unmute'
 
-.field public static final volume_stream_content_description_unmute:I = 0x7f130c53 # @string/volume_stream_content_description_unmute '%1$s. Tap to unmute.'
+.field public static final volume_ringer_hint_vibrate:I = 0x7f130c53 # @string/volume_ringer_hint_vibrate 'vibrate'
 
-.field public static final volume_stream_content_description_vibrate:I = 0x7f130c54 # @string/volume_stream_content_description_vibrate '%1$s. Tap to set to vibrate. Accessibility services may be muted.'
+.field public static final volume_ringer_status_normal:I = 0x7f130c54 # @string/volume_ringer_status_normal 'Ring'
 
-.field public static final volume_stream_content_description_vibrate_a11y:I = 0x7f130c55 # @string/volume_stream_content_description_vibrate_a11y '%1$s. Tap to set to vibrate.'
+.field public static final volume_ringer_status_silent:I = 0x7f130c55 # @string/volume_ringer_status_silent 'Mute'
 
-.field public static final vpn_settings_not_available:I = 0x7f130c56
+.field public static final volume_ringer_status_vibrate:I = 0x7f130c56 # @string/volume_ringer_status_vibrate 'Vibrate'
 
-.field public static final wait_for_debugger:I = 0x7f130c57
+.field public static final volume_stream_content_description_mute:I = 0x7f130c57 # @string/volume_stream_content_description_mute '%1$s. Tap to mute. Accessibility services may be muted.'
 
-.field public static final wait_for_debugger_summary:I = 0x7f130c58
+.field public static final volume_stream_content_description_mute_a11y:I = 0x7f130c58 # @string/volume_stream_content_description_mute_a11y '%1$s. Tap to mute.'
 
-.field public static final wallet_app_button_label:I = 0x7f130c59 # @string/wallet_app_button_label 'Show all'
+.field public static final volume_stream_content_description_unmute:I = 0x7f130c59 # @string/volume_stream_content_description_unmute '%1$s. Tap to unmute.'
 
-.field public static final wallet_empty_state_label:I = 0x7f130c5a # @string/wallet_empty_state_label 'Get set up to make faster, more secure purchases with your phone'
+.field public static final volume_stream_content_description_vibrate:I = 0x7f130c5a # @string/volume_stream_content_description_vibrate '%1$s. Tap to set to vibrate. Accessibility services may be muted.'
 
-.field public static final wallet_error_generic:I = 0x7f130c5b # @string/wallet_error_generic 'There was a problem getting your cards, please try again later'
+.field public static final volume_stream_content_description_vibrate_a11y:I = 0x7f130c5b # @string/volume_stream_content_description_vibrate_a11y '%1$s. Tap to set to vibrate.'
 
-.field public static final wallet_lockscreen_settings_label:I = 0x7f130c5c # @string/wallet_lockscreen_settings_label 'Lock screen settings'
+.field public static final vpn_settings_not_available:I = 0x7f130c5c
 
-.field public static final wallet_quick_affordance_unavailable_configure_the_app:I = 0x7f130c5d
+.field public static final wait_for_debugger:I = 0x7f130c5d
 
-.field public static final wallet_quick_affordance_unavailable_install_the_app:I = 0x7f130c5e
+.field public static final wait_for_debugger_summary:I = 0x7f130c5e
 
-.field public static final wallet_secondary_label_device_locked:I = 0x7f130c5f
+.field public static final wallet_app_button_label:I = 0x7f130c5f # @string/wallet_app_button_label 'Show all'
 
-.field public static final wallet_secondary_label_no_card:I = 0x7f130c60 # @string/wallet_secondary_label_no_card 'Tap to open'
+.field public static final wallet_empty_state_label:I = 0x7f130c60 # @string/wallet_empty_state_label 'Get set up to make faster, more secure purchases with your phone'
 
-.field public static final wallet_secondary_label_updating:I = 0x7f130c61 # @string/wallet_secondary_label_updating 'Updating'
+.field public static final wallet_error_generic:I = 0x7f130c61 # @string/wallet_error_generic 'There was a problem getting your cards, please try again later'
 
-.field public static final wallet_title:I = 0x7f130c62 # @string/wallet_title 'Wallet'
+.field public static final wallet_lockscreen_settings_label:I = 0x7f130c62 # @string/wallet_lockscreen_settings_label 'Lock screen settings'
 
-.field public static final wallpaper_global_des_drop_down_notify_text:I = 0x7f130c63
+.field public static final wallet_quick_affordance_unavailable_configure_the_app:I = 0x7f130c63
 
-.field public static final weather_no_data:I = 0x7f130c64 # @string/weather_no_data 'No weather data'
+.field public static final wallet_quick_affordance_unavailable_install_the_app:I = 0x7f130c64
 
-.field public static final wednesday:I = 0x7f130c65 # @string/wednesday 'Wednesday'
+.field public static final wallet_secondary_label_device_locked:I = 0x7f130c65
 
-.field public static final wednesday_short:I = 0x7f130c66 # @string/wednesday_short 'Wed'
+.field public static final wallet_secondary_label_no_card:I = 0x7f130c66 # @string/wallet_secondary_label_no_card 'Tap to open'
 
-.field public static final wednesday_shortest:I = 0x7f130c67 # @string/wednesday_shortest 'Wed'
+.field public static final wallet_secondary_label_updating:I = 0x7f130c67 # @string/wallet_secondary_label_updating 'Updating'
 
-.field public static final wifi_ap_unable_to_handle_new_sta:I = 0x7f130c68
+.field public static final wallet_title:I = 0x7f130c68 # @string/wallet_title 'Wallet'
 
-.field public static final wifi_cant_connect:I = 0x7f130c69
+.field public static final wallpaper_global_des_drop_down_notify_text:I = 0x7f130c69
 
-.field public static final wifi_cant_connect_to_ap:I = 0x7f130c6a
+.field public static final weather_no_data:I = 0x7f130c6a # @string/weather_no_data 'No weather data'
 
-.field public static final wifi_check_password_try_again:I = 0x7f130c6b
+.field public static final wednesday:I = 0x7f130c6b # @string/wednesday 'Wednesday'
 
-.field public static final wifi_connected_low_quality:I = 0x7f130c6c # @string/wifi_connected_low_quality 'Low quality'
+.field public static final wednesday_short:I = 0x7f130c6c # @string/wednesday_short 'Wed'
 
-.field public static final wifi_connected_no_internet:I = 0x7f130c6d
+.field public static final wednesday_shortest:I = 0x7f130c6d # @string/wednesday_shortest 'Wed'
 
-.field public static final wifi_coverage_extend:I = 0x7f130c6e
+.field public static final wifi_ap_unable_to_handle_new_sta:I = 0x7f130c6e
 
-.field public static final wifi_coverage_extend_summary:I = 0x7f130c6f
+.field public static final wifi_cant_connect:I = 0x7f130c6f
 
-.field public static final wifi_debugging_allow:I = 0x7f130c70
+.field public static final wifi_cant_connect_to_ap:I = 0x7f130c70
 
-.field public static final wifi_debugging_always:I = 0x7f130c71 # @string/wifi_debugging_always 'Always allow on this network'
+.field public static final wifi_check_password_try_again:I = 0x7f130c71
 
-.field public static final wifi_debugging_message:I = 0x7f130c72 # @string/wifi_debugging_message 'Network Name (SSID)\n%1$s\n\nWi‑Fi Address (BSSID)\n%2$s'
+.field public static final wifi_connected_low_quality:I = 0x7f130c72 # @string/wifi_connected_low_quality 'Low quality'
 
-.field public static final wifi_debugging_secondary_user_message:I = 0x7f130c73 # @string/wifi_debugging_secondary_user_message 'The user currently signed in to this device can’t turn on wireless debugging. To use this feature, s ...'
+.field public static final wifi_connected_no_internet:I = 0x7f130c73
 
-.field public static final wifi_debugging_secondary_user_title:I = 0x7f130c74 # @string/wifi_debugging_secondary_user_title 'Wireless debugging not allowed'
+.field public static final wifi_coverage_extend:I = 0x7f130c74
 
-.field public static final wifi_debugging_title:I = 0x7f130c75 # @string/wifi_debugging_title 'Allow wireless debugging on this network?'
+.field public static final wifi_coverage_extend_summary:I = 0x7f130c75
 
-.field public static final wifi_disabled_generic:I = 0x7f130c76
+.field public static final wifi_debugging_allow:I = 0x7f130c76
 
-.field public static final wifi_disabled_network_failure:I = 0x7f130c77
+.field public static final wifi_debugging_always:I = 0x7f130c77 # @string/wifi_debugging_always 'Always allow on this network'
 
-.field public static final wifi_disabled_password_failure:I = 0x7f130c78
+.field public static final wifi_debugging_message:I = 0x7f130c78 # @string/wifi_debugging_message 'Network Name (SSID)\n%1$s\n\nWi‑Fi Address (BSSID)\n%2$s'
 
-.field public static final wifi_disconnected:I = 0x7f130c79
+.field public static final wifi_debugging_secondary_user_message:I = 0x7f130c79 # @string/wifi_debugging_secondary_user_message 'The user currently signed in to this device can’t turn on wireless debugging. To use this feature, s ...'
 
-.field public static final wifi_display_certification:I = 0x7f130c7a
+.field public static final wifi_debugging_secondary_user_title:I = 0x7f130c7a # @string/wifi_debugging_secondary_user_title 'Wireless debugging not allowed'
 
-.field public static final wifi_display_certification_summary:I = 0x7f130c7b
+.field public static final wifi_debugging_title:I = 0x7f130c7b # @string/wifi_debugging_title 'Allow wireless debugging on this network?'
 
-.field public static final wifi_dns1_hint:I = 0x7f130c7c
+.field public static final wifi_disabled_generic:I = 0x7f130c7c
 
-.field public static final wifi_dns2_hint:I = 0x7f130c7d
+.field public static final wifi_disabled_network_failure:I = 0x7f130c7d
 
-.field public static final wifi_empty_list_wifi_on:I = 0x7f130c7e # @string/wifi_empty_list_wifi_on 'Searching for networks…'
+.field public static final wifi_disabled_password_failure:I = 0x7f130c7e
 
-.field public static final wifi_fail_to_scan:I = 0x7f130c7f
+.field public static final wifi_disconnected:I = 0x7f130c7f
 
-.field public static final wifi_failed_connect_message:I = 0x7f130c80 # @string/wifi_failed_connect_message 'Failed to connect to network'
+.field public static final wifi_display_certification:I = 0x7f130c80
 
-.field public static final wifi_gateway_hint:I = 0x7f130c81
+.field public static final wifi_display_certification_summary:I = 0x7f130c81
 
-.field public static final wifi_hotspot_switch_off_text:I = 0x7f130c82
+.field public static final wifi_dns1_hint:I = 0x7f130c82
 
-.field public static final wifi_hotspot_switch_on_text:I = 0x7f130c83
+.field public static final wifi_dns2_hint:I = 0x7f130c83
 
-.field public static final wifi_ip_address_hint:I = 0x7f130c84
+.field public static final wifi_empty_list_wifi_on:I = 0x7f130c84 # @string/wifi_empty_list_wifi_on 'Searching for networks…'
 
-.field public static final wifi_is_off:I = 0x7f130c85 # @string/wifi_is_off 'WLAN is off'
+.field public static final wifi_fail_to_scan:I = 0x7f130c85
 
-.field public static final wifi_limited_connection:I = 0x7f130c86
+.field public static final wifi_failed_connect_message:I = 0x7f130c86 # @string/wifi_failed_connect_message 'Failed to connect to network'
 
-.field public static final wifi_metered_label:I = 0x7f130c87
+.field public static final wifi_gateway_hint:I = 0x7f130c87
 
-.field public static final wifi_network_prefix_length_hint:I = 0x7f130c88
+.field public static final wifi_hotspot_switch_off_text:I = 0x7f130c88
 
-.field public static final wifi_no_internet:I = 0x7f130c89
+.field public static final wifi_hotspot_switch_on_text:I = 0x7f130c89
 
-.field public static final wifi_no_internet_no_reconnect:I = 0x7f130c8a
+.field public static final wifi_ip_address_hint:I = 0x7f130c8a
 
-.field public static final wifi_non_persistent_mac_randomization:I = 0x7f130c8b
+.field public static final wifi_is_off:I = 0x7f130c8b # @string/wifi_is_off 'WLAN is off'
 
-.field public static final wifi_non_persistent_mac_randomization_summary:I = 0x7f130c8c
+.field public static final wifi_limited_connection:I = 0x7f130c8c
 
-.field public static final wifi_not_in_range:I = 0x7f130c8d
+.field public static final wifi_metered_label:I = 0x7f130c8d
 
-.field public static final wifi_passpoint_expired:I = 0x7f130c8e
+.field public static final wifi_network_prefix_length_hint:I = 0x7f130c8e
 
-.field public static final wifi_remembered:I = 0x7f130c8f
+.field public static final wifi_no_internet:I = 0x7f130c8f
 
-.field public static final wifi_scan_notify_message:I = 0x7f130c90 # @string/wifi_scan_notify_message 'To improve device experience, apps and services can still scan for Wi‑Fi networks at any time, even  ...'
+.field public static final wifi_no_internet_no_reconnect:I = 0x7f130c90
 
-.field public static final wifi_scan_throttling:I = 0x7f130c91
+.field public static final wifi_non_persistent_mac_randomization:I = 0x7f130c91
 
-.field public static final wifi_scan_throttling_summary:I = 0x7f130c92
+.field public static final wifi_non_persistent_mac_randomization_summary:I = 0x7f130c92
 
-.field public static final wifi_security_dpp:I = 0x7f130c93
+.field public static final wifi_not_in_range:I = 0x7f130c93
 
-.field public static final wifi_security_eap:I = 0x7f130c94
+.field public static final wifi_passpoint_expired:I = 0x7f130c94
 
-.field public static final wifi_security_eap_suiteb:I = 0x7f130c95
+.field public static final wifi_remembered:I = 0x7f130c95
 
-.field public static final wifi_security_eap_wpa:I = 0x7f130c96
+.field public static final wifi_scan_notify_message:I = 0x7f130c96 # @string/wifi_scan_notify_message 'To improve device experience, apps and services can still scan for Wi‑Fi networks at any time, even  ...'
 
-.field public static final wifi_security_eap_wpa2_wpa3:I = 0x7f130c97
+.field public static final wifi_scan_throttling:I = 0x7f130c97
 
-.field public static final wifi_security_eap_wpa3:I = 0x7f130c98
+.field public static final wifi_scan_throttling_summary:I = 0x7f130c98
 
-.field public static final wifi_security_eap_wpa_wpa2:I = 0x7f130c99
+.field public static final wifi_security_dpp:I = 0x7f130c99
 
-.field public static final wifi_security_none:I = 0x7f130c9a
+.field public static final wifi_security_eap:I = 0x7f130c9a
 
-.field public static final wifi_security_none_owe:I = 0x7f130c9b
+.field public static final wifi_security_eap_suiteb:I = 0x7f130c9b
 
-.field public static final wifi_security_owe:I = 0x7f130c9c
+.field public static final wifi_security_eap_wpa:I = 0x7f130c9c
 
-.field public static final wifi_security_passpoint:I = 0x7f130c9d
+.field public static final wifi_security_eap_wpa2_wpa3:I = 0x7f130c9d
 
-.field public static final wifi_security_psk_generic:I = 0x7f130c9e
+.field public static final wifi_security_eap_wpa3:I = 0x7f130c9e
 
-.field public static final wifi_security_psk_sae:I = 0x7f130c9f
+.field public static final wifi_security_eap_wpa_wpa2:I = 0x7f130c9f
 
-.field public static final wifi_security_sae:I = 0x7f130ca0
+.field public static final wifi_security_none:I = 0x7f130ca0
 
-.field public static final wifi_security_short_dpp:I = 0x7f130ca1
+.field public static final wifi_security_none_owe:I = 0x7f130ca1
 
-.field public static final wifi_security_short_eap:I = 0x7f130ca2
+.field public static final wifi_security_owe:I = 0x7f130ca2
 
-.field public static final wifi_security_short_eap_suiteb:I = 0x7f130ca3
+.field public static final wifi_security_passpoint:I = 0x7f130ca3
 
-.field public static final wifi_security_short_eap_wpa:I = 0x7f130ca4
+.field public static final wifi_security_psk_generic:I = 0x7f130ca4
 
-.field public static final wifi_security_short_eap_wpa2_wpa3:I = 0x7f130ca5
+.field public static final wifi_security_psk_sae:I = 0x7f130ca5
 
-.field public static final wifi_security_short_none_owe:I = 0x7f130ca6
+.field public static final wifi_security_sae:I = 0x7f130ca6
 
-.field public static final wifi_security_short_owe:I = 0x7f130ca7
+.field public static final wifi_security_short_dpp:I = 0x7f130ca7
 
-.field public static final wifi_security_short_psk_generic:I = 0x7f130ca8
+.field public static final wifi_security_short_eap:I = 0x7f130ca8
 
-.field public static final wifi_security_short_psk_sae:I = 0x7f130ca9
+.field public static final wifi_security_short_eap_suiteb:I = 0x7f130ca9
 
-.field public static final wifi_security_short_sae:I = 0x7f130caa
+.field public static final wifi_security_short_eap_wpa:I = 0x7f130caa
 
-.field public static final wifi_security_short_wep:I = 0x7f130cab
+.field public static final wifi_security_short_eap_wpa2_wpa3:I = 0x7f130cab
 
-.field public static final wifi_security_short_wpa:I = 0x7f130cac
+.field public static final wifi_security_short_none_owe:I = 0x7f130cac
 
-.field public static final wifi_security_short_wpa2:I = 0x7f130cad
+.field public static final wifi_security_short_owe:I = 0x7f130cad
 
-.field public static final wifi_security_short_wpa_wpa2:I = 0x7f130cae
+.field public static final wifi_security_short_psk_generic:I = 0x7f130cae
 
-.field public static final wifi_security_wapi_cert:I = 0x7f130caf
+.field public static final wifi_security_short_psk_sae:I = 0x7f130caf
 
-.field public static final wifi_security_wapi_psk:I = 0x7f130cb0
+.field public static final wifi_security_short_sae:I = 0x7f130cb0
 
-.field public static final wifi_security_wep:I = 0x7f130cb1
+.field public static final wifi_security_short_wep:I = 0x7f130cb1
 
-.field public static final wifi_security_wpa:I = 0x7f130cb2
+.field public static final wifi_security_short_wpa:I = 0x7f130cb2
 
-.field public static final wifi_security_wpa2:I = 0x7f130cb3
+.field public static final wifi_security_short_wpa2:I = 0x7f130cb3
 
-.field public static final wifi_security_wpa_wpa2:I = 0x7f130cb4
+.field public static final wifi_security_short_wpa_wpa2:I = 0x7f130cb4
 
-.field public static final wifi_status_mac_randomized:I = 0x7f130cb5
+.field public static final wifi_security_wapi_cert:I = 0x7f130cb5
 
-.field public static final wifi_status_no_internet:I = 0x7f130cb6
+.field public static final wifi_security_wapi_psk:I = 0x7f130cb6
 
-.field public static final wifi_status_sign_in_required:I = 0x7f130cb7
+.field public static final wifi_security_wep:I = 0x7f130cb7
 
-.field public static final wifi_tether_connected_summary:I = 0x7f130cb8
+.field public static final wifi_security_wpa:I = 0x7f130cb8
 
-.field public static final wifi_unavailable_dream_overlay_content_description:I = 0x7f130cb9 # @string/wifi_unavailable_dream_overlay_content_description 'WLAN not available'
+.field public static final wifi_security_wpa2:I = 0x7f130cb9
 
-.field public static final wifi_unmetered_label:I = 0x7f130cba
+.field public static final wifi_security_wpa_wpa2:I = 0x7f130cba
 
-.field public static final wifi_verbose_logging:I = 0x7f130cbb
+.field public static final wifi_status_mac_randomized:I = 0x7f130cbb
 
-.field public static final wifi_verbose_logging_summary:I = 0x7f130cbc
+.field public static final wifi_status_no_internet:I = 0x7f130cbc
 
-.field public static final wifi_wont_autoconnect_for_now:I = 0x7f130cbd # @string/wifi_wont_autoconnect_for_now 'Wi‑Fi won’t auto-connect for now'
+.field public static final wifi_status_sign_in_required:I = 0x7f130cbd
 
-.field public static final wifitrackerlib_admin_restricted_network:I = 0x7f130cbe # @string/wifitrackerlib_admin_restricted_network 'Not allowed by your organization'
+.field public static final wifi_tether_connected_summary:I = 0x7f130cbe
 
-.field public static final wifitrackerlib_auto_connect_disable:I = 0x7f130cbf # @string/wifitrackerlib_auto_connect_disable 'Auto-connect is off'
+.field public static final wifi_unavailable_dream_overlay_content_description:I = 0x7f130cbf # @string/wifi_unavailable_dream_overlay_content_description 'WLAN not available'
 
-.field public static final wifitrackerlib_available_via_app:I = 0x7f130cc0 # @string/wifitrackerlib_available_via_app 'Available via %1$s'
+.field public static final wifi_unmetered_label:I = 0x7f130cc0
 
-.field public static final wifitrackerlib_certinstaller_package:I = 0x7f130cc1
+.field public static final wifi_verbose_logging:I = 0x7f130cc1
 
-.field public static final wifitrackerlib_checking_for_internet_access:I = 0x7f130cc2 # @string/wifitrackerlib_checking_for_internet_access 'Checking for internet access...'
+.field public static final wifi_verbose_logging_summary:I = 0x7f130cc2
 
-.field public static final wifitrackerlib_connected_via_app:I = 0x7f130cc3 # @string/wifitrackerlib_connected_via_app 'Connected via %1$s'
+.field public static final wifi_wont_autoconnect_for_now:I = 0x7f130cc3 # @string/wifi_wont_autoconnect_for_now 'Wi‑Fi won’t auto-connect for now'
 
-.field public static final wifitrackerlib_help_url_imsi_protection:I = 0x7f130cc4
+.field public static final wifitrackerlib_admin_restricted_network:I = 0x7f130cc4 # @string/wifitrackerlib_admin_restricted_network 'Not allowed by your organization'
 
-.field public static final wifitrackerlib_hotspot_network_alternate:I = 0x7f130cc5
+.field public static final wifitrackerlib_auto_connect_disable:I = 0x7f130cc5 # @string/wifitrackerlib_auto_connect_disable 'Auto-connect is off'
 
-.field public static final wifitrackerlib_hotspot_network_connecting:I = 0x7f130cc6
+.field public static final wifitrackerlib_available_via_app:I = 0x7f130cc6 # @string/wifitrackerlib_available_via_app 'Available via %1$s'
 
-.field public static final wifitrackerlib_hotspot_network_summary:I = 0x7f130cc7
+.field public static final wifitrackerlib_certinstaller_package:I = 0x7f130cc7
 
-.field public static final wifitrackerlib_imsi_protection_warning:I = 0x7f130cc8
+.field public static final wifitrackerlib_checking_for_internet_access:I = 0x7f130cc8 # @string/wifitrackerlib_checking_for_internet_access 'Checking for internet access...'
 
-.field public static final wifitrackerlib_known_network_summary:I = 0x7f130cc9
+.field public static final wifitrackerlib_connected_via_app:I = 0x7f130cc9 # @string/wifitrackerlib_connected_via_app 'Connected via %1$s'
 
-.field public static final wifitrackerlib_multiband_separator:I = 0x7f130cca
+.field public static final wifitrackerlib_help_url_imsi_protection:I = 0x7f130cca
 
-.field public static final wifitrackerlib_no_attribution_annotation_packages:I = 0x7f130ccb # @string/wifitrackerlib_no_attribution_annotation_packages 'com.google.android.setupwizard,com.google.android.gms'
+.field public static final wifitrackerlib_hotspot_network_alternate:I = 0x7f130ccb
 
-.field public static final wifitrackerlib_osu_completing_sign_up:I = 0x7f130ccc # @string/wifitrackerlib_osu_completing_sign_up 'Completing sign-up…'
+.field public static final wifitrackerlib_hotspot_network_connecting:I = 0x7f130ccc
 
-.field public static final wifitrackerlib_osu_connect_failed:I = 0x7f130ccd # @string/wifitrackerlib_osu_connect_failed 'Couldn’t connect'
+.field public static final wifitrackerlib_hotspot_network_summary:I = 0x7f130ccd
 
-.field public static final wifitrackerlib_osu_opening_provider:I = 0x7f130cce # @string/wifitrackerlib_osu_opening_provider 'Opening %1$s'
+.field public static final wifitrackerlib_imsi_protection_warning:I = 0x7f130cce
 
-.field public static final wifitrackerlib_osu_sign_up_complete:I = 0x7f130ccf # @string/wifitrackerlib_osu_sign_up_complete 'Sign-up complete. Connecting…'
+.field public static final wifitrackerlib_known_network_summary:I = 0x7f130ccf
 
-.field public static final wifitrackerlib_osu_sign_up_failed:I = 0x7f130cd0 # @string/wifitrackerlib_osu_sign_up_failed 'Couldn’t complete sign-up. Tap to try again.'
+.field public static final wifitrackerlib_multiband_separator:I = 0x7f130cd0
 
-.field public static final wifitrackerlib_private_dns_broken:I = 0x7f130cd1 # @string/wifitrackerlib_private_dns_broken 'Private DNS server cannot be accessed'
+.field public static final wifitrackerlib_no_attribution_annotation_packages:I = 0x7f130cd1 # @string/wifitrackerlib_no_attribution_annotation_packages 'com.google.android.setupwizard,com.google.android.gms'
 
-.field public static final wifitrackerlib_saved_network:I = 0x7f130cd2 # @string/wifitrackerlib_saved_network 'Saved by %1$s'
+.field public static final wifitrackerlib_osu_completing_sign_up:I = 0x7f130cd2 # @string/wifitrackerlib_osu_completing_sign_up 'Completing sign-up…'
 
-.field public static final wifitrackerlib_settings_package:I = 0x7f130cd3
+.field public static final wifitrackerlib_osu_connect_failed:I = 0x7f130cd3 # @string/wifitrackerlib_osu_connect_failed 'Couldn’t connect'
 
-.field public static final wifitrackerlib_summary_separator:I = 0x7f130cd4 # @string/wifitrackerlib_summary_separator ' / '
+.field public static final wifitrackerlib_osu_opening_provider:I = 0x7f130cd4 # @string/wifitrackerlib_osu_opening_provider 'Opening %1$s'
 
-.field public static final wifitrackerlib_tap_to_renew_subscription_and_connect:I = 0x7f130cd5 # @string/wifitrackerlib_tap_to_renew_subscription_and_connect 'Tap to renew subscription and connect'
+.field public static final wifitrackerlib_osu_sign_up_complete:I = 0x7f130cd5 # @string/wifitrackerlib_osu_sign_up_complete 'Sign-up complete. Connecting…'
 
-.field public static final wifitrackerlib_tap_to_sign_up:I = 0x7f130cd6 # @string/wifitrackerlib_tap_to_sign_up 'Tap to sign up'
+.field public static final wifitrackerlib_osu_sign_up_failed:I = 0x7f130cd6 # @string/wifitrackerlib_osu_sign_up_failed 'Couldn’t complete sign-up. Tap to try again.'
 
-.field public static final wifitrackerlib_wifi_ap_unable_to_handle_new_sta:I = 0x7f130cd7 # @string/wifitrackerlib_wifi_ap_unable_to_handle_new_sta 'Access point temporarily full'
+.field public static final wifitrackerlib_private_dns_broken:I = 0x7f130cd7 # @string/wifitrackerlib_private_dns_broken 'Private DNS server cannot be accessed'
 
-.field public static final wifitrackerlib_wifi_band_24_ghz:I = 0x7f130cd8
+.field public static final wifitrackerlib_saved_network:I = 0x7f130cd8 # @string/wifitrackerlib_saved_network 'Saved by %1$s'
 
-.field public static final wifitrackerlib_wifi_band_5_ghz:I = 0x7f130cd9
+.field public static final wifitrackerlib_settings_package:I = 0x7f130cd9
 
-.field public static final wifitrackerlib_wifi_band_6_ghz:I = 0x7f130cda
+.field public static final wifitrackerlib_summary_separator:I = 0x7f130cda # @string/wifitrackerlib_summary_separator ' / '
 
-.field public static final wifitrackerlib_wifi_band_unknown:I = 0x7f130cdb
+.field public static final wifitrackerlib_tap_to_renew_subscription_and_connect:I = 0x7f130cdb # @string/wifitrackerlib_tap_to_renew_subscription_and_connect 'Tap to renew subscription and connect'
 
-.field public static final wifitrackerlib_wifi_check_password_try_again:I = 0x7f130cdc # @string/wifitrackerlib_wifi_check_password_try_again 'Check password and try again'
+.field public static final wifitrackerlib_tap_to_sign_up:I = 0x7f130cdc # @string/wifitrackerlib_tap_to_sign_up 'Tap to sign up'
 
-.field public static final wifitrackerlib_wifi_connected_cannot_provide_internet:I = 0x7f130cdd # @string/wifitrackerlib_wifi_connected_cannot_provide_internet 'Connected to device. Can't provide internet.'
+.field public static final wifitrackerlib_wifi_ap_unable_to_handle_new_sta:I = 0x7f130cdd # @string/wifitrackerlib_wifi_ap_unable_to_handle_new_sta 'Access point temporarily full'
 
-.field public static final wifitrackerlib_wifi_disabled_generic:I = 0x7f130cde # @string/wifitrackerlib_wifi_disabled_generic 'Disabled'
+.field public static final wifitrackerlib_wifi_band_24_ghz:I = 0x7f130cde
 
-.field public static final wifitrackerlib_wifi_disabled_network_failure:I = 0x7f130cdf # @string/wifitrackerlib_wifi_disabled_network_failure 'IP configuration failure'
+.field public static final wifitrackerlib_wifi_band_5_ghz:I = 0x7f130cdf
 
-.field public static final wifitrackerlib_wifi_disabled_password_failure:I = 0x7f130ce0 # @string/wifitrackerlib_wifi_disabled_password_failure 'Authentication problem'
+.field public static final wifitrackerlib_wifi_band_6_ghz:I = 0x7f130ce0
 
-.field public static final wifitrackerlib_wifi_disabled_transition_disable_indication:I = 0x7f130ce1 # @string/wifitrackerlib_wifi_disabled_transition_disable_indication 'Unavailable with current security settings'
+.field public static final wifitrackerlib_wifi_band_unknown:I = 0x7f130ce1
 
-.field public static final wifitrackerlib_wifi_disconnected:I = 0x7f130ce2 # @string/wifitrackerlib_wifi_disconnected 'Disconnected'
+.field public static final wifitrackerlib_wifi_check_password_try_again:I = 0x7f130ce2 # @string/wifitrackerlib_wifi_check_password_try_again 'Check password and try again'
 
-.field public static final wifitrackerlib_wifi_limited_connection:I = 0x7f130ce3 # @string/wifitrackerlib_wifi_limited_connection 'Limited connection'
+.field public static final wifitrackerlib_wifi_connected_cannot_provide_internet:I = 0x7f130ce3 # @string/wifitrackerlib_wifi_connected_cannot_provide_internet 'Connected to device. Can't provide internet.'
 
-.field public static final wifitrackerlib_wifi_mbo_assoc_disallowed_cannot_connect:I = 0x7f130ce4 # @string/wifitrackerlib_wifi_mbo_assoc_disallowed_cannot_connect 'Can't connect. Try again later.'
+.field public static final wifitrackerlib_wifi_disabled_generic:I = 0x7f130ce4 # @string/wifitrackerlib_wifi_disabled_generic 'Disabled'
 
-.field public static final wifitrackerlib_wifi_mbo_assoc_disallowed_max_num_sta_associated:I = 0x7f130ce5 # @string/wifitrackerlib_wifi_mbo_assoc_disallowed_max_num_sta_associated 'Network is over capacity. Try again later.'
+.field public static final wifitrackerlib_wifi_disabled_network_failure:I = 0x7f130ce5 # @string/wifitrackerlib_wifi_disabled_network_failure 'IP configuration failure'
 
-.field public static final wifitrackerlib_wifi_mbo_oce_assoc_disallowed_insufficient_rssi:I = 0x7f130ce6 # @string/wifitrackerlib_wifi_mbo_oce_assoc_disallowed_insufficient_rssi 'Weak signal. Try moving closer to the router.'
+.field public static final wifitrackerlib_wifi_disabled_password_failure:I = 0x7f130ce6 # @string/wifitrackerlib_wifi_disabled_password_failure 'Authentication problem'
 
-.field public static final wifitrackerlib_wifi_metered_label:I = 0x7f130ce7 # @string/wifitrackerlib_wifi_metered_label 'Metered'
+.field public static final wifitrackerlib_wifi_disabled_transition_disable_indication:I = 0x7f130ce7 # @string/wifitrackerlib_wifi_disabled_transition_disable_indication 'Unavailable with current security settings'
 
-.field public static final wifitrackerlib_wifi_network_not_found:I = 0x7f130ce8 # @string/wifitrackerlib_wifi_network_not_found 'Can't connect. Try again later.'
+.field public static final wifitrackerlib_wifi_disconnected:I = 0x7f130ce8 # @string/wifitrackerlib_wifi_disconnected 'Disconnected'
 
-.field public static final wifitrackerlib_wifi_no_internet:I = 0x7f130ce9 # @string/wifitrackerlib_wifi_no_internet 'No internet access'
+.field public static final wifitrackerlib_wifi_limited_connection:I = 0x7f130ce9 # @string/wifitrackerlib_wifi_limited_connection 'Limited connection'
 
-.field public static final wifitrackerlib_wifi_no_internet_no_reconnect:I = 0x7f130cea # @string/wifitrackerlib_wifi_no_internet_no_reconnect 'Won’t automatically connect'
+.field public static final wifitrackerlib_wifi_mbo_assoc_disallowed_cannot_connect:I = 0x7f130cea # @string/wifitrackerlib_wifi_mbo_assoc_disallowed_cannot_connect 'Can't connect. Try again later.'
 
-.field public static final wifitrackerlib_wifi_passpoint_expired:I = 0x7f130ceb # @string/wifitrackerlib_wifi_passpoint_expired 'Expired'
+.field public static final wifitrackerlib_wifi_mbo_assoc_disallowed_max_num_sta_associated:I = 0x7f130ceb # @string/wifitrackerlib_wifi_mbo_assoc_disallowed_max_num_sta_associated 'Network is over capacity. Try again later.'
 
-.field public static final wifitrackerlib_wifi_poor_channel_conditions:I = 0x7f130cec # @string/wifitrackerlib_wifi_poor_channel_conditions 'Temporary poor network conditions'
+.field public static final wifitrackerlib_wifi_mbo_oce_assoc_disallowed_insufficient_rssi:I = 0x7f130cec # @string/wifitrackerlib_wifi_mbo_oce_assoc_disallowed_insufficient_rssi 'Weak signal. Try moving closer to the router.'
 
-.field public static final wifitrackerlib_wifi_pre_validated:I = 0x7f130ced
+.field public static final wifitrackerlib_wifi_metered_label:I = 0x7f130ced # @string/wifitrackerlib_wifi_metered_label 'Metered'
 
-.field public static final wifitrackerlib_wifi_remembered:I = 0x7f130cee # @string/wifitrackerlib_wifi_remembered 'Saved'
+.field public static final wifitrackerlib_wifi_network_not_found:I = 0x7f130cee # @string/wifitrackerlib_wifi_network_not_found 'Can't connect. Try again later.'
 
-.field public static final wifitrackerlib_wifi_security_eap_suiteb:I = 0x7f130cef
+.field public static final wifitrackerlib_wifi_no_internet:I = 0x7f130cef # @string/wifitrackerlib_wifi_no_internet 'No internet access'
 
-.field public static final wifitrackerlib_wifi_security_eap_wpa3:I = 0x7f130cf0
+.field public static final wifitrackerlib_wifi_no_internet_no_reconnect:I = 0x7f130cf0 # @string/wifitrackerlib_wifi_no_internet_no_reconnect 'Won’t automatically connect'
 
-.field public static final wifitrackerlib_wifi_security_eap_wpa_wpa2:I = 0x7f130cf1
+.field public static final wifitrackerlib_wifi_passpoint_expired:I = 0x7f130cf1 # @string/wifitrackerlib_wifi_passpoint_expired 'Expired'
 
-.field public static final wifitrackerlib_wifi_security_eap_wpa_wpa2_wpa3:I = 0x7f130cf2
+.field public static final wifitrackerlib_wifi_poor_channel_conditions:I = 0x7f130cf2 # @string/wifitrackerlib_wifi_poor_channel_conditions 'Temporary poor network conditions'
 
-.field public static final wifitrackerlib_wifi_security_none:I = 0x7f130cf3
+.field public static final wifitrackerlib_wifi_pre_validated:I = 0x7f130cf3
 
-.field public static final wifitrackerlib_wifi_security_owe:I = 0x7f130cf4
+.field public static final wifitrackerlib_wifi_remembered:I = 0x7f130cf4 # @string/wifitrackerlib_wifi_remembered 'Saved'
 
-.field public static final wifitrackerlib_wifi_security_passpoint:I = 0x7f130cf5
+.field public static final wifitrackerlib_wifi_security_eap_suiteb:I = 0x7f130cf5
 
-.field public static final wifitrackerlib_wifi_security_sae:I = 0x7f130cf6
+.field public static final wifitrackerlib_wifi_security_eap_wpa3:I = 0x7f130cf6
 
-.field public static final wifitrackerlib_wifi_security_short_eap_suiteb:I = 0x7f130cf7
+.field public static final wifitrackerlib_wifi_security_eap_wpa_wpa2:I = 0x7f130cf7
 
-.field public static final wifitrackerlib_wifi_security_short_eap_wpa3:I = 0x7f130cf8
+.field public static final wifitrackerlib_wifi_security_eap_wpa_wpa2_wpa3:I = 0x7f130cf8
 
-.field public static final wifitrackerlib_wifi_security_short_eap_wpa_wpa2:I = 0x7f130cf9
+.field public static final wifitrackerlib_wifi_security_none:I = 0x7f130cf9
 
-.field public static final wifitrackerlib_wifi_security_short_eap_wpa_wpa2_wpa3:I = 0x7f130cfa
+.field public static final wifitrackerlib_wifi_security_owe:I = 0x7f130cfa
 
-.field public static final wifitrackerlib_wifi_security_short_owe:I = 0x7f130cfb
+.field public static final wifitrackerlib_wifi_security_passpoint:I = 0x7f130cfb
 
-.field public static final wifitrackerlib_wifi_security_short_sae:I = 0x7f130cfc
+.field public static final wifitrackerlib_wifi_security_sae:I = 0x7f130cfc
 
-.field public static final wifitrackerlib_wifi_security_short_wpa_wpa2:I = 0x7f130cfd
+.field public static final wifitrackerlib_wifi_security_short_eap_suiteb:I = 0x7f130cfd
 
-.field public static final wifitrackerlib_wifi_security_short_wpa_wpa2_wpa3:I = 0x7f130cfe
+.field public static final wifitrackerlib_wifi_security_short_eap_wpa3:I = 0x7f130cfe
 
-.field public static final wifitrackerlib_wifi_security_wep:I = 0x7f130cff
+.field public static final wifitrackerlib_wifi_security_short_eap_wpa_wpa2:I = 0x7f130cff
 
-.field public static final wifitrackerlib_wifi_security_wpa_wpa2:I = 0x7f130d00
+.field public static final wifitrackerlib_wifi_security_short_eap_wpa_wpa2_wpa3:I = 0x7f130d00
 
-.field public static final wifitrackerlib_wifi_security_wpa_wpa2_wpa3:I = 0x7f130d01
+.field public static final wifitrackerlib_wifi_security_short_owe:I = 0x7f130d01
 
-.field public static final wifitrackerlib_wifi_standard_11ac:I = 0x7f130d02
+.field public static final wifitrackerlib_wifi_security_short_sae:I = 0x7f130d02
 
-.field public static final wifitrackerlib_wifi_standard_11ad:I = 0x7f130d03
+.field public static final wifitrackerlib_wifi_security_short_wpa_wpa2:I = 0x7f130d03
 
-.field public static final wifitrackerlib_wifi_standard_11ax:I = 0x7f130d04
+.field public static final wifitrackerlib_wifi_security_short_wpa_wpa2_wpa3:I = 0x7f130d04
 
-.field public static final wifitrackerlib_wifi_standard_11be:I = 0x7f130d05
+.field public static final wifitrackerlib_wifi_security_wep:I = 0x7f130d05
 
-.field public static final wifitrackerlib_wifi_standard_11n:I = 0x7f130d06
+.field public static final wifitrackerlib_wifi_security_wpa_wpa2:I = 0x7f130d06
 
-.field public static final wifitrackerlib_wifi_standard_legacy:I = 0x7f130d07
+.field public static final wifitrackerlib_wifi_security_wpa_wpa2_wpa3:I = 0x7f130d07
 
-.field public static final wifitrackerlib_wifi_standard_unknown:I = 0x7f130d08
+.field public static final wifitrackerlib_wifi_standard_11ac:I = 0x7f130d08
 
-.field public static final wifitrackerlib_wifi_unmetered_label:I = 0x7f130d09 # @string/wifitrackerlib_wifi_unmetered_label 'Unmetered'
+.field public static final wifitrackerlib_wifi_standard_11ad:I = 0x7f130d09
 
-.field public static final wifitrackerlib_wifi_wont_autoconnect_for_now:I = 0x7f130d0a # @string/wifitrackerlib_wifi_wont_autoconnect_for_now 'WLAN won’t auto-connect for now'
+.field public static final wifitrackerlib_wifi_standard_11ax:I = 0x7f130d0a
 
-.field public static final wind_direction_0:I = 0x7f130d0b # @string/wind_direction_0 'N wind'
+.field public static final wifitrackerlib_wifi_standard_11be:I = 0x7f130d0b
 
-.field public static final wind_direction_1:I = 0x7f130d0c # @string/wind_direction_1 'NE wind'
+.field public static final wifitrackerlib_wifi_standard_11n:I = 0x7f130d0c
 
-.field public static final wind_direction_1_f:I = 0x7f130d0d # @string/wind_direction_1_f 'NE wind'
+.field public static final wifitrackerlib_wifi_standard_legacy:I = 0x7f130d0d
 
-.field public static final wind_direction_2:I = 0x7f130d0e # @string/wind_direction_2 'E wind'
+.field public static final wifitrackerlib_wifi_standard_unknown:I = 0x7f130d0e
 
-.field public static final wind_direction_3:I = 0x7f130d0f # @string/wind_direction_3 'SE wind'
+.field public static final wifitrackerlib_wifi_unmetered_label:I = 0x7f130d0f # @string/wifitrackerlib_wifi_unmetered_label 'Unmetered'
 
-.field public static final wind_direction_3_f:I = 0x7f130d10 # @string/wind_direction_3_f 'SE wind'
+.field public static final wifitrackerlib_wifi_wont_autoconnect_for_now:I = 0x7f130d10 # @string/wifitrackerlib_wifi_wont_autoconnect_for_now 'WLAN won’t auto-connect for now'
 
-.field public static final wind_direction_4:I = 0x7f130d11 # @string/wind_direction_4 'S wind'
+.field public static final wind_direction_0:I = 0x7f130d11 # @string/wind_direction_0 'N wind'
 
-.field public static final wind_direction_5:I = 0x7f130d12 # @string/wind_direction_5 'SW wind'
+.field public static final wind_direction_1:I = 0x7f130d12 # @string/wind_direction_1 'NE wind'
 
-.field public static final wind_direction_5_f:I = 0x7f130d13 # @string/wind_direction_5_f 'SW wind'
+.field public static final wind_direction_1_f:I = 0x7f130d13 # @string/wind_direction_1_f 'NE wind'
 
-.field public static final wind_direction_6:I = 0x7f130d14 # @string/wind_direction_6 'W wind'
+.field public static final wind_direction_2:I = 0x7f130d14 # @string/wind_direction_2 'E wind'
 
-.field public static final wind_direction_7:I = 0x7f130d15 # @string/wind_direction_7 'NW wind'
+.field public static final wind_direction_3:I = 0x7f130d15 # @string/wind_direction_3 'SE wind'
 
-.field public static final wind_direction_7_f:I = 0x7f130d16 # @string/wind_direction_7_f 'NW wind'
+.field public static final wind_direction_3_f:I = 0x7f130d16 # @string/wind_direction_3_f 'SE wind'
 
-.field public static final wind_format:I = 0x7f130d17 # @string/wind_format '%1$s | Level %2$s'
+.field public static final wind_direction_4:I = 0x7f130d17 # @string/wind_direction_4 'S wind'
 
-.field public static final window_animation_scale_title:I = 0x7f130d18
+.field public static final wind_direction_5:I = 0x7f130d18 # @string/wind_direction_5 'SW wind'
 
-.field public static final window_blurs:I = 0x7f130d19
+.field public static final wind_direction_5_f:I = 0x7f130d19 # @string/wind_direction_5_f 'SW wind'
 
-.field public static final wireless_change_to_ac_charging:I = 0x7f130d1a # @string/wireless_change_to_ac_charging 'Switched to wired charging'
+.field public static final wind_direction_6:I = 0x7f130d1a # @string/wind_direction_6 'W wind'
 
-.field public static final wireless_charge_current:I = 0x7f130d1b
+.field public static final wind_direction_7:I = 0x7f130d1b # @string/wind_direction_7 'NW wind'
 
-.field public static final wireless_charge_dialog_cancel:I = 0x7f130d1c # @string/wireless_charge_dialog_cancel 'Got it'
+.field public static final wind_direction_7_f:I = 0x7f130d1c # @string/wind_direction_7_f 'NW wind'
 
-.field public static final wireless_charge_dialog_title:I = 0x7f130d1d # @string/wireless_charge_dialog_title 'Place your device on the center of the charging base'
+.field public static final wind_format:I = 0x7f130d1d # @string/wind_format '%1$s | Level %2$s'
 
-.field public static final wireless_charge_reset_device:I = 0x7f130d1e # @string/wireless_charge_reset_device 'Charging is slow. Adjust your device.'
+.field public static final window_animation_scale_title:I = 0x7f130d1e
 
-.field public static final wireless_charge_reset_device_detail:I = 0x7f130d1f
+.field public static final window_blurs:I = 0x7f130d1f
 
-.field public static final wireless_charge_stop:I = 0x7f130d20
+.field public static final wireless_change_to_ac_charging:I = 0x7f130d20 # @string/wireless_change_to_ac_charging 'Switched to wired charging'
 
-.field public static final wrong_password:I = 0x7f130d21
+.field public static final wireless_charge_current:I = 0x7f130d21
 
-.field public static final yesterday:I = 0x7f130d22
+.field public static final wireless_charge_dialog_cancel:I = 0x7f130d22 # @string/wireless_charge_dialog_cancel 'Got it'
 
-.field public static final zen_alarm_warning:I = 0x7f130d23 # @string/zen_alarm_warning 'You won't hear your next alarm %1$s'
+.field public static final wireless_charge_dialog_title:I = 0x7f130d23 # @string/wireless_charge_dialog_title 'Place your device on the center of the charging base'
 
-.field public static final zen_alarm_warning_indef:I = 0x7f130d24 # @string/zen_alarm_warning_indef 'You won't hear your next alarm %1$s unless you turn this off before then'
+.field public static final wireless_charge_reset_device:I = 0x7f130d24 # @string/wireless_charge_reset_device 'Charging is slow. Adjust your device.'
 
-.field public static final zen_alarms_introduction:I = 0x7f130d25
+.field public static final wireless_charge_reset_device_detail:I = 0x7f130d25
 
-.field public static final zen_interruption_level_priority:I = 0x7f130d26
+.field public static final wireless_charge_stop:I = 0x7f130d26
 
-.field public static final zen_mode_and_condition:I = 0x7f130d27
+.field public static final wrong_password:I = 0x7f130d27
 
-.field public static final zen_mode_duration_always_prompt_title:I = 0x7f130d28
+.field public static final yesterday:I = 0x7f130d28
 
-.field public static final zen_mode_duration_settings_title:I = 0x7f130d29
+.field public static final zen_alarm_warning:I = 0x7f130d29 # @string/zen_alarm_warning 'You won't hear your next alarm %1$s'
 
-.field public static final zen_mode_enable_dialog_turn_on:I = 0x7f130d2a # @string/zen_mode_enable_dialog_turn_on 'Turn on'
+.field public static final zen_alarm_warning_indef:I = 0x7f130d2a # @string/zen_alarm_warning_indef 'You won't hear your next alarm %1$s unless you turn this off before then'
 
-.field public static final zen_mode_forever:I = 0x7f130d2b
+.field public static final zen_alarms_introduction:I = 0x7f130d2b
 
-.field public static final zen_mode_settings_summary_off:I = 0x7f130d2c
+.field public static final zen_interruption_level_priority:I = 0x7f130d2c
 
-.field public static final zen_mode_settings_turn_on_dialog_title:I = 0x7f130d2d # @string/zen_mode_settings_turn_on_dialog_title 'Turn on Do Not Disturb'
+.field public static final zen_mode_and_condition:I = 0x7f130d2d
 
-.field public static final zen_mode_warnings_all_time_content:I = 0x7f130d2e # @string/zen_mode_warnings_all_time_content 'Notifications and calls will be silenced'
+.field public static final zen_mode_duration_always_prompt_title:I = 0x7f130d2e
 
-.field public static final zen_mode_warnings_keyguard_content:I = 0x7f130d2f # @string/zen_mode_warnings_keyguard_content 'Notifications and calls will be silenced when device is locked'
+.field public static final zen_mode_duration_settings_title:I = 0x7f130d2f
 
-.field public static final zen_mode_warnings_quit_immediately:I = 0x7f130d30 # @string/zen_mode_warnings_quit_immediately 'Turn off'
+.field public static final zen_mode_enable_dialog_turn_on:I = 0x7f130d30 # @string/zen_mode_enable_dialog_turn_on 'Turn on'
 
-.field public static final zen_mode_warnings_title:I = 0x7f130d31 # @string/zen_mode_warnings_title 'DND is on'
+.field public static final zen_mode_forever:I = 0x7f130d31
 
-.field public static final zen_priority_customize_button:I = 0x7f130d32
+.field public static final zen_mode_settings_summary_off:I = 0x7f130d32
 
-.field public static final zen_priority_introduction:I = 0x7f130d33
+.field public static final zen_mode_settings_turn_on_dialog_title:I = 0x7f130d33 # @string/zen_mode_settings_turn_on_dialog_title 'Turn on Do Not Disturb'
 
-.field public static final zen_silence_introduction:I = 0x7f130d34
+.field public static final zen_mode_warnings_all_time_content:I = 0x7f130d34 # @string/zen_mode_warnings_all_time_content 'Notifications and calls will be silenced'
 
-.field public static final zen_silence_introduction_voice:I = 0x7f130d35
+.field public static final zen_mode_warnings_keyguard_content:I = 0x7f130d35 # @string/zen_mode_warnings_keyguard_content 'Notifications and calls will be silenced when device is locked'
+
+.field public static final zen_mode_warnings_quit_immediately:I = 0x7f130d36 # @string/zen_mode_warnings_quit_immediately 'Turn off'
+
+.field public static final zen_mode_warnings_title:I = 0x7f130d37 # @string/zen_mode_warnings_title 'DND is on'
+
+.field public static final zen_priority_customize_button:I = 0x7f130d38
+
+.field public static final zen_priority_introduction:I = 0x7f130d39
+
+.field public static final zen_silence_introduction:I = 0x7f130d3a
+
+.field public static final zen_silence_introduction_voice:I = 0x7f130d3b
 
 
 # direct methods

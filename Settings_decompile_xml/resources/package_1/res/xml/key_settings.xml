@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8' ?>
-<PreferenceScreen android:title="@string/key_settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+<PreferenceScreen android:title="@string/key_settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
   <com.android.settingslib.miuisettings.preference.Preference android:title="@string/ai_button_title_global"
                         android:key="ai_settings">
     <intent android:action="com.miui.voiceassist.ACTION_AI_BUTTON_SETTINGS_GLOBAL" />

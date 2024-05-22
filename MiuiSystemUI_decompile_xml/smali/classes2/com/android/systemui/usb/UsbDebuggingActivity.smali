@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/usb/UsbDebuggingActivity;
 .super Landroid/app/Activity;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # static fields
@@ -189,7 +189,7 @@
     invoke-direct {p1, p0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
 
     .line 103
-    const v1, 0x7f130c0c    # @string/usb_debugging_title 'Allow USB debugging?'
+    const v1, 0x7f130c12    # @string/usb_debugging_title 'Allow USB debugging?'
 
     .line 106
     invoke-virtual {p0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -201,7 +201,7 @@
     invoke-virtual {p1, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 113
-    const v1, 0x7f130c09    # @string/usb_debugging_message 'The computer's RSA key fingerprint is:\n%1$s'
+    const v1, 0x7f130c0f    # @string/usb_debugging_message 'The computer's RSA key fingerprint is:\n%1$s'
 
     .line 116
     filled-new-array {v0}, [Ljava/lang/Object;
@@ -219,7 +219,7 @@
     invoke-virtual {p1, v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)V
 
     .line 127
-    const v0, 0x7f130c08    # @string/usb_debugging_always 'Always allow from this computer'
+    const v0, 0x7f130c0e    # @string/usb_debugging_always 'Always allow from this computer'
 
     .line 130
     invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;

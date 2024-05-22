@@ -1,16 +1,16 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical"
                       android:layout_width="fill_parent"
-                      android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+                      android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <miuix.pickerwidget.internal.widget.ProperPaddingViewGroup android:id="@id/datePickerContainer"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        settings:horizontalPadding="@dimen/miuix_appcompat_date_picker_dialog_padding_horizontal"
-                        settings:layout_constraintBottom_toTopOf="@id/lunarModePanel"
-                        settings:layout_constraintEnd_toEndOf="parent"
-                        settings:layout_constraintStart_toStartOf="parent"
-                        settings:layout_constraintTop_toTopOf="parent"
-                        settings:smallHorizontalPadding="8.0dp">
+                        app:horizontalPadding="@dimen/miuix_appcompat_date_picker_dialog_padding_horizontal"
+                        app:layout_constraintBottom_toTopOf="@id/lunarModePanel"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:smallHorizontalPadding="8.0dp">
     <miuix.pickerwidget.widget.DatePicker android:id="@id/datePicker"
                           android:layout_width="fill_parent"
                           android:layout_height="wrap_content"
@@ -22,7 +22,7 @@
                   android:layout_height="wrap_content"
                   android:paddingStart="@dimen/date_picker_checkbox_padding_start"
                   android:paddingEnd="@dimen/date_picker_checkbox_padding_end"
-                  settings:layout_constraintBottom_toBottomOf="parent">
+                  app:layout_constraintBottom_toBottomOf="parent">
     <TextView android:textSize="@dimen/miuix_appcompat_date_picker_lunar_text_size"
               android:textColor="?android:attr/textColorPrimary"
               android:id="@id/lunarText"

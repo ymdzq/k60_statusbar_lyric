@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/statusbar/views/MiuiClock;
 .super Landroid/widget/TextView;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lcom/android/systemui/plugins/DarkIconDispatcher$DarkReceiver;
@@ -500,14 +500,14 @@
     if-ne v2, v3, :cond_2
 
     .line 31
-    const v2, 0x7f130b19    # @string/status_bar_clock_date_time_format_12 'h:mm a, E, MMM d'
+    const v2, 0x7f130b1f    # @string/status_bar_clock_date_time_format_12 'h:mm a, E, MMM d'
 
     .line 33
     goto :goto_1
 
     .line 36
     :cond_2
-    const v2, 0x7f130b18    # @string/status_bar_clock_date_time_format 'H:mm E, MMM d'
+    const v2, 0x7f130b1e    # @string/status_bar_clock_date_time_format 'H:mm E, MMM d'
 
     .line 37
     :goto_1
@@ -530,7 +530,7 @@
     const/4 v5, 0x4
 
     .line 49
-    const v7, 0x7f130b16    # @string/status_bar_clock_date_format 'E, MMM d'
+    const v7, 0x7f130b1c    # @string/status_bar_clock_date_format 'E, MMM d'
 
     .line 50
     if-ne v4, v5, :cond_4
@@ -555,7 +555,7 @@
     const/4 v5, 0x1
 
     .line 64
-    const v8, 0x7f130b17    # @string/status_bar_clock_date_format_12 'E, MMM d'
+    const v8, 0x7f130b1d    # @string/status_bar_clock_date_format_12 'E, MMM d'
 
     .line 65
     if-ne v4, v5, :cond_6
@@ -593,14 +593,14 @@
     if-ne v2, v3, :cond_7
 
     .line 85
-    const v4, 0x7f130b1c    # @string/status_bar_clock_date_weekday_format_12_brief '@string/status_bar_clock_date_format_12'
+    const v4, 0x7f130b22    # @string/status_bar_clock_date_weekday_format_12_brief '@string/status_bar_clock_date_format_12'
 
     .line 87
     goto :goto_2
 
     .line 90
     :cond_7
-    const v4, 0x7f130b1d    # @string/status_bar_clock_date_weekday_format_brief '@string/status_bar_clock_date_format'
+    const v4, 0x7f130b23    # @string/status_bar_clock_date_weekday_format_brief '@string/status_bar_clock_date_format'
 
     .line 91
     :goto_2

@@ -48,4 +48,8 @@
                         android:title="@string/micloud_service_title"
                         android:key="ex_func_mi_cloud_service"
                         android:defaultValue="true" />
+  <com.android.settingslib.miuisettings.preference.CheckBoxPreference android:persistent="false"
+                        android:title="@string/game_booster_title"
+                        android:key="ex_func_game_booster"
+                        android:defaultValue="true" />
 </PreferenceScreen>

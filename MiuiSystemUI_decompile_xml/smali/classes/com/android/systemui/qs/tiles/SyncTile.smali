@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/qs/tiles/SyncTile;
 .super Lcom/android/systemui/qs/tileimpl/QSTileImpl;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # instance fields
@@ -151,7 +151,7 @@
     iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
 
     .line 2
-    const v0, 0x7f1309f7    # @string/quick_settings_sync_label 'Sync'
+    const v0, 0x7f1309fd    # @string/quick_settings_sync_label 'Sync'
 
     .line 4
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -367,7 +367,7 @@
 
     .line 16
     :cond_0
-    const v0, 0x7f1309f9    # @string/quick_settings_sync_state_change_message_on 'Sync is on'
+    const v0, 0x7f1309ff    # @string/quick_settings_sync_state_change_message_on 'Sync is on'
 
     .line 17
     invoke-virtual {v2, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -383,7 +383,7 @@
 
     .line 27
     :cond_1
-    const v0, 0x7f1309f8    # @string/quick_settings_sync_state_change_message_off 'Sync is off'
+    const v0, 0x7f1309fe    # @string/quick_settings_sync_state_change_message_off 'Sync is off'
 
     .line 28
     invoke-virtual {v2, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -419,7 +419,7 @@
     iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
 
     .line 10
-    const p2, 0x7f1309f7    # @string/quick_settings_sync_label 'Sync'
+    const p2, 0x7f1309fd    # @string/quick_settings_sync_label 'Sync'
 
     .line 12
     invoke-virtual {p0, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -502,14 +502,14 @@
     if-eqz v0, :cond_1
 
     .line 67
-    const v0, 0x7f130b54    # @string/switch_bar_on 'On'
+    const v0, 0x7f130b5a    # @string/switch_bar_on 'On'
 
     .line 69
     goto :goto_1
 
     .line 72
     :cond_1
-    const v0, 0x7f130b53    # @string/switch_bar_off 'Off'
+    const v0, 0x7f130b59    # @string/switch_bar_off 'Off'
 
     .line 73
     :goto_1

@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <miuix.springback.view.SpringBackLayout android:layout_width="fill_parent"
                       android:layout_height="fill_parent"
-                      settings:scrollOrientation="vertical"
-                      settings:scrollableView="@id/id_0x7f0a093b" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+                      app:scrollOrientation="vertical"
+                      app:scrollableView="@id/id_0x7f0a093b" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <androidx.core.widget.NestedScrollView android:id="@id/id_0x7f0a093b"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
@@ -98,9 +98,9 @@
                               android:layout_width="wrap_content"
                               android:layout_height="fill_parent"
                               android:layout_weight="1.0"
-                              settings:cardBackgroundColor="@color/headset_find_device_gray"
-                              settings:cardCornerRadius="@dimen/miuix_preference_high_light_radius"
-                              settings:cardElevation="0.0dp">
+                              app:cardBackgroundColor="@color/headset_find_device_gray"
+                              app:cardCornerRadius="@dimen/miuix_preference_high_light_radius"
+                              app:cardElevation="0.0dp">
           <LinearLayout android:orientation="vertical"
                         android:id="@id/item_left"
                         android:layout_width="fill_parent"
@@ -141,9 +141,9 @@
                               android:layout_height="fill_parent"
                               android:layout_weight="1.0"
                               android:layout_marginStart="@dimen/headset_find_device_card_marginStart"
-                              settings:cardBackgroundColor="@color/headset_find_device_gray"
-                              settings:cardCornerRadius="@dimen/miuix_preference_high_light_radius"
-                              settings:cardElevation="0.0dp">
+                              app:cardBackgroundColor="@color/headset_find_device_gray"
+                              app:cardCornerRadius="@dimen/miuix_preference_high_light_radius"
+                              app:cardElevation="0.0dp">
           <LinearLayout android:orientation="vertical"
                         android:id="@id/item_both"
                         android:layout_width="fill_parent"
@@ -186,9 +186,9 @@
                               android:layout_height="fill_parent"
                               android:layout_weight="1.0"
                               android:layout_marginStart="@dimen/headset_find_device_card_marginStart"
-                              settings:cardBackgroundColor="@color/headset_find_device_gray"
-                              settings:cardCornerRadius="@dimen/miuix_preference_high_light_radius"
-                              settings:cardElevation="0.0dp">
+                              app:cardBackgroundColor="@color/headset_find_device_gray"
+                              app:cardCornerRadius="@dimen/miuix_preference_high_light_radius"
+                              app:cardElevation="0.0dp">
           <LinearLayout android:orientation="vertical"
                         android:id="@id/item_right"
                         android:layout_width="fill_parent"

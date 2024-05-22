@@ -11,5 +11,5 @@
                  android:textAlignment="viewStart"
                  android:paddingStart="@dimen/abc_select_dialog_padding_start_material"
                  android:paddingEnd="?attr/dialogPreferredPadding"
-                 systemui:r0x7f040277="?android:attr/listChoiceIndicatorMultiple"
-                 systemui:drawableStartCompat="?android:attr/listChoiceIndicatorMultiple" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto" />
+                 app:r0x7f040277="?android:attr/listChoiceIndicatorMultiple"
+                 app:drawableStartCompat="?android:attr/listChoiceIndicatorMultiple" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

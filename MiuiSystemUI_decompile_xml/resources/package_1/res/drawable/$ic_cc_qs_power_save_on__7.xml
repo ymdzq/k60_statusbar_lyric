@@ -1,20 +1,20 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <set android:ordering="together" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f0802a1"
+  <objectAnimator android:interpolator="@drawable/$$ic_cc_qs_power_save_on__7__0"
                   android:duration="67"
                   android:startOffset="0"
                   android:valueFrom="M12.37 -34.92 C12.37,-34.92 -93.77,-34.92 -93.77,-34.92 C-93.77,-34.92 -93.77,35.42 -93.77,35.42 C-93.77,35.42 12.37,35.42 12.37,35.42 C12.37,35.42 12.37,-34.92 12.37,-34.92c "
                   android:valueTo="M12.37 -34.92 C12.37,-34.92 -93.77,-34.92 -93.77,-34.92 C-93.77,-34.92 -93.77,35.42 -93.77,35.42 C-93.77,35.42 12.37,35.42 12.37,35.42 C12.37,35.42 12.37,-34.92 12.37,-34.92c "
                   android:valueType="pathType"
                   android:propertyName="pathData" />
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f0802a2"
+  <objectAnimator android:interpolator="@drawable/$$ic_cc_qs_power_save_on__7__1"
                   android:duration="167"
                   android:startOffset="67"
                   android:valueFrom="M12.37 -34.92 C12.37,-34.92 -93.77,-34.92 -93.77,-34.92 C-93.77,-34.92 -93.77,35.42 -93.77,35.42 C-93.77,35.42 12.37,35.42 12.37,35.42 C12.37,35.42 12.37,-34.92 12.37,-34.92c "
                   android:valueTo="M-65.63 -34.91 C-65.63,-34.91 -171.77,-34.91 -171.77,-34.91 C-171.77,-34.91 -171.77,35.42 -171.77,35.42 C-171.77,35.42 -65.63,35.42 -65.63,35.42 C-65.63,35.42 -65.63,-34.91 -65.63,-34.91c "
                   android:valueType="pathType"
                   android:propertyName="pathData" />
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f0802a3"
+  <objectAnimator android:interpolator="@drawable/$$ic_cc_qs_power_save_on__7__2"
                   android:duration="450"
                   android:startOffset="233"
                   android:valueFrom="M-65.63 -34.91 C-65.63,-34.91 -171.77,-34.91 -171.77,-34.91 C-171.77,-34.91 -171.77,35.42 -171.77,35.42 C-171.77,35.42 -65.63,35.42 -65.63,35.42 C-65.63,35.42 -65.63,-34.91 -65.63,-34.91c "

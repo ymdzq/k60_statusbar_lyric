@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/mediaprojection/appselector/MediaProjectionBlockerEmptyStateProvider$getEmptyState$1;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lcom/android/internal/app/AbstractMultiProfilePagerAdapter$EmptyState;
@@ -77,7 +77,7 @@
     move-result-object p0
 
     .line 9
-    const v0, 0x7f130a45    # @string/screen_capturing_disabled_by_policy_dialog_title 'Blocked by your IT admin'
+    const v0, 0x7f130a4b    # @string/screen_capturing_disabled_by_policy_dialog_title 'Blocked by your IT admin'
 
     .line 10
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;

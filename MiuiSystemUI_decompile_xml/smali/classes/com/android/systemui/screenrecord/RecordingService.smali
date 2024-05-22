@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/screenrecord/RecordingService;
 .super Landroid/app/Service;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lcom/android/systemui/screenrecord/ScreenMediaRecorder$ScreenMediaRecorderListener;
@@ -93,7 +93,7 @@
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
     .line 8
-    const v2, 0x7f130a7c    # @string/screenrecord_title 'Screen Recorder'
+    const v2, 0x7f130a82    # @string/screenrecord_title 'Screen Recorder'
 
     .line 11
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -108,7 +108,7 @@
     invoke-virtual {v1, v3, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 20
-    const v2, 0x7f130a79    # @string/screenrecord_start_error 'Error starting screen recording'
+    const v2, 0x7f130a7f    # @string/screenrecord_start_error 'Error starting screen recording'
 
     .line 23
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -188,7 +188,7 @@
     if-ne v1, v2, :cond_0
 
     .line 14
-    const v1, 0x7f130a70    # @string/screenrecord_ongoing_screen_only 'Recording screen'
+    const v1, 0x7f130a76    # @string/screenrecord_ongoing_screen_only 'Recording screen'
 
     .line 16
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -201,7 +201,7 @@
 
     .line 23
     :cond_0
-    const v1, 0x7f130a6f    # @string/screenrecord_ongoing_screen_and_audio 'Recording screen and audio'
+    const v1, 0x7f130a75    # @string/screenrecord_ongoing_screen_and_audio 'Recording screen and audio'
 
     .line 24
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -217,7 +217,7 @@
     invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
 
     .line 33
-    const v3, 0x7f130a7c    # @string/screenrecord_title 'Screen Recorder'
+    const v3, 0x7f130a82    # @string/screenrecord_title 'Screen Recorder'
 
     .line 36
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -253,7 +253,7 @@
     move-result-object p0
 
     .line 63
-    const v1, 0x7f130a68    # @string/screenrecord_background_processing_label 'Processing screen recording'
+    const v1, 0x7f130a6e    # @string/screenrecord_background_processing_label 'Processing screen recording'
 
     .line 64
     invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -318,7 +318,7 @@
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
     .line 8
-    const v2, 0x7f130a7c    # @string/screenrecord_title 'Screen Recorder'
+    const v2, 0x7f130a82    # @string/screenrecord_title 'Screen Recorder'
 
     .line 11
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -342,7 +342,7 @@
     if-ne v2, v3, :cond_0
 
     .line 27
-    const v2, 0x7f130a70    # @string/screenrecord_ongoing_screen_only 'Recording screen'
+    const v2, 0x7f130a76    # @string/screenrecord_ongoing_screen_only 'Recording screen'
 
     .line 29
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -355,7 +355,7 @@
 
     .line 36
     :cond_0
-    const v2, 0x7f130a6f    # @string/screenrecord_ongoing_screen_and_audio 'Recording screen and audio'
+    const v2, 0x7f130a75    # @string/screenrecord_ongoing_screen_and_audio 'Recording screen and audio'
 
     .line 37
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -413,7 +413,7 @@
     move-result-object v5
 
     .line 76
-    const v6, 0x7f130a7a    # @string/screenrecord_stop_label 'Stop'
+    const v6, 0x7f130a80    # @string/screenrecord_stop_label 'Stop'
 
     .line 77
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -583,7 +583,7 @@
     move-result-object v5
 
     .line 37
-    const v6, 0x7f130a78    # @string/screenrecord_share_label 'Share'
+    const v6, 0x7f130a7e    # @string/screenrecord_share_label 'Share'
 
     .line 38
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -658,7 +658,7 @@
     move-result-object v4
 
     .line 90
-    const v5, 0x7f130a7c    # @string/screenrecord_title 'Screen Recorder'
+    const v5, 0x7f130a82    # @string/screenrecord_title 'Screen Recorder'
 
     .line 91
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -694,7 +694,7 @@
     move-result-object v4
 
     .line 118
-    const v5, 0x7f130a77    # @string/screenrecord_save_title 'Screen recording saved'
+    const v5, 0x7f130a7d    # @string/screenrecord_save_title 'Screen recording saved'
 
     .line 119
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -715,7 +715,7 @@
     move-result-object v4
 
     .line 133
-    const v5, 0x7f130a76    # @string/screenrecord_save_text 'Tap to view'
+    const v5, 0x7f130a7c    # @string/screenrecord_save_text 'Tap to view'
 
     .line 134
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -899,7 +899,7 @@
     new-instance v2, Landroid/app/NotificationChannel;
 
     .line 31
-    const v4, 0x7f130a7c    # @string/screenrecord_title 'Screen Recorder'
+    const v4, 0x7f130a82    # @string/screenrecord_title 'Screen Recorder'
 
     .line 33
     invoke-virtual {p0, v4}, Landroid/app/Service;->getString(I)Ljava/lang/String;
@@ -917,7 +917,7 @@
     invoke-direct {v2, v5, v4, v6}, Landroid/app/NotificationChannel;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;I)V
 
     .line 44
-    const v4, 0x7f130a69    # @string/screenrecord_channel_description 'Ongoing notification for a screen record session'
+    const v4, 0x7f130a6f    # @string/screenrecord_channel_description 'Ongoing notification for a screen record session'
 
     .line 47
     invoke-virtual {p0, v4}, Landroid/app/Service;->getString(I)Ljava/lang/String;
@@ -1326,7 +1326,7 @@
     move-exception v0
 
     .line 297
-    const v1, 0x7f130a79    # @string/screenrecord_start_error 'Error starting screen recording'
+    const v1, 0x7f130a7f    # @string/screenrecord_start_error 'Error starting screen recording'
 
     .line 298
     invoke-virtual {p0, v1}, Lcom/android/systemui/screenrecord/RecordingService;->showErrorToast(I)V
@@ -1476,7 +1476,7 @@
     move-result-object v1
 
     .line 10
-    const v2, 0x7f130a7c    # @string/screenrecord_title 'Screen Recorder'
+    const v2, 0x7f130a82    # @string/screenrecord_title 'Screen Recorder'
 
     .line 11
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -1515,7 +1515,7 @@
     move-result-object v2
 
     .line 41
-    const v3, 0x7f130a77    # @string/screenrecord_save_title 'Screen recording saved'
+    const v3, 0x7f130a7d    # @string/screenrecord_save_title 'Screen recording saved'
 
     .line 42
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -1790,7 +1790,7 @@
 
     .line 94
     :cond_4
-    const v0, 0x7f130a79    # @string/screenrecord_start_error 'Error starting screen recording'
+    const v0, 0x7f130a7f    # @string/screenrecord_start_error 'Error starting screen recording'
 
     .line 97
     invoke-virtual {p0, v0}, Lcom/android/systemui/screenrecord/RecordingService;->showErrorToast(I)V

@@ -6,10 +6,6 @@
 .implements Lcom/android/settings/search/SearchFeatureProvider;
 
 
-# static fields
-.field private static final TAG:Ljava/lang/String; = "SearchFeatureProvider"
-
-
 # instance fields
 .field private mSearchIndexableResources:Lcom/android/settingslib/search/SearchIndexableResources;
 
@@ -18,7 +14,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 35
+    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,19 +23,19 @@
 .method private static buildReferrer(Landroid/content/Context;I)Landroid/net/Uri;
     .locals 2
 
-    .line 80
+    .line 78
     new-instance v0, Landroid/net/Uri$Builder;
 
     invoke-direct {v0}, Landroid/net/Uri$Builder;-><init>()V
 
     const-string v1, "android-app"
 
-    .line 81
+    .line 79
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v0
 
-    .line 82
+    .line 80
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object p0
@@ -48,7 +44,7 @@
 
     move-result-object p0
 
-    .line 83
+    .line 81
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p1
@@ -57,7 +53,7 @@
 
     move-result-object p0
 
-    .line 84
+    .line 82
     invoke-virtual {p0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object p0
@@ -70,14 +66,14 @@
 .method public buildSearchIntent(Landroid/content/Context;I)Landroid/content/Intent;
     .locals 2
 
-    .line 70
+    .line 68
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.settings.APP_SEARCH_SETTINGS"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 71
+    .line 69
     invoke-interface {p0, p1}, Lcom/android/settings/search/SearchFeatureProvider;->getSettingsIntelligencePkgName(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object p0
@@ -88,7 +84,7 @@
 
     const-string v0, "android.intent.extra.REFERRER"
 
-    .line 72
+    .line 70
     invoke-static {p1, p2}, Lcom/android/settings/search/SearchFeatureProviderImpl;->buildReferrer(Landroid/content/Context;I)Landroid/net/Uri;
 
     move-result-object p1
@@ -118,33 +114,33 @@
     return p0
 .end method
 
-.method public verifyLaunchSearchResultPageCaller(Landroid/content/Context;Landroid/content/ComponentName;)V
-    .locals 2
+.method public verifyLaunchSearchResultPageCaller(Landroid/content/Context;Ljava/lang/String;)V
+    .locals 1
 
-    if-eqz p2, :cond_4
+    .line 43
+    invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
 
     .line 47
-    invoke-virtual {p2}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
+    invoke-static {p2, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
     .line 48
-    invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    .line 49
     invoke-interface {p0, p1}, Lcom/android/settings/search/SearchFeatureProvider;->getSettingsIntelligencePkgName(Landroid/content/Context;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-static {v1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+    invoke-static {v0, p2}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
 
@@ -161,12 +157,8 @@
     :goto_0
     const/4 v0, 0x1
 
-    .line 51
+    .line 49
     :goto_1
-    invoke-virtual {p2}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
-
-    move-result-object p2
-
     invoke-virtual {p0, p1, p2}, Lcom/android/settings/search/SearchFeatureProviderImpl;->isSignatureAllowlisted(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result p0
@@ -177,7 +169,7 @@
 
     goto :goto_2
 
-    .line 55
+    .line 53
     :cond_2
     new-instance p0, Ljava/lang/SecurityException;
 

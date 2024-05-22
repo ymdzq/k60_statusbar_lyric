@@ -4,4 +4,4 @@
 
 
 # static fields
-.field public static final timezones:I = 0x7f1601f5 # @xml/timezones 'res/xml/timezones.xml'
+.field public static final timezones:I = 0x7f1601f6 # @xml/timezones 'res/xml/timezones.xml'

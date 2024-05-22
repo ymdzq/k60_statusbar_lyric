@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <com.miui.clock.classic.ClassicPlusClockSmallView android:orientation="vertical"
                       android:layout_width="fill_parent"
-                      android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto">
+                      android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <com.miui.clock.classic.ClassicTextAreaView android:textSize="@dimen/classic_text_area_text_size"
                         android:textColor="@color/classic_color_white"
                         android:id="@id/text_area"
@@ -9,15 +9,15 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/classic_text_area_margin_top_has_face"
                         android:fontFamily="mipro-medium"
-                        systemui:r0x7f04042f="0"
-                        systemui:r0x7f040443="0"
-                        systemui:r0x7f040447="0" />
+                        app:r0x7f04042f="0"
+                        app:r0x7f040443="0"
+                        app:r0x7f040447="0" />
   <View android:id="@id/area1"
         android:layout_width="1.0dp"
         android:layout_height="@dimen/classic_plus_area_time_height"
         android:layout_marginTop="@dimen/classic_time_area_plus_margin_top"
-        systemui:r0x7f040443="0"
-        systemui:r0x7f040446="@id/text_area" />
+        app:r0x7f040443="0"
+        app:r0x7f040446="@id/text_area" />
   <com.miui.clock.MiuiTextGlassView android:textSize="@dimen/classic_time_area_plus_text_size"
                         android:textColor="@color/classic_color_white"
                         android:gravity="center_horizontal"
@@ -25,13 +25,13 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:letterSpacing="-0.02"
-                        systemui:r0x7f040429="@id/area1"
-                        systemui:r0x7f040447="@id/area1" />
+                        app:r0x7f040429="@id/area1"
+                        app:r0x7f040447="@id/area1" />
   <FrameLayout android:id="@id/magazine_info_container"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:layout_marginTop="@dimen/classic_gallery_area_margin_top_single_line"
-               systemui:r0x7f04042f="0"
-               systemui:r0x7f040443="0"
-               systemui:r0x7f040446="@id/area1" />
+               app:r0x7f04042f="0"
+               app:r0x7f040443="0"
+               app:r0x7f040446="@id/area1" />
 </com.miui.clock.classic.ClassicPlusClockSmallView>

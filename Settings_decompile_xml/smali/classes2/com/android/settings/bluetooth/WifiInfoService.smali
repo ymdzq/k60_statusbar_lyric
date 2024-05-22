@@ -107,10 +107,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 29
+    .line 31
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
-    .line 40
+    .line 42
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -131,7 +131,7 @@
         }
     .end annotation
 
-    .line 141
+    .line 143
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -150,10 +150,10 @@
 
     check-cast v0, Landroid/net/wifi/ScanResult;
 
-    .line 142
+    .line 144
     iget-object v1, v0, Landroid/net/wifi/ScanResult;->SSID:Ljava/lang/String;
 
-    .line 143
+    .line 145
     iget-object v2, p0, Lcom/android/settings/bluetooth/WifiInfoService;->mWifiScanResults:Ljava/util/HashMap;
 
     invoke-virtual {v2, v1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -162,7 +162,7 @@
 
     if-nez v2, :cond_1
 
-    .line 144
+    .line 146
     iget-object v2, p0, Lcom/android/settings/bluetooth/WifiInfoService;->mWifiScanResults:Ljava/util/HashMap;
 
     new-instance v3, Lcom/android/settings/bluetooth/WifiInfoService$WifiScanResult;
@@ -173,7 +173,7 @@
 
     invoke-virtual {v2, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 146
+    .line 148
     :cond_1
     iget-object v2, p0, Lcom/android/settings/bluetooth/WifiInfoService;->mWifiScanResults:Ljava/util/HashMap;
 
@@ -183,7 +183,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 147
+    .line 149
     iget-object v2, p0, Lcom/android/settings/bluetooth/WifiInfoService;->mWifiScanResults:Ljava/util/HashMap;
 
     invoke-virtual {v2, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -198,13 +198,13 @@
 
     goto :goto_0
 
-    .line 150
+    .line 152
     :cond_2
     invoke-virtual {p0}, Lcom/android/settings/bluetooth/WifiInfoService;->getCurrentSSID()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 152
+    .line 154
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -219,7 +219,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 153
+    .line 155
     iget-object v0, p0, Lcom/android/settings/bluetooth/WifiInfoService;->mWifiScanResults:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -232,7 +232,7 @@
 
     move-result v0
 
-    .line 154
+    .line 156
     iget-object v1, p0, Lcom/android/settings/bluetooth/WifiInfoService;->mWifiScanResults:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -254,7 +254,7 @@
     :cond_3
     const/16 v0, -0xa
 
-    .line 160
+    .line 162
     :cond_4
     :goto_1
     :try_start_0
@@ -269,10 +269,10 @@
     :catch_0
     move-exception p0
 
-    .line 162
+    .line 164
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 164
+    .line 166
     :goto_2
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -304,7 +304,7 @@
 .method private isVerboseLoggingEnabled()Z
     .locals 0
 
-    .line 401
+    .line 409
     iget-object p0, p0, Lcom/android/settings/bluetooth/WifiInfoService;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     if-nez p0, :cond_0
@@ -313,7 +313,7 @@
 
     return p0
 
-    .line 405
+    .line 413
     :cond_0
     invoke-virtual {p0}, Landroid/net/wifi/WifiManager;->isVerboseLoggingEnabled()Z
 
@@ -325,24 +325,24 @@
 .method private registerWifiScanReceiver()V
     .locals 3
 
-    .line 121
+    .line 123
     new-instance v0, Lcom/android/settings/bluetooth/WifiInfoService$WifiScanBroadcastReceiver;
 
     invoke-direct {v0, p0}, Lcom/android/settings/bluetooth/WifiInfoService$WifiScanBroadcastReceiver;-><init>(Lcom/android/settings/bluetooth/WifiInfoService;)V
 
     iput-object v0, p0, Lcom/android/settings/bluetooth/WifiInfoService;->mWifiScanReceiver:Lcom/android/settings/bluetooth/WifiInfoService$WifiScanBroadcastReceiver;
 
-    .line 122
+    .line 124
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v1, "android.net.wifi.SCAN_RESULTS"
 
-    .line 123
+    .line 125
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 124
+    .line 126
     iget-object v1, p0, Lcom/android/settings/bluetooth/WifiInfoService;->mWifiScanReceiver:Lcom/android/settings/bluetooth/WifiInfoService$WifiScanBroadcastReceiver;
 
     const/4 v2, 0x2
@@ -355,7 +355,7 @@
 .method private removeDoubleQuotes(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
-    .line 87
+    .line 89
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p0
@@ -366,7 +366,7 @@
 
     return-object p0
 
-    .line 90
+    .line 92
     :cond_0
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -378,7 +378,7 @@
 
     const/4 v1, 0x0
 
-    .line 91
+    .line 93
     invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v1
@@ -389,14 +389,14 @@
 
     sub-int/2addr p0, v0
 
-    .line 92
+    .line 94
     invoke-virtual {p1, p0}, Ljava/lang/String;->charAt(I)C
 
     move-result v1
 
     if-ne v1, v2, :cond_1
 
-    .line 93
+    .line 95
     invoke-virtual {p1, v0, p0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object p0
@@ -410,14 +410,14 @@
 .method private scanFailure()V
     .locals 1
 
-    .line 136
+    .line 138
     iget-object v0, p0, Lcom/android/settings/bluetooth/WifiInfoService;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v0}, Landroid/net/wifi/WifiManager;->getScanResults()Ljava/util/List;
 
     move-result-object v0
 
-    .line 137
+    .line 139
     invoke-direct {p0, v0}, Lcom/android/settings/bluetooth/WifiInfoService;->handleScanResult(Ljava/util/List;)V
 
     return-void
@@ -426,14 +426,14 @@
 .method private scanSuccess()V
     .locals 1
 
-    .line 128
+    .line 130
     iget-object v0, p0, Lcom/android/settings/bluetooth/WifiInfoService;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v0}, Landroid/net/wifi/WifiManager;->getScanResults()Ljava/util/List;
 
     move-result-object v0
 
-    .line 129
+    .line 131
     invoke-direct {p0, v0}, Lcom/android/settings/bluetooth/WifiInfoService;->handleScanResult(Ljava/util/List;)V
 
     return-void
@@ -442,10 +442,10 @@
 .method private startScan()V
     .locals 1
 
-    .line 113
+    .line 115
     invoke-direct {p0}, Lcom/android/settings/bluetooth/WifiInfoService;->registerWifiScanReceiver()V
 
-    .line 114
+    .line 116
     iget-object v0, p0, Lcom/android/settings/bluetooth/WifiInfoService;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v0}, Landroid/net/wifi/WifiManager;->startScan()Z
@@ -454,7 +454,7 @@
 
     if-nez v0, :cond_0
 
-    .line 116
+    .line 118
     invoke-direct {p0}, Lcom/android/settings/bluetooth/WifiInfoService;->scanFailure()V
 
     :cond_0
@@ -464,17 +464,17 @@
 .method private unregisterWifiScanBroadcast()V
     .locals 1
 
-    .line 71
+    .line 73
     iget-object v0, p0, Lcom/android/settings/bluetooth/WifiInfoService;->mWifiScanReceiver:Lcom/android/settings/bluetooth/WifiInfoService$WifiScanBroadcastReceiver;
 
     if-eqz v0, :cond_0
 
-    .line 72
+    .line 74
     invoke-virtual {p0, v0}, Landroid/app/Service;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     const/4 v0, 0x0
 
-    .line 73
+    .line 75
     iput-object v0, p0, Lcom/android/settings/bluetooth/WifiInfoService;->mWifiScanReceiver:Lcom/android/settings/bluetooth/WifiInfoService$WifiScanBroadcastReceiver;
 
     :cond_0
@@ -486,7 +486,7 @@
 .method public getCurrentSSID()Ljava/lang/String;
     .locals 1
 
-    .line 78
+    .line 80
     iget-object v0, p0, Lcom/android/settings/bluetooth/WifiInfoService;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v0}, Landroid/net/wifi/WifiManager;->getConnectionInfo()Landroid/net/wifi/WifiInfo;
@@ -499,14 +499,14 @@
 
     const-string/jumbo v0, "winfo == null"
 
-    .line 80
+    .line 82
     invoke-static {p0, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
 
     return-object p0
 
-    .line 83
+    .line 85
     :cond_0
     invoke-virtual {v0}, Landroid/net/wifi/WifiInfo;->getSSID()Ljava/lang/String;
 
@@ -522,7 +522,7 @@
 .method public onBind(Landroid/content/Intent;)Landroid/os/IBinder;
     .locals 0
 
-    .line 55
+    .line 57
     iget-object p0, p0, Lcom/android/settings/bluetooth/WifiInfoService;->mWifiInfoApi:Lcom/android/settings/bluetooth/WifiInfoService$WifiInfoApi;
 
     return-object p0
@@ -531,17 +531,17 @@
 .method public onCreate()V
     .locals 2
 
-    .line 46
+    .line 48
     invoke-super {p0}, Landroid/app/Service;->onCreate()V
 
     const-string v0, "WifiInfoService"
 
     const-string/jumbo v1, "onCreate"
 
-    .line 47
+    .line 49
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 48
+    .line 50
     new-instance v0, Lcom/android/settings/bluetooth/WifiInfoService$WifiInfoApi;
 
     invoke-direct {v0, p0, p0}, Lcom/android/settings/bluetooth/WifiInfoService$WifiInfoApi;-><init>(Lcom/android/settings/bluetooth/WifiInfoService;Lcom/android/settings/bluetooth/WifiInfoService;)V
@@ -550,7 +550,7 @@
 
     const-string/jumbo v0, "wifi"
 
-    .line 49
+    .line 51
     invoke-virtual {p0, v0}, Landroid/app/Service;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
@@ -561,7 +561,7 @@
 
     const-string/jumbo v0, "wifiscanner"
 
-    .line 50
+    .line 52
     invoke-virtual {p0, v0}, Landroid/app/Service;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
@@ -580,10 +580,10 @@
 
     const-string/jumbo v1, "onDestroy"
 
-    .line 66
+    .line 68
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 67
+    .line 69
     invoke-direct {p0}, Lcom/android/settings/bluetooth/WifiInfoService;->unregisterWifiScanBroadcast()V
 
     return-void
@@ -592,7 +592,7 @@
 .method public onStartCommand(Landroid/content/Intent;II)I
     .locals 0
 
-    .line 60
+    .line 62
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V

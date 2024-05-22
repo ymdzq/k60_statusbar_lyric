@@ -262,7 +262,7 @@
 
 .field public static final accessibility_color_inversion_banner_pad_horizontal:I = 0x7f0801de # @drawable/accessibility_color_inversion_banner_pad_horizontal 'res/drawable/accessibility_color_inversion_banner_pad_horizontal.xml'
 
-.field public static final accessibility_color_inversion_banner_pad_vertical:I = 0x7f0801df # @drawable/accessibility_color_inversion_banner_pad_vertical 'res/drawable-xxhdpi/accessibility_color_inversion_banner_pad_vertical.webp'
+.field public static final accessibility_color_inversion_banner_pad_vertical:I = 0x7f0801df # @drawable/accessibility_color_inversion_banner_pad_vertical 'res/drawable-night-xxhdpi/accessibility_color_inversion_banner_pad_vertical.webp'
 
 .field public static final accessibility_color_inversion_banner_phone:I = 0x7f0801e0 # @drawable/accessibility_color_inversion_banner_phone 'res/drawable/accessibility_color_inversion_banner_phone.xml'
 
@@ -298,9 +298,9 @@
 
 .field public static final accessibility_shortcut_type_hardware:I = 0x7f0801f0 # @drawable/accessibility_shortcut_type_hardware 'res/drawable/accessibility_shortcut_type_hardware.xml'
 
-.field public static final accessibility_shortcut_type_hardware_pad_horizontal:I = 0x7f0801f1 # @drawable/accessibility_shortcut_type_hardware_pad_horizontal 'res/drawable-xxhdpi/accessibility_shortcut_type_hardware_pad_horizontal.webp'
+.field public static final accessibility_shortcut_type_hardware_pad_horizontal:I = 0x7f0801f1 # @drawable/accessibility_shortcut_type_hardware_pad_horizontal 'res/drawable-night-xxhdpi/accessibility_shortcut_type_hardware_pad_horizontal.webp'
 
-.field public static final accessibility_shortcut_type_hardware_pad_vertical:I = 0x7f0801f2 # @drawable/accessibility_shortcut_type_hardware_pad_vertical 'res/drawable-xxhdpi/accessibility_shortcut_type_hardware_pad_vertical.webp'
+.field public static final accessibility_shortcut_type_hardware_pad_vertical:I = 0x7f0801f2 # @drawable/accessibility_shortcut_type_hardware_pad_vertical 'res/drawable-night-xxhdpi/accessibility_shortcut_type_hardware_pad_vertical.webp'
 
 .field public static final accessibility_shortcut_type_hardware_tablet:I = 0x7f0801f3 # @drawable/accessibility_shortcut_type_hardware_tablet 'res/drawable/accessibility_shortcut_type_hardware_tablet.xml'
 
@@ -314,9 +314,9 @@
 
 .field public static final accessibility_shortcut_type_software_gesture:I = 0x7f0801f8 # @drawable/accessibility_shortcut_type_software_gesture 'res/drawable/accessibility_shortcut_type_software_gesture.xml'
 
-.field public static final accessibility_shortcut_type_software_gesture_pad_horizontal:I = 0x7f0801f9 # @drawable/accessibility_shortcut_type_software_gesture_pad_horizontal 'res/drawable-xxhdpi/accessibility_shortcut_type_software_gesture_pad_horizontal.webp'
+.field public static final accessibility_shortcut_type_software_gesture_pad_horizontal:I = 0x7f0801f9 # @drawable/accessibility_shortcut_type_software_gesture_pad_horizontal 'res/drawable-night-xxhdpi/accessibility_shortcut_type_software_gesture_pad_horizontal.webp'
 
-.field public static final accessibility_shortcut_type_software_gesture_pad_vertical:I = 0x7f0801fa # @drawable/accessibility_shortcut_type_software_gesture_pad_vertical 'res/drawable-xxhdpi/accessibility_shortcut_type_software_gesture_pad_vertical.webp'
+.field public static final accessibility_shortcut_type_software_gesture_pad_vertical:I = 0x7f0801fa # @drawable/accessibility_shortcut_type_software_gesture_pad_vertical 'res/drawable-night-xxhdpi/accessibility_shortcut_type_software_gesture_pad_vertical.webp'
 
 .field public static final accessibility_shortcut_type_software_gesture_tablet:I = 0x7f0801fb # @drawable/accessibility_shortcut_type_software_gesture_tablet 'res/drawable/accessibility_shortcut_type_software_gesture_tablet.xml'
 
@@ -330,13 +330,13 @@
 
 .field public static final accessibility_shortcut_type_triple_tap:I = 0x7f080200 # @drawable/accessibility_shortcut_type_triple_tap 'res/drawable/accessibility_shortcut_type_triple_tap.png'
 
-.field public static final accessibility_shortcut_type_triple_tap_pad_horizontal:I = 0x7f080201 # @drawable/accessibility_shortcut_type_triple_tap_pad_horizontal 'res/drawable-xxhdpi/accessibility_shortcut_type_triple_tap_pad_horizontal.webp'
+.field public static final accessibility_shortcut_type_triple_tap_pad_horizontal:I = 0x7f080201 # @drawable/accessibility_shortcut_type_triple_tap_pad_horizontal 'res/drawable-night-xxhdpi/accessibility_shortcut_type_triple_tap_pad_horizontal.webp'
 
-.field public static final accessibility_shortcut_type_triple_tap_pad_vertical:I = 0x7f080202 # @drawable/accessibility_shortcut_type_triple_tap_pad_vertical 'res/drawable-xxhdpi/accessibility_shortcut_type_triple_tap_pad_vertical.webp'
+.field public static final accessibility_shortcut_type_triple_tap_pad_vertical:I = 0x7f080202 # @drawable/accessibility_shortcut_type_triple_tap_pad_vertical 'res/drawable-night-xxhdpi/accessibility_shortcut_type_triple_tap_pad_vertical.webp'
 
-.field public static final accessibility_talkback_pad_horizontal:I = 0x7f080203 # @drawable/accessibility_talkback_pad_horizontal 'res/drawable-xxhdpi/accessibility_talkback_pad_horizontal.webp'
+.field public static final accessibility_talkback_pad_horizontal:I = 0x7f080203 # @drawable/accessibility_talkback_pad_horizontal 'res/drawable-night-xxhdpi/accessibility_talkback_pad_horizontal.webp'
 
-.field public static final accessibility_talkback_pad_vertical:I = 0x7f080204 # @drawable/accessibility_talkback_pad_vertical 'res/drawable-xxhdpi/accessibility_talkback_pad_vertical.webp'
+.field public static final accessibility_talkback_pad_vertical:I = 0x7f080204 # @drawable/accessibility_talkback_pad_vertical 'res/drawable-night-xxhdpi/accessibility_talkback_pad_vertical.webp'
 
 .field public static final accessibility_talkback_phone:I = 0x7f080205 # @drawable/accessibility_talkback_phone 'res/drawable-440dpi/accessibility_talkback_phone.webp'
 
@@ -462,15 +462,15 @@
 
 .field public static final add_a_photo_circled:I = 0x7f080242 # @drawable/add_a_photo_circled 'res/drawable/add_a_photo_circled.xml'
 
-.field public static final ai_button_icon:I = 0x7f080243 # @drawable/ai_button_icon 'res/drawable-xhdpi/ai_button_icon.png'
+.field public static final ai_button_icon:I = 0x7f080243 # @drawable/ai_button_icon 'res/drawable-godzillaui-xhdpi/ai_button_icon.png'
 
 .field public static final ai_gesture_header:I = 0x7f080244 # @drawable/ai_gesture_header 'res/drawable-hdpi/ai_gesture_header.png'
 
 .field public static final ai_settings_back:I = 0x7f080245 # @drawable/ai_settings_back 'res/drawable/ai_settings_back.xml'
 
-.field public static final ai_settings_back_normal:I = 0x7f080246 # @drawable/ai_settings_back_normal 'res/drawable-xxhdpi/ai_settings_back_normal.png'
+.field public static final ai_settings_back_normal:I = 0x7f080246 # @drawable/ai_settings_back_normal 'res/drawable-night-xxhdpi/ai_settings_back_normal.png'
 
-.field public static final ai_settings_back_pressed:I = 0x7f080247 # @drawable/ai_settings_back_pressed 'res/drawable-xxhdpi/ai_settings_back_pressed.png'
+.field public static final ai_settings_back_pressed:I = 0x7f080247 # @drawable/ai_settings_back_pressed 'res/drawable-night-xxhdpi/ai_settings_back_pressed.png'
 
 .field public static final ai_settings_picker:I = 0x7f080248 # @drawable/ai_settings_picker 'res/drawable-xxhdpi/ai_settings_picker.png'
 
@@ -738,9 +738,9 @@
 
 .field public static final bluetooth_preference_category_bg_no_title_light:I = 0x7f0802cc # @drawable/bluetooth_preference_category_bg_no_title_light 'res/drawable/bluetooth_preference_category_bg_no_title_light.xml'
 
-.field public static final bootloader_lock:I = 0x7f0802cd # @drawable/bootloader_lock 'res/drawable-xhdpi/bootloader_lock.png'
+.field public static final bootloader_lock:I = 0x7f0802cd # @drawable/bootloader_lock 'res/drawable-night-xhdpi/bootloader_lock.png'
 
-.field public static final bootloader_unlock:I = 0x7f0802ce # @drawable/bootloader_unlock 'res/drawable-xhdpi/bootloader_unlock.png'
+.field public static final bootloader_unlock:I = 0x7f0802ce # @drawable/bootloader_unlock 'res/drawable-night-xhdpi/bootloader_unlock.png'
 
 .field public static final borderlayout_bg:I = 0x7f0802cf # @drawable/borderlayout_bg 'res/drawable/borderlayout_bg.xml'
 
@@ -804,19 +804,19 @@
 
 .field public static final btn_inline_detail:I = 0x7f0802ed # @drawable/btn_inline_detail 'res/drawable/btn_inline_detail.xml'
 
-.field public static final btn_inline_detail_normal_light:I = 0x7f0802ee # @drawable/btn_inline_detail_normal_light 'res/drawable-xhdpi/btn_inline_detail_normal_light.png'
+.field public static final btn_inline_detail_normal_light:I = 0x7f0802ee # @drawable/btn_inline_detail_normal_light 'res/drawable-night-xhdpi/btn_inline_detail_normal_light.png'
 
 .field public static final btn_inline_detail_normal_light_drawable:I = 0x7f0802ef # @drawable/btn_inline_detail_normal_light_drawable 'res/drawable/btn_inline_detail_normal_light_drawable.xml'
 
 .field public static final btn_picker_bg_middle:I = 0x7f0802f0 # @drawable/btn_picker_bg_middle 'res/drawable-xhdpi/btn_picker_bg_middle.9.png'
 
-.field public static final btn_picker_review_pause_n:I = 0x7f0802f1 # @drawable/btn_picker_review_pause_n 'res/drawable-xhdpi/btn_picker_review_pause_n.png'
+.field public static final btn_picker_review_pause_n:I = 0x7f0802f1 # @drawable/btn_picker_review_pause_n 'res/drawable-night-xhdpi/btn_picker_review_pause_n.png'
 
-.field public static final btn_picker_review_pause_p:I = 0x7f0802f2 # @drawable/btn_picker_review_pause_p 'res/drawable-xhdpi/btn_picker_review_pause_p.png'
+.field public static final btn_picker_review_pause_p:I = 0x7f0802f2 # @drawable/btn_picker_review_pause_p 'res/drawable-night-xhdpi/btn_picker_review_pause_p.png'
 
-.field public static final btn_picker_review_play_n:I = 0x7f0802f3 # @drawable/btn_picker_review_play_n 'res/drawable-xhdpi/btn_picker_review_play_n.png'
+.field public static final btn_picker_review_play_n:I = 0x7f0802f3 # @drawable/btn_picker_review_play_n 'res/drawable-night-xhdpi/btn_picker_review_play_n.png'
 
-.field public static final btn_picker_review_play_p:I = 0x7f0802f4 # @drawable/btn_picker_review_play_p 'res/drawable-xhdpi/btn_picker_review_play_p.png'
+.field public static final btn_picker_review_play_p:I = 0x7f0802f4 # @drawable/btn_picker_review_play_p 'res/drawable-night-xhdpi/btn_picker_review_play_p.png'
 
 .field public static final btn_radio_off_mtrl:I = 0x7f0802f5 # @drawable/btn_radio_off_mtrl 'res/drawable/btn_radio_off_mtrl.xml'
 
@@ -894,17 +894,17 @@
 
 .field public static final button_accessibility_menu_volume_settings_selector:I = 0x7f08031a # @drawable/button_accessibility_menu_volume_settings_selector 'res/drawable/button_accessibility_menu_volume_settings_selector.xml'
 
-.field public static final button_boot_left_disable:I = 0x7f08031b # @drawable/button_boot_left_disable 'res/drawable-xhdpi/button_boot_left_disable.9.png'
+.field public static final button_boot_left_disable:I = 0x7f08031b # @drawable/button_boot_left_disable 'res/drawable-ldrtl-xhdpi/button_boot_left_disable.9.png'
 
-.field public static final button_boot_left_normal:I = 0x7f08031c # @drawable/button_boot_left_normal 'res/drawable-xhdpi/button_boot_left_normal.9.png'
+.field public static final button_boot_left_normal:I = 0x7f08031c # @drawable/button_boot_left_normal 'res/drawable-ldrtl-xhdpi/button_boot_left_normal.9.png'
 
-.field public static final button_boot_left_pressed:I = 0x7f08031d # @drawable/button_boot_left_pressed 'res/drawable-xhdpi/button_boot_left_pressed.9.png'
+.field public static final button_boot_left_pressed:I = 0x7f08031d # @drawable/button_boot_left_pressed 'res/drawable-ldrtl-xhdpi/button_boot_left_pressed.9.png'
 
-.field public static final button_boot_right_disable:I = 0x7f08031e # @drawable/button_boot_right_disable 'res/drawable-xhdpi/button_boot_right_disable.9.png'
+.field public static final button_boot_right_disable:I = 0x7f08031e # @drawable/button_boot_right_disable 'res/drawable-ldrtl-xhdpi/button_boot_right_disable.9.png'
 
-.field public static final button_boot_right_normal:I = 0x7f08031f # @drawable/button_boot_right_normal 'res/drawable-xhdpi/button_boot_right_normal.9.png'
+.field public static final button_boot_right_normal:I = 0x7f08031f # @drawable/button_boot_right_normal 'res/drawable-ldrtl-xhdpi/button_boot_right_normal.9.png'
 
-.field public static final button_boot_right_pressed:I = 0x7f080320 # @drawable/button_boot_right_pressed 'res/drawable-xhdpi/button_boot_right_pressed.9.png'
+.field public static final button_boot_right_pressed:I = 0x7f080320 # @drawable/button_boot_right_pressed 'res/drawable-ldrtl-xhdpi/button_boot_right_pressed.9.png'
 
 .field public static final button_bootloader_left_selector:I = 0x7f080321 # @drawable/button_bootloader_left_selector 'res/drawable/button_bootloader_left_selector.xml'
 
@@ -964,21 +964,21 @@
 
 .field public static final clear_all_data_text_color:I = 0x7f08033d # @drawable/clear_all_data_text_color 'res/drawable/clear_all_data_text_color.xml'
 
-.field public static final clickbottom01:I = 0x7f08033e # @drawable/clickbottom01 'res/drawable-xhdpi/clickbottom01.png'
+.field public static final clickbottom01:I = 0x7f08033e # @drawable/clickbottom01 'res/drawable-night-xhdpi/clickbottom01.png'
 
-.field public static final clickbottom02:I = 0x7f08033f # @drawable/clickbottom02 'res/drawable-xhdpi/clickbottom02.png'
+.field public static final clickbottom02:I = 0x7f08033f # @drawable/clickbottom02 'res/drawable-night-xhdpi/clickbottom02.png'
 
-.field public static final clickbottom03:I = 0x7f080340 # @drawable/clickbottom03 'res/drawable-xhdpi/clickbottom03.png'
+.field public static final clickbottom03:I = 0x7f080340 # @drawable/clickbottom03 'res/drawable-night-xhdpi/clickbottom03.png'
 
-.field public static final clickbottom04:I = 0x7f080341 # @drawable/clickbottom04 'res/drawable-xhdpi/clickbottom04.png'
+.field public static final clickbottom04:I = 0x7f080341 # @drawable/clickbottom04 'res/drawable-night-xhdpi/clickbottom04.png'
 
-.field public static final clickbottom05:I = 0x7f080342 # @drawable/clickbottom05 'res/drawable-xhdpi/clickbottom05.png'
+.field public static final clickbottom05:I = 0x7f080342 # @drawable/clickbottom05 'res/drawable-night-xhdpi/clickbottom05.png'
 
-.field public static final clickbottom06:I = 0x7f080343 # @drawable/clickbottom06 'res/drawable-xhdpi/clickbottom06.png'
+.field public static final clickbottom06:I = 0x7f080343 # @drawable/clickbottom06 'res/drawable-night-xhdpi/clickbottom06.png'
 
-.field public static final clickbottom07:I = 0x7f080344 # @drawable/clickbottom07 'res/drawable-xhdpi/clickbottom07.png'
+.field public static final clickbottom07:I = 0x7f080344 # @drawable/clickbottom07 'res/drawable-night-xhdpi/clickbottom07.png'
 
-.field public static final clickbottom08:I = 0x7f080345 # @drawable/clickbottom08 'res/drawable-xhdpi/clickbottom08.png'
+.field public static final clickbottom08:I = 0x7f080345 # @drawable/clickbottom08 'res/drawable-night-xhdpi/clickbottom08.png'
 
 .field public static final clock_center:I = 0x7f080346 # @drawable/clock_center 'res/drawable-hdpi/clock_center.png'
 
@@ -994,7 +994,7 @@
 
 .field public static final closeAnc_ON:I = 0x7f08034c # @drawable/closeAnc_ON 'res/drawable/closeAnc_ON.xml'
 
-.field public static final close_icon:I = 0x7f08034d # @drawable/close_icon 'res/drawable-xhdpi/close_icon.png'
+.field public static final close_icon:I = 0x7f08034d # @drawable/close_icon 'res/drawable-night-xhdpi/close_icon.png'
 
 .field public static final cloud_icon:I = 0x7f08034e # @drawable/cloud_icon 'res/drawable-hdpi/cloud_icon.png'
 
@@ -1306,7 +1306,7 @@
 
 .field public static final credentials_image_22081212ug:I = 0x7f0803e8 # @drawable/credentials_image_22081212ug 'res/drawable-440dpi/credentials_image_22081212ug.xml'
 
-.field public static final credentials_image_22081212ug_art:I = 0x7f0803e9 # @drawable/drawable_0x7f0803e9 'res/drawable-440dpi/drawable_0x7f0803e9.xml'
+.field public static final credentials_image_22081212ug_art:I = 0x7f0803e9 # @drawable/credentials_image_22081212ug-art 'res/drawable-440dpi/credentials_image_22081212ug-art.xml'
 
 .field public static final credentials_image_22081281ac:I = 0x7f0803ea # @drawable/credentials_image_22081281ac 'res/drawable-440dpi/credentials_image_22081281ac.xml'
 
@@ -2240,7 +2240,7 @@
 
 .field public static final device_card_back_ground:I = 0x7f0805bb # @drawable/device_card_back_ground 'res/drawable/device_card_back_ground.xml'
 
-.field public static final device_description_android:I = 0x7f0805bc # @drawable/device_description_android 'res/drawable-440dpi-night/device_description_android.png'
+.field public static final device_description_android:I = 0x7f0805bc # @drawable/device_description_android 'res/drawable-night-440dpi/device_description_android.png'
 
 .field public static final device_description_battery:I = 0x7f0805bd # @drawable/device_description_battery 'res/drawable/device_description_battery.xml'
 
@@ -2248,7 +2248,7 @@
 
 .field public static final device_description_cpu:I = 0x7f0805bf # @drawable/device_description_cpu 'res/drawable/device_description_cpu.xml'
 
-.field public static final device_description_double_camera:I = 0x7f0805c0 # @drawable/device_description_double_camera 'res/drawable-440dpi-night/device_description_double_camera.png'
+.field public static final device_description_double_camera:I = 0x7f0805c0 # @drawable/device_description_double_camera 'res/drawable-night-440dpi/device_description_double_camera.png'
 
 .field public static final device_description_model:I = 0x7f0805c1 # @drawable/device_description_model 'res/drawable/device_description_model.xml'
 
@@ -2272,7 +2272,7 @@
 
 .field public static final dialog_button_bar_bg:I = 0x7f0805cb # @drawable/dialog_button_bar_bg 'res/drawable-xhdpi/dialog_button_bar_bg.9.png'
 
-.field public static final dialog_meta:I = 0x7f0805cc # @drawable/dialog_meta 'res/drawable-xxhdpi-night/dialog_meta.webp'
+.field public static final dialog_meta:I = 0x7f0805cc # @drawable/dialog_meta 'res/drawable-night-xxhdpi/dialog_meta.webp'
 
 .field public static final display_top_image:I = 0x7f0805cd # @drawable/display_top_image 'res/drawable-440dpi/display_top_image.webp'
 
@@ -2324,9 +2324,9 @@
 
 .field public static final emergency_contacts_list_item_divider_bg:I = 0x7f0805e5 # @drawable/emergency_contacts_list_item_divider_bg 'res/drawable/emergency_contacts_list_item_divider_bg.xml'
 
-.field public static final emergency_sos_icon:I = 0x7f0805e6 # @drawable/emergency_sos_icon 'res/drawable-xhdpi/emergency_sos_icon.png'
+.field public static final emergency_sos_icon:I = 0x7f0805e6 # @drawable/emergency_sos_icon 'res/drawable-godzillaui-xhdpi/emergency_sos_icon.png'
 
-.field public static final empty:I = 0x7f0805e7 # @drawable/empty 'res/drawable-xhdpi/empty.png'
+.field public static final empty:I = 0x7f0805e7 # @drawable/empty 'res/drawable-night-xhdpi/empty.png'
 
 .field public static final empty_icon:I = 0x7f0805e8 # @drawable/empty_icon 'res/drawable/empty_icon.xml'
 
@@ -2574,15 +2574,15 @@
 
 .field public static final fingerprint_enroll_introduction:I = 0x7f080662 # @drawable/fingerprint_enroll_introduction 'res/drawable/fingerprint_enroll_introduction.xml'
 
-.field public static final fingerprint_icon:I = 0x7f080663 # @drawable/fingerprint_icon 'res/drawable-xhdpi/fingerprint_icon.webp'
+.field public static final fingerprint_icon:I = 0x7f080663 # @drawable/fingerprint_icon 'res/drawable-night-xhdpi/fingerprint_icon.webp'
 
 .field public static final fingerprint_sensor_location:I = 0x7f080664 # @drawable/fingerprint_sensor_location 'res/drawable-nodpi/fingerprint_sensor_location.png'
 
 .field public static final flash_notifications_illustration:I = 0x7f080665 # @drawable/flash_notifications_illustration 'res/drawable/flash_notifications_illustration.xml'
 
-.field public static final flash_notifications_preview_1:I = 0x7f080666 # @drawable/flash_notifications_preview_1 'res/drawable-xhdpi-night/flash_notifications_preview_1.png'
+.field public static final flash_notifications_preview_1:I = 0x7f080666 # @drawable/flash_notifications_preview_1 'res/drawable-night-xhdpi/flash_notifications_preview_1.png'
 
-.field public static final flash_notifications_preview_2:I = 0x7f080667 # @drawable/flash_notifications_preview_2 'res/drawable-xhdpi-night/flash_notifications_preview_2.png'
+.field public static final flash_notifications_preview_2:I = 0x7f080667 # @drawable/flash_notifications_preview_2 'res/drawable-night-xhdpi/flash_notifications_preview_2.png'
 
 .field public static final flashback_guide:I = 0x7f080668 # @drawable/flashback_guide 'res/drawable-440dpi/flashback_guide.webp'
 
@@ -3044,9 +3044,9 @@
 
 .field public static final ic_a_small:I = 0x7f08074d # @drawable/ic_a_small 'res/drawable-440dpi/ic_a_small.png'
 
-.field public static final ic_about_settings:I = 0x7f08074e # @drawable/ic_about_settings 'res/drawable-hdpi/ic_about_settings.png'
+.field public static final ic_about_settings:I = 0x7f08074e # @drawable/ic_about_settings 'res/drawable-godzillaui-xhdpi/ic_about_settings.png'
 
-.field public static final ic_accelerometer_settings:I = 0x7f08074f # @drawable/ic_accelerometer_settings 'res/drawable-hdpi/ic_accelerometer_settings.png'
+.field public static final ic_accelerometer_settings:I = 0x7f08074f # @drawable/ic_accelerometer_settings 'res/drawable-godzillaui-xhdpi/ic_accelerometer_settings.png'
 
 .field public static final ic_accessibility_animation:I = 0x7f080750 # @drawable/ic_accessibility_animation 'res/drawable/ic_accessibility_animation.xml'
 
@@ -3058,13 +3058,13 @@
 
 .field public static final ic_accessibility_page_indicator:I = 0x7f080754 # @drawable/ic_accessibility_page_indicator 'res/drawable/ic_accessibility_page_indicator.xml'
 
-.field public static final ic_accessibility_settings:I = 0x7f080755 # @drawable/ic_accessibility_settings 'res/drawable-hdpi/ic_accessibility_settings.png'
+.field public static final ic_accessibility_settings:I = 0x7f080755 # @drawable/ic_accessibility_settings 'res/drawable-godzillaui-xhdpi/ic_accessibility_settings.png'
 
 .field public static final ic_accessibility_suggestion:I = 0x7f080756 # @drawable/ic_accessibility_suggestion 'res/drawable/ic_accessibility_suggestion.xml'
 
 .field public static final ic_accessibility_visibility:I = 0x7f080757 # @drawable/ic_accessibility_visibility 'res/drawable/ic_accessibility_visibility.xml'
 
-.field public static final ic_account_autostar:I = 0x7f080758 # @drawable/ic_account_autostar 'res/drawable-xhdpi/ic_account_autostar.png'
+.field public static final ic_account_autostar:I = 0x7f080758 # @drawable/ic_account_autostar 'res/drawable-godzillaui-xhdpi/ic_account_autostar.png'
 
 .field public static final ic_account_avatar:I = 0x7f080759 # @drawable/ic_account_avatar 'res/drawable/ic_account_avatar.xml'
 
@@ -3076,7 +3076,7 @@
 
 .field public static final ic_account_circle_outline:I = 0x7f08075d # @drawable/ic_account_circle_outline 'res/drawable/ic_account_circle_outline.xml'
 
-.field public static final ic_account_list:I = 0x7f08075e # @drawable/ic_account_list 'res/drawable-xhdpi/ic_account_list.png'
+.field public static final ic_account_list:I = 0x7f08075e # @drawable/ic_account_list 'res/drawable-godzillaui-xhdpi/ic_account_list.png'
 
 .field public static final ic_account_settings:I = 0x7f08075f # @drawable/ic_account_settings 'res/drawable/ic_account_settings.xml'
 
@@ -3088,7 +3088,7 @@
 
 .field public static final ic_add_a_photo:I = 0x7f080763 # @drawable/ic_add_a_photo 'res/drawable/ic_add_a_photo.xml'
 
-.field public static final ic_add_account_settings:I = 0x7f080764 # @drawable/ic_add_account_settings 'res/drawable-hdpi/ic_add_account_settings.png'
+.field public static final ic_add_account_settings:I = 0x7f080764 # @drawable/ic_add_account_settings 'res/drawable-godzillaui-xhdpi/ic_add_account_settings.png'
 
 .field public static final ic_add_supervised_user:I = 0x7f080765 # @drawable/ic_add_supervised_user 'res/drawable/ic_add_supervised_user.xml'
 
@@ -3102,7 +3102,7 @@
 
 .field public static final ic_aiasst_call_screen:I = 0x7f08076a # @drawable/ic_aiasst_call_screen 'res/drawable-440dpi/ic_aiasst_call_screen.png'
 
-.field public static final ic_airplane_mode_settings:I = 0x7f08076b # @drawable/ic_airplane_mode_settings 'res/drawable-hdpi/ic_airplane_mode_settings.png'
+.field public static final ic_airplane_mode_settings:I = 0x7f08076b # @drawable/ic_airplane_mode_settings 'res/drawable-godzillaui-xhdpi/ic_airplane_mode_settings.png'
 
 .field public static final ic_airplanemode_active:I = 0x7f08076c # @drawable/ic_airplanemode_active 'res/drawable/ic_airplanemode_active.xml'
 
@@ -3116,17 +3116,17 @@
 
 .field public static final ic_android:I = 0x7f080771 # @drawable/ic_android 'res/drawable/ic_android.xml'
 
-.field public static final ic_android_beam_settings:I = 0x7f080772 # @drawable/ic_android_beam_settings 'res/drawable-hdpi/ic_android_beam_settings.png'
+.field public static final ic_android_beam_settings:I = 0x7f080772 # @drawable/ic_android_beam_settings 'res/drawable-godzillaui-xhdpi/ic_android_beam_settings.png'
 
 .field public static final ic_app_browser:I = 0x7f080773 # @drawable/ic_app_browser 'res/drawable-xhdpi/ic_app_browser.png'
 
 .field public static final ic_app_camera:I = 0x7f080774 # @drawable/ic_app_camera 'res/drawable-xhdpi/ic_app_camera.png'
 
-.field public static final ic_app_lock:I = 0x7f080775 # @drawable/ic_app_lock 'res/drawable-xhdpi/ic_app_lock.png'
+.field public static final ic_app_lock:I = 0x7f080775 # @drawable/ic_app_lock 'res/drawable-godzillaui-xhdpi/ic_app_lock.png'
 
 .field public static final ic_app_mms:I = 0x7f080776 # @drawable/ic_app_mms 'res/drawable-xhdpi/ic_app_mms.png'
 
-.field public static final ic_app_permission:I = 0x7f080777 # @drawable/ic_app_permission 'res/drawable-xhdpi/ic_app_permission.png'
+.field public static final ic_app_permission:I = 0x7f080777 # @drawable/ic_app_permission 'res/drawable-godzillaui-xhdpi/ic_app_permission.png'
 
 .field public static final ic_app_phone:I = 0x7f080778 # @drawable/ic_app_phone 'res/drawable-xhdpi/ic_app_phone.png'
 
@@ -3204,9 +3204,9 @@
 
 .field public static final ic_audio_description:I = 0x7f08079d # @drawable/ic_audio_description 'res/drawable/ic_audio_description.xml'
 
-.field public static final ic_audio_headset:I = 0x7f08079e # @drawable/ic_audio_headset 'res/drawable-xhdpi/ic_audio_headset.png'
+.field public static final ic_audio_headset:I = 0x7f08079e # @drawable/ic_audio_headset 'res/drawable-night-xhdpi/ic_audio_headset.png'
 
-.field public static final ic_audio_headset_mute:I = 0x7f08079f # @drawable/ic_audio_headset_mute 'res/drawable-xhdpi/ic_audio_headset_mute.png'
+.field public static final ic_audio_headset_mute:I = 0x7f08079f # @drawable/ic_audio_headset_mute 'res/drawable-night-xhdpi/ic_audio_headset_mute.png'
 
 .field public static final ic_audio_media:I = 0x7f0807a0 # @drawable/ic_audio_media 'res/drawable/ic_audio_media.xml'
 
@@ -3276,7 +3276,7 @@
 
 .field public static final ic_ble_mivr_controller_bonded:I = 0x7f0807c1 # @drawable/ic_ble_mivr_controller_bonded 'res/drawable/ic_ble_mivr_controller_bonded.xml'
 
-.field public static final ic_ble_unknown:I = 0x7f0807c2 # @drawable/ic_ble_unknown 'res/drawable-xhdpi/ic_ble_unknown.png'
+.field public static final ic_ble_unknown:I = 0x7f0807c2 # @drawable/ic_ble_unknown 'res/drawable-night-xhdpi/ic_ble_unknown.png'
 
 .field public static final ic_block:I = 0x7f0807c3 # @drawable/ic_block 'res/drawable/ic_block.xml'
 
@@ -3288,15 +3288,15 @@
 
 .field public static final ic_bluetooth_unlock_checked:I = 0x7f0807c7 # @drawable/ic_bluetooth_unlock_checked 'res/drawable/ic_bluetooth_unlock_checked.xml'
 
-.field public static final ic_brightness_settings:I = 0x7f0807c8 # @drawable/ic_brightness_settings 'res/drawable-hdpi/ic_brightness_settings.png'
+.field public static final ic_brightness_settings:I = 0x7f0807c8 # @drawable/ic_brightness_settings 'res/drawable-godzillaui-xhdpi/ic_brightness_settings.png'
 
-.field public static final ic_bt_audio_video_cra_audio:I = 0x7f0807c9 # @drawable/ic_bt_audio_video_cra_audio 'res/drawable-xhdpi/ic_bt_audio_video_cra_audio.png'
+.field public static final ic_bt_audio_video_cra_audio:I = 0x7f0807c9 # @drawable/ic_bt_audio_video_cra_audio 'res/drawable-godzillaui-xhdpi/ic_bt_audio_video_cra_audio.png'
 
-.field public static final ic_bt_audio_video_hifi_audio:I = 0x7f0807ca # @drawable/ic_bt_audio_video_hifi_audio 'res/drawable-xhdpi/ic_bt_audio_video_hifi_audio.png'
+.field public static final ic_bt_audio_video_hifi_audio:I = 0x7f0807ca # @drawable/ic_bt_audio_video_hifi_audio 'res/drawable-godzillaui-xhdpi/ic_bt_audio_video_hifi_audio.png'
 
-.field public static final ic_bt_audio_video_microphone:I = 0x7f0807cb # @drawable/ic_bt_audio_video_microphone 'res/drawable-xhdpi/ic_bt_audio_video_microphone.png'
+.field public static final ic_bt_audio_video_microphone:I = 0x7f0807cb # @drawable/ic_bt_audio_video_microphone 'res/drawable-godzillaui-xhdpi/ic_bt_audio_video_microphone.png'
 
-.field public static final ic_bt_audio_video_vcr:I = 0x7f0807cc # @drawable/ic_bt_audio_video_vcr 'res/drawable-xhdpi/ic_bt_audio_video_vcr.png'
+.field public static final ic_bt_audio_video_vcr:I = 0x7f0807cc # @drawable/ic_bt_audio_video_vcr 'res/drawable-godzillaui-xhdpi/ic_bt_audio_video_vcr.png'
 
 .field public static final ic_bt_bluetooth:I = 0x7f0807cd # @drawable/ic_bt_bluetooth 'res/drawable/ic_bt_bluetooth.xml'
 
@@ -3314,7 +3314,7 @@
 
 .field public static final ic_bt_cellphone_bonded:I = 0x7f0807d4 # @drawable/ic_bt_cellphone_bonded 'res/drawable/ic_bt_cellphone_bonded.xml'
 
-.field public static final ic_bt_config:I = 0x7f0807d5 # @drawable/ic_bt_config 'res/drawable-hdpi/ic_bt_config.png'
+.field public static final ic_bt_config:I = 0x7f0807d5 # @drawable/ic_bt_config 'res/drawable-godzillaui-xhdpi/ic_bt_config.png'
 
 .field public static final ic_bt_digital_pen:I = 0x7f0807d6 # @drawable/ic_bt_digital_pen 'res/drawable/ic_bt_digital_pen.xml'
 
@@ -3370,7 +3370,7 @@
 
 .field public static final ic_bt_tv_bonded:I = 0x7f0807f0 # @drawable/ic_bt_tv_bonded 'res/drawable/ic_bt_tv_bonded.xml'
 
-.field public static final ic_bt_unknown:I = 0x7f0807f1 # @drawable/ic_bt_unknown 'res/drawable-xhdpi/ic_bt_unknown.png'
+.field public static final ic_bt_unknown:I = 0x7f0807f1 # @drawable/ic_bt_unknown 'res/drawable-godzillaui-xhdpi/ic_bt_unknown.png'
 
 .field public static final ic_btn_next:I = 0x7f0807f2 # @drawable/ic_btn_next 'res/drawable-hdpi/ic_btn_next.png'
 
@@ -3422,7 +3422,7 @@
 
 .field public static final ic_chevron_right_24dp:I = 0x7f08080a # @drawable/ic_chevron_right_24dp 'res/drawable/ic_chevron_right_24dp.xml'
 
-.field public static final ic_children_mode_settings:I = 0x7f08080b # @drawable/ic_children_mode_settings 'res/drawable-xhdpi/ic_children_mode_settings.png'
+.field public static final ic_children_mode_settings:I = 0x7f08080b # @drawable/ic_children_mode_settings 'res/drawable-godzillaui-xhdpi/ic_children_mode_settings.png'
 
 .field public static final ic_circle_outline_24dp:I = 0x7f08080c # @drawable/ic_circle_outline_24dp 'res/drawable/ic_circle_outline_24dp.xml'
 
@@ -3478,7 +3478,7 @@
 
 .field public static final ic_data_saver:I = 0x7f080826 # @drawable/ic_data_saver 'res/drawable/ic_data_saver.xml'
 
-.field public static final ic_date_time_settings:I = 0x7f080827 # @drawable/ic_date_time_settings 'res/drawable-hdpi/ic_date_time_settings.png'
+.field public static final ic_date_time_settings:I = 0x7f080827 # @drawable/ic_date_time_settings 'res/drawable-godzillaui-xhdpi/ic_date_time_settings.png'
 
 .field public static final ic_delete:I = 0x7f080828 # @drawable/ic_delete 'res/drawable/ic_delete.xml'
 
@@ -3488,7 +3488,7 @@
 
 .field public static final ic_demote_conversation:I = 0x7f08082b # @drawable/ic_demote_conversation 'res/drawable/ic_demote_conversation.xml'
 
-.field public static final ic_development_settings:I = 0x7f08082c # @drawable/ic_development_settings 'res/drawable-hdpi/ic_development_settings.png'
+.field public static final ic_development_settings:I = 0x7f08082c # @drawable/ic_development_settings 'res/drawable-godzillaui-xhdpi/ic_development_settings.png'
 
 .field public static final ic_device_connection:I = 0x7f08082d # @drawable/ic_device_connection 'res/drawable/ic_device_connection.xml'
 
@@ -3506,7 +3506,7 @@
 
 .field public static final ic_display_settings:I = 0x7f080834 # @drawable/ic_display_settings 'res/drawable/ic_display_settings.xml'
 
-.field public static final ic_do_not_disturb_mode_settings:I = 0x7f080835 # @drawable/ic_do_not_disturb_mode_settings 'res/drawable-hdpi/ic_do_not_disturb_mode_settings.png'
+.field public static final ic_do_not_disturb_mode_settings:I = 0x7f080835 # @drawable/ic_do_not_disturb_mode_settings 'res/drawable-godzillaui-xhdpi/ic_do_not_disturb_mode_settings.png'
 
 .field public static final ic_do_not_disturb_on_24dp:I = 0x7f080836 # @drawable/ic_do_not_disturb_on_24dp 'res/drawable/ic_do_not_disturb_on_24dp.xml'
 
@@ -3536,7 +3536,7 @@
 
 .field public static final ic_embedded_spinner_select:I = 0x7f080843 # @drawable/ic_embedded_spinner_select 'res/drawable/ic_embedded_spinner_select.xml'
 
-.field public static final ic_emergency:I = 0x7f080844 # @drawable/ic_emergency 'res/drawable-xhdpi/ic_emergency.webp'
+.field public static final ic_emergency:I = 0x7f080844 # @drawable/ic_emergency 'res/drawable-night-xxhdpi/ic_emergency.png'
 
 .field public static final ic_emergency_gesture_24dp:I = 0x7f080845 # @drawable/ic_emergency_gesture_24dp 'res/drawable/ic_emergency_gesture_24dp.xml'
 
@@ -3600,7 +3600,7 @@
 
 .field public static final ic_font_download:I = 0x7f080863 # @drawable/ic_font_download 'res/drawable/ic_font_download.xml'
 
-.field public static final ic_font_settings:I = 0x7f080864 # @drawable/ic_font_settings 'res/drawable-xhdpi/ic_font_settings.png'
+.field public static final ic_font_settings:I = 0x7f080864 # @drawable/ic_font_settings 'res/drawable-godzillaui-xhdpi/ic_font_settings.png'
 
 .field public static final ic_four_spinner:I = 0x7f080865 # @drawable/ic_four_spinner 'res/drawable/ic_four_spinner.xml'
 
@@ -3620,11 +3620,11 @@
 
 .field public static final ic_gesture_play_button:I = 0x7f08086d # @drawable/ic_gesture_play_button 'res/drawable/ic_gesture_play_button.xml'
 
-.field public static final ic_google_settings:I = 0x7f08086e # @drawable/ic_google_settings 'res/drawable-xxxhdpi/ic_google_settings.png'
+.field public static final ic_google_settings:I = 0x7f08086e # @drawable/ic_google_settings 'res/drawable-night-xxxhdpi/ic_google_settings.png'
 
 .field public static final ic_google_wellbeing:I = 0x7f08086f # @drawable/ic_google_wellbeing 'res/drawable/ic_google_wellbeing.xml'
 
-.field public static final ic_gps_settings:I = 0x7f080870 # @drawable/ic_gps_settings 'res/drawable-hdpi/ic_gps_settings.png'
+.field public static final ic_gps_settings:I = 0x7f080870 # @drawable/ic_gps_settings 'res/drawable-godzillaui-xhdpi/ic_gps_settings.png'
 
 .field public static final ic_gray_scale_24dp:I = 0x7f080871 # @drawable/ic_gray_scale_24dp 'res/drawable/ic_gray_scale_24dp.xml'
 
@@ -3806,7 +3806,7 @@
 
 .field public static final ic_important_outline:I = 0x7f0808ca # @drawable/ic_important_outline 'res/drawable/ic_important_outline.xml'
 
-.field public static final ic_infinity_display_settings:I = 0x7f0808cb # @drawable/ic_infinity_display_settings 'res/drawable-xhdpi/ic_infinity_display_settings.png'
+.field public static final ic_infinity_display_settings:I = 0x7f0808cb # @drawable/ic_infinity_display_settings 'res/drawable-godzillaui-xhdpi/ic_infinity_display_settings.png'
 
 .field public static final ic_info:I = 0x7f0808cc # @drawable/ic_info 'res/drawable/ic_info.xml'
 
@@ -3822,11 +3822,11 @@
 
 .field public static final ic_instant_app_badge_themed:I = 0x7f0808d2 # @drawable/ic_instant_app_badge_themed 'res/drawable/ic_instant_app_badge_themed.xml'
 
-.field public static final ic_interconnection:I = 0x7f0808d3 # @drawable/ic_interconnection 'res/drawable-xxxhdpi/ic_interconnection.png'
+.field public static final ic_interconnection:I = 0x7f0808d3 # @drawable/ic_interconnection 'res/drawable-night-xxxhdpi/ic_interconnection.png'
 
 .field public static final ic_jeejen_launcher:I = 0x7f0808d4 # @drawable/ic_jeejen_launcher 'res/drawable/ic_jeejen_launcher.png'
 
-.field public static final ic_key_settings:I = 0x7f0808d5 # @drawable/ic_key_settings 'res/drawable-hdpi/ic_key_settings.png'
+.field public static final ic_key_settings:I = 0x7f0808d5 # @drawable/ic_key_settings 'res/drawable-godzillaui-xhdpi/ic_key_settings.png'
 
 .field public static final ic_keyboard_arrow_down:I = 0x7f0808d6 # @drawable/ic_keyboard_arrow_down 'res/drawable/ic_keyboard_arrow_down.xml'
 
@@ -3834,7 +3834,7 @@
 
 .field public static final ic_lab_gesture:I = 0x7f0808d8 # @drawable/ic_lab_gesture 'res/drawable-xhdpi/ic_lab_gesture.png'
 
-.field public static final ic_language_settings:I = 0x7f0808d9 # @drawable/ic_language_settings 'res/drawable-hdpi/ic_language_settings.png'
+.field public static final ic_language_settings:I = 0x7f0808d9 # @drawable/ic_language_settings 'res/drawable-godzillaui-xhdpi/ic_language_settings.png'
 
 .field public static final ic_launcher:I = 0x7f0808da # @drawable/ic_launcher 'res/drawable-xhdpi/ic_launcher.png'
 
@@ -3856,7 +3856,7 @@
 
 .field public static final ic_launcher_virus_scan:I = 0x7f0808e3 # @drawable/ic_launcher_virus_scan 'res/drawable-xhdpi/ic_launcher_virus_scan.png'
 
-.field public static final ic_led_settings:I = 0x7f0808e4 # @drawable/ic_led_settings 'res/drawable-hdpi/ic_led_settings.png'
+.field public static final ic_led_settings:I = 0x7f0808e4 # @drawable/ic_led_settings 'res/drawable-godzillaui-xhdpi/ic_led_settings.png'
 
 .field public static final ic_lightbulb_outline_24:I = 0x7f0808e5 # @drawable/ic_lightbulb_outline_24 'res/drawable/ic_lightbulb_outline_24.xml'
 
@@ -3876,7 +3876,7 @@
 
 .field public static final ic_location_info_settings:I = 0x7f0808ed # @drawable/ic_location_info_settings 'res/drawable/ic_location_info_settings.xml'
 
-.field public static final ic_location_settings:I = 0x7f0808ee # @drawable/ic_location_settings 'res/drawable-hdpi/ic_location_settings.png'
+.field public static final ic_location_settings:I = 0x7f0808ee # @drawable/ic_location_settings 'res/drawable-godzillaui-xhdpi/ic_location_settings.png'
 
 .field public static final ic_lock:I = 0x7f0808ef # @drawable/ic_lock 'res/drawable/ic_lock.xml'
 
@@ -3960,13 +3960,13 @@
 
 .field public static final ic_menu_scan_network:I = 0x7f080917 # @drawable/ic_menu_scan_network 'res/drawable-hdpi/ic_menu_scan_network.png'
 
-.field public static final ic_mi_service:I = 0x7f080918 # @drawable/ic_mi_service 'res/drawable-xhdpi/ic_mi_service.png'
+.field public static final ic_mi_service:I = 0x7f080918 # @drawable/ic_mi_service 'res/drawable-godzillaui-xhdpi/ic_mi_service.png'
 
-.field public static final ic_mi_upi_settings:I = 0x7f080919 # @drawable/ic_mi_upi_settings 'res/drawable-xhdpi/ic_mi_upi_settings.png'
+.field public static final ic_mi_upi_settings:I = 0x7f080919 # @drawable/ic_mi_upi_settings 'res/drawable-godzillaui-xhdpi/ic_mi_upi_settings.png'
 
-.field public static final ic_mimoney_settings:I = 0x7f08091a # @drawable/ic_mimoney_settings 'res/drawable-xhdpi/ic_mimoney_settings.png'
+.field public static final ic_mimoney_settings:I = 0x7f08091a # @drawable/ic_mimoney_settings 'res/drawable-godzillaui-xhdpi/ic_mimoney_settings.png'
 
-.field public static final ic_mipay_account_indonesia:I = 0x7f08091b # @drawable/ic_mipay_account_indonesia 'res/drawable-hdpi/ic_mipay_account_indonesia.png'
+.field public static final ic_mipay_account_indonesia:I = 0x7f08091b # @drawable/ic_mipay_account_indonesia 'res/drawable-godzillaui-xhdpi/ic_mipay_account_indonesia.png'
 
 .field public static final ic_miracast_wifi:I = 0x7f08091c # @drawable/ic_miracast_wifi 'res/drawable-xhdpi/ic_miracast_wifi.png'
 
@@ -3986,13 +3986,13 @@
 
 .field public static final ic_mobile_call_strength_4:I = 0x7f080924 # @drawable/ic_mobile_call_strength_4 'res/drawable/ic_mobile_call_strength_4.xml'
 
-.field public static final ic_mobile_network_settings:I = 0x7f080925 # @drawable/ic_mobile_network_settings 'res/drawable-hdpi/ic_mobile_network_settings.png'
+.field public static final ic_mobile_network_settings:I = 0x7f080925 # @drawable/ic_mobile_network_settings 'res/drawable-godzillaui-xhdpi/ic_mobile_network_settings.png'
 
 .field public static final ic_mode_edit:I = 0x7f080926 # @drawable/ic_mode_edit 'res/drawable/ic_mode_edit.xml'
 
 .field public static final ic_modifier_keys_reset:I = 0x7f080927 # @drawable/ic_modifier_keys_reset 'res/drawable/ic_modifier_keys_reset.xml'
 
-.field public static final ic_more_applications_settings:I = 0x7f080928 # @drawable/ic_more_applications_settings 'res/drawable-xhdpi/ic_more_applications_settings.png'
+.field public static final ic_more_applications_settings:I = 0x7f080928 # @drawable/ic_more_applications_settings 'res/drawable-godzillaui-xhdpi/ic_more_applications_settings.png'
 
 .field public static final ic_mr_button_connected_00_dark:I = 0x7f080929 # @drawable/ic_mr_button_connected_00_dark 'res/drawable-xhdpi/ic_mr_button_connected_00_dark.png'
 
@@ -4328,7 +4328,7 @@
 
 .field public static final ic_notifications_white:I = 0x7f0809cf # @drawable/ic_notifications_white 'res/drawable/ic_notifications_white.xml'
 
-.field public static final ic_oldman_mode_settings:I = 0x7f0809d0 # @drawable/ic_oldman_mode_settings 'res/drawable-xhdpi/ic_oldman_mode_settings.png'
+.field public static final ic_oldman_mode_settings:I = 0x7f0809d0 # @drawable/ic_oldman_mode_settings 'res/drawable-godzillaui-xhdpi/ic_oldman_mode_settings.png'
 
 .field public static final ic_ongoing_notification:I = 0x7f0809d1 # @drawable/ic_ongoing_notification 'res/drawable/ic_ongoing_notification.xml'
 
@@ -4348,7 +4348,7 @@
 
 .field public static final ic_package_verifier_enabled:I = 0x7f0809d9 # @drawable/ic_package_verifier_enabled 'res/drawable/ic_package_verifier_enabled.xml'
 
-.field public static final ic_page_layout_settings:I = 0x7f0809da # @drawable/ic_page_layout_settings 'res/drawable-xhdpi/ic_page_layout_settings.png'
+.field public static final ic_page_layout_settings:I = 0x7f0809da # @drawable/ic_page_layout_settings 'res/drawable-godzillaui-xhdpi/ic_page_layout_settings.png'
 
 .field public static final ic_pan_tool_18dp:I = 0x7f0809db # @drawable/ic_pan_tool_18dp 'res/drawable/ic_pan_tool_18dp.xml'
 
@@ -4384,9 +4384,9 @@
 
 .field public static final ic_portable_wlan_hotspot_settings:I = 0x7f0809eb # @drawable/ic_portable_wlan_hotspot_settings 'res/drawable/ic_portable_wlan_hotspot_settings.xml'
 
-.field public static final ic_power_mode:I = 0x7f0809ec # @drawable/ic_power_mode 'res/drawable-xhdpi/ic_power_mode.png'
+.field public static final ic_power_mode:I = 0x7f0809ec # @drawable/ic_power_mode 'res/drawable-night-xhdpi/ic_power_mode.png'
 
-.field public static final ic_power_mode_settings:I = 0x7f0809ed # @drawable/ic_power_mode_settings 'res/drawable-hdpi/ic_power_mode_settings.png'
+.field public static final ic_power_mode_settings:I = 0x7f0809ed # @drawable/ic_power_mode_settings 'res/drawable-godzillaui-xhdpi/ic_power_mode_settings.png'
 
 .field public static final ic_power_system:I = 0x7f0809ee # @drawable/ic_power_system 'res/drawable/ic_power_system.xml'
 
@@ -4444,11 +4444,11 @@
 
 .field public static final ic_ring_volume_off:I = 0x7f080a09 # @drawable/ic_ring_volume_off 'res/drawable/ic_ring_volume_off.xml'
 
-.field public static final ic_ringer_volume_settings:I = 0x7f080a0a # @drawable/ic_ringer_volume_settings 'res/drawable-hdpi/ic_ringer_volume_settings.png'
+.field public static final ic_ringer_volume_settings:I = 0x7f080a0a # @drawable/ic_ringer_volume_settings 'res/drawable-godzillaui-xhdpi/ic_ringer_volume_settings.png'
 
 .field public static final ic_ringtone_notification:I = 0x7f080a0b # @drawable/ic_ringtone_notification 'res/drawable/ic_ringtone_notification.xml'
 
-.field public static final ic_ringtone_settings:I = 0x7f080a0c # @drawable/ic_ringtone_settings 'res/drawable-hdpi/ic_ringtone_settings.png'
+.field public static final ic_ringtone_settings:I = 0x7f080a0c # @drawable/ic_ringtone_settings 'res/drawable-godzillaui-xhdpi/ic_ringtone_settings.png'
 
 .field public static final ic_router_icon:I = 0x7f080a0d # @drawable/ic_router_icon 'res/drawable/ic_router_icon.xml'
 
@@ -4462,13 +4462,13 @@
 
 .field public static final ic_screen_rotation_24dp:I = 0x7f080a12 # @drawable/ic_screen_rotation_24dp 'res/drawable/ic_screen_rotation_24dp.xml'
 
-.field public static final ic_screen_timeout_settings:I = 0x7f080a13 # @drawable/ic_screen_timeout_settings 'res/drawable-hdpi/ic_screen_timeout_settings.png'
+.field public static final ic_screen_timeout_settings:I = 0x7f080a13 # @drawable/ic_screen_timeout_settings 'res/drawable-godzillaui-xhdpi/ic_screen_timeout_settings.png'
 
 .field public static final ic_sd_card:I = 0x7f080a14 # @drawable/ic_sd_card 'res/drawable/ic_sd_card.xml'
 
 .field public static final ic_search_24dp:I = 0x7f080a15 # @drawable/ic_search_24dp 'res/drawable/ic_search_24dp.xml'
 
-.field public static final ic_second_space:I = 0x7f080a16 # @drawable/ic_second_space 'res/drawable-xhdpi/ic_second_space.png'
+.field public static final ic_second_space:I = 0x7f080a16 # @drawable/ic_second_space 'res/drawable-godzillaui-xhdpi/ic_second_space.png'
 
 .field public static final ic_security_center_settings:I = 0x7f080a17 # @drawable/ic_security_center_settings 'res/drawable/ic_security_center_settings.xml'
 
@@ -4548,7 +4548,7 @@
 
 .field public static final ic_settings_gps:I = 0x7f080a3d # @drawable/ic_settings_gps 'res/drawable/ic_settings_gps.xml'
 
-.field public static final ic_settings_home:I = 0x7f080a3e # @drawable/ic_settings_home 'res/drawable-xhdpi/ic_settings_home.png'
+.field public static final ic_settings_home:I = 0x7f080a3e # @drawable/ic_settings_home 'res/drawable-godzillaui-xhdpi/ic_settings_home.png'
 
 .field public static final ic_settings_install:I = 0x7f080a3f # @drawable/ic_settings_install 'res/drawable/ic_settings_install.xml'
 
@@ -4682,7 +4682,7 @@
 
 .field public static final ic_storage_grey:I = 0x7f080a80 # @drawable/ic_storage_grey 'res/drawable/ic_storage_grey.xml'
 
-.field public static final ic_storage_settings:I = 0x7f080a81 # @drawable/ic_storage_settings 'res/drawable-hdpi/ic_storage_settings.png'
+.field public static final ic_storage_settings:I = 0x7f080a81 # @drawable/ic_storage_settings 'res/drawable-godzillaui-xhdpi/ic_storage_settings.png'
 
 .field public static final ic_storage_white:I = 0x7f080a82 # @drawable/ic_storage_white 'res/drawable/ic_storage_white.xml'
 
@@ -4744,13 +4744,13 @@
 
 .field public static final ic_sync_red_holo:I = 0x7f080a9f # @drawable/ic_sync_red_holo 'res/drawable-hdpi/ic_sync_red_holo.png'
 
-.field public static final ic_sync_settings:I = 0x7f080aa0 # @drawable/ic_sync_settings 'res/drawable-hdpi/ic_sync_settings.png'
+.field public static final ic_sync_settings:I = 0x7f080aa0 # @drawable/ic_sync_settings 'res/drawable-godzillaui-xhdpi/ic_sync_settings.png'
 
 .field public static final ic_sysbar_quicksettings:I = 0x7f080aa1 # @drawable/ic_sysbar_quicksettings 'res/drawable-hdpi/ic_sysbar_quicksettings.webp'
 
 .field public static final ic_system_app_settings:I = 0x7f080aa2 # @drawable/ic_system_app_settings 'res/drawable/ic_system_app_settings.xml'
 
-.field public static final ic_system_app_settings_new:I = 0x7f080aa3 # @drawable/ic_system_app_settings_new 'res/drawable-xhdpi/ic_system_app_settings_new.png'
+.field public static final ic_system_app_settings_new:I = 0x7f080aa3 # @drawable/ic_system_app_settings_new 'res/drawable-godzillaui-xxhdpi/ic_system_app_settings_new.png'
 
 .field public static final ic_system_apps_updater:I = 0x7f080aa4 # @drawable/ic_system_apps_updater 'res/drawable/ic_system_apps_updater.xml'
 
@@ -4782,7 +4782,7 @@
 
 .field public static final ic_test_tick:I = 0x7f080ab2 # @drawable/ic_test_tick 'res/drawable/ic_test_tick.xml'
 
-.field public static final ic_tether_settings:I = 0x7f080ab3 # @drawable/ic_tether_settings 'res/drawable-hdpi/ic_tether_settings.png'
+.field public static final ic_tether_settings:I = 0x7f080ab3 # @drawable/ic_tether_settings 'res/drawable-godzillaui-xhdpi/ic_tether_settings.png'
 
 .field public static final ic_text_dot:I = 0x7f080ab4 # @drawable/ic_text_dot 'res/drawable/ic_text_dot.xml'
 
@@ -4842,7 +4842,7 @@
 
 .field public static final ic_unlock_set_settings:I = 0x7f080ad0 # @drawable/ic_unlock_set_settings 'res/drawable/ic_unlock_set_settings.xml'
 
-.field public static final ic_updater_settings:I = 0x7f080ad1 # @drawable/ic_updater_settings 'res/drawable-xhdpi/ic_updater_settings.png'
+.field public static final ic_updater_settings:I = 0x7f080ad1 # @drawable/ic_updater_settings 'res/drawable-godzillaui-xhdpi/ic_updater_settings.png'
 
 .field public static final ic_updater_settings_new:I = 0x7f080ad2 # @drawable/ic_updater_settings_new 'res/drawable-hdpi/ic_updater_settings_new.png'
 
@@ -4926,7 +4926,7 @@
 
 .field public static final ic_vpn_key:I = 0x7f080afa # @drawable/ic_vpn_key 'res/drawable/ic_vpn_key.xml'
 
-.field public static final ic_vpn_settings:I = 0x7f080afb # @drawable/ic_vpn_settings 'res/drawable-hdpi/ic_vpn_settings.png'
+.field public static final ic_vpn_settings:I = 0x7f080afb # @drawable/ic_vpn_settings 'res/drawable-godzillaui-xhdpi/ic_vpn_settings.png'
 
 .field public static final ic_wallpaper:I = 0x7f080afc # @drawable/ic_wallpaper 'res/drawable/ic_wallpaper.xml'
 
@@ -5052,7 +5052,7 @@
 
 .field public static final ic_xiaoai_open:I = 0x7f080b39 # @drawable/ic_xiaoai_open 'res/drawable/ic_xiaoai_open.xml'
 
-.field public static final ic_xspace:I = 0x7f080b3a # @drawable/ic_xspace 'res/drawable-xhdpi/ic_xspace.png'
+.field public static final ic_xspace:I = 0x7f080b3a # @drawable/ic_xspace 'res/drawable-godzillaui-xhdpi/ic_xspace.png'
 
 .field public static final ic_zoom_bigger:I = 0x7f080b3b # @drawable/ic_zoom_bigger 'res/drawable-440dpi/ic_zoom_bigger.png'
 
@@ -5064,9 +5064,9 @@
 
 .field public static final icon_danger_warning:I = 0x7f080b3f # @drawable/icon_danger_warning 'res/drawable-xhdpi/icon_danger_warning.png'
 
-.field public static final icon_edit_normal_light:I = 0x7f080b40 # @drawable/icon_edit_normal_light 'res/drawable-xhdpi/icon_edit_normal_light.png'
+.field public static final icon_edit_normal_light:I = 0x7f080b40 # @drawable/icon_edit_normal_light 'res/drawable-night-xhdpi/icon_edit_normal_light.png'
 
-.field public static final icon_edit_pressed_light:I = 0x7f080b41 # @drawable/icon_edit_pressed_light 'res/drawable-xhdpi/icon_edit_pressed_light.png'
+.field public static final icon_edit_pressed_light:I = 0x7f080b41 # @drawable/icon_edit_pressed_light 'res/drawable-night-xhdpi/icon_edit_pressed_light.png'
 
 .field public static final icon_global_back:I = 0x7f080b42 # @drawable/icon_global_back 'res/drawable/icon_global_back.xml'
 
@@ -5098,13 +5098,13 @@
 
 .field public static final image_dark_mode_fold_port:I = 0x7f080b50 # @drawable/image_dark_mode_fold_port 'res/drawable/image_dark_mode_fold_port.xml'
 
-.field public static final image_dark_mode_top:I = 0x7f080b51 # @drawable/image_dark_mode_top 'res/drawable-xxhdpi/image_dark_mode_top.webp'
+.field public static final image_dark_mode_top:I = 0x7f080b51 # @drawable/image_dark_mode_top 'res/drawable-ldrtl-xxhdpi/image_dark_mode_top.webp'
 
-.field public static final image_dark_mode_top_fold_land:I = 0x7f080b52 # @drawable/image_dark_mode_top_fold_land 'res/drawable-xxhdpi/image_dark_mode_top_fold_land.webp'
+.field public static final image_dark_mode_top_fold_land:I = 0x7f080b52 # @drawable/image_dark_mode_top_fold_land 'res/drawable-ldrtl-xxhdpi/image_dark_mode_top_fold_land.webp'
 
-.field public static final image_dark_mode_top_fold_port:I = 0x7f080b53 # @drawable/image_dark_mode_top_fold_port 'res/drawable-xxhdpi/image_dark_mode_top_fold_port.webp'
+.field public static final image_dark_mode_top_fold_port:I = 0x7f080b53 # @drawable/image_dark_mode_top_fold_port 'res/drawable-ldrtl-xxhdpi/image_dark_mode_top_fold_port.webp'
 
-.field public static final image_dark_top:I = 0x7f080b54 # @drawable/image_dark_top 'res/drawable-xxhdpi-night/image_dark_top.webp'
+.field public static final image_dark_top:I = 0x7f080b54 # @drawable/image_dark_top 'res/drawable-night-xxhdpi/image_dark_top.webp'
 
 .field public static final image_light_mode:I = 0x7f080b55 # @drawable/image_light_mode 'res/drawable/image_light_mode.xml'
 
@@ -5112,11 +5112,11 @@
 
 .field public static final image_light_mode_fold_port:I = 0x7f080b57 # @drawable/image_light_mode_fold_port 'res/drawable/image_light_mode_fold_port.xml'
 
-.field public static final image_light_mode_top:I = 0x7f080b58 # @drawable/image_light_mode_top 'res/drawable-xxhdpi/image_light_mode_top.webp'
+.field public static final image_light_mode_top:I = 0x7f080b58 # @drawable/image_light_mode_top 'res/drawable-ldrtl-xxhdpi/image_light_mode_top.webp'
 
-.field public static final image_light_mode_top_fold_land:I = 0x7f080b59 # @drawable/image_light_mode_top_fold_land 'res/drawable-xxhdpi/image_light_mode_top_fold_land.webp'
+.field public static final image_light_mode_top_fold_land:I = 0x7f080b59 # @drawable/image_light_mode_top_fold_land 'res/drawable-ldrtl-xxhdpi/image_light_mode_top_fold_land.webp'
 
-.field public static final image_light_mode_top_fold_port:I = 0x7f080b5a # @drawable/image_light_mode_top_fold_port 'res/drawable-xxhdpi/image_light_mode_top_fold_port.webp'
+.field public static final image_light_mode_top_fold_port:I = 0x7f080b5a # @drawable/image_light_mode_top_fold_port 'res/drawable-ldrtl-xxhdpi/image_light_mode_top_fold_port.webp'
 
 .field public static final image_miui_nfc:I = 0x7f080b5b # @drawable/image_miui_nfc 'res/drawable/image_miui_nfc.xml'
 
@@ -5224,9 +5224,9 @@
 
 .field public static final keyboard_show_icon:I = 0x7f080b8f # @drawable/keyboard_show_icon 'res/drawable/keyboard_show_icon.webp'
 
-.field public static final keyguard_choose_password_show_selected:I = 0x7f080b90 # @drawable/keyguard_choose_password_show_selected 'res/drawable-xhdpi/keyguard_choose_password_show_selected.webp'
+.field public static final keyguard_choose_password_show_selected:I = 0x7f080b90 # @drawable/keyguard_choose_password_show_selected 'res/drawable-night-xhdpi/keyguard_choose_password_show_selected.webp'
 
-.field public static final keyguard_not_show_password:I = 0x7f080b91 # @drawable/keyguard_not_show_password 'res/drawable-440dpi-night/keyguard_not_show_password.webp'
+.field public static final keyguard_not_show_password:I = 0x7f080b91 # @drawable/keyguard_not_show_password 'res/drawable-night-440dpi/keyguard_not_show_password.webp'
 
 .field public static final keyguard_setup_btn_text_color_high_light:I = 0x7f080b92 # @drawable/keyguard_setup_btn_text_color_high_light 'res/drawable/keyguard_setup_btn_text_color_high_light.xml'
 
@@ -5238,9 +5238,9 @@
 
 .field public static final keysettings_camera:I = 0x7f080b96 # @drawable/keysettings_camera 'res/drawable-xhdpi/keysettings_camera.png'
 
-.field public static final keysettings_common_no_power:I = 0x7f080b97 # @drawable/keysettings_common_no_power 'res/drawable-xhdpi/keysettings_common_no_power.png'
+.field public static final keysettings_common_no_power:I = 0x7f080b97 # @drawable/keysettings_common_no_power 'res/drawable-night-xhdpi/keysettings_common_no_power.png'
 
-.field public static final keysettings_common_power:I = 0x7f080b98 # @drawable/keysettings_common_power 'res/drawable-xhdpi/keysettings_common_power.png'
+.field public static final keysettings_common_power:I = 0x7f080b98 # @drawable/keysettings_common_power 'res/drawable-night-xhdpi/keysettings_common_power.png'
 
 .field public static final keysettings_launch_recents:I = 0x7f080b99 # @drawable/keysettings_launch_recents 'res/drawable-xhdpi/keysettings_launch_recents.png'
 
@@ -5318,27 +5318,27 @@
 
 .field public static final long_press_power_key:I = 0x7f080bbe # @drawable/long_press_power_key 'res/drawable/long_press_power_key.webp'
 
-.field public static final longpressbottom01:I = 0x7f080bbf # @drawable/longpressbottom01 'res/drawable-xhdpi/longpressbottom01.png'
+.field public static final longpressbottom01:I = 0x7f080bbf # @drawable/longpressbottom01 'res/drawable-night-xhdpi/longpressbottom01.png'
 
-.field public static final longpressbottom02:I = 0x7f080bc0 # @drawable/longpressbottom02 'res/drawable-xhdpi/longpressbottom02.png'
+.field public static final longpressbottom02:I = 0x7f080bc0 # @drawable/longpressbottom02 'res/drawable-night-xhdpi/longpressbottom02.png'
 
-.field public static final longpressbottom03:I = 0x7f080bc1 # @drawable/longpressbottom03 'res/drawable-xhdpi/longpressbottom03.png'
+.field public static final longpressbottom03:I = 0x7f080bc1 # @drawable/longpressbottom03 'res/drawable-night-xhdpi/longpressbottom03.png'
 
-.field public static final longpressbottom04:I = 0x7f080bc2 # @drawable/longpressbottom04 'res/drawable-xhdpi/longpressbottom04.png'
+.field public static final longpressbottom04:I = 0x7f080bc2 # @drawable/longpressbottom04 'res/drawable-night-xhdpi/longpressbottom04.png'
 
-.field public static final longpressbottom05:I = 0x7f080bc3 # @drawable/longpressbottom05 'res/drawable-xhdpi/longpressbottom05.png'
+.field public static final longpressbottom05:I = 0x7f080bc3 # @drawable/longpressbottom05 'res/drawable-night-xhdpi/longpressbottom05.png'
 
-.field public static final longpressbottom06:I = 0x7f080bc4 # @drawable/longpressbottom06 'res/drawable-xhdpi/longpressbottom06.png'
+.field public static final longpressbottom06:I = 0x7f080bc4 # @drawable/longpressbottom06 'res/drawable-night-xhdpi/longpressbottom06.png'
 
-.field public static final longpressbottom07:I = 0x7f080bc5 # @drawable/longpressbottom07 'res/drawable-xhdpi/longpressbottom07.png'
+.field public static final longpressbottom07:I = 0x7f080bc5 # @drawable/longpressbottom07 'res/drawable-night-xhdpi/longpressbottom07.png'
 
-.field public static final longpressbottom08:I = 0x7f080bc6 # @drawable/longpressbottom08 'res/drawable-xhdpi/longpressbottom08.png'
+.field public static final longpressbottom08:I = 0x7f080bc6 # @drawable/longpressbottom08 'res/drawable-night-xhdpi/longpressbottom08.png'
 
-.field public static final longpressbottom09:I = 0x7f080bc7 # @drawable/longpressbottom09 'res/drawable-xhdpi/longpressbottom09.png'
+.field public static final longpressbottom09:I = 0x7f080bc7 # @drawable/longpressbottom09 'res/drawable-night-xhdpi/longpressbottom09.png'
 
-.field public static final longpressbottom10:I = 0x7f080bc8 # @drawable/longpressbottom10 'res/drawable-xhdpi/longpressbottom10.png'
+.field public static final longpressbottom10:I = 0x7f080bc8 # @drawable/longpressbottom10 'res/drawable-night-xhdpi/longpressbottom10.png'
 
-.field public static final longpressbottom11:I = 0x7f080bc9 # @drawable/longpressbottom11 'res/drawable-xhdpi/longpressbottom11.png'
+.field public static final longpressbottom11:I = 0x7f080bc9 # @drawable/longpressbottom11 'res/drawable-night-xhdpi/longpressbottom11.png'
 
 .field public static final m3_appbar_background:I = 0x7f080bca # @drawable/m3_appbar_background 'res/drawable/m3_appbar_background.xml'
 
@@ -5414,7 +5414,7 @@
 
 .field public static final memory_system_rom:I = 0x7f080bee # @drawable/memory_system_rom 'res/drawable/memory_system_rom.xml'
 
-.field public static final meta:I = 0x7f080bef # @drawable/meta 'res/drawable-xxhdpi-night/meta.webp'
+.field public static final meta:I = 0x7f080bef # @drawable/meta 'res/drawable-night-xxhdpi/meta.webp'
 
 .field public static final miheadset_key_config_close:I = 0x7f080bf0 # @drawable/miheadset_key_config_close 'res/drawable/miheadset_key_config_close.xml'
 
@@ -5428,13 +5428,13 @@
 
 .field public static final miui_face_enroll_success_name_edit:I = 0x7f080bf5 # @drawable/miui_face_enroll_success_name_edit 'res/drawable/miui_face_enroll_success_name_edit.xml'
 
-.field public static final miui_face_input_detect_left_bottom:I = 0x7f080bf6 # @drawable/miui_face_input_detect_left_bottom 'res/drawable-land-sw600dp/miui_face_input_detect_left_bottom.webp'
+.field public static final miui_face_input_detect_left_bottom:I = 0x7f080bf6 # @drawable/miui_face_input_detect_left_bottom 'res/drawable-sw600dp/miui_face_input_detect_left_bottom.webp'
 
-.field public static final miui_face_input_detect_left_top:I = 0x7f080bf7 # @drawable/miui_face_input_detect_left_top 'res/drawable-land-sw600dp/miui_face_input_detect_left_top.webp'
+.field public static final miui_face_input_detect_left_top:I = 0x7f080bf7 # @drawable/miui_face_input_detect_left_top 'res/drawable-sw600dp/miui_face_input_detect_left_top.webp'
 
-.field public static final miui_face_input_detect_right_bottom:I = 0x7f080bf8 # @drawable/miui_face_input_detect_right_bottom 'res/drawable-land-sw600dp/miui_face_input_detect_right_bottom.webp'
+.field public static final miui_face_input_detect_right_bottom:I = 0x7f080bf8 # @drawable/miui_face_input_detect_right_bottom 'res/drawable-sw600dp/miui_face_input_detect_right_bottom.webp'
 
-.field public static final miui_face_input_detect_right_top:I = 0x7f080bf9 # @drawable/miui_face_input_detect_right_top 'res/drawable-land-sw600dp/miui_face_input_detect_right_top.webp'
+.field public static final miui_face_input_detect_right_top:I = 0x7f080bf9 # @drawable/miui_face_input_detect_right_top 'res/drawable-sw600dp/miui_face_input_detect_right_top.webp'
 
 .field public static final miui_face_suggestion_detect_left_bottom:I = 0x7f080bfa # @drawable/miui_face_suggestion_detect_left_bottom 'res/drawable-xxhdpi/miui_face_suggestion_detect_left_bottom.png'
 
@@ -6302,9 +6302,9 @@
 
 .field public static final miuix_appcompat_dropdown_indicator_down:I = 0x7f080daa # @drawable/miuix_appcompat_dropdown_indicator_down 'res/drawable/miuix_appcompat_dropdown_indicator_down.xml'
 
-.field public static final miuix_appcompat_dropdown_indicator_down_n:I = 0x7f080dab # @drawable/miuix_appcompat_dropdown_indicator_down_n 'res/drawable-xhdpi/miuix_appcompat_dropdown_indicator_down_n.png'
+.field public static final miuix_appcompat_dropdown_indicator_down_n:I = 0x7f080dab # @drawable/miuix_appcompat_dropdown_indicator_down_n 'res/drawable-night-xhdpi/miuix_appcompat_dropdown_indicator_down_n.png'
 
-.field public static final miuix_appcompat_dropdown_indicator_down_p:I = 0x7f080dac # @drawable/miuix_appcompat_dropdown_indicator_down_p 'res/drawable-xhdpi/miuix_appcompat_dropdown_indicator_down_p.png'
+.field public static final miuix_appcompat_dropdown_indicator_down_p:I = 0x7f080dac # @drawable/miuix_appcompat_dropdown_indicator_down_p 'res/drawable-night-xhdpi/miuix_appcompat_dropdown_indicator_down_p.png'
 
 .field public static final miuix_appcompat_dropdown_listview_bg_dark:I = 0x7f080dad # @drawable/miuix_appcompat_dropdown_listview_bg_dark 'res/drawable/miuix_appcompat_dropdown_listview_bg_dark.xml'
 
@@ -6350,25 +6350,25 @@
 
 .field public static final miuix_appcompat_expander_close_light:I = 0x7f080dc2 # @drawable/miuix_appcompat_expander_close_light 'res/drawable/miuix_appcompat_expander_close_light.xml'
 
-.field public static final miuix_appcompat_expander_close_normal_dark:I = 0x7f080dc3 # @drawable/miuix_appcompat_expander_close_normal_dark 'res/drawable-xhdpi/miuix_appcompat_expander_close_normal_dark.9.png'
+.field public static final miuix_appcompat_expander_close_normal_dark:I = 0x7f080dc3 # @drawable/miuix_appcompat_expander_close_normal_dark 'res/drawable-ldrtl-xhdpi/miuix_appcompat_expander_close_normal_dark.9.png'
 
-.field public static final miuix_appcompat_expander_close_normal_light:I = 0x7f080dc4 # @drawable/miuix_appcompat_expander_close_normal_light 'res/drawable-xhdpi/miuix_appcompat_expander_close_normal_light.9.png'
+.field public static final miuix_appcompat_expander_close_normal_light:I = 0x7f080dc4 # @drawable/miuix_appcompat_expander_close_normal_light 'res/drawable-ldrtl-xhdpi/miuix_appcompat_expander_close_normal_light.9.png'
 
-.field public static final miuix_appcompat_expander_close_pressed_dark:I = 0x7f080dc5 # @drawable/miuix_appcompat_expander_close_pressed_dark 'res/drawable-xhdpi/miuix_appcompat_expander_close_pressed_dark.9.png'
+.field public static final miuix_appcompat_expander_close_pressed_dark:I = 0x7f080dc5 # @drawable/miuix_appcompat_expander_close_pressed_dark 'res/drawable-ldrtl-xhdpi/miuix_appcompat_expander_close_pressed_dark.9.png'
 
-.field public static final miuix_appcompat_expander_close_pressed_light:I = 0x7f080dc6 # @drawable/miuix_appcompat_expander_close_pressed_light 'res/drawable-xhdpi/miuix_appcompat_expander_close_pressed_light.9.png'
+.field public static final miuix_appcompat_expander_close_pressed_light:I = 0x7f080dc6 # @drawable/miuix_appcompat_expander_close_pressed_light 'res/drawable-ldrtl-xhdpi/miuix_appcompat_expander_close_pressed_light.9.png'
 
 .field public static final miuix_appcompat_expander_open_dark:I = 0x7f080dc7 # @drawable/miuix_appcompat_expander_open_dark 'res/drawable/miuix_appcompat_expander_open_dark.xml'
 
 .field public static final miuix_appcompat_expander_open_light:I = 0x7f080dc8 # @drawable/miuix_appcompat_expander_open_light 'res/drawable/miuix_appcompat_expander_open_light.xml'
 
-.field public static final miuix_appcompat_expander_open_normal_dark:I = 0x7f080dc9 # @drawable/miuix_appcompat_expander_open_normal_dark 'res/drawable-xhdpi/miuix_appcompat_expander_open_normal_dark.9.png'
+.field public static final miuix_appcompat_expander_open_normal_dark:I = 0x7f080dc9 # @drawable/miuix_appcompat_expander_open_normal_dark 'res/drawable-ldrtl-xhdpi/miuix_appcompat_expander_open_normal_dark.9.png'
 
-.field public static final miuix_appcompat_expander_open_normal_light:I = 0x7f080dca # @drawable/miuix_appcompat_expander_open_normal_light 'res/drawable-xhdpi/miuix_appcompat_expander_open_normal_light.9.png'
+.field public static final miuix_appcompat_expander_open_normal_light:I = 0x7f080dca # @drawable/miuix_appcompat_expander_open_normal_light 'res/drawable-ldrtl-xhdpi/miuix_appcompat_expander_open_normal_light.9.png'
 
-.field public static final miuix_appcompat_expander_open_pressed_dark:I = 0x7f080dcb # @drawable/miuix_appcompat_expander_open_pressed_dark 'res/drawable-xhdpi/miuix_appcompat_expander_open_pressed_dark.9.png'
+.field public static final miuix_appcompat_expander_open_pressed_dark:I = 0x7f080dcb # @drawable/miuix_appcompat_expander_open_pressed_dark 'res/drawable-ldrtl-xhdpi/miuix_appcompat_expander_open_pressed_dark.9.png'
 
-.field public static final miuix_appcompat_expander_open_pressed_light:I = 0x7f080dcc # @drawable/miuix_appcompat_expander_open_pressed_light 'res/drawable-xhdpi/miuix_appcompat_expander_open_pressed_light.9.png'
+.field public static final miuix_appcompat_expander_open_pressed_light:I = 0x7f080dcc # @drawable/miuix_appcompat_expander_open_pressed_light 'res/drawable-ldrtl-xhdpi/miuix_appcompat_expander_open_pressed_light.9.png'
 
 .field public static final miuix_appcompat_fab_empty_holder:I = 0x7f080dcd # @drawable/miuix_appcompat_fab_empty_holder 'res/drawable/miuix_appcompat_fab_empty_holder.xml'
 
@@ -7088,13 +7088,13 @@
 
 .field public static final msd_install_driver_download_icon_xp:I = 0x7f080f33 # @drawable/msd_install_driver_download_icon_xp 'res/drawable-xhdpi/msd_install_driver_download_icon_xp.png'
 
-.field public static final msd_install_driver_magnifier:I = 0x7f080f34 # @drawable/msd_install_driver_magnifier 'res/drawable-xhdpi/msd_install_driver_magnifier.png'
+.field public static final msd_install_driver_magnifier:I = 0x7f080f34 # @drawable/msd_install_driver_magnifier 'res/drawable-night-xhdpi/msd_install_driver_magnifier.png'
 
 .field public static final msd_install_driver_setup_xp:I = 0x7f080f35 # @drawable/msd_install_driver_setup_xp 'res/drawable-xhdpi/msd_install_driver_setup_xp.png'
 
-.field public static final msd_install_error_dot:I = 0x7f080f36 # @drawable/msd_install_error_dot 'res/drawable-xhdpi/msd_install_error_dot.png'
+.field public static final msd_install_error_dot:I = 0x7f080f36 # @drawable/msd_install_error_dot 'res/drawable-night-xhdpi/msd_install_error_dot.png'
 
-.field public static final msd_pc_info:I = 0x7f080f37 # @drawable/msd_pc_info 'res/drawable-xhdpi/msd_pc_info.png'
+.field public static final msd_pc_info:I = 0x7f080f37 # @drawable/msd_pc_info 'res/drawable-night-xhdpi/msd_pc_info.png'
 
 .field public static final msg_bubble_incoming:I = 0x7f080f38 # @drawable/msg_bubble_incoming 'res/drawable-hdpi/msg_bubble_incoming.9.png'
 
@@ -7150,7 +7150,7 @@
 
 .field public static final multi_window_cvw:I = 0x7f080f52 # @drawable/multi_window_cvw 'res/drawable-440dpi/multi_window_cvw.webp'
 
-.field public static final music_ic_headset_settings:I = 0x7f080f53 # @drawable/music_ic_headset_settings 'res/drawable-xhdpi-godzillaui/music_ic_headset_settings.png'
+.field public static final music_ic_headset_settings:I = 0x7f080f53 # @drawable/music_ic_headset_settings 'res/drawable-godzillaui-xhdpi/music_ic_headset_settings.png'
 
 .field public static final mute_drawable:I = 0x7f080f54 # @drawable/mute_drawable 'res/drawable/mute_drawable.xml'
 
@@ -7298,7 +7298,7 @@
 
 .field public static final points3_bg:I = 0x7f080f9c # @drawable/points3_bg 'res/drawable/points3_bg.webp'
 
-.field public static final popup_background:I = 0x7f080f9d # @drawable/popup_background 'res/drawable-xhdpi/popup_background.9.png'
+.field public static final popup_background:I = 0x7f080f9d # @drawable/popup_background 'res/drawable-night-xhdpi/popup_background.9.png'
 
 .field public static final power_guide_bk_bottom:I = 0x7f080f9e # @drawable/power_guide_bk_bottom 'res/drawable/power_guide_bk_bottom.xml'
 
@@ -7310,19 +7310,19 @@
 
 .field public static final power_guide_off:I = 0x7f080fa2 # @drawable/power_guide_off 'res/drawable-xxhdpi/power_guide_off.png'
 
-.field public static final powerclick01:I = 0x7f080fa3 # @drawable/powerclick01 'res/drawable-xhdpi/powerclick01.png'
+.field public static final powerclick01:I = 0x7f080fa3 # @drawable/powerclick01 'res/drawable-night-xhdpi/powerclick01.png'
 
-.field public static final powerclick02:I = 0x7f080fa4 # @drawable/powerclick02 'res/drawable-xhdpi/powerclick02.png'
+.field public static final powerclick02:I = 0x7f080fa4 # @drawable/powerclick02 'res/drawable-night-xhdpi/powerclick02.png'
 
-.field public static final powerclick03:I = 0x7f080fa5 # @drawable/powerclick03 'res/drawable-xhdpi/powerclick03.png'
+.field public static final powerclick03:I = 0x7f080fa5 # @drawable/powerclick03 'res/drawable-night-xhdpi/powerclick03.png'
 
-.field public static final powerclick04:I = 0x7f080fa6 # @drawable/powerclick04 'res/drawable-xhdpi/powerclick04.png'
+.field public static final powerclick04:I = 0x7f080fa6 # @drawable/powerclick04 'res/drawable-night-xhdpi/powerclick04.png'
 
-.field public static final powerclick05:I = 0x7f080fa7 # @drawable/powerclick05 'res/drawable-xhdpi/powerclick05.png'
+.field public static final powerclick05:I = 0x7f080fa7 # @drawable/powerclick05 'res/drawable-night-xhdpi/powerclick05.png'
 
-.field public static final powerclick06:I = 0x7f080fa8 # @drawable/powerclick06 'res/drawable-xhdpi/powerclick06.png'
+.field public static final powerclick06:I = 0x7f080fa8 # @drawable/powerclick06 'res/drawable-night-xhdpi/powerclick06.png'
 
-.field public static final powerclick07:I = 0x7f080fa9 # @drawable/powerclick07 'res/drawable-xhdpi/powerclick07.png'
+.field public static final powerclick07:I = 0x7f080fa9 # @drawable/powerclick07 'res/drawable-night-xhdpi/powerclick07.png'
 
 .field public static final preference_background:I = 0x7f080faa # @drawable/preference_background 'res/drawable/preference_background.xml'
 
@@ -7376,17 +7376,17 @@
 
 .field public static final progress_indeterminate_horizontal_material_trimmed:I = 0x7f080fc3 # @drawable/progress_indeterminate_horizontal_material_trimmed 'res/drawable/progress_indeterminate_horizontal_material_trimmed.xml'
 
-.field public static final projection_characteristic_off_screen:I = 0x7f080fc4 # @drawable/projection_characteristic_off_screen 'res/drawable-xhdpi/projection_characteristic_off_screen.webp'
+.field public static final projection_characteristic_off_screen:I = 0x7f080fc4 # @drawable/projection_characteristic_off_screen 'res/drawable-night-xhdpi/projection_characteristic_off_screen.webp'
 
-.field public static final projection_characteristic_privacy_protect:I = 0x7f080fc5 # @drawable/projection_characteristic_privacy_protect 'res/drawable-xhdpi/projection_characteristic_privacy_protect.webp'
+.field public static final projection_characteristic_privacy_protect:I = 0x7f080fc5 # @drawable/projection_characteristic_privacy_protect 'res/drawable-night-xhdpi/projection_characteristic_privacy_protect.webp'
 
-.field public static final projection_characteristic_small_window:I = 0x7f080fc6 # @drawable/projection_characteristic_small_window 'res/drawable-xhdpi/projection_characteristic_small_window.webp'
+.field public static final projection_characteristic_small_window:I = 0x7f080fc6 # @drawable/projection_characteristic_small_window 'res/drawable-night-xhdpi/projection_characteristic_small_window.webp'
 
-.field public static final projection_example_document:I = 0x7f080fc7 # @drawable/projection_example_document 'res/drawable-xhdpi/projection_example_document.webp'
+.field public static final projection_example_document:I = 0x7f080fc7 # @drawable/projection_example_document 'res/drawable-night-xhdpi/projection_example_document.webp'
 
-.field public static final projection_example_gallery:I = 0x7f080fc8 # @drawable/projection_example_gallery 'res/drawable-xhdpi/projection_example_gallery.webp'
+.field public static final projection_example_gallery:I = 0x7f080fc8 # @drawable/projection_example_gallery 'res/drawable-night-xhdpi/projection_example_gallery.webp'
 
-.field public static final projection_example_game:I = 0x7f080fc9 # @drawable/projection_example_game 'res/drawable-xhdpi/projection_example_game.webp'
+.field public static final projection_example_game:I = 0x7f080fc9 # @drawable/projection_example_game 'res/drawable-night-xhdpi/projection_example_game.webp'
 
 .field public static final protection_background:I = 0x7f080fca # @drawable/protection_background 'res/drawable/protection_background.xml'
 
@@ -7728,7 +7728,7 @@
 
 .field public static final screen_view_seek_point_highlight_white:I = 0x7f081073 # @drawable/screen_view_seek_point_highlight_white 'res/drawable-xhdpi/screen_view_seek_point_highlight_white.png'
 
-.field public static final screen_view_seek_point_normal:I = 0x7f081074 # @drawable/screen_view_seek_point_normal 'res/drawable-xhdpi/screen_view_seek_point_normal.png'
+.field public static final screen_view_seek_point_normal:I = 0x7f081074 # @drawable/screen_view_seek_point_normal 'res/drawable-night-xxhdpi/screen_view_seek_point_normal.png'
 
 .field public static final screen_view_seek_point_normal_white:I = 0x7f081075 # @drawable/screen_view_seek_point_normal_white 'res/drawable-xhdpi/screen_view_seek_point_normal_white.png'
 
@@ -7764,7 +7764,7 @@
 
 .field public static final settings_input_antenna:I = 0x7f081085 # @drawable/settings_input_antenna 'res/drawable/settings_input_antenna.xml'
 
-.field public static final settings_notify_bg:I = 0x7f081086 # @drawable/settings_notify_bg 'res/drawable-xhdpi/settings_notify_bg.9.png'
+.field public static final settings_notify_bg:I = 0x7f081086 # @drawable/settings_notify_bg 'res/drawable-night-xhdpi/settings_notify_bg.9.png'
 
 .field public static final settings_panel_background:I = 0x7f081087 # @drawable/settings_panel_background 'res/drawable/settings_panel_background.xml'
 
@@ -8004,7 +8004,7 @@
 
 .field public static final storage_wizard_sd_png:I = 0x7f0810fd # @drawable/storage_wizard_sd_png 'res/drawable-xhdpi/storage_wizard_sd_png.png'
 
-.field public static final storage_wizard_sd_png_bg:I = 0x7f0810fe # @drawable/storage_wizard_sd_png_bg 'res/drawable-xhdpi-night/storage_wizard_sd_png_bg.png'
+.field public static final storage_wizard_sd_png_bg:I = 0x7f0810fe # @drawable/storage_wizard_sd_png_bg 'res/drawable-night-xhdpi/storage_wizard_sd_png_bg.png'
 
 .field public static final stylus_battery_bg:I = 0x7f0810ff # @drawable/stylus_battery_bg 'res/drawable/stylus_battery_bg.xml'
 
@@ -8164,7 +8164,7 @@
 
 .field public static final test_level_drawable:I = 0x7f08114d # @drawable/test_level_drawable 'res/drawable/test_level_drawable.xml'
 
-.field public static final tether_no_connected_device:I = 0x7f08114e # @drawable/tether_no_connected_device 'res/drawable-xhdpi/tether_no_connected_device.png'
+.field public static final tether_no_connected_device:I = 0x7f08114e # @drawable/tether_no_connected_device 'res/drawable-night-xhdpi/tether_no_connected_device.png'
 
 .field public static final tether_settings:I = 0x7f08114f # @drawable/tether_settings 'res/drawable-hdpi/tether_settings.png'
 
@@ -8176,25 +8176,25 @@
 
 .field public static final thought_bubble:I = 0x7f081153 # @drawable/thought_bubble 'res/drawable-hdpi/thought_bubble.9.png'
 
-.field public static final three_fingers_long_press:I = 0x7f081154 # @drawable/three_fingers_long_press 'res/drawable-xhdpi/three_fingers_long_press.png'
+.field public static final three_fingers_long_press:I = 0x7f081154 # @drawable/three_fingers_long_press 'res/drawable-night-xhdpi/three_fingers_long_press.png'
 
 .field public static final three_gesture_down:I = 0x7f081155 # @drawable/three_gesture_down 'res/drawable/three_gesture_down.webp'
 
 .field public static final three_gesture_long_press:I = 0x7f081156 # @drawable/three_gesture_long_press 'res/drawable/three_gesture_long_press.webp'
 
-.field public static final threedrop01:I = 0x7f081157 # @drawable/threedrop01 'res/drawable-xhdpi/threedrop01.png'
+.field public static final threedrop01:I = 0x7f081157 # @drawable/threedrop01 'res/drawable-night-xhdpi/threedrop01.png'
 
-.field public static final threedrop02:I = 0x7f081158 # @drawable/threedrop02 'res/drawable-xhdpi/threedrop02.png'
+.field public static final threedrop02:I = 0x7f081158 # @drawable/threedrop02 'res/drawable-night-xhdpi/threedrop02.png'
 
-.field public static final threedrop03:I = 0x7f081159 # @drawable/threedrop03 'res/drawable-xhdpi/threedrop03.png'
+.field public static final threedrop03:I = 0x7f081159 # @drawable/threedrop03 'res/drawable-night-xhdpi/threedrop03.png'
 
-.field public static final threedrop04:I = 0x7f08115a # @drawable/threedrop04 'res/drawable-xhdpi/threedrop04.png'
+.field public static final threedrop04:I = 0x7f08115a # @drawable/threedrop04 'res/drawable-night-xhdpi/threedrop04.png'
 
-.field public static final threedrop05:I = 0x7f08115b # @drawable/threedrop05 'res/drawable-xhdpi/threedrop05.png'
+.field public static final threedrop05:I = 0x7f08115b # @drawable/threedrop05 'res/drawable-night-xhdpi/threedrop05.png'
 
-.field public static final threedrop06:I = 0x7f08115c # @drawable/threedrop06 'res/drawable-xhdpi/threedrop06.png'
+.field public static final threedrop06:I = 0x7f08115c # @drawable/threedrop06 'res/drawable-night-xhdpi/threedrop06.png'
 
-.field public static final threedrop07:I = 0x7f08115d # @drawable/threedrop07 'res/drawable-xhdpi/threedrop07.png'
+.field public static final threedrop07:I = 0x7f08115d # @drawable/threedrop07 'res/drawable-night-xhdpi/threedrop07.png'
 
 .field public static final thumb:I = 0x7f08115e # @drawable/thumb 'res/drawable/thumb.xml'
 
@@ -8388,7 +8388,7 @@
 
 .field public static final wifi_signal:I = 0x7f0811bd # @drawable/wifi_signal 'res/drawable/wifi_signal.xml'
 
-.field public static final wifi_wps:I = 0x7f0811be # @drawable/wifi_wps 'res/drawable-xhdpi/wifi_wps.png'
+.field public static final wifi_wps:I = 0x7f0811be # @drawable/wifi_wps 'res/drawable-night-xhdpi/wifi_wps.png'
 
 .field public static final wireless_more:I = 0x7f0811bf # @drawable/wireless_more 'res/drawable-hdpi/wireless_more.png'
 

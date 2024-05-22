@@ -1,20 +1,20 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <set android:ordering="together" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f080295"
+  <objectAnimator android:interpolator="@drawable/$$ic_cc_qs_power_save_on__3__0"
                   android:duration="67"
                   android:startOffset="0"
                   android:valueFrom="M57.37 -35 C57.37,-35 -48.77,-35 -48.77,-35 C-48.77,-35 -48.77,35.33 -48.77,35.33 C-48.77,35.33 57.37,35.33 57.37,35.33 C57.37,35.33 57.37,-35 57.37,-35c "
                   android:valueTo="M57.37 -35 C57.37,-35 -48.77,-35 -48.77,-35 C-48.77,-35 -48.77,35.33 -48.77,35.33 C-48.77,35.33 57.37,35.33 57.37,35.33 C57.37,35.33 57.37,-35 57.37,-35c "
                   android:valueType="pathType"
                   android:propertyName="pathData" />
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f080296"
+  <objectAnimator android:interpolator="@drawable/$$ic_cc_qs_power_save_on__3__1"
                   android:duration="167"
                   android:startOffset="67"
                   android:valueFrom="M57.37 -35 C57.37,-35 -48.77,-35 -48.77,-35 C-48.77,-35 -48.77,35.33 -48.77,35.33 C-48.77,35.33 57.37,35.33 57.37,35.33 C57.37,35.33 57.37,-35 57.37,-35c "
                   android:valueTo="M-20.13 -35 C-20.13,-35 -126.27,-35 -126.27,-35 C-126.27,-35 -126.27,35.33 -126.27,35.33 C-126.27,35.33 -20.13,35.33 -20.13,35.33 C-20.13,35.33 -20.13,-35 -20.13,-35c "
                   android:valueType="pathType"
                   android:propertyName="pathData" />
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f080297"
+  <objectAnimator android:interpolator="@drawable/$$ic_cc_qs_power_save_on__3__2"
                   android:duration="450"
                   android:startOffset="233"
                   android:valueFrom="M-20.13 -35 C-20.13,-35 -126.27,-35 -126.27,-35 C-126.27,-35 -126.27,35.33 -126.27,35.33 C-126.27,35.33 -20.13,35.33 -20.13,35.33 C-20.13,35.33 -20.13,-35 -20.13,-35c "

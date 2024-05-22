@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/KeyboardShortcutListSearch;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # static fields
@@ -2418,7 +2418,7 @@
     invoke-direct {v4, v5, v6}, Lcom/android/systemui/statusbar/KeyboardShortcutListSearch$KeyboardShortcutMultiMappingGroup;-><init>(Ljava/lang/CharSequence;Ljava/util/List;)V
 
     .line 1718
-    const v5, 0x7f130b57    # @string/system_multitasking_full_screen 'Switch from Split screen to full screen'
+    const v5, 0x7f130b5d    # @string/system_multitasking_full_screen 'Switch from Split screen to full screen'
 
     .line 1721
     invoke-virtual {v3, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;

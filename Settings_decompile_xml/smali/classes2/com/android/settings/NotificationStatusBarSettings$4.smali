@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/android/settings/NotificationStatusBarSettings;)V
     .locals 0
 
-    .line 422
+    .line 430
     iput-object p1, p0, Lcom/android/settings/NotificationStatusBarSettings$4;->this$0:Lcom/android/settings/NotificationStatusBarSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onPreferenceChange(Landroidx/preference/Preference;Ljava/lang/Object;)Z
     .locals 1
 
-    .line 425
+    .line 433
     iget-object p1, p0, Lcom/android/settings/NotificationStatusBarSettings$4;->this$0:Lcom/android/settings/NotificationStatusBarSettings;
 
     invoke-virtual {p1}, Lcom/android/settings/SettingsPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
@@ -55,7 +55,7 @@
 
     invoke-static {p1, v0, p2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 426
+    .line 434
     iget-object p0, p0, Lcom/android/settings/NotificationStatusBarSettings$4;->this$0:Lcom/android/settings/NotificationStatusBarSettings;
 
     invoke-static {p0}, Lcom/android/settings/NotificationStatusBarSettings;->-$$Nest$mupdateBatteryIndicator(Lcom/android/settings/NotificationStatusBarSettings;)V

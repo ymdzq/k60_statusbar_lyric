@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/qs/tiles/FlashlightTile;
 .super Lcom/android/systemui/qs/tileimpl/QSTileImpl;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/policy/FlashlightController$FlashlightListener;
@@ -65,7 +65,7 @@
     iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
 
     .line 2
-    const v0, 0x7f1309aa    # @string/quick_settings_flashlight_label 'Flashlight'
+    const v0, 0x7f1309b0    # @string/quick_settings_flashlight_label 'Flashlight'
 
     .line 4
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -167,7 +167,7 @@
     move-result-object v0
 
     .line 9
-    const v1, 0x7f1309aa    # @string/quick_settings_flashlight_label 'Flashlight'
+    const v1, 0x7f1309b0    # @string/quick_settings_flashlight_label 'Flashlight'
 
     .line 10
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -209,7 +209,7 @@
     if-nez v2, :cond_0
 
     .line 38
-    const p2, 0x7f1309a9    # @string/quick_settings_flashlight_camera_in_use 'Camera in use'
+    const p2, 0x7f1309af    # @string/quick_settings_flashlight_camera_in_use 'Camera in use'
 
     .line 40
     invoke-virtual {p0, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;

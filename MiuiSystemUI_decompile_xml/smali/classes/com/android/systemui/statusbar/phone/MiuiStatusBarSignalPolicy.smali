@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/phone/MiuiStatusBarSignalPolicy;
 .super Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lcom/android/systemui/demomode/DemoMode;
@@ -125,7 +125,7 @@
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/StatusBarSignalPolicy;->mContext:Landroid/content/Context;
 
     .line 64
-    const p3, 0x7f130b22    # @string/status_bar_no_sim 'no_sim'
+    const p3, 0x7f130b28    # @string/status_bar_no_sim 'no_sim'
 
     .line 66
     invoke-virtual {p1, p3}, Landroid/content/Context;->getString(I)Ljava/lang/String;

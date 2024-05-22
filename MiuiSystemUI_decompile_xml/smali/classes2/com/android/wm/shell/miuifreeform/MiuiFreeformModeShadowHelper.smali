@@ -1,6 +1,6 @@
 .class public Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeShadowHelper;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # static fields
@@ -24,7 +24,7 @@
 
 .field public static final MIUI_FREEFORM_SHADOW_V2_OFFSET_Y:F = 40.0f
 
-.field public static final MIUI_FREEFORM_SHADOW_V2_RADIUS:F = 120.0f
+.field public static final MIUI_FREEFORM_SHADOW_V2_RADIUS:F = 60.0f
 
 .field public static final MIUI_SMALL_FREEFORM_SHADOW_V2_ALPHA:F = 0.41f
 
@@ -34,9 +34,9 @@
 
 .field public static final MIUI_SMALL_FREEFORM_SHADOW_V2_OFFSET_X:F = 0.0f
 
-.field public static final MIUI_SMALL_FREEFORM_SHADOW_V2_OFFSET_Y:F = 120.0f
+.field public static final MIUI_SMALL_FREEFORM_SHADOW_V2_OFFSET_Y:F = 25.0f
 
-.field public static final MIUI_SMALL_FREEFORM_SHADOW_V2_RADIUS:F = 200.0f
+.field public static final MIUI_SMALL_FREEFORM_SHADOW_V2_RADIUS:F = 80.0f
 
 .field private static final TAG:Ljava/lang/String; = "MiuiFreeFormShadowHelper"
 
@@ -488,7 +488,7 @@
     move-result v4
 
     .line 69
-    const/high16 v0, 0x42f00000    # 120.0f
+    const/high16 v0, 0x42700000    # 60.0f
 
     .line 70
     invoke-static {p1, v0}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeUtils;->applyDip2Px(Landroid/content/Context;F)F
@@ -613,7 +613,7 @@
     move-result v3
 
     .line 49
-    const/high16 v0, 0x42f00000    # 120.0f
+    const/high16 v0, 0x41c80000    # 25.0f
 
     .line 50
     invoke-static {p1, v0}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeUtils;->applyDip2Px(Landroid/content/Context;F)F
@@ -622,7 +622,7 @@
     move-result v4
 
     .line 55
-    const/high16 v0, 0x43480000    # 200.0f
+    const/high16 v0, 0x42a00000    # 80.0f
 
     .line 56
     invoke-static {p1, v0}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeUtils;->applyDip2Px(Landroid/content/Context;F)F

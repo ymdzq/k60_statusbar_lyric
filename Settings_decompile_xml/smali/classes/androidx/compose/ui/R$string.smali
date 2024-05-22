@@ -18,22 +18,22 @@
 
 .field public static final indeterminate:I = 0x7f131205 # @string/indeterminate 'Partially checked'
 
-.field public static final navigation_menu:I = 0x7f13191a # @string/navigation_menu 'Navigation menu'
+.field public static final navigation_menu:I = 0x7f131922 # @string/navigation_menu 'Navigation menu'
 
-.field public static final not_selected:I = 0x7f131a0a # @string/not_selected 'Not selected'
+.field public static final not_selected:I = 0x7f131a12 # @string/not_selected 'Not selected'
 
-.field public static final off:I = 0x7f131ac5 # @string/off 'Off'
+.field public static final off:I = 0x7f131acd # @string/off 'Off'
 
-.field public static final on:I = 0x7f131ad2 # @string/on 'On'
+.field public static final on:I = 0x7f131ada # @string/on 'On'
 
-.field public static final range_end:I = 0x7f131d8b # @string/range_end 'Range end'
+.field public static final range_end:I = 0x7f131d93 # @string/range_end 'Range end'
 
-.field public static final range_start:I = 0x7f131d8c # @string/range_start 'Range start'
+.field public static final range_start:I = 0x7f131d94 # @string/range_start 'Range start'
 
-.field public static final selected:I = 0x7f132144 # @string/selected 'Selected'
+.field public static final selected:I = 0x7f13214c # @string/selected 'Selected'
 
-.field public static final switch_role:I = 0x7f132493 # @string/switch_role 'Switch'
+.field public static final switch_role:I = 0x7f13249b # @string/switch_role 'Switch'
 
-.field public static final tab:I = 0x7f1324ca # @string/tab 'Tab'
+.field public static final tab:I = 0x7f1324d2 # @string/tab 'Tab'
 
-.field public static final template_percent:I = 0x7f13250e # @string/template_percent '%1$d percent.'
+.field public static final template_percent:I = 0x7f132516 # @string/template_percent '%1$d percent.'

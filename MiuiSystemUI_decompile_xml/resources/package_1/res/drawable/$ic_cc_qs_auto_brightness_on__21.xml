@@ -1,27 +1,27 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <set android:ordering="together" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f0801a5"
+  <objectAnimator android:interpolator="@drawable/$$ic_cc_qs_auto_brightness_on__21__0"
                   android:duration="200"
                   android:startOffset="0"
                   android:valueFrom="3"
                   android:valueTo="2.4"
                   android:valueType="floatType"
                   android:propertyName="scaleX" />
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f0801a6"
+  <objectAnimator android:interpolator="@drawable/$$ic_cc_qs_auto_brightness_on__21__1"
                   android:duration="200"
                   android:startOffset="0"
                   android:valueFrom="3"
                   android:valueTo="2.4"
                   android:valueType="floatType"
                   android:propertyName="scaleY" />
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f0801a7"
+  <objectAnimator android:interpolator="@drawable/$$ic_cc_qs_auto_brightness_on__21__2"
                   android:duration="667"
                   android:startOffset="200"
                   android:valueFrom="2.4"
                   android:valueTo="3"
                   android:valueType="floatType"
                   android:propertyName="scaleX" />
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f0801a8"
+  <objectAnimator android:interpolator="@drawable/$$ic_cc_qs_auto_brightness_on__21__3"
                   android:duration="667"
                   android:startOffset="200"
                   android:valueFrom="2.4"

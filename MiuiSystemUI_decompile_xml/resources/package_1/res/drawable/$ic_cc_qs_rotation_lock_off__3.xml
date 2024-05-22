@@ -1,27 +1,27 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <set android:ordering="together" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f0802c1"
+  <objectAnimator android:interpolator="@drawable/$$ic_cc_qs_rotation_lock_off__3__0"
                   android:duration="17"
                   android:startOffset="0"
                   android:propertyName="translateXY"
                   android:pathData="M 0,0C 0,1 0,-0.583 0,0"
                   android:propertyXName="translateX"
                   android:propertyYName="translateY" />
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f0802c2"
+  <objectAnimator android:interpolator="@drawable/$$ic_cc_qs_rotation_lock_off__3__1"
                   android:duration="183"
                   android:startOffset="17"
                   android:propertyName="translateXY"
                   android:pathData="M 0,0C 0,1 0,5.417 0,6"
                   android:propertyXName="translateX"
                   android:propertyYName="translateY" />
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f0802c3"
+  <objectAnimator android:interpolator="@drawable/$$ic_cc_qs_rotation_lock_off__3__2"
                   android:duration="233"
                   android:startOffset="200"
                   android:propertyName="translateXY"
                   android:pathData="M 0,6C 0,6.583 0,3.833 0,3.5"
                   android:propertyXName="translateX"
                   android:propertyYName="translateY" />
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f0802c4"
+  <objectAnimator android:interpolator="@drawable/$$ic_cc_qs_rotation_lock_off__3__3"
                   android:duration="133"
                   android:startOffset="433"
                   android:propertyName="translateXY"

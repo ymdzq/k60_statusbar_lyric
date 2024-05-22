@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/systemui/qs/tileimpl/SubtitleArrayMapping;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # static fields
@@ -315,162 +315,162 @@
     move-result-object v1
 
     .line 249
-    const-string v2, "reduce_brightness"
+    const-string/jumbo v2, "reduce_brightness"
 
     .line 250
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 252
+    .line 253
     const v1, 0x7f0300ba    # @array/tile_states_cameratoggle
 
-    .line 255
+    .line 256
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 258
+    .line 259
     move-result-object v1
-
-    .line 261
-    const-string v2, "cameratoggle"
 
     .line 262
+    const-string v2, "cameratoggle"
+
+    .line 263
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 264
+    .line 265
     const v1, 0x7f0300c9    # @array/tile_states_mictoggle
 
-    .line 267
+    .line 268
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 270
+    .line 271
     move-result-object v1
-
-    .line 273
-    const-string v2, "mictoggle"
 
     .line 274
+    const-string v2, "mictoggle"
+
+    .line 275
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 276
+    .line 277
     const v1, 0x7f0300be    # @array/tile_states_controls
 
-    .line 279
+    .line 280
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 282
+    .line 283
     move-result-object v1
-
-    .line 285
-    const-string v2, "controls"
 
     .line 286
+    const-string v2, "controls"
+
+    .line 287
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 288
+    .line 289
     const v1, 0x7f0300d2    # @array/tile_states_wallet
 
-    .line 291
+    .line 292
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 294
+    .line 295
     move-result-object v1
-
-    .line 297
-    const-string/jumbo v2, "wallet"
 
     .line 298
+    const-string/jumbo v2, "wallet"
+
+    .line 299
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 301
+    .line 302
     const v1, 0x7f0300cc    # @array/tile_states_qr_code_scanner
 
-    .line 304
+    .line 305
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 307
+    .line 308
     move-result-object v1
-
-    .line 310
-    const-string v2, "qr_code_scanner"
 
     .line 311
+    const-string v2, "qr_code_scanner"
+
+    .line 312
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 313
+    .line 314
     const v1, 0x7f0300b7    # @array/tile_states_alarm
 
-    .line 316
+    .line 317
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 319
+    .line 320
     move-result-object v1
-
-    .line 322
-    const-string v2, "alarm"
 
     .line 323
+    const-string v2, "alarm"
+
+    .line 324
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 325
+    .line 326
     const v1, 0x7f0300cb    # @array/tile_states_onehanded
 
-    .line 328
+    .line 329
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 331
+    .line 332
     move-result-object v1
-
-    .line 334
-    const-string v2, "onehanded"
 
     .line 335
+    const-string v2, "onehanded"
+
+    .line 336
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 337
+    .line 338
     const v1, 0x7f0300bd    # @array/tile_states_color_correction
 
-    .line 340
+    .line 341
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 343
+    .line 344
     move-result-object v1
-
-    .line 346
-    const-string v2, "color_correction"
 
     .line 347
+    const-string v2, "color_correction"
+
+    .line 348
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 349
+    .line 350
     const v1, 0x7f0300c2    # @array/tile_states_dream
 
-    .line 352
+    .line 353
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 355
+    .line 356
     move-result-object v1
-
-    .line 358
-    const-string v2, "dream"
 
     .line 359
+    const-string v2, "dream"
+
+    .line 360
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 361
+    .line 362
     const v1, 0x7f0300c4    # @array/tile_states_font_scaling
 
-    .line 364
+    .line 365
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 367
+    .line 368
     move-result-object v1
 
-    .line 370
+    .line 371
     const-string v2, "font_scaling"
 
-    .line 371
+    .line 372
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 373
+    .line 374
     return-void
-    .line 376
+    .line 377
 .end method

@@ -1,6 +1,6 @@
 .class public final Lcom/android/settingslib/users/CreateUserDialogController;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # instance fields
@@ -283,7 +283,7 @@
     iget-object v1, p0, Lcom/android/settingslib/users/CreateUserDialogController;->mActivity:Landroid/app/Activity;
 
     .line 66
-    const v2, 0x7f130c29    # @string/user_new_user_name 'New user'
+    const v2, 0x7f130c2f    # @string/user_new_user_name 'New user'
 
     .line 68
     invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -524,7 +524,7 @@
     iget-object v1, v0, Lcom/android/settingslib/utils/CustomDialogHelper;->mDialogTitle:Landroid/widget/TextView;
 
     .line 243
-    const v3, 0x7f130c20    # @string/user_grant_admin_title 'Make this user an admin?'
+    const v3, 0x7f130c26    # @string/user_grant_admin_title 'Make this user an admin?'
 
     .line 245
     invoke-virtual {v1, v3}, Landroid/widget/TextView;->setText(I)V
@@ -533,7 +533,7 @@
     iget-object v1, v0, Lcom/android/settingslib/utils/CustomDialogHelper;->mDialogMessage:Landroid/widget/TextView;
 
     .line 251
-    const v3, 0x7f130c1f    # @string/user_grant_admin_message 'Admins have special privileges that other users don’t. An admin can manage all users, update or rese ...'
+    const v3, 0x7f130c25    # @string/user_grant_admin_message 'Admins have special privileges that other users don’t. An admin can manage all users, update or rese ...'
 
     .line 253
     invoke-virtual {v1, v3}, Landroid/widget/TextView;->setText(I)V
@@ -603,14 +603,14 @@
     if-eqz v3, :cond_a
 
     .line 303
-    const v7, 0x7f130c1b    # @string/user_add_user_message_short 'When you add a new user, that person needs to set up their space.\n\nAny user can update apps for all  ...'
+    const v7, 0x7f130c21    # @string/user_add_user_message_short 'When you add a new user, that person needs to set up their space.\n\nAny user can update apps for all  ...'
 
     .line 305
     goto :goto_2
 
     .line 308
     :cond_a
-    const v7, 0x7f130c1a    # @string/user_add_user_message_long 'You can share this device with other people by creating additional users. Each user has their own sp ...'
+    const v7, 0x7f130c20    # @string/user_add_user_message_long 'You can share this device with other people by creating additional users. Each user has their own sp ...'
 
     .line 309
     :goto_2
@@ -672,7 +672,7 @@
     iget-object v1, p0, Lcom/android/settingslib/utils/CustomDialogHelper;->mDialogTitle:Landroid/widget/TextView;
 
     .line 355
-    const v3, 0x7f130c1c    # @string/user_add_user_title 'Add new user?'
+    const v3, 0x7f130c22    # @string/user_add_user_title 'Add new user?'
 
     .line 357
     invoke-virtual {v1, v3}, Landroid/widget/TextView;->setText(I)V

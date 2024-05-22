@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent"
-                      android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+                      android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <com.android.settings.faceunlock.AlignTextView android:textSize="@dimen/miui_face_enroll_title_text_size"
                         android:textColor="@color/miui_face_input_normal_text_color"
                         android:id="@id/miui_face_input_title"
@@ -11,9 +11,9 @@
                         android:fontFamily="mipro-regular"
                         android:layout_marginStart="@dimen/miui_face_enroll_back_image_start"
                         android:layout_marginEnd="@dimen/miui_face_enroll_back_image_start"
-                        settings:layout_constraintEnd_toEndOf="parent"
-                        settings:layout_constraintStart_toStartOf="parent"
-                        settings:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
   <com.android.settings.faceunlock.AlignTextView android:textSize="@dimen/miui_face_enroll_first_suggestion_text_size"
                         android:textColor="@color/miui_face_input_first_suggestion_color"
                         android:id="@id/miui_face_input_first_suggestion"
@@ -24,9 +24,9 @@
                         android:fontFamily="mipro-regular"
                         android:layout_marginStart="@dimen/miui_face_enroll_first_suggestion_horizontal"
                         android:layout_marginEnd="@dimen/miui_face_enroll_first_suggestion_horizontal"
-                        settings:layout_constraintEnd_toEndOf="parent"
-                        settings:layout_constraintStart_toStartOf="parent"
-                        settings:layout_constraintTop_toBottomOf="@id/miui_face_input_title" />
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/miui_face_input_title" />
   <TextView android:textSize="@dimen/miui_face_enroll_success_title_text_size"
             android:textColor="@color/miui_face_input_normal_text_color"
             android:id="@id/miui_face_input_success_title"
@@ -39,9 +39,9 @@
             android:textAlignment="center"
             android:layout_marginStart="@dimen/miui_face_enroll_success_title_start"
             android:layout_marginEnd="@dimen/miui_face_enroll_success_title_start"
-            settings:layout_constraintEnd_toEndOf="parent"
-            settings:layout_constraintStart_toStartOf="parent"
-            settings:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
   <com.android.settings.faceunlock.AlignTextView android:textSize="@dimen/miui_face_enroll_success_message_text_size"
                         android:textColor="@color/miui_face_input_second_suggestion_color"
                         android:id="@id/miui_face_input_success_message"
@@ -52,9 +52,9 @@
                         android:text="@string/miui_face_enroll_success"
                         android:fontFamily="mipro-regular"
                         android:textAlignment="center"
-                        settings:layout_constraintEnd_toEndOf="parent"
-                        settings:layout_constraintStart_toStartOf="parent"
-                        settings:layout_constraintTop_toBottomOf="@id/miui_face_input_success_title" />
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/miui_face_input_success_title" />
   <TextView android:textSize="@dimen/miui_face_enroll_name_text_size"
             android:textColor="@color/miui_face_input_second_suggestion_color"
             android:id="@id/multi_face_name_text"
@@ -65,8 +65,8 @@
             android:text="@string/multi_face_input_success_name_title"
             android:fontFamily="mipro-regular"
             android:layout_marginStart="@dimen/miui_face_enroll_name_text_left_offset"
-            settings:layout_constraintBottom_toTopOf="@id/multi_face_name_edit"
-            settings:layout_constraintStart_toStartOf="@id/multi_face_name_edit" />
+            app:layout_constraintBottom_toTopOf="@id/multi_face_name_edit"
+            app:layout_constraintStart_toStartOf="@id/multi_face_name_edit" />
   <miuix.androidbasewidget.widget.ClearableEditText android:textSize="@dimen/miui_face_enroll_name_edittext_text_size"
                         android:textColor="@color/miui_face_input_normal_text_color"
                         android:textColorHint="@color/miui_face_input_name_edittext_hint_text_color"
@@ -79,9 +79,9 @@
                         android:layout_marginBottom="@dimen/miui_face_enroll_name_edittext_bottom"
                         android:inputType="textNoSuggestions"
                         android:imeOptions="flagNoExtractUi"
-                        settings:drawableEndCompat="?attr/clearableEditTextIcon"
-                        settings:layout_constraintBottom_toBottomOf="parent"
-                        settings:layout_constraintEnd_toEndOf="parent"
-                        settings:layout_constraintStart_toStartOf="parent"
+                        app:drawableEndCompat="?attr/clearableEditTextIcon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
                         style="@style/Widget.EditText.Dark" />
 </androidx.constraintlayout.widget.ConstraintLayout>

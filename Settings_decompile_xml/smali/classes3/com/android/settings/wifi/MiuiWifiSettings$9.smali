@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/android/settings/wifi/MiuiWifiSettings;)V
     .locals 0
 
-    .line 2102
+    .line 2120
     iput-object p1, p0, Lcom/android/settings/wifi/MiuiWifiSettings$9;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-direct {p0}, Landroid/net/ConnectivityManager$NetworkCallback;-><init>()V
@@ -35,12 +35,12 @@
 .method public onAvailable(Landroid/net/Network;)V
     .locals 2
 
-    .line 2115
+    .line 2133
     iget-object v0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$9;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-static {v0, p1}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$fputmNetwork(Lcom/android/settings/wifi/MiuiWifiSettings;Landroid/net/Network;)V
 
-    .line 2116
+    .line 2134
     invoke-static {}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -71,7 +71,7 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2117
+    .line 2135
     iget-object p0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$9;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-static {p0}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$fgetmMainHandler(Lcom/android/settings/wifi/MiuiWifiSettings;)Lcom/android/settings/wifi/MiuiWifiSettings$MainThreadHandler;
@@ -90,7 +90,7 @@
 .method public onCapabilitiesChanged(Landroid/net/Network;Landroid/net/NetworkCapabilities;)V
     .locals 1
 
-    .line 2123
+    .line 2141
     iget-object v0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$9;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-static {v0}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$fgetmNetwork(Lcom/android/settings/wifi/MiuiWifiSettings;)Landroid/net/Network;
@@ -113,14 +113,14 @@
 
     const/16 p1, 0x10
 
-    .line 2124
+    .line 2142
     invoke-virtual {p2, p1}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 2125
+    .line 2143
     invoke-static {}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -151,7 +151,7 @@
 
     invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2126
+    .line 2144
     iget-object p1, p0, Lcom/android/settings/wifi/MiuiWifiSettings$9;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-static {p1}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$fgetmMainHandler(Lcom/android/settings/wifi/MiuiWifiSettings;)Lcom/android/settings/wifi/MiuiWifiSettings$MainThreadHandler;
@@ -162,7 +162,7 @@
 
     invoke-virtual {p1, p2}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 2127
+    .line 2145
     iget-object p0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$9;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-static {p0}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$fgetmMainHandler(Lcom/android/settings/wifi/MiuiWifiSettings;)Lcom/android/settings/wifi/MiuiWifiSettings$MainThreadHandler;
@@ -180,7 +180,7 @@
 .method public onLost(Landroid/net/Network;)V
     .locals 2
 
-    .line 2105
+    .line 2123
     iget-object v0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$9;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-static {v0}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$fgetmNetwork(Lcom/android/settings/wifi/MiuiWifiSettings;)Landroid/net/Network;
@@ -201,7 +201,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 2106
+    .line 2124
     invoke-static {}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object p1
@@ -232,14 +232,14 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2107
+    .line 2125
     iget-object p1, p0, Lcom/android/settings/wifi/MiuiWifiSettings$9;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$fputmNetwork(Lcom/android/settings/wifi/MiuiWifiSettings;Landroid/net/Network;)V
 
-    .line 2108
+    .line 2126
     iget-object p1, p0, Lcom/android/settings/wifi/MiuiWifiSettings$9;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-static {p1}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$fgetmMainHandler(Lcom/android/settings/wifi/MiuiWifiSettings;)Lcom/android/settings/wifi/MiuiWifiSettings$MainThreadHandler;
@@ -250,7 +250,7 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 2109
+    .line 2127
     iget-object p0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$9;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-static {p0}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$fgetmMainHandler(Lcom/android/settings/wifi/MiuiWifiSettings;)Lcom/android/settings/wifi/MiuiWifiSettings$MainThreadHandler;

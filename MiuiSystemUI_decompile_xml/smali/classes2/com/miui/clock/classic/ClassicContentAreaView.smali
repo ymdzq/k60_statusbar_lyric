@@ -1,6 +1,6 @@
 .class public Lcom/miui/clock/classic/ClassicContentAreaView;
 .super Landroid/widget/RelativeLayout;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # instance fields
@@ -1538,7 +1538,7 @@
     iget-object p1, p0, Lcom/miui/clock/classic/ClassicContentAreaView;->mResources:Landroid/content/res/Resources;
 
     .line 19
-    const v0, 0x7f130b6a    # @string/text_slash '/'
+    const v0, 0x7f130b70    # @string/text_slash '/'
 
     .line 21
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -2733,7 +2733,7 @@
     iget-object v7, p0, Lcom/miui/clock/classic/ClassicContentAreaView;->mResources:Landroid/content/res/Resources;
 
     .line 490
-    const v8, 0x7f130bf0    # @string/ultraviolet_rays_abbreviation 'UVI'
+    const v8, 0x7f130bf6    # @string/ultraviolet_rays_abbreviation 'UVI'
 
     .line 492
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -9989,7 +9989,7 @@
     move-result-object p1
 
     .line 291
-    const v1, 0x7f130d17    # @string/wind_format '%1$s | Level %2$s'
+    const v1, 0x7f130d1d    # @string/wind_format '%1$s | Level %2$s'
 
     .line 292
     invoke-virtual {v0, v1, p1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -10123,7 +10123,7 @@
     move-result-object p1
 
     .line 386
-    const v1, 0x7f130b08    # @string/somatosensory_temperature_format 'Feels like %s°'
+    const v1, 0x7f130b0e    # @string/somatosensory_temperature_format 'Feels like %s°'
 
     .line 387
     invoke-virtual {v0, v1, p1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -10248,7 +10248,7 @@
     move-result-object p1
 
     .line 474
-    const v1, 0x7f130c39    # @string/uvi_format_desc 'Ultraviolet index: %1$s, %2$s'
+    const v1, 0x7f130c3f    # @string/uvi_format_desc 'Ultraviolet index: %1$s, %2$s'
 
     .line 475
     invoke-virtual {v0, v1, p1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -10400,7 +10400,7 @@
     move-result-object p1
 
     .line 574
-    const v1, 0x7f130a1a    # @string/rain_probability_desc 'Chance of precipitation: %s'
+    const v1, 0x7f130a20    # @string/rain_probability_desc 'Chance of precipitation: %s'
 
     .line 575
     invoke-virtual {v0, v1, p1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -10717,7 +10717,7 @@
     move-result-object p1
 
     .line 782
-    const v0, 0x7f130c64    # @string/weather_no_data 'No weather data'
+    const v0, 0x7f130c6a    # @string/weather_no_data 'No weather data'
 
     .line 783
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;

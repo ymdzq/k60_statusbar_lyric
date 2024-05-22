@@ -3,12 +3,12 @@
           android:width="26.0dp"
           android:viewportWidth="26.0"
           android:viewportHeight="26.0"
-          settings:actionIconDisabledAlpha="0.5"
-          settings:actionIconHeight="@dimen/miuix_theme_title_button_height"
-          settings:actionIconNormalAlpha="0.8"
-          settings:actionIconPressedAlpha="0.9"
-          settings:actionIconWidth="@dimen/miuix_theme_title_button_width"
-          class="miuix.theme.ActionIconDrawable" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+          app:actionIconDisabledAlpha="0.5"
+          app:actionIconHeight="@dimen/miuix_theme_title_button_height"
+          app:actionIconNormalAlpha="0.8"
+          app:actionIconPressedAlpha="0.9"
+          app:actionIconWidth="@dimen/miuix_theme_title_button_width"
+          class="miuix.theme.ActionIconDrawable" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <path android:fillColor="#ffffff"
         android:pathData="M19.5406,4.2162C20.9407,4.2162 21.6408,4.2162 22.1755,4.4887C22.6459,4.7284 23.0284,5.1108 23.2681,5.5812C23.5406,6.116 23.5406,6.8161 23.5406,8.2162V17.7838C23.5406,19.1839 23.5406,19.884 23.2681,20.4188C23.0284,20.8892 22.6459,21.2716 22.1755,21.5113C21.6408,21.7838 20.9407,21.7838 19.5406,21.7838H6.4595C5.0593,21.7838 4.3593,21.7838 3.8245,21.5113C3.3541,21.2716 2.9716,20.8892 2.732,20.4188C2.4595,19.884 2.4595,19.1839 2.4595,17.7838V8.2162C2.4595,6.8161 2.4595,6.116 2.732,5.5812C2.9716,5.1108 3.3541,4.7284 3.8245,4.4887C4.3593,4.2162 5.0593,4.2162 6.4595,4.2162H19.5406ZM20.34,5.815C20.9001,5.815 21.1801,5.815 21.394,5.924C21.5822,6.0199 21.7351,6.1729 21.831,6.361C21.94,6.5749 21.94,6.8549 21.94,7.415V18.585C21.94,19.1451 21.94,19.4251 21.831,19.639C21.7351,19.8272 21.5822,19.9801 21.394,20.076C21.1801,20.185 20.9001,20.185 20.34,20.185H12.746V5.815L20.34,5.815ZM11.146,5.815L5.66,5.815C5.0999,5.815 4.8199,5.815 4.606,5.924C4.4179,6.0199 4.2649,6.1729 4.169,6.361C4.06,6.5749 4.06,6.8549 4.06,7.415L4.06,18.585C4.06,19.1451 4.06,19.4251 4.169,19.639C4.2649,19.8272 4.4179,19.9801 4.606,20.076C4.8199,20.185 5.0999,20.185 5.66,20.185H11.146V5.815Z"
         android:fillAlpha="1.0"

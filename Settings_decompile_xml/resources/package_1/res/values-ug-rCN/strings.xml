@@ -3966,6 +3966,10 @@ b. شىياۋمى ياردەمچىسى ئارقىلىق زاپاسلانغان �
   <string name="interesting_title">قىزىقارلىق تەقلىد قىلىش</string>
   <string name="internal_auto_rotate_title">ئىچكى ئېكران يۆنىلىشىنى قۇلۇپلاش</string>
   <string name="internal_storage">ئىچىدىكى ساقلاش بوشلۇقى</string>
+  <string name="international_lyra_account_ap_summary">ئەتراپتىكى ئوخشاش ھېساباتلىق تاختا كومپىيۇتېر ياكى كومپىيۇتېردا بۇ ئۈسكۈنىدىكى قىزىق نۇقتىنى ئېچىپ ئۇلىغىلى بولىدۇ</string>
+  <string name="international_lyra_account_ap_title">تور ئورتاقلىشىش</string>
+  <string name="international_lyra_auto_connect_summary">ئەتراپتىكى ئوخشاش ھېساباتلىق ئۈسكۈنىدە تور بولمىغاندا، بۇ ئۈسكۈنىدىكى قىزىق نۇقتىنى ئاپتوماتىك ئېچىپ ئۇلىسا بولىدۇ</string>
+  <string name="international_lyra_auto_connect_title">قىزىق نۇقتىنى ئاپتوماتىك ئېچىش</string>
   <string name="internet_connectivity_panel_title">تورغا ئۇلاش</string>
   <string name="invalid_location">قاچىلاش ئورنى ئىناۋەتسىز</string>
   <string name="invalid_size_value">ئەپ بولىقىنىڭ چوڭلۇقىنى ھېسابلاشقا بولمىدى</string>
@@ -4674,9 +4678,13 @@ CONTEXTEDIT</string>
   <string name="low_label">تۆۋەن</string>
   <string name="low_storage_summary">ساقلاش بوشلۇقى يېتىشمەيدۇ. ئىشلەتكىنى %1$s، ئاشقىنى %2$s</string>
   <string name="lyra_account_ap_summary">ئەتراپتىكى ئوخشاش ھېساباتلىق تاختا كومپىيۇتېر ياكى كومپىيۇتېردا بۇ ئۈسكۈنىدىكى قىزىق نۇقتىنى ئېچىپ ئۇلىغىلى بولىدۇ</string>
+  <string name="lyra_account_ap_summary_v2">ئەتراپتىكى ئوخشاش ھېساباتلىق تاختا كومپىيۇتېر ياكى كومپىيۇتېردا بۇ ئۈسكۈنىدىكى كۆچمە تور ياكى قىزىق نۇقتىنى ئېچىپ ئۇلىغىلى بولىدۇ</string>
   <string name="lyra_account_ap_title">تور ھەمكارلىقى</string>
+  <string name="lyra_account_ap_title_v2">ئالاقە ئورتاقلىشىش</string>
   <string name="lyra_auto_connect_summary">ئەتراپتىكى ئوخشاش ھېساباتلىق ئۈسكۈنىدە تور بولمىغاندا، بۇ ئۈسكۈنىدىكى قىزىق نۇقتىنى ئاپتوماتىك ئېچىپ ئۇلىسا بولىدۇ</string>
+  <string name="lyra_auto_connect_summary_v2">ئەتراپتا ئوخشاش ھېساباتتىكى سىمسىز ئۈسكۈنە تورغا ئۇلانغاندا، مەزكۇر ئۈسكۈنىنىڭ كۆچمە تورىنى ئاپتوماتىك ئىشلىتىدۇ، ياكى قىزىق نۇقتىنى ئېچىپ ئۇلىنىدۇ</string>
   <string name="lyra_auto_connect_title">قىزىق نۇقتىنى ئاپتوماتىك ئېچىش</string>
+  <string name="lyra_auto_connect_title_v2">ئاپتوماتىك ئورتاقلىشىش</string>
   <string name="magic_list_empty_text_pad">نۆۋەتتە پارالېل كۆزنەكنى قوللايدىغان ئەپ يوق</string>
   <string name="magic_window_name_pad">پارالېل كۆزنەك</string>
   <string name="main_clear_accounts">
@@ -4864,7 +4872,7 @@ CONTEXTEDIT</string>
   <string name="mi_service">شياۋمى مۇلازىمىتى</string>
   <string name="mi_service_app_detail">ئېقىم تەپسىلاتى</string>
   <string name="mi_shopping_mall">شياۋمى دۇكىنى</string>
-  <string name="mi_smart_hub_entry_title">شياۋمى ھەمبەھىرلەش مەركىزى</string>
+  <string name="mi_smart_hub_entry_title">ئۈسكۈنە بىرلەشتۈرۈش مەركىزى</string>
   <string name="mi_smart_play_entry_title">شياۋمى مياۋبو</string>
   <string name="mi_transfer">شياۋمى يانفون ئالماشتۇرۇش</string>
   <string name="mi_upi_settings">Mi Pay ھېساباتى</string>
@@ -7807,7 +7815,7 @@ CONTEXTEDIT</string>
   <string name="sound_effects_enable_title">ئەسكەرتىش ئاۋازىنى چېكىش</string>
   <string name="sound_haptic_settings">ئاۋاز ۋە سەزگۈ</string>
   <string name="sound_mode">ئاۋاز ھالىتى</string>
-  <string name="string_0x7f132303">ئاۋاز</string>
+  <string name="string_0x7f13230b">ئاۋاز</string>
   <string name="sound_settings_tab_haptic">باسما سەزگۈ</string>
   <string name="sound_settings_tab_sound">ئاۋاز</string>
   <string name="sound_stereo_mode_summary">پەقەت كانايدا قويغاندا ئىشلىتىلىدۇ</string>
@@ -8424,6 +8432,7 @@ CONTEXTEDIT</string>
   <string name="timezone_settings">ۋاقىت رايۇنى</string>
   <string name="tip_remove_data">يۇقارقى بارلىق سانلىق مەلۇمات تازىلىنىدۇ!</string>
   <string name="title_color_calibration">رەڭ بېكىتىش</string>
+  <string name="title_device_control">ئۈسكۈنە كونترولى</string>
   <string name="title_font">خەت نۇسخىسى</string>
   <string name="title_font2">خەت نۇسخسى ۋە ئورۇنلاشتۇرۇش</string>
   <string name="title_font_current">نۆۋەتتىكى خەت نۇسخىسى</string>
@@ -8442,6 +8451,7 @@ CONTEXTEDIT</string>
   <string name="title_smart_device_control">ئۈسكۈنىنى ئەقلىي كونتروللاش</string>
   <string name="title_special_features_health_global">يۈرەك سوقۇشنى تەكشۈرۈش</string>
   <string name="title_wordless_mode">خەتسىز ھالەت</string>
+  <string name="title_xiaomi_smart_hub">ئۈسكۈنە بىرلەشتۈرۈش مەركىزى</string>
   <string name="to_close">تاقاش</string>
   <string name="to_switch_networks_disconnect_ethernet">ئەگەر تورنى ئالماشتۇرماقچى بولسىڭىز، يىتەيۋاڭ تور سىمىنى چىقىرىۋېتىڭ</string>
   <string name="toast_ap_works_wifi_display_disable">قىزىق نۇقتىنى تاقىغاندىن كېيىن ئاندىن سىمسىز ئېكرانغا يوللاشنى سىناڭ</string>
@@ -9588,8 +9598,8 @@ CONTEXTEDIT</string>
   <string name="wifi_scan_throttling">WLAN تەكشۈرۈشنى تەڭشەش</string>
   <string name="wifi_scan_throttling_summary">توك سەرپ بولۇشنى تۆۋەنلىتىدۇ ھەمدە تور ئىقتىدارىنى ياخشىلايدۇ</string>
   <string name="wifi_security">بىخەتەرلىك</string>
-  <string name="string_0x7f132a82">WAPI(CERT)</string>
-  <string name="string_0x7f132a83">WAPI(PSK)</string>
+  <string name="string_0x7f132a8c">WAPI(CERT)</string>
+  <string name="string_0x7f132a8d">WAPI(PSK)</string>
   <string name="wifi_security_eap">WPA/WPA2/WPA3-Enterprise</string>
   <string name="wifi_security_eap_suiteb">WPA3-Enterprise 192 خانىلىق</string>
   <string name="wifi_security_eap_wpa">WPA-Enterprise</string>

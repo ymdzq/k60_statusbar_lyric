@@ -2,8 +2,8 @@
 <miuix.springback.view.SpringBackLayout android:id="@id/id_0x7f0a0a19"
                       android:layout_width="fill_parent"
                       android:layout_height="fill_parent"
-                      settings:scrollOrientation="vertical"
-                      settings:scrollableView="@id/id_0x7f0a093b" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+                      app:scrollOrientation="vertical"
+                      app:scrollableView="@id/id_0x7f0a093b" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <androidx.core.widget.NestedScrollView android:id="@id/id_0x7f0a093b"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"

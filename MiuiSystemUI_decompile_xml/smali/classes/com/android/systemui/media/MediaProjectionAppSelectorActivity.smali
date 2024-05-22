@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/media/MediaProjectionAppSelectorActivity;
 .super Lcom/android/internal/app/ChooserActivity;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lcom/android/systemui/mediaprojection/appselector/MediaProjectionAppSelectorView;
@@ -472,7 +472,7 @@
     invoke-virtual {v0, v6, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
     .line 82
-    const v5, 0x7f130a5d    # @string/screen_share_permission_app_selector_title 'Share or record an app'
+    const v5, 0x7f130a63    # @string/screen_share_permission_app_selector_title 'Share or record an app'
 
     .line 85
     invoke-virtual {v2, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;

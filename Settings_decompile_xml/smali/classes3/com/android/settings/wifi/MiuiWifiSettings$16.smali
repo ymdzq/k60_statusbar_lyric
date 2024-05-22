@@ -32,7 +32,7 @@
         }
     .end annotation
 
-    .line 2338
+    .line 2356
     iput-object p1, p0, Lcom/android/settings/wifi/MiuiWifiSettings$16;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     iput-object p2, p0, Lcom/android/settings/wifi/MiuiWifiSettings$16;->val$ap:Lcom/xiaomi/mirror/synergy/MiuiSynergySdk$SameAccountAccessPoint;
@@ -47,12 +47,12 @@
 .method public run()V
     .locals 4
 
-    .line 2341
+    .line 2359
     iget-object v0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$16;->val$ap:Lcom/xiaomi/mirror/synergy/MiuiSynergySdk$SameAccountAccessPoint;
 
     if-eqz v0, :cond_2
 
-    .line 2342
+    .line 2360
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -87,7 +87,7 @@
 
     iget-object v1, p0, Lcom/android/settings/wifi/MiuiWifiSettings$16;->val$ap:Lcom/xiaomi/mirror/synergy/MiuiSynergySdk$SameAccountAccessPoint;
 
-    .line 2343
+    .line 2361
     invoke-virtual {v1}, Lcom/xiaomi/mirror/synergy/MiuiSynergySdk$SameAccountAccessPoint;->isIs5G()Z
 
     move-result v1
@@ -98,7 +98,7 @@
 
     move-result-object v0
 
-    .line 2344
+    .line 2362
     invoke-static {}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$sfgetTAG()Ljava/lang/String;
 
     move-result-object v1
@@ -119,14 +119,14 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2345
+    .line 2363
     iget-object v0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$16;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-static {v0}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$fgetmSameAccountAccessPoint(Lcom/android/settings/wifi/MiuiWifiSettings;)Lcom/xiaomi/mirror/synergy/MiuiSynergySdk$SameAccountAccessPoint;
 
     move-result-object v0
 
-    .line 2346
+    .line 2364
     iget-object v1, p0, Lcom/android/settings/wifi/MiuiWifiSettings$16;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     iget-object v2, p0, Lcom/android/settings/wifi/MiuiWifiSettings$16;->val$ap:Lcom/xiaomi/mirror/synergy/MiuiSynergySdk$SameAccountAccessPoint;
@@ -135,14 +135,14 @@
 
     if-nez v0, :cond_0
 
-    .line 2348
+    .line 2366
     iget-object v0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$16;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-virtual {v0}, Lcom/android/settings/wifi/MiuiWifiSettings;->updateWifiEntryPreferences()V
 
     goto :goto_0
 
-    .line 2349
+    .line 2367
     :cond_0
     iget-object v0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$16;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
@@ -152,7 +152,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 2350
+    .line 2368
     iget-object v0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$16;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-static {v0}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$fgetmVirtualAPPreference(Lcom/android/settings/wifi/MiuiWifiSettings;)Lcom/android/settings/wifi/MiuiVirtualWifiEntryPreference;
@@ -167,7 +167,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/settings/wifi/MiuiVirtualWifiEntryPreference;->updateBatteryLevel(I)V
 
-    .line 2353
+    .line 2371
     :cond_1
     :goto_0
     iget-object v0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$16;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
@@ -178,7 +178,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 2354
+    .line 2372
     iget-object v0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$16;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-static {v0}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$fgetmSameAccountAPPreference(Lcom/android/settings/wifi/MiuiWifiSettings;)Lcom/android/settings/wifi/MiuiWifiEntryPreference;
@@ -195,13 +195,13 @@
 
     goto :goto_1
 
-    .line 2358
+    .line 2376
     :cond_2
     iget-object v0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$16;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     invoke-static {v0}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$mremoveVirtualAPPreference(Lcom/android/settings/wifi/MiuiWifiSettings;)V
 
-    .line 2359
+    .line 2377
     iget-object p0, p0, Lcom/android/settings/wifi/MiuiWifiSettings$16;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     const/4 v0, 0x0

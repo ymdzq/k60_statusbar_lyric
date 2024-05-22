@@ -6,7 +6,7 @@
                       android:clipToPadding="false"
                       android:layout_width="fill_parent"
                       android:layout_height="fill_parent"
-                      android:layoutDirection="ltr" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto">
+                      android:layoutDirection="ltr" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:androidprv="http://schemas.android.com/apk/res-auto">
   <include layout="@layout/miui_keyguard_face_unlock_view" />
   <com.android.keyguard.widget.MiuiBouncerKeyguardMessageArea android:textSize="@dimen/secure_keyguard_bouncer_message_title_text_size"
                         android:textColor="@color/secure_keyguard_bouncer_message_title_text_color"
@@ -59,7 +59,7 @@
                             android:hint="@string/input_password_hint_text"
                             android:layout_centerHorizontal="true"
                             android:contentDescription="@string/keyguard_accessibility_pin_area"
-                            systemui:r0x7f040669="@integer/scaled_password_text_size" />
+                            androidprv:r0x7f040669="@integer/scaled_password_text_size" />
       <com.android.keyguard.NumPadButton android:id="@id/key_enter"
                             android:visibility="gone"
                             android:layout_width="0.0dp"
@@ -81,20 +81,20 @@
                             android:layout_width="0.0px"
                             android:layout_height="fill_parent"
                             android:layout_weight="1.0"
-                            systemui:r0x7f040256="1"
-                            systemui:r0x7f040833="@id/pinEntry" />
+                            androidprv:r0x7f040256="1"
+                            androidprv:r0x7f040833="@id/pinEntry" />
       <com.android.keyguard.NumPadKey android:id="@id/key2"
                             android:layout_width="0.0px"
                             android:layout_height="fill_parent"
                             android:layout_weight="1.0"
-                            systemui:r0x7f040256="2"
-                            systemui:r0x7f040833="@id/pinEntry" />
+                            androidprv:r0x7f040256="2"
+                            androidprv:r0x7f040833="@id/pinEntry" />
       <com.android.keyguard.NumPadKey android:id="@id/key3"
                             android:layout_width="0.0px"
                             android:layout_height="fill_parent"
                             android:layout_weight="1.0"
-                            systemui:r0x7f040256="3"
-                            systemui:r0x7f040833="@id/pinEntry" />
+                            androidprv:r0x7f040256="3"
+                            androidprv:r0x7f040833="@id/pinEntry" />
     </LinearLayout>
     <LinearLayout android:orientation="horizontal"
                   android:id="@id/row2"
@@ -110,20 +110,20 @@
                             android:layout_width="0.0px"
                             android:layout_height="fill_parent"
                             android:layout_weight="1.0"
-                            systemui:r0x7f040256="4"
-                            systemui:r0x7f040833="@id/pinEntry" />
+                            androidprv:r0x7f040256="4"
+                            androidprv:r0x7f040833="@id/pinEntry" />
       <com.android.keyguard.NumPadKey android:id="@id/key5"
                             android:layout_width="0.0px"
                             android:layout_height="fill_parent"
                             android:layout_weight="1.0"
-                            systemui:r0x7f040256="5"
-                            systemui:r0x7f040833="@id/pinEntry" />
+                            androidprv:r0x7f040256="5"
+                            androidprv:r0x7f040833="@id/pinEntry" />
       <com.android.keyguard.NumPadKey android:id="@id/key6"
                             android:layout_width="0.0px"
                             android:layout_height="fill_parent"
                             android:layout_weight="1.0"
-                            systemui:r0x7f040256="6"
-                            systemui:r0x7f040833="@id/pinEntry" />
+                            androidprv:r0x7f040256="6"
+                            androidprv:r0x7f040833="@id/pinEntry" />
     </LinearLayout>
     <LinearLayout android:orientation="horizontal"
                   android:id="@id/row3"
@@ -139,20 +139,20 @@
                             android:layout_width="0.0px"
                             android:layout_height="fill_parent"
                             android:layout_weight="1.0"
-                            systemui:r0x7f040256="7"
-                            systemui:r0x7f040833="@id/pinEntry" />
+                            androidprv:r0x7f040256="7"
+                            androidprv:r0x7f040833="@id/pinEntry" />
       <com.android.keyguard.NumPadKey android:id="@id/key8"
                             android:layout_width="0.0px"
                             android:layout_height="fill_parent"
                             android:layout_weight="1.0"
-                            systemui:r0x7f040256="8"
-                            systemui:r0x7f040833="@id/pinEntry" />
+                            androidprv:r0x7f040256="8"
+                            androidprv:r0x7f040833="@id/pinEntry" />
       <com.android.keyguard.NumPadKey android:id="@id/key9"
                             android:layout_width="0.0px"
                             android:layout_height="fill_parent"
                             android:layout_weight="1.0"
-                            systemui:r0x7f040256="9"
-                            systemui:r0x7f040833="@id/pinEntry" />
+                            androidprv:r0x7f040256="9"
+                            androidprv:r0x7f040833="@id/pinEntry" />
     </LinearLayout>
     <LinearLayout android:orientation="horizontal"
                   android:id="@id/row4"
@@ -171,8 +171,8 @@
                             android:layout_width="0.0px"
                             android:layout_height="fill_parent"
                             android:layout_weight="1.0"
-                            systemui:r0x7f040256="0"
-                            systemui:r0x7f040833="@id/pinEntry" />
+                            androidprv:r0x7f040256="0"
+                            androidprv:r0x7f040833="@id/pinEntry" />
       <FrameLayout android:id="@id/delete_container"
                    android:paddingBottom="8.0dp"
                    android:layout_width="0.0px"

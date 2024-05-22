@@ -6,7 +6,7 @@
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
               android:paddingStart="@dimen/controls_management_side_padding"
-              android:paddingEnd="@dimen/controls_management_side_padding" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto">
+              android:paddingEnd="@dimen/controls_management_side_padding" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <TextView android:textAppearance="@style/TextAppearance.Control.Management.Title"
             android:id="@id/id_0x7f0a09a2"
             android:layout_width="wrap_content"
@@ -38,18 +38,18 @@
               android:layout_width="wrap_content"
               android:layout_height="fill_parent"
               android:text="@string/controls_favorite_see_other_apps"
-              systemui:r0x7f040429="0"
-              systemui:r0x7f040443="0"
-              systemui:r0x7f040447="0"
+              app:r0x7f040429="0"
+              app:r0x7f040443="0"
+              app:r0x7f040447="0"
               style="@android:style/Widget.DeviceDefault.Button.Borderless.Colored" />
       <Button android:gravity="center_vertical"
               android:id="@id/rearrange"
               android:visibility="gone"
               android:layout_width="wrap_content"
               android:layout_height="fill_parent"
-              systemui:r0x7f040429="0"
-              systemui:r0x7f040443="0"
-              systemui:r0x7f040447="0"
+              app:r0x7f040429="0"
+              app:r0x7f040443="0"
+              app:r0x7f040447="0"
               style="@android:style/Widget.DeviceDefault.Button.Borderless.Colored" />
       <Button android:gravity="center_vertical"
               android:id="@id/addControls"
@@ -57,17 +57,17 @@
               android:layout_width="wrap_content"
               android:layout_height="fill_parent"
               android:text="@string/controls_favorite_add_controls"
-              systemui:r0x7f040429="0"
-              systemui:r0x7f040443="0"
-              systemui:r0x7f040447="0"
+              app:r0x7f040429="0"
+              app:r0x7f040443="0"
+              app:r0x7f040447="0"
               style="@android:style/Widget.DeviceDefault.Button.Borderless.Colored" />
       <Button android:id="@id/done"
               android:layout_width="wrap_content"
               android:layout_height="fill_parent"
               android:text="@string/save"
-              systemui:r0x7f040429="0"
-              systemui:r0x7f04042f="0"
-              systemui:r0x7f040447="0"
+              app:r0x7f040429="0"
+              app:r0x7f04042f="0"
+              app:r0x7f040447="0"
               style="@android:style/Widget.DeviceDefault.Button.Colored" />
     </androidx.constraintlayout.widget.ConstraintLayout>
   </FrameLayout>

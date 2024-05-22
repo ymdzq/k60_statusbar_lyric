@@ -1,6 +1,6 @@
 .class public Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # static fields
@@ -365,64 +365,64 @@
     move-object/from16 v4, p5
 
     .line 10
-    move-object/from16 v5, p7
+    move-object/from16 v7, p7
 
     .line 12
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     .line 14
-    const v6, 0x3f666666    # 0.9f
+    const v5, 0x3f666666    # 0.9f
 
     .line 17
-    iput v6, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;->mChangeLayerRatio:F
+    iput v5, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;->mChangeLayerRatio:F
 
     .line 20
-    const v6, 0x3ebbbbbc
+    const v5, 0x3ebbbbbc
 
     .line 22
-    iput v6, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;->mAppLayerRatio:F
+    iput v5, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;->mAppLayerRatio:F
 
     .line 25
-    const v6, 0x3e6eeeef
+    const v5, 0x3e6eeeef
 
     .line 27
-    iput v6, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;->mAppLayerFreeformRatio:F
+    iput v5, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;->mAppLayerFreeformRatio:F
 
     .line 30
-    const v6, 0x3eddddde
+    const v5, 0x3eddddde
 
     .line 32
-    iput v6, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;->mChangeLayerFreeformWidthRatio:F
+    iput v5, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;->mChangeLayerFreeformWidthRatio:F
 
     .line 35
-    const v6, 0x3f19999a    # 0.6f
+    const v5, 0x3f19999a    # 0.6f
 
     .line 37
-    iput v6, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;->mChangeLayerFreeformHeightRatio:F
+    iput v5, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;->mChangeLayerFreeformHeightRatio:F
 
     .line 40
-    const/4 v6, 0x0
+    const/4 v5, 0x0
 
     .line 42
-    iput-boolean v6, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;->mTypeChange:Z
+    iput-boolean v5, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;->mTypeChange:Z
 
     .line 43
-    new-instance v7, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow$TypeAnimInfo;
+    new-instance v6, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow$TypeAnimInfo;
 
     .line 45
-    invoke-direct {v7, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow$TypeAnimInfo;-><init>(I)V
+    invoke-direct {v6, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow$TypeAnimInfo;-><init>(I)V
 
     .line 47
-    iput-object v7, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;->mTypeAnimInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow$TypeAnimInfo;
+    iput-object v6, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;->mTypeAnimInfo:Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow$TypeAnimInfo;
 
     .line 50
-    new-instance v7, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow$FolmeControl;
+    new-instance v6, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow$FolmeControl;
 
     .line 52
-    invoke-direct {v7, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow$FolmeControl;-><init>(I)V
+    invoke-direct {v6, v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow$FolmeControl;-><init>(I)V
 
     .line 54
-    iput-object v7, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;->mFolmeControl:Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow$FolmeControl;
+    iput-object v6, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;->mFolmeControl:Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow$FolmeControl;
 
     .line 57
     new-instance v8, Landroid/graphics/Paint;
@@ -461,13 +461,13 @@
     iput-object v8, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;->mFreeformRect:Landroid/graphics/RectF;
 
     .line 85
-    iput-boolean v6, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;->mDrawScheduled:Z
+    iput-boolean v5, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;->mDrawScheduled:Z
 
     .line 87
-    iput-boolean v6, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;->mFinalAnimationStarted:Z
+    iput-boolean v5, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;->mFinalAnimationStarted:Z
 
     .line 89
-    iput-boolean v6, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;->mDestroyed:Z
+    iput-boolean v5, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;->mDestroyed:Z
 
     .line 91
     new-instance v9, Landroid/graphics/RenderNode;
@@ -563,7 +563,7 @@
     move-object v12, v14
 
     .line 158
-    move-object v6, v14
+    move-object v5, v14
 
     .line 159
     move-object/from16 v14, p3
@@ -575,16 +575,16 @@
     invoke-direct/range {v12 .. v17}, Landroid/graphics/BLASTBufferQueue;-><init>(Ljava/lang/String;Landroid/view/SurfaceControl;III)V
 
     .line 164
-    iput-object v6, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;->mBBQ:Landroid/graphics/BLASTBufferQueue;
+    iput-object v5, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;->mBBQ:Landroid/graphics/BLASTBufferQueue;
 
     .line 167
-    invoke-virtual {v6}, Landroid/graphics/BLASTBufferQueue;->createSurface()Landroid/view/Surface;
+    invoke-virtual {v5}, Landroid/graphics/BLASTBufferQueue;->createSurface()Landroid/view/Surface;
 
     .line 169
-    move-result-object v6
+    move-result-object v5
 
     .line 172
-    iput-object v6, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;->mSurface:Landroid/view/Surface;
+    iput-object v5, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;->mSurface:Landroid/view/Surface;
 
     .line 173
     new-instance v10, Landroid/view/ThreadedRenderer$SimpleRenderer;
@@ -593,7 +593,7 @@
     const-string v11, "MiuiDragShadowRender"
 
     .line 177
-    invoke-direct {v10, v1, v11, v6}, Landroid/view/ThreadedRenderer$SimpleRenderer;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/view/Surface;)V
+    invoke-direct {v10, v1, v11, v5}, Landroid/view/ThreadedRenderer$SimpleRenderer;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/view/Surface;)V
 
     .line 179
     iput-object v10, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;->mRenderer:Landroid/view/ThreadedRenderer$SimpleRenderer;
@@ -605,31 +605,31 @@
     iput-object v3, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;->mTouchPosition:Landroid/graphics/PointF;
 
     .line 187
-    iget v6, v3, Landroid/graphics/PointF;->x:F
+    iget v5, v3, Landroid/graphics/PointF;->x:F
 
     .line 189
-    iput v6, v7, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow$FolmeControl;->positionX:F
+    iput v5, v6, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow$FolmeControl;->positionX:F
 
     .line 191
-    iget v6, v3, Landroid/graphics/PointF;->y:F
+    iget v5, v3, Landroid/graphics/PointF;->y:F
 
     .line 193
-    iput v6, v7, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow$FolmeControl;->positionY:F
+    iput v5, v6, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow$FolmeControl;->positionY:F
 
     .line 195
-    new-instance v6, Landroid/graphics/PointF;
+    new-instance v5, Landroid/graphics/PointF;
 
     .line 197
     invoke-virtual/range {p6 .. p6}, Landroid/graphics/Rect;->exactCenterX()F
 
     .line 199
-    move-result v7
+    move-result v6
 
     .line 202
     iget v9, v3, Landroid/graphics/PointF;->x:F
 
     .line 203
-    sub-float/2addr v7, v9
+    sub-float/2addr v6, v9
 
     .line 205
     invoke-virtual/range {p6 .. p6}, Landroid/graphics/Rect;->exactCenterY()F
@@ -644,10 +644,10 @@
     sub-float/2addr v9, v3
 
     .line 212
-    invoke-direct {v6, v7, v9}, Landroid/graphics/PointF;-><init>(FF)V
+    invoke-direct {v5, v6, v9}, Landroid/graphics/PointF;-><init>(FF)V
 
     .line 213
-    iput-object v6, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;->mTouchOffset:Landroid/graphics/PointF;
+    iput-object v5, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;->mTouchOffset:Landroid/graphics/PointF;
 
     .line 216
     iput-object v4, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;->mAppBitmap:Landroid/graphics/Bitmap;
@@ -662,10 +662,10 @@
     move-result v3
 
     .line 225
-    const/16 v6, 0x33
+    const/16 v5, 0x33
 
     .line 226
-    invoke-static {v3, v6}, Lcom/android/internal/graphics/ColorUtils;->setAlphaComponent(II)I
+    invoke-static {v3, v5}, Lcom/android/internal/graphics/ColorUtils;->setAlphaComponent(II)I
 
     .line 228
     move-result v3
@@ -677,10 +677,10 @@
     sget-object v3, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     .line 234
-    const/4 v6, 0x1
+    const/4 v9, 0x1
 
     .line 236
-    invoke-virtual {v4, v3, v6}, Landroid/graphics/Bitmap;->copy(Landroid/graphics/Bitmap$Config;Z)Landroid/graphics/Bitmap;
+    invoke-virtual {v4, v3, v9}, Landroid/graphics/Bitmap;->copy(Landroid/graphics/Bitmap$Config;Z)Landroid/graphics/Bitmap;
 
     .line 237
     move-result-object v3
@@ -689,16 +689,16 @@
     iput-object v3, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;->mCopyAppBitmap:Landroid/graphics/Bitmap;
 
     .line 241
-    new-instance v7, Landroid/graphics/Canvas;
+    new-instance v5, Landroid/graphics/Canvas;
 
     .line 243
-    invoke-direct {v7, v3}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
+    invoke-direct {v5, v3}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
     .line 245
     const v3, -0xf000001
 
     .line 248
-    invoke-virtual {v7, v3}, Landroid/graphics/Canvas;->drawColor(I)V
+    invoke-virtual {v5, v3}, Landroid/graphics/Canvas;->drawColor(I)V
 
     .line 251
     new-instance v3, Landroid/graphics/Rect;
@@ -707,7 +707,7 @@
     invoke-virtual/range {p5 .. p5}, Landroid/graphics/Bitmap;->getWidth()I
 
     .line 256
-    move-result v7
+    move-result v5
 
     .line 259
     invoke-virtual/range {p5 .. p5}, Landroid/graphics/Bitmap;->getHeight()I
@@ -716,10 +716,10 @@
     move-result v4
 
     .line 263
-    const/4 v9, 0x0
+    const/4 v6, 0x0
 
     .line 264
-    invoke-direct {v3, v9, v9, v7, v4}, Landroid/graphics/Rect;-><init>(IIII)V
+    invoke-direct {v3, v6, v6, v5, v4}, Landroid/graphics/Rect;-><init>(IIII)V
 
     .line 265
     iput-object v3, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;->mAppSourceRect:Landroid/graphics/Rect;
@@ -731,7 +731,7 @@
     iput-object v3, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;->mIconRect:Landroid/graphics/Rect;
 
     .line 272
-    iput-object v5, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;->mAnimExecutor:Ljava/util/concurrent/Executor;
+    iput-object v7, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;->mAnimExecutor:Ljava/util/concurrent/Executor;
 
     .line 274
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -980,10 +980,10 @@
     move-result-object v4
 
     .line 460
-    const/4 v7, 0x0
+    const/4 v5, 0x0
 
     .line 461
-    invoke-virtual {v4, v3, v7}, Landroid/content/pm/PackageManager;->resolveActivity(Landroid/content/Intent;I)Landroid/content/pm/ResolveInfo;
+    invoke-virtual {v4, v3, v5}, Landroid/content/pm/PackageManager;->resolveActivity(Landroid/content/Intent;I)Landroid/content/pm/ResolveInfo;
 
     .line 462
     move-result-object v3
@@ -1006,32 +1006,47 @@
 
     .line 473
     :goto_0
-    invoke-static/range {p1 .. p1}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->isLandscape(Landroid/content/Context;)Z
+    move v4, v3
 
     .line 474
-    move-result v4
+    const/4 v3, 0x0
 
-    .line 477
-    invoke-static {v1, v2, v3, v4, v8}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->getFreeformBoundsAndScale(Landroid/content/Context;Ljava/lang/String;IZLandroid/graphics/RectF;)F
+    .line 475
+    invoke-static/range {p1 .. p1}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->isLandscape(Landroid/content/Context;)Z
 
-    .line 478
-    move-result v1
+    .line 476
+    move-result v5
 
-    .line 481
-    iput v1, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;->mFreeformScale:F
+    .line 479
+    move-object/from16 v1, p1
+
+    .line 480
+    move-object/from16 v2, p2
 
     .line 482
-    new-instance v1, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow$$ExternalSyntheticLambda1;
+    move-object v6, v8
 
     .line 484
-    invoke-direct {v1, v0, v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow$$ExternalSyntheticLambda1;-><init>(Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;I)V
+    invoke-static/range {v1 .. v6}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->getFreeformBoundsAndScale(Landroid/content/Context;Ljava/lang/String;Landroid/app/TaskInfo;IZLandroid/graphics/RectF;)F
 
-    .line 486
-    invoke-interface {v5, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    .line 485
+    move-result v1
+
+    .line 488
+    iput v1, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;->mFreeformScale:F
 
     .line 489
+    new-instance v1, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow$$ExternalSyntheticLambda1;
+
+    .line 491
+    invoke-direct {v1, v0, v9}, Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow$$ExternalSyntheticLambda1;-><init>(Lcom/android/wm/shell/miuimultiwinswitch/miuidraganddrop/MiuiDragShadow;I)V
+
+    .line 493
+    invoke-interface {v7, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    .line 496
     return-void
-    .line 492
+    .line 499
 .end method
 
 .method private animateToHide(Ljava/lang/Runnable;)V

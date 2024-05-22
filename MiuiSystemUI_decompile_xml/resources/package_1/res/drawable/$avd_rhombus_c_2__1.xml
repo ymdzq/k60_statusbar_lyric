@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <set android:ordering="together" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f08004f"
+  <objectAnimator android:interpolator="@drawable/$$avd_rhombus_c_2__1__0"
                   android:duration="500"
                   android:startOffset="0"
                   android:valueFrom="M57.43 76.91 C71.83,76.91 81.43,85.71 81.43,98.91 C81.43,110.31 75.03,121.71 56.63,141.71 C56.63,141.71 15.63,186.31 15.63,186.31 C11.63,190.71 9.63,195.91 12.03,201.91 C13.63,205.51 17.83,209.51 24.03,209.51 C24.03,209.51 97.03,209.51 97.03,209.51 C103.23,209.51 107.63,204.71 107.63,199.11 C107.63,193.71 103.63,188.51 97.03,188.51 C97.03,188.51 42.63,188.51 42.63,188.51 C42.63,188.51 76.03,152.11 76.03,152.11 C96.63,129.91 104.63,113.91 104.63,98.11 C104.63,72.91 85.43,56.11 57.83,56.11 C38.63,56.11 23.63,64.51 14.63,78.31 C10.83,83.71 13.03,90.11 16.63,93.11 C21.63,96.91 28.23,96.11 33.42,89.91 C40.03,81.11 48.22,76.91 57.43,76.91c "

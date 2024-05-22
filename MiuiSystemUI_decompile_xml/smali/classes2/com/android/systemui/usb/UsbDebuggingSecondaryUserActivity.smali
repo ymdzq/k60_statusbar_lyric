@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/usb/UsbDebuggingSecondaryUserActivity;
 .super Lcom/android/internal/app/AlertActivity;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Landroid/content/DialogInterface$OnClickListener;
@@ -87,7 +87,7 @@
     iget-object p1, p0, Lcom/android/internal/app/AlertActivity;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
 
     .line 31
-    const v0, 0x7f130c0b    # @string/usb_debugging_secondary_user_title 'USB debugging not allowed'
+    const v0, 0x7f130c11    # @string/usb_debugging_secondary_user_title 'USB debugging not allowed'
 
     .line 33
     invoke-virtual {p0, v0}, Lcom/android/internal/app/AlertActivity;->getString(I)Ljava/lang/String;
@@ -99,7 +99,7 @@
     iput-object v0, p1, Lcom/android/internal/app/AlertController$AlertParams;->mTitle:Ljava/lang/CharSequence;
 
     .line 40
-    const v0, 0x7f130c0a    # @string/usb_debugging_secondary_user_message 'The user currently signed in to this device can't turn on USB debugging. To use this feature, switch ...'
+    const v0, 0x7f130c10    # @string/usb_debugging_secondary_user_message 'The user currently signed in to this device can't turn on USB debugging. To use this feature, switch ...'
 
     .line 42
     invoke-virtual {p0, v0}, Lcom/android/internal/app/AlertActivity;->getString(I)Ljava/lang/String;

@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/systemui/statusbar/notification/collection/notifcollection/SelfTrackingLifetimeExtender;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/notification/collection/notifcollection/NotifLifetimeExtender;
@@ -622,13 +622,13 @@
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/notifcollection/SelfTrackingLifetimeExtender;->tag:Ljava/lang/String;
 
     .line 10
-    const-string v0, "reentrant code while ending a lifetime extension"
+    const-string/jumbo v0, "reentrant code while ending a lifetime extension"
 
     .line 12
     invoke-static {p0, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 14
+    .line 15
     :cond_0
     return-void
-    .line 17
+    .line 18
 .end method

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <PreferenceScreen android:title="@string/silent_settings"
-                  android:key="silent_mode_settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+                  android:key="silent_mode_settings" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:miui="http://schemas.android.com/apk/res/com.android.settings" xmlns:settings="http://schemas.android.com/apk/res-auto">
   <com.android.settingslib.miuisettings.preference.RadioButtonPreferenceCategory android:title="@string/silent_mode"
                         android:key="key_silent_mode_settings">
     <com.android.settingslib.miuisettings.preference.RadioButtonPreference android:persistent="false"
@@ -45,7 +45,7 @@
     <com.android.settings.dndmode.LabelPreference android:persistent="false"
                           android:title="@string/auto_silent"
                           android:key="key_timing_mute"
-                          settings:clickable="true" />
+                          miui:clickable="true" />
   </PreferenceCategory>
   <com.android.settings.notification.SilentModeNetWorkAlarmSummaryPreference android:key="key_network_alarm_summary" />
 </PreferenceScreen>

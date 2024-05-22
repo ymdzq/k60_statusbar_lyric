@@ -24,7 +24,7 @@
 .method private constructor <init>(Lcom/android/settings/accounts/AccountPreferenceController;)V
     .locals 0
 
-    .line 646
+    .line 648
     iput-object p1, p0, Lcom/android/settings/accounts/AccountPreferenceController$ManagedProfileBroadcastReceiver;->this$0:Lcom/android/settings/accounts/AccountPreferenceController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -46,12 +46,12 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
-    .line 651
+    .line 653
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 652
+    .line 654
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -72,7 +72,7 @@
 
     const-string v1, "android.intent.action.MANAGED_PROFILE_REMOVED"
 
-    .line 653
+    .line 655
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -81,7 +81,7 @@
 
     const-string v1, "android.intent.action.MANAGED_PROFILE_ADDED"
 
-    .line 654
+    .line 656
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -90,7 +90,7 @@
 
     goto :goto_0
 
-    .line 672
+    .line 674
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -114,7 +114,7 @@
 
     return-void
 
-    .line 655
+    .line 657
     :cond_1
     :goto_0
     iget-object p2, p0, Lcom/android/settings/accounts/AccountPreferenceController$ManagedProfileBroadcastReceiver;->this$0:Lcom/android/settings/accounts/AccountPreferenceController;
@@ -127,14 +127,14 @@
 
     if-eqz p2, :cond_2
 
-    .line 656
+    .line 658
     new-instance p2, Lcom/android/settings/core/SubSettingLauncher;
 
     invoke-direct {p2, p1}, Lcom/android/settings/core/SubSettingLauncher;-><init>(Landroid/content/Context;)V
 
     const-class p1, Lcom/android/settings/accounts/AccountDashboardFragment;
 
-    .line 657
+    .line 659
     invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object p1
@@ -149,7 +149,7 @@
 
     move-result-object p2
 
-    .line 658
+    .line 660
     invoke-virtual {p2}, Lcom/android/settings/SettingsPreferenceFragment;->getMetricsCategory()I
 
     move-result p2
@@ -160,22 +160,22 @@
 
     const/4 p2, -0x1
 
-    .line 659
+    .line 661
     invoke-virtual {p1, p2}, Lcom/android/settings/core/SubSettingLauncher;->setTitleRes(I)Lcom/android/settings/core/SubSettingLauncher;
 
     move-result-object p1
 
     const/4 p2, 0x1
 
-    .line 660
+    .line 662
     invoke-virtual {p1, p2}, Lcom/android/settings/core/SubSettingLauncher;->setIsSecondLayerPage(Z)Lcom/android/settings/core/SubSettingLauncher;
 
     move-result-object p1
 
-    .line 661
+    .line 663
     invoke-virtual {p1}, Lcom/android/settings/core/SubSettingLauncher;->launch()V
 
-    .line 662
+    .line 664
     iget-object p0, p0, Lcom/android/settings/accounts/AccountPreferenceController$ManagedProfileBroadcastReceiver;->this$0:Lcom/android/settings/accounts/AccountPreferenceController;
 
     invoke-static {p0}, Lcom/android/settings/accounts/AccountPreferenceController;->-$$Nest$fgetmFragment(Lcom/android/settings/accounts/AccountPreferenceController;)Lcom/android/settings/dashboard/DashboardFragment;
@@ -190,18 +190,18 @@
 
     goto :goto_1
 
-    .line 665
+    .line 667
     :cond_2
     iget-object p1, p0, Lcom/android/settings/accounts/AccountPreferenceController$ManagedProfileBroadcastReceiver;->this$0:Lcom/android/settings/accounts/AccountPreferenceController;
 
     invoke-static {p1}, Lcom/android/settings/accounts/AccountPreferenceController;->-$$Nest$mstopListeningToAccountUpdates(Lcom/android/settings/accounts/AccountPreferenceController;)V
 
-    .line 667
+    .line 669
     iget-object p1, p0, Lcom/android/settings/accounts/AccountPreferenceController$ManagedProfileBroadcastReceiver;->this$0:Lcom/android/settings/accounts/AccountPreferenceController;
 
     invoke-static {p1}, Lcom/android/settings/accounts/AccountPreferenceController;->-$$Nest$mupdateUi(Lcom/android/settings/accounts/AccountPreferenceController;)V
 
-    .line 668
+    .line 670
     iget-object p0, p0, Lcom/android/settings/accounts/AccountPreferenceController$ManagedProfileBroadcastReceiver;->this$0:Lcom/android/settings/accounts/AccountPreferenceController;
 
     invoke-static {p0}, Lcom/android/settings/accounts/AccountPreferenceController;->-$$Nest$mlistenToAccountUpdates(Lcom/android/settings/accounts/AccountPreferenceController;)V
@@ -213,32 +213,32 @@
 .method public register(Landroid/content/Context;)V
     .locals 2
 
-    .line 676
+    .line 678
     iget-boolean v0, p0, Lcom/android/settings/accounts/AccountPreferenceController$ManagedProfileBroadcastReceiver;->mListeningToManagedProfileEvents:Z
 
     if-nez v0, :cond_0
 
-    .line 677
+    .line 679
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v1, "android.intent.action.MANAGED_PROFILE_REMOVED"
 
-    .line 678
+    .line 680
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v1, "android.intent.action.MANAGED_PROFILE_ADDED"
 
-    .line 679
+    .line 681
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 680
+    .line 682
     invoke-virtual {p1, p0, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     const/4 p1, 0x1
 
-    .line 681
+    .line 683
     iput-boolean p1, p0, Lcom/android/settings/accounts/AccountPreferenceController$ManagedProfileBroadcastReceiver;->mListeningToManagedProfileEvents:Z
 
     :cond_0
@@ -248,17 +248,17 @@
 .method public unregister(Landroid/content/Context;)V
     .locals 1
 
-    .line 686
+    .line 688
     iget-boolean v0, p0, Lcom/android/settings/accounts/AccountPreferenceController$ManagedProfileBroadcastReceiver;->mListeningToManagedProfileEvents:Z
 
     if-eqz v0, :cond_0
 
-    .line 687
+    .line 689
     invoke-virtual {p1, p0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     const/4 p1, 0x0
 
-    .line 688
+    .line 690
     iput-boolean p1, p0, Lcom/android/settings/accounts/AccountPreferenceController$ManagedProfileBroadcastReceiver;->mListeningToManagedProfileEvents:Z
 
     :cond_0

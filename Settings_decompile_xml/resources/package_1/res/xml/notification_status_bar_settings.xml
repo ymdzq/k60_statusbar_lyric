@@ -28,8 +28,6 @@
                android:value="241" />
       </intent>
     </PreferenceScreen>
-    <PreferenceScreen android:title="状态栏歌词"
-                      android:fragment="com.android.settings.MiuiStatusBarLyricSettings" />
   </PreferenceCategory>
   <PreferenceCategory android:title="@string/status_bar_settings_status_bar"
                       android:key="settings_status_bar">
@@ -68,6 +66,12 @@
     <CheckBoxPreference android:persistent="false"
                         android:title="@string/title_wordless_mode"
                         android:key="wordless_mode" />
+    <CheckBoxPreference android:persistent="false"
+                        android:title="@string/title_device_control"
+                        android:key="device_control" />
+    <CheckBoxPreference android:persistent="false"
+                        android:title="@string/title_xiaomi_smart_hub"
+                        android:key="xiaomi_smart_hub" />
     <miuix.preference.DropDownPreference android:title="@string/title_smart_device_control"
                           android:key="smart_device_control" />
     <CheckBoxPreference android:persistent="false"

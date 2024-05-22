@@ -111,7 +111,7 @@
 .method public static getLockScreenAllowTrivialControls(Landroid/content/Context;)I
     .locals 3
 
-    .line 239
+    .line 324
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -132,7 +132,7 @@
 .method public static getLockScreenSmartDeviceControl(Landroid/content/Context;)I
     .locals 2
 
-    .line 229
+    .line 271
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -188,50 +188,58 @@
 .end method
 
 .method public static getSmartDeviceControl(Landroid/content/Context;)I
-    .locals 4
+    .locals 3
 
-    .line 204
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v0
-
-    const/4 v1, -0x1
-
-    const/4 v2, 0x0
-
-    const-string/jumbo v3, "smart_device_control"
-
-    invoke-static {v0, v3, v1, v2}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
-
-    move-result v0
+    .line 203
+    sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     const/4 v1, 0x1
 
-    if-ltz v0, :cond_1
+    if-eqz v0, :cond_0
 
-    if-ne v0, v1, :cond_0
+    const/4 v2, 0x2
 
     goto :goto_0
 
     :cond_0
-    return v0
+    move v2, v1
 
-    .line 206
-    :cond_1
     :goto_0
+    if-eqz v0, :cond_1
+
+    .line 204
     invoke-static {p0}, Lcom/android/settings/utils/Utils;->checkDeviceCenterAvailable(Landroid/content/Context;)Z
 
-    move-result p0
+    move-result v0
 
-    if-eqz p0, :cond_2
+    if-eqz v0, :cond_1
+
+    invoke-static {p0}, Lcom/android/settings/utils/Utils;->checkNewDeviceCenterEnabled(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
 
     goto :goto_1
 
-    :cond_2
-    const/4 v1, 0x2
+    :cond_1
+    move v1, v2
 
+    .line 207
     :goto_1
-    return v1
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    const-string/jumbo v0, "smart_device_control"
+
+    const/4 v2, 0x0
+
+    invoke-static {p0, v0, v1, v2}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+
+    move-result p0
+
+    return p0
 .end method
 
 .method public static getUserAggregate(Landroid/content/Context;)I
@@ -423,7 +431,7 @@
 .method public static isQuickControlAllDevicesOn(Landroid/content/Context;)Z
     .locals 2
 
-    .line 219
+    .line 262
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -594,7 +602,7 @@
 .method public static isWordlessMode(Landroid/content/Context;)Z
     .locals 3
 
-    .line 249
+    .line 334
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -645,6 +653,99 @@
     return v0
 .end method
 
+.method public static setDeviceControl(Landroid/content/Context;Z)V
+    .locals 6
+
+    .line 231
+    invoke-static {p0}, Lcom/android/settings/utils/StatusBarUtils;->getSmartDeviceControl(Landroid/content/Context;)I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x2
+
+    if-eqz v0, :cond_8
+
+    const/4 v3, 0x4
+
+    const/4 v4, 0x1
+
+    if-eq v0, v4, :cond_6
+
+    if-eq v0, v2, :cond_4
+
+    const/4 v5, 0x3
+
+    if-eq v0, v5, :cond_2
+
+    if-eq v0, v3, :cond_0
+
+    goto :goto_2
+
+    :cond_0
+    if-eqz p1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    move v3, v4
+
+    .line 237
+    :goto_0
+    invoke-static {p0, v3}, Lcom/android/settings/utils/StatusBarUtils;->setSmartDeviceControl(Landroid/content/Context;I)V
+
+    goto :goto_2
+
+    :cond_2
+    if-eqz p1, :cond_3
+
+    move v1, v2
+
+    .line 236
+    :cond_3
+    invoke-static {p0, v1}, Lcom/android/settings/utils/StatusBarUtils;->setSmartDeviceControl(Landroid/content/Context;I)V
+
+    goto :goto_2
+
+    :cond_4
+    if-eqz p1, :cond_5
+
+    move v1, v2
+
+    .line 235
+    :cond_5
+    invoke-static {p0, v1}, Lcom/android/settings/utils/StatusBarUtils;->setSmartDeviceControl(Landroid/content/Context;I)V
+
+    goto :goto_2
+
+    :cond_6
+    if-eqz p1, :cond_7
+
+    goto :goto_1
+
+    :cond_7
+    move v3, v4
+
+    .line 234
+    :goto_1
+    invoke-static {p0, v3}, Lcom/android/settings/utils/StatusBarUtils;->setSmartDeviceControl(Landroid/content/Context;I)V
+
+    goto :goto_2
+
+    :cond_8
+    if-eqz p1, :cond_9
+
+    move v1, v2
+
+    .line 233
+    :cond_9
+    invoke-static {p0, v1}, Lcom/android/settings/utils/StatusBarUtils;->setSmartDeviceControl(Landroid/content/Context;I)V
+
+    :goto_2
+    return-void
+.end method
+
 .method public static setExpandableUnderLockscreen(Landroid/content/Context;I)V
     .locals 2
 
@@ -665,7 +766,7 @@
 .method public static setLockScreenAllowTrivialControls(Landroid/content/Context;I)V
     .locals 2
 
-    .line 234
+    .line 319
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -679,10 +780,95 @@
     return-void
 .end method
 
+.method public static setLockScreenDeviceControl(Landroid/content/Context;Z)V
+    .locals 5
+
+    .line 287
+    invoke-static {p0}, Lcom/android/settings/utils/Utils;->checkNewDeviceCenterEnabled(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 288
+    invoke-static {p0, p1}, Lcom/android/settings/utils/StatusBarUtils;->setLockScreenSmartDeviceControl(Landroid/content/Context;I)V
+
+    return-void
+
+    .line 291
+    :cond_0
+    invoke-static {p0}, Lcom/android/settings/utils/StatusBarUtils;->getLockScreenSmartDeviceControl(Landroid/content/Context;)I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x3
+
+    if-eqz v0, :cond_7
+
+    const/4 v3, 0x2
+
+    const/4 v4, 0x1
+
+    if-eq v0, v4, :cond_5
+
+    if-eq v0, v3, :cond_3
+
+    if-eq v0, v2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    if-eqz p1, :cond_2
+
+    move v1, v2
+
+    .line 296
+    :cond_2
+    invoke-static {p0, v1}, Lcom/android/settings/utils/StatusBarUtils;->setLockScreenSmartDeviceControl(Landroid/content/Context;I)V
+
+    goto :goto_0
+
+    :cond_3
+    if-eqz p1, :cond_4
+
+    move v3, v4
+
+    .line 295
+    :cond_4
+    invoke-static {p0, v3}, Lcom/android/settings/utils/StatusBarUtils;->setLockScreenSmartDeviceControl(Landroid/content/Context;I)V
+
+    goto :goto_0
+
+    :cond_5
+    if-eqz p1, :cond_6
+
+    move v3, v4
+
+    .line 294
+    :cond_6
+    invoke-static {p0, v3}, Lcom/android/settings/utils/StatusBarUtils;->setLockScreenSmartDeviceControl(Landroid/content/Context;I)V
+
+    goto :goto_0
+
+    :cond_7
+    if-eqz p1, :cond_8
+
+    move v1, v2
+
+    .line 293
+    :cond_8
+    invoke-static {p0, v1}, Lcom/android/settings/utils/StatusBarUtils;->setLockScreenSmartDeviceControl(Landroid/content/Context;I)V
+
+    :goto_0
+    return-void
+.end method
+
 .method public static setLockScreenSmartDeviceControl(Landroid/content/Context;I)V
     .locals 2
 
-    .line 224
+    .line 280
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -693,6 +879,91 @@
 
     invoke-static {p0, v0, p1, v1}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
+    return-void
+.end method
+
+.method public static setLockScreenXiaomiSmartHub(Landroid/content/Context;Z)V
+    .locals 5
+
+    .line 304
+    invoke-static {p0}, Lcom/android/settings/utils/Utils;->checkNewDeviceCenterEnabled(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 305
+    invoke-static {p0, p1}, Lcom/android/settings/utils/StatusBarUtils;->setLockScreenSmartDeviceControl(Landroid/content/Context;I)V
+
+    return-void
+
+    .line 308
+    :cond_0
+    invoke-static {p0}, Lcom/android/settings/utils/StatusBarUtils;->getLockScreenSmartDeviceControl(Landroid/content/Context;)I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x2
+
+    if-eqz v0, :cond_7
+
+    const/4 v3, 0x3
+
+    const/4 v4, 0x1
+
+    if-eq v0, v4, :cond_5
+
+    if-eq v0, v2, :cond_3
+
+    if-eq v0, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    if-eqz p1, :cond_2
+
+    move v3, v4
+
+    .line 313
+    :cond_2
+    invoke-static {p0, v3}, Lcom/android/settings/utils/StatusBarUtils;->setLockScreenSmartDeviceControl(Landroid/content/Context;I)V
+
+    goto :goto_0
+
+    :cond_3
+    if-eqz p1, :cond_4
+
+    move v1, v2
+
+    .line 312
+    :cond_4
+    invoke-static {p0, v1}, Lcom/android/settings/utils/StatusBarUtils;->setLockScreenSmartDeviceControl(Landroid/content/Context;I)V
+
+    goto :goto_0
+
+    :cond_5
+    if-eqz p1, :cond_6
+
+    move v3, v4
+
+    .line 311
+    :cond_6
+    invoke-static {p0, v3}, Lcom/android/settings/utils/StatusBarUtils;->setLockScreenSmartDeviceControl(Landroid/content/Context;I)V
+
+    goto :goto_0
+
+    :cond_7
+    if-eqz p1, :cond_8
+
+    move v1, v2
+
+    .line 310
+    :cond_8
+    invoke-static {p0, v1}, Lcom/android/settings/utils/StatusBarUtils;->setLockScreenSmartDeviceControl(Landroid/content/Context;I)V
+
+    :goto_0
     return-void
 .end method
 
@@ -759,7 +1030,7 @@
 .method public static setQuickControlAllDevices(Landroid/content/Context;Z)V
     .locals 2
 
-    .line 214
+    .line 257
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -799,9 +1070,39 @@
 .end method
 
 .method public static setSmartDeviceControl(Landroid/content/Context;I)V
-    .locals 2
+    .locals 3
 
-    .line 199
+    .line 217
+    invoke-static {p0}, Lcom/android/settings/utils/Utils;->checkNewDeviceCenterEnabled(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 218
+    invoke-static {p0}, Lcom/android/settings/utils/StatusBarUtils;->getSmartDeviceControl(Landroid/content/Context;)I
+
+    move-result v0
+
+    const/4 v1, 0x4
+
+    if-ne p1, v1, :cond_1
+
+    const/4 v1, 0x2
+
+    const/4 v2, 0x1
+
+    if-ne v0, v2, :cond_0
+
+    move p1, v1
+
+    :cond_0
+    if-ne v0, v1, :cond_1
+
+    move p1, v2
+
+    .line 224
+    :cond_1
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -875,7 +1176,7 @@
 .method public static setWordlessMode(Landroid/content/Context;Z)V
     .locals 2
 
-    .line 244
+    .line 329
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -886,6 +1187,82 @@
 
     invoke-static {p0, v1, p1, v0}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
+    return-void
+.end method
+
+.method public static setXiaomiSmartHub(Landroid/content/Context;Z)V
+    .locals 4
+
+    .line 245
+    invoke-static {p0}, Lcom/android/settings/utils/StatusBarUtils;->getSmartDeviceControl(Landroid/content/Context;)I
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    const/4 v1, 0x1
+
+    if-eq v0, v1, :cond_5
+
+    const/4 v1, 0x4
+
+    const/4 v2, 0x2
+
+    if-eq v0, v2, :cond_3
+
+    const/4 v3, 0x3
+
+    if-eq v0, v3, :cond_2
+
+    if-eq v0, v1, :cond_0
+
+    goto :goto_2
+
+    :cond_0
+    if-eqz p1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    move v1, v2
+
+    .line 251
+    :goto_0
+    invoke-static {p0, v1}, Lcom/android/settings/utils/StatusBarUtils;->setSmartDeviceControl(Landroid/content/Context;I)V
+
+    goto :goto_2
+
+    .line 250
+    :cond_2
+    invoke-static {p0, p1}, Lcom/android/settings/utils/StatusBarUtils;->setSmartDeviceControl(Landroid/content/Context;I)V
+
+    goto :goto_2
+
+    :cond_3
+    if-eqz p1, :cond_4
+
+    goto :goto_1
+
+    :cond_4
+    move v1, v2
+
+    .line 249
+    :goto_1
+    invoke-static {p0, v1}, Lcom/android/settings/utils/StatusBarUtils;->setSmartDeviceControl(Landroid/content/Context;I)V
+
+    goto :goto_2
+
+    .line 248
+    :cond_5
+    invoke-static {p0, p1}, Lcom/android/settings/utils/StatusBarUtils;->setSmartDeviceControl(Landroid/content/Context;I)V
+
+    goto :goto_2
+
+    .line 247
+    :cond_6
+    invoke-static {p0, p1}, Lcom/android/settings/utils/StatusBarUtils;->setSmartDeviceControl(Landroid/content/Context;I)V
+
+    :goto_2
     return-void
 .end method
 

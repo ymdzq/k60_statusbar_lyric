@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/qs/tiles/dialog/InternetDialogController$WifiEntryConnectCallback;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lcom/android/wifitrackerlib/WifiEntry$ConnectCallback;
@@ -121,7 +121,7 @@
     iget-object p0, p0, Lcom/android/systemui/qs/tiles/dialog/InternetDialogController$WifiEntryConnectCallback;->mInternetDialogController:Lcom/android/systemui/qs/tiles/dialog/InternetDialogController;
 
     .line 54
-    const p1, 0x7f130c80    # @string/wifi_failed_connect_message 'Failed to connect to network'
+    const p1, 0x7f130c86    # @string/wifi_failed_connect_message 'Failed to connect to network'
 
     .line 56
     invoke-virtual {p0, p1}, Lcom/android/systemui/qs/tiles/dialog/InternetDialogController;->makeOverlayToast(I)V

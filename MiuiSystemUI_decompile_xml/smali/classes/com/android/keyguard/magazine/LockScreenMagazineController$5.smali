@@ -1,6 +1,6 @@
 .class public final Lcom/android/keyguard/magazine/LockScreenMagazineController$5;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lcom/miui/interfaces/keyguard/MiuiKeyguardUpdateMonitorCallback;
@@ -168,106 +168,106 @@
     const-string v0, "LockScreenMagazineController"
 
     .line 2
-    const-string v1, "refresh MagazineInfo after MagazineRes Initialization complete"
+    const-string/jumbo v1, "refresh MagazineInfo after MagazineRes Initialization complete"
 
     .line 4
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6
+    .line 7
     iget-object p0, p0, Lcom/android/keyguard/magazine/LockScreenMagazineController$5;->this$0:Lcom/android/keyguard/magazine/LockScreenMagazineController;
 
-    .line 9
+    .line 10
     iget-object v0, p0, Lcom/android/keyguard/magazine/LockScreenMagazineController;->mLockScreenMagazinePre:Lcom/android/keyguard/magazine/LockScreenMagazinePreView;
 
-    .line 11
+    .line 12
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 13
+    .line 14
     new-instance v1, Lcom/android/keyguard/magazine/LockScreenMagazinePreView$9;
 
-    .line 16
+    .line 17
     invoke-direct {v1, v0}, Lcom/android/keyguard/magazine/LockScreenMagazinePreView$9;-><init>(Lcom/android/keyguard/magazine/LockScreenMagazinePreView;)V
 
-    .line 18
+    .line 19
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->post(Ljava/lang/Runnable;)Z
 
-    .line 21
+    .line 22
     iget-object v0, p0, Lcom/android/keyguard/magazine/LockScreenMagazineController;->mLockScreenMagazinePre:Lcom/android/keyguard/magazine/LockScreenMagazinePreView;
 
-    .line 24
+    .line 25
     iget-object v1, v0, Lcom/android/keyguard/magazine/LockScreenMagazinePreView;->mLockScreenMagazineController:Lcom/android/keyguard/magazine/LockScreenMagazineController;
 
-    .line 26
+    .line 27
     iget-boolean v2, v1, Lcom/android/keyguard/magazine/LockScreenMagazineController;->mIsDeviceProvisioned:Z
 
-    .line 28
+    .line 29
     if-nez v2, :cond_0
 
-    .line 30
+    .line 31
     goto :goto_0
 
-    .line 32
+    .line 33
     :cond_0
     iget-object v1, v1, Lcom/android/keyguard/magazine/LockScreenMagazineController;->mPreSettingsDeeplink:Ljava/lang/String;
 
-    .line 33
+    .line 34
     new-instance v2, Lcom/android/keyguard/magazine/LockScreenMagazinePreView$1;
 
-    .line 35
+    .line 36
     invoke-direct {v2, v0, v1}, Lcom/android/keyguard/magazine/LockScreenMagazinePreView$1;-><init>(Lcom/android/keyguard/magazine/LockScreenMagazinePreView;Ljava/lang/String;)V
 
-    .line 37
+    .line 38
     sget-object v0, Landroid/os/AsyncTask;->THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
 
-    .line 40
+    .line 41
     const/4 v1, 0x0
 
-    .line 42
+    .line 43
     new-array v1, v1, [Ljava/lang/Void;
 
-    .line 43
+    .line 44
     invoke-virtual {v2, v0, v1}, Landroid/os/AsyncTask;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 45
+    .line 46
     :goto_0
     const-class v0, Lcom/android/keyguard/negative/KeyguardNegative1PageInjector;
 
-    .line 48
+    .line 49
     invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
-    .line 50
+    .line 51
     move-result-object v0
-
-    .line 53
-    check-cast v0, Lcom/android/keyguard/negative/KeyguardNegative1PageInjector;
 
     .line 54
+    check-cast v0, Lcom/android/keyguard/negative/KeyguardNegative1PageInjector;
+
+    .line 55
     iget-object v0, v0, Lcom/android/keyguard/negative/KeyguardNegative1PageInjector;->mKeyguardLeftView:Lcom/android/keyguard/negative/MiuiKeyguardMoveLeftViewContainer;
 
-    .line 56
+    .line 57
     invoke-virtual {v0}, Lcom/android/keyguard/negative/MiuiKeyguardMoveLeftViewContainer;->inflateLeftView()V
 
-    .line 58
+    .line 59
     const-class v0, Lcom/android/keyguard/injector/KeyguardBottomAreaInjector;
 
-    .line 61
+    .line 62
     invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
-    .line 63
+    .line 64
     move-result-object v0
 
-    .line 66
+    .line 67
     check-cast v0, Lcom/android/keyguard/injector/KeyguardBottomAreaInjector;
 
-    .line 67
+    .line 68
     invoke-virtual {v0}, Lcom/android/keyguard/injector/KeyguardBottomAreaInjector;->updateLeftIcon()V
 
-    .line 69
+    .line 70
     invoke-virtual {p0}, Lcom/android/keyguard/magazine/LockScreenMagazineController;->reset()V
 
-    .line 72
+    .line 73
     return-void
-    .line 75
+    .line 76
 .end method
 
 .method public final onRegionChanged()V

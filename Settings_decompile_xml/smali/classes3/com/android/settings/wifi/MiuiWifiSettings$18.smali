@@ -32,7 +32,7 @@
         }
     .end annotation
 
-    .line 2426
+    .line 2444
     iput-object p1, p0, Lcom/android/settings/wifi/MiuiWifiSettings$18;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
     iput p2, p0, Lcom/android/settings/wifi/MiuiWifiSettings$18;->val$order:I
@@ -47,7 +47,7 @@
 .method public run()V
     .locals 2
 
-    .line 2430
+    .line 2448
     :try_start_0
     invoke-static {}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$sfgetmEasyTetherVirtualAPPreferences()Ljava/util/Map;
 
@@ -57,7 +57,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2431
+    .line 2449
     :try_start_1
     iget-object v1, p0, Lcom/android/settings/wifi/MiuiWifiSettings$18;->this$0:Lcom/android/settings/wifi/MiuiWifiSettings;
 
@@ -65,7 +65,7 @@
 
     invoke-static {v1, p0}, Lcom/android/settings/wifi/MiuiWifiSettings;->-$$Nest$maddVirtualAPPrefForEasyTetherInternal(Lcom/android/settings/wifi/MiuiWifiSettings;I)V
 
-    .line 2432
+    .line 2450
     monitor-exit v0
 
     goto :goto_0
@@ -85,7 +85,7 @@
     :catch_0
     move-exception p0
 
-    .line 2434
+    .line 2452
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0

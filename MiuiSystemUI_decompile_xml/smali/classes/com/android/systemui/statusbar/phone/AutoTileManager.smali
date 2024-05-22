@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/phone/AutoTileManager;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # instance fields
@@ -229,7 +229,7 @@
     move-result-object v2
 
     .line 122
-    const v3, 0x7f130a3e    # @string/safety_quick_settings_tile_class 'com.android.permissioncontroller.permission.service.v33.SafetyCenterQsTileService'
+    const v3, 0x7f130a44    # @string/safety_quick_settings_tile_class 'com.android.permissioncontroller.permission.service.v33.SafetyCenterQsTileService'
 
     .line 123
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -702,244 +702,243 @@
     invoke-virtual {v2, v1}, Lcom/android/systemui/statusbar/phone/ManagedProfileControllerImpl;->addCallback(Ljava/lang/Object;)V
 
     .line 24
-    const-string v1, "reduce_brightness"
+    const-string/jumbo v1, "reduce_brightness"
 
     .line 27
     invoke-virtual {v0, v1}, Lcom/android/systemui/qs/AutoAddTracker;->isAdded(Ljava/lang/String;)Z
 
-    .line 29
+    .line 30
     move-result v1
 
-    .line 32
+    .line 33
     if-nez v1, :cond_1
 
-    .line 33
+    .line 34
     iget-boolean v1, p0, Lcom/android/systemui/statusbar/phone/AutoTileManager;->mIsReduceBrightColorsAvailable:Z
 
-    .line 35
+    .line 36
     if-eqz v1, :cond_1
 
-    .line 37
+    .line 38
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/AutoTileManager;->mReduceBrightColorsController:Lcom/android/systemui/qs/ReduceBrightColorsController;
 
-    .line 39
+    .line 40
     iget-object v2, p0, Lcom/android/systemui/statusbar/phone/AutoTileManager;->mReduceBrightColorsCallback:Lcom/android/systemui/qs/ReduceBrightColorsController$Listener;
 
-    .line 41
+    .line 42
     invoke-virtual {v1, v2}, Lcom/android/systemui/qs/ReduceBrightColorsController;->addCallback(Lcom/android/systemui/qs/ReduceBrightColorsController$Listener;)V
 
-    .line 43
+    .line 44
     :cond_1
     const-string/jumbo v1, "wallet"
 
-    .line 46
+    .line 47
     invoke-virtual {v0, v1}, Lcom/android/systemui/qs/AutoAddTracker;->isAdded(Ljava/lang/String;)Z
 
-    .line 49
+    .line 50
     move-result v2
-
-    .line 52
-    iget-object v3, p0, Lcom/android/systemui/statusbar/phone/AutoTileManager;->mHost:Lcom/android/systemui/qs/QSHost;
 
     .line 53
+    iget-object v3, p0, Lcom/android/systemui/statusbar/phone/AutoTileManager;->mHost:Lcom/android/systemui/qs/QSHost;
+
+    .line 54
     if-nez v2, :cond_4
 
-    .line 55
+    .line 56
     invoke-virtual {v0, v1}, Lcom/android/systemui/qs/AutoAddTracker;->isAdded(Ljava/lang/String;)Z
 
-    .line 57
+    .line 58
     move-result v2
 
-    .line 60
+    .line 61
     if-eqz v2, :cond_2
 
-    .line 61
+    .line 62
     goto :goto_1
 
-    .line 63
+    .line 64
     :cond_2
     iget-object v2, p0, Lcom/android/systemui/statusbar/phone/AutoTileManager;->mWalletController:Lcom/android/systemui/statusbar/policy/WalletController;
 
-    .line 64
+    .line 65
     check-cast v2, Lcom/android/systemui/statusbar/policy/WalletControllerImpl;
 
-    .line 66
+    .line 67
     iget-object v2, v2, Lcom/android/systemui/statusbar/policy/WalletControllerImpl;->quickAccessWalletClient:Landroid/service/quickaccesswallet/QuickAccessWalletClient;
 
-    .line 68
+    .line 69
     invoke-interface {v2}, Landroid/service/quickaccesswallet/QuickAccessWalletClient;->isWalletServiceAvailable()Z
 
-    .line 70
+    .line 71
     move-result v2
 
-    .line 73
+    .line 74
     const-string v4, "WalletControllerImpl"
 
-    .line 74
+    .line 75
     if-eqz v2, :cond_3
 
-    .line 76
+    .line 77
     const-string v2, "Setting WalletTile position: 3"
 
-    .line 78
+    .line 79
     invoke-static {v4, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 80
+    .line 81
     const/4 v2, 0x3
 
-    .line 83
+    .line 84
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 84
+    .line 85
     move-result-object v2
 
-    .line 87
+    .line 88
     goto :goto_0
 
-    .line 88
+    .line 89
     :cond_3
     const-string v2, "Setting WalletTile position: null"
 
-    .line 89
+    .line 90
     invoke-static {v4, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 91
+    .line 92
     const/4 v2, 0x0
 
-    .line 94
+    .line 95
     :goto_0
     if-eqz v2, :cond_4
 
-    .line 95
+    .line 96
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
-    .line 97
+    .line 98
     move-result v2
 
-    .line 100
+    .line 101
     invoke-interface {v3, v2, v1}, Lcom/android/systemui/qs/QSHost;->addTile(ILjava/lang/String;)V
 
-    .line 101
+    .line 102
     invoke-virtual {v0, v1}, Lcom/android/systemui/qs/AutoAddTracker;->setTileAdded(Ljava/lang/String;)V
 
-    .line 104
+    .line 105
     :cond_4
     :goto_1
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/AutoTileManager;->mSafetySpec:Ljava/lang/String;
 
-    .line 107
+    .line 108
     const/4 v2, 0x1
 
-    .line 109
+    .line 110
     if-eqz v1, :cond_7
 
-    .line 110
+    .line 111
     invoke-virtual {v0, v1}, Lcom/android/systemui/qs/AutoAddTracker;->isAdded(Ljava/lang/String;)Z
 
-    .line 112
+    .line 113
     move-result v4
-
-    .line 115
-    if-nez v4, :cond_6
 
     .line 116
+    if-nez v4, :cond_6
+
+    .line 117
     if-eqz v1, :cond_6
 
-    .line 118
+    .line 119
     invoke-virtual {v0, v1}, Lcom/android/systemui/qs/AutoAddTracker;->isAdded(Ljava/lang/String;)Z
 
-    .line 120
+    .line 121
     move-result v4
 
-    .line 123
+    .line 124
     if-eqz v4, :cond_5
 
-    .line 124
+    .line 125
     goto :goto_2
 
-    .line 126
+    .line 127
     :cond_5
     invoke-static {v1}, Lcom/android/systemui/qs/external/CustomTile;->getComponentFromSpec(Ljava/lang/String;)Landroid/content/ComponentName;
 
-    .line 127
+    .line 128
     move-result-object v4
 
-    .line 130
+    .line 131
     invoke-interface {v3, v4, v2}, Lcom/android/systemui/qs/QSHost;->addTile(Landroid/content/ComponentName;Z)V
 
-    .line 131
+    .line 132
     invoke-virtual {v0, v1}, Lcom/android/systemui/qs/AutoAddTracker;->setTileAdded(Ljava/lang/String;)V
 
-    .line 134
+    .line 135
     :cond_6
     :goto_2
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/AutoTileManager;->mSafetyController:Lcom/android/systemui/statusbar/policy/SafetyController;
 
-    .line 137
+    .line 138
     iget-object v3, p0, Lcom/android/systemui/statusbar/phone/AutoTileManager;->mSafetyCallback:Lcom/android/systemui/statusbar/policy/SafetyController$Listener;
 
-    .line 139
+    .line 140
     invoke-virtual {v1, v3}, Lcom/android/systemui/statusbar/policy/SafetyController;->addCallback(Lcom/android/systemui/statusbar/policy/SafetyController$Listener;)V
 
-    .line 141
+    .line 142
     :cond_7
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/AutoTileManager;->mAutoAddSettingList:Ljava/util/ArrayList;
 
-    .line 144
+    .line 145
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
-    .line 146
+    .line 147
     move-result v1
 
-    .line 149
+    .line 150
     const/4 v3, 0x0
 
-    .line 150
+    .line 151
     :goto_3
     if-ge v3, v1, :cond_9
 
-    .line 151
+    .line 152
     invoke-virtual {p0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    .line 153
+    .line 154
     move-result-object v4
-
-    .line 156
-    check-cast v4, Lcom/android/systemui/statusbar/phone/AutoTileManager$AutoAddSetting;
 
     .line 157
-    iget-object v4, v4, Lcom/android/systemui/statusbar/phone/AutoTileManager$AutoAddSetting;->mSpec:Ljava/lang/String;
-
-    .line 159
-    invoke-virtual {v0, v4}, Lcom/android/systemui/qs/AutoAddTracker;->isAdded(Ljava/lang/String;)Z
-
-    .line 161
-    move-result v4
-
-    .line 164
-    if-nez v4, :cond_8
-
-    .line 165
-    invoke-virtual {p0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    .line 167
-    move-result-object v4
-
-    .line 170
     check-cast v4, Lcom/android/systemui/statusbar/phone/AutoTileManager$AutoAddSetting;
 
+    .line 158
+    iget-object v4, v4, Lcom/android/systemui/statusbar/phone/AutoTileManager$AutoAddSetting;->mSpec:Ljava/lang/String;
+
+    .line 160
+    invoke-virtual {v0, v4}, Lcom/android/systemui/qs/AutoAddTracker;->isAdded(Ljava/lang/String;)Z
+
+    .line 162
+    move-result v4
+
+    .line 165
+    if-nez v4, :cond_8
+
+    .line 166
+    invoke-virtual {p0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    .line 168
+    move-result-object v4
+
     .line 171
+    check-cast v4, Lcom/android/systemui/statusbar/phone/AutoTileManager$AutoAddSetting;
+
+    .line 172
     invoke-virtual {v4, v2}, Lcom/android/systemui/qs/SettingObserver;->setListening(Z)V
 
-    .line 173
+    .line 174
     :cond_8
     add-int/lit8 v3, v3, 0x1
 
-    .line 176
+    .line 177
     goto :goto_3
 
-    .line 178
+    .line 179
     :cond_9
     return-void
-    .line 179
 .end method

@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <LinearLayout android:orientation="vertical"
               android:layout_width="fill_parent"
-              android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+              android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <miuix.pickerwidget.internal.widget.ProperPaddingViewGroup android:id="@id/properPaddingViewGroup"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        settings:horizontalPadding="@dimen/miuix_appcompat_picker_horizontal_padding"
-                        settings:smallHorizontalPadding="40.0dp">
+                        app:horizontalPadding="@dimen/miuix_appcompat_picker_horizontal_padding"
+                        app:smallHorizontalPadding="40.0dp">
     <LinearLayout android:layout_gravity="center_horizontal"
                   android:orientation="horizontal"
                   android:id="@id/timePickerLayout"

@@ -1,6 +1,6 @@
 .class public final Landroidx/preference/ExpandButton;
 .super Landroidx/preference/Preference;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # instance fields
@@ -192,7 +192,7 @@
     iget-object v1, p0, Landroidx/preference/Preference;->mContext:Landroid/content/Context;
 
     .line 122
-    const v3, 0x7f130b48    # @string/summary_collapsed_preference_list '%1$s, %2$s'
+    const v3, 0x7f130b4e    # @string/summary_collapsed_preference_list '%1$s, %2$s'
 
     .line 124
     filled-new-array {v0, v2}, [Ljava/lang/Object;

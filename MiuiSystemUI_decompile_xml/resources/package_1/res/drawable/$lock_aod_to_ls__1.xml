@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <set android:ordering="together" xmlns:aapt="http://schemas.android.com/aapt" xmlns:android="http://schemas.android.com/apk/res/android">
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f0803cb"
+  <objectAnimator android:interpolator="@drawable/$$lock_aod_to_ls__1__0"
                   android:duration="333"
                   android:startOffset="0"
                   android:valueFrom="M0 6.13 C0.97,6.13 1.75,5.34 1.75,4.38 C1.75,3.41 0.97,2.63 0,2.63 C-0.97,2.63 -1.75,3.41 -1.75,4.38 C-1.75,5.34 -0.97,6.13 0,6.13c "

@@ -4423,6 +4423,10 @@ U盘备份恢复：
   <string name="interesting_title">趣味拟物</string>
   <string name="internal_auto_rotate_title">内屏方向锁定</string>
   <string name="internal_storage">内部存储空间</string>
+  <string name="international_lyra_account_ap_summary">附近的同账号平板或电脑可以直接开启并连接本设备热点</string>
+  <string name="international_lyra_account_ap_title">网络共享</string>
+  <string name="international_lyra_auto_connect_summary">附近有同账号无网设备需要联网时，自动开启并连接本设备个人热点</string>
+  <string name="international_lyra_auto_connect_title">自动开启热点</string>
   <string name="internet_connectivity_panel_title">互联网连接</string>
   <string name="invalid_location">安装位置无效。</string>
   <string name="invalid_size_value">无法计算软件包的大小。</string>
@@ -5191,9 +5195,13 @@ U盘备份恢复：
   <string name="low_label">低</string>
   <string name="low_storage_summary">存储空间不足。已使用 %1$s，还剩 %2$s</string>
   <string name="lyra_account_ap_summary">附近的同账号平板或电脑可以直接开启并连接本设备热点</string>
+  <string name="lyra_account_ap_summary_v2">附近的同账号平板或电脑可以直接使用本设备的移动数据，或开启并连接本设备热点</string>
   <string name="lyra_account_ap_title">网络协同</string>
+  <string name="lyra_account_ap_title_v2">通信共享</string>
   <string name="lyra_auto_connect_summary">附近有同账号无网设备需要联网时，自动开启并连接本设备个人热点</string>
+  <string name="lyra_auto_connect_summary_v2">附近有同账号无网设备需要联网时，自动使用本设备移动数据，或开启并连接本设备热点</string>
   <string name="lyra_auto_connect_title">自动开启热点</string>
+  <string name="lyra_auto_connect_title_v2">自动共享</string>
   <string name="magic_list_empty_text_pad">当前无应用支持平行窗口</string>
   <string name="magic_window_name_pad">平行窗口</string>
   <string name="main_clear_accounts">
@@ -8649,7 +8657,7 @@ U盘备份恢复：
   <string name="sound_effects_enable_title">点按提示音</string>
   <string name="sound_haptic_settings">声音与触感</string>
   <string name="sound_mode">声音模式</string>
-  <string name="string_0x7f132303">声音</string>
+  <string name="string_0x7f13230b">声音</string>
   <string name="sound_settings_tab_haptic">触感</string>
   <string name="sound_settings_tab_sound">声音</string>
   <string name="sound_stereo_mode_summary">仅在使用喇叭播放时生效</string>
@@ -9318,6 +9326,7 @@ U盘备份恢复：
   <string name="tip_remove_data">以上所有数据将会被清除！</string>
   <string name="title_change_system_locale">将系统语言更改为%s？</string>
   <string name="title_color_calibration">彩色校正预设</string>
+  <string name="title_device_control">设备控制</string>
   <string name="title_font">字体</string>
   <string name="title_font2">字体和布局</string>
   <string name="title_font_current">当前字体</string>
@@ -9338,6 +9347,7 @@ U盘备份恢复：
   <string name="title_special_features_health_global">心率检测</string>
   <string name="title_unavailable_locale">无法使用%s</string>
   <string name="title_wordless_mode">无字模式</string>
+  <string name="title_xiaomi_smart_hub">融合设备中心</string>
   <string name="to_close">去关闭</string>
   <string name="to_switch_networks_disconnect_ethernet">如要切换网络，请拔出以太网网线</string>
   <string name="toast_allows_restricted_settings_successfully">已允许“%s”使用受限制的设置</string>
@@ -10577,8 +10587,8 @@ U盘备份恢复：
   <string name="wifi_scan_throttling">WLAN 扫描调节</string>
   <string name="wifi_scan_throttling_summary">降低耗电量以及改善网络性能</string>
   <string name="wifi_security">安全性</string>
-  <string name="string_0x7f132a82">WAPI CERT</string>
-  <string name="string_0x7f132a83">WAPI PSK</string>
+  <string name="string_0x7f132a8c">WAPI CERT</string>
+  <string name="string_0x7f132a8d">WAPI PSK</string>
   <string name="wifi_security_eap">WPA/WPA2/WPA3-Enterprise</string>
   <string name="wifi_security_eap_suiteb">WPA3-Enterprise 192 位</string>
   <string name="wifi_security_eap_wpa">WPA-Enterprise</string>

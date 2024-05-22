@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/screenshot/ScreenshotView;
 .super Landroid/widget/FrameLayout;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Landroid/view/ViewTreeObserver$OnComputeInternalInsetsListener;
@@ -1143,7 +1143,7 @@
     iget-object v2, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
 
     .line 16
-    const v3, 0x7f130a92    # @string/screenshot_share_description 'Share screenshot'
+    const v3, 0x7f130a98    # @string/screenshot_share_description 'Share screenshot'
 
     .line 18
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1203,7 +1203,7 @@
     iget-object v2, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
 
     .line 61
-    const v5, 0x7f130a84    # @string/screenshot_edit_description 'Edit screenshot'
+    const v5, 0x7f130a8a    # @string/screenshot_edit_description 'Edit screenshot'
 
     .line 63
     invoke-virtual {v2, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1272,7 +1272,7 @@
     iget-object v2, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
 
     .line 115
-    const v6, 0x7f130a91    # @string/screenshot_scroll_label 'Capture more'
+    const v6, 0x7f130a97    # @string/screenshot_scroll_label 'Capture more'
 
     .line 117
     invoke-virtual {v2, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -2356,7 +2356,7 @@
     move-result-object v3
 
     .line 115
-    const v5, 0x7f130a8c    # @string/screenshot_preview_description 'Screenshot preview'
+    const v5, 0x7f130a92    # @string/screenshot_preview_description 'Screenshot preview'
 
     .line 116
     invoke-virtual {v3, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;

@@ -3,10 +3,10 @@
           android:width="26.0dp"
           android:viewportWidth="26.0"
           android:viewportHeight="26.0"
-          settings:actionIconDisabledAlpha="0.3"
-          settings:actionIconNormalAlpha="0.8"
-          settings:actionIconPressedAlpha="0.5"
-          class="miuix.theme.ActionIconDrawable" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+          app:actionIconDisabledAlpha="0.3"
+          app:actionIconNormalAlpha="0.8"
+          app:actionIconPressedAlpha="0.5"
+          class="miuix.theme.ActionIconDrawable" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <path android:fillColor="#000000"
         android:pathData="M6.9265,19.0778C10.2808,22.4321 15.7192,22.4321 19.0735,19.0778C22.4277,15.7235 22.4277,10.2851 19.0735,6.9308C15.7192,3.5766 10.2808,3.5766 6.9265,6.9308C3.5722,10.2851 3.5722,15.7235 6.9265,19.0778ZM5.7951,20.2092C9.7743,24.1883 16.2257,24.1883 20.2048,20.2092C24.184,16.23 24.184,9.7786 20.2048,5.7995C16.2257,1.8203 9.7743,1.8203 5.7951,5.7995C1.816,9.7786 1.816,16.23 5.7951,20.2092Z"
         android:fillAlpha="1.0"

@@ -1029,9 +1029,15 @@ mm</string>
   <string name="qs_alarm_tile_no_alarm">དྲིལ་སྒྲོག་ཆུ་ཚོད་སྒྲིག་འགོད་བྱས་མེད།</string>
   <string name="qs_bill_message_balance">ལྷག་གྲངས་%1$s%2$s</string>
   <string name="qs_bill_message_unit_cny">དམངས་སྒོར།</string>
+  <string name="qs_control_big_tile_click_cellular_tether_tip">གཟུགས་བགོས་བར་སྟོང་ནས་ཕྱིར་ཐོན་རྗེས་བསྐྱར་དུ་ཚོད་ལྟ་གནང་རོགས།</string>
+  <string name="qs_control_big_tile_connect_share_network_fail">འགུལ་འཕྲིན་གཞི་གྲངས་དང་སྦྲེལ་མ་ཐུབ། བསྐྱར་དུ་ཚོད་ལྟ་གནང་རོགས།</string>
+  <string name="qs_control_big_tile_state_closed">ཁ་བརྒྱབ་ཟིན།</string>
   <string name="qs_control_big_tile_state_connected">སྦྲེལ་ཟིན།</string>
   <string name="qs_control_big_tile_state_connecting">སྦྲེལ་བཞིན་པ།</string>
   <string name="qs_control_big_tile_state_opening">ཁ་འབྱེད་བཞིན་ཡོད།</string>
+  <string name="qs_control_big_tile_state_tethered_wifi">ཁ་པར་དང་སྦྲེལ་བའི་WLANབརྡ་རྟགས་སྤྱོད་བཞིན་ཡོད།</string>
+  <string name="qs_control_big_tile_state_tethered_wlan">ཁ་པར་དང་སྦྲེལ་བའི་WLANབརྡ་རྟགས་སྤྱོད་བཞིན་ཡོད།</string>
+  <string name="qs_control_big_tile_state_unavailable">བེད་སྤྱོད་མེད།</string>
   <string name="qs_customize_title">བསད་སྤར་རྩོམ་སྒྲིག</string>
   <string name="qs_edit">རྩོམ་སྒྲིག</string>
   <string name="qs_open_night_mode_alert_summary">མདོག་སྣུམ་དཔེ་ཚུལ་སྐབས། འཆར་ངོས་ཁག་ཅིག་གི་མངོན་འཆར་ནུས་པར་ཤུགས་རྐྱེན་ཐེབས་སྲིད། ཚོན་སྣུམ་དཔེ་ཚུལ་ཁ་བརྒྱབ་རྗེས་རྒྱུན་ལྡན་ལྟར་བེད་སྤྱོད་བྱེད་ཐུབ།</string>
@@ -1076,8 +1082,10 @@ mm</string>
   <string name="quick_settings_cellular_detail_dialog_negative_button_cancel">རྩིས་མེད།</string>
   <string name="quick_settings_cellular_detail_dialog_positive_button_ok">ཆོག</string>
   <string name="quick_settings_cellular_detail_dialog_positive_button_turnoff">ཁ་བརྒྱབ།</string>
-  <string name="quick_settings_cellular_detail_title">སྒུལ་འཕྲིན་གཞི་གྲངས།</string>
+  <string name="quick_settings_cellular_detail_title">སྒྲུལ་འཕྲིན་གཞི་གྲངས།</string>
   <string name="quick_settings_cellular_detail_unable_change">ཁ་པར་གཏོང་བཞིན་འདུག བཟོ་བཅོས་བྱེད་མི་ཐུབ།</string>
+  <string name="quick_settings_cellular_state_change_message_connected">འགུལ་འཕྲིན་གཞི་གྲངས་དང་མཐུད་ཟིན།</string>
+  <string name="quick_settings_cellular_state_change_message_disconnected">འགུལ་འཕྲིན་གཞི་གྲངས་དང་སྦྲེལ་མཐུད་བཅད་ཟིན།</string>
   <string name="quick_settings_cellular_state_change_message_off">སྤོ་སྒུལ་གཞི་གྲངས་ཁ་བརྒྱབ་ཟིན།</string>
   <string name="quick_settings_cellular_state_change_message_on">སྒུལ་འཕྲིན་གཞི་གྲངས་ཁ་ཕྱེ་ཟིན།</string>
   <string name="quick_settings_color_correction_label">ཚོན་མདངས་བཟོ་བཅོས།</string>

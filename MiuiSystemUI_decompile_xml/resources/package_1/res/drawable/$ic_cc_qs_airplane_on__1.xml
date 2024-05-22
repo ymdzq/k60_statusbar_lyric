@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <set android:ordering="together" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f08017b"
+  <objectAnimator android:interpolator="@drawable/$$ic_cc_qs_airplane_on__1__0"
                   android:duration="133"
                   android:startOffset="0"
                   android:propertyName="translateXY"
                   android:pathData="M 0,0C 0,0 0,8 0,8"
                   android:propertyXName="translateX"
                   android:propertyYName="translateY" />
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f08017c"
+  <objectAnimator android:interpolator="@drawable/$$ic_cc_qs_airplane_on__1__1"
                   android:duration="567"
                   android:startOffset="133"
                   android:propertyName="translateXY"

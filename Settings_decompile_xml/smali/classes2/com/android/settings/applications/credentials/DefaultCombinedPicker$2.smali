@@ -35,7 +35,7 @@
 .method constructor <init>(Lcom/android/settings/applications/credentials/DefaultCombinedPicker;)V
     .locals 0
 
-    .line 390
+    .line 395
     iput-object p1, p0, Lcom/android/settings/applications/credentials/DefaultCombinedPicker$2;->this$0:Lcom/android/settings/applications/credentials/DefaultCombinedPicker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -48,7 +48,7 @@
 .method public onError(Landroid/credentials/SetEnabledProvidersException;)V
     .locals 1
 
-    .line 398
+    .line 403
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -77,7 +77,7 @@
 .method public bridge synthetic onError(Ljava/lang/Throwable;)V
     .locals 0
 
-    .line 390
+    .line 395
     check-cast p1, Landroid/credentials/SetEnabledProvidersException;
 
     invoke-virtual {p0, p1}, Lcom/android/settings/applications/credentials/DefaultCombinedPicker$2;->onError(Landroid/credentials/SetEnabledProvidersException;)V
@@ -88,7 +88,7 @@
 .method public bridge synthetic onResult(Ljava/lang/Object;)V
     .locals 0
 
-    .line 390
+    .line 395
     check-cast p1, Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/android/settings/applications/credentials/DefaultCombinedPicker$2;->onResult(Ljava/lang/Void;)V
@@ -103,7 +103,7 @@
 
     const-string/jumbo p1, "setEnabledProviders success"
 
-    .line 393
+    .line 398
     invoke-static {p0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void

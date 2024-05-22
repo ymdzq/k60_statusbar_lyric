@@ -49,7 +49,7 @@
 .method constructor <init>(Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController;)V
     .locals 0
 
-    .line 700
+    .line 707
     iput-object p1, p0, Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController$4;->this$0:Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController;
 
     invoke-direct {p0}, Lcom/android/internal/content/PackageMonitor;-><init>()V
@@ -60,7 +60,7 @@
 .method private synthetic lambda$onPackageAdded$0()V
     .locals 0
 
-    .line 703
+    .line 710
     iget-object p0, p0, Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController$4;->this$0:Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController;
 
     invoke-static {p0}, Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController;->-$$Nest$mupdateFromExternal(Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController;)V
@@ -71,7 +71,7 @@
 .method private synthetic lambda$onPackageModified$1()V
     .locals 0
 
-    .line 708
+    .line 715
     iget-object p0, p0, Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController$4;->this$0:Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController;
 
     invoke-static {p0}, Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController;->-$$Nest$mupdateFromExternal(Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController;)V
@@ -82,7 +82,7 @@
 .method private synthetic lambda$onPackageRemoved$2()V
     .locals 0
 
-    .line 713
+    .line 720
     iget-object p0, p0, Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController$4;->this$0:Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController;
 
     invoke-static {p0}, Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController;->-$$Nest$mupdateFromExternal(Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController;)V
@@ -95,7 +95,7 @@
 .method public onPackageAdded(Ljava/lang/String;I)V
     .locals 0
 
-    .line 703
+    .line 710
     new-instance p1, Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController$4$$ExternalSyntheticLambda2;
 
     invoke-direct {p1, p0}, Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController$4$$ExternalSyntheticLambda2;-><init>(Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController$4;)V
@@ -108,7 +108,7 @@
 .method public onPackageModified(Ljava/lang/String;)V
     .locals 0
 
-    .line 708
+    .line 715
     new-instance p1, Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController$4$$ExternalSyntheticLambda0;
 
     invoke-direct {p1, p0}, Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController$4$$ExternalSyntheticLambda0;-><init>(Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController$4;)V
@@ -121,7 +121,7 @@
 .method public onPackageRemoved(Ljava/lang/String;I)V
     .locals 0
 
-    .line 713
+    .line 720
     new-instance p1, Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController$4$$ExternalSyntheticLambda1;
 
     invoke-direct {p1, p0}, Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController$4$$ExternalSyntheticLambda1;-><init>(Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController$4;)V

@@ -25,10 +25,10 @@
 .method constructor <init>(Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController$DialogHost;)V
     .locals 0
 
-    .line 728
+    .line 735
     invoke-direct {p0}, Landroidx/fragment/app/DialogFragment;-><init>()V
 
-    .line 729
+    .line 736
     iput-object p1, p0, Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController$CredentialManagerDialogFragment;->mDialogHost:Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController$DialogHost;
 
     return-void
@@ -39,7 +39,7 @@
 .method public getDialogHost()Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController$DialogHost;
     .locals 0
 
-    .line 733
+    .line 740
     iget-object p0, p0, Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController$CredentialManagerDialogFragment;->mDialogHost:Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController$DialogHost;
 
     return-object p0
@@ -48,7 +48,7 @@
 .method public onCancel(Landroid/content/DialogInterface;)V
     .locals 0
 
-    .line 738
+    .line 745
     invoke-virtual {p0}, Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController$CredentialManagerDialogFragment;->getDialogHost()Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController$DialogHost;
 
     move-result-object p0

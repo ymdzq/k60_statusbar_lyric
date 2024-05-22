@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <LinearLayout android:orientation="vertical"
               android:layout_width="wrap_content"
-              android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+              android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
   <include android:id="@id/search_view"
            layout="@layout/miuix_appcompat_search_stub" />
   <LinearLayout android:orientation="vertical"
@@ -18,7 +18,7 @@
       <miuix.springback.view.SpringBackLayout android:id="@id/springback_layout"
                             android:layout_width="fill_parent"
                             android:layout_height="fill_parent"
-                            settings:scrollableView="@id/application_list">
+                            app:scrollableView="@id/application_list">
         <miuix.recyclerview.widget.RecyclerView android:id="@id/application_list"
                               android:layout_width="fill_parent"
                               android:layout_height="fill_parent"

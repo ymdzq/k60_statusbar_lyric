@@ -24,7 +24,7 @@
 
     const/4 v0, 0x0
 
-    .line 47
+    .line 46
     :try_start_0
     sget-object v1, Lcom/android/settings/utils/SettingsFeatures;->sNotSupportToolBoxDevices:Ljava/util/List;
 
@@ -40,7 +40,7 @@
 
     const/4 v2, 0x0
 
-    .line 48
+    .line 47
     invoke-static {v1, v2}, Landroid/content/Intent;->parseUri(Ljava/lang/String;I)Landroid/content/Intent;
 
     move-result-object v0
@@ -54,7 +54,7 @@
 
     const-string v2, "URI invalid"
 
-    .line 51
+    .line 50
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
@@ -67,7 +67,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 57
+    .line 56
     iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
@@ -94,35 +94,16 @@
 
 # virtual methods
 .method public getAvailabilityStatus()I
-    .locals 1
+    .locals 0
 
     .line 28
-    invoke-static {}, Lcom/android/settings/special/GameBoosterController;->getGameBoosterIntent()Landroid/content/Intent;
-
-    move-result-object v0
-
-    invoke-direct {p0, v0}, Lcom/android/settings/special/GameBoosterController;->isIntentValid(Landroid/content/Intent;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
-
-    invoke-static {v0}, Lcom/android/settings/utils/SettingsFeatures;->isSupportDock(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
     iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
 
-    .line 29
-    invoke-static {p0}, Lcom/android/settings/utils/SettingsFeatures;->isOnPcMode(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/android/settings/utils/SettingsFeatures;->isShowGameTurbo(Landroid/content/Context;)Z
 
     move-result p0
 
-    if-nez p0, :cond_0
+    if-eqz p0, :cond_0
 
     const/4 p0, 0x0
 
@@ -171,7 +152,7 @@
 .method public handlePreferenceTreeClick(Landroidx/preference/Preference;)Z
     .locals 2
 
-    .line 34
+    .line 33
     iget-object v0, p0, Lcom/android/settings/core/BasePreferenceController;->mPreferenceKey:Ljava/lang/String;
 
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
@@ -184,19 +165,19 @@
 
     if-eqz v0, :cond_1
 
-    .line 35
+    .line 34
     invoke-static {}, Lcom/android/settings/special/GameBoosterController;->getGameBoosterIntent()Landroid/content/Intent;
 
     move-result-object p1
 
-    .line 36
+    .line 35
     invoke-direct {p0, p1}, Lcom/android/settings/special/GameBoosterController;->isIntentValid(Landroid/content/Intent;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 37
+    .line 36
     iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0, p1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
@@ -206,7 +187,7 @@
 
     return p0
 
-    .line 41
+    .line 40
     :cond_1
     invoke-super {p0, p1}, Lcom/android/settings/core/BasePreferenceController;->handlePreferenceTreeClick(Landroidx/preference/Preference;)Z
 

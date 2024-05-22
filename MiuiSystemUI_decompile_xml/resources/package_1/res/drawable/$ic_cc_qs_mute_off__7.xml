@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <set android:ordering="together" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f08023d"
+  <objectAnimator android:interpolator="@drawable/$$ic_cc_qs_mute_off__7__0"
                   android:duration="17"
                   android:startOffset="0"
                   android:valueFrom="43.226"
                   android:valueTo="43.226"
                   android:valueType="floatType"
                   android:propertyName="rotation" />
-  <objectAnimator android:interpolator="@drawable/drawable_0x7f08023e"
+  <objectAnimator android:interpolator="@drawable/$$ic_cc_qs_mute_off__7__1"
                   android:duration="167"
                   android:startOffset="17"
                   android:valueFrom="43.226"

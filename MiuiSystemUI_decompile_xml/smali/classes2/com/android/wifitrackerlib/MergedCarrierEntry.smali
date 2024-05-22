@@ -1,6 +1,6 @@
 .class public final Lcom/android/wifitrackerlib/MergedCarrierEntry;
 .super Lcom/android/wifitrackerlib/WifiEntry;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # instance fields
@@ -170,7 +170,7 @@
 
     const/4 p2, 0x0
 
-    const v0, 0x7f130d0a    # @string/wifitrackerlib_wifi_wont_autoconnect_for_now 'WLAN won’t auto-connect for now'
+    const v0, 0x7f130d10    # @string/wifitrackerlib_wifi_wont_autoconnect_for_now 'WLAN won’t auto-connect for now'
 
     invoke-static {p1, v0, p2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -326,7 +326,7 @@
     iget-object v1, p0, Lcom/android/wifitrackerlib/MergedCarrierEntry;->mContext:Landroid/content/Context;
 
     .line 4
-    const v2, 0x7f130cd4    # @string/wifitrackerlib_summary_separator ' / '
+    const v2, 0x7f130cda    # @string/wifitrackerlib_summary_separator ' / '
 
     .line 6
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;

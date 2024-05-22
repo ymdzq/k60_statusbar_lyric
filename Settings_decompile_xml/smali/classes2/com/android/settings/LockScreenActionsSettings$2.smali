@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/android/settings/LockScreenActionsSettings;)V
     .locals 0
 
-    .line 73
+    .line 82
     iput-object p1, p0, Lcom/android/settings/LockScreenActionsSettings$2;->this$0:Lcom/android/settings/LockScreenActionsSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onPreferenceChange(Landroidx/preference/Preference;Ljava/lang/Object;)Z
     .locals 0
 
-    .line 76
+    .line 85
     iget-object p1, p0, Lcom/android/settings/LockScreenActionsSettings$2;->this$0:Lcom/android/settings/LockScreenActionsSettings;
 
     invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
@@ -53,12 +53,28 @@
 
     invoke-static {p1, p2}, Lcom/android/settings/utils/StatusBarUtils;->setExpandableUnderLockscreen(Landroid/content/Context;I)V
 
-    .line 77
+    .line 86
+    sget-boolean p1, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
+
+    if-eqz p1, :cond_0
+
+    .line 87
+    iget-object p1, p0, Lcom/android/settings/LockScreenActionsSettings$2;->this$0:Lcom/android/settings/LockScreenActionsSettings;
+
+    invoke-static {p1}, Lcom/android/settings/LockScreenActionsSettings;->-$$Nest$mupdateLockScreenDeviceControl(Lcom/android/settings/LockScreenActionsSettings;)V
+
+    .line 88
+    iget-object p1, p0, Lcom/android/settings/LockScreenActionsSettings$2;->this$0:Lcom/android/settings/LockScreenActionsSettings;
+
+    invoke-static {p1}, Lcom/android/settings/LockScreenActionsSettings;->-$$Nest$mupdateLockScreenXiaomiSmartHub(Lcom/android/settings/LockScreenActionsSettings;)V
+
+    .line 90
+    :cond_0
     iget-object p1, p0, Lcom/android/settings/LockScreenActionsSettings$2;->this$0:Lcom/android/settings/LockScreenActionsSettings;
 
     invoke-static {p1}, Lcom/android/settings/LockScreenActionsSettings;->-$$Nest$mupdateLockScreenSmartDeviceControl(Lcom/android/settings/LockScreenActionsSettings;)V
 
-    .line 78
+    .line 91
     iget-object p0, p0, Lcom/android/settings/LockScreenActionsSettings$2;->this$0:Lcom/android/settings/LockScreenActionsSettings;
 
     invoke-static {p0}, Lcom/android/settings/LockScreenActionsSettings;->-$$Nest$mupdateLockScreenAllowTrivialControls(Lcom/android/settings/LockScreenActionsSettings;)V

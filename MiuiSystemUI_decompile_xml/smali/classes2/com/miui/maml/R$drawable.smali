@@ -1,6 +1,6 @@
 .class public final Lcom/miui/maml/R$drawable;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # static fields
@@ -622,9 +622,9 @@
 
 .field public static final cactus3:I = 0x7f080baf
 
-.field public static final calculator_icon:I = 0x7f080bb0 # @drawable/calculator_icon 'res/drawable-xhdpi-sw600dp/calculator_icon.webp'
+.field public static final calculator_icon:I = 0x7f080bb0 # @drawable/calculator_icon 'res/drawable-sw600dp-xhdpi/calculator_icon.webp'
 
-.field public static final calendar_icon:I = 0x7f080bb1 # @drawable/calendar_icon 'res/drawable-xhdpi-sw600dp/calendar_icon.webp'
+.field public static final calendar_icon:I = 0x7f080bb1 # @drawable/calendar_icon 'res/drawable-sw600dp-xhdpi/calendar_icon.webp'
 
 .field public static final camera_compat_dismiss_button:I = 0x7f080bb2 # @drawable/camera_compat_dismiss_button 'res/drawable/camera_compat_dismiss_button.xml'
 
@@ -766,7 +766,7 @@
 
 .field public static final confirm_pinnumber_button:I = 0x7f080bf7 # @drawable/confirm_pinnumber_button 'res/drawable/confirm_pinnumber_button.xml'
 
-.field public static final contacts_icon:I = 0x7f080bf8 # @drawable/contacts_icon 'res/drawable-xhdpi-sw600dp/contacts_icon.webp'
+.field public static final contacts_icon:I = 0x7f080bf8 # @drawable/contacts_icon 'res/drawable-sw600dp-xhdpi/contacts_icon.webp'
 
 .field public static final contrast_dialog_button_background:I = 0x7f080bf9 # @drawable/contrast_dialog_button_background 'res/drawable/contrast_dialog_button_background.xml'
 
@@ -836,7 +836,7 @@
 
 .field public static final design_snackbar_background:I = 0x7f080c1a # @drawable/design_snackbar_background 'res/drawable/design_snackbar_background.xml'
 
-.field public static final deskclock_icon:I = 0x7f080c1b # @drawable/deskclock_icon 'res/drawable-xhdpi-sw600dp/deskclock_icon.webp'
+.field public static final deskclock_icon:I = 0x7f080c1b # @drawable/deskclock_icon 'res/drawable-sw600dp-xhdpi/deskclock_icon.webp'
 
 .field public static final desktop_mode_decor_menu_background:I = 0x7f080c1c # @drawable/desktop_mode_decor_menu_background 'res/drawable/desktop_mode_decor_menu_background.xml'
 
@@ -934,7 +934,7 @@
 
 .field public static final edit_text_filled:I = 0x7f080c4b # @drawable/edit_text_filled 'res/drawable/edit_text_filled.xml'
 
-.field public static final email_icon:I = 0x7f080c4c # @drawable/email_icon 'res/drawable-xhdpi-sw600dp/email_icon.webp'
+.field public static final email_icon:I = 0x7f080c4c # @drawable/email_icon 'res/drawable-sw600dp-xhdpi/email_icon.webp'
 
 .field public static final emergency_btn_global:I = 0x7f080c4d
 
@@ -1048,7 +1048,7 @@
 
 .field public static final file_icon_zip:I = 0x7f080c84
 
-.field public static final fileexplorer_icon:I = 0x7f080c85 # @drawable/fileexplorer_icon 'res/drawable-xhdpi-sw600dp/fileexplorer_icon.webp'
+.field public static final fileexplorer_icon:I = 0x7f080c85 # @drawable/fileexplorer_icon 'res/drawable-sw600dp-xhdpi/fileexplorer_icon.webp'
 
 .field public static final finger_circle_image_aod:I = 0x7f080c86 # @drawable/finger_circle_image_aod 'res/drawable/finger_circle_image_aod.webp'
 
@@ -6292,7 +6292,7 @@
 
 .field public static final notification_vector_drawable_progress_indeterminate_horizontal:I = 0x7f0816c2 # @drawable/notification_vector_drawable_progress_indeterminate_horizontal 'res/drawable/notification_vector_drawable_progress_indeterminate_horizontal.xml'
 
-.field public static final notifications_clear_all:I = 0x7f0816c3 # @drawable/notifications_clear_all 'res/drawable-440dpi-night/notifications_clear_all.webp'
+.field public static final notifications_clear_all:I = 0x7f0816c3 # @drawable/notifications_clear_all 'res/drawable-night-440dpi/notifications_clear_all.webp'
 
 .field public static final notify_panel_notification_icon_bg:I = 0x7f0816c4
 
@@ -7752,7 +7752,7 @@
 
 .field public static final wallet_empty_state_bg:I = 0x7f08199c # @drawable/wallet_empty_state_bg 'res/drawable/wallet_empty_state_bg.xml'
 
-.field public static final wallpaper:I = 0x7f08199d # @drawable/wallpaper 'res/drawable-440dpi-sw392dp-h837dp/wallpaper.webp'
+.field public static final wallpaper:I = 0x7f08199d # @drawable/wallpaper 'res/drawable-sw392dp-h837dp-440dpi/wallpaper.webp'
 
 .field public static final wallpaper_play:I = 0x7f08199e # @drawable/wallpaper_play 'res/drawable-xhdpi/wallpaper_play.webp'
 

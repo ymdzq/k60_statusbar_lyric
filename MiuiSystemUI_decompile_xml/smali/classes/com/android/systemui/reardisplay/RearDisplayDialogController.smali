@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/reardisplay/RearDisplayDialogController;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lcom/android/systemui/CoreStartable;
@@ -413,7 +413,7 @@
     const/4 p1, -0x1
 
     .line 105
-    const v4, 0x7f130a1f    # @string/rear_display_bottom_sheet_confirm 'Switch screens now'
+    const v4, 0x7f130a25    # @string/rear_display_bottom_sheet_confirm 'Switch screens now'
 
     .line 106
     invoke-virtual {v0, p1, v4, v1, v2}, Lcom/android/systemui/statusbar/phone/SystemUIDialog;->setButton(IILandroid/content/DialogInterface$OnClickListener;Z)V
@@ -429,7 +429,7 @@
     invoke-direct {v0, p0, v2}, Lcom/android/systemui/reardisplay/RearDisplayDialogController$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/reardisplay/RearDisplayDialogController;I)V
 
     .line 116
-    const v1, 0x7f130a1e    # @string/rear_display_bottom_sheet_cancel 'Cancel'
+    const v1, 0x7f130a24    # @string/rear_display_bottom_sheet_cancel 'Cancel'
 
     .line 119
     invoke-virtual {p1, v3, v1, v0, v2}, Lcom/android/systemui/statusbar/phone/SystemUIDialog;->setButton(IILandroid/content/DialogInterface$OnClickListener;Z)V

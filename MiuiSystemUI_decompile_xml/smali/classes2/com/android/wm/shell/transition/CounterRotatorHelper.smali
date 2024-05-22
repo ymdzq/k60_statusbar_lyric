@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/transition/CounterRotatorHelper;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 
 # instance fields
@@ -312,129 +312,138 @@
     if-eqz v2, :cond_3
 
     .line 130
-    invoke-virtual {v15}, Landroid/window/TransitionInfo$Change;->getFlags()I
+    invoke-virtual {v2}, Landroid/view/SurfaceControl;->isValid()Z
 
     .line 132
     move-result v3
 
     .line 135
-    and-int/lit8 v3, v3, 0x2
+    if-eqz v3, :cond_3
 
     .line 136
-    const/4 v4, -0x1
+    invoke-virtual {v15}, Landroid/window/TransitionInfo$Change;->getFlags()I
 
     .line 138
-    if-nez v3, :cond_1
-
-    .line 139
-    sub-int v3, v13, v14
+    move-result v3
 
     .line 141
+    and-int/lit8 v3, v3, 0x2
+
+    .line 142
+    const/4 v4, -0x1
+
+    .line 144
+    if-nez v3, :cond_1
+
+    .line 145
+    sub-int v3, v13, v14
+
+    .line 147
     goto :goto_1
 
-    .line 143
+    .line 149
     :cond_1
     move v3, v4
 
-    .line 144
+    .line 150
     :goto_1
     invoke-static {}, Lcom/android/wm/shell/sosc/SoScUtils;->getInstance()Lcom/android/wm/shell/sosc/SoScUtils;
 
-    .line 145
+    .line 151
     move-result-object v5
 
-    .line 148
+    .line 154
     invoke-virtual {v5}, Lcom/android/wm/shell/sosc/SoScUtils;->isSoScSupported()Z
-
-    .line 149
-    move-result v5
-
-    .line 152
-    if-eqz v5, :cond_2
-
-    .line 153
-    invoke-virtual {v15}, Landroid/window/TransitionInfo$Change;->getFlags()I
 
     .line 155
     move-result v5
 
     .line 158
-    and-int/lit8 v5, v5, 0x1
-
-    .line 159
     if-eqz v5, :cond_2
 
+    .line 159
+    invoke-virtual {v15}, Landroid/window/TransitionInfo$Change;->getFlags()I
+
     .line 161
+    move-result v5
+
+    .line 164
+    and-int/lit8 v5, v5, 0x1
+
+    .line 165
+    if-eqz v5, :cond_2
+
+    .line 167
     goto :goto_2
 
-    .line 163
+    .line 169
     :cond_2
     move v4, v3
 
-    .line 164
+    .line 170
     :goto_2
     invoke-virtual {v8, v2, v4}, Landroid/view/SurfaceControl$Transaction;->setLayer(Landroid/view/SurfaceControl;I)Landroid/view/SurfaceControl$Transaction;
 
-    .line 165
+    .line 171
     :cond_3
     invoke-virtual {v1, v9, v0}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 168
+    .line 174
     move-object v2, v0
 
-    .line 171
+    .line 177
     goto :goto_3
 
-    .line 172
+    .line 178
     :cond_4
     move/from16 v17, v9
 
-    .line 173
+    .line 179
     :goto_3
     invoke-virtual {v15}, Landroid/window/TransitionInfo$Change;->getLeash()Landroid/view/SurfaceControl;
 
-    .line 175
+    .line 181
     move-result-object v0
 
-    .line 178
+    .line 184
     iget-object v1, v2, Lcom/android/wm/shell/util/CounterRotator;->mSurface:Landroid/view/SurfaceControl;
 
-    .line 179
+    .line 185
     if-nez v1, :cond_5
 
-    .line 181
+    .line 187
     goto :goto_5
 
-    .line 183
+    .line 189
     :cond_5
     invoke-virtual {v8, v0, v1}, Landroid/view/SurfaceControl$Transaction;->reparent(Landroid/view/SurfaceControl;Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
 
-    .line 184
+    .line 190
     goto :goto_5
 
-    .line 187
+    .line 193
     :cond_6
     :goto_4
     move/from16 v17, v9
 
-    .line 188
+    .line 194
     :goto_5
     add-int/lit8 v14, v14, -0x1
 
-    .line 190
+    .line 196
     move-object/from16 v0, p0
 
-    .line 192
+    .line 198
     move-object/from16 v1, p1
 
-    .line 194
+    .line 200
     move/from16 v9, v17
 
-    .line 196
+    .line 202
     goto/16 :goto_0
 
-    .line 198
+    .line 204
     :cond_7
     return-void
-    .line 200
+    .line 206
 .end method

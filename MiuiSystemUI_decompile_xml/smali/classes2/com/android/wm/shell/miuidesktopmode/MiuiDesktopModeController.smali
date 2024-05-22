@@ -1,6 +1,6 @@
 .class public final Lcom/android/wm/shell/miuidesktopmode/MiuiDesktopModeController;
 .super Ljava/lang/Object;
-.source "go/retraceme 46e43a6cb16c843bdab2ef99d05cf7faa2774ca07896d398b524e84c7d9657f3"
+.source "go/retraceme cf7e75b67acb443865ccf1068fb1cac9fef1a5fd78972f04c17bf2175ac8e5fd"
 
 # interfaces
 .implements Lcom/android/wm/shell/sysui/KeyguardChangeListener;
@@ -3137,1018 +3137,1006 @@
     invoke-virtual {v4, v6}, Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;->setMiuiFreeformExiting(Z)Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;
 
     .line 1525
-    move-result-object v4
+    invoke-virtual {v0}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getState()Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo$State;
 
     .line 1528
-    invoke-virtual {v4}, Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;->freeformToFullscreen()Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;
-
-    .line 1529
-    invoke-virtual {v0}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getState()Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo$State;
-
-    .line 1532
     move-result-object v4
 
-    .line 1535
+    .line 1531
     iget-object v4, v4, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo$State;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 1536
+    .line 1532
     iget-object v4, v4, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
 
-    .line 1538
+    .line 1534
     invoke-virtual {v5, v4, v2}, Landroid/window/WindowContainerTransaction;->setMiuiFreeformInfoChange(Landroid/window/WindowContainerToken;Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;)Landroid/window/WindowContainerTransaction;
 
-    .line 1540
+    .line 1536
     invoke-virtual {v0}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getState()Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo$State;
+
+    .line 1539
+    move-result-object v2
+
+    .line 1542
+    iget-object v2, v2, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo$State;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
     .line 1543
-    move-result-object v2
-
-    .line 1546
-    iget-object v2, v2, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo$State;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
-
-    .line 1547
     iget-object v2, v2, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
 
-    .line 1549
+    .line 1545
     invoke-virtual {v5, v2, v3}, Landroid/window/WindowContainerTransaction;->setBoundsChangeTransaction(Landroid/window/WindowContainerToken;Landroid/view/SurfaceControl$Transaction;)Landroid/window/WindowContainerTransaction;
 
-    .line 1551
+    .line 1547
     iget-object v1, v1, Lcom/android/wm/shell/miuidesktopmode/MiuiDesktopModeAnimation;->mPendingMaximizeMiuiFreeform:Landroid/util/SparseArray;
 
-    .line 1554
+    .line 1550
     invoke-virtual {v0}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getState()Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo$State;
 
-    .line 1556
+    .line 1552
     move-result-object v2
 
-    .line 1559
+    .line 1555
     iget-object v2, v2, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo$State;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 1560
+    .line 1556
     iget v2, v2, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
-    .line 1562
+    .line 1558
     invoke-virtual {v1, v2, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 1564
+    .line 1560
     goto :goto_18
 
-    .line 1567
+    .line 1563
     :cond_2c
     invoke-virtual {v0, v4}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->setScale(F)V
 
-    .line 1568
+    .line 1564
     const/4 v1, -0x1
 
-    .line 1571
+    .line 1567
     invoke-virtual {v0, v1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->setMode(I)V
 
-    .line 1572
+    .line 1568
     const/4 v3, 0x0
 
-    .line 1575
+    .line 1571
     invoke-virtual {v0, v3}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 1576
+    .line 1572
     invoke-virtual {v2, v1}, Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;->setMiuiFreeformMode(I)Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;
 
-    .line 1579
+    .line 1575
     move-result-object v1
 
-    .line 1582
+    .line 1578
     invoke-virtual {v1, v4}, Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;->setMiuiFreeformScale(F)Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;
 
-    .line 1583
-    move-result-object v1
-
-    .line 1586
-    invoke-virtual {v1}, Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;->freeformToFullscreen()Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;
-
-    .line 1587
+    .line 1579
     invoke-virtual {v0}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getState()Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo$State;
 
-    .line 1590
+    .line 1582
     move-result-object v0
 
-    .line 1593
+    .line 1585
     iget-object v0, v0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo$State;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 1594
+    .line 1586
     iget-object v0, v0, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
 
-    .line 1596
+    .line 1588
     invoke-virtual {v5, v0, v2}, Landroid/window/WindowContainerTransaction;->setMiuiFreeformInfoChange(Landroid/window/WindowContainerToken;Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;)Landroid/window/WindowContainerTransaction;
 
-    .line 1598
+    .line 1590
     :cond_2d
     :goto_18
     iget-object v0, v7, Landroid/window/DisplayAreaInfo;->configuration:Landroid/content/res/Configuration;
 
-    .line 1601
+    .line 1593
     iget-object v0, v0, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
-    .line 1603
+    .line 1595
     invoke-virtual {v0}, Landroid/app/WindowConfiguration;->getWindowingMode()I
 
-    .line 1605
+    .line 1597
     iget-object v0, v7, Landroid/window/DisplayAreaInfo;->token:Landroid/window/WindowContainerToken;
 
-    .line 1608
+    .line 1600
     const/4 v1, 0x1
 
-    .line 1610
+    .line 1602
     invoke-virtual {v5, v0, v1}, Landroid/window/WindowContainerTransaction;->setWindowingMode(Landroid/window/WindowContainerToken;I)Landroid/window/WindowContainerTransaction;
 
-    .line 1611
+    .line 1603
     move v0, v1
 
-    .line 1614
+    .line 1606
     goto/16 :goto_f
 
-    .line 1615
+    .line 1607
     :goto_19
     iget-object v1, v1, Lcom/android/wm/shell/miuidesktopmode/MiuiDesktopModeController;->mMiuiDesktopModeAnimation:Lcom/android/wm/shell/miuidesktopmode/MiuiDesktopModeAnimation;
 
-    .line 1617
+    .line 1609
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 1619
+    .line 1611
     sget-boolean v2, Lcom/android/wm/shell/transition/Transitions;->ENABLE_SHELL_TRANSITIONS:Z
 
-    .line 1622
+    .line 1614
     iget-object v3, v1, Lcom/android/wm/shell/miuidesktopmode/MiuiDesktopModeAnimation;->mPendingTransitionTokens:Ljava/util/List;
 
-    .line 1624
+    .line 1616
     iget-object v4, v1, Lcom/android/wm/shell/miuidesktopmode/MiuiDesktopModeAnimation;->mTransitions:Lcom/android/wm/shell/transition/Transitions;
 
-    .line 1626
+    .line 1618
     if-eqz v2, :cond_2e
 
-    .line 1628
+    .line 1620
     const/16 v2, 0x5208
 
-    .line 1630
+    .line 1622
     invoke-virtual {v4, v2, v5, v1}, Lcom/android/wm/shell/transition/Transitions;->startTransition(ILandroid/window/WindowContainerTransaction;Lcom/android/wm/shell/transition/Transitions$TransitionHandler;)Landroid/os/IBinder;
 
-    .line 1632
+    .line 1624
     move-result-object v2
 
-    .line 1635
+    .line 1627
     move-object v5, v3
 
-    .line 1636
+    .line 1628
     check-cast v5, Ljava/util/ArrayList;
 
-    .line 1637
+    .line 1629
     invoke-virtual {v5, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1639
+    .line 1631
     goto :goto_1a
 
-    .line 1642
+    .line 1634
     :cond_2e
     iget-object v2, v1, Lcom/android/wm/shell/miuidesktopmode/MiuiDesktopModeAnimation;->mRootTaskDisplayAreaOrganizer:Lcom/android/wm/shell/RootTaskDisplayAreaOrganizer;
 
-    .line 1643
+    .line 1635
     invoke-virtual {v2, v5}, Landroid/window/DisplayAreaOrganizer;->applyTransaction(Landroid/window/WindowContainerTransaction;)V
 
-    .line 1645
+    .line 1637
     :goto_1a
     move/from16 v2, p1
 
-    .line 1648
+    .line 1640
     if-eqz v2, :cond_35
 
-    .line 1650
+    .line 1642
     invoke-virtual {v9}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 1652
+    .line 1644
     const-string v5, "afterEnterDesktop"
 
-    .line 1655
+    .line 1647
     invoke-static {v8, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1657
+    .line 1649
     iget-object v5, v9, Lcom/android/wm/shell/miuidesktopmode/MiuiDesktopTasksController;->mPrimarySplitTasks:Ljava/util/List;
 
-    .line 1660
+    .line 1652
     check-cast v5, Ljava/util/ArrayList;
 
-    .line 1662
+    .line 1654
     invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
 
-    .line 1664
+    .line 1656
     move-result v6
 
-    .line 1667
+    .line 1659
     if-lez v6, :cond_30
 
-    .line 1668
+    .line 1660
     invoke-virtual {v5}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    .line 1670
+    .line 1662
     move-result-object v5
 
-    .line 1673
+    .line 1665
     :cond_2f
     invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 1674
+    .line 1666
     move-result v6
 
-    .line 1677
+    .line 1669
     if-eqz v6, :cond_30
 
-    .line 1678
+    .line 1670
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 1680
+    .line 1672
     move-result-object v6
 
-    .line 1683
+    .line 1675
     check-cast v6, Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 1684
+    .line 1676
     invoke-static {v6}, Lcom/android/wm/shell/miuidesktopmode/MiuiDesktopTasksController;->isVisible(Landroid/app/ActivityManager$RunningTaskInfo;)Z
 
-    .line 1686
+    .line 1678
     move-result v7
 
-    .line 1689
+    .line 1681
     if-eqz v7, :cond_2f
 
-    .line 1690
+    .line 1682
     iget v5, v6, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
-    .line 1692
+    .line 1684
     goto :goto_1b
 
-    .line 1694
+    .line 1686
     :cond_30
     const/4 v5, 0x0
 
-    .line 1695
+    .line 1687
     :goto_1b
     iget-object v6, v9, Lcom/android/wm/shell/miuidesktopmode/MiuiDesktopTasksController;->mSecondSplitTasks:Ljava/util/List;
 
-    .line 1696
+    .line 1688
     check-cast v6, Ljava/util/ArrayList;
 
-    .line 1698
+    .line 1690
     invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
 
-    .line 1700
+    .line 1692
     move-result v7
 
-    .line 1703
+    .line 1695
     if-lez v7, :cond_32
 
-    .line 1704
+    .line 1696
     invoke-virtual {v6}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    .line 1706
+    .line 1698
     move-result-object v6
 
-    .line 1709
+    .line 1701
     :cond_31
     invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 1710
+    .line 1702
     move-result v7
 
-    .line 1713
+    .line 1705
     if-eqz v7, :cond_32
 
-    .line 1714
+    .line 1706
     invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 1716
+    .line 1708
     move-result-object v7
 
-    .line 1719
+    .line 1711
     check-cast v7, Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 1720
+    .line 1712
     invoke-static {v7}, Lcom/android/wm/shell/miuidesktopmode/MiuiDesktopTasksController;->isVisible(Landroid/app/ActivityManager$RunningTaskInfo;)Z
 
-    .line 1722
+    .line 1714
     move-result v10
 
-    .line 1725
+    .line 1717
     if-eqz v10, :cond_31
 
-    .line 1726
+    .line 1718
     iget v6, v7, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
-    .line 1728
+    .line 1720
     goto :goto_1c
 
-    .line 1730
+    .line 1722
     :cond_32
     const/4 v6, 0x0
 
-    .line 1731
+    .line 1723
     :goto_1c
     new-instance v7, Ljava/lang/StringBuilder;
 
-    .line 1732
+    .line 1724
     const-string v10, "afterEnterDesktop primaryTaskId: "
 
-    .line 1734
+    .line 1726
     invoke-direct {v7, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 1736
+    .line 1728
     invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 1739
+    .line 1731
     const-string v10, " secondTaskId: "
 
-    .line 1742
+    .line 1734
     invoke-virtual {v7, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1744
+    .line 1736
     invoke-virtual {v7, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 1747
+    .line 1739
     invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 1750
+    .line 1742
     move-result-object v7
 
-    .line 1753
+    .line 1745
     invoke-static {v8, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1754
+    .line 1746
     iget-object v7, v9, Lcom/android/wm/shell/miuidesktopmode/MiuiDesktopTasksController;->mFreeFormTasksInFocussed:Ljava/util/List;
 
-    .line 1757
+    .line 1749
     if-lez v5, :cond_33
 
-    .line 1759
+    .line 1751
     invoke-virtual {v9, v7, v5, v6}, Lcom/android/wm/shell/miuidesktopmode/MiuiDesktopTasksController;->switchSplitToDesktop(Ljava/util/List;II)V
 
-    .line 1761
+    .line 1753
     const/4 v5, 0x0
 
-    .line 1764
+    .line 1756
     goto :goto_1d
 
-    .line 1765
+    .line 1757
     :cond_33
     const/4 v5, 0x0
 
-    .line 1766
+    .line 1758
     if-lez v6, :cond_34
 
-    .line 1767
+    .line 1759
     invoke-virtual {v9, v7, v6, v5}, Lcom/android/wm/shell/miuidesktopmode/MiuiDesktopTasksController;->switchSplitToDesktop(Ljava/util/List;II)V
 
-    .line 1769
+    .line 1761
     :cond_34
     :goto_1d
     iget-object v6, v9, Lcom/android/wm/shell/miuidesktopmode/MiuiDesktopTasksController;->mFullScreenTasksBehindHome:Landroid/util/ArraySet;
 
-    .line 1772
+    .line 1764
     invoke-virtual {v6}, Landroid/util/ArraySet;->size()I
 
-    .line 1774
+    .line 1766
     move-result v7
 
-    .line 1777
+    .line 1769
     if-lez v7, :cond_39
 
-    .line 1778
+    .line 1770
     invoke-virtual {v6}, Landroid/util/ArraySet;->iterator()Ljava/util/Iterator;
 
-    .line 1780
+    .line 1772
     move-result-object v6
 
-    .line 1783
+    .line 1775
     :goto_1e
     invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 1784
+    .line 1776
     move-result v7
 
-    .line 1787
+    .line 1779
     if-eqz v7, :cond_39
 
-    .line 1788
+    .line 1780
     invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 1790
+    .line 1782
     move-result-object v7
 
-    .line 1793
+    .line 1785
     check-cast v7, Ljava/lang/Integer;
 
-    .line 1794
+    .line 1786
     invoke-virtual {v7}, Ljava/lang/Integer;->intValue()I
 
-    .line 1796
+    .line 1788
     move-result v7
 
-    .line 1799
+    .line 1791
     iget-object v8, v9, Lcom/android/wm/shell/miuidesktopmode/MiuiDesktopTasksController;->mMiuiDesktopModeController:Lcom/android/wm/shell/miuidesktopmode/MiuiDesktopModeController;
 
-    .line 1800
+    .line 1792
     invoke-virtual {v8}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 1802
+    .line 1794
     new-instance v10, Lcom/android/wm/shell/miuidesktopmode/MiuiDesktopModeController$$ExternalSyntheticLambda1;
 
-    .line 1805
+    .line 1797
     invoke-direct {v10, v7}, Lcom/android/wm/shell/miuidesktopmode/MiuiDesktopModeController$$ExternalSyntheticLambda1;-><init>(I)V
 
-    .line 1807
+    .line 1799
     iget-object v7, v8, Lcom/android/wm/shell/miuidesktopmode/MiuiDesktopModeController;->mRecentTasks:Ljava/util/Optional;
 
-    .line 1810
+    .line 1802
     invoke-virtual {v7, v10}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
-    .line 1812
+    .line 1804
     goto :goto_1e
 
-    .line 1815
+    .line 1807
     :cond_35
     const/4 v5, 0x0
 
-    .line 1816
+    .line 1808
     invoke-virtual {v9}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 1817
+    .line 1809
     const-string v6, "afterExitDesktop"
 
-    .line 1820
+    .line 1812
     invoke-static {v8, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1822
+    .line 1814
     iget-object v6, v9, Lcom/android/wm/shell/miuidesktopmode/MiuiDesktopTasksController;->mRootHomeTask:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 1825
+    .line 1817
     if-eqz v6, :cond_37
 
-    .line 1827
+    .line 1819
     iget-object v7, v9, Lcom/android/wm/shell/miuidesktopmode/MiuiDesktopTasksController;->mTopMiuiDesktopModeTaskInfo:Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;
 
-    .line 1829
+    .line 1821
     if-nez v7, :cond_36
 
-    .line 1831
+    .line 1823
     invoke-static {v6}, Lcom/android/wm/shell/miuidesktopmode/MiuiDesktopTasksController;->isVisible(Landroid/app/ActivityManager$RunningTaskInfo;)Z
 
-    .line 1833
+    .line 1825
     move-result v6
 
-    .line 1836
+    .line 1828
     if-eqz v6, :cond_36
 
-    .line 1837
+    .line 1829
     iget-object v6, v9, Lcom/android/wm/shell/miuidesktopmode/MiuiDesktopTasksController;->mMiuiFreeformModeController:Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeController;
 
-    .line 1839
+    .line 1831
     invoke-virtual {v6}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeController;->startHomeTransition()V
 
-    .line 1841
+    .line 1833
     :cond_36
     const/4 v6, 0x0
 
-    .line 1844
+    .line 1836
     iput-object v6, v9, Lcom/android/wm/shell/miuidesktopmode/MiuiDesktopTasksController;->mRootHomeTask:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 1845
+    .line 1837
     goto :goto_1f
 
-    .line 1847
+    .line 1839
     :cond_37
     const/4 v6, 0x0
 
-    .line 1848
+    .line 1840
     :goto_1f
     iget-object v7, v9, Lcom/android/wm/shell/miuidesktopmode/MiuiDesktopTasksController;->mTopMiuiDesktopModeTaskInfo:Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;
 
-    .line 1849
+    .line 1841
     if-eqz v7, :cond_38
 
-    .line 1851
+    .line 1843
     invoke-virtual {v7}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getState()Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo$State;
 
-    .line 1853
+    .line 1845
     move-result-object v7
 
-    .line 1856
+    .line 1848
     iget-object v7, v7, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo$State;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 1857
+    .line 1849
     invoke-virtual {v9, v7}, Lcom/android/wm/shell/miuidesktopmode/MiuiDesktopTasksController;->checkMiuiFreeFormStacksNum(Landroid/app/ActivityManager$RunningTaskInfo;)V
 
-    .line 1859
+    .line 1851
     iput-object v6, v9, Lcom/android/wm/shell/miuidesktopmode/MiuiDesktopTasksController;->mTopMiuiDesktopModeTaskInfo:Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;
 
-    .line 1862
+    .line 1854
     goto :goto_20
 
-    .line 1864
+    .line 1856
     :cond_38
     invoke-virtual {v9, v6}, Lcom/android/wm/shell/miuidesktopmode/MiuiDesktopTasksController;->checkMiuiFreeFormStacksNum(Landroid/app/ActivityManager$RunningTaskInfo;)V
 
-    .line 1865
+    .line 1857
     :goto_20
     iget-object v6, v9, Lcom/android/wm/shell/miuidesktopmode/MiuiDesktopTasksController;->mFullScreenTasksBehindHome:Landroid/util/ArraySet;
 
-    .line 1868
+    .line 1860
     invoke-virtual {v6}, Landroid/util/ArraySet;->clear()V
 
-    .line 1870
+    .line 1862
     invoke-static {}, Lmiui/app/MiuiFreeFormManager;->clearFullScreenTasksBehindHome()V
 
-    .line 1873
+    .line 1865
     :cond_39
     move-object/from16 v6, v19
 
-    .line 1876
+    .line 1868
     invoke-virtual {v6, v2}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeController;->updateMiuiDesktopModeChange(Z)V
 
-    .line 1878
+    .line 1870
     if-eqz v2, :cond_44
 
-    .line 1881
+    .line 1873
     invoke-virtual {v6}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeController;->getMiuiFreeformModeDisplayInfo()Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeDisplayInfo;
 
-    .line 1883
+    .line 1875
     move-result-object v2
 
-    .line 1886
+    .line 1878
     new-instance v7, Landroid/graphics/Rect;
 
-    .line 1887
+    .line 1879
     invoke-direct {v7}, Landroid/graphics/Rect;-><init>()V
 
-    .line 1889
+    .line 1881
     invoke-virtual {v2, v7}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeDisplayInfo;->getMoveableBounds(Landroid/graphics/Rect;)V
 
-    .line 1892
+    .line 1884
     invoke-virtual/range {v20 .. v20}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskRepository;->getfreeformTasksInZOrder()Ljava/util/ArrayList;
 
-    .line 1895
+    .line 1887
     move-result-object v2
 
-    .line 1898
+    .line 1890
     move v8, v5
 
-    .line 1899
+    .line 1891
     :goto_21
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
-    .line 1900
+    .line 1892
     move-result v9
 
-    .line 1903
+    .line 1895
     if-ge v8, v9, :cond_44
 
-    .line 1904
+    .line 1896
     invoke-virtual {v2, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    .line 1906
+    .line 1898
     move-result-object v9
 
-    .line 1909
+    .line 1901
     check-cast v9, Ljava/lang/Integer;
 
-    .line 1910
+    .line 1902
     invoke-virtual {v9}, Ljava/lang/Integer;->intValue()I
 
-    .line 1912
+    .line 1904
     move-result v9
 
-    .line 1915
+    .line 1907
     move-object/from16 v10, v20
 
-    .line 1916
+    .line 1908
     invoke-virtual {v10, v9}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskRepository;->getMiuiFreeformTaskInfo(I)Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;
 
-    .line 1918
+    .line 1910
     move-result-object v9
 
-    .line 1921
+    .line 1913
     if-eqz v9, :cond_43
 
-    .line 1922
+    .line 1914
     invoke-virtual {v9}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getMode()I
 
-    .line 1924
+    .line 1916
     move-result v11
 
-    .line 1927
+    .line 1919
     const/4 v12, -0x1
 
-    .line 1928
+    .line 1920
     if-ne v11, v12, :cond_3a
 
-    .line 1929
+    .line 1921
     goto/16 :goto_23
 
-    .line 1931
+    .line 1923
     :cond_3a
     new-instance v11, Landroid/graphics/Rect;
 
-    .line 1933
+    .line 1925
     invoke-direct {v11}, Landroid/graphics/Rect;-><init>()V
 
-    .line 1935
+    .line 1927
     invoke-virtual {v9}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getFreeformScale()F
 
-    .line 1938
+    .line 1930
     move-result v12
 
-    .line 1941
+    .line 1933
     invoke-virtual {v9}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->isNormalState()Z
 
-    .line 1942
+    .line 1934
     move-result v13
 
-    .line 1945
+    .line 1937
     if-nez v13, :cond_3b
 
-    .line 1946
+    .line 1938
     invoke-virtual {v9}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->isNormalPinedState()Z
 
-    .line 1948
+    .line 1940
     move-result v13
 
-    .line 1951
+    .line 1943
     if-eqz v13, :cond_3d
 
-    .line 1952
+    .line 1944
     :cond_3b
     invoke-virtual {v6}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeController;->isAutoLayoutMode()Z
 
-    .line 1954
+    .line 1946
     move-result v13
 
-    .line 1957
+    .line 1949
     if-eqz v13, :cond_3c
 
-    .line 1958
+    .line 1950
     invoke-virtual {v9}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->isNormalState()Z
 
-    .line 1960
+    .line 1952
     move-result v13
 
-    .line 1963
+    .line 1955
     if-eqz v13, :cond_3c
 
-    .line 1964
+    .line 1956
     invoke-virtual {v2, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    .line 1966
+    .line 1958
     move-result-object v13
 
-    .line 1969
+    .line 1961
     check-cast v13, Ljava/lang/Integer;
 
-    .line 1970
+    .line 1962
     invoke-virtual {v13}, Ljava/lang/Integer;->intValue()I
 
-    .line 1972
+    .line 1964
     move-result v13
 
-    .line 1975
+    .line 1967
     invoke-virtual {v6, v13}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeController;->getDestinationAfterAutoLayout(I)Landroid/graphics/Rect;
 
-    .line 1976
+    .line 1968
     move-result-object v13
 
-    .line 1979
+    .line 1971
     if-eqz v13, :cond_3c
 
-    .line 1980
+    .line 1972
     invoke-virtual {v11, v13}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 1982
+    .line 1974
     invoke-virtual {v2, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    .line 1985
+    .line 1977
     move-result-object v12
 
-    .line 1988
+    .line 1980
     check-cast v12, Ljava/lang/Integer;
 
-    .line 1989
+    .line 1981
     invoke-virtual {v12}, Ljava/lang/Integer;->intValue()I
 
-    .line 1991
+    .line 1983
     move-result v12
 
-    .line 1994
+    .line 1986
     invoke-virtual {v6, v12}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeController;->getScaleAfterAutoLayout(I)F
 
-    .line 1995
+    .line 1987
     move-result v12
 
-    .line 1998
+    .line 1990
     goto :goto_22
 
-    .line 1999
+    .line 1991
     :cond_3c
     move v0, v5
 
-    .line 2000
+    .line 1992
     :goto_22
     if-nez v0, :cond_3d
 
-    .line 2001
+    .line 1993
     invoke-virtual {v9}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBounds()Landroid/graphics/Rect;
 
-    .line 2003
+    .line 1995
     move-result-object v0
 
-    .line 2006
+    .line 1998
     invoke-virtual {v9}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getState()Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo$State;
 
-    .line 2007
+    .line 1999
     move-result-object v12
 
-    .line 2010
+    .line 2002
     iget-object v12, v12, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo$State;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 2011
+    .line 2003
     invoke-virtual {v6, v12, v11, v0}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeController;->adjustFreeFormBoundsEnteringDesktop(Landroid/app/ActivityManager$RunningTaskInfo;Landroid/graphics/Rect;Landroid/graphics/Rect;)F
 
-    .line 2013
+    .line 2005
     move-result v12
 
-    .line 2016
+    .line 2008
     :cond_3d
     invoke-virtual {v9}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->isMiniState()Z
 
-    .line 2017
+    .line 2009
     move-result v0
 
-    .line 2020
+    .line 2012
     if-nez v0, :cond_3e
 
-    .line 2021
+    .line 2013
     invoke-virtual {v9}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->isMiniPinedState()Z
 
-    .line 2023
+    .line 2015
     move-result v0
 
-    .line 2026
+    .line 2018
     if-eqz v0, :cond_3f
 
-    .line 2027
+    .line 2019
     :cond_3e
     invoke-virtual {v9}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBounds()Landroid/graphics/Rect;
 
-    .line 2029
+    .line 2021
     move-result-object v0
 
-    .line 2032
+    .line 2024
     invoke-static {}, Lcom/xiaomi/freeform/MiuiFreeformStub;->getInstance()Lcom/xiaomi/freeform/MiuiFreeformStub;
 
-    .line 2033
+    .line 2025
     move-result-object v12
 
-    .line 2036
+    .line 2028
     invoke-virtual {v9}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getFreeformScale()F
 
-    .line 2037
+    .line 2029
     move-result v13
 
-    .line 2040
+    .line 2032
     invoke-virtual {v12, v0, v11, v13, v7}, Lcom/xiaomi/freeform/MiuiFreeformStub;->reviewFreeFormBounds(Landroid/graphics/Rect;Landroid/graphics/Rect;FLandroid/graphics/Rect;)F
 
-    .line 2041
+    .line 2033
     move-result v12
 
-    .line 2044
+    .line 2036
     :cond_3f
     invoke-virtual {v9}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getFreeformScale()F
 
-    .line 2045
+    .line 2037
     move-result v0
 
-    .line 2048
+    .line 2040
     cmpl-float v0, v12, v0
 
-    .line 2049
+    .line 2041
     if-nez v0, :cond_40
 
-    .line 2051
+    .line 2043
     invoke-virtual {v9}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBounds()Landroid/graphics/Rect;
 
-    .line 2053
+    .line 2045
     move-result-object v0
 
-    .line 2056
+    .line 2048
     invoke-virtual {v11, v0}, Landroid/graphics/Rect;->equals(Ljava/lang/Object;)Z
 
-    .line 2057
+    .line 2049
     move-result v0
 
-    .line 2060
+    .line 2052
     if-nez v0, :cond_41
 
-    .line 2061
+    .line 2053
     :cond_40
     invoke-virtual {v9}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getFreeformScale()F
 
-    .line 2063
+    .line 2055
     move-result v0
 
-    .line 2066
+    .line 2058
     sget-boolean v13, Lcom/android/wm/shell/transition/Transitions;->ENABLE_SHELL_TRANSITIONS:Z
 
-    .line 2067
+    .line 2059
     if-eqz v13, :cond_41
 
-    .line 2069
+    .line 2061
     new-instance v13, Landroid/window/WindowContainerTransaction;
 
-    .line 2071
+    .line 2063
     invoke-direct {v13}, Landroid/window/WindowContainerTransaction;-><init>()V
 
-    .line 2073
+    .line 2065
     invoke-virtual {v9}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getState()Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo$State;
 
-    .line 2076
+    .line 2068
     move-result-object v14
 
-    .line 2079
+    .line 2071
     iget-object v14, v14, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo$State;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 2080
+    .line 2072
     iget-object v14, v14, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
 
-    .line 2082
+    .line 2074
     invoke-virtual {v13, v14, v11}, Landroid/window/WindowContainerTransaction;->setBounds(Landroid/window/WindowContainerToken;Landroid/graphics/Rect;)Landroid/window/WindowContainerTransaction;
 
-    .line 2084
+    .line 2076
     invoke-virtual {v9, v11}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 2087
+    .line 2079
     invoke-virtual {v9, v11}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->setDestinationBounds(Landroid/graphics/Rect;)V
 
-    .line 2090
+    .line 2082
     invoke-virtual {v9, v12}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->setScale(F)V
 
-    .line 2093
+    .line 2085
     invoke-virtual {v9, v12}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->setDestinationScaleX(F)V
 
-    .line 2096
+    .line 2088
     invoke-virtual {v9, v12}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->setDestinationScaleY(F)V
 
-    .line 2099
+    .line 2091
     new-instance v14, Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;
 
-    .line 2102
+    .line 2094
     invoke-direct {v14}, Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;-><init>()V
 
-    .line 2104
+    .line 2096
     invoke-virtual {v14, v12}, Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;->setMiuiFreeformScale(F)Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;
 
-    .line 2107
+    .line 2099
     invoke-virtual {v9}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getState()Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo$State;
 
-    .line 2110
+    .line 2102
     move-result-object v12
 
-    .line 2113
+    .line 2105
     iget-object v12, v12, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo$State;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 2114
+    .line 2106
     iget-object v12, v12, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
 
-    .line 2116
+    .line 2108
     invoke-virtual {v13, v12, v14}, Landroid/window/WindowContainerTransaction;->setMiuiFreeformInfoChange(Landroid/window/WindowContainerToken;Lmiui/app/MiuiFreeFormManager$MiuiFreeFormInfoChange;)Landroid/window/WindowContainerTransaction;
 
-    .line 2118
+    .line 2110
     iget-object v12, v1, Lcom/android/wm/shell/miuidesktopmode/MiuiDesktopModeAnimation;->mPendingMiuiFreeformEnteringDkt:Landroid/util/SparseArray;
 
-    .line 2121
+    .line 2113
     invoke-virtual {v9}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getState()Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo$State;
 
-    .line 2123
+    .line 2115
     move-result-object v14
 
-    .line 2126
+    .line 2118
     iget-object v14, v14, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo$State;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 2127
+    .line 2119
     iget v14, v14, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
-    .line 2129
+    .line 2121
     invoke-virtual {v12, v14, v9}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 2131
+    .line 2123
     const/16 v12, 0x5209
 
-    .line 2134
+    .line 2126
     invoke-virtual {v4, v12, v13, v1}, Lcom/android/wm/shell/transition/Transitions;->startTransition(ILandroid/window/WindowContainerTransaction;Lcom/android/wm/shell/transition/Transitions$TransitionHandler;)Landroid/os/IBinder;
 
-    .line 2136
+    .line 2128
     move-result-object v12
 
-    .line 2139
+    .line 2131
     move-object v13, v3
 
-    .line 2140
+    .line 2132
     check-cast v13, Ljava/util/ArrayList;
 
-    .line 2141
+    .line 2133
     invoke-virtual {v13, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2143
+    .line 2135
     iget-object v12, v1, Lcom/android/wm/shell/miuidesktopmode/MiuiDesktopModeAnimation;->mFreeformStartScale:Landroid/util/SparseArray;
 
-    .line 2146
+    .line 2138
     invoke-virtual {v9}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getState()Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo$State;
 
-    .line 2148
+    .line 2140
     move-result-object v13
 
-    .line 2151
+    .line 2143
     iget-object v13, v13, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo$State;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 2152
+    .line 2144
     iget v13, v13, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
-    .line 2154
+    .line 2146
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    .line 2156
+    .line 2148
     move-result-object v0
 
-    .line 2159
+    .line 2151
     invoke-virtual {v12, v13, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 2160
+    .line 2152
     :cond_41
     invoke-virtual {v9}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->isMiniState()Z
 
-    .line 2163
+    .line 2155
     move-result v0
 
-    .line 2166
+    .line 2158
     if-nez v0, :cond_42
 
-    .line 2167
+    .line 2159
     invoke-virtual {v9}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->isMiniPinedState()Z
 
-    .line 2169
+    .line 2161
     move-result v0
 
-    .line 2172
+    .line 2164
     if-eqz v0, :cond_43
 
-    .line 2173
+    .line 2165
     :cond_42
     invoke-static {}, Lcom/xiaomi/freeform/MiuiFreeformStub;->getInstance()Lcom/xiaomi/freeform/MiuiFreeformStub;
 
-    .line 2175
+    .line 2167
     move-result-object v0
 
-    .line 2178
+    .line 2170
     invoke-virtual {v9}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBounds()Landroid/graphics/Rect;
 
-    .line 2179
+    .line 2171
     move-result-object v12
 
-    .line 2182
+    .line 2174
     invoke-virtual {v9}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getMiniRestoreScaleX()F
 
-    .line 2183
+    .line 2175
     move-result v13
 
-    .line 2186
+    .line 2178
     invoke-virtual {v0, v12, v11, v13, v7}, Lcom/xiaomi/freeform/MiuiFreeformStub;->reviewFreeFormBounds(Landroid/graphics/Rect;Landroid/graphics/Rect;FLandroid/graphics/Rect;)F
 
-    .line 2187
+    .line 2179
     move-result v0
 
-    .line 2190
+    .line 2182
     invoke-virtual {v9, v0}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->setMiniRestoreScaleX(F)V
 
-    .line 2191
+    .line 2183
     invoke-virtual {v9, v0}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->setMiniRestoreScaleY(F)V
 
-    .line 2194
+    .line 2186
     :cond_43
     :goto_23
     add-int/lit8 v8, v8, 0x1
 
-    .line 2197
+    .line 2189
     const/4 v0, 0x1
 
-    .line 2199
+    .line 2191
     move-object/from16 v20, v10
 
-    .line 2200
+    .line 2192
     goto/16 :goto_21
 
-    .line 2202
+    .line 2194
     :cond_44
     return-void
-    .line 2204
+    .line 2196
 .end method
