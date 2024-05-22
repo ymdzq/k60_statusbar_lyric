@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+  <PreferenceCategory android:title="开关">
+    <CheckBoxPreference android:title="状态栏歌词"
+                        android:key="system_statusbar_lyric"
+                        android:summaryOn="需要打开APP状态栏歌词或蓝牙歌词&#10;部分APP还需要连接蓝牙方可使用"
+                        android:summaryOff="状态栏歌词已经关闭" />
+    <ListPreference android:title="APP支持状态"
+                    android:key="app_support_list"
+                    android:summary="点击查看APP支持方式" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="个性化设置">
+    <CheckBoxPreference android:title="歌词换词动效"
+                        android:key="system_statusbar_lyric_animation"
+                        android:summary="歌词切换时的动画" />
+    <EditTextPreference android:title="歌词大小"
+                        android:key="system_statusbar_lyric_textsize"
+                        android:summary="设定歌词大小 0 为跟随时钟"
+                        settings:defaultValue="0" />
+    <CheckBoxPreference android:title="显示图标"
+                        android:key="system_statusbar_lyric_app_icon"
+                        android:summary="显示当前播放音乐的图标" />
+    <CheckBoxPreference android:enabled="false"
+                        android:title="显示简约图标"
+                        android:key="system_statusbar_lyric_simple_icon"
+                        android:summary="显示当前播放音乐的简约图标" />
+  </PreferenceCategory>
+  <PreferenceCategory android:title="播放时设置(停止播放后生效)">
+    <CheckBoxPreference android:title="隐藏通知图标"
+                        android:key="system_statusbar_lyric_notification_icon"
+                        settings:defaultValue="true" />
+    <CheckBoxPreference android:title="隐藏网速"
+                        android:key="system_statusbar_lyric_network_speed_icon" />
+    <CheckBoxPreference android:title="隐藏时钟"
+                        android:key="system_statusbar_lyric_clock_icon" />
+    <CheckBoxPreference android:title="隐藏闹钟"
+                        android:key="system_statusbar_lyric_alarm_clock_icon" />
+    <CheckBoxPreference android:title="隐藏勿扰"
+                        android:key="system_statusbar_lyric_zen_icon" />
+    <CheckBoxPreference android:title="隐藏静音"
+                        android:key="system_statusbar_lyric_volume_icon" />
+  </PreferenceCategory>
+</PreferenceScreen>

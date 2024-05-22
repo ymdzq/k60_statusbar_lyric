@@ -31,6 +31,8 @@
   </PreferenceCategory>
   <PreferenceCategory android:title="@string/status_bar_settings_status_bar"
                       android:key="settings_status_bar">
+    <PreferenceScreen android:title="状态栏歌词"
+                      android:fragment="com.android.settings.MiuiStatusBarLyricSettings" />
     <miuix.preference.DropDownPreference android:title="@string/title_show_notification_icon_count"
                           android:key="show_notification_icon_count" />
     <CheckBoxPreference android:persistent="false"
